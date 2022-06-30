@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['searchguildmembersdata_0',['SearchGuildMembersData',['../d9/df8/a03023.html',1,'DiscordCoreAPI']]],
+  ['secretsdata_1',['SecretsData',['../d3/d09/a02539.html',1,'DiscordCoreAPI']]],
+  ['selectmenucollector_2',['SelectMenuCollector',['../db/d65/a03179.html',1,'DiscordCoreAPI']]],
+  ['selectmenuresponsedata_3',['SelectMenuResponseData',['../d7/d45/a03175.html',1,'DiscordCoreAPI']]],
+  ['selectoptiondata_4',['SelectOptionData',['../d5/d25/a02687.html',1,'DiscordCoreAPI']]],
+  ['senddmdata_5',['SendDMData',['../d5/ddf/a03211.html',1,'DiscordCoreAPI']]],
+  ['sessionstartdata_6',['SessionStartData',['../dc/d6a/a02779.html',1,'DiscordCoreAPI']]],
+  ['shardingoptions_7',['ShardingOptions',['../dc/d6c/a03635.html',1,'DiscordCoreAPI']]],
+  ['song_8',['Song',['../d8/d87/a02839.html',1,'DiscordCoreAPI']]],
+  ['songapi_9',['SongAPI',['../d9/d58/a03371.html',1,'DiscordCoreAPI']]],
+  ['songcompletioneventdata_10',['SongCompletionEventData',['../d0/d45/a02843.html',1,'DiscordCoreAPI']]],
+  ['stageinstance_11',['StageInstance',['../d4/d60/a03463.html',1,'DiscordCoreAPI']]],
+  ['stageinstancedata_12',['StageInstanceData',['../d7/d12/a02571.html',1,'DiscordCoreAPI']]],
+  ['stageinstances_13',['StageInstances',['../d7/db0/a03467.html',1,'DiscordCoreAPI']]],
+  ['startthreadinforumchanneldata_14',['StartThreadInForumChannelData',['../d9/d25/a03511.html',1,'DiscordCoreAPI']]],
+  ['startthreadwithmessagedata_15',['StartThreadWithMessageData',['../dd/daf/a03503.html',1,'DiscordCoreAPI']]],
+  ['startthreadwithoutmessagedata_16',['StartThreadWithoutMessageData',['../dc/d46/a03507.html',1,'DiscordCoreAPI']]],
+  ['sticker_17',['Sticker',['../d0/d17/a03491.html',1,'DiscordCoreAPI']]],
+  ['stickerdata_18',['StickerData',['../db/d39/a02575.html',1,'DiscordCoreAPI']]],
+  ['stickeritemdata_19',['StickerItemData',['../d1/d58/a02731.html',1,'DiscordCoreAPI']]],
+  ['stickerpackdata_20',['StickerPackData',['../de/d8c/a02747.html',1,'DiscordCoreAPI']]],
+  ['stickers_21',['Stickers',['../d5/d70/a03499.html',1,'DiscordCoreAPI']]],
+  ['syncguildtemplatedata_22',['SyncGuildTemplateData',['../dd/d4e/a02971.html',1,'DiscordCoreAPI']]]
+];

@@ -1,0 +1,6 @@
+<map id="DiscordCoreAPI::MessageData" name="DiscordCoreAPI::MessageData">
+<area shape="rect" id="node1" title="Data structure representing a single Message." alt="" coords="15,155,218,181"/>
+<area shape="rect" id="node4" href="$db/d36/a03243.html" title="A single Message." alt="" coords="29,229,204,256"/>
+<area shape="rect" id="node2" href="$d6/df4/a02735.html" title="The core of a Message&#39;s data structure." alt="" coords="5,80,228,107"/>
+<area shape="rect" id="node3" href="$dc/da4/a02303.html" title="Base class DiscordCoreAPI_Dll for all Discord entities." alt="" coords="17,5,217,32"/>
+</map>

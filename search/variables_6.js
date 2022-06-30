@@ -1,0 +1,18 @@
+var searchData=
+[
+  ['failedduetoperms_0',['failedDueToPerms',['../dc/d5c/a02459.html#ad84275ac75ccc2107b9551b212e4fb52',1,'DiscordCoreAPI::BanData']]],
+  ['failifnotexists_1',['failIfNotExists',['../dd/d1b/a02351.html#ac6f12177ca232298da19ed6ce9128373',1,'DiscordCoreAPI::MessageReferenceData']]],
+  ['features_2',['features',['../dc/d15/a02583.html#ad8d566e347ea692a7c046701e90bd68b',1,'DiscordCoreAPI::GuildData::features()'],['../db/d52/a03007.html#a0f008ddb623926fd7445f0566a61b3f4',1,'DiscordCoreAPI::ModifyGuildData::features()']]],
+  ['fields_3',['fields',['../d4/d21/a02347.html#ae89d4d8cbcd5bf8f26b0e6db52082b4f',1,'DiscordCoreAPI::EmbedData']]],
+  ['file_4',['file',['../dc/d14/a03479.html#a57ee31151e22ae51a94279e742181cb7',1,'DiscordCoreAPI::CreateGuildStickerData']]],
+  ['filename_5',['filename',['../d7/d0c/a02315.html#aa51df51539ebedd2ba8bdca3519534af',1,'DiscordCoreAPI::AttachmentData']]],
+  ['filename_6',['fileName',['../d9/d5e/a02355.html#a63879c498f87aac1a6a3e83d33de341a',1,'DiscordCoreAPI::File']]],
+  ['files_7',['files',['../dd/d9a/a02699.html#a9fee881eb6b71c953d49e2cffa645a9f',1,'DiscordCoreAPI::InteractionCallbackData::files()'],['../de/d3e/a02727.html#a1bd5d67f6bd007786cc6b35916e3ecf9',1,'DiscordCoreAPI::ForumThreadMessageData::files()'],['../d1/d46/a03691.html#a0d12cebeb4b9f99be23032be70c37bbf',1,'DiscordCoreAPI::ExecuteWebHookData::files()']]],
+  ['flags_8',['flags',['../dd/d21/a02311.html#a3ea871fc657ac497dc6668ec7ac45ac4',1,'DiscordCoreAPI::UserData::flags()'],['../d9/d27/a02363.html#a23fd156070168661870581ccf4fd474c',1,'DiscordCoreAPI::ThreadMemberData::flags()'],['../d6/dd7/a02375.html#af28ba751b25176839ff90bc3bef3b1f3',1,'DiscordCoreAPI::GuildMemberData::flags()'],['../d8/deb/a02387.html#a845b1b696a0805b1cd65bfa48474eec6',1,'DiscordCoreAPI::ChannelData::flags()'],['../da/d11/a02399.html#ad7d75dd45f4e406c9e2b8840d49976b9',1,'DiscordCoreAPI::RoleData::flags()'],['../d3/de3/a02483.html#a8f8fe2a77866d408063aa2ab54f67798',1,'DiscordCoreAPI::ApplicationData::flags()'],['../db/df2/a02551.html#ac9a1a2a84e091e9bd49c16c5a4bdd666',1,'DiscordCoreAPI::ActivityData::flags()'],['../dc/d15/a02583.html#aa78f0a58803f2012c5a8c3472284ec87',1,'DiscordCoreAPI::GuildData::flags()'],['../dd/d9a/a02699.html#a9c2f590b6f7318cf4732343fbb9053bf',1,'DiscordCoreAPI::InteractionCallbackData::flags()'],['../de/d3e/a02727.html#aede29a8903e61207d6b07d4b0250efb6',1,'DiscordCoreAPI::ForumThreadMessageData::flags()'],['../d6/df4/a02735.html#ae6cbbc68d31ea5d12cd6a245ab29fe7b',1,'DiscordCoreAPI::MessageDataOld::flags()'],['../d1/d46/a03691.html#a7f6bbf96f72237b64db78517619d0b59',1,'DiscordCoreAPI::ExecuteWebHookData::flags()']]],
+  ['focused_9',['focused',['../d5/d4d/a02763.html#a948f8a84f059e920e763e4c8538138ac',1,'DiscordCoreAPI::ApplicationCommandInteractionDataOption']]],
+  ['footer_10',['footer',['../d4/d21/a02347.html#aed9b663df7358b77755462e304a86c3e',1,'DiscordCoreAPI::EmbedData']]],
+  ['formattype_11',['formatType',['../db/d39/a02575.html#aa0bf897b5455e4e5b9933f9aeb126fd7',1,'DiscordCoreAPI::StickerData::formatType()'],['../d1/d58/a02731.html#aafe15360328f7017e44fc35960e528b8',1,'DiscordCoreAPI::StickerItemData::formatType()']]],
+  ['friendsync_12',['friendSync',['../df/d02/a02755.html#a38746665c0b34bc922fce3e24dcbc6f1',1,'DiscordCoreAPI::ConnectionData']]],
+  ['function_13',['function',['../d7/d92/a00887.html#gab3113ed967aef68dc02622fcc8d1a8a1',1,'DiscordCoreAPI::RepeatedFunctionData']]],
+  ['functionstoexecute_14',['functionsToExecute',['../d7/d92/a00887.html#ga1bde3b3135b440c0605fa7a6c5142350',1,'DiscordCoreAPI::DiscordCoreClientConfig']]]
+];

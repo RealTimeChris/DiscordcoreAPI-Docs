@@ -1,0 +1,5 @@
+<map id="DiscordCoreAPI::GuildMembers::timeoutGuildMemberAsync" name="DiscordCoreAPI::GuildMembers::timeoutGuildMemberAsync">
+<area shape="rect" id="node1" title="Times&#45;out a chosen GuildMember from a chosen Guild." alt="" coords="5,5,212,47"/>
+<area shape="rect" id="node2" href="$df/d0c/a03055.html#a8985a29afb27c8e010bcf581528e5559" title="Collects a GuildMember from the library&#39;s cache." alt="" coords="260,5,467,47"/>
+<area shape="rect" id="node3" href="$df/d0c/a03055.html#a997c281bf11d3d686116c2f6dc35bf5b" title="Collects a GuildMember from the Discord servers." alt="" coords="515,5,721,47"/>
+</map>

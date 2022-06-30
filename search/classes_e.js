@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['rawframedata_0',['RawFrameData',['../d3/df5/a02827.html',1,'DiscordCoreAPI']]],
+  ['reaction_1',['Reaction',['../dc/dc1/a03307.html',1,'DiscordCoreAPI']]],
+  ['reactiondata_2',['ReactionData',['../d1/d04/a02443.html',1,'DiscordCoreAPI']]],
+  ['reactionremovedata_3',['ReactionRemoveData',['../d9/d07/a02635.html',1,'DiscordCoreAPI']]],
+  ['reactions_4',['Reactions',['../dd/d6f/a03315.html',1,'DiscordCoreAPI']]],
+  ['removeguildbandata_5',['RemoveGuildBanData',['../dc/d44/a02899.html',1,'DiscordCoreAPI']]],
+  ['removeguildmemberdata_6',['RemoveGuildMemberData',['../d4/df1/a03039.html',1,'DiscordCoreAPI']]],
+  ['removeguildmemberroledata_7',['RemoveGuildMemberRoleData',['../d4/d00/a03323.html',1,'DiscordCoreAPI']]],
+  ['removeguildroledata_8',['RemoveGuildRoleData',['../d9/dc9/a03347.html',1,'DiscordCoreAPI']]],
+  ['removerecipientfromgroupdmdata_9',['RemoveRecipientFromGroupDMData',['../df/d38/a03587.html',1,'DiscordCoreAPI']]],
+  ['removethreadmemberdata_10',['RemoveThreadMemberData',['../da/d72/a03527.html',1,'DiscordCoreAPI']]],
+  ['repeatedfunctiondata_11',['RepeatedFunctionData',['../d0/db0/a03631.html',1,'DiscordCoreAPI']]],
+  ['resolveddata_12',['ResolvedData',['../df/dee/a02743.html',1,'DiscordCoreAPI']]],
+  ['respondtoinputeventdata_13',['RespondToInputEventData',['../d6/daf/a02803.html',1,'DiscordCoreAPI']]],
+  ['role_14',['Role',['../d9/dd9/a03359.html',1,'DiscordCoreAPI']]],
+  ['roledata_15',['RoleData',['../da/d11/a02399.html',1,'DiscordCoreAPI']]],
+  ['rolepositiondata_16',['RolePositionData',['../d9/db1/a03335.html',1,'DiscordCoreAPI']]],
+  ['roles_17',['Roles',['../dc/d7f/a03367.html',1,'DiscordCoreAPI']]],
+  ['roletagsdata_18',['RoleTagsData',['../d2/d40/a02307.html',1,'DiscordCoreAPI']]]
+];
