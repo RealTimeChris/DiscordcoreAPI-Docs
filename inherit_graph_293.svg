@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d9/d6c/a02903.html" target="_top" xlink:title="For removing a previous created Ban.">
+<g id="a_node1"><a xlink:href="d1/dfc/a02901.html" target="_top" xlink:title="For removing a previous created Ban.">
 <polygon fill="none" stroke="black" points="0,-0.5 0,-30.5 149,-30.5 149,-0.5 0,-0.5"/>
 <text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::RemoveGuild</text>
 <text text-anchor="middle" x="74.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">BanData</text>

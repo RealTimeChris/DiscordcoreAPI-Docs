@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="dc/d5c/a03483.html" target="_top" xlink:title="For getting a Sticker object for the given sticker ID.">
+<g id="a_node1"><a xlink:href="de/d8a/a03481.html" target="_top" xlink:title="For getting a Sticker object for the given sticker ID.">
 <polygon fill="none" stroke="black" points="0,-0.5 0,-19.5 158,-19.5 158,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="79" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::GetStickerData</text>
 </a>

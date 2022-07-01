@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['queue_0',['Queue',['../d1/d1a/a07130.html',1,'MusicBotGuide']]]
+  ['queue_0',['Queue',['../d2/d73/a07220.html',1,'MusicBotGuide']]]
 ];

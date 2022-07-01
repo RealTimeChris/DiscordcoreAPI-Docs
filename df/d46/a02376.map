@@ -1,0 +1,5 @@
+<map id="DiscordCoreAPI::GuildMemberData" name="DiscordCoreAPI::GuildMemberData">
+<area shape="rect" id="node1" title="Data structure representing a single GuildMember. Data structure representing a single Guild." alt="" coords="5,80,232,107"/>
+<area shape="rect" id="node3" href="$d7/d8c/a03049.html" title="A single GuildMember." alt="" coords="19,155,218,181"/>
+<area shape="rect" id="node2" href="$d7/dd6/a02305.html" title="Base class DiscordCoreAPI_Dll for all Discord entities." alt="" coords="19,5,219,32"/>
+</map>

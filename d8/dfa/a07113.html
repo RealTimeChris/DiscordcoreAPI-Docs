@@ -102,39 +102,13 @@ $(document).ready(function(){initNavTree('d8/dfa/a07113.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Beginner's Notes </div></div>
+  <div class="headertitle"><div class="title">Input Event Stuff </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Login_Setup_Beginner_s_Notes"></a></p>
-<ul>
-<li><b><u>IMPORTANT:</u></b> You will need to enable the following settings in your bot's control panel: Enter your "Developer Control Panel" and select a bot, then go to the "Bot" section-in here, enable "Presence Intent", "Server Members Intent", "Message Content Intent" - and hit "Save". <br  />
- <br  />
-</li>
-<li><p class="startli">All of the central class managers are classes that are filled with static methods that are a part of the <code><a class="el" href="../../d7/d46/a00890.html" title="The main namespace for this library.">DiscordCoreAPI</a></code> namespace, they are as Follows: <br  />
- <code><a class="el" href="../../d5/df4/a01779.html" title="An interface class for the ApplicationCommand related Discord endpoints.">DiscordCoreAPI::ApplicationCommands</a></code></p>
-<p class="startli"><code><a class="el" href="../../d6/d4c/a01903.html" title="An interface class for the AutoModerationRule related Discord endpoints.">DiscordCoreAPI::AutoModerationRules</a></code></p>
-<p class="startli"><code><a class="el" href="../../d5/d1b/a01971.html" title="An interface class for the Channel related endpoints.">DiscordCoreAPI::Channels</a></code></p>
-<p class="startli"><code><a class="el" href="../../d3/d3a/a02259.html" title="Class for handling the assignment of event-handling functions.">DiscordCoreAPI::EventManager</a></code></p>
-<p class="startli"><code><a class="el" href="../../de/d1e/a03015.html" title="An interface class for the Guild related Discord endpoints.">DiscordCoreAPI::Guilds</a></code></p>
-<p class="startli"><code><a class="el" href="../../da/d9e/a03059.html" title="An interface class DiscordCoreAPI_Dll for the GuildMember related Discord endpoints.">DiscordCoreAPI::GuildMembers</a></code></p>
-<p class="startli"><code><a class="el" href="../../da/dbe/a03091.html" title="An interface class for the GuildScheduledEvent related Discord endpoints.">DiscordCoreAPI::GuildScheduledEvents</a></code></p>
-<p class="startli"><code><a class="el" href="../../dc/d11/a03123.html" title="For handling User input - Messages or Interactions.">DiscordCoreAPI::InputEvents</a></code></p>
-<p class="startli"><code><a class="el" href="../../db/d65/a03179.html" title="An interface class for the Interaction related Discord endpoints.">DiscordCoreAPI::Interactions</a></code></p>
-<p class="startli"><code><a class="el" href="../../de/d11/a03267.html" title="An interface class for the Message related Discord endpoints.">DiscordCoreAPI::Messages</a></code></p>
-<p class="startli"><code><a class="el" href="../../d4/d00/a03323.html" title="An interface class for the Reaction related Discord endpoints.">DiscordCoreAPI::Reactions</a></code></p>
-<p class="startli"><code><a class="el" href="../../d1/d01/a03375.html" title="An interface class for the Role related Discord endpoints.">DiscordCoreAPI::Roles</a></code></p>
-<p class="startli"><code><a class="el" href="../../dc/d14/a03479.html" title="An interface class DiscordCoreAPI_Dll for the StageInstance related Discord endpoints.">DiscordCoreAPI::StageInstances</a></code></p>
-<p class="startli"><code><a class="el" href="../../d9/d25/a03511.html" title="An interface class for the Sticker related Discord endpoints.">DiscordCoreAPI::Stickers</a></code></p>
-<p class="startli"><code><a class="el" href="../../d3/dbd/a03575.html" title="An interface class for the Thread related endpoints.">DiscordCoreAPI::Threads</a></code></p>
-<p class="startli"><code><a class="el" href="../../d0/db0/a03631.html" title="An interface class for the User related Discord endpoints.">DiscordCoreAPI::Users</a></code></p>
-<p class="startli"><code><a class="el" href="../../d7/d87/a03759.html" title="An interface class for the WebHook related Discord endpoints.">DiscordCoreAPI::WebHooks</a></code> <br  />
- <br  />
-</p>
-</li>
-<li>Each of the functions in this library takes an argument that is of a type who's name is derived from the function-for example, the data structure that gets passed into <code><a class="el" href="../../de/d1e/a03015.html#a7f53cb376716ebe782cde17a7f0109e6" title="Collects a Guild from the Discord servers.">DiscordCoreAPI::Guilds::getGuildAsync()</a></code> is <code><a class="el" href="../../d9/d9a/a02879.html" title="For getting a Guild from the library&#39;s cache or a Discord server.">DiscordCoreAPI::GetGuildData</a></code>. <br  />
- <br  />
-</li>
-<li>Most of the functions in this library are <code>Async</code>, meaning that they return a value of type <code><a class="el" href="../../d2/d8a/a01987.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">DiscordCoreAPI::CoRoutine</a>&lt;TaskType&gt;</code>, which you call <code>.get()</code> on to retrieve the returned value, and to suspend the current thread in the process of waiting for it. Alternatively, you have the option of leaving the task's completion up to the background thread that is handling it, by not calling <code>.get()</code>. </li>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_015_Input_Event_Stuff"></a></p><ul>
+<li><a class="el" href="../../df/d3a/a07240.html">Creating an Interaction Response</a></li>
+<li><a class="el" href="../../d3/d34/a07242.html">Editing an Interaction Response</a></li>
+<li><a class="el" href="../../db/d5a/a07241.html">Deleting an Interaction Response</a> </li>
 </ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
@@ -143,7 +117,7 @@ $(document).ready(function(){initNavTree('d8/dfa/a07113.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d7/da6/a07009.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../dd/dfa/a07011.html">Login/Setup</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d1d/a07099.html">Docs/Examples</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

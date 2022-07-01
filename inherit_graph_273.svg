@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d7/da1/a02231.html" target="_top" xlink:title="Data that is received as part of a StageInstance deletion event.">
+<g id="a_node1"><a xlink:href="da/d3b/a02229.html" target="_top" xlink:title="Data that is received as part of a StageInstance deletion event.">
 <polygon fill="none" stroke="black" points="0,-0.5 0,-30.5 167,-30.5 167,-0.5 0,-0.5"/>
 <text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::OnStageInstance</text>
 <text text-anchor="middle" x="83.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">DeletionData</text>

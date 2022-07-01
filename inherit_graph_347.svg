@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d2/db4/a03695.html" target="_top" xlink:title="VoiceConnection class DiscordCoreAPI_Dll &#45; represents the connection to a given voice Channel.">
+<g id="a_node1"><a xlink:href="d1/ddd/a03693.html" target="_top" xlink:title="VoiceConnection class DiscordCoreAPI_Dll &#45; represents the connection to a given voice Channel.">
 <polygon fill="none" stroke="black" points="0,-0.5 0,-19.5 165,-19.5 165,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="82.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::VoiceConnection</text>
 </a>

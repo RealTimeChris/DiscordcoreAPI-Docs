@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="de/dca/a01907.html" target="_top" xlink:title="For collecting a Channel from Discord&#39;s servers.">
+<g id="a_node1"><a xlink:href="d9/d65/a01905.html" target="_top" xlink:title="For collecting a Channel from Discord&#39;s servers.">
 <polygon fill="none" stroke="black" points="0,-0.5 0,-19.5 163,-19.5 163,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="81.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::GetChannelData</text>
 </a>

@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="db/df2/a02551.html" target="_top" xlink:title="Button data.">
+<g id="a_node1"><a xlink:href="d0/df5/a02549.html" target="_top" xlink:title="Button data.">
 <polygon fill="none" stroke="black" points="0,-0.5 0,-19.5 140,-19.5 140,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="70" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::ButtonData</text>
 </a>

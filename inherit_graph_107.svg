@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d8/d4f/a03703.html" target="_top" xlink:title="For executing a WebHook.">
+<g id="a_node1"><a xlink:href="d4/df9/a03701.html" target="_top" xlink:title="For executing a WebHook.">
 <polygon fill="none" stroke="black" points="0,-39 0,-69 148,-69 148,-39 0,-39"/>
 <text text-anchor="start" x="8" y="-57" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::ExecuteWeb</text>
 <text text-anchor="middle" x="74" y="-46" font-family="Helvetica,sans-Serif" font-size="10.00">HookData</text>
@@ -21,7 +21,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="dc/d9b/a03155.html" target="_top" xlink:title="For creating an ephemeral follow up Message.">
+<g id="a_node2"><a xlink:href="db/d44/a03153.html" target="_top" xlink:title="For creating an ephemeral follow up Message.">
 <polygon fill="none" stroke="black" points="186.5,-88 186.5,-118 353.5,-118 353.5,-88 186.5,-88"/>
 <text text-anchor="start" x="194.5" y="-106" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::CreateEphemeral</text>
 <text text-anchor="middle" x="270" y="-95" font-family="Helvetica,sans-Serif" font-size="10.00">FollowUpMessageData</text>
@@ -37,7 +37,7 @@
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="d4/dbc/a03159.html" target="_top" xlink:title="For creating a follow up Message.">
+<g id="a_node3"><a xlink:href="d5/d27/a03157.html" target="_top" xlink:title="For creating a follow up Message.">
 <polygon fill="none" stroke="black" points="196,-39 196,-69 344,-69 344,-39 196,-39"/>
 <text text-anchor="start" x="204" y="-57" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::CreateFollow</text>
 <text text-anchor="middle" x="270" y="-46" font-family="Helvetica,sans-Serif" font-size="10.00">UpMessageData</text>
@@ -53,7 +53,7 @@
 <!-- Node3 -->
 <g id="node4" class="node">
 <title>Node3</title>
-<g id="a_node4"><a xlink:href="d1/d00/a03707.html" target="_top" xlink:title="For editing a WebHook Message.">
+<g id="a_node4"><a xlink:href="d2/d47/a03705.html" target="_top" xlink:title="For editing a WebHook Message.">
 <polygon fill="none" stroke="black" points="184,-0.5 184,-19.5 356,-19.5 356,-0.5 184,-0.5"/>
 <text text-anchor="middle" x="270" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::EditWebHookData</text>
 </a>

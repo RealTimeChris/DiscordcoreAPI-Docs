@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../d2/d8a/a01987.html#a9fc31b4ff6a73922169844d6ad1851b5" target="_top" xlink:title="Cancels the currently executing CoRoutine and returns the current result.">
+<g id="a_node2"><a xlink:href="../../d3/def/a01985.html#a9fc31b4ff6a73922169844d6ad1851b5" target="_top" xlink:title="Cancels the currently executing CoRoutine and returns the current result.">
 <polygon fill="none" stroke="black" points="210.5,-137.5 210.5,-167.5 347.5,-167.5 347.5,-137.5 210.5,-137.5"/>
 <text text-anchor="start" x="218.5" y="-155.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::CoRoutine</text>
 <text text-anchor="middle" x="279" y="-144.5" font-family="Helvetica,sans-Serif" font-size="10.00">::cancel</text>
@@ -37,7 +37,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="../../d3/dd8/a01995.html#a566ebc1b6eacc88c5c2913908e6a2c8f" target="_top" xlink:title="Cancels the currently executing CoRoutine and returns the current result.">
+<g id="a_node3"><a xlink:href="../../d0/dc1/a01993.html#a566ebc1b6eacc88c5c2913908e6a2c8f" target="_top" xlink:title="Cancels the currently executing CoRoutine and returns the current result.">
 <polygon fill="none" stroke="black" points="210.5,-88.5 210.5,-118.5 347.5,-118.5 347.5,-88.5 210.5,-88.5"/>
 <text text-anchor="start" x="218.5" y="-106.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::CoRoutine</text>
 <text text-anchor="middle" x="279" y="-95.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; void &gt;::cancel</text>
@@ -53,7 +53,7 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="../../d2/d8a/a01987.html#a4677e19e0a190bf91b35c2345533ed6b" target="_top" xlink:title="Gets the resulting value of the CoRoutine.">
+<g id="a_node4"><a xlink:href="../../d3/def/a01985.html#a4677e19e0a190bf91b35c2345533ed6b" target="_top" xlink:title="Gets the resulting value of the CoRoutine.">
 <polygon fill="none" stroke="black" points="201,-50 201,-69 357,-69 357,-50 201,-50"/>
 <text text-anchor="middle" x="279" y="-57" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::CoRoutine::get</text>
 </a>
@@ -68,7 +68,7 @@
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="../../d3/dd8/a01995.html#a904d030f3edbf8efac15b2cebba3e37a" target="_top" xlink:title="Gets the resulting value of the CoRoutine.">
+<g id="a_node5"><a xlink:href="../../d0/dc1/a01993.html#a904d030f3edbf8efac15b2cebba3e37a" target="_top" xlink:title="Gets the resulting value of the CoRoutine.">
 <polygon fill="none" stroke="black" points="210.5,-0.5 210.5,-30.5 347.5,-30.5 347.5,-0.5 210.5,-0.5"/>
 <text text-anchor="start" x="218.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::CoRoutine</text>
 <text text-anchor="middle" x="279" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; void &gt;::get</text>
@@ -84,7 +84,7 @@
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
-<g id="a_node6"><a xlink:href="../../dc/d11/a03123.html#a721365d0ef437397ea553634f88b8ecf" target="_top" xlink:title="Deletes a previously sent &quot;input&#45;event&#45;response&quot;.">
+<g id="a_node6"><a xlink:href="../../d5/dcb/a03121.html#a721365d0ef437397ea553634f88b8ecf" target="_top" xlink:title="Deletes a previously sent &quot;input&#45;event&#45;response&quot;.">
 <polygon fill="none" stroke="black" points="0,-0.5 0,-30.5 165,-30.5 165,-0.5 0,-0.5"/>
 <text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::InputEvents</text>
 <text text-anchor="middle" x="82.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">::deleteInputEventResponseAsync</text>
