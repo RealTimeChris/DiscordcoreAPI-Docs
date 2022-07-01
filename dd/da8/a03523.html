@@ -105,22 +105,55 @@ $(document).ready(function(){initNavTree('dd/da8/a03523.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d4/db4/a03520.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::LeaveThreadData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::StartThreadInForumChannelData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For leaving a <a class="el" href="../../d0/db8/a03559.html" title="Represents a single Thread.">Thread</a>.  
+<p>For starting a <a class="el" href="../../d3/da4/a03571.html" title="Represents a single Thread.">Thread</a>, in a forum channel.  
  <a href="../../dd/da8/a03523.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d2/d4a/a00758_source.html">ThreadEntities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:ac0a308df5bac7d3a753164514d165e6e"><td class="memItemLeft" align="right" valign="top"><a id="ac0a308df5bac7d3a753164514d165e6e" name="ac0a308df5bac7d3a753164514d165e6e"></a>
+<tr class="memitem:ac980e9022252c87d34e5a5b69bc40d14"><td class="memItemLeft" align="right" valign="top"><a id="ac980e9022252c87d34e5a5b69bc40d14" name="ac980e9022252c87d34e5a5b69bc40d14"></a>
 <a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>channelId</b> {}</td></tr>
-<tr class="memdesc:ac0a308df5bac7d3a753164514d165e6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the <a class="el" href="../../d0/db8/a03559.html" title="Represents a single Thread.">Thread</a> to leave. <br /></td></tr>
-<tr class="separator:ac0a308df5bac7d3a753164514d165e6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:ac980e9022252c87d34e5a5b69bc40d14"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the channel. <br /></td></tr>
+<tr class="separator:ac980e9022252c87d34e5a5b69bc40d14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe0cfe3294301b3ed0261284e0c27cee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d58/a02731.html">ForumThreadMessageData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/da8/a03523.html#abe0cfe3294301b3ed0261284e0c27cee">message</a> {}</td></tr>
+<tr class="memdesc:abe0cfe3294301b3ed0261284e0c27cee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Duration in minutes to automatically archive the thread.  <a href="../../dd/da8/a03523.html#abe0cfe3294301b3ed0261284e0c27cee">More...</a><br /></td></tr>
+<tr class="separator:abe0cfe3294301b3ed0261284e0c27cee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7be23e6eca2cadf307bef8a0711b066d"><td class="memItemLeft" align="right" valign="top"><a id="a7be23e6eca2cadf307bef8a0711b066d" name="a7be23e6eca2cadf307bef8a0711b066d"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> {}</td></tr>
+<tr class="memdesc:a7be23e6eca2cadf307bef8a0711b066d"><td class="mdescLeft">&#160;</td><td class="mdescRight">1-100 character channel name auto_archive_duration. <br /></td></tr>
+<tr class="separator:a7be23e6eca2cadf307bef8a0711b066d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c5fe6075114daf300a5a138e29984a5"><td class="memItemLeft" align="right" valign="top"><a id="a2c5fe6075114daf300a5a138e29984a5" name="a2c5fe6075114daf300a5a138e29984a5"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>rateLimitPerUser</b> {}</td></tr>
+<tr class="memdesc:a2c5fe6075114daf300a5a138e29984a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integer amount of seconds a user has to wait before sending another message(0 - 21600). <br /></td></tr>
+<tr class="separator:a2c5fe6075114daf300a5a138e29984a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6b3bdbc64e67b4610199c0eee5fde31"><td class="memItemLeft" align="right" valign="top"><a id="ab6b3bdbc64e67b4610199c0eee5fde31" name="ab6b3bdbc64e67b4610199c0eee5fde31"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>reason</b> {}</td></tr>
+<tr class="memdesc:ab6b3bdbc64e67b4610199c0eee5fde31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reason for starting the <a class="el" href="../../d3/da4/a03571.html" title="Represents a single Thread.">Thread</a>. <br /></td></tr>
+<tr class="separator:ab6b3bdbc64e67b4610199c0eee5fde31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="abe0cfe3294301b3ed0261284e0c27cee" name="abe0cfe3294301b3ed0261284e0c27cee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe0cfe3294301b3ed0261284e0c27cee">&#9670;&nbsp;</a></span>message</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d58/a02731.html">ForumThreadMessageData</a> DiscordCoreAPI::StartThreadInForumChannelData::message {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >A forum thread message params object contents of the first message in the forum thread. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d4a/a00758_source.html#l00077">77</a> of file <a class="el" href="../../d2/d4a/a00758_source.html">ThreadEntities.hpp</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d2/d4a/a00758_source.html">ThreadEntities.hpp</a></li>
 </ul>
@@ -130,7 +163,7 @@ Public Data Members</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dd/da8/a03523.html">LeaveThreadData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dd/da8/a03523.html">StartThreadInForumChannelData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

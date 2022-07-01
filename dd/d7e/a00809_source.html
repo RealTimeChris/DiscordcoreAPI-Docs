@@ -176,7 +176,7 @@ $(document).ready(function(){initNavTree('dd/d7e/a00809_source.html','../../'); 
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                ErlPacker::appendNilExt(buffer);</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                <span class="keywordflow">if</span> (length &gt; std::numeric_limits&lt;uint32_t&gt;::max() - 1) {</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                    <span class="keywordflow">throw</span> ErlPackError{ <span class="stringliteral">&quot;ErlPacker::singleValueJsonToETF(), List too large for ETF&quot;</span> };</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                    <span class="keywordflow">throw</span> ErlPackError{ <span class="stringliteral">&quot;ErlPacker::singleValueJsonToETF() Error: List too large for ETF.\n\n&quot;</span> };</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                }</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            }</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            ErlPacker::appendListHeader(buffer, length);</div>
@@ -187,7 +187,7 @@ $(document).ready(function(){initNavTree('dd/d7e/a00809_source.html','../../'); 
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (jsonData.is_object()) {</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            uint32_t length = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(jsonData.size());</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keywordflow">if</span> (length &gt; std::numeric_limits&lt;uint32_t&gt;::max() - 1) {</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                <span class="keywordflow">throw</span> ErlPackError{ <span class="stringliteral">&quot;ErlPacker::singleValueJsonToETF(), Map too large for ETF&quot;</span> };</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                <span class="keywordflow">throw</span> ErlPackError{ <span class="stringliteral">&quot;ErlPacker::singleValueJsonToETF() Error: Map too large for ETF.\n\n&quot;</span> };</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            }</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            ErlPacker::appendMapHeader(buffer, length);</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> n = jsonData.begin(); n != jsonData.end(); ++n) {</div>
@@ -330,7 +330,7 @@ $(document).ready(function(){initNavTree('dd/d7e/a00809_source.html','../../'); 
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ReturnType&gt; <span class="keywordtype">void</span> ErlPacker::readBits(<span class="keyword">const</span> ErlPackBuffer&amp; buffer, ReturnType&amp; theValue) {</div>
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        <span class="keyword">const</span> uint8_t byteSize{ 8 };</div>
 <div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>        <span class="keywordflow">if</span> (buffer.offSet + <span class="keyword">sizeof</span>(ReturnType) &gt; buffer.buffer.size()) {</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>            <span class="keywordflow">throw</span> ErlPackError{ <span class="stringliteral">&quot;ErlPacker::readBits(), readBits() past end of buffer&quot;</span> };</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>            <span class="keywordflow">throw</span> ErlPackError{ <span class="stringliteral">&quot;ErlPacker::readBits() Error: readBits() past end of buffer.\n\n&quot;</span> };</div>
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        }</div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        ReturnType newValue{ 0 };</div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        <span class="keywordflow">for</span> (uint64_t x = 0; x &lt; <span class="keyword">sizeof</span>(ReturnType); x++) {</div>
@@ -342,7 +342,7 @@ $(document).ready(function(){initNavTree('dd/d7e/a00809_source.html','../../'); 
 <div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
 <div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    <span class="keywordtype">void</span> ErlPacker::readString(<span class="keyword">const</span> ErlPackBuffer&amp; buffer, uint32_t&amp; length, std::vector&lt;char&gt;&amp; theString) {</div>
 <div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        <span class="keywordflow">if</span> (buffer.offSet + <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(length) &gt; buffer.buffer.size()) {</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>            <span class="keywordflow">throw</span> ErlPackError{ <span class="stringliteral">&quot;ErlPacker::readString(), readString() past end of buffer&quot;</span> };</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>            <span class="keywordflow">throw</span> ErlPackError{ <span class="stringliteral">&quot;ErlPacker::readString() Error: readString() past end of buffer.\n\n&quot;</span> };</div>
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        }</div>
 <div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        std::vector&lt;char&gt; str{};</div>
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>        str.insert(str.begin(), buffer.buffer.begin() + buffer.offSet, buffer.buffer.begin() + buffer.offSet + length);</div>
@@ -352,7 +352,7 @@ $(document).ready(function(){initNavTree('dd/d7e/a00809_source.html','../../'); 
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    nlohmann::json ErlPacker::singleValueETFToJson(<span class="keyword">const</span> ErlPackBuffer&amp; buffer) {</div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        <span class="keywordflow">if</span> (buffer.offSet &gt;= buffer.buffer.size()) {</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>            <span class="keywordflow">throw</span> ErlPackError{ <span class="stringliteral">&quot;ErlPacker::singleValueETFToJson(), Read past end of ETF buffer&quot;</span> };</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>            <span class="keywordflow">throw</span> ErlPackError{ <span class="stringliteral">&quot;ErlPacker::singleValueETFToJson() Error: Read past end of ETF buffer.\n\n&quot;</span> };</div>
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>        }</div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        uint8_t type{};</div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        ErlPacker::readBits(buffer, type);</div>
@@ -403,7 +403,7 @@ $(document).ready(function(){initNavTree('dd/d7e/a00809_source.html','../../'); 
 <div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>                <span class="keywordflow">return</span> ErlPacker::parseSmallAtomUtf8Ext(buffer);</div>
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>            }</div>
 <div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>            <span class="keywordflow">default</span>: {</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>                <span class="keywordflow">throw</span> ErlPackError{ <span class="stringliteral">&quot;ErlPacker::singleValueETFToJson(), Unknown data type in ETF&quot;</span> };</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>                <span class="keywordflow">throw</span> ErlPackError{ <span class="stringliteral">&quot;ErlPacker::singleValueETFToJson() Error: Unknown data type in ETF.\n\n&quot;</span> };</div>
 <div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>            }</div>
 <div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>        }</div>
 <div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>    }</div>
@@ -419,7 +419,7 @@ $(document).ready(function(){initNavTree('dd/d7e/a00809_source.html','../../'); 
 <div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>        uint8_t sign{};</div>
 <div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>        readBits(buffer, sign);</div>
 <div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>        <span class="keywordflow">if</span> (digits &gt; 8) {</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>            <span class="keywordflow">throw</span> ErlPackError{ <span class="stringliteral">&quot;ErlPacker::parseBigint(), Integers larger than 8 bytes are not supported.&quot;</span> };</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>            <span class="keywordflow">throw</span> ErlPackError{ <span class="stringliteral">&quot;ErlPacker::parseBigint() Error: Integers larger than 8 bytes are not supported.\n\n&quot;</span> };</div>
 <div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>        }</div>
 <div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>        uint64_t value = 0;</div>
 <div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>        uint64_t b = 1;</div>
@@ -445,7 +445,7 @@ $(document).ready(function(){initNavTree('dd/d7e/a00809_source.html','../../'); 
 <div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>        <span class="keyword">const</span> <span class="keywordtype">char</span>* formatString = sign == 0 ? <span class="stringliteral">&quot;%llu&quot;</span> : <span class="stringliteral">&quot;-%ll&quot;</span>;</div>
 <div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>        <span class="keyword">const</span> int32_t res = sprintf(outBuffer, formatString, value);</div>
 <div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>        <span class="keywordflow">if</span> (res &lt; 0) {</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>            <span class="keywordflow">throw</span> ErlPackError{ <span class="stringliteral">&quot;ErlPacker::parseBigint(), parse big integer failed.&quot;</span> };</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>            <span class="keywordflow">throw</span> ErlPackError{ <span class="stringliteral">&quot;ErlPacker::parseBigint() Error: Parse big integer failed.\n\n&quot;</span> };</div>
 <div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>        }</div>
 <div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>        <span class="keyword">const</span> uint8_t length = <span class="keyword">static_cast&lt;</span>uint8_t<span class="keyword">&gt;</span>(res);</div>
 <div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>        nlohmann::json jsonData = std::string(outBuffer, length);</div>
@@ -526,7 +526,7 @@ $(document).ready(function(){initNavTree('dd/d7e/a00809_source.html','../../'); 
 <div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>        readBits(buffer, length);</div>
 <div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>        nlohmann::json theArray = nlohmann::json::array();</div>
 <div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>        <span class="keywordflow">if</span> (<span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(buffer.offSet) + length &gt; buffer.buffer.size()) {</div>
-<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>            <span class="keywordflow">throw</span> ErlPackError{ <span class="stringliteral">&quot;ErlPacker::parseStringAsList(), String list past end of buffer&quot;</span> };</div>
+<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>            <span class="keywordflow">throw</span> ErlPackError{ <span class="stringliteral">&quot;ErlPacker::parseStringAsList() Error: String list past end of buffer.\n\n&quot;</span> };</div>
 <div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>        }</div>
 <div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>        <span class="keywordflow">for</span> (uint16_t x = 0; x &lt; length; ++x) {</div>
 <div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>            theArray.push_back(parseSmallIntegerExt(buffer));</div>

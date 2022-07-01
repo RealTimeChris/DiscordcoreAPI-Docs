@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['np_28now_2dplaying_29_0',['NP(Now-Playing)',['../d8/dfa/a07113.html',1,'MusicBotGuide']]]
+  ['np_28now_2dplaying_29_0',['NP(Now-Playing)',['../df/d4a/a07125.html',1,'MusicBotGuide']]]
 ];

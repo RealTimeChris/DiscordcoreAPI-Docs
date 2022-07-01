@@ -105,25 +105,35 @@ $(document).ready(function(){initNavTree('d9/d5e/a02355.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../da/d6b/a02352.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::File Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::MessageReferenceData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Data representing a file to be sent via multipart-form data.  
+<p><a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a> reference data.  
  <a href="../../d9/d5e/a02355.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a>&gt;</code></p>
+
+<p>Inherits DiscordCoreAPI::DataParser&lt; ObjectType &gt;.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:a56429b30779df0e8363f240dd6837927"><td class="memItemLeft" align="right" valign="top"><a id="a56429b30779df0e8363f240dd6837927" name="a56429b30779df0e8363f240dd6837927"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>data</b> {}</td></tr>
-<tr class="memdesc:a56429b30779df0e8363f240dd6837927"><td class="mdescLeft">&#160;</td><td class="mdescRight">The data of the file. <br /></td></tr>
-<tr class="separator:a56429b30779df0e8363f240dd6837927"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63879c498f87aac1a6a3e83d33de341a"><td class="memItemLeft" align="right" valign="top"><a id="a63879c498f87aac1a6a3e83d33de341a" name="a63879c498f87aac1a6a3e83d33de341a"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>fileName</b> {}</td></tr>
-<tr class="memdesc:a63879c498f87aac1a6a3e83d33de341a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of the file. <br /></td></tr>
-<tr class="separator:a63879c498f87aac1a6a3e83d33de341a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04d1ef86c80d9321d5a6e0f5427bd919"><td class="memItemLeft" align="right" valign="top"><a id="a04d1ef86c80d9321d5a6e0f5427bd919" name="a04d1ef86c80d9321d5a6e0f5427bd919"></a>
+<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>channelId</b> {}</td></tr>
+<tr class="memdesc:a04d1ef86c80d9321d5a6e0f5427bd919"><td class="mdescLeft">&#160;</td><td class="mdescRight">Id of the <a class="el" href="../../dc/da8/a01959.html" title="A Channel object.">Channel</a> that the referenced <a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a> was sent in. <br /></td></tr>
+<tr class="separator:a04d1ef86c80d9321d5a6e0f5427bd919"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6f12177ca232298da19ed6ce9128373"><td class="memItemLeft" align="right" valign="top"><a id="ac6f12177ca232298da19ed6ce9128373" name="ac6f12177ca232298da19ed6ce9128373"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>failIfNotExists</b> { false }</td></tr>
+<tr class="memdesc:ac6f12177ca232298da19ed6ce9128373"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fail if the <a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a> doesn't exist? <br /></td></tr>
+<tr class="separator:ac6f12177ca232298da19ed6ce9128373"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a042a9c712db38d968854fee0a93f053f"><td class="memItemLeft" align="right" valign="top"><a id="a042a9c712db38d968854fee0a93f053f" name="a042a9c712db38d968854fee0a93f053f"></a>
+<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildId</b> {}</td></tr>
+<tr class="memdesc:a042a9c712db38d968854fee0a93f053f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Id of the <a class="el" href="../../dd/d26/a03003.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> that the referenced <a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a> was sent in. <br /></td></tr>
+<tr class="separator:a042a9c712db38d968854fee0a93f053f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e0270b1773c2db25962cd4b98e3e38b"><td class="memItemLeft" align="right" valign="top"><a id="a2e0270b1773c2db25962cd4b98e3e38b" name="a2e0270b1773c2db25962cd4b98e3e38b"></a>
+<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>messageId</b> {}</td></tr>
+<tr class="memdesc:a2e0270b1773c2db25962cd4b98e3e38b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Id of the <a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a> to reference. <br /></td></tr>
+<tr class="separator:a2e0270b1773c2db25962cd4b98e3e38b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a></li>
@@ -134,7 +144,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>fileName</b> {
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d5e/a02355.html">File</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d5e/a02355.html">MessageReferenceData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

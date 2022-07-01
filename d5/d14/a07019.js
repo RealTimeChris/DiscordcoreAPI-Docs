@@ -1,13 +1,18 @@
 var a07019 =
 [
-    [ "Adding a Recipient to a Group DM", "d8/d9c/a07201.html", null ],
-    [ "Removing a Recipient from a Group DM", "d7/dc6/a07210.html", null ],
-    [ "Modifying Current User's Voice State", "d2/d8e/a07208.html", null ],
-    [ "Modifying a User's Voice State", "da/d80/a07207.html", null ],
-    [ "Getting the Current User", "d6/dfb/a07205.html", null ],
-    [ "Getting a User", "d8/d8d/a07202.html", null ],
-    [ "Modifying the Current User", "dc/d78/a07209.html", null ],
-    [ "Getting User Connections", "d6/dc7/a07206.html", null ],
-    [ "Getting Current User Application Info", "d7/d29/a07203.html", null ],
-    [ "Getting Current User Authorization Info", "dc/df2/a07204.html", null ]
+    [ "Getting a Channel", "dd/d41/a07066.html", null ],
+    [ "Modifying a Channel", "da/d3a/a07071.html", null ],
+    [ "Deleting/Closing a Channel", "d6/d0e/a07062.html", null ],
+    [ "Getting a Direct-Message Channel", "d1/d3b/a07067.html", null ],
+    [ "Edit Channel Permission Overwrites", "df/d34/a07064.html", null ],
+    [ "Getting Channel Invites", "d8/d4c/a07068.html", null ],
+    [ "Creating a Channel Invite", "db/d67/a07059.html", null ],
+    [ "Deleting Permission Overwrites", "d1/d84/a07063.html", null ],
+    [ "Following a News Channel", "de/d2e/a07065.html", null ],
+    [ "Triggering the Typing Indicator", "d4/db7/a07073.html", null ],
+    [ "Getting Guild Channels", "d2/d4d/a07069.html", null ],
+    [ "Creating a Guild Channel", "dc/db3/a07061.html", null ],
+    [ "Modifying Guild Channel Positions", "df/d27/a07072.html", null ],
+    [ "Creating a Direct-Message", "d4/df2/a07060.html", null ],
+    [ "Getting Voice Regions", "d5/db4/a07070.html", null ]
 ];

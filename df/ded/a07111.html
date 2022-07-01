@@ -102,33 +102,53 @@ $(document).ready(function(){initNavTree('df/ded/a07111.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Introduction </div></div>
+  <div class="headertitle"><div class="title">Using a Message Collector </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Music_Bot_MBot_Introduction"></a> Hey there! So it looks as though this area is still under construction... But you may be able to piece things together with the code! If not - come and hit me up with any questions you may have on the Discord server! Cheers and happy coding!</p>
-<p ><a class="el" href="../../da/dea/a07108.html">Helper Functions</a></p>
-<p ><a class="el" href="../../de/dde/a07107.html">Help</a></p>
-<p ><a class="el" href="../../d6/d82/a07115.html">Play</a></p>
-<p ><a class="el" href="../../d2/dd5/a07117.html">PlayRN</a></p>
-<p ><a class="el" href="../../d9/de8/a07116.html">PlayQ</a></p>
-<p ><a class="el" href="../../d8/d20/a07120.html">Skip</a></p>
-<p ><a class="el" href="../../df/df1/a07118.html">Queue</a></p>
-<p ><a class="el" href="../../dd/d7b/a07121.html">Stop</a></p>
-<p ><a class="el" href="../../db/d3a/a07105.html">Clear</a></p>
-<p ><a class="el" href="../../d4/dff/a07114.html">Pause</a></p>
-<p ><a class="el" href="../../d8/d75/a07119.html">Set Music Channel</a></p>
-<p ><a class="el" href="../../d2/da1/a07109.html">Loop All</a></p>
-<p ><a class="el" href="../../da/d25/a07110.html">Loop Song</a></p>
-<p ><a class="el" href="../../d8/dfa/a07113.html">NP(Now-Playing)</a></p>
-<p ><a class="el" href="../../dc/da2/a07106.html">Disconnect</a> </p>
-</div></div><!-- contents -->
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_General_Usage_Using_a_Message_Collector"></a></p><ul>
+<li>First, define a filtering function-which is one that takes a <code><a class="el" href="../../db/dd3/a03251.html" title="A single Message.">DiscordCoreAPI::Message</a></code> as its one argument, that returns a <code>bool</code>. Define it so that if it returns true, the message is "collected".</li>
+<li>Instantiate the <code><a class="el" href="../../dc/dc1/a03263.html" title="MessageCollector, for collecting Messages from a Channel.">DiscordCoreAPI::MessageCollector</a></code> class with arguments to define how many messages are collected, for how long in milliseconds the collection runs, a userId, and the filter function.</li>
+<li>Execute the <code><a class="el" href="../../dc/dc1/a03263.html#aa5712e643f8c09387ca9892a536e379a" title="Begin waiting for Messages.">DiscordCoreAPI::MessageCollector::collectMessages</a></code> function.</li>
+<li>This function returns a struct of type <code><a class="el" href="../../d6/d38/a03259.html" title="MessageCollectorReturnData responseData.">DiscordCoreAPI::MessageCollectorReturnData</a></code>, which contains a vector of collected <code><a class="el" href="../../db/dd3/a03251.html" title="A single Message.">DiscordCoreAPI::Message</a></code>s.</li>
+</ul>
+<div class="fragment"><div class="line">function&lt;bool(<a class="code hl_class" href="../../db/dd3/a03251.html">DiscordCoreAPI::Message</a>)&gt; messageFilter = [=](<a class="code hl_class" href="../../db/dd3/a03251.html">DiscordCoreAPI::Message</a> message)-&gt; <span class="keywordtype">bool</span> {</div>
+<div class="line">    <span class="keywordflow">if</span> (userID == message.author.id) {</div>
+<div class="line">        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line">    } <span class="keywordflow">else</span> {</div>
+<div class="line">        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line">    }</div>
+<div class="line">                    };</div>
+<div class="line"><a class="code hl_class" href="../../dc/dc1/a03263.html">DiscordCoreAPI::MessageCollector</a> messageCollector;</div>
+<div class="line"><span class="keyword">auto</span> returnedMessages = messageCollector.<a class="code hl_function" href="../../dc/dc1/a03263.html#aa5712e643f8c09387ca9892a536e379a">collectMessages</a>(1, 120000, messageFilter);</div>
+<div class="line"><span class="keywordflow">if</span> (returnedMessages.messages.size() == 0) {</div>
+<div class="line">    msgEmbeds.erase(msgEmbeds.begin() + currentPageIndex, msgEmbeds.begin() + currentPageIndex + 1);</div>
+<div class="line">    msgEmbeds = Update_MessageEmbeds(<a class="code hl_function" href="../../d0/d79/a03379.html#a90ec9e3a293baa5abc72428ac30e2b14">DiscordCoreAPI::SongAPI::getPlaylist</a>(guild.id), discordGuild, newEvent, args.eventData, currentPageIndex);</div>
+<div class="line">    doWeQuit = <span class="keyword">true</span>;</div>
+<div class="line">    <span class="keywordflow">break</span>;</div>
+<div class="line">}</div>
+<div class="line">std::vector&lt;string&gt; args2;</div>
+<div class="line">std::string newString = convertToLowerCase(returnedMessages.messages.at(0).content);</div>
+<div class="line">std::regex wordRegex(<span class="stringliteral">&quot;[a-z]{1,12}&quot;</span>);</div>
+<div class="line">smatch wordRegexMatch;</div>
+<div class="line">std::regex_search(newString, wordRegexMatch, wordRegex,</div>
+<div class="line">                  std::regex_constants::match_flag_type::match_any | std::regex_constants::match_flag_type::match_not_null |</div>
+<div class="line">                      std::regex_constants::match_flag_type::match_prev_avail);</div>
+<div class="line">args2.push_back(wordRegexMatch.str());</div>
+<div class="line">std::regex_iterator&lt;const char*&gt;::regex_type rx(<span class="stringliteral">&quot;\\d{1,4}&quot;</span>);</div>
+<div class="line">std::regex_iterator&lt;const char*&gt; next(newString.c_str(), newString.c_str() + strlen(newString.c_str()), rx);</div>
+<div class="line">std::regex_iterator&lt;const char*&gt; end;</div>
+<div class="ttc" id="aa03251_html"><div class="ttname"><a href="../../db/dd3/a03251.html">DiscordCoreAPI::Message</a></div><div class="ttdoc">A single Message.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dc0/a00734_source.html#l00252">MessageEntities.hpp:252</a></div></div>
+<div class="ttc" id="aa03263_html"><div class="ttname"><a href="../../dc/dc1/a03263.html">DiscordCoreAPI::MessageCollector</a></div><div class="ttdoc">MessageCollector, for collecting Messages from a Channel.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dc0/a00734_source.html#l00299">MessageEntities.hpp:299</a></div></div>
+<div class="ttc" id="aa03263_html_aa5712e643f8c09387ca9892a536e379a"><div class="ttname"><a href="../../dc/dc1/a03263.html#aa5712e643f8c09387ca9892a536e379a">DiscordCoreAPI::MessageCollector::collectMessages</a></div><div class="ttdeci">CoRoutine&lt; MessageCollectorReturnData &gt; collectMessages(int32_t quantityToCollect, int32_t msToCollectForNew, MessageFilter messageFilter)</div><div class="ttdoc">Begin waiting for Messages.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d13/a00836_source.html#l00051">MessageEntities.cpp:51</a></div></div>
+<div class="ttc" id="aa03379_html_a90ec9e3a293baa5abc72428ac30e2b14"><div class="ttname"><a href="../../d0/d79/a03379.html#a90ec9e3a293baa5abc72428ac30e2b14">DiscordCoreAPI::SongAPI::getPlaylist</a></div><div class="ttdeci">static Playlist getPlaylist(const uint64_t &amp;guildId)</div><div class="ttdoc">Collects the Playlist from the SongAPI.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dcf/a00845_source.html#l00244">SongAPI.cpp:244</a></div></div>
+</div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d2/d4e/a06998.html">Guides</a></li><li class="navelem"><a class="el" href="../../d0/d5f/a07112.html">Music-Bot Guide</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d7/da6/a07009.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d0/d26/a07012.html">General Usage</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

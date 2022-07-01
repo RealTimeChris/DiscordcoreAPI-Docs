@@ -105,78 +105,63 @@ $(document).ready(function(){initNavTree('d8/d4a/a02703.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../dd/dee/a02700.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::ApplicationCommandData Class Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::InteractionCallbackData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Data structure representing an <a class="el" href="../../d1/d6b/a01775.html" title="A single ApplicationCommand.">ApplicationCommand</a>.  
+<p><a class="el" href="../../d7/d45/a03175.html" title="A single Interaction.">Interaction</a> <a class="el" href="../../d1/d6b/a01775.html" title="A single ApplicationCommand.">ApplicationCommand</a> callback data.  
  <a href="../../d8/d4a/a02703.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for DiscordCoreAPI::ApplicationCommandData:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/d94/a02702.svg" width="211" height="216"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:a9e53a6a2729e06e63f867bf616300ee8"><td class="memItemLeft" align="right" valign="top"><a id="a9e53a6a2729e06e63f867bf616300ee8" name="a9e53a6a2729e06e63f867bf616300ee8"></a>
-<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>applicationId</b> {}</td></tr>
-<tr class="memdesc:a9e53a6a2729e06e63f867bf616300ee8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current application id. <br /></td></tr>
-<tr class="separator:a9e53a6a2729e06e63f867bf616300ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7f8a10b7763346bcf8f01982beb960b"><td class="memItemLeft" align="right" valign="top"><a id="ac7f8a10b7763346bcf8f01982beb960b" name="ac7f8a10b7763346bcf8f01982beb960b"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>defaultMemberPermissions</b> {}</td></tr>
-<tr class="memdesc:ac7f8a10b7763346bcf8f01982beb960b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set of permissions represented as a bit set all. <br /></td></tr>
-<tr class="separator:ac7f8a10b7763346bcf8f01982beb960b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33b61b57eca792b363497d5fcc32e0aa"><td class="memItemLeft" align="right" valign="top"><a id="a33b61b57eca792b363497d5fcc32e0aa" name="a33b61b57eca792b363497d5fcc32e0aa"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>description</b> {}</td></tr>
-<tr class="memdesc:a33b61b57eca792b363497d5fcc32e0aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">A description of the current <a class="el" href="../../d1/d6b/a01775.html" title="A single ApplicationCommand.">ApplicationCommand</a>. <br /></td></tr>
-<tr class="separator:a33b61b57eca792b363497d5fcc32e0aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcb3b1a56e5a6e492f7e33f2d05b01ef"><td class="memItemLeft" align="right" valign="top"><a id="adcb3b1a56e5a6e492f7e33f2d05b01ef" name="adcb3b1a56e5a6e492f7e33f2d05b01ef"></a>
-std::unordered_map&lt; std::string, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>descriptionLocalizations</b> {}</td></tr>
-<tr class="memdesc:adcb3b1a56e5a6e492f7e33f2d05b01ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dictionary with keys in available locales Localization dictionary for name field. <br /></td></tr>
-<tr class="separator:adcb3b1a56e5a6e492f7e33f2d05b01ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f4e491494c729465f8b2d0a88e642b0"><td class="memItemLeft" align="right" valign="top"><a id="a1f4e491494c729465f8b2d0a88e642b0" name="a1f4e491494c729465f8b2d0a88e642b0"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>dmPermission</b> { false }</td></tr>
-<tr class="memdesc:a1f4e491494c729465f8b2d0a88e642b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether the command is available in DMs with the app, only for globally - scoped commands. <br /></td></tr>
-<tr class="separator:a1f4e491494c729465f8b2d0a88e642b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a618e87863f4db8753a86b29fddbf5dbc"><td class="memItemLeft" align="right" valign="top"><a id="a618e87863f4db8753a86b29fddbf5dbc" name="a618e87863f4db8753a86b29fddbf5dbc"></a>
-<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildId</b> {}</td></tr>
-<tr class="memdesc:a618e87863f4db8753a86b29fddbf5dbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Where applicable) a <a class="el" href="../../dc/d94/a02999.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> id for which guild to assign this <a class="el" href="../../d1/d6b/a01775.html" title="A single ApplicationCommand.">ApplicationCommand</a> to. <br /></td></tr>
-<tr class="separator:a618e87863f4db8753a86b29fddbf5dbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85219242ce9030453c8c7f43880aa8ce"><td class="memItemLeft" align="right" valign="top"><a id="a85219242ce9030453c8c7f43880aa8ce" name="a85219242ce9030453c8c7f43880aa8ce"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> {}</td></tr>
-<tr class="memdesc:a85219242ce9030453c8c7f43880aa8ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the current <a class="el" href="../../d1/d6b/a01775.html" title="A single ApplicationCommand.">ApplicationCommand</a>. <br /></td></tr>
-<tr class="separator:a85219242ce9030453c8c7f43880aa8ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9637a91769716308ad261035ee2c2185"><td class="memItemLeft" align="right" valign="top"><a id="a9637a91769716308ad261035ee2c2185" name="a9637a91769716308ad261035ee2c2185"></a>
-std::unordered_map&lt; std::string, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>nameLocalizations</b> {}</td></tr>
-<tr class="memdesc:a9637a91769716308ad261035ee2c2185"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dictionary with keys in available locales Localization dictionary for name field. <br /></td></tr>
-<tr class="separator:a9637a91769716308ad261035ee2c2185"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb5071b7f7baabb23a01204328f05c87"><td class="memItemLeft" align="right" valign="top"><a id="adb5071b7f7baabb23a01204328f05c87" name="adb5071b7f7baabb23a01204328f05c87"></a>
-std::vector&lt; <a class="el" href="../../df/de4/a02651.html">ApplicationCommandOptionData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>options</b> {}</td></tr>
-<tr class="memdesc:adb5071b7f7baabb23a01204328f05c87"><td class="mdescLeft">&#160;</td><td class="mdescRight">A std::vector of possible options for the current <a class="el" href="../../d1/d6b/a01775.html" title="A single ApplicationCommand.">ApplicationCommand</a>. <br /></td></tr>
-<tr class="separator:adb5071b7f7baabb23a01204328f05c87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10d43ef35b1adac0ff6a90f3d741bc9e"><td class="memItemLeft" align="right" valign="top"><a id="a10d43ef35b1adac0ff6a90f3d741bc9e" name="a10d43ef35b1adac0ff6a90f3d741bc9e"></a>
-<a class="el" href="../../dd/d94/a00888.html#ga0c1e88669ddc5cba35fdf5d84af435b8">ApplicationCommandType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> {}</td></tr>
-<tr class="memdesc:a10d43ef35b1adac0ff6a90f3d741bc9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of <a class="el" href="../../d1/d6b/a01775.html" title="A single ApplicationCommand.">ApplicationCommand</a>. <br /></td></tr>
-<tr class="separator:a10d43ef35b1adac0ff6a90f3d741bc9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80addce62ed42c9fe8140884d6c47167"><td class="memItemLeft" align="right" valign="top"><a id="a80addce62ed42c9fe8140884d6c47167" name="a80addce62ed42c9fe8140884d6c47167"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>version</b> {}</td></tr>
-<tr class="memdesc:a80addce62ed42c9fe8140884d6c47167"><td class="mdescLeft">&#160;</td><td class="mdescRight">An autoincremented version. <br /></td></tr>
-<tr class="separator:a80addce62ed42c9fe8140884d6c47167"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_attribs_a02303"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_a02303')"><img src="../../closed.png" alt="-"/>&#160;Public Data Members inherited from <a class="el" href="../../dc/da4/a02303.html">DiscordCoreAPI::DiscordEntity</a></td></tr>
-<tr class="memitem:a903c33f2f50e17293b409cfe33bcd5e9 inherit pub_attribs_a02303"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da4/a02303.html#a903c33f2f50e17293b409cfe33bcd5e9">id</a> {}</td></tr>
-<tr class="separator:a903c33f2f50e17293b409cfe33bcd5e9 inherit pub_attribs_a02303"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_methods_a02303"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a02303')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../dc/da4/a02303.html">DiscordCoreAPI::DiscordEntity</a></td></tr>
-<tr class="memitem:a880fa695445dc41f6d371d2a6ef1e8c0 inherit pub_methods_a02303"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da4/a02303.html#a880fa695445dc41f6d371d2a6ef1e8c0">getCreatedAtTimestamp</a> (<a class="el" href="../../d7/d92/a00887.html#ga5f837e6437665f0a390fe2c6271e3a91">TimeFormat</a> timeFormat)</td></tr>
-<tr class="memdesc:a880fa695445dc41f6d371d2a6ef1e8c0 inherit pub_methods_a02303"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the snowflake-id into a time and date stamp.  <a href="../../dc/da4/a02303.html#a880fa695445dc41f6d371d2a6ef1e8c0">More...</a><br /></td></tr>
-<tr class="separator:a880fa695445dc41f6d371d2a6ef1e8c0 inherit pub_methods_a02303"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6f26e7bbde3f1a6aa1e58368c35b99d"><td class="memItemLeft" align="right" valign="top"><a id="ab6f26e7bbde3f1a6aa1e58368c35b99d" name="ab6f26e7bbde3f1a6aa1e58368c35b99d"></a>
+<a class="el" href="../../d5/d25/a02687.html">AllowedMentionsData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>allowedMentions</b> {}</td></tr>
+<tr class="memdesc:ab6f26e7bbde3f1a6aa1e58368c35b99d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allowed mentions data. <br /></td></tr>
+<tr class="separator:ab6f26e7bbde3f1a6aa1e58368c35b99d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a389eab0779512973c26a09a3a4b23be4"><td class="memItemLeft" align="right" valign="top"><a id="a389eab0779512973c26a09a3a4b23be4" name="a389eab0779512973c26a09a3a4b23be4"></a>
+std::vector&lt; <a class="el" href="../../dc/d52/a02319.html">AttachmentData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>attachments</b> {}</td></tr>
+<tr class="memdesc:a389eab0779512973c26a09a3a4b23be4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of partial attachment objects attachment objects with filename and description. <br /></td></tr>
+<tr class="separator:a389eab0779512973c26a09a3a4b23be4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a343851abd9d62d48a99609b528eb2146"><td class="memItemLeft" align="right" valign="top"><a id="a343851abd9d62d48a99609b528eb2146" name="a343851abd9d62d48a99609b528eb2146"></a>
+std::vector&lt; <a class="el" href="../../df/de4/a02651.html">ApplicationCommandOptionChoiceData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>choices</b> {}</td></tr>
+<tr class="memdesc:a343851abd9d62d48a99609b528eb2146"><td class="mdescLeft">&#160;</td><td class="mdescRight">Autocomplete choices(max of 25 choices). <br /></td></tr>
+<tr class="separator:a343851abd9d62d48a99609b528eb2146"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c3552b148dddc7efe5e7f7f8df9c741"><td class="memItemLeft" align="right" valign="top"><a id="a7c3552b148dddc7efe5e7f7f8df9c741" name="a7c3552b148dddc7efe5e7f7f8df9c741"></a>
+std::vector&lt; <a class="el" href="../../dd/d9a/a02699.html">ActionRowData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>components</b> {}</td></tr>
+<tr class="memdesc:a7c3552b148dddc7efe5e7f7f8df9c741"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a> components. <br /></td></tr>
+<tr class="separator:a7c3552b148dddc7efe5e7f7f8df9c741"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01af1fc1acf012572b52cd31b71e9248"><td class="memItemLeft" align="right" valign="top"><a id="a01af1fc1acf012572b52cd31b71e9248" name="a01af1fc1acf012572b52cd31b71e9248"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>content</b> {}</td></tr>
+<tr class="memdesc:a01af1fc1acf012572b52cd31b71e9248"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a> content. <br /></td></tr>
+<tr class="separator:a01af1fc1acf012572b52cd31b71e9248"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c873b8ee992fac51dba6db457850b90"><td class="memItemLeft" align="right" valign="top"><a id="a0c873b8ee992fac51dba6db457850b90" name="a0c873b8ee992fac51dba6db457850b90"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>customId</b> {}</td></tr>
+<tr class="memdesc:a0c873b8ee992fac51dba6db457850b90"><td class="mdescLeft">&#160;</td><td class="mdescRight">A developer-defined identifier for the component, max 100 characters. <br /></td></tr>
+<tr class="separator:a0c873b8ee992fac51dba6db457850b90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a99258e86d86a72a629f0964d588950"><td class="memItemLeft" align="right" valign="top"><a id="a4a99258e86d86a72a629f0964d588950" name="a4a99258e86d86a72a629f0964d588950"></a>
+std::vector&lt; <a class="el" href="../../dd/d1b/a02351.html">EmbedData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>embeds</b> {}</td></tr>
+<tr class="memdesc:a4a99258e86d86a72a629f0964d588950"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a> embeds. <br /></td></tr>
+<tr class="separator:a4a99258e86d86a72a629f0964d588950"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fee881eb6b71c953d49e2cffa645a9f"><td class="memItemLeft" align="right" valign="top"><a id="a9fee881eb6b71c953d49e2cffa645a9f" name="a9fee881eb6b71c953d49e2cffa645a9f"></a>
+std::vector&lt; <a class="el" href="../../d4/d8c/a02359.html">File</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>files</b> {}</td></tr>
+<tr class="memdesc:a9fee881eb6b71c953d49e2cffa645a9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Files for uploading. <br /></td></tr>
+<tr class="separator:a9fee881eb6b71c953d49e2cffa645a9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c2f590b6f7318cf4732343fbb9053bf"><td class="memItemLeft" align="right" valign="top"><a id="a9c2f590b6f7318cf4732343fbb9053bf" name="a9c2f590b6f7318cf4732343fbb9053bf"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>flags</b> { 0 }</td></tr>
+<tr class="memdesc:a9c2f590b6f7318cf4732343fbb9053bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flags. <br /></td></tr>
+<tr class="separator:a9c2f590b6f7318cf4732343fbb9053bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4bcd77c87df2c4381fad9f64364efa7"><td class="memItemLeft" align="right" valign="top"><a id="ad4bcd77c87df2c4381fad9f64364efa7" name="ad4bcd77c87df2c4381fad9f64364efa7"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>title</b> {}</td></tr>
+<tr class="memdesc:ad4bcd77c87df2c4381fad9f64364efa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The title of the popup modal. <br /></td></tr>
+<tr class="separator:ad4bcd77c87df2c4381fad9f64364efa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adefe6ecb515b8b70424e8121d81fd863"><td class="memItemLeft" align="right" valign="top"><a id="adefe6ecb515b8b70424e8121d81fd863" name="adefe6ecb515b8b70424e8121d81fd863"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>tts</b> { false }</td></tr>
+<tr class="memdesc:adefe6ecb515b8b70424e8121d81fd863"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is it TTS? <br /></td></tr>
+<tr class="separator:adefe6ecb515b8b70424e8121d81fd863"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a></li>
 </ul>
 </div><!-- contents -->
@@ -185,7 +170,7 @@ Additional Inherited Members</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d8/d4a/a02703.html">ApplicationCommandData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d8/d4a/a02703.html">InteractionCallbackData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

@@ -1,0 +1,6 @@
+<map id="DiscordCoreAPI::ButtonCollector::ButtonCollector" name="DiscordCoreAPI::ButtonCollector::ButtonCollector">
+<area shape="rect" id="node1" title="Constructor." alt="" coords="5,71,216,112"/>
+<area shape="rect" id="node2" href="$d6/daf/a02803.html#a97c397fe274250bfff73cf674810a8f5" title="Returns the Channel id of this input&#45;event." alt="" coords="264,5,447,47"/>
+<area shape="rect" id="node3" href="$d6/daf/a02803.html#a520bbb225cdbd19ef871d3a00189acff" title="Returns the InteractionData, if applicable, of this input&#45;event." alt="" coords="264,71,447,112"/>
+<area shape="rect" id="node4" href="$d6/daf/a02803.html#af7be2b81b312794ea5398591d1a7e305" title="Returns the Message id, if applicable, of this input&#45;event." alt="" coords="264,136,447,177"/>
+</map>

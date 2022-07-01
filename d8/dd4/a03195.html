@@ -105,35 +105,35 @@ $(document).ready(function(){initNavTree('d8/dd4/a03195.html','../../'); initRes
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="../../d8/d2a/a03192.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::ModalCollector Class Reference<div class="ingroups"><a class="el" href="../../d7/d92/a00887.html">Utilities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::ButtonCollector Class Reference<div class="ingroups"><a class="el" href="../../d7/d92/a00887.html">Utilities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="../../d8/dd4/a03195.html" title="ModalCollector, for collecting modal text input from one or more Users.">ModalCollector</a>, for collecting modal text input from one or more <a class="el" href="../../d8/d16/a03619.html" title="An interface class for the User related Discord endpoints.">Users</a>.  
+<p><a class="el" href="../../d8/dd4/a03195.html" title="ButtonCollector, for collecting button input from one or more Users.">ButtonCollector</a>, for collecting button input from one or more <a class="el" href="../../d0/db0/a03631.html" title="An interface class for the User related Discord endpoints.">Users</a>.  
  <a href="../../d8/dd4/a03195.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../df/df7/a00731_source.html">InteractionEntities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a05a7c10af76eb9305b03dadee0b98a2b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d8a/a01987.html">CoRoutine</a>&lt; <a class="el" href="../../d1/d45/a03191.html">ModalResponseData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dd4/a03195.html#a05a7c10af76eb9305b03dadee0b98a2b">collectModalData</a> (int32_t maxWaitTimeInMsNew)</td></tr>
-<tr class="memdesc:a05a7c10af76eb9305b03dadee0b98a2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to collect the button inputs from one or more users.  <a href="../../d8/dd4/a03195.html#a05a7c10af76eb9305b03dadee0b98a2b">More...</a><br /></td></tr>
-<tr class="separator:a05a7c10af76eb9305b03dadee0b98a2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7eeb5804fc42207c363474e79cbd7fa4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dd4/a03195.html#a7eeb5804fc42207c363474e79cbd7fa4">ModalCollector</a> (<a class="el" href="../../d0/dda/a02799.html">InputEventData</a> &amp;dataPackage)</td></tr>
-<tr class="memdesc:a7eeb5804fc42207c363474e79cbd7fa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="../../d8/dd4/a03195.html#a7eeb5804fc42207c363474e79cbd7fa4">More...</a><br /></td></tr>
-<tr class="separator:a7eeb5804fc42207c363474e79cbd7fa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac243db78f0fe0ce88c8c428110d77c37"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dd4/a03195.html#ac243db78f0fe0ce88c8c428110d77c37">ButtonCollector</a> (<a class="el" href="../../d6/daf/a02803.html">InputEventData</a> &amp;dataPackage)</td></tr>
+<tr class="memdesc:ac243db78f0fe0ce88c8c428110d77c37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="../../d8/dd4/a03195.html#ac243db78f0fe0ce88c8c428110d77c37">More...</a><br /></td></tr>
+<tr class="separator:ac243db78f0fe0ce88c8c428110d77c37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eecf8f131b659cf758266ce6472f4a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d8a/a01987.html">CoRoutine</a>&lt; std::vector&lt; <a class="el" href="../../d1/d45/a03191.html">ButtonResponseData</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dd4/a03195.html#a0eecf8f131b659cf758266ce6472f4a9">collectButtonData</a> (bool getButtonDataForAllNew, int32_t maxWaitTimeInMsNew, int32_t maxNumberOfPressesNew, <a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> targetUserId=0)</td></tr>
+<tr class="memdesc:a0eecf8f131b659cf758266ce6472f4a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to collect the button inputs from one or more users.  <a href="../../d8/dd4/a03195.html#a0eecf8f131b659cf758266ce6472f4a9">More...</a><br /></td></tr>
+<tr class="separator:a0eecf8f131b659cf758266ce6472f4a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a7eeb5804fc42207c363474e79cbd7fa4" name="a7eeb5804fc42207c363474e79cbd7fa4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7eeb5804fc42207c363474e79cbd7fa4">&#9670;&nbsp;</a></span>ModalCollector()</h2>
+<a id="ac243db78f0fe0ce88c8c428110d77c37" name="ac243db78f0fe0ce88c8c428110d77c37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac243db78f0fe0ce88c8c428110d77c37">&#9670;&nbsp;</a></span>ButtonCollector()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">DiscordCoreAPI::ModalCollector::ModalCollector </td>
+          <td class="memname">DiscordCoreAPI::ButtonCollector::ButtonCollector </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/dda/a02799.html">InputEventData</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d6/daf/a02803.html">InputEventData</a> &amp;&#160;</td>
           <td class="paramname"><em>dataPackage</em></td><td>)</td>
           <td></td>
         </tr>
@@ -141,45 +141,71 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p >Constructor.</p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dataPackage</td><td>An <a class="el" href="../../d0/dda/a02799.html" title="Data representing an input-event, which is any Message or Interaction that is coming into the bot as ...">InputEventData</a> structure, from the response that came from the submitted button. </td></tr>
+    <tr><td class="paramname">dataPackage</td><td>An <a class="el" href="../../d6/daf/a02803.html" title="Data representing an input-event, which is any Message or Interaction that is coming into the bot as ...">InputEventData</a> structure, from the response that came from the submitted button. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d6e/a00833_source.html#l00412">412</a> of file <a class="el" href="../../dc/d6e/a00833_source.html">InteractionEntities.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d6e/a00833_source.html#l00290">290</a> of file <a class="el" href="../../dc/d6e/a00833_source.html">InteractionEntities.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/dd4/a03195_a7eeb5804fc42207c363474e79cbd7fa4_cgraph.svg" width="450" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/dd4/a03195_ac243db78f0fe0ce88c8c428110d77c37_cgraph.svg" width="452" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a05a7c10af76eb9305b03dadee0b98a2b" name="a05a7c10af76eb9305b03dadee0b98a2b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a05a7c10af76eb9305b03dadee0b98a2b">&#9670;&nbsp;</a></span>collectModalData()</h2>
+<a id="a0eecf8f131b659cf758266ce6472f4a9" name="a0eecf8f131b659cf758266ce6472f4a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0eecf8f131b659cf758266ce6472f4a9">&#9670;&nbsp;</a></span>collectButtonData()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d2/d8a/a01987.html">CoRoutine</a>&lt; <a class="el" href="../../d1/d45/a03191.html">ModalResponseData</a> &gt; DiscordCoreAPI::ModalCollector::collectModalData </td>
+          <td class="memname"><a class="el" href="../../d2/d8a/a01987.html">CoRoutine</a>&lt; std::vector&lt; <a class="el" href="../../d1/d45/a03191.html">ButtonResponseData</a> &gt; &gt; DiscordCoreAPI::ButtonCollector::collectButtonData </td>
           <td>(</td>
-          <td class="paramtype">int32_t&#160;</td>
-          <td class="paramname"><em>maxWaitTimeInMsNew</em></td><td>)</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>getButtonDataForAllNew</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>maxWaitTimeInMsNew</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>maxNumberOfPressesNew</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td>
+          <td class="paramname"><em>targetUserId</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p >Used to collect the button inputs from one or more users.</p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">getButtonDataForAllNew</td><td>Whether or not to collect input from a single target <a class="el" href="../../d8/d16/a03619.html" title="A single User.">User</a> or all potential users. </td></tr>
     <tr><td class="paramname">maxWaitTimeInMsNew</td><td>The maximum amount of time to wait for new inputs, in milliseconds. </td></tr>
+    <tr><td class="paramname">maxNumberOfPressesNew</td><td>The maximum number of inputs to collect before stopping. </td></tr>
+    <tr><td class="paramname">targetUserId</td><td>The id of the single <a class="el" href="../../d8/d16/a03619.html" title="A single User.">User</a> to collect inputs from, if getButtonDataForAllNew is set to false. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A std::vector of <a class="el" href="../../d5/d27/a03183.html" title="Button response data.">ButtonResponseData</a>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A std::vector of <a class="el" href="../../d1/d45/a03191.html" title="Button response data.">ButtonResponseData</a>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d6e/a00833_source.html#l00417">417</a> of file <a class="el" href="../../dc/d6e/a00833_source.html">InteractionEntities.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d6e/a00833_source.html#l00298">298</a> of file <a class="el" href="../../dc/d6e/a00833_source.html">InteractionEntities.cpp</a>.</p>
 
 </div>
 </div>
@@ -193,7 +219,7 @@ Here is the call graph for this function:</div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d8/dd4/a03195.html">ModalCollector</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d8/dd4/a03195.html">ButtonCollector</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

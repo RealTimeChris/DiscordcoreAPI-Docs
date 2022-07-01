@@ -103,46 +103,176 @@ $(document).ready(function(){initNavTree('dc/d14/a03479.html','../../'); initRes
 
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Public Data Members</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="../../dd/d74/a03476.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::CreateGuildStickerData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::StageInstances Class Reference<div class="ingroups"><a class="el" href="../../dd/d08/a00884.html">Main Endpoints</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For creating a single <a class="el" href="../../d0/d17/a03491.html" title="A single Sticker.">Sticker</a>.  
+<p>An interface class DiscordCoreAPI_Dll for the <a class="el" href="../../d1/def/a03475.html" title="A single StageInstance.">StageInstance</a> related Discord endpoints.  
  <a href="../../dc/d14/a03479.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="../../d2/ddd/a00755_source.html">StickerEntities.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../dd/d5c/a00752_source.html">StageInstanceEntities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Public Data Members</h2></td></tr>
-<tr class="memitem:afca7c0976f222a035bcb2f0402907a70"><td class="memItemLeft" align="right" valign="top"><a id="afca7c0976f222a035bcb2f0402907a70" name="afca7c0976f222a035bcb2f0402907a70"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>description</b> {}</td></tr>
-<tr class="memdesc:afca7c0976f222a035bcb2f0402907a70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Description of the <a class="el" href="../../d0/d17/a03491.html" title="A single Sticker.">Sticker</a>. <br /></td></tr>
-<tr class="separator:afca7c0976f222a035bcb2f0402907a70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57ee31151e22ae51a94279e742181cb7"><td class="memItemLeft" align="right" valign="top"><a id="a57ee31151e22ae51a94279e742181cb7" name="a57ee31151e22ae51a94279e742181cb7"></a>
-std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>file</b> {}</td></tr>
-<tr class="memdesc:a57ee31151e22ae51a94279e742181cb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The sticker file to upload, must be a Png, Apng, or Lottie JSON file, max 500 KB. <br /></td></tr>
-<tr class="separator:a57ee31151e22ae51a94279e742181cb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4eb06acb4869751097a93d85d31128a"><td class="memItemLeft" align="right" valign="top"><a id="aa4eb06acb4869751097a93d85d31128a" name="aa4eb06acb4869751097a93d85d31128a"></a>
-<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildId</b> {}</td></tr>
-<tr class="memdesc:aa4eb06acb4869751097a93d85d31128a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../dc/d94/a02999.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> within which to create the <a class="el" href="../../d0/d17/a03491.html" title="A single Sticker.">Sticker</a>. <br /></td></tr>
-<tr class="separator:aa4eb06acb4869751097a93d85d31128a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9e9b6b3a9004f9774d35ed96490e43f"><td class="memItemLeft" align="right" valign="top"><a id="ae9e9b6b3a9004f9774d35ed96490e43f" name="ae9e9b6b3a9004f9774d35ed96490e43f"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> {}</td></tr>
-<tr class="memdesc:ae9e9b6b3a9004f9774d35ed96490e43f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the <a class="el" href="../../d0/d17/a03491.html" title="A single Sticker.">Sticker</a>. <br /></td></tr>
-<tr class="separator:ae9e9b6b3a9004f9774d35ed96490e43f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb984fb0a5e541d4f78579b5151113ba"><td class="memItemLeft" align="right" valign="top"><a id="acb984fb0a5e541d4f78579b5151113ba" name="acb984fb0a5e541d4f78579b5151113ba"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>reason</b> {}</td></tr>
-<tr class="memdesc:acb984fb0a5e541d4f78579b5151113ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">The reason for creating the <a class="el" href="../../d0/d17/a03491.html" title="A single Sticker.">Sticker</a>. <br /></td></tr>
-<tr class="separator:acb984fb0a5e541d4f78579b5151113ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad71413612e63919fca0ccc19935c8daf"><td class="memItemLeft" align="right" valign="top"><a id="ad71413612e63919fca0ccc19935c8daf" name="ad71413612e63919fca0ccc19935c8daf"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>tags</b> {}</td></tr>
-<tr class="memdesc:ad71413612e63919fca0ccc19935c8daf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Autocomplete / suggestion tags for the sticker(max 200 characters). <br /></td></tr>
-<tr class="separator:ad71413612e63919fca0ccc19935c8daf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:aa4ba46b360f8715672601543bd11bf7f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d2/d8a/a01987.html">CoRoutine</a>&lt; <a class="el" href="../../d1/def/a03475.html">StageInstance</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d14/a03479.html#aa4ba46b360f8715672601543bd11bf7f">createStageInstanceAsync</a> (<a class="el" href="../../d4/d63/a03459.html">CreateStageInstanceData</a> dataPackage)</td></tr>
+<tr class="memdesc:aa4ba46b360f8715672601543bd11bf7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="../../d1/def/a03475.html" title="A single StageInstance.">StageInstance</a>.  <a href="../../dc/d14/a03479.html#aa4ba46b360f8715672601543bd11bf7f">More...</a><br /></td></tr>
+<tr class="separator:aa4ba46b360f8715672601543bd11bf7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaffccd20e15a5005c628eaf5fd24f30e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d2/d8a/a01987.html">CoRoutine</a>&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d14/a03479.html#aaffccd20e15a5005c628eaf5fd24f30e">deleteStageInstanceAsync</a> (<a class="el" href="../../db/db8/a03471.html">DeleteStageInstanceData</a> dataPackage)</td></tr>
+<tr class="memdesc:aaffccd20e15a5005c628eaf5fd24f30e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes a <a class="el" href="../../d1/def/a03475.html" title="A single StageInstance.">StageInstance</a>.  <a href="../../dc/d14/a03479.html#aaffccd20e15a5005c628eaf5fd24f30e">More...</a><br /></td></tr>
+<tr class="separator:aaffccd20e15a5005c628eaf5fd24f30e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26cd124cec9c5547f35208c2a2d21e16"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d2/d8a/a01987.html">CoRoutine</a>&lt; <a class="el" href="../../d1/def/a03475.html">StageInstance</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d14/a03479.html#a26cd124cec9c5547f35208c2a2d21e16">getStageInstanceAsync</a> (<a class="el" href="../../d4/d60/a03463.html">GetStageInstanceData</a> dataPackage)</td></tr>
+<tr class="memdesc:a26cd124cec9c5547f35208c2a2d21e16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collects a <a class="el" href="../../d1/def/a03475.html" title="A single StageInstance.">StageInstance</a>.  <a href="../../dc/d14/a03479.html#a26cd124cec9c5547f35208c2a2d21e16">More...</a><br /></td></tr>
+<tr class="separator:a26cd124cec9c5547f35208c2a2d21e16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e994f6f5e049f31b398897f2cbd9da6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d2/d8a/a01987.html">CoRoutine</a>&lt; <a class="el" href="../../d1/def/a03475.html">StageInstance</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d14/a03479.html#a8e994f6f5e049f31b398897f2cbd9da6">modifyStageInstanceAsync</a> (<a class="el" href="../../d7/db0/a03467.html">ModifyStageInstanceData</a> dataPackage)</td></tr>
+<tr class="memdesc:a8e994f6f5e049f31b398897f2cbd9da6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifies a <a class="el" href="../../d1/def/a03475.html" title="A single StageInstance.">StageInstance</a>.  <a href="../../dc/d14/a03479.html#a8e994f6f5e049f31b398897f2cbd9da6">More...</a><br /></td></tr>
+<tr class="separator:a8e994f6f5e049f31b398897f2cbd9da6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="../../d2/ddd/a00755_source.html">StickerEntities.hpp</a></li>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa4ba46b360f8715672601543bd11bf7f" name="aa4ba46b360f8715672601543bd11bf7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4ba46b360f8715672601543bd11bf7f">&#9670;&nbsp;</a></span>createStageInstanceAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d2/d8a/a01987.html">CoRoutine</a>&lt; <a class="el" href="../../d1/def/a03475.html">StageInstance</a> &gt; DiscordCoreAPI::StageInstances::createStageInstanceAsync </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/d63/a03459.html">CreateStageInstanceData</a>&#160;</td>
+          <td class="paramname"><em>dataPackage</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Creates a <a class="el" href="../../d1/def/a03475.html" title="A single StageInstance.">StageInstance</a>.</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dataPackage</td><td>A <a class="el" href="../../d4/d63/a03459.html" title="For creating a StageInstance.">CreateStageInstanceData</a> structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../d2/d8a/a01987.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> containing a <a class="el" href="../../d1/def/a03475.html" title="A single StageInstance.">StageInstance</a>. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d6/d2f/a00854_source.html#l00040">40</a> of file <a class="el" href="../../d6/d2f/a00854_source.html">StageInstanceEntities.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aaffccd20e15a5005c628eaf5fd24f30e" name="aaffccd20e15a5005c628eaf5fd24f30e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaffccd20e15a5005c628eaf5fd24f30e">&#9670;&nbsp;</a></span>deleteStageInstanceAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d2/d8a/a01987.html">CoRoutine</a>&lt; void &gt; DiscordCoreAPI::StageInstances::deleteStageInstanceAsync </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/db8/a03471.html">DeleteStageInstanceData</a>&#160;</td>
+          <td class="paramname"><em>dataPackage</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Deletes a <a class="el" href="../../d1/def/a03475.html" title="A single StageInstance.">StageInstance</a>.</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dataPackage</td><td>A <a class="el" href="../../db/db8/a03471.html" title="For deleting a single StageInstance.">DeleteStageInstanceData</a> structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../d2/d8a/a01987.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> containing void. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d6/d2f/a00854_source.html#l00083">83</a> of file <a class="el" href="../../d6/d2f/a00854_source.html">StageInstanceEntities.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a26cd124cec9c5547f35208c2a2d21e16" name="a26cd124cec9c5547f35208c2a2d21e16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26cd124cec9c5547f35208c2a2d21e16">&#9670;&nbsp;</a></span>getStageInstanceAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d2/d8a/a01987.html">CoRoutine</a>&lt; <a class="el" href="../../d1/def/a03475.html">StageInstance</a> &gt; DiscordCoreAPI::StageInstances::getStageInstanceAsync </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/d60/a03463.html">GetStageInstanceData</a>&#160;</td>
+          <td class="paramname"><em>dataPackage</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Collects a <a class="el" href="../../d1/def/a03475.html" title="A single StageInstance.">StageInstance</a>.</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dataPackage</td><td>A <a class="el" href="../../d4/d60/a03463.html" title="For collecting a single StageInstance.">GetStageInstanceData</a> structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../d2/d8a/a01987.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> containing a <a class="el" href="../../d1/def/a03475.html" title="A single StageInstance.">StageInstance</a>. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d6/d2f/a00854_source.html#l00056">56</a> of file <a class="el" href="../../d6/d2f/a00854_source.html">StageInstanceEntities.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8e994f6f5e049f31b398897f2cbd9da6" name="a8e994f6f5e049f31b398897f2cbd9da6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e994f6f5e049f31b398897f2cbd9da6">&#9670;&nbsp;</a></span>modifyStageInstanceAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d2/d8a/a01987.html">CoRoutine</a>&lt; <a class="el" href="../../d1/def/a03475.html">StageInstance</a> &gt; DiscordCoreAPI::StageInstances::modifyStageInstanceAsync </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d7/db0/a03467.html">ModifyStageInstanceData</a>&#160;</td>
+          <td class="paramname"><em>dataPackage</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Modifies a <a class="el" href="../../d1/def/a03475.html" title="A single StageInstance.">StageInstance</a>.</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dataPackage</td><td>A <a class="el" href="../../d7/db0/a03467.html" title="For modifying a single StageInstance.">ModifyStageInstanceData</a> structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../d2/d8a/a01987.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> containing a <a class="el" href="../../d1/def/a03475.html" title="A single StageInstance.">StageInstance</a>. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d6/d2f/a00854_source.html#l00067">67</a> of file <a class="el" href="../../d6/d2f/a00854_source.html">StageInstanceEntities.cpp</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li><a class="el" href="../../dd/d5c/a00752_source.html">StageInstanceEntities.hpp</a></li>
+<li><a class="el" href="../../d6/d2f/a00854_source.html">StageInstanceEntities.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -150,7 +280,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>tags</b> {}</t
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dc/d14/a03479.html">CreateGuildStickerData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dc/d14/a03479.html">StageInstances</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

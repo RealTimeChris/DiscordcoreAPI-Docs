@@ -105,29 +105,29 @@ $(document).ready(function(){initNavTree('d9/d6c/a02903.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d3/d5d/a02900.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::GetGuildPruneCountData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::RemoveGuildBanData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For collecting the <a class="el" href="../../dc/d94/a02999.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> prune count.  
+<p>For removing a previous created Ban.  
  <a href="../../d9/d6c/a02903.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d1/d04/a00713_source.html">GuildEntities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:a153eb98f7cd22264755f7f7a17b05ac3"><td class="memItemLeft" align="right" valign="top"><a id="a153eb98f7cd22264755f7f7a17b05ac3" name="a153eb98f7cd22264755f7f7a17b05ac3"></a>
-int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>days</b> { 0 }</td></tr>
-<tr class="memdesc:a153eb98f7cd22264755f7f7a17b05ac3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of days beyond which to prune the user's for inactivity. <br /></td></tr>
-<tr class="separator:a153eb98f7cd22264755f7f7a17b05ac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a123c5d64d16d39950b4f964818a3d040"><td class="memItemLeft" align="right" valign="top"><a id="a123c5d64d16d39950b4f964818a3d040" name="a123c5d64d16d39950b4f964818a3d040"></a>
+<tr class="memitem:a5d92cad392ec597218056f703c9aad1d"><td class="memItemLeft" align="right" valign="top"><a id="a5d92cad392ec597218056f703c9aad1d" name="a5d92cad392ec597218056f703c9aad1d"></a>
 <a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildId</b> {}</td></tr>
-<tr class="memdesc:a123c5d64d16d39950b4f964818a3d040"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../dc/d94/a02999.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> to be pruned. <br /></td></tr>
-<tr class="separator:a123c5d64d16d39950b4f964818a3d040"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aecf783c0e495d9a0a0abd5fd14f99908"><td class="memItemLeft" align="right" valign="top"><a id="aecf783c0e495d9a0a0abd5fd14f99908" name="aecf783c0e495d9a0a0abd5fd14f99908"></a>
-std::vector&lt; <a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>includeRoles</b> {}</td></tr>
-<tr class="memdesc:aecf783c0e495d9a0a0abd5fd14f99908"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../dc/d7f/a03367.html" title="An interface class for the Role related Discord endpoints.">Roles</a> to be included in the prune. <br /></td></tr>
-<tr class="separator:aecf783c0e495d9a0a0abd5fd14f99908"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:a5d92cad392ec597218056f703c9aad1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../dd/d26/a03003.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> from which to remove the Ban. <br /></td></tr>
+<tr class="separator:a5d92cad392ec597218056f703c9aad1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5ae0cce136fe703153f683c0b13259f"><td class="memItemLeft" align="right" valign="top"><a id="aa5ae0cce136fe703153f683c0b13259f" name="aa5ae0cce136fe703153f683c0b13259f"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>reason</b> {}</td></tr>
+<tr class="memdesc:aa5ae0cce136fe703153f683c0b13259f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The reason for removing this Ban. <br /></td></tr>
+<tr class="separator:aa5ae0cce136fe703153f683c0b13259f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace91b0e0f494dd7a4505b61f3673fa02"><td class="memItemLeft" align="right" valign="top"><a id="ace91b0e0f494dd7a4505b61f3673fa02" name="ace91b0e0f494dd7a4505b61f3673fa02"></a>
+<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>userId</b> {}</td></tr>
+<tr class="memdesc:ace91b0e0f494dd7a4505b61f3673fa02"><td class="mdescLeft">&#160;</td><td class="mdescRight">The user Id of the user who's ban to remove. <br /></td></tr>
+<tr class="separator:ace91b0e0f494dd7a4505b61f3673fa02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d1/d04/a00713_source.html">GuildEntities.hpp</a></li>
@@ -138,7 +138,7 @@ std::vector&lt; <a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e7535
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d6c/a02903.html">GetGuildPruneCountData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d6c/a02903.html">RemoveGuildBanData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

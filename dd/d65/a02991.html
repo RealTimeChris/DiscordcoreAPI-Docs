@@ -105,29 +105,25 @@ $(document).ready(function(){initNavTree('dd/d65/a02991.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d8/d7d/a02988.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::GetCurrentUserGuildsData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::DeleteInviteData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For collecting a list of <a class="el" href="../../dc/d94/a02999.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>'s that the Bot is in.  
+<p>For deleting a single <a class="el" href="../../dd/d26/a03003.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> Invite.  
  <a href="../../dd/d65/a02991.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d1/d04/a00713_source.html">GuildEntities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:ae42a507972a54a0227def24c5c85b055"><td class="memItemLeft" align="right" valign="top"><a id="ae42a507972a54a0227def24c5c85b055" name="ae42a507972a54a0227def24c5c85b055"></a>
-<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>after</b> {}</td></tr>
-<tr class="memdesc:ae42a507972a54a0227def24c5c85b055"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get guilds after this <a class="el" href="../../dc/d94/a02999.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> ID. <br /></td></tr>
-<tr class="separator:ae42a507972a54a0227def24c5c85b055"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a064c0871723586cf804687d152bdd182"><td class="memItemLeft" align="right" valign="top"><a id="a064c0871723586cf804687d152bdd182" name="a064c0871723586cf804687d152bdd182"></a>
-<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>before</b> {}</td></tr>
-<tr class="memdesc:a064c0871723586cf804687d152bdd182"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get guilds before this <a class="el" href="../../dc/d94/a02999.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> ID. <br /></td></tr>
-<tr class="separator:a064c0871723586cf804687d152bdd182"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96754c6d0a421023fcf7d5aa0412f1f4"><td class="memItemLeft" align="right" valign="top"><a id="a96754c6d0a421023fcf7d5aa0412f1f4" name="a96754c6d0a421023fcf7d5aa0412f1f4"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>limit</b> { 0 }</td></tr>
-<tr class="memdesc:a96754c6d0a421023fcf7d5aa0412f1f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max number of guilds to return (1 - 200). <br /></td></tr>
-<tr class="separator:a96754c6d0a421023fcf7d5aa0412f1f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88871fa2dd10b5b8b4d93f1689bb80cd"><td class="memItemLeft" align="right" valign="top"><a id="a88871fa2dd10b5b8b4d93f1689bb80cd" name="a88871fa2dd10b5b8b4d93f1689bb80cd"></a>
+uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>inviteId</b> {}</td></tr>
+<tr class="memdesc:a88871fa2dd10b5b8b4d93f1689bb80cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Invite which you would like to delete. <br /></td></tr>
+<tr class="separator:a88871fa2dd10b5b8b4d93f1689bb80cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac04f48ff7c81f2486aba6225d5995e53"><td class="memItemLeft" align="right" valign="top"><a id="ac04f48ff7c81f2486aba6225d5995e53" name="ac04f48ff7c81f2486aba6225d5995e53"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>reason</b> {}</td></tr>
+<tr class="memdesc:ac04f48ff7c81f2486aba6225d5995e53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reason for deleting the Invite. <br /></td></tr>
+<tr class="separator:ac04f48ff7c81f2486aba6225d5995e53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d1/d04/a00713_source.html">GuildEntities.hpp</a></li>
@@ -138,7 +134,7 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>limit</b> { 0 }</
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dd/d65/a02991.html">GetCurrentUserGuildsData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dd/d65/a02991.html">DeleteInviteData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

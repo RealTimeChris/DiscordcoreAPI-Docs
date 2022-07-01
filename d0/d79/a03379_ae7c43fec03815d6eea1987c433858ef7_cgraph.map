@@ -1,0 +1,7 @@
+<map id="DiscordCoreAPI::SongAPI::skip" name="DiscordCoreAPI::SongAPI::skip">
+<area shape="rect" id="node1" title="Skips to the next Song in the queue, if applicable." alt="" coords="5,104,179,145"/>
+<area shape="rect" id="node2" href="$d0/d79/a03379.html#a50d0f6e2f372e7efef5e4870fdcb0c68" title="Collects the currently playing Song." alt="" coords="227,5,400,47"/>
+<area shape="rect" id="node3" href="$d0/d79/a03379.html#a2fd8322ed36afe708a12ec4a32675940" title="Returns the current loop&#45;all status of the current Guild&#39;s Playlist." alt="" coords="227,71,400,112"/>
+<area shape="rect" id="node4" href="$d0/d79/a03379.html#af71c48d950393a342783d9b246f685a9" title="Returns the current loop&#45;song of the current Guild&#39;s Playlist." alt="" coords="227,136,400,177"/>
+<area shape="rect" id="node5" href="$d0/d79/a03379.html#a36d2861aef00337d8fd20c873d1119da" title="Sets the currently playing Song." alt="" coords="227,201,400,243"/>
+</map>

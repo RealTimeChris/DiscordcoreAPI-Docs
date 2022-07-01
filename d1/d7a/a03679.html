@@ -104,52 +104,39 @@ $(document).ready(function(){initNavTree('d1/d7a/a03679.html','../../'); initRes
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="../../d9/d94/a03676.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::Permissions Class Reference<div class="ingroups"><a class="el" href="../../d7/d92/a00887.html">Utilities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::UnboundedMessageBlock&lt; ObjectType &gt; Class Template Reference<div class="ingroups"><a class="el" href="../../d7/d92/a00887.html">Utilities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="../../d1/d7a/a03679.html" title="Permissions class, for representing and manipulating Permission values.">Permissions</a> class, for representing and manipulating Permission values.  
+<p>A thread-safe messaging block for data-structures.  
  <a href="../../d1/d7a/a03679.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d5/dae/a00767_source.html">Utilities.hpp</a>&gt;</code></p>
-
-<p>Inherits DiscordCoreAPI::StringWrapper.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:gaef8b69d286b5fd9b28921605dcf20b7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d92/a00887.html#gaef8b69d286b5fd9b28921605dcf20b7c">addPermissions</a> (const std::vector&lt; <a class="el" href="../../d7/d92/a00887.html#gabf76b7b06351e7fc14b8c72f9aa2c15f">Permission</a> &gt; &amp;permissionsToAdd)</td></tr>
-<tr class="memdesc:gaef8b69d286b5fd9b28921605dcf20b7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds one or more <a class="el" href="../../d1/d7a/a03679.html" title="Permissions class, for representing and manipulating Permission values.">Permissions</a> to the current <a class="el" href="../../d1/d7a/a03679.html" title="Permissions class, for representing and manipulating Permission values.">Permissions</a> value.  <a href="../../d7/d92/a00887.html#gaef8b69d286b5fd9b28921605dcf20b7c">More...</a><br /></td></tr>
-<tr class="separator:gaef8b69d286b5fd9b28921605dcf20b7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gacafd47a5d3ea3c04adccd925bc090a2d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d92/a00887.html#gacafd47a5d3ea3c04adccd925bc090a2d">checkForPermission</a> (const <a class="el" href="../../d2/de4/a03047.html">GuildMember</a> &amp;guildMember, <a class="el" href="../../d8/deb/a02387.html">ChannelData</a> &amp;channel, <a class="el" href="../../d7/d92/a00887.html#gabf76b7b06351e7fc14b8c72f9aa2c15f">Permission</a> permission)</td></tr>
-<tr class="memdesc:gacafd47a5d3ea3c04adccd925bc090a2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks for a given Permission in a chosen <a class="el" href="../../dc/da8/a01959.html" title="A Channel object.">Channel</a>, for a specific <a class="el" href="../../da/d93/a03607.html" title="A single User.">User</a>.  <a href="../../d7/d92/a00887.html#gacafd47a5d3ea3c04adccd925bc090a2d">More...</a><br /></td></tr>
-<tr class="separator:gacafd47a5d3ea3c04adccd925bc090a2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga64185e34c88630e694b240154add7ec0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d92/a00887.html#ga64185e34c88630e694b240154add7ec0">displayPermissions</a> ()</td></tr>
-<tr class="memdesc:ga64185e34c88630e694b240154add7ec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the currently present <a class="el" href="../../d1/d7a/a03679.html" title="Permissions class, for representing and manipulating Permission values.">Permissions</a> in a std::string, and returns a std::vector with each of them stored in std::string format.  <a href="../../d7/d92/a00887.html#ga64185e34c88630e694b240154add7ec0">More...</a><br /></td></tr>
-<tr class="separator:ga64185e34c88630e694b240154add7ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga52dd5ec05173b1efa95885cc040b57bf"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d92/a00887.html#ga52dd5ec05173b1efa95885cc040b57bf">getCurrentPermissionString</a> ()</td></tr>
-<tr class="memdesc:ga52dd5ec05173b1efa95885cc040b57bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a std::string containing the currently held <a class="el" href="../../d1/d7a/a03679.html" title="Permissions class, for representing and manipulating Permission values.">Permissions</a>.  <a href="../../d7/d92/a00887.html#ga52dd5ec05173b1efa95885cc040b57bf">More...</a><br /></td></tr>
-<tr class="separator:ga52dd5ec05173b1efa95885cc040b57bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga37134ae653214396070613834d9bd4f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d92/a00887.html#ga37134ae653214396070613834d9bd4f1">removePermissions</a> (const std::vector&lt; <a class="el" href="../../d7/d92/a00887.html#gabf76b7b06351e7fc14b8c72f9aa2c15f">Permission</a> &gt; &amp;permissionsToRemove)</td></tr>
-<tr class="memdesc:ga37134ae653214396070613834d9bd4f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes one or more <a class="el" href="../../d1/d7a/a03679.html" title="Permissions class, for representing and manipulating Permission values.">Permissions</a> from the current <a class="el" href="../../d1/d7a/a03679.html" title="Permissions class, for representing and manipulating Permission values.">Permissions</a> value.  <a href="../../d7/d92/a00887.html#ga37134ae653214396070613834d9bd4f1">More...</a><br /></td></tr>
-<tr class="separator:ga37134ae653214396070613834d9bd4f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:gab2f019fc4f2aaea927b5e483b97db88a"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d92/a00887.html#gab2f019fc4f2aaea927b5e483b97db88a">getAllPermissions</a> ()</td></tr>
-<tr class="memdesc:gab2f019fc4f2aaea927b5e483b97db88a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a std::string containing ALL of the possible <a class="el" href="../../d1/d7a/a03679.html" title="Permissions class, for representing and manipulating Permission values.">Permissions</a>.  <a href="../../d7/d92/a00887.html#gab2f019fc4f2aaea927b5e483b97db88a">More...</a><br /></td></tr>
-<tr class="separator:gab2f019fc4f2aaea927b5e483b97db88a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4024f5e7e266f4b0b0506db2ead8e4d7"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d92/a00887.html#ga4024f5e7e266f4b0b0506db2ead8e4d7">getCurrentChannelPermissions</a> (const <a class="el" href="../../d2/de4/a03047.html">GuildMember</a> &amp;guildMember, <a class="el" href="../../d8/deb/a02387.html">ChannelData</a> &amp;channel)</td></tr>
-<tr class="memdesc:ga4024f5e7e266f4b0b0506db2ead8e4d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a std::string containing all of a given <a class="el" href="../../da/d93/a03607.html" title="A single User.">User</a>'s <a class="el" href="../../d1/d7a/a03679.html" title="Permissions class, for representing and manipulating Permission values.">Permissions</a> for a given <a class="el" href="../../dc/da8/a01959.html" title="A Channel object.">Channel</a>.  <a href="../../d7/d92/a00887.html#ga4024f5e7e266f4b0b0506db2ead8e4d7">More...</a><br /></td></tr>
-<tr class="separator:ga4024f5e7e266f4b0b0506db2ead8e4d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae45954e6ed86e0abe47c04b9fdc33f42"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d92/a00887.html#gae45954e6ed86e0abe47c04b9fdc33f42">getCurrentGuildPermissions</a> (const <a class="el" href="../../d2/de4/a03047.html">GuildMember</a> &amp;guildMember)</td></tr>
-<tr class="memdesc:gae45954e6ed86e0abe47c04b9fdc33f42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a std::string containing the currently held <a class="el" href="../../d1/d7a/a03679.html" title="Permissions class, for representing and manipulating Permission values.">Permissions</a> in a given <a class="el" href="../../dc/d94/a02999.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>.  <a href="../../d7/d92/a00887.html#gae45954e6ed86e0abe47c04b9fdc33f42">More...</a><br /></td></tr>
-<tr class="separator:gae45954e6ed86e0abe47c04b9fdc33f42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1096795a528f8831115b7b5184f591a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d92/a00887.html#ga1096795a528f8831115b7b5184f591a6">clearContents</a> ()</td></tr>
+<tr class="memdesc:ga1096795a528f8831115b7b5184f591a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the contents of the messaging block.  <a href="../../d7/d92/a00887.html#ga1096795a528f8831115b7b5184f591a6">More...</a><br /></td></tr>
+<tr class="separator:ga1096795a528f8831115b7b5184f591a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga154a9ebfea506914823497700ec353cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d92/a00887.html#ga154a9ebfea506914823497700ec353cd">send</a> (const ObjectType &amp;&amp;theObject)</td></tr>
+<tr class="memdesc:ga154a9ebfea506914823497700ec353cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends an object of type ObjectType to the "recipient".  <a href="../../d7/d92/a00887.html#ga154a9ebfea506914823497700ec353cd">More...</a><br /></td></tr>
+<tr class="separator:ga154a9ebfea506914823497700ec353cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae2c1b708bd06fc88280c70946e94ce19"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d92/a00887.html#gae2c1b708bd06fc88280c70946e94ce19">send</a> (const ObjectType &amp;theObject)</td></tr>
+<tr class="memdesc:gae2c1b708bd06fc88280c70946e94ce19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends an object of type ObjectType to the "recipient".  <a href="../../d7/d92/a00887.html#gae2c1b708bd06fc88280c70946e94ce19">More...</a><br /></td></tr>
+<tr class="separator:gae2c1b708bd06fc88280c70946e94ce19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae9e72ad08e2c87db91c9eb269483f8c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d92/a00887.html#gae9e72ad08e2c87db91c9eb269483f8c2">send</a> (ObjectType &amp;&amp;theObject)</td></tr>
+<tr class="memdesc:gae9e72ad08e2c87db91c9eb269483f8c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends an object of type ObjectType to the "recipient".  <a href="../../d7/d92/a00887.html#gae9e72ad08e2c87db91c9eb269483f8c2">More...</a><br /></td></tr>
+<tr class="separator:gae9e72ad08e2c87db91c9eb269483f8c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf0080e5f3795ea25b51b1cc89048217e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d92/a00887.html#gaf0080e5f3795ea25b51b1cc89048217e">send</a> (ObjectType &amp;theObject)</td></tr>
+<tr class="memdesc:gaf0080e5f3795ea25b51b1cc89048217e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends an object of type ObjectType to the "recipient".  <a href="../../d7/d92/a00887.html#gaf0080e5f3795ea25b51b1cc89048217e">More...</a><br /></td></tr>
+<tr class="separator:gaf0080e5f3795ea25b51b1cc89048217e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5845dd8c3af6c44112754d450ebabdbf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d92/a00887.html#ga5845dd8c3af6c44112754d450ebabdbf">tryReceive</a> (ObjectType &amp;theObject)</td></tr>
+<tr class="memdesc:ga5845dd8c3af6c44112754d450ebabdbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tries to receive an object of type ObjectType to be placed into a reference.  <a href="../../d7/d92/a00887.html#ga5845dd8c3af6c44112754d450ebabdbf">More...</a><br /></td></tr>
+<tr class="separator:ga5845dd8c3af6c44112754d450ebabdbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="../../d5/dae/a00767_source.html">Utilities.hpp</a></li>
-<li><a class="el" href="../../d3/db2/a00869_source.html">Utilities.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -157,7 +144,7 @@ Static Public Member Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d1/d7a/a03679.html">Permissions</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d1/d7a/a03679.html">UnboundedMessageBlock</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

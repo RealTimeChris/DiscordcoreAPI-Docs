@@ -105,29 +105,33 @@ $(document).ready(function(){initNavTree('d0/de4/a02851.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d6/dbe/a02848.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::BaseFunctionArguments Struct Reference<div class="ingroups"><a class="el" href="../../d7/d92/a00887.html">Utilities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::Playlist Struct Reference<div class="ingroups"><a class="el" href="../../db/d18/a00885.html">Voice Connection</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Base arguments for the command classes.  
+<p><a class="el" href="../../d0/de4/a02851.html" title="Playlist of songs and other variables.">Playlist</a> of songs and other variables.  
  <a href="../../d0/de4/a02851.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:a8aa3768bc544196777248b9df5cefe0d"><td class="memItemLeft" align="right" valign="top"><a id="a8aa3768bc544196777248b9df5cefe0d" name="a8aa3768bc544196777248b9df5cefe0d"></a>
-<a class="el" href="../../d3/da7/a02815.html">CommandData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>commandData</b> {}</td></tr>
-<tr class="memdesc:a8aa3768bc544196777248b9df5cefe0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The input command's data. <br /></td></tr>
-<tr class="separator:a8aa3768bc544196777248b9df5cefe0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20009c042119fe1463a36ed29d74bb1b"><td class="memItemLeft" align="right" valign="top"><a id="a20009c042119fe1463a36ed29d74bb1b" name="a20009c042119fe1463a36ed29d74bb1b"></a>
-<a class="el" href="../../d6/d19/a02007.html">DiscordCoreClient</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>discordCoreClient</b> { nullptr }</td></tr>
-<tr class="memdesc:a20009c042119fe1463a36ed29d74bb1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pointer to the instance of <a class="el" href="../../d6/d19/a02007.html" title="DiscordCoreClient - The main class DiscordCoreAPI_Dll for this library.">DiscordCoreClient</a>. <br /></td></tr>
-<tr class="separator:a20009c042119fe1463a36ed29d74bb1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80eabf8007466c61abda009ea3070942"><td class="memItemLeft" align="right" valign="top"><a id="a80eabf8007466c61abda009ea3070942" name="a80eabf8007466c61abda009ea3070942"></a>
-<a class="el" href="../../d0/dda/a02799.html">InputEventData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>eventData</b> {}</td></tr>
-<tr class="memdesc:a80eabf8007466c61abda009ea3070942"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d0/dda/a02799.html" title="Data representing an input-event, which is any Message or Interaction that is coming into the bot as ...">InputEventData</a> representing the input event that triggered the command. <br /></td></tr>
-<tr class="separator:a80eabf8007466c61abda009ea3070942"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a149511219adde0142cd36495691a9f53"><td class="memItemLeft" align="right" valign="top"><a id="a149511219adde0142cd36495691a9f53" name="a149511219adde0142cd36495691a9f53"></a>
+<a class="el" href="../../d0/d45/a02843.html">Song</a>&#160;</td><td class="memItemRight" valign="bottom"><b>currentSong</b> {}</td></tr>
+<tr class="memdesc:a149511219adde0142cd36495691a9f53"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current <a class="el" href="../../d0/d45/a02843.html" title="A song from the various platforms.">Song</a> that is playing. <br /></td></tr>
+<tr class="separator:a149511219adde0142cd36495691a9f53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8efee4a514b0be46174da6349d31ed56"><td class="memItemLeft" align="right" valign="top"><a id="a8efee4a514b0be46174da6349d31ed56" name="a8efee4a514b0be46174da6349d31ed56"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isLoopAllEnabled</b> { false }</td></tr>
+<tr class="memdesc:a8efee4a514b0be46174da6349d31ed56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is looping of the entire <a class="el" href="../../d0/de4/a02851.html" title="Playlist of songs and other variables.">Playlist</a> currently enabled? <br /></td></tr>
+<tr class="separator:a8efee4a514b0be46174da6349d31ed56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77a8b68e299645ed185fb7352169e93a"><td class="memItemLeft" align="right" valign="top"><a id="a77a8b68e299645ed185fb7352169e93a" name="a77a8b68e299645ed185fb7352169e93a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isLoopSongEnabled</b> { false }</td></tr>
+<tr class="memdesc:a77a8b68e299645ed185fb7352169e93a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is looping of Songs currently enabled? <br /></td></tr>
+<tr class="separator:a77a8b68e299645ed185fb7352169e93a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c9c499e7eda1f2b35a633575e450a4f"><td class="memItemLeft" align="right" valign="top"><a id="a8c9c499e7eda1f2b35a633575e450a4f" name="a8c9c499e7eda1f2b35a633575e450a4f"></a>
+std::vector&lt; <a class="el" href="../../d0/d45/a02843.html">Song</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>songQueue</b> {}</td></tr>
+<tr class="memdesc:a8c9c499e7eda1f2b35a633575e450a4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of Songs that are stored to be played. <br /></td></tr>
+<tr class="separator:a8c9c499e7eda1f2b35a633575e450a4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a></li>
@@ -138,7 +142,7 @@ Public Data Members</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d0/de4/a02851.html">BaseFunctionArguments</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d0/de4/a02851.html">Playlist</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

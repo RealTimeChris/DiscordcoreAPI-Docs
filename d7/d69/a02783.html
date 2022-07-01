@@ -105,11 +105,11 @@ $(document).ready(function(){initNavTree('d7/d69/a02783.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../df/de4/a02780.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::GatewayBotData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::SessionStartData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Data from the GetGatewatBot endpoint.  
+<p>Data from the SessionStart info.  
  <a href="../../d7/d69/a02783.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a>&gt;</code></p>
@@ -118,18 +118,22 @@ $(document).ready(function(){initNavTree('d7/d69/a02783.html','../../'); initRes
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:a27f0f0808ff126f994a1553081478c78"><td class="memItemLeft" align="right" valign="top"><a id="a27f0f0808ff126f994a1553081478c78" name="a27f0f0808ff126f994a1553081478c78"></a>
-<a class="el" href="../../dc/d6a/a02779.html">SessionStartData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>sessionStartLimit</b> {}</td></tr>
-<tr class="memdesc:a27f0f0808ff126f994a1553081478c78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Information on the current session start limit. <br /></td></tr>
-<tr class="separator:a27f0f0808ff126f994a1553081478c78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a097507018e1bbb69a4ff8d19df884911"><td class="memItemLeft" align="right" valign="top"><a id="a097507018e1bbb69a4ff8d19df884911" name="a097507018e1bbb69a4ff8d19df884911"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>shards</b> { 0 }</td></tr>
-<tr class="memdesc:a097507018e1bbb69a4ff8d19df884911"><td class="mdescLeft">&#160;</td><td class="mdescRight">The recommended number of shards to use when connecting. <br /></td></tr>
-<tr class="separator:a097507018e1bbb69a4ff8d19df884911"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7d6fcb9110d6ef8d32470c6d068125a"><td class="memItemLeft" align="right" valign="top"><a id="ac7d6fcb9110d6ef8d32470c6d068125a" name="ac7d6fcb9110d6ef8d32470c6d068125a"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>url</b> {}</td></tr>
-<tr class="memdesc:ac7d6fcb9110d6ef8d32470c6d068125a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The WSS Url that can be used for connecting to the gateway. <br /></td></tr>
-<tr class="separator:ac7d6fcb9110d6ef8d32470c6d068125a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a370fff4e51320feb77b68018c70261f2"><td class="memItemLeft" align="right" valign="top"><a id="a370fff4e51320feb77b68018c70261f2" name="a370fff4e51320feb77b68018c70261f2"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>maxConcurrency</b> { 0 }</td></tr>
+<tr class="memdesc:a370fff4e51320feb77b68018c70261f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of identify requests allowed per 5 seconds. <br /></td></tr>
+<tr class="separator:a370fff4e51320feb77b68018c70261f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4cd9ab4465311b291c532d605a1eed9"><td class="memItemLeft" align="right" valign="top"><a id="ad4cd9ab4465311b291c532d605a1eed9" name="ad4cd9ab4465311b291c532d605a1eed9"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>remaining</b> { 0 }</td></tr>
+<tr class="memdesc:ad4cd9ab4465311b291c532d605a1eed9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The remaining number of session starts the current <a class="el" href="../../d8/d16/a03619.html" title="A single User.">User</a> is allowed. <br /></td></tr>
+<tr class="separator:ad4cd9ab4465311b291c532d605a1eed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1de686591d08d011811c7ab151de66d"><td class="memItemLeft" align="right" valign="top"><a id="aa1de686591d08d011811c7ab151de66d" name="aa1de686591d08d011811c7ab151de66d"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>resetAfter</b> { 0 }</td></tr>
+<tr class="memdesc:aa1de686591d08d011811c7ab151de66d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of std::chrono::milliseconds after which the limit resets. <br /></td></tr>
+<tr class="separator:aa1de686591d08d011811c7ab151de66d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41587a1ea672930c31554ae1fbc9e902"><td class="memItemLeft" align="right" valign="top"><a id="a41587a1ea672930c31554ae1fbc9e902" name="a41587a1ea672930c31554ae1fbc9e902"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>total</b> { 0 }</td></tr>
+<tr class="memdesc:a41587a1ea672930c31554ae1fbc9e902"><td class="mdescLeft">&#160;</td><td class="mdescRight">The total number of session starts the current <a class="el" href="../../d8/d16/a03619.html" title="A single User.">User</a> is allowed. <br /></td></tr>
+<tr class="separator:a41587a1ea672930c31554ae1fbc9e902"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a></li>
@@ -140,7 +144,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>url</b> {}</td
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d7/d69/a02783.html">GatewayBotData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d7/d69/a02783.html">SessionStartData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

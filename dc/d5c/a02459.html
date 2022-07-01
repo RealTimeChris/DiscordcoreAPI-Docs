@@ -105,11 +105,11 @@ $(document).ready(function(){initNavTree('dc/d5c/a02459.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d5/dcb/a02456.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::BanData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::MessageActivityData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Ban data.  
+<p><a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a> activity data.  
  <a href="../../dc/d5c/a02459.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a>&gt;</code></p>
@@ -118,18 +118,14 @@ $(document).ready(function(){initNavTree('dc/d5c/a02459.html','../../'); initRes
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:ad84275ac75ccc2107b9551b212e4fb52"><td class="memItemLeft" align="right" valign="top"><a id="ad84275ac75ccc2107b9551b212e4fb52" name="ad84275ac75ccc2107b9551b212e4fb52"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>failedDueToPerms</b> { false }</td></tr>
-<tr class="memdesc:ad84275ac75ccc2107b9551b212e4fb52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Failed due to perms? <br /></td></tr>
-<tr class="separator:ad84275ac75ccc2107b9551b212e4fb52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b171758102d1bf2f3e9add137bf1d56"><td class="memItemLeft" align="right" valign="top"><a id="a8b171758102d1bf2f3e9add137bf1d56" name="a8b171758102d1bf2f3e9add137bf1d56"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>reason</b> {}</td></tr>
-<tr class="memdesc:a8b171758102d1bf2f3e9add137bf1d56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reason for the ban. <br /></td></tr>
-<tr class="separator:a8b171758102d1bf2f3e9add137bf1d56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3a59b7284e58c0e5d74d3f3153fee17"><td class="memItemLeft" align="right" valign="top"><a id="ab3a59b7284e58c0e5d74d3f3153fee17" name="ab3a59b7284e58c0e5d74d3f3153fee17"></a>
-<a class="el" href="../../dd/d21/a02311.html">UserData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>user</b> {}</td></tr>
-<tr class="memdesc:ab3a59b7284e58c0e5d74d3f3153fee17"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../da/d93/a03607.html" title="A single User.">User</a> that was banned. <br /></td></tr>
-<tr class="separator:ab3a59b7284e58c0e5d74d3f3153fee17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace2abeade5da48fb3550e398d7c5ed32"><td class="memItemLeft" align="right" valign="top"><a id="ace2abeade5da48fb3550e398d7c5ed32" name="ace2abeade5da48fb3550e398d7c5ed32"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>partyId</b> {}</td></tr>
+<tr class="memdesc:ace2abeade5da48fb3550e398d7c5ed32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Party id. <br /></td></tr>
+<tr class="separator:ace2abeade5da48fb3550e398d7c5ed32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51215d214d23ecf3ff5a8e36b5f48e56"><td class="memItemLeft" align="right" valign="top"><a id="a51215d214d23ecf3ff5a8e36b5f48e56" name="a51215d214d23ecf3ff5a8e36b5f48e56"></a>
+<a class="el" href="../../dd/d94/a00888.html#ga86a83f66f1f5372938c82a349188050b">MessageActivityType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> { <a class="el" href="../../dd/d94/a00888.html#gga86a83f66f1f5372938c82a349188050baa286d9991c6a547ae25a5f5216164b8f">MessageActivityType::Join</a> }</td></tr>
+<tr class="memdesc:a51215d214d23ecf3ff5a8e36b5f48e56"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a> activity type. <br /></td></tr>
+<tr class="separator:a51215d214d23ecf3ff5a8e36b5f48e56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a></li>
@@ -140,7 +136,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>reason</b> {}<
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dc/d5c/a02459.html">BanData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dc/d5c/a02459.html">MessageActivityData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

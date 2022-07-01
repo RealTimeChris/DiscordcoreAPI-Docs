@@ -105,37 +105,29 @@ $(document).ready(function(){initNavTree('d6/d38/a03643.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../dc/d8f/a03640.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::CacheOptions Struct Reference<div class="ingroups"><a class="el" href="../../d7/d92/a00887.html">Utilities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::RepeatedFunctionData Struct Reference<div class="ingroups"><a class="el" href="../../d7/d92/a00887.html">Utilities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For selecting the caching style of the library.  
+<p>Function data for repeated functions to be loaded.  
  <a href="../../d6/d38/a03643.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d5/dae/a00767_source.html">Utilities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:ga03ce5155f9329e01777eb58df32f09a8"><td class="memItemLeft" align="right" valign="top">
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>cacheChannels</b> { true }</td></tr>
-<tr class="memdesc:ga03ce5155f9329e01777eb58df32f09a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do we cache <a class="el" href="../../d5/d1b/a01971.html" title="An interface class for the Channel related endpoints.">Channels</a>? <br /></td></tr>
-<tr class="separator:ga03ce5155f9329e01777eb58df32f09a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4cb85b3ee028d76c1724ef07969c6f11"><td class="memItemLeft" align="right" valign="top">
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>cacheGuildMembers</b> { true }</td></tr>
-<tr class="memdesc:ga4cb85b3ee028d76c1724ef07969c6f11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do we cache <a class="el" href="../../df/d0c/a03055.html" title="An interface class DiscordCoreAPI_Dll for the GuildMember related Discord endpoints.">GuildMembers</a>? <br /></td></tr>
-<tr class="separator:ga4cb85b3ee028d76c1724ef07969c6f11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga75daaa749e6fc1776ee6e704e628173e"><td class="memItemLeft" align="right" valign="top">
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>cacheGuilds</b> { true }</td></tr>
-<tr class="memdesc:ga75daaa749e6fc1776ee6e704e628173e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do we cache <a class="el" href="../../d6/d97/a03011.html" title="An interface class for the Guild related Discord endpoints.">Guilds</a>? <br /></td></tr>
-<tr class="separator:ga75daaa749e6fc1776ee6e704e628173e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1ca359d47d90cd2e057cdd36baff3d6d"><td class="memItemLeft" align="right" valign="top">
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>cacheRoles</b> { true }</td></tr>
-<tr class="memdesc:ga1ca359d47d90cd2e057cdd36baff3d6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do we cache <a class="el" href="../../dc/d7f/a03367.html" title="An interface class for the Role related Discord endpoints.">Roles</a>? <br /></td></tr>
-<tr class="separator:ga1ca359d47d90cd2e057cdd36baff3d6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga921da3e80c8b89da1d2b8e9732a4bdca"><td class="memItemLeft" align="right" valign="top">
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>cacheUsers</b> { true }</td></tr>
-<tr class="memdesc:ga921da3e80c8b89da1d2b8e9732a4bdca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do we cache <a class="el" href="../../d8/d16/a03619.html" title="An interface class for the User related Discord endpoints.">Users</a>? <br /></td></tr>
-<tr class="separator:ga921da3e80c8b89da1d2b8e9732a4bdca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab3113ed967aef68dc02622fcc8d1a8a1"><td class="memItemLeft" align="right" valign="top">
+std::function&lt; void(<a class="el" href="../../d6/d19/a02007.html">DiscordCoreClient</a> *)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>function</b> { nullptr }</td></tr>
+<tr class="memdesc:gab3113ed967aef68dc02622fcc8d1a8a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The std::function pointer to be loaded. <br /></td></tr>
+<tr class="separator:gab3113ed967aef68dc02622fcc8d1a8a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad6cd7f6c69dd885d3fc19ee1478835b0"><td class="memItemLeft" align="right" valign="top">
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>intervalInMs</b> { 0 }</td></tr>
+<tr class="memdesc:gad6cd7f6c69dd885d3fc19ee1478835b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The time interval at which to call the std::function. <br /></td></tr>
+<tr class="separator:gad6cd7f6c69dd885d3fc19ee1478835b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad5779846654b535a8a63abe4be753e13"><td class="memItemLeft" align="right" valign="top">
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>repeated</b> { false }</td></tr>
+<tr class="memdesc:gad5779846654b535a8a63abe4be753e13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not the std::function is repeating. <br /></td></tr>
+<tr class="separator:gad5779846654b535a8a63abe4be753e13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d5/dae/a00767_source.html">Utilities.hpp</a></li>
@@ -146,7 +138,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>cacheUsers</b> { true
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d6/d38/a03643.html">CacheOptions</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d6/d38/a03643.html">RepeatedFunctionData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

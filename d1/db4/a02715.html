@@ -105,11 +105,11 @@ $(document).ready(function(){initNavTree('d1/db4/a02715.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../df/dc7/a02712.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::ThreadListSyncData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::ChannelPinsUpdateEventData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Data for when threads are synced.  
+<p>Data for when some <a class="el" href="../../dc/da8/a01959.html" title="A Channel object.">Channel</a> pins are updated.  
  <a href="../../d1/db4/a02715.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a>&gt;</code></p>
@@ -118,22 +118,18 @@ $(document).ready(function(){initNavTree('d1/db4/a02715.html','../../'); initRes
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:af2b02f2a32eb2486bac02571c670005e"><td class="memItemLeft" align="right" valign="top"><a id="af2b02f2a32eb2486bac02571c670005e" name="af2b02f2a32eb2486bac02571c670005e"></a>
-std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>channelIds</b> {}</td></tr>
-<tr class="memdesc:af2b02f2a32eb2486bac02571c670005e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The parent <a class="el" href="../../dc/da8/a01959.html" title="A Channel object.">Channel</a> ids whose threads are being synced. If omitted, then threads were synced for entire <a class="el" href="../../dc/d94/a02999.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>. <br /></td></tr>
-<tr class="separator:af2b02f2a32eb2486bac02571c670005e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0accafbbd5508b0053cc0acb2dcc1a0f"><td class="memItemLeft" align="right" valign="top"><a id="a0accafbbd5508b0053cc0acb2dcc1a0f" name="a0accafbbd5508b0053cc0acb2dcc1a0f"></a>
+<tr class="memitem:aee1073f4d7c077735b14b8392fc38513"><td class="memItemLeft" align="right" valign="top"><a id="aee1073f4d7c077735b14b8392fc38513" name="aee1073f4d7c077735b14b8392fc38513"></a>
+<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>channelId</b> {}</td></tr>
+<tr class="memdesc:aee1073f4d7c077735b14b8392fc38513"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the <a class="el" href="../../dc/da8/a01959.html" title="A Channel object.">Channel</a> within which the <a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a> was pinned. <br /></td></tr>
+<tr class="separator:aee1073f4d7c077735b14b8392fc38513"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacf1007121664126d01e609a22747d00"><td class="memItemLeft" align="right" valign="top"><a id="aacf1007121664126d01e609a22747d00" name="aacf1007121664126d01e609a22747d00"></a>
 <a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildId</b> {}</td></tr>
-<tr class="memdesc:a0accafbbd5508b0053cc0acb2dcc1a0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the <a class="el" href="../../dc/d94/a02999.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> for which the threads are being synced. <br /></td></tr>
-<tr class="separator:a0accafbbd5508b0053cc0acb2dcc1a0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81232da7e8773c8ddec59ee43d71c862"><td class="memItemLeft" align="right" valign="top"><a id="a81232da7e8773c8ddec59ee43d71c862" name="a81232da7e8773c8ddec59ee43d71c862"></a>
-std::vector&lt; <a class="el" href="../../d9/d27/a02363.html">ThreadMemberData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>members</b> {}</td></tr>
-<tr class="memdesc:a81232da7e8773c8ddec59ee43d71c862"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of members that are a part of the <a class="el" href="../../d0/db8/a03559.html" title="Represents a single Thread.">Thread</a>. <br /></td></tr>
-<tr class="separator:a81232da7e8773c8ddec59ee43d71c862"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7013207951b5b61105cfce8608be4dbd"><td class="memItemLeft" align="right" valign="top"><a id="a7013207951b5b61105cfce8608be4dbd" name="a7013207951b5b61105cfce8608be4dbd"></a>
-std::vector&lt; <a class="el" href="../../d8/deb/a02387.html">ChannelData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>threads</b> {}</td></tr>
-<tr class="memdesc:a7013207951b5b61105cfce8608be4dbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">All active threads in the given channels that the current <a class="el" href="../../da/d93/a03607.html" title="A single User.">User</a> can access. <br /></td></tr>
-<tr class="separator:a7013207951b5b61105cfce8608be4dbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:aacf1007121664126d01e609a22747d00"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the <a class="el" href="../../dd/d26/a03003.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> within which the <a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a> was pinned. <br /></td></tr>
+<tr class="separator:aacf1007121664126d01e609a22747d00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8918d1a17470180571b5848ed2c2cb2"><td class="memItemLeft" align="right" valign="top"><a id="ae8918d1a17470180571b5848ed2c2cb2" name="ae8918d1a17470180571b5848ed2c2cb2"></a>
+<a class="el" href="../../d1/d4c/a03687.html">TimeStamp</a>&#160;</td><td class="memItemRight" valign="bottom"><b>lastPinTimestamp</b> { &quot;&quot; }</td></tr>
+<tr class="memdesc:ae8918d1a17470180571b5848ed2c2cb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The time of the last pinned <a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a>. <br /></td></tr>
+<tr class="separator:ae8918d1a17470180571b5848ed2c2cb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a></li>
@@ -144,7 +140,7 @@ std::vector&lt; <a class="el" href="../../d8/deb/a02387.html">ChannelData</a> &g
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d1/db4/a02715.html">ThreadListSyncData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d1/db4/a02715.html">ChannelPinsUpdateEventData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

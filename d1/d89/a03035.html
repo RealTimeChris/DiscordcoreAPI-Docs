@@ -105,57 +105,29 @@ $(document).ready(function(){initNavTree('d1/d89/a03035.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d1/d60/a03032.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::ModifyGuildMemberData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::ModifyCurrentGuildMemberData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For modifying a <a class="el" href="../../d2/de4/a03047.html" title="A single GuildMember.">GuildMember</a>'s values.  
+<p>For modifying the Current <a class="el" href="../../df/d4a/a03051.html" title="A single GuildMember.">GuildMember</a>'s values.  
  <a href="../../d1/d89/a03035.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d2/d94/a00716_source.html">GuildMemberEntities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:a7cd632a694a3a9bc453202e3395e873b"><td class="memItemLeft" align="right" valign="top"><a id="a7cd632a694a3a9bc453202e3395e873b" name="a7cd632a694a3a9bc453202e3395e873b"></a>
-<a class="el" href="../../d2/dff/a03675.html">TimeStamp</a>&#160;</td><td class="memItemRight" valign="bottom"><b>communicationDisabledUntil</b> { &quot;&quot; }</td></tr>
-<tr class="memdesc:a7cd632a694a3a9bc453202e3395e873b"><td class="mdescLeft">&#160;</td><td class="mdescRight">When the user's timeout will expire and the user will be able to communicate in the guild again. <br /></td></tr>
-<tr class="separator:a7cd632a694a3a9bc453202e3395e873b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa11a1bb78c7531c6cc4565678a8f5484"><td class="memItemLeft" align="right" valign="top"><a id="aa11a1bb78c7531c6cc4565678a8f5484" name="aa11a1bb78c7531c6cc4565678a8f5484"></a>
-<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>currentChannelId</b> {}</td></tr>
-<tr class="memdesc:aa11a1bb78c7531c6cc4565678a8f5484"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current voice <a class="el" href="../../dc/da8/a01959.html" title="A Channel object.">Channel</a>, if applicaple. <br /></td></tr>
-<tr class="separator:aa11a1bb78c7531c6cc4565678a8f5484"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a614eec43af8d59f30d49db2995127a25"><td class="memItemLeft" align="right" valign="top"><a id="a614eec43af8d59f30d49db2995127a25" name="a614eec43af8d59f30d49db2995127a25"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>deaf</b> { false }</td></tr>
-<tr class="memdesc:a614eec43af8d59f30d49db2995127a25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not to deafen them, in voice. <br /></td></tr>
-<tr class="separator:a614eec43af8d59f30d49db2995127a25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6fd1b6931b2600ee001e0d64d95a4945"><td class="memItemLeft" align="right" valign="top"><a id="a6fd1b6931b2600ee001e0d64d95a4945" name="a6fd1b6931b2600ee001e0d64d95a4945"></a>
+<tr class="memitem:a8509f067628bb4610cdbf04bc2cd296f"><td class="memItemLeft" align="right" valign="top"><a id="a8509f067628bb4610cdbf04bc2cd296f" name="a8509f067628bb4610cdbf04bc2cd296f"></a>
 <a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildId</b> {}</td></tr>
-<tr class="memdesc:a6fd1b6931b2600ee001e0d64d95a4945"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the <a class="el" href="../../dc/d94/a02999.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> for which you would like to modify a member. <br /></td></tr>
-<tr class="separator:a6fd1b6931b2600ee001e0d64d95a4945"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada30074f126fb7c4a3ec7c9fd1d26197"><td class="memItemLeft" align="right" valign="top"><a id="ada30074f126fb7c4a3ec7c9fd1d26197" name="ada30074f126fb7c4a3ec7c9fd1d26197"></a>
-<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildMemberId</b> {}</td></tr>
-<tr class="memdesc:ada30074f126fb7c4a3ec7c9fd1d26197"><td class="mdescLeft">&#160;</td><td class="mdescRight">The user id of the desired <a class="el" href="../../dc/d94/a02999.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> memeber. <br /></td></tr>
-<tr class="separator:ada30074f126fb7c4a3ec7c9fd1d26197"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26a005cf6afe840ad58f22a5596635bd"><td class="memItemLeft" align="right" valign="top"><a id="a26a005cf6afe840ad58f22a5596635bd" name="a26a005cf6afe840ad58f22a5596635bd"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>mute</b> { false }</td></tr>
-<tr class="memdesc:a26a005cf6afe840ad58f22a5596635bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not to mute them in voice. <br /></td></tr>
-<tr class="separator:a26a005cf6afe840ad58f22a5596635bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0e2b9cb275eaaaf56db4b52667ad53d"><td class="memItemLeft" align="right" valign="top"><a id="ad0e2b9cb275eaaaf56db4b52667ad53d" name="ad0e2b9cb275eaaaf56db4b52667ad53d"></a>
-<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>newVoiceChannelId</b> {}</td></tr>
-<tr class="memdesc:ad0e2b9cb275eaaaf56db4b52667ad53d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The new voice <a class="el" href="../../dc/da8/a01959.html" title="A Channel object.">Channel</a> to move them into. <br /></td></tr>
-<tr class="separator:ad0e2b9cb275eaaaf56db4b52667ad53d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85b877d0c5ea86274201a00290db1de7"><td class="memItemLeft" align="right" valign="top"><a id="a85b877d0c5ea86274201a00290db1de7" name="a85b877d0c5ea86274201a00290db1de7"></a>
+<tr class="memdesc:a8509f067628bb4610cdbf04bc2cd296f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../dd/d26/a03003.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> within which to modify the current user's values. <br /></td></tr>
+<tr class="separator:a8509f067628bb4610cdbf04bc2cd296f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac90bd35f368e45b4f2a4bcd8dfe575d9"><td class="memItemLeft" align="right" valign="top"><a id="ac90bd35f368e45b4f2a4bcd8dfe575d9" name="ac90bd35f368e45b4f2a4bcd8dfe575d9"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>nick</b> {}</td></tr>
-<tr class="memdesc:a85b877d0c5ea86274201a00290db1de7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Their new display/nick name. <br /></td></tr>
-<tr class="separator:a85b877d0c5ea86274201a00290db1de7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d42b864ac8dcfb72aad01019cbcf411"><td class="memItemLeft" align="right" valign="top"><a id="a0d42b864ac8dcfb72aad01019cbcf411" name="a0d42b864ac8dcfb72aad01019cbcf411"></a>
+<tr class="memdesc:ac90bd35f368e45b4f2a4bcd8dfe575d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">A new nickname for the current user. <br /></td></tr>
+<tr class="separator:ac90bd35f368e45b4f2a4bcd8dfe575d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a840f12ae446d296fe8f2f42fc96d2240"><td class="memItemLeft" align="right" valign="top"><a id="a840f12ae446d296fe8f2f42fc96d2240" name="a840f12ae446d296fe8f2f42fc96d2240"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>reason</b> {}</td></tr>
-<tr class="memdesc:a0d42b864ac8dcfb72aad01019cbcf411"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reason for modifying this <a class="el" href="../../d2/de4/a03047.html" title="A single GuildMember.">GuildMember</a>. <br /></td></tr>
-<tr class="separator:a0d42b864ac8dcfb72aad01019cbcf411"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8d05273b76b98f22d2dbedc72029edd"><td class="memItemLeft" align="right" valign="top"><a id="ae8d05273b76b98f22d2dbedc72029edd" name="ae8d05273b76b98f22d2dbedc72029edd"></a>
-std::vector&lt; <a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>roleIds</b> {}</td></tr>
-<tr class="memdesc:ae8d05273b76b98f22d2dbedc72029edd"><td class="mdescLeft">&#160;</td><td class="mdescRight">A collection of <a class="el" href="../../d9/dd9/a03359.html" title="A single Role.">Role</a> id's to be applied to them. <br /></td></tr>
-<tr class="separator:ae8d05273b76b98f22d2dbedc72029edd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:a840f12ae446d296fe8f2f42fc96d2240"><td class="mdescLeft">&#160;</td><td class="mdescRight">A reason for modifying the current user's values. <br /></td></tr>
+<tr class="separator:a840f12ae446d296fe8f2f42fc96d2240"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d2/d94/a00716_source.html">GuildMemberEntities.hpp</a></li>
@@ -166,7 +138,7 @@ std::vector&lt; <a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e7535
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d1/d89/a03035.html">ModifyGuildMemberData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d1/d89/a03035.html">ModifyCurrentGuildMemberData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

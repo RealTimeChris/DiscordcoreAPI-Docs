@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d7/d76/a03451.html" target="_top" xlink:title="For collecting a single StageInstance.">
+<g id="a_node1"><a xlink:href="d4/d60/a03463.html" target="_top" xlink:title="For collecting a single StageInstance.">
 <polygon fill="none" stroke="black" points="0,-0.5 0,-30.5 133,-30.5 133,-0.5 0,-0.5"/>
 <text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::GetStage</text>
 <text text-anchor="middle" x="66.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">InstanceData</text>

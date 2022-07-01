@@ -103,18 +103,51 @@ $(document).ready(function(){initNavTree('d9/d07/a02635.html','../../'); initRes
 
 <div class="header">
   <div class="summary">
+<a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../dd/dc4/a02632.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::ReactionRemoveData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::AuditLogData Class Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For removing a reaction.  
+<p>Audit log data.  
  <a href="../../d9/d07/a02635.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a>&gt;</code></p>
 
 <p>Inherits DiscordCoreAPI::DataParser&lt; ObjectType &gt;.</p>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Data Members</h2></td></tr>
+<tr class="memitem:a55680463fb14dd8b39d461318863366e"><td class="memItemLeft" align="right" valign="top"><a id="a55680463fb14dd8b39d461318863366e" name="a55680463fb14dd8b39d461318863366e"></a>
+std::vector&lt; <a class="el" href="../../d9/dc8/a02531.html">AuditLogEntryData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>auditLogEntries</b> {}</td></tr>
+<tr class="memdesc:a55680463fb14dd8b39d461318863366e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of audit log entry objects. <br /></td></tr>
+<tr class="separator:a55680463fb14dd8b39d461318863366e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af091d110ce5a702175f5d1a2d64224e5"><td class="memItemLeft" align="right" valign="top"><a id="af091d110ce5a702175f5d1a2d64224e5" name="af091d110ce5a702175f5d1a2d64224e5"></a>
+std::vector&lt; <a class="el" href="../../d8/d49/a02419.html">AutoModerationRuleData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>autoModerationRules</b> {}</td></tr>
+<tr class="memdesc:af091d110ce5a702175f5d1a2d64224e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of auto moderation rules referenced in the audit log. <br /></td></tr>
+<tr class="separator:af091d110ce5a702175f5d1a2d64224e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a0f6b1717e437b6d1ca042916eec3c9"><td class="memItemLeft" align="right" valign="top"><a id="a5a0f6b1717e437b6d1ca042916eec3c9" name="a5a0f6b1717e437b6d1ca042916eec3c9"></a>
+std::vector&lt; <a class="el" href="../../df/df0/a02599.html">GuildScheduledEventData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>guildScheduledEvents</b> {}</td></tr>
+<tr class="memdesc:a5a0f6b1717e437b6d1ca042916eec3c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of guild scheduled event objects. <br /></td></tr>
+<tr class="separator:a5a0f6b1717e437b6d1ca042916eec3c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25d593474c41efd890d1786472e0d49b"><td class="memItemLeft" align="right" valign="top"><a id="a25d593474c41efd890d1786472e0d49b" name="a25d593474c41efd890d1786472e0d49b"></a>
+std::vector&lt; <a class="el" href="../../d0/d01/a02511.html">IntegrationData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>integrations</b> {}</td></tr>
+<tr class="memdesc:a25d593474c41efd890d1786472e0d49b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of partial integration objects. <br /></td></tr>
+<tr class="separator:a25d593474c41efd890d1786472e0d49b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71ac77fe93ac4fe061d08ff2b36cd723"><td class="memItemLeft" align="right" valign="top"><a id="a71ac77fe93ac4fe061d08ff2b36cd723" name="a71ac77fe93ac4fe061d08ff2b36cd723"></a>
+std::vector&lt; <a class="el" href="../../d7/d90/a02391.html">ChannelData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>threads</b> {}</td></tr>
+<tr class="memdesc:a71ac77fe93ac4fe061d08ff2b36cd723"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of thread-specific channel objects. <br /></td></tr>
+<tr class="separator:a71ac77fe93ac4fe061d08ff2b36cd723"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f5281149092cbce152eee68a4df19db"><td class="memItemLeft" align="right" valign="top"><a id="a3f5281149092cbce152eee68a4df19db" name="a3f5281149092cbce152eee68a4df19db"></a>
+std::vector&lt; <a class="el" href="../../d7/d0c/a02315.html">UserData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>users</b> {}</td></tr>
+<tr class="memdesc:a3f5281149092cbce152eee68a4df19db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of user objects. <br /></td></tr>
+<tr class="separator:a3f5281149092cbce152eee68a4df19db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab00d177c5af954cd61049b5f0914a07f"><td class="memItemLeft" align="right" valign="top"><a id="ab00d177c5af954cd61049b5f0914a07f" name="ab00d177c5af954cd61049b5f0914a07f"></a>
+std::vector&lt; <a class="el" href="../../dc/d34/a02627.html">WebHookData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>webhooks</b> {}</td></tr>
+<tr class="memdesc:ab00d177c5af954cd61049b5f0914a07f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of webhook objects. <br /></td></tr>
+<tr class="separator:ab00d177c5af954cd61049b5f0914a07f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a></li>
 </ul>
 </div><!-- contents -->
@@ -123,7 +156,7 @@ $(document).ready(function(){initNavTree('d9/d07/a02635.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d07/a02635.html">ReactionRemoveData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d07/a02635.html">AuditLogData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

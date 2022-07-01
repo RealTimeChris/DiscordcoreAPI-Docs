@@ -103,251 +103,92 @@ $(document).ready(function(){initNavTree('dc/dc0/a03087.html','../../'); initRes
 
 <div class="header">
   <div class="summary">
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="../../dc/de6/a03084.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::GuildScheduledEvents Class Reference<div class="ingroups"><a class="el" href="../../dd/d08/a00884.html">Main Endpoints</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::GuildScheduledEvent Class Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>An interface class for the <a class="el" href="../../d5/dd8/a03083.html" title="A single GuildScheduledEvent responseData structure.">GuildScheduledEvent</a> related Discord endpoints.  
+<p>A single <a class="el" href="../../dc/dc0/a03087.html" title="A single GuildScheduledEvent responseData structure.">GuildScheduledEvent</a> responseData structure.  
  <a href="../../dc/dc0/a03087.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../dd/dd8/a00719_source.html">GuildScheduledEventEntities.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for DiscordCoreAPI::GuildScheduledEvent:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d5e/a03086.svg" width="224" height="216"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:acc050e5ec32df19e89bc830d81309d22"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d2/d8a/a01987.html">CoRoutine</a>&lt; <a class="el" href="../../d5/dd8/a03083.html">GuildScheduledEvent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dc0/a03087.html#acc050e5ec32df19e89bc830d81309d22">createGuildScheduledEventAsync</a> (<a class="el" href="../../dc/dec/a03063.html">CreateGuildScheduledEventData</a> dataPackage)</td></tr>
-<tr class="memdesc:acc050e5ec32df19e89bc830d81309d22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="../../d5/dd8/a03083.html" title="A single GuildScheduledEvent responseData structure.">GuildScheduledEvent</a> within a chosen <a class="el" href="../../dc/d94/a02999.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>.  <a href="../../dc/dc0/a03087.html#acc050e5ec32df19e89bc830d81309d22">More...</a><br /></td></tr>
-<tr class="separator:acc050e5ec32df19e89bc830d81309d22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac19b7f8d04c89fd3039af6a63c74cc7f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d2/d8a/a01987.html">CoRoutine</a>&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dc0/a03087.html#ac19b7f8d04c89fd3039af6a63c74cc7f">deleteGuildScheduledEventAsync</a> (<a class="el" href="../../d3/dbd/a03075.html">DeleteGuildScheduledEventData</a> dataPackage)</td></tr>
-<tr class="memdesc:ac19b7f8d04c89fd3039af6a63c74cc7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes a single <a class="el" href="../../d5/dd8/a03083.html" title="A single GuildScheduledEvent responseData structure.">GuildScheduledEvent</a>.  <a href="../../dc/dc0/a03087.html#ac19b7f8d04c89fd3039af6a63c74cc7f">More...</a><br /></td></tr>
-<tr class="separator:ac19b7f8d04c89fd3039af6a63c74cc7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a881a89676af1ca29ea1e30615e8f6d8f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d2/d8a/a01987.html">CoRoutine</a>&lt; <a class="el" href="../../d5/dd8/a03083.html">GuildScheduledEvent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dc0/a03087.html#a881a89676af1ca29ea1e30615e8f6d8f">getGuildScheduledEventAsync</a> (<a class="el" href="../../da/de2/a03067.html">GetGuildScheduledEventData</a> dataPackage)</td></tr>
-<tr class="memdesc:a881a89676af1ca29ea1e30615e8f6d8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collects a single <a class="el" href="../../d5/dd8/a03083.html" title="A single GuildScheduledEvent responseData structure.">GuildScheduledEvent</a>.  <a href="../../dc/dc0/a03087.html#a881a89676af1ca29ea1e30615e8f6d8f">More...</a><br /></td></tr>
-<tr class="separator:a881a89676af1ca29ea1e30615e8f6d8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13ad59288c8018bb02c4d54629d0bba9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d2/d8a/a01987.html">CoRoutine</a>&lt; std::vector&lt; <a class="el" href="../../d5/dd8/a03083.html">GuildScheduledEvent</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dc0/a03087.html#a13ad59288c8018bb02c4d54629d0bba9">getGuildScheduledEventsAsync</a> (<a class="el" href="../../da/d9e/a03059.html">GetGuildScheduledEventsData</a> dataPackage)</td></tr>
-<tr class="memdesc:a13ad59288c8018bb02c4d54629d0bba9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a list of a given <a class="el" href="../../dc/d94/a02999.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>'s scheduled events.  <a href="../../dc/dc0/a03087.html#a13ad59288c8018bb02c4d54629d0bba9">More...</a><br /></td></tr>
-<tr class="separator:a13ad59288c8018bb02c4d54629d0bba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90fd12d61cf3ec715f60ee803e513c10"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d2/d8a/a01987.html">CoRoutine</a>&lt; std::vector&lt; <a class="el" href="../../df/df0/a02599.html">GuildScheduledEventUserData</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dc0/a03087.html#a90fd12d61cf3ec715f60ee803e513c10">getGuildScheduledEventUsersAsync</a> (<a class="el" href="../../dd/d41/a03079.html">GetGuildScheduledEventUsersData</a> dataPackage)</td></tr>
-<tr class="memdesc:a90fd12d61cf3ec715f60ee803e513c10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collects a list of <a class="el" href="../../d8/d16/a03619.html" title="An interface class for the User related Discord endpoints.">Users</a> for a given <a class="el" href="../../d5/dd8/a03083.html" title="A single GuildScheduledEvent responseData structure.">GuildScheduledEvent</a>.  <a href="../../dc/dc0/a03087.html#a90fd12d61cf3ec715f60ee803e513c10">More...</a><br /></td></tr>
-<tr class="separator:a90fd12d61cf3ec715f60ee803e513c10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a765031f7e7b71f9df5f5f879c9ba78dc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d2/d8a/a01987.html">CoRoutine</a>&lt; <a class="el" href="../../d5/dd8/a03083.html">GuildScheduledEvent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dc0/a03087.html#a765031f7e7b71f9df5f5f879c9ba78dc">modifyGuildScheduledEventAsync</a> (<a class="el" href="../../df/d48/a03071.html">ModifyGuildScheduledEventData</a> dataPackage)</td></tr>
-<tr class="memdesc:a765031f7e7b71f9df5f5f879c9ba78dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifies a single <a class="el" href="../../d5/dd8/a03083.html" title="A single GuildScheduledEvent responseData structure.">GuildScheduledEvent</a>.  <a href="../../dc/dc0/a03087.html#a765031f7e7b71f9df5f5f879c9ba78dc">More...</a><br /></td></tr>
-<tr class="separator:a765031f7e7b71f9df5f5f879c9ba78dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_methods_a02307"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a02307')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d2/d40/a02307.html">DiscordCoreAPI::DiscordEntity</a></td></tr>
+<tr class="memitem:a880fa695445dc41f6d371d2a6ef1e8c0 inherit pub_methods_a02307"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d40/a02307.html#a880fa695445dc41f6d371d2a6ef1e8c0">getCreatedAtTimestamp</a> (<a class="el" href="../../d7/d92/a00887.html#ga5f837e6437665f0a390fe2c6271e3a91">TimeFormat</a> timeFormat)</td></tr>
+<tr class="memdesc:a880fa695445dc41f6d371d2a6ef1e8c0 inherit pub_methods_a02307"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the snowflake-id into a time and date stamp.  <a href="../../d2/d40/a02307.html#a880fa695445dc41f6d371d2a6ef1e8c0">More...</a><br /></td></tr>
+<tr class="separator:a880fa695445dc41f6d371d2a6ef1e8c0 inherit pub_methods_a02307"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_a02599"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_a02599')"><img src="../../closed.png" alt="-"/>&#160;Public Data Members inherited from <a class="el" href="../../df/df0/a02599.html">DiscordCoreAPI::GuildScheduledEventData</a></td></tr>
+<tr class="memitem:a1ebd10b1b1b61b41830a927efe0dd3e7 inherit pub_attribs_a02599"><td class="memItemLeft" align="right" valign="top"><a id="a1ebd10b1b1b61b41830a927efe0dd3e7" name="a1ebd10b1b1b61b41830a927efe0dd3e7"></a>
+<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>channelId</b> {}</td></tr>
+<tr class="memdesc:a1ebd10b1b1b61b41830a927efe0dd3e7 inherit pub_attribs_a02599"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../dc/da8/a01959.html" title="A Channel object.">Channel</a> id in which the scheduled event will be hosted, or null if scheduled entity type is External. <br /></td></tr>
+<tr class="separator:a1ebd10b1b1b61b41830a927efe0dd3e7 inherit pub_attribs_a02599"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0aa58f1202da6ae1af2f3679755e3df inherit pub_attribs_a02599"><td class="memItemLeft" align="right" valign="top"><a id="ab0aa58f1202da6ae1af2f3679755e3df" name="ab0aa58f1202da6ae1af2f3679755e3df"></a>
+<a class="el" href="../../d7/d0c/a02315.html">UserData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>creator</b> {}</td></tr>
+<tr class="memdesc:ab0aa58f1202da6ae1af2f3679755e3df inherit pub_attribs_a02599"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../d8/d16/a03619.html" title="A single User.">User</a> that created the scheduled event. <br /></td></tr>
+<tr class="separator:ab0aa58f1202da6ae1af2f3679755e3df inherit pub_attribs_a02599"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac479c57b63fee76c0be1c0b259080d48 inherit pub_attribs_a02599"><td class="memItemLeft" align="right" valign="top"><a id="ac479c57b63fee76c0be1c0b259080d48" name="ac479c57b63fee76c0be1c0b259080d48"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>creatorId</b> {}</td></tr>
+<tr class="memdesc:ac479c57b63fee76c0be1c0b259080d48 inherit pub_attribs_a02599"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the <a class="el" href="../../d8/d16/a03619.html" title="A single User.">User</a> that created the scheduled event *. <br /></td></tr>
+<tr class="separator:ac479c57b63fee76c0be1c0b259080d48 inherit pub_attribs_a02599"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e1e2b78c369a6ef05cdbef2a83ffa84 inherit pub_attribs_a02599"><td class="memItemLeft" align="right" valign="top"><a id="a4e1e2b78c369a6ef05cdbef2a83ffa84" name="a4e1e2b78c369a6ef05cdbef2a83ffa84"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>description</b> {}</td></tr>
+<tr class="memdesc:a4e1e2b78c369a6ef05cdbef2a83ffa84 inherit pub_attribs_a02599"><td class="mdescLeft">&#160;</td><td class="mdescRight">The description of the scheduled event(1 - 1000 characters. <br /></td></tr>
+<tr class="separator:a4e1e2b78c369a6ef05cdbef2a83ffa84 inherit pub_attribs_a02599"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14640be484706b771e52821ed58f6fbe inherit pub_attribs_a02599"><td class="memItemLeft" align="right" valign="top"><a id="a14640be484706b771e52821ed58f6fbe" name="a14640be484706b771e52821ed58f6fbe"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>entityId</b> {}</td></tr>
+<tr class="memdesc:a14640be484706b771e52821ed58f6fbe inherit pub_attribs_a02599"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of an entity associated with a <a class="el" href="../../dd/d26/a03003.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> scheduled event. <br /></td></tr>
+<tr class="separator:a14640be484706b771e52821ed58f6fbe inherit pub_attribs_a02599"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af079765890ae86796833777303c50a35 inherit pub_attribs_a02599"><td class="memItemLeft" align="right" valign="top"><a id="af079765890ae86796833777303c50a35" name="af079765890ae86796833777303c50a35"></a>
+<a class="el" href="../../d8/d4e/a02595.html">GuildScheduledEventMetadata</a>&#160;</td><td class="memItemRight" valign="bottom"><b>entityMetadata</b> {}</td></tr>
+<tr class="memdesc:af079765890ae86796833777303c50a35 inherit pub_attribs_a02599"><td class="mdescLeft">&#160;</td><td class="mdescRight">Additional metadata for the <a class="el" href="../../dd/d26/a03003.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> scheduled event. <br /></td></tr>
+<tr class="separator:af079765890ae86796833777303c50a35 inherit pub_attribs_a02599"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabab85eabd6ce4692d85b3e6bfdf7a15 inherit pub_attribs_a02599"><td class="memItemLeft" align="right" valign="top"><a id="aabab85eabd6ce4692d85b3e6bfdf7a15" name="aabab85eabd6ce4692d85b3e6bfdf7a15"></a>
+<a class="el" href="../../dd/d94/a00888.html#ga3be930a37ea8f73fdab875716ac40643">GuildScheduledEventEntityType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>entityType</b> {}</td></tr>
+<tr class="memdesc:aabab85eabd6ce4692d85b3e6bfdf7a15 inherit pub_attribs_a02599"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of the scheduled event. <br /></td></tr>
+<tr class="separator:aabab85eabd6ce4692d85b3e6bfdf7a15 inherit pub_attribs_a02599"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a093fa985743f69b2c044fd7683d4d580 inherit pub_attribs_a02599"><td class="memItemLeft" align="right" valign="top"><a id="a093fa985743f69b2c044fd7683d4d580" name="a093fa985743f69b2c044fd7683d4d580"></a>
+<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildId</b> {}</td></tr>
+<tr class="memdesc:a093fa985743f69b2c044fd7683d4d580 inherit pub_attribs_a02599"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../dd/d26/a03003.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> id which the scheduled event belongs to. <br /></td></tr>
+<tr class="separator:a093fa985743f69b2c044fd7683d4d580 inherit pub_attribs_a02599"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef26a6cb9f3968df24ae0de2ee23301d inherit pub_attribs_a02599"><td class="memItemLeft" align="right" valign="top"><a id="aef26a6cb9f3968df24ae0de2ee23301d" name="aef26a6cb9f3968df24ae0de2ee23301d"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> {}</td></tr>
+<tr class="memdesc:aef26a6cb9f3968df24ae0de2ee23301d inherit pub_attribs_a02599"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of the scheduled event(1 - 100 characters). <br /></td></tr>
+<tr class="separator:aef26a6cb9f3968df24ae0de2ee23301d inherit pub_attribs_a02599"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d67d0a4cd2bbe9b849b720e971351eb inherit pub_attribs_a02599"><td class="memItemLeft" align="right" valign="top"><a id="a8d67d0a4cd2bbe9b849b720e971351eb" name="a8d67d0a4cd2bbe9b849b720e971351eb"></a>
+<a class="el" href="../../dd/d94/a00888.html#ga823190c71b2ac8925b8f53f0b0b17c20">GuildScheduledEventPrivacyLevel</a>&#160;</td><td class="memItemRight" valign="bottom"><b>privacyLevel</b> {}</td></tr>
+<tr class="memdesc:a8d67d0a4cd2bbe9b849b720e971351eb inherit pub_attribs_a02599"><td class="mdescLeft">&#160;</td><td class="mdescRight">The privacy level of the scheduled event. <br /></td></tr>
+<tr class="separator:a8d67d0a4cd2bbe9b849b720e971351eb inherit pub_attribs_a02599"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51559033c61e712dda07ded3109e5f6f inherit pub_attribs_a02599"><td class="memItemLeft" align="right" valign="top"><a id="a51559033c61e712dda07ded3109e5f6f" name="a51559033c61e712dda07ded3109e5f6f"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>scheduledEndTime</b> {}</td></tr>
+<tr class="memdesc:a51559033c61e712dda07ded3109e5f6f inherit pub_attribs_a02599"><td class="mdescLeft">&#160;</td><td class="mdescRight">The time the scheduled event will end, required if entity_type is External. <br /></td></tr>
+<tr class="separator:a51559033c61e712dda07ded3109e5f6f inherit pub_attribs_a02599"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaaaaa89af216b376e9411e2931bd019 inherit pub_attribs_a02599"><td class="memItemLeft" align="right" valign="top"><a id="aeaaaaa89af216b376e9411e2931bd019" name="aeaaaaa89af216b376e9411e2931bd019"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>scheduledStartTime</b> {}</td></tr>
+<tr class="memdesc:aeaaaaa89af216b376e9411e2931bd019 inherit pub_attribs_a02599"><td class="mdescLeft">&#160;</td><td class="mdescRight">The time the scheduled event will start. <br /></td></tr>
+<tr class="separator:aeaaaaa89af216b376e9411e2931bd019 inherit pub_attribs_a02599"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2594ad22068760b81ceb9e88ba6f8b1 inherit pub_attribs_a02599"><td class="memItemLeft" align="right" valign="top"><a id="ac2594ad22068760b81ceb9e88ba6f8b1" name="ac2594ad22068760b81ceb9e88ba6f8b1"></a>
+<a class="el" href="../../dd/d94/a00888.html#ga7eb11b08602561ca5e539540d753aa53">GuildScheduledEventStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><b>status</b> {}</td></tr>
+<tr class="memdesc:ac2594ad22068760b81ceb9e88ba6f8b1 inherit pub_attribs_a02599"><td class="mdescLeft">&#160;</td><td class="mdescRight">The status of the scheduled event. <br /></td></tr>
+<tr class="separator:ac2594ad22068760b81ceb9e88ba6f8b1 inherit pub_attribs_a02599"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63343fe360c770567a5c72bb6e0bb703 inherit pub_attribs_a02599"><td class="memItemLeft" align="right" valign="top"><a id="a63343fe360c770567a5c72bb6e0bb703" name="a63343fe360c770567a5c72bb6e0bb703"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>userCount</b> { 0 }</td></tr>
+<tr class="memdesc:a63343fe360c770567a5c72bb6e0bb703 inherit pub_attribs_a02599"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of users subscribed to the scheduled event. <br /></td></tr>
+<tr class="separator:a63343fe360c770567a5c72bb6e0bb703 inherit pub_attribs_a02599"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_a02307"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_a02307')"><img src="../../closed.png" alt="-"/>&#160;Public Data Members inherited from <a class="el" href="../../d2/d40/a02307.html">DiscordCoreAPI::DiscordEntity</a></td></tr>
+<tr class="memitem:a903c33f2f50e17293b409cfe33bcd5e9 inherit pub_attribs_a02307"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d40/a02307.html#a903c33f2f50e17293b409cfe33bcd5e9">id</a> {}</td></tr>
+<tr class="separator:a903c33f2f50e17293b409cfe33bcd5e9 inherit pub_attribs_a02307"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="acc050e5ec32df19e89bc830d81309d22" name="acc050e5ec32df19e89bc830d81309d22"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acc050e5ec32df19e89bc830d81309d22">&#9670;&nbsp;</a></span>createGuildScheduledEventAsync()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d2/d8a/a01987.html">CoRoutine</a>&lt; <a class="el" href="../../d5/dd8/a03083.html">GuildScheduledEvent</a> &gt; DiscordCoreAPI::GuildScheduledEvents::createGuildScheduledEventAsync </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/dec/a03063.html">CreateGuildScheduledEventData</a>&#160;</td>
-          <td class="paramname"><em>dataPackage</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >Creates a new <a class="el" href="../../d5/dd8/a03083.html" title="A single GuildScheduledEvent responseData structure.">GuildScheduledEvent</a> within a chosen <a class="el" href="../../dc/d94/a02999.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dataPackage</td><td>A <a class="el" href="../../dc/dec/a03063.html" title="For creating a GuildScheduledEvent.">CreateGuildScheduledEventData</a> structure. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../d2/d8a/a01987.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> containing a <a class="el" href="../../d5/dd8/a03083.html" title="A single GuildScheduledEvent responseData structure.">GuildScheduledEvent</a>. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d8/d1c/a00824_source.html#l00051">51</a> of file <a class="el" href="../../d8/d1c/a00824_source.html">GuildScheduledEventEntities.cpp</a>.</p>
-
-</div>
-</div>
-<a id="ac19b7f8d04c89fd3039af6a63c74cc7f" name="ac19b7f8d04c89fd3039af6a63c74cc7f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac19b7f8d04c89fd3039af6a63c74cc7f">&#9670;&nbsp;</a></span>deleteGuildScheduledEventAsync()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d2/d8a/a01987.html">CoRoutine</a>&lt; void &gt; DiscordCoreAPI::GuildScheduledEvents::deleteGuildScheduledEventAsync </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d3/dbd/a03075.html">DeleteGuildScheduledEventData</a>&#160;</td>
-          <td class="paramname"><em>dataPackage</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >Deletes a single <a class="el" href="../../d5/dd8/a03083.html" title="A single GuildScheduledEvent responseData structure.">GuildScheduledEvent</a>.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dataPackage</td><td>A <a class="el" href="../../d3/dbd/a03075.html" title="For deleting a single Guild Scheduled Event.">DeleteGuildScheduledEventData</a> structure. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../d2/d8a/a01987.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> containing void. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d8/d1c/a00824_source.html#l00090">90</a> of file <a class="el" href="../../d8/d1c/a00824_source.html">GuildScheduledEventEntities.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a881a89676af1ca29ea1e30615e8f6d8f" name="a881a89676af1ca29ea1e30615e8f6d8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a881a89676af1ca29ea1e30615e8f6d8f">&#9670;&nbsp;</a></span>getGuildScheduledEventAsync()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d2/d8a/a01987.html">CoRoutine</a>&lt; <a class="el" href="../../d5/dd8/a03083.html">GuildScheduledEvent</a> &gt; DiscordCoreAPI::GuildScheduledEvents::getGuildScheduledEventAsync </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../da/de2/a03067.html">GetGuildScheduledEventData</a>&#160;</td>
-          <td class="paramname"><em>dataPackage</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >Collects a single <a class="el" href="../../d5/dd8/a03083.html" title="A single GuildScheduledEvent responseData structure.">GuildScheduledEvent</a>.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dataPackage</td><td>A <a class="el" href="../../da/de2/a03067.html" title="For collecting a single Guild scheduled event.">GetGuildScheduledEventData</a> structure. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../d2/d8a/a01987.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> containing a <a class="el" href="../../d5/dd8/a03083.html" title="A single GuildScheduledEvent responseData structure.">GuildScheduledEvent</a>. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d8/d1c/a00824_source.html#l00063">63</a> of file <a class="el" href="../../d8/d1c/a00824_source.html">GuildScheduledEventEntities.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a13ad59288c8018bb02c4d54629d0bba9" name="a13ad59288c8018bb02c4d54629d0bba9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a13ad59288c8018bb02c4d54629d0bba9">&#9670;&nbsp;</a></span>getGuildScheduledEventsAsync()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d2/d8a/a01987.html">CoRoutine</a>&lt; std::vector&lt; <a class="el" href="../../d5/dd8/a03083.html">GuildScheduledEvent</a> &gt; &gt; DiscordCoreAPI::GuildScheduledEvents::getGuildScheduledEventsAsync </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../da/d9e/a03059.html">GetGuildScheduledEventsData</a>&#160;</td>
-          <td class="paramname"><em>dataPackage</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >Gets a list of a given <a class="el" href="../../dc/d94/a02999.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>'s scheduled events.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dataPackage</td><td>A GetGuildScheduledEventsDatastructure. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../d2/d8a/a01987.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> containing a std::vector&lt;GuildScheduledEvent&gt;. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d8/d1c/a00824_source.html#l00040">40</a> of file <a class="el" href="../../d8/d1c/a00824_source.html">GuildScheduledEventEntities.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a90fd12d61cf3ec715f60ee803e513c10" name="a90fd12d61cf3ec715f60ee803e513c10"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a90fd12d61cf3ec715f60ee803e513c10">&#9670;&nbsp;</a></span>getGuildScheduledEventUsersAsync()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d2/d8a/a01987.html">CoRoutine</a>&lt; std::vector&lt; <a class="el" href="../../df/df0/a02599.html">GuildScheduledEventUserData</a> &gt; &gt; DiscordCoreAPI::GuildScheduledEvents::getGuildScheduledEventUsersAsync </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dd/d41/a03079.html">GetGuildScheduledEventUsersData</a>&#160;</td>
-          <td class="paramname"><em>dataPackage</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >Collects a list of <a class="el" href="../../d8/d16/a03619.html" title="An interface class for the User related Discord endpoints.">Users</a> for a given <a class="el" href="../../d5/dd8/a03083.html" title="A single GuildScheduledEvent responseData structure.">GuildScheduledEvent</a>.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dataPackage</td><td>A <a class="el" href="../../dd/d41/a03079.html" title="For collecting a list of Guild Scheduled Event Users.">GetGuildScheduledEventUsersData</a> structure. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../d2/d8a/a01987.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> containing a std::vector&lt;GuildScheduledEventUser&gt;. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d8/d1c/a00824_source.html#l00101">101</a> of file <a class="el" href="../../d8/d1c/a00824_source.html">GuildScheduledEventEntities.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a765031f7e7b71f9df5f5f879c9ba78dc" name="a765031f7e7b71f9df5f5f879c9ba78dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a765031f7e7b71f9df5f5f879c9ba78dc">&#9670;&nbsp;</a></span>modifyGuildScheduledEventAsync()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d2/d8a/a01987.html">CoRoutine</a>&lt; <a class="el" href="../../d5/dd8/a03083.html">GuildScheduledEvent</a> &gt; DiscordCoreAPI::GuildScheduledEvents::modifyGuildScheduledEventAsync </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../df/d48/a03071.html">ModifyGuildScheduledEventData</a>&#160;</td>
-          <td class="paramname"><em>dataPackage</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >Modifies a single <a class="el" href="../../d5/dd8/a03083.html" title="A single GuildScheduledEvent responseData structure.">GuildScheduledEvent</a>.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dataPackage</td><td>A <a class="el" href="../../df/d48/a03071.html" title="For modifying a single Guild Scheduled Event.">ModifyGuildScheduledEventData</a> structure. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../d2/d8a/a01987.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> containing a <a class="el" href="../../d5/dd8/a03083.html" title="A single GuildScheduledEvent responseData structure.">GuildScheduledEvent</a>. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d8/d1c/a00824_source.html#l00078">78</a> of file <a class="el" href="../../d8/d1c/a00824_source.html">GuildScheduledEventEntities.cpp</a>.</p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="../../dd/dd8/a00719_source.html">GuildScheduledEventEntities.hpp</a></li>
+<li><a class="el" href="../../df/d0e/a00800_source.html">DataParsingFunctions.cpp</a></li>
 <li><a class="el" href="../../d8/d1c/a00824_source.html">GuildScheduledEventEntities.cpp</a></li>
 </ul>
 </div><!-- contents -->
@@ -356,7 +197,7 @@ Static Public Member Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dc/dc0/a03087.html">GuildScheduledEvents</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dc/dc0/a03087.html">GuildScheduledEvent</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

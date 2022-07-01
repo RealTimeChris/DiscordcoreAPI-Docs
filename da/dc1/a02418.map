@@ -1,4 +1,5 @@
-<map id="DiscordCoreAPI::ApplicationCommandPermissionData" name="DiscordCoreAPI::ApplicationCommandPermissionData">
-<area shape="rect" id="node1" title="Permissions data for an ApplicationCommand." alt="" coords="12,80,199,121"/>
-<area shape="rect" id="node2" href="$dc/da4/a02303.html" title="Base class DiscordCoreAPI_Dll for all Discord entities." alt="" coords="5,5,205,32"/>
+<map id="DiscordCoreAPI::AutoModerationRuleData" name="DiscordCoreAPI::AutoModerationRuleData">
+<area shape="rect" id="node1" title="Represents an auto&#45;moderation&#45;rule." alt="" coords="18,80,231,121"/>
+<area shape="rect" id="node3" href="$da/d8b/a01871.html" title="Represents an auto&#45;moderation&#45;rule." alt="" coords="5,169,244,196"/>
+<area shape="rect" id="node2" href="$d2/d40/a02307.html" title="Base class DiscordCoreAPI_Dll for all Discord entities." alt="" coords="25,5,225,32"/>
 </map>

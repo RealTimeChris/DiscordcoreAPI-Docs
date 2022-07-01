@@ -105,33 +105,33 @@ $(document).ready(function(){initNavTree('d2/db0/a03595.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d8/d1b/a03592.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::ModifyUserVoiceStateData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::AddRecipientToGroupDMData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For modifying a <a class="el" href="../../da/d93/a03607.html" title="A single User.">User</a>'s voice state.  
+<p>For adding a user to a group Dm.  
  <a href="../../d2/db0/a03595.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d3/d2c/a00764_source.html">UserEntities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:af9944274b005ef2632e3f54280ffcfab"><td class="memItemLeft" align="right" valign="top"><a id="af9944274b005ef2632e3f54280ffcfab" name="af9944274b005ef2632e3f54280ffcfab"></a>
+<tr class="memitem:ac6ddd889cb0789d4305bc28760ebb105"><td class="memItemLeft" align="right" valign="top"><a id="ac6ddd889cb0789d4305bc28760ebb105" name="ac6ddd889cb0789d4305bc28760ebb105"></a>
 <a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>channelId</b> {}</td></tr>
-<tr class="memdesc:af9944274b005ef2632e3f54280ffcfab"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the <a class="el" href="../../dc/da8/a01959.html" title="A Channel object.">Channel</a> the user is currently in. <br /></td></tr>
-<tr class="separator:af9944274b005ef2632e3f54280ffcfab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad91dde0ef34ab77cce3dbcd72f0a38b6"><td class="memItemLeft" align="right" valign="top"><a id="ad91dde0ef34ab77cce3dbcd72f0a38b6" name="ad91dde0ef34ab77cce3dbcd72f0a38b6"></a>
-<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildId</b> {}</td></tr>
-<tr class="memdesc:ad91dde0ef34ab77cce3dbcd72f0a38b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../dc/d94/a02999.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> within which you would like to modify their voice state. <br /></td></tr>
-<tr class="separator:ad91dde0ef34ab77cce3dbcd72f0a38b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49ffb874f378b11f3b585b0bb7a908e5"><td class="memItemLeft" align="right" valign="top"><a id="a49ffb874f378b11f3b585b0bb7a908e5" name="a49ffb874f378b11f3b585b0bb7a908e5"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>suppress</b> { false }</td></tr>
-<tr class="memdesc:a49ffb874f378b11f3b585b0bb7a908e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggles the user's suppress state. <br /></td></tr>
-<tr class="separator:a49ffb874f378b11f3b585b0bb7a908e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a496748887004d87f9cf522c8ff5ca3ed"><td class="memItemLeft" align="right" valign="top"><a id="a496748887004d87f9cf522c8ff5ca3ed" name="a496748887004d87f9cf522c8ff5ca3ed"></a>
+<tr class="memdesc:ac6ddd889cb0789d4305bc28760ebb105"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../dc/da8/a01959.html" title="A Channel object.">Channel</a> Id of the Dm. <br /></td></tr>
+<tr class="separator:ac6ddd889cb0789d4305bc28760ebb105"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc544c93105f3c1656687754499a63f5"><td class="memItemLeft" align="right" valign="top"><a id="afc544c93105f3c1656687754499a63f5" name="afc544c93105f3c1656687754499a63f5"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>nick</b> {}</td></tr>
+<tr class="memdesc:afc544c93105f3c1656687754499a63f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The user's nickname. <br /></td></tr>
+<tr class="separator:afc544c93105f3c1656687754499a63f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97f14e68107744341457a3352f163441"><td class="memItemLeft" align="right" valign="top"><a id="a97f14e68107744341457a3352f163441" name="a97f14e68107744341457a3352f163441"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>token</b> {}</td></tr>
+<tr class="memdesc:a97f14e68107744341457a3352f163441"><td class="mdescLeft">&#160;</td><td class="mdescRight">The user's access token. <br /></td></tr>
+<tr class="separator:a97f14e68107744341457a3352f163441"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addd392dca24331a8aa99b2ba3513a9ff"><td class="memItemLeft" align="right" valign="top"><a id="addd392dca24331a8aa99b2ba3513a9ff" name="addd392dca24331a8aa99b2ba3513a9ff"></a>
 <a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>userId</b> {}</td></tr>
-<tr class="memdesc:a496748887004d87f9cf522c8ff5ca3ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">The user for which you would like to modify the voice state of. <br /></td></tr>
-<tr class="separator:a496748887004d87f9cf522c8ff5ca3ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:addd392dca24331a8aa99b2ba3513a9ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">The user's Id. <br /></td></tr>
+<tr class="separator:addd392dca24331a8aa99b2ba3513a9ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d3/d2c/a00764_source.html">UserEntities.hpp</a></li>
@@ -142,7 +142,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>suppress</b> { false 
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d2/db0/a03595.html">ModifyUserVoiceStateData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d2/db0/a03595.html">AddRecipientToGroupDMData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

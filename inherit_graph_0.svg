@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d8/df6/a02411.html" target="_top" xlink:title="For representing a single auto&#45;moderation&#45;rule&#45;action.">
+<g id="a_node1"><a xlink:href="de/d6a/a02415.html" target="_top" xlink:title="For representing a single auto&#45;moderation&#45;rule&#45;action.">
 <polygon fill="none" stroke="black" points="0,-0.5 0,-19.5 140,-19.5 140,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="70" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::ActionData</text>
 </a>

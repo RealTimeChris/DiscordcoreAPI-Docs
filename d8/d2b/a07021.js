@@ -1,8 +1,10 @@
 var a07021 =
 [
-    [ "Listing Auto-Moderation-Rules", "d0/dac/a07043.html", null ],
-    [ "Getting an Auto-Moderation-Rule", "d1/d43/a07042.html", null ],
-    [ "Creating an Auto-Moderation-Rule", "dc/d14/a07040.html", null ],
-    [ "Modifying an Auto-Moderation-Rule", "db/d73/a07044.html", null ],
-    [ "Deleting an Auto-Moderation-Rule", "d7/dfb/a07041.html", null ]
+    [ "Getting a Guild Member", "db/d15/a07144.html", null ],
+    [ "Listing Guild Members", "d2/d6f/a07145.html", null ],
+    [ "Searching Guild Members", "dc/d98/a07149.html", null ],
+    [ "Adding a Guild Member", "d3/d1d/a07143.html", null ],
+    [ "Modifying a Guild Member", "de/d85/a07146.html", null ],
+    [ "Modifying the Current Guild Member", "df/d78/a07147.html", null ],
+    [ "Removing a Guild Member", "d0/de2/a07148.html", null ]
 ];

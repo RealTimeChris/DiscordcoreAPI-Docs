@@ -105,33 +105,25 @@ $(document).ready(function(){initNavTree('dd/d2f/a02983.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d6/db9/a02980.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::GetInviteData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::DeleteGuildTemplateData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For geting a single invite's responseData from a <a class="el" href="../../dc/d94/a02999.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>.  
+<p>For deleting a <a class="el" href="../../dd/d26/a03003.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> Template.  
  <a href="../../dd/d2f/a02983.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d1/d04/a00713_source.html">GuildEntities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:ad6a901ecf670c485add6225e112f426d"><td class="memItemLeft" align="right" valign="top"><a id="ad6a901ecf670c485add6225e112f426d" name="ad6a901ecf670c485add6225e112f426d"></a>
-<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildScheduledEventId</b> {}</td></tr>
-<tr class="memdesc:ad6a901ecf670c485add6225e112f426d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../dc/d94/a02999.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> scheduled event to include with the invite. <br /></td></tr>
-<tr class="separator:ad6a901ecf670c485add6225e112f426d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61edbf0b6ee46855dd8dab271420e02a"><td class="memItemLeft" align="right" valign="top"><a id="a61edbf0b6ee46855dd8dab271420e02a" name="a61edbf0b6ee46855dd8dab271420e02a"></a>
-uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>inviteId</b> {}</td></tr>
-<tr class="memdesc:a61edbf0b6ee46855dd8dab271420e02a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the invite you wish to acquire. <br /></td></tr>
-<tr class="separator:a61edbf0b6ee46855dd8dab271420e02a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf02fbaf117503a1f331bfc7e3f0d4dd"><td class="memItemLeft" align="right" valign="top"><a id="adf02fbaf117503a1f331bfc7e3f0d4dd" name="adf02fbaf117503a1f331bfc7e3f0d4dd"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>withCount</b> { false }</td></tr>
-<tr class="memdesc:adf02fbaf117503a1f331bfc7e3f0d4dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collect usage etc counts? <br /></td></tr>
-<tr class="separator:adf02fbaf117503a1f331bfc7e3f0d4dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9d0126a6b046bc69e5e3e0db42f3a90"><td class="memItemLeft" align="right" valign="top"><a id="ad9d0126a6b046bc69e5e3e0db42f3a90" name="ad9d0126a6b046bc69e5e3e0db42f3a90"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>withExpiration</b> { false }</td></tr>
-<tr class="memdesc:ad9d0126a6b046bc69e5e3e0db42f3a90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collect expiration time/date? <br /></td></tr>
-<tr class="separator:ad9d0126a6b046bc69e5e3e0db42f3a90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8333b26a290ac43ea01cfe4a74459cb4"><td class="memItemLeft" align="right" valign="top"><a id="a8333b26a290ac43ea01cfe4a74459cb4" name="a8333b26a290ac43ea01cfe4a74459cb4"></a>
+<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildId</b> {}</td></tr>
+<tr class="memdesc:a8333b26a290ac43ea01cfe4a74459cb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../dd/d26/a03003.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> within which you would like to delete the Template. <br /></td></tr>
+<tr class="separator:a8333b26a290ac43ea01cfe4a74459cb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfbb63183073460172fcbfcdb5293457"><td class="memItemLeft" align="right" valign="top"><a id="acfbb63183073460172fcbfcdb5293457" name="acfbb63183073460172fcbfcdb5293457"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>templateCode</b> {}</td></tr>
+<tr class="memdesc:acfbb63183073460172fcbfcdb5293457"><td class="mdescLeft">&#160;</td><td class="mdescRight">The template which you would like to delete. <br /></td></tr>
+<tr class="separator:acfbb63183073460172fcbfcdb5293457"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d1/d04/a00713_source.html">GuildEntities.hpp</a></li>
@@ -142,7 +134,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>withExpiration</b> { 
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dd/d2f/a02983.html">GetInviteData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dd/d2f/a02983.html">DeleteGuildTemplateData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

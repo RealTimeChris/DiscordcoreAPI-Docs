@@ -1,54 +1,54 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$dc/da4/a02303.html" title="Base class DiscordCoreAPI_Dll for all Discord entities." alt="" coords="5,975,205,1001"/>
-<area shape="rect" id="node2" href="$d6/d9a/a02491.html" title="Account data." alt="" coords="286,5,483,32"/>
-<area shape="rect" id="node3" href="$d8/d4a/a02703.html" title="Data structure representing an ApplicationCommand." alt="" coords="291,57,478,98"/>
-<area shape="rect" id="node5" href="$dc/d40/a02767.html" title="ApplicationCommand Interaction data." alt="" coords="291,122,478,163"/>
-<area shape="rect" id="node6" href="$d8/d49/a02419.html" title="Permissions data for an ApplicationCommand." alt="" coords="291,187,478,229"/>
-<area shape="rect" id="node7" href="$d3/de3/a02483.html" title="Application data." alt="" coords="278,253,491,280"/>
-<area shape="rect" id="node8" href="$d7/d0c/a02315.html" title="Attachment data." alt="" coords="277,304,493,331"/>
-<area shape="rect" id="node9" href="$d7/d7d/a02527.html" title="Audit log entry data." alt="" coords="298,355,471,397"/>
-<area shape="rect" id="node10" href="$de/d6a/a02415.html" title="Represents an auto&#45;moderation&#45;rule." alt="" coords="278,421,491,462"/>
-<area shape="rect" id="node12" href="$d8/deb/a02387.html" title="Data structure representing a single Channel." alt="" coords="287,487,483,513"/>
-<area shape="rect" id="node15" href="$d8/d0f/a02707.html" title="Channel mention data." alt="" coords="263,537,506,564"/>
-<area shape="rect" id="node16" href="$d1/df1/a02431.html" title="Data structure representing a single emoji." alt="" coords="293,588,476,615"/>
-<area shape="rect" id="node17" href="$d0/d7c/a02499.html" title="Get Guild Widget Data." alt="" coords="298,639,471,681"/>
-<area shape="rect" id="node18" href="$d6/d6c/a02819.html" title="Guild application command permissions data." alt="" coords="277,705,493,746"/>
-<area shape="rect" id="node19" href="$d5/d73/a02423.html" title="Represents the Permissions for accessing an ApplicationCommand from within a Guild." alt="" coords="277,770,493,811"/>
-<area shape="rect" id="node20" href="$dc/d15/a02583.html" title="Data structure representing a single Guild." alt="" coords="295,836,474,863"/>
-<area shape="rect" id="node22" href="$d6/dd7/a02375.html" title="Data structure representing a single GuildMember. Data structure representing a single Guild." alt="" coords="271,887,498,913"/>
-<area shape="rect" id="node24" href="$d8/d4e/a02595.html" title="Data representing a Guild Scheduled Event." alt="" coords="278,938,491,979"/>
-<area shape="rect" id="node26" href="$de/dbd/a02507.html" title="Integration data." alt="" coords="280,1004,489,1031"/>
-<area shape="rect" id="node27" href="$d4/d72/a02775.html" title="Interaction data." alt="" coords="280,1055,489,1081"/>
-<area shape="rect" id="node29" href="$d6/df4/a02735.html" title="The core of a Message&#39;s data structure." alt="" coords="273,1105,496,1132"/>
-<area shape="rect" id="node32" href="$d4/dff/a02723.html" title="Message Interaction data." alt="" coords="253,1156,516,1183"/>
-<area shape="rect" id="node33" href="$d5/d6a/a02515.html" title="Audit log entry info data." alt="" coords="299,1207,470,1249"/>
-<area shape="rect" id="node34" href="$db/dd4/a02383.html" title="A Permission overwrite, for a given Channel." alt="" coords="281,1273,488,1300"/>
-<area shape="rect" id="node35" href="$d9/dc8/a02531.html" title="Party data." alt="" coords="295,1324,475,1351"/>
-<area shape="rect" id="node36" href="$d1/d04/a02443.html" title="Data structure representing a single reaction." alt="" coords="285,1375,485,1401"/>
-<area shape="rect" id="node38" href="$da/d11/a02399.html" title="Data structure representing a single Role." alt="" coords="297,1425,472,1452"/>
-<area shape="rect" id="node40" href="$d7/d12/a02571.html" title="Stage instance data." alt="" coords="269,1476,501,1503"/>
-<area shape="rect" id="node42" href="$db/d39/a02575.html" title="Data representing a single Sticker." alt="" coords="289,1527,480,1553"/>
-<area shape="rect" id="node44" href="$d1/d58/a02731.html" title="Message Sticker item data." alt="" coords="277,1577,492,1604"/>
-<area shape="rect" id="node45" href="$d2/d70/a02475.html" title="Team object data." alt="" coords="275,1628,494,1655"/>
-<area shape="rect" id="node46" href="$d9/d27/a02363.html" title="Data for a single member of a Thread." alt="" coords="267,1679,502,1705"/>
-<area shape="rect" id="node47" href="$d5/d55/a02719.html" title="Represents a Thread&#45;members&#45;update." alt="" coords="277,1730,492,1771"/>
-<area shape="rect" id="node48" href="$dd/d21/a02311.html" title="Data structure representing a single User." alt="" coords="297,1796,473,1823"/>
-<area shape="rect" id="node51" href="$d4/d29/a02623.html" title="WebHook data." alt="" coords="281,1847,488,1873"/>
+<area shape="rect" id="node1" href="$d2/d40/a02307.html" title="Base class DiscordCoreAPI_Dll for all Discord entities." alt="" coords="5,975,205,1001"/>
+<area shape="rect" id="node2" href="$d5/d56/a02495.html" title="Account data." alt="" coords="286,5,483,32"/>
+<area shape="rect" id="node3" href="$d8/d0f/a02707.html" title="Data structure representing an ApplicationCommand." alt="" coords="291,57,478,98"/>
+<area shape="rect" id="node5" href="$d0/dbd/a02771.html" title="ApplicationCommand Interaction data." alt="" coords="291,122,478,163"/>
+<area shape="rect" id="node6" href="$d5/d73/a02423.html" title="Permissions data for an ApplicationCommand." alt="" coords="291,187,478,229"/>
+<area shape="rect" id="node7" href="$d1/d50/a02487.html" title="Application data." alt="" coords="278,253,491,280"/>
+<area shape="rect" id="node8" href="$dc/d52/a02319.html" title="Attachment data." alt="" coords="277,304,493,331"/>
+<area shape="rect" id="node9" href="$d9/dc8/a02531.html" title="Audit log entry data." alt="" coords="298,355,471,397"/>
+<area shape="rect" id="node10" href="$d8/d49/a02419.html" title="Represents an auto&#45;moderation&#45;rule." alt="" coords="278,421,491,462"/>
+<area shape="rect" id="node12" href="$d7/d90/a02391.html" title="Data structure representing a single Channel." alt="" coords="287,487,483,513"/>
+<area shape="rect" id="node15" href="$d8/dd0/a02711.html" title="Channel mention data." alt="" coords="263,537,506,564"/>
+<area shape="rect" id="node16" href="$d1/de1/a02435.html" title="Data structure representing a single emoji." alt="" coords="293,588,476,615"/>
+<area shape="rect" id="node17" href="$d1/d5d/a02503.html" title="Get Guild Widget Data." alt="" coords="298,639,471,681"/>
+<area shape="rect" id="node18" href="$df/d37/a02823.html" title="Guild application command permissions data." alt="" coords="277,705,493,746"/>
+<area shape="rect" id="node19" href="$d6/d5c/a02427.html" title="Represents the Permissions for accessing an ApplicationCommand from within a Guild." alt="" coords="277,770,493,811"/>
+<area shape="rect" id="node20" href="$d4/d9e/a02587.html" title="Data structure representing a single Guild." alt="" coords="295,836,474,863"/>
+<area shape="rect" id="node22" href="$d6/daa/a02379.html" title="Data structure representing a single GuildMember. Data structure representing a single Guild." alt="" coords="271,887,498,913"/>
+<area shape="rect" id="node24" href="$df/df0/a02599.html" title="Data representing a Guild Scheduled Event." alt="" coords="278,938,491,979"/>
+<area shape="rect" id="node26" href="$d0/d01/a02511.html" title="Integration data." alt="" coords="280,1004,489,1031"/>
+<area shape="rect" id="node27" href="$dc/d6a/a02779.html" title="Interaction data." alt="" coords="280,1055,489,1081"/>
+<area shape="rect" id="node29" href="$d1/d89/a02739.html" title="The core of a Message&#39;s data structure." alt="" coords="273,1105,496,1132"/>
+<area shape="rect" id="node32" href="$de/d3e/a02727.html" title="Message Interaction data." alt="" coords="253,1156,516,1183"/>
+<area shape="rect" id="node33" href="$d9/dce/a02519.html" title="Audit log entry info data." alt="" coords="299,1207,470,1249"/>
+<area shape="rect" id="node34" href="$d8/deb/a02387.html" title="A Permission overwrite, for a given Channel." alt="" coords="281,1273,488,1300"/>
+<area shape="rect" id="node35" href="$d6/d51/a02535.html" title="Party data." alt="" coords="295,1324,475,1351"/>
+<area shape="rect" id="node36" href="$d8/d9a/a02447.html" title="Data structure representing a single reaction." alt="" coords="285,1375,485,1401"/>
+<area shape="rect" id="node38" href="$df/d06/a02403.html" title="Data structure representing a single Role." alt="" coords="297,1425,472,1452"/>
+<area shape="rect" id="node40" href="$db/d39/a02575.html" title="Stage instance data." alt="" coords="269,1476,501,1503"/>
+<area shape="rect" id="node42" href="$d4/d70/a02579.html" title="Data representing a single Sticker." alt="" coords="289,1527,480,1553"/>
+<area shape="rect" id="node44" href="$d6/df4/a02735.html" title="Message Sticker item data." alt="" coords="277,1577,492,1604"/>
+<area shape="rect" id="node45" href="$d7/dc4/a02479.html" title="Team object data." alt="" coords="275,1628,494,1655"/>
+<area shape="rect" id="node46" href="$d2/daa/a02367.html" title="Data for a single member of a Thread." alt="" coords="267,1679,502,1705"/>
+<area shape="rect" id="node47" href="$d4/dff/a02723.html" title="Represents a Thread&#45;members&#45;update." alt="" coords="277,1730,492,1771"/>
+<area shape="rect" id="node48" href="$d7/d0c/a02315.html" title="Data structure representing a single User." alt="" coords="297,1796,473,1823"/>
+<area shape="rect" id="node51" href="$dc/d34/a02627.html" title="WebHook data." alt="" coords="281,1847,488,1873"/>
 <area shape="rect" id="node4" href="$d1/d6b/a01775.html" title="A single ApplicationCommand." alt="" coords="590,57,777,98"/>
 <area shape="rect" id="node11" href="$da/d8b/a01871.html" title="Represents an auto&#45;moderation&#45;rule." alt="" coords="564,428,803,455"/>
 <area shape="rect" id="node13" href="$dc/da8/a01959.html" title="A Channel object." alt="" coords="599,487,768,513"/>
-<area shape="rect" id="node14" href="$d0/db8/a03559.html" title="Represents a single Thread." alt="" coords="857,487,1019,513"/>
-<area shape="rect" id="node21" href="$dc/d94/a02999.html" title="A discord Guild. Used to connect to/disconnect from voice." alt="" coords="607,836,759,863"/>
-<area shape="rect" id="node23" href="$d2/de4/a03047.html" title="A single GuildMember." alt="" coords="584,887,783,913"/>
-<area shape="rect" id="node25" href="$d5/dd8/a03083.html" title="A single GuildScheduledEvent responseData structure." alt="" coords="577,938,790,979"/>
-<area shape="rect" id="node28" href="$d2/d94/a03167.html" title="A single Interaction." alt="" coords="592,1055,775,1081"/>
-<area shape="rect" id="node30" href="$d1/d89/a02739.html" title="Data structure representing a single Message." alt="" coords="582,1105,785,1132"/>
-<area shape="rect" id="node31" href="$db/d36/a03243.html" title="A single Message." alt="" coords="851,1105,1025,1132"/>
-<area shape="rect" id="node37" href="$dc/dc1/a03307.html" title="A single Reaction." alt="" coords="597,1375,770,1401"/>
-<area shape="rect" id="node39" href="$d9/dd9/a03359.html" title="A single Role." alt="" coords="609,1425,757,1452"/>
-<area shape="rect" id="node41" href="$d4/d60/a03463.html" title="A single StageInstance." alt="" coords="581,1476,786,1503"/>
-<area shape="rect" id="node43" href="$d0/d17/a03491.html" title="A single Sticker." alt="" coords="602,1527,765,1553"/>
-<area shape="rect" id="node49" href="$da/d93/a03607.html" title="A single User." alt="" coords="609,1796,758,1823"/>
-<area shape="rect" id="node50" href="$d7/d6e/a03615.html" title="A type of User, to represent the Bot and some of its associated endpoints." alt="" coords="853,1796,1023,1823"/>
-<area shape="rect" id="node52" href="$d5/d8b/a03739.html" title="A single WebHook." alt="" coords="594,1847,773,1873"/>
+<area shape="rect" id="node14" href="$d3/da4/a03571.html" title="Represents a single Thread." alt="" coords="857,487,1019,513"/>
+<area shape="rect" id="node21" href="$dd/d26/a03003.html" title="A discord Guild. Used to connect to/disconnect from voice." alt="" coords="607,836,759,863"/>
+<area shape="rect" id="node23" href="$df/d4a/a03051.html" title="A single GuildMember." alt="" coords="584,887,783,913"/>
+<area shape="rect" id="node25" href="$dc/dc0/a03087.html" title="A single GuildScheduledEvent responseData structure." alt="" coords="577,938,790,979"/>
+<area shape="rect" id="node28" href="$d7/d45/a03175.html" title="A single Interaction." alt="" coords="592,1055,775,1081"/>
+<area shape="rect" id="node30" href="$df/dee/a02743.html" title="Data structure representing a single Message." alt="" coords="582,1105,785,1132"/>
+<area shape="rect" id="node31" href="$db/dd3/a03251.html" title="A single Message." alt="" coords="851,1105,1025,1132"/>
+<area shape="rect" id="node37" href="$dd/d6f/a03315.html" title="A single Reaction." alt="" coords="597,1375,770,1401"/>
+<area shape="rect" id="node39" href="$dc/d7f/a03367.html" title="A single Role." alt="" coords="609,1425,757,1452"/>
+<area shape="rect" id="node41" href="$d1/def/a03475.html" title="A single StageInstance." alt="" coords="581,1476,786,1503"/>
+<area shape="rect" id="node43" href="$dd/daf/a03503.html" title="A single Sticker." alt="" coords="602,1527,765,1553"/>
+<area shape="rect" id="node49" href="$d8/d16/a03619.html" title="A single User." alt="" coords="609,1796,758,1823"/>
+<area shape="rect" id="node50" href="$d8/d07/a03627.html" title="A type of User, to represent the Bot and some of its associated endpoints." alt="" coords="853,1796,1023,1823"/>
+<area shape="rect" id="node52" href="$d7/dfa/a03751.html" title="A single WebHook." alt="" coords="594,1847,773,1873"/>
 </map>

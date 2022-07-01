@@ -105,21 +105,37 @@ $(document).ready(function(){initNavTree('da/d0d/a02955.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d6/d8e/a02952.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::GetGuildTemplateData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::ModifyGuildWelcomeScreenData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For collecting a <a class="el" href="../../dc/d94/a02999.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>'s template.  
+<p>For modifying a <a class="el" href="../../dd/d26/a03003.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>'s welcome screen.  
  <a href="../../da/d0d/a02955.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d1/d04/a00713_source.html">GuildEntities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:a94b2fde43ce3918d38fa78d6ebd65c7d"><td class="memItemLeft" align="right" valign="top"><a id="a94b2fde43ce3918d38fa78d6ebd65c7d" name="a94b2fde43ce3918d38fa78d6ebd65c7d"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>templateCode</b> {}</td></tr>
-<tr class="memdesc:a94b2fde43ce3918d38fa78d6ebd65c7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Code for the desired Template. <br /></td></tr>
-<tr class="separator:a94b2fde43ce3918d38fa78d6ebd65c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a22a12c3c5e101c12771b23ba476bee"><td class="memItemLeft" align="right" valign="top"><a id="a4a22a12c3c5e101c12771b23ba476bee" name="a4a22a12c3c5e101c12771b23ba476bee"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>description</b> {}</td></tr>
+<tr class="memdesc:a4a22a12c3c5e101c12771b23ba476bee"><td class="mdescLeft">&#160;</td><td class="mdescRight">The description of the welcome screen. <br /></td></tr>
+<tr class="separator:a4a22a12c3c5e101c12771b23ba476bee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe59bf974c77639adbd588d31e0517a2"><td class="memItemLeft" align="right" valign="top"><a id="afe59bf974c77639adbd588d31e0517a2" name="afe59bf974c77639adbd588d31e0517a2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>enabled</b> { false }</td></tr>
+<tr class="memdesc:afe59bf974c77639adbd588d31e0517a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is it enabled? <br /></td></tr>
+<tr class="separator:afe59bf974c77639adbd588d31e0517a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca09a02e2f8e8154a33c7894aa79716e"><td class="memItemLeft" align="right" valign="top"><a id="aca09a02e2f8e8154a33c7894aa79716e" name="aca09a02e2f8e8154a33c7894aa79716e"></a>
+<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildId</b> {}</td></tr>
+<tr class="memdesc:aca09a02e2f8e8154a33c7894aa79716e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../dd/d26/a03003.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> for which to modify the welcome screen of. <br /></td></tr>
+<tr class="separator:aca09a02e2f8e8154a33c7894aa79716e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addf4d23685a727de4c24ab95fc6e7e38"><td class="memItemLeft" align="right" valign="top"><a id="addf4d23685a727de4c24ab95fc6e7e38" name="addf4d23685a727de4c24ab95fc6e7e38"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>reason</b> {}</td></tr>
+<tr class="memdesc:addf4d23685a727de4c24ab95fc6e7e38"><td class="mdescLeft">&#160;</td><td class="mdescRight">The reason for modifying the welcome screen. <br /></td></tr>
+<tr class="separator:addf4d23685a727de4c24ab95fc6e7e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa50e1d4eeec66b62be500baf56d1bef5"><td class="memItemLeft" align="right" valign="top"><a id="aa50e1d4eeec66b62be500baf56d1bef5" name="aa50e1d4eeec66b62be500baf56d1bef5"></a>
+std::vector&lt; <a class="el" href="../../dd/db2/a02563.html">WelcomeScreenChannelData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>welcomeChannels</b> {}</td></tr>
+<tr class="memdesc:aa50e1d4eeec66b62be500baf56d1bef5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Welcome channels for the welcome screen. <br /></td></tr>
+<tr class="separator:aa50e1d4eeec66b62be500baf56d1bef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d1/d04/a00713_source.html">GuildEntities.hpp</a></li>
@@ -130,7 +146,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>templateCode</
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../da/d0d/a02955.html">GetGuildTemplateData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../da/d0d/a02955.html">ModifyGuildWelcomeScreenData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

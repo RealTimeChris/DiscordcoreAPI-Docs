@@ -104,547 +104,348 @@ $(document).ready(function(){initNavTree('d6/daf/a02803.html','../../'); initRes
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d9/dd1/a02800.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::RespondToInputEventData Class Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::InputEventData Class Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Data for responding to an input-event.  
+<p>Data representing an input-event, which is any <a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a> or <a class="el" href="../../d7/d45/a03175.html" title="A single Interaction.">Interaction</a> that is coming into the bot as an input.  
  <a href="../../d6/daf/a02803.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a70ca0c326734294a50105fb26e483cee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/daf/a02803.html">RespondToInputEventData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/daf/a02803.html#a70ca0c326734294a50105fb26e483cee">addAllowedMentions</a> (<a class="el" href="../../d3/d25/a02683.html">AllowedMentionsData</a> dataPackage)</td></tr>
-<tr class="memdesc:a70ca0c326734294a50105fb26e483cee"><td class="mdescLeft">&#160;</td><td class="mdescRight">For setting the allowable mentions in a response.  <a href="../../d6/daf/a02803.html#a70ca0c326734294a50105fb26e483cee">More...</a><br /></td></tr>
-<tr class="separator:a70ca0c326734294a50105fb26e483cee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a452ce4e2919bed8a6cb2c034c5df2eaf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/daf/a02803.html">RespondToInputEventData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/daf/a02803.html#a452ce4e2919bed8a6cb2c034c5df2eaf">addButton</a> (bool disabled, const std::string &amp;customIdNew, const std::string &amp;buttonLabel, <a class="el" href="../../dd/d94/a00888.html#gae05b1bfe988b0c2989b7bed279c9c95c">ButtonStyle</a> buttonStyle, const std::string &amp;emojiName=&quot;&quot;, <a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> emojiId=0, const std::string &amp;url=&quot;&quot;)</td></tr>
-<tr class="memdesc:a452ce4e2919bed8a6cb2c034c5df2eaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a button to the response <a class="el" href="../../db/d36/a03243.html" title="A single Message.">Message</a>.  <a href="../../d6/daf/a02803.html#a452ce4e2919bed8a6cb2c034c5df2eaf">More...</a><br /></td></tr>
-<tr class="separator:a452ce4e2919bed8a6cb2c034c5df2eaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a808c29a1772d340a5e62d938bfe28caf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/daf/a02803.html">RespondToInputEventData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/daf/a02803.html#a808c29a1772d340a5e62d938bfe28caf">addComponentRow</a> (<a class="el" href="../../de/dde/a02695.html">ActionRowData</a> dataPackage)</td></tr>
-<tr class="memdesc:a808c29a1772d340a5e62d938bfe28caf"><td class="mdescLeft">&#160;</td><td class="mdescRight">For setting the components in a response.  <a href="../../d6/daf/a02803.html#a808c29a1772d340a5e62d938bfe28caf">More...</a><br /></td></tr>
-<tr class="separator:a808c29a1772d340a5e62d938bfe28caf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ad50267f07d255748ed7bb61d26d05d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/daf/a02803.html">RespondToInputEventData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/daf/a02803.html#a4ad50267f07d255748ed7bb61d26d05d">addContent</a> (const std::string &amp;dataPackage)</td></tr>
-<tr class="memdesc:a4ad50267f07d255748ed7bb61d26d05d"><td class="mdescLeft">&#160;</td><td class="mdescRight">For setting the <a class="el" href="../../db/d36/a03243.html" title="A single Message.">Message</a> content in a response.  <a href="../../d6/daf/a02803.html#a4ad50267f07d255748ed7bb61d26d05d">More...</a><br /></td></tr>
-<tr class="separator:a4ad50267f07d255748ed7bb61d26d05d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a314838472bcdb0b4cfeace029092c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/daf/a02803.html">RespondToInputEventData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/daf/a02803.html#a0a314838472bcdb0b4cfeace029092c6">addFile</a> (<a class="el" href="../../d9/d5e/a02355.html">File</a> theFile)</td></tr>
-<tr class="memdesc:a0a314838472bcdb0b4cfeace029092c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a file to the current collection of files for this message response.  <a href="../../d6/daf/a02803.html#a0a314838472bcdb0b4cfeace029092c6">More...</a><br /></td></tr>
-<tr class="separator:a0a314838472bcdb0b4cfeace029092c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef74d1af66e1a524e98ce81cde6825df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/daf/a02803.html">RespondToInputEventData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/daf/a02803.html#aef74d1af66e1a524e98ce81cde6825df">addMessageEmbed</a> (<a class="el" href="../../d4/d21/a02347.html">EmbedData</a> dataPackage)</td></tr>
-<tr class="memdesc:aef74d1af66e1a524e98ce81cde6825df"><td class="mdescLeft">&#160;</td><td class="mdescRight">For setting the embeds in a response.  <a href="../../d6/daf/a02803.html#aef74d1af66e1a524e98ce81cde6825df">More...</a><br /></td></tr>
-<tr class="separator:aef74d1af66e1a524e98ce81cde6825df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc9eb079def7c382a73da4af107b6dab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/daf/a02803.html">RespondToInputEventData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/daf/a02803.html#acc9eb079def7c382a73da4af107b6dab">addModal</a> (const std::string &amp;topTitleNew, const std::string &amp;topCustomIdNew, const std::string &amp;titleNew, const std::string &amp;customIdNew, bool required, int32_t minLength, int32_t maxLength, <a class="el" href="../../dd/d94/a00888.html#ga24a639fa950fb1c20605b41b9adfaa2c">TextInputStyle</a> inputStyle, const std::string &amp;label=&quot;&quot;, const std::string &amp;placeholder=&quot;&quot;)</td></tr>
-<tr class="memdesc:acc9eb079def7c382a73da4af107b6dab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a modal to the response <a class="el" href="../../db/d36/a03243.html" title="A single Message.">Message</a>.  <a href="../../d6/daf/a02803.html#acc9eb079def7c382a73da4af107b6dab">More...</a><br /></td></tr>
-<tr class="separator:acc9eb079def7c382a73da4af107b6dab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7192b319c1eaab930820340e91f8802"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/daf/a02803.html">RespondToInputEventData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/daf/a02803.html#ac7192b319c1eaab930820340e91f8802">addSelectMenu</a> (bool disabled, const std::string &amp;customIdNew, std::vector&lt; <a class="el" href="../../d5/d25/a02687.html">SelectOptionData</a> &gt; options, const std::string &amp;placeholder, int32_t maxValues, int32_t minValues)</td></tr>
-<tr class="memdesc:ac7192b319c1eaab930820340e91f8802"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a select-menu to the response <a class="el" href="../../db/d36/a03243.html" title="A single Message.">Message</a>.  <a href="../../d6/daf/a02803.html#ac7192b319c1eaab930820340e91f8802">More...</a><br /></td></tr>
-<tr class="separator:ac7192b319c1eaab930820340e91f8802"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45fd679c08764836cfd4b954971ea35b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/daf/a02803.html">RespondToInputEventData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/daf/a02803.html#a45fd679c08764836cfd4b954971ea35b">setAutoCompleteChoice</a> (nlohmann::json theValue, const std::string &amp;theName, std::unordered_map&lt; std::string, std::string &gt; theNameLocalizations=std::unordered_map&lt; std::string, std::string &gt;{})</td></tr>
-<tr class="memdesc:a45fd679c08764836cfd4b954971ea35b"><td class="mdescLeft">&#160;</td><td class="mdescRight">For setting the choices of an autocomplete response.  <a href="../../d6/daf/a02803.html#a45fd679c08764836cfd4b954971ea35b">More...</a><br /></td></tr>
-<tr class="separator:a45fd679c08764836cfd4b954971ea35b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a221bd17c5bb0267cf7663cad33a0e447"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/daf/a02803.html">RespondToInputEventData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/daf/a02803.html#a221bd17c5bb0267cf7663cad33a0e447">setResponseType</a> (<a class="el" href="../../d7/d92/a00887.html#ga6a10916bec24a00f6d6a41d8d880c1fa">InputEventResponseType</a> typeNew)</td></tr>
-<tr class="memdesc:a221bd17c5bb0267cf7663cad33a0e447"><td class="mdescLeft">&#160;</td><td class="mdescRight">For setting the type of response to make.  <a href="../../d6/daf/a02803.html#a221bd17c5bb0267cf7663cad33a0e447">More...</a><br /></td></tr>
-<tr class="separator:a221bd17c5bb0267cf7663cad33a0e447"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b1e4c1351589c721657892a9621fa04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/daf/a02803.html">RespondToInputEventData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/daf/a02803.html#a7b1e4c1351589c721657892a9621fa04">setTargetUserID</a> (const <a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> &amp;targetUserIdNew)</td></tr>
-<tr class="memdesc:a7b1e4c1351589c721657892a9621fa04"><td class="mdescLeft">&#160;</td><td class="mdescRight">For setting the direct-Message <a class="el" href="../../da/d93/a03607.html" title="A single User.">User</a> target of a response.  <a href="../../d6/daf/a02803.html#a7b1e4c1351589c721657892a9621fa04">More...</a><br /></td></tr>
-<tr class="separator:a7b1e4c1351589c721657892a9621fa04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b1acb2afbf6ca004c55021126fa61b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/daf/a02803.html">RespondToInputEventData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/daf/a02803.html#a2b1acb2afbf6ca004c55021126fa61b5">setTTSStatus</a> (bool enabledTTs)</td></tr>
-<tr class="memdesc:a2b1acb2afbf6ca004c55021126fa61b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">For setting the tts status of a response.  <a href="../../d6/daf/a02803.html#a2b1acb2afbf6ca004c55021126fa61b5">More...</a><br /></td></tr>
-<tr class="separator:a2b1acb2afbf6ca004c55021126fa61b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a041c62a70d7cca127dc18703e1cb1679"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/daf/a02803.html#a041c62a70d7cca127dc18703e1cb1679">getApplicationId</a> ()</td></tr>
+<tr class="memdesc:a041c62a70d7cca127dc18703e1cb1679"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the application id.  <a href="../../d6/daf/a02803.html#a041c62a70d7cca127dc18703e1cb1679">More...</a><br /></td></tr>
+<tr class="separator:a041c62a70d7cca127dc18703e1cb1679"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70865601071ddd3f49a50b280a0d4894"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/daf/a02803.html#a70865601071ddd3f49a50b280a0d4894">getAuthorId</a> ()</td></tr>
+<tr class="memdesc:a70865601071ddd3f49a50b280a0d4894"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="../../d8/d16/a03619.html" title="A single User.">User</a> id of the last requester of this input-event.  <a href="../../d6/daf/a02803.html#a70865601071ddd3f49a50b280a0d4894">More...</a><br /></td></tr>
+<tr class="separator:a70865601071ddd3f49a50b280a0d4894"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dd12454f3ecd05f4cfbd22b027268bd"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/daf/a02803.html#a2dd12454f3ecd05f4cfbd22b027268bd">getAvatarUrl</a> ()</td></tr>
+<tr class="memdesc:a2dd12454f3ecd05f4cfbd22b027268bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the avatar Url of the last <a class="el" href="../../d8/d16/a03619.html" title="A single User.">User</a> to trigger this input-event.  <a href="../../d6/daf/a02803.html#a2dd12454f3ecd05f4cfbd22b027268bd">More...</a><br /></td></tr>
+<tr class="separator:a2dd12454f3ecd05f4cfbd22b027268bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97c397fe274250bfff73cf674810a8f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/daf/a02803.html#a97c397fe274250bfff73cf674810a8f5">getChannelId</a> ()</td></tr>
+<tr class="memdesc:a97c397fe274250bfff73cf674810a8f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="../../dc/da8/a01959.html" title="A Channel object.">Channel</a> id of this input-event.  <a href="../../d6/daf/a02803.html#a97c397fe274250bfff73cf674810a8f5">More...</a><br /></td></tr>
+<tr class="separator:a97c397fe274250bfff73cf674810a8f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8b41239baf5da58d2ef9db4b9d7f2cc"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../dd/d9a/a02699.html">ActionRowData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/daf/a02803.html#ad8b41239baf5da58d2ef9db4b9d7f2cc">getComponents</a> ()</td></tr>
+<tr class="memdesc:ad8b41239baf5da58d2ef9db4b9d7f2cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a> components that are on the <a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a>, if applicable.  <a href="../../d6/daf/a02803.html#ad8b41239baf5da58d2ef9db4b9d7f2cc">More...</a><br /></td></tr>
+<tr class="separator:ad8b41239baf5da58d2ef9db4b9d7f2cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae00ff7c4d7b6c67afc1c07e95d60f303"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../dd/d1b/a02351.html">EmbedData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/daf/a02803.html#ae00ff7c4d7b6c67afc1c07e95d60f303">getEmbeds</a> ()</td></tr>
+<tr class="memdesc:ae00ff7c4d7b6c67afc1c07e95d60f303"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a> embeds that are on the <a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a>, if applicable.  <a href="../../d6/daf/a02803.html#ae00ff7c4d7b6c67afc1c07e95d60f303">More...</a><br /></td></tr>
+<tr class="separator:ae00ff7c4d7b6c67afc1c07e95d60f303"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a565fe2447237030a716f64b2599996dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/daf/a02803.html#a565fe2447237030a716f64b2599996dd">getGuildId</a> ()</td></tr>
+<tr class="memdesc:a565fe2447237030a716f64b2599996dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="../../dd/d26/a03003.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> id, of this input-event.  <a href="../../d6/daf/a02803.html#a565fe2447237030a716f64b2599996dd">More...</a><br /></td></tr>
+<tr class="separator:a565fe2447237030a716f64b2599996dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a520bbb225cdbd19ef871d3a00189acff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d6a/a02779.html">InteractionData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/daf/a02803.html#a520bbb225cdbd19ef871d3a00189acff">getInteractionData</a> ()</td></tr>
+<tr class="memdesc:a520bbb225cdbd19ef871d3a00189acff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="../../dc/d6a/a02779.html" title="Interaction data.">InteractionData</a>, if applicable, of this input-event.  <a href="../../d6/daf/a02803.html#a520bbb225cdbd19ef871d3a00189acff">More...</a><br /></td></tr>
+<tr class="separator:a520bbb225cdbd19ef871d3a00189acff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06ff745cf19584ee77bf4486f9831782"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/daf/a02803.html#a06ff745cf19584ee77bf4486f9831782">getInteractionId</a> ()</td></tr>
+<tr class="memdesc:a06ff745cf19584ee77bf4486f9831782"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="../../d7/d45/a03175.html" title="A single Interaction.">Interaction</a> id, if appplicable, of this input-event.  <a href="../../d6/daf/a02803.html#a06ff745cf19584ee77bf4486f9831782">More...</a><br /></td></tr>
+<tr class="separator:a06ff745cf19584ee77bf4486f9831782"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a460ee6dbff0f1325cf6abba7f243c97f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/daf/a02803.html#a460ee6dbff0f1325cf6abba7f243c97f">getInteractionToken</a> ()</td></tr>
+<tr class="memdesc:a460ee6dbff0f1325cf6abba7f243c97f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="../../d7/d45/a03175.html" title="A single Interaction.">Interaction</a> token, if applicable, of this input-event.  <a href="../../d6/daf/a02803.html#a460ee6dbff0f1325cf6abba7f243c97f">More...</a><br /></td></tr>
+<tr class="separator:a460ee6dbff0f1325cf6abba7f243c97f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0373bb022f38f22c5030aa42b803ba45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/dee/a02743.html">MessageData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/daf/a02803.html#a0373bb022f38f22c5030aa42b803ba45">getMessageData</a> ()</td></tr>
+<tr class="memdesc:a0373bb022f38f22c5030aa42b803ba45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a> data, if applicable, of this input-event.  <a href="../../d6/daf/a02803.html#a0373bb022f38f22c5030aa42b803ba45">More...</a><br /></td></tr>
+<tr class="separator:a0373bb022f38f22c5030aa42b803ba45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7be2b81b312794ea5398591d1a7e305"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/daf/a02803.html#af7be2b81b312794ea5398591d1a7e305">getMessageId</a> ()</td></tr>
+<tr class="memdesc:af7be2b81b312794ea5398591d1a7e305"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a> id, if applicable, of this input-event.  <a href="../../d6/daf/a02803.html#af7be2b81b312794ea5398591d1a7e305">More...</a><br /></td></tr>
+<tr class="separator:af7be2b81b312794ea5398591d1a7e305"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ebc65bb67fbd74518199db64e40559c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/daf/a02803.html#a3ebc65bb67fbd74518199db64e40559c">getUserName</a> ()</td></tr>
+<tr class="memdesc:a3ebc65bb67fbd74518199db64e40559c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the userName of the last <a class="el" href="../../d8/d16/a03619.html" title="A single User.">User</a> to trigger this input-event.  <a href="../../d6/daf/a02803.html#a3ebc65bb67fbd74518199db64e40559c">More...</a><br /></td></tr>
+<tr class="separator:a3ebc65bb67fbd74518199db64e40559c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Data Members</h2></td></tr>
+<tr class="memitem:a45588bebbfd0b4d56cab4add14f224ea"><td class="memItemLeft" align="right" valign="top"><a id="a45588bebbfd0b4d56cab4add14f224ea" name="a45588bebbfd0b4d56cab4add14f224ea"></a>
+<a class="el" href="../../d7/d92/a00887.html#ga6a10916bec24a00f6d6a41d8d880c1fa">InputEventResponseType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>responseType</b> {}</td></tr>
+<tr class="memdesc:a45588bebbfd0b4d56cab4add14f224ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of response that this input value represents. <br /></td></tr>
+<tr class="separator:a45588bebbfd0b4d56cab4add14f224ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a70ca0c326734294a50105fb26e483cee" name="a70ca0c326734294a50105fb26e483cee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a70ca0c326734294a50105fb26e483cee">&#9670;&nbsp;</a></span>addAllowedMentions()</h2>
+<a id="a041c62a70d7cca127dc18703e1cb1679" name="a041c62a70d7cca127dc18703e1cb1679"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a041c62a70d7cca127dc18703e1cb1679">&#9670;&nbsp;</a></span>getApplicationId()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d6/daf/a02803.html">RespondToInputEventData</a> &amp; DiscordCoreAPI::RespondToInputEventData::addAllowedMentions </td>
+          <td class="memname">uint64_t DiscordCoreAPI::InputEventData::getApplicationId </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d3/d25/a02683.html">AllowedMentionsData</a>&#160;</td>
-          <td class="paramname"><em>dataPackage</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >For setting the allowable mentions in a response.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dataPackage</td><td>An <a class="el" href="../../d3/d25/a02683.html" title="Allowable mentions for a Message.">AllowedMentionsData</a> structure. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d6/daf/a02803.html" title="Data for responding to an input-event.">RespondToInputEventData</a>&amp; A reference to this data structure. </dd></dl>
+<p >Returns the application id.</p><dl class="section return"><dt>Returns</dt><dd>Snowflake A Snowflake containing the application id.</dd></dl>
+<p>Returns the application id.</p><dl class="section return"><dt>Returns</dt><dd>uint64_t An uint64_t containing the application id. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d2d/a00815_source.html#l00301">301</a> of file <a class="el" href="../../d8/d2d/a00815_source.html">FoundationEntities.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d2d/a00815_source.html#l00114">114</a> of file <a class="el" href="../../d8/d2d/a00815_source.html">FoundationEntities.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a452ce4e2919bed8a6cb2c034c5df2eaf" name="a452ce4e2919bed8a6cb2c034c5df2eaf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a452ce4e2919bed8a6cb2c034c5df2eaf">&#9670;&nbsp;</a></span>addButton()</h2>
+<a id="a70865601071ddd3f49a50b280a0d4894" name="a70865601071ddd3f49a50b280a0d4894"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70865601071ddd3f49a50b280a0d4894">&#9670;&nbsp;</a></span>getAuthorId()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d6/daf/a02803.html">RespondToInputEventData</a> &amp; DiscordCoreAPI::RespondToInputEventData::addButton </td>
+          <td class="memname">uint64_t DiscordCoreAPI::InputEventData::getAuthorId </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>disabled</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>customIdNew</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>buttonLabel</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../dd/d94/a00888.html#gae05b1bfe988b0c2989b7bed279c9c95c">ButtonStyle</a>&#160;</td>
-          <td class="paramname"><em>buttonStyle</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>emojiName</em> = <code>&quot;&quot;</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td>
-          <td class="paramname"><em>emojiId</em> = <code>0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>url</em> = <code>&quot;&quot;</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Adds a button to the response <a class="el" href="../../db/d36/a03243.html" title="A single Message.">Message</a>.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">disabled</td><td>Whether the button is active or not. </td></tr>
-    <tr><td class="paramname">customIdNew</td><td>A custom id to give for identifying the button. </td></tr>
-    <tr><td class="paramname">buttonLabel</td><td>A visible label for the button. </td></tr>
-    <tr><td class="paramname">buttonStyle</td><td>The style of the button. </td></tr>
-    <tr><td class="paramname">emojiName</td><td>An emoji name, if desired. </td></tr>
-    <tr><td class="paramname">emojiId</td><td>An emoji id, if desired. </td></tr>
-    <tr><td class="paramname">url</td><td>A url, if applicable. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d6/daf/a02803.html" title="Data for responding to an input-event.">RespondToInputEventData</a>&amp; A reference to this data structure. </dd></dl>
+<p >Returns the <a class="el" href="../../d8/d16/a03619.html" title="A single User.">User</a> id of the last requester of this input-event.</p><dl class="section return"><dt>Returns</dt><dd>Snowflake A Snowflake containing the author's id.</dd></dl>
+<p>Returns the <a class="el" href="../../d8/d16/a03619.html" title="A single User.">User</a> id of the last requester of this input-event.</p><dl class="section return"><dt>Returns</dt><dd>uint64_t An uint64_t containing the author's id. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d2d/a00815_source.html#l00190">190</a> of file <a class="el" href="../../d8/d2d/a00815_source.html">FoundationEntities.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d2d/a00815_source.html#l00102">102</a> of file <a class="el" href="../../d8/d2d/a00815_source.html">FoundationEntities.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a808c29a1772d340a5e62d938bfe28caf" name="a808c29a1772d340a5e62d938bfe28caf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a808c29a1772d340a5e62d938bfe28caf">&#9670;&nbsp;</a></span>addComponentRow()</h2>
+<a id="a2dd12454f3ecd05f4cfbd22b027268bd" name="a2dd12454f3ecd05f4cfbd22b027268bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dd12454f3ecd05f4cfbd22b027268bd">&#9670;&nbsp;</a></span>getAvatarUrl()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d6/daf/a02803.html">RespondToInputEventData</a> &amp; DiscordCoreAPI::RespondToInputEventData::addComponentRow </td>
+          <td class="memname">std::string DiscordCoreAPI::InputEventData::getAvatarUrl </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../de/dde/a02695.html">ActionRowData</a>&#160;</td>
-          <td class="paramname"><em>dataPackage</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >For setting the components in a response.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dataPackage</td><td>An <a class="el" href="../../de/dde/a02695.html" title="Action row data of Message components.">ActionRowData</a> structure. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d6/daf/a02803.html" title="Data for responding to an input-event.">RespondToInputEventData</a>&amp; A reference to this data structure. </dd></dl>
+<p >Gets the avatar Url of the last <a class="el" href="../../d8/d16/a03619.html" title="A single User.">User</a> to trigger this input-event.</p><dl class="section return"><dt>Returns</dt><dd>std::string A std::string containing the avatar Url. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d2d/a00815_source.html#l00317">317</a> of file <a class="el" href="../../d8/d2d/a00815_source.html">FoundationEntities.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d2d/a00815_source.html#l00084">84</a> of file <a class="el" href="../../d8/d2d/a00815_source.html">FoundationEntities.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a4ad50267f07d255748ed7bb61d26d05d" name="a4ad50267f07d255748ed7bb61d26d05d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ad50267f07d255748ed7bb61d26d05d">&#9670;&nbsp;</a></span>addContent()</h2>
+<a id="a97c397fe274250bfff73cf674810a8f5" name="a97c397fe274250bfff73cf674810a8f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97c397fe274250bfff73cf674810a8f5">&#9670;&nbsp;</a></span>getChannelId()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d6/daf/a02803.html">RespondToInputEventData</a> &amp; DiscordCoreAPI::RespondToInputEventData::addContent </td>
+          <td class="memname">uint64_t DiscordCoreAPI::InputEventData::getChannelId </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>dataPackage</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >For setting the <a class="el" href="../../db/d36/a03243.html" title="A single Message.">Message</a> content in a response.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dataPackage</td><td>A std::string, containing the content. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d6/daf/a02803.html" title="Data for responding to an input-event.">RespondToInputEventData</a>&amp; A reference to this data structure. </dd></dl>
+<p >Returns the <a class="el" href="../../dc/da8/a01959.html" title="A Channel object.">Channel</a> id of this input-event.</p><dl class="section return"><dt>Returns</dt><dd>Snowflake A Snowflake containing the <a class="el" href="../../dc/da8/a01959.html" title="A Channel object.">Channel</a> id.</dd></dl>
+<p>Returns the <a class="el" href="../../dc/da8/a01959.html" title="A Channel object.">Channel</a> id of this input-event.</p><dl class="section return"><dt>Returns</dt><dd>uint64_t An uint64_t containing the <a class="el" href="../../dc/da8/a01959.html" title="A Channel object.">Channel</a> id. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d2d/a00815_source.html#l00333">333</a> of file <a class="el" href="../../d8/d2d/a00815_source.html">FoundationEntities.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d2d/a00815_source.html#l00120">120</a> of file <a class="el" href="../../d8/d2d/a00815_source.html">FoundationEntities.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d6/daf/a02803_a97c397fe274250bfff73cf674810a8f5_icgraph.svg" width="452" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
-<a id="a0a314838472bcdb0b4cfeace029092c6" name="a0a314838472bcdb0b4cfeace029092c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a314838472bcdb0b4cfeace029092c6">&#9670;&nbsp;</a></span>addFile()</h2>
+<a id="ad8b41239baf5da58d2ef9db4b9d7f2cc" name="ad8b41239baf5da58d2ef9db4b9d7f2cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8b41239baf5da58d2ef9db4b9d7f2cc">&#9670;&nbsp;</a></span>getComponents()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d6/daf/a02803.html">RespondToInputEventData</a> &amp; DiscordCoreAPI::RespondToInputEventData::addFile </td>
+          <td class="memname">std::vector&lt; <a class="el" href="../../dd/d9a/a02699.html">ActionRowData</a> &gt; DiscordCoreAPI::InputEventData::getComponents </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d9/d5e/a02355.html">File</a>&#160;</td>
-          <td class="paramname"><em>theFile</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Adds a file to the current collection of files for this message response.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">theFile</td><td>The file to be added. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d6/daf/a02803.html" title="Data for responding to an input-event.">RespondToInputEventData</a>&amp; A reference to this data structure. </dd></dl>
+<p >Returns the <a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a> components that are on the <a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a>, if applicable.</p><dl class="section return"><dt>Returns</dt><dd>std::vector A std::vector containing <a class="el" href="../../dd/d9a/a02699.html" title="Action row data of Message components.">ActionRowData</a>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d2d/a00815_source.html#l00293">293</a> of file <a class="el" href="../../d8/d2d/a00815_source.html">FoundationEntities.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d2d/a00815_source.html#l00096">96</a> of file <a class="el" href="../../d8/d2d/a00815_source.html">FoundationEntities.cpp</a>.</p>
 
 </div>
 </div>
-<a id="aef74d1af66e1a524e98ce81cde6825df" name="aef74d1af66e1a524e98ce81cde6825df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef74d1af66e1a524e98ce81cde6825df">&#9670;&nbsp;</a></span>addMessageEmbed()</h2>
+<a id="ae00ff7c4d7b6c67afc1c07e95d60f303" name="ae00ff7c4d7b6c67afc1c07e95d60f303"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae00ff7c4d7b6c67afc1c07e95d60f303">&#9670;&nbsp;</a></span>getEmbeds()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d6/daf/a02803.html">RespondToInputEventData</a> &amp; DiscordCoreAPI::RespondToInputEventData::addMessageEmbed </td>
+          <td class="memname">std::vector&lt; <a class="el" href="../../dd/d1b/a02351.html">EmbedData</a> &gt; DiscordCoreAPI::InputEventData::getEmbeds </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/d21/a02347.html">EmbedData</a>&#160;</td>
-          <td class="paramname"><em>dataPackage</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >For setting the embeds in a response.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dataPackage</td><td>An <a class="el" href="../../d4/d21/a02347.html" title="Embed data.">EmbedData</a> structure. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d6/daf/a02803.html" title="Data for responding to an input-event.">RespondToInputEventData</a>&amp; A reference to this data structure. </dd></dl>
+<p >Returns the <a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a> embeds that are on the <a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a>, if applicable.</p><dl class="section return"><dt>Returns</dt><dd>std::vector A std::vector containing the <a class="el" href="../../dd/d1b/a02351.html" title="Embed data.">EmbedData</a>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d2d/a00815_source.html#l00325">325</a> of file <a class="el" href="../../d8/d2d/a00815_source.html">FoundationEntities.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d2d/a00815_source.html#l00090">90</a> of file <a class="el" href="../../d8/d2d/a00815_source.html">FoundationEntities.cpp</a>.</p>
 
 </div>
 </div>
-<a id="acc9eb079def7c382a73da4af107b6dab" name="acc9eb079def7c382a73da4af107b6dab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acc9eb079def7c382a73da4af107b6dab">&#9670;&nbsp;</a></span>addModal()</h2>
+<a id="a565fe2447237030a716f64b2599996dd" name="a565fe2447237030a716f64b2599996dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a565fe2447237030a716f64b2599996dd">&#9670;&nbsp;</a></span>getGuildId()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d6/daf/a02803.html">RespondToInputEventData</a> &amp; DiscordCoreAPI::RespondToInputEventData::addModal </td>
+          <td class="memname">uint64_t DiscordCoreAPI::InputEventData::getGuildId </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>topTitleNew</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>topCustomIdNew</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>titleNew</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>customIdNew</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>required</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int32_t&#160;</td>
-          <td class="paramname"><em>minLength</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int32_t&#160;</td>
-          <td class="paramname"><em>maxLength</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../dd/d94/a00888.html#ga24a639fa950fb1c20605b41b9adfaa2c">TextInputStyle</a>&#160;</td>
-          <td class="paramname"><em>inputStyle</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>label</em> = <code>&quot;&quot;</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>placeholder</em> = <code>&quot;&quot;</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Adds a modal to the response <a class="el" href="../../db/d36/a03243.html" title="A single Message.">Message</a>.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">topTitleNew</td><td>A title for the modal. </td></tr>
-    <tr><td class="paramname">topCustomIdNew</td><td>A custom id to give for the modal. </td></tr>
-    <tr><td class="paramname">titleNew</td><td>A title for the modal's individual input. </td></tr>
-    <tr><td class="paramname">customIdNew</td><td>A custom id to give for the modal's individual input. </td></tr>
-    <tr><td class="paramname">required</td><td>Is it a required response? </td></tr>
-    <tr><td class="paramname">minLength</td><td>Minimum length. </td></tr>
-    <tr><td class="paramname">maxLength</td><td>Maximum length. </td></tr>
-    <tr><td class="paramname">inputStyle</td><td>The input style. </td></tr>
-    <tr><td class="paramname">label</td><td>A label for the modal. </td></tr>
-    <tr><td class="paramname">placeholder</td><td>A placeholder for the modal. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d6/daf/a02803.html" title="Data for responding to an input-event.">RespondToInputEventData</a>&amp; A reference to this data structure. </dd></dl>
+<p >Returns the <a class="el" href="../../dd/d26/a03003.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> id, of this input-event.</p><dl class="section return"><dt>Returns</dt><dd>Snowflake A Snowflake containing the <a class="el" href="../../dd/d26/a03003.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> id.</dd></dl>
+<p>Returns the <a class="el" href="../../dd/d26/a03003.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> id, of this input-event.</p><dl class="section return"><dt>Returns</dt><dd>uint64_t An uint64_t containing the <a class="el" href="../../dd/d26/a03003.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> id. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d2d/a00815_source.html#l00261">261</a> of file <a class="el" href="../../d8/d2d/a00815_source.html">FoundationEntities.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d2d/a00815_source.html#l00132">132</a> of file <a class="el" href="../../d8/d2d/a00815_source.html">FoundationEntities.cpp</a>.</p>
 
 </div>
 </div>
-<a id="ac7192b319c1eaab930820340e91f8802" name="ac7192b319c1eaab930820340e91f8802"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac7192b319c1eaab930820340e91f8802">&#9670;&nbsp;</a></span>addSelectMenu()</h2>
+<a id="a520bbb225cdbd19ef871d3a00189acff" name="a520bbb225cdbd19ef871d3a00189acff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a520bbb225cdbd19ef871d3a00189acff">&#9670;&nbsp;</a></span>getInteractionData()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d6/daf/a02803.html">RespondToInputEventData</a> &amp; DiscordCoreAPI::RespondToInputEventData::addSelectMenu </td>
+          <td class="memname"><a class="el" href="../../dc/d6a/a02779.html">InteractionData</a> DiscordCoreAPI::InputEventData::getInteractionData </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>disabled</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>customIdNew</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="../../d5/d25/a02687.html">SelectOptionData</a> &gt;&#160;</td>
-          <td class="paramname"><em>options</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>placeholder</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int32_t&#160;</td>
-          <td class="paramname"><em>maxValues</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int32_t&#160;</td>
-          <td class="paramname"><em>minValues</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Adds a select-menu to the response <a class="el" href="../../db/d36/a03243.html" title="A single Message.">Message</a>.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">disabled</td><td>Whether the select-menu is active or not. </td></tr>
-    <tr><td class="paramname">customIdNew</td><td>A custom id to give for identifying the select-menu. </td></tr>
-    <tr><td class="paramname">options</td><td>A std::vector of select-menu-options to offer. </td></tr>
-    <tr><td class="paramname">placeholder</td><td>Custom placeholder text if nothing is selected, max 100 characters. </td></tr>
-    <tr><td class="paramname">maxValues</td><td>Maximum number of selections that are possible. </td></tr>
-    <tr><td class="paramname">minValues</td><td>Minimum required number of selections that are required. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d6/daf/a02803.html" title="Data for responding to an input-event.">RespondToInputEventData</a>&amp; A reference to this data structure. </dd></dl>
+<p >Returns the <a class="el" href="../../d7/d45/a03175.html" title="A single Interaction.">Interaction</a> data, if applicable, of this input-event.</p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../dc/d6a/a02779.html" title="Interaction data.">InteractionData</a> An <a class="el" href="../../dc/d6a/a02779.html" title="Interaction data.">InteractionData</a> structure. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d2d/a00815_source.html#l00224">224</a> of file <a class="el" href="../../d8/d2d/a00815_source.html">FoundationEntities.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d2d/a00815_source.html#l00144">144</a> of file <a class="el" href="../../d8/d2d/a00815_source.html">FoundationEntities.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d6/daf/a02803_a520bbb225cdbd19ef871d3a00189acff_icgraph.svg" width="452" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
-<a id="a45fd679c08764836cfd4b954971ea35b" name="a45fd679c08764836cfd4b954971ea35b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45fd679c08764836cfd4b954971ea35b">&#9670;&nbsp;</a></span>setAutoCompleteChoice()</h2>
+<a id="a06ff745cf19584ee77bf4486f9831782" name="a06ff745cf19584ee77bf4486f9831782"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06ff745cf19584ee77bf4486f9831782">&#9670;&nbsp;</a></span>getInteractionId()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d6/daf/a02803.html">RespondToInputEventData</a> &amp; DiscordCoreAPI::RespondToInputEventData::setAutoCompleteChoice </td>
+          <td class="memname">uint64_t DiscordCoreAPI::InputEventData::getInteractionId </td>
           <td>(</td>
-          <td class="paramtype">nlohmann::json&#160;</td>
-          <td class="paramname"><em>theValue</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>theName</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::unordered_map&lt; std::string, std::string &gt;&#160;</td>
-          <td class="paramname"><em>theNameLocalizations</em> = <code>std::unordered_map&lt;std::string,&#160;std::string&gt;{}</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >For setting the choices of an autocomplete response.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">theValue</td><td>An nlohmann::json value that is either a float, int32_t or a std::string. </td></tr>
-    <tr><td class="paramname">theName</td><td>A std::string for the name of the choice. </td></tr>
-    <tr><td class="paramname">theNameLocalizations</td><td>A std::unordered_map&lt;std::string, std::string&gt; for the name localizations. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d6/daf/a02803.html" title="Data for responding to an input-event.">RespondToInputEventData</a>&amp; A reference to this data structure. </dd></dl>
+<p >Returns the <a class="el" href="../../d7/d45/a03175.html" title="A single Interaction.">Interaction</a> id, if appplicable, of this input-event.</p><dl class="section return"><dt>Returns</dt><dd>Snowflake A Snowflake containing the <a class="el" href="../../d7/d45/a03175.html" title="A single Interaction.">Interaction</a> id.</dd></dl>
+<p>Returns the <a class="el" href="../../d7/d45/a03175.html" title="A single Interaction.">Interaction</a> id, if appplicable, of this input-event.</p><dl class="section return"><dt>Returns</dt><dd>uint64_t An uint64_t containing the <a class="el" href="../../d7/d45/a03175.html" title="A single Interaction.">Interaction</a> id. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d2d/a00815_source.html#l00351">351</a> of file <a class="el" href="../../d8/d2d/a00815_source.html">FoundationEntities.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d2d/a00815_source.html#l00108">108</a> of file <a class="el" href="../../d8/d2d/a00815_source.html">FoundationEntities.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a221bd17c5bb0267cf7663cad33a0e447" name="a221bd17c5bb0267cf7663cad33a0e447"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a221bd17c5bb0267cf7663cad33a0e447">&#9670;&nbsp;</a></span>setResponseType()</h2>
+<a id="a460ee6dbff0f1325cf6abba7f243c97f" name="a460ee6dbff0f1325cf6abba7f243c97f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a460ee6dbff0f1325cf6abba7f243c97f">&#9670;&nbsp;</a></span>getInteractionToken()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d6/daf/a02803.html">RespondToInputEventData</a> &amp; DiscordCoreAPI::RespondToInputEventData::setResponseType </td>
+          <td class="memname">std::string DiscordCoreAPI::InputEventData::getInteractionToken </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d7/d92/a00887.html#ga6a10916bec24a00f6d6a41d8d880c1fa">InputEventResponseType</a>&#160;</td>
-          <td class="paramname"><em>typeNew</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >For setting the type of response to make.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">typeNew</td><td>An InputEventResponseType. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d6/daf/a02803.html" title="Data for responding to an input-event.">RespondToInputEventData</a>&amp; A reference to this data structure. </dd></dl>
+<p >Returns the <a class="el" href="../../d7/d45/a03175.html" title="A single Interaction.">Interaction</a> token, if applicable, of this input-event.</p><dl class="section return"><dt>Returns</dt><dd>std::string A std::string containing the <a class="el" href="../../d7/d45/a03175.html" title="A single Interaction.">Interaction</a> token. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d2d/a00815_source.html#l00309">309</a> of file <a class="el" href="../../d8/d2d/a00815_source.html">FoundationEntities.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d2d/a00815_source.html#l00126">126</a> of file <a class="el" href="../../d8/d2d/a00815_source.html">FoundationEntities.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a7b1e4c1351589c721657892a9621fa04" name="a7b1e4c1351589c721657892a9621fa04"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b1e4c1351589c721657892a9621fa04">&#9670;&nbsp;</a></span>setTargetUserID()</h2>
+<a id="a0373bb022f38f22c5030aa42b803ba45" name="a0373bb022f38f22c5030aa42b803ba45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0373bb022f38f22c5030aa42b803ba45">&#9670;&nbsp;</a></span>getMessageData()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d6/daf/a02803.html">RespondToInputEventData</a> &amp; DiscordCoreAPI::RespondToInputEventData::setTargetUserID </td>
+          <td class="memname"><a class="el" href="../../df/dee/a02743.html">MessageData</a> DiscordCoreAPI::InputEventData::getMessageData </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> &amp;&#160;</td>
-          <td class="paramname"><em>targetUserIdNew</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >For setting the direct-Message <a class="el" href="../../da/d93/a03607.html" title="A single User.">User</a> target of a response.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">targetUserIdNew</td><td>A std::string, containing the target <a class="el" href="../../da/d93/a03607.html" title="A single User.">User</a>'s id. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d6/daf/a02803.html" title="Data for responding to an input-event.">RespondToInputEventData</a>&amp; A reference to this data structure. </dd></dl>
+<p >Returns the <a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a> data, if applicable, of this input-event.</p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../df/dee/a02743.html" title="Data structure representing a single Message.">MessageData</a> A <a class="el" href="../../df/dee/a02743.html" title="Data structure representing a single Message.">MessageData</a> structure. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d2d/a00815_source.html#l00364">364</a> of file <a class="el" href="../../d8/d2d/a00815_source.html">FoundationEntities.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d2d/a00815_source.html#l00150">150</a> of file <a class="el" href="../../d8/d2d/a00815_source.html">FoundationEntities.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a2b1acb2afbf6ca004c55021126fa61b5" name="a2b1acb2afbf6ca004c55021126fa61b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b1acb2afbf6ca004c55021126fa61b5">&#9670;&nbsp;</a></span>setTTSStatus()</h2>
+<a id="af7be2b81b312794ea5398591d1a7e305" name="af7be2b81b312794ea5398591d1a7e305"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7be2b81b312794ea5398591d1a7e305">&#9670;&nbsp;</a></span>getMessageId()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d6/daf/a02803.html">RespondToInputEventData</a> &amp; DiscordCoreAPI::RespondToInputEventData::setTTSStatus </td>
+          <td class="memname">uint64_t DiscordCoreAPI::InputEventData::getMessageId </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>enabledTTs</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >For setting the tts status of a response.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">enabledTTs</td><td>A bool. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d6/daf/a02803.html" title="Data for responding to an input-event.">RespondToInputEventData</a>&amp; A reference to this data structure. </dd></dl>
+<p >Returns the <a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a> id, if applicable, of this input-event.</p><dl class="section return"><dt>Returns</dt><dd>Snowflake A Snowflake containing the <a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a> id.</dd></dl>
+<p>Returns the <a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a> id, if applicable, of this input-event.</p><dl class="section return"><dt>Returns</dt><dd>uint64_t An uint64_t containing the <a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a> id. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d2d/a00815_source.html#l00341">341</a> of file <a class="el" href="../../d8/d2d/a00815_source.html">FoundationEntities.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d2d/a00815_source.html#l00138">138</a> of file <a class="el" href="../../d8/d2d/a00815_source.html">FoundationEntities.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d6/daf/a02803_af7be2b81b312794ea5398591d1a7e305_icgraph.svg" width="452" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a3ebc65bb67fbd74518199db64e40559c" name="a3ebc65bb67fbd74518199db64e40559c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ebc65bb67fbd74518199db64e40559c">&#9670;&nbsp;</a></span>getUserName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string DiscordCoreAPI::InputEventData::getUserName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Returns the userName of the last <a class="el" href="../../d8/d16/a03619.html" title="A single User.">User</a> to trigger this input-event.</p><dl class="section return"><dt>Returns</dt><dd>std::string A std::string containing the <a class="el" href="../../d8/d16/a03619.html" title="A single User.">User</a> name. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d2d/a00815_source.html#l00078">78</a> of file <a class="el" href="../../d8/d2d/a00815_source.html">FoundationEntities.cpp</a>.</p>
 
 </div>
 </div>
@@ -658,7 +459,7 @@ Public Member Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d6/daf/a02803.html">RespondToInputEventData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d6/daf/a02803.html">InputEventData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

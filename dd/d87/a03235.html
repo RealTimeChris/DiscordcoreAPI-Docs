@@ -105,29 +105,29 @@ $(document).ready(function(){initNavTree('dd/d87/a03235.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d0/d77/a03232.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::PinMessageData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::DeleteMessagesBulkData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For pinning a single <a class="el" href="../../db/d36/a03243.html" title="A single Message.">Message</a>.  
+<p>For deleting a bulk of <a class="el" href="../../de/d11/a03267.html" title="An interface class for the Message related Discord endpoints.">Messages</a>.  
  <a href="../../dd/d87/a03235.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d6/dc0/a00734_source.html">MessageEntities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:a51c1f1c4f16e7041cf8a1fcda261e854"><td class="memItemLeft" align="right" valign="top"><a id="a51c1f1c4f16e7041cf8a1fcda261e854" name="a51c1f1c4f16e7041cf8a1fcda261e854"></a>
+<tr class="memitem:aa2b9c3a8b77384216c59aed69125f332"><td class="memItemLeft" align="right" valign="top"><a id="aa2b9c3a8b77384216c59aed69125f332" name="aa2b9c3a8b77384216c59aed69125f332"></a>
 <a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>channelId</b> {}</td></tr>
-<tr class="memdesc:a51c1f1c4f16e7041cf8a1fcda261e854"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../dc/da8/a01959.html" title="A Channel object.">Channel</a> within which to pin the <a class="el" href="../../db/d36/a03243.html" title="A single Message.">Message</a>. <br /></td></tr>
-<tr class="separator:a51c1f1c4f16e7041cf8a1fcda261e854"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa168a74172aac766fbde83cfaad9d323"><td class="memItemLeft" align="right" valign="top"><a id="aa168a74172aac766fbde83cfaad9d323" name="aa168a74172aac766fbde83cfaad9d323"></a>
-<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>messageId</b> {}</td></tr>
-<tr class="memdesc:aa168a74172aac766fbde83cfaad9d323"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../db/d36/a03243.html" title="A single Message.">Message</a> which you would like to pin. <br /></td></tr>
-<tr class="separator:aa168a74172aac766fbde83cfaad9d323"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee076240abc218f5794e7c84626c1952"><td class="memItemLeft" align="right" valign="top"><a id="aee076240abc218f5794e7c84626c1952" name="aee076240abc218f5794e7c84626c1952"></a>
+<tr class="memdesc:aa2b9c3a8b77384216c59aed69125f332"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../dc/da8/a01959.html" title="A Channel object.">Channel</a> within which to delete the <a class="el" href="../../de/d11/a03267.html" title="An interface class for the Message related Discord endpoints.">Messages</a>. <br /></td></tr>
+<tr class="separator:aa2b9c3a8b77384216c59aed69125f332"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40b0d4a0c2cca8c396358af6b28cb11d"><td class="memItemLeft" align="right" valign="top"><a id="a40b0d4a0c2cca8c396358af6b28cb11d" name="a40b0d4a0c2cca8c396358af6b28cb11d"></a>
+std::vector&lt; <a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>messageIds</b> {}</td></tr>
+<tr class="memdesc:a40b0d4a0c2cca8c396358af6b28cb11d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of <a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a> ids to delete. <br /></td></tr>
+<tr class="separator:a40b0d4a0c2cca8c396358af6b28cb11d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a507825edf5ccef8fa66cb6408a9bb422"><td class="memItemLeft" align="right" valign="top"><a id="a507825edf5ccef8fa66cb6408a9bb422" name="a507825edf5ccef8fa66cb6408a9bb422"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>reason</b> {}</td></tr>
-<tr class="memdesc:aee076240abc218f5794e7c84626c1952"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reason for pinning this <a class="el" href="../../db/d36/a03243.html" title="A single Message.">Message</a>. <br /></td></tr>
-<tr class="separator:aee076240abc218f5794e7c84626c1952"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:a507825edf5ccef8fa66cb6408a9bb422"><td class="mdescLeft">&#160;</td><td class="mdescRight">The reason for deleting the <a class="el" href="../../de/d11/a03267.html" title="An interface class for the Message related Discord endpoints.">Messages</a>. <br /></td></tr>
+<tr class="separator:a507825edf5ccef8fa66cb6408a9bb422"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d6/dc0/a00734_source.html">MessageEntities.hpp</a></li>
@@ -138,7 +138,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>reason</b> {}<
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dd/d87/a03235.html">PinMessageData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dd/d87/a03235.html">DeleteMessagesBulkData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

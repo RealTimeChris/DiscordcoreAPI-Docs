@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../d8/d4a/a02703.html" target="_top" xlink:title="Data structure representing an ApplicationCommand.">
+<g id="a_node2"><a xlink:href="../../d8/d0f/a02707.html" target="_top" xlink:title="Data structure representing an ApplicationCommand.">
 <polygon fill="none" stroke="black" points="5,-67.5 5,-97.5 145,-97.5 145,-67.5 5,-67.5"/>
 <text text-anchor="start" x="13" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::Application</text>
 <text text-anchor="middle" x="75" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">CommandData</text>
@@ -37,7 +37,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="../../dc/da4/a02303.html" target="_top" xlink:title="Base class DiscordCoreAPI_Dll for all Discord entities.">
+<g id="a_node3"><a xlink:href="../../d2/d40/a02307.html" target="_top" xlink:title="Base class DiscordCoreAPI_Dll for all Discord entities.">
 <polygon fill="none" stroke="black" points="0,-134.5 0,-153.5 150,-153.5 150,-134.5 0,-134.5"/>
 <text text-anchor="middle" x="75" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::DiscordEntity</text>
 </a>

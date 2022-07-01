@@ -105,37 +105,25 @@ $(document).ready(function(){initNavTree('dd/de1/a03223.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../da/df5/a03220.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::DeleteMessageData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::CrosspostMessageData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For deleting a <a class="el" href="../../db/d36/a03243.html" title="A single Message.">Message</a>.  
+<p>For crossposting a <a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a>.  
  <a href="../../dd/de1/a03223.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d6/dc0/a00734_source.html">MessageEntities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:a48b9b5fd255392d5733d284e314d530d"><td class="memItemLeft" align="right" valign="top"><a id="a48b9b5fd255392d5733d284e314d530d" name="a48b9b5fd255392d5733d284e314d530d"></a>
+<tr class="memitem:aec30919c478c1bbe12edaba531e7d396"><td class="memItemLeft" align="right" valign="top"><a id="aec30919c478c1bbe12edaba531e7d396" name="aec30919c478c1bbe12edaba531e7d396"></a>
 <a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>channelId</b> {}</td></tr>
-<tr class="memdesc:a48b9b5fd255392d5733d284e314d530d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The channel Id of the <a class="el" href="../../db/d36/a03243.html" title="A single Message.">Message</a> to delete. <br /></td></tr>
-<tr class="separator:a48b9b5fd255392d5733d284e314d530d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f2315e3ef1233667aa5b7043711d86f"><td class="memItemLeft" align="right" valign="top"><a id="a3f2315e3ef1233667aa5b7043711d86f" name="a3f2315e3ef1233667aa5b7043711d86f"></a>
+<tr class="memdesc:aec30919c478c1bbe12edaba531e7d396"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../dc/da8/a01959.html" title="A Channel object.">Channel</a> within which to crosspost the <a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a> from. <br /></td></tr>
+<tr class="separator:aec30919c478c1bbe12edaba531e7d396"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91ab102eeecd12047cc107c9d17320a8"><td class="memItemLeft" align="right" valign="top"><a id="a91ab102eeecd12047cc107c9d17320a8" name="a91ab102eeecd12047cc107c9d17320a8"></a>
 <a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>messageId</b> {}</td></tr>
-<tr class="memdesc:a3f2315e3ef1233667aa5b7043711d86f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The message Id of the <a class="el" href="../../db/d36/a03243.html" title="A single Message.">Message</a> to delete. <br /></td></tr>
-<tr class="separator:a3f2315e3ef1233667aa5b7043711d86f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca484e348ecd108e85bee8d262115204"><td class="memItemLeft" align="right" valign="top"><a id="aca484e348ecd108e85bee8d262115204" name="aca484e348ecd108e85bee8d262115204"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>reason</b> {}</td></tr>
-<tr class="memdesc:aca484e348ecd108e85bee8d262115204"><td class="mdescLeft">&#160;</td><td class="mdescRight">The reason for deleting the <a class="el" href="../../db/d36/a03243.html" title="A single Message.">Message</a>. <br /></td></tr>
-<tr class="separator:aca484e348ecd108e85bee8d262115204"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26e6307fc378c23a2186558f270a51c7"><td class="memItemLeft" align="right" valign="top"><a id="a26e6307fc378c23a2186558f270a51c7" name="a26e6307fc378c23a2186558f270a51c7"></a>
-int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>timeDelay</b> { 0 }</td></tr>
-<tr class="memdesc:a26e6307fc378c23a2186558f270a51c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of std::chrono::milliseconds to wait before deleting the <a class="el" href="../../db/d36/a03243.html" title="A single Message.">Message</a>. <br /></td></tr>
-<tr class="separator:a26e6307fc378c23a2186558f270a51c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd12fac162538c8c703ba9d0775441d8"><td class="memItemLeft" align="right" valign="top"><a id="abd12fac162538c8c703ba9d0775441d8" name="abd12fac162538c8c703ba9d0775441d8"></a>
-<a class="el" href="../../d2/dff/a03675.html">TimeStamp</a>&#160;</td><td class="memItemRight" valign="bottom"><b>timeStamp</b> { &quot;&quot; }</td></tr>
-<tr class="memdesc:abd12fac162538c8c703ba9d0775441d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The created-at timestamp of the original message. <br /></td></tr>
-<tr class="separator:abd12fac162538c8c703ba9d0775441d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:a91ab102eeecd12047cc107c9d17320a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Id of the message to be crossposted. <br /></td></tr>
+<tr class="separator:a91ab102eeecd12047cc107c9d17320a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d6/dc0/a00734_source.html">MessageEntities.hpp</a></li>
@@ -146,7 +134,7 @@ int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>timeDelay</b> { 0 
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dd/de1/a03223.html">DeleteMessageData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dd/de1/a03223.html">CrosspostMessageData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

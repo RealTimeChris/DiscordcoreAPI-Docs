@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d9/daf/a02807.html" target="_top" xlink:title="Message response base, for responding to messages.">
+<g id="a_node1"><a xlink:href="d7/d5a/a02811.html" target="_top" xlink:title="Message response base, for responding to messages.">
 <polygon fill="none" stroke="black" points="0,-19.5 0,-38.5 197,-38.5 197,-19.5 0,-19.5"/>
 <text text-anchor="middle" x="98.5" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::MessageResponseBase</text>
 </a>
@@ -20,7 +20,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="db/d4b/a03207.html" target="_top" xlink:title="For creating a Message.">
+<g id="a_node2"><a xlink:href="d9/d65/a03215.html" target="_top" xlink:title="For creating a Message.">
 <polygon fill="none" stroke="black" points="233,-38.5 233,-57.5 413,-57.5 413,-38.5 233,-38.5"/>
 <text text-anchor="middle" x="323" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::CreateMessageData</text>
 </a>
@@ -35,7 +35,7 @@
 <!-- Node3 -->
 <g id="node4" class="node">
 <title>Node3</title>
-<g id="a_node4"><a xlink:href="d6/dcf/a03219.html" target="_top" xlink:title="For editing a Message.">
+<g id="a_node4"><a xlink:href="d3/d1b/a03227.html" target="_top" xlink:title="For editing a Message.">
 <polygon fill="none" stroke="black" points="238.5,-0.5 238.5,-19.5 407.5,-19.5 407.5,-0.5 238.5,-0.5"/>
 <text text-anchor="middle" x="323" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::EditMessageData</text>
 </a>
@@ -50,7 +50,7 @@
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="d5/ddf/a03211.html" target="_top" xlink:title="For sending a direct&#45;message.">
+<g id="a_node3"><a xlink:href="d6/dcf/a03219.html" target="_top" xlink:title="For sending a direct&#45;message.">
 <polygon fill="none" stroke="black" points="449,-38.5 449,-57.5 598,-57.5 598,-38.5 449,-38.5"/>
 <text text-anchor="middle" x="523.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::SendDMData</text>
 </a>

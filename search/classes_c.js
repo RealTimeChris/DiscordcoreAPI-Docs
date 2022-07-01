@@ -55,6 +55,6 @@ var searchData=
   ['onvoiceserverupdatedata_52',['OnVoiceServerUpdateData',['../df/d71/a02247.html',1,'DiscordCoreAPI']]],
   ['onvoicestateupdatedata_53',['OnVoiceStateUpdateData',['../d6/dd2/a02243.html',1,'DiscordCoreAPI']]],
   ['onwebhookupdatedata_54',['OnWebhookUpdateData',['../d1/d0c/a02251.html',1,'DiscordCoreAPI']]],
-  ['optionalauditentryinfodata_55',['OptionalAuditEntryInfoData',['../d5/d6a/a02515.html',1,'DiscordCoreAPI']]],
-  ['overwritedata_56',['OverWriteData',['../db/dd4/a02383.html',1,'DiscordCoreAPI']]]
+  ['optionalauditentryinfodata_55',['OptionalAuditEntryInfoData',['../d9/dce/a02519.html',1,'DiscordCoreAPI']]],
+  ['overwritedata_56',['OverWriteData',['../d8/deb/a02387.html',1,'DiscordCoreAPI']]]
 ];

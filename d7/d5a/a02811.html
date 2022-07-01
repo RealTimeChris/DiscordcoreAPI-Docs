@@ -103,30 +103,452 @@ $(document).ready(function(){initNavTree('d7/d5a/a02811.html','../../'); initRes
 
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Public Data Members</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="../../d1/dd0/a02808.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::InteractionResponseData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::MessageResponseBase Class Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="../../d2/d94/a03167.html" title="A single Interaction.">Interaction</a> response data.  
+<p><a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a> response base, for responding to messages.  
  <a href="../../d7/d5a/a02811.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for DiscordCoreAPI::MessageResponseBase:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d6/d59/a02810.svg" width="502" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Public Data Members</h2></td></tr>
-<tr class="memitem:a177f7cb7dfd7081169e2df369cefed0b"><td class="memItemLeft" align="right" valign="top"><a id="a177f7cb7dfd7081169e2df369cefed0b" name="a177f7cb7dfd7081169e2df369cefed0b"></a>
-<a class="el" href="../../dd/d9a/a02699.html">InteractionCallbackData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>data</b> {}</td></tr>
-<tr class="memdesc:a177f7cb7dfd7081169e2df369cefed0b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d2/d94/a03167.html" title="A single Interaction.">Interaction</a> <a class="el" href="../../d1/d6b/a01775.html" title="A single ApplicationCommand.">ApplicationCommand</a> callback data. <br /></td></tr>
-<tr class="separator:a177f7cb7dfd7081169e2df369cefed0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad9c45ee3e3538fad607b08e891c12ea"><td class="memItemLeft" align="right" valign="top"><a id="aad9c45ee3e3538fad607b08e891c12ea" name="aad9c45ee3e3538fad607b08e891c12ea"></a>
-<a class="el" href="../../dd/d94/a00888.html#gaf9e947457ef4ec645c7d8e157b74534c">InteractionCallbackType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> {}</td></tr>
-<tr class="memdesc:aad9c45ee3e3538fad607b08e891c12ea"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d2/d94/a03167.html" title="A single Interaction.">Interaction</a> callback type. <br /></td></tr>
-<tr class="separator:aad9c45ee3e3538fad607b08e891c12ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:aabf78318ecfa0730456ec0ecfe0b8abb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d5a/a02811.html">MessageResponseBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5a/a02811.html#aabf78318ecfa0730456ec0ecfe0b8abb">addAllowedMentions</a> (<a class="el" href="../../d5/d25/a02687.html">AllowedMentionsData</a> dataPackage)</td></tr>
+<tr class="memdesc:aabf78318ecfa0730456ec0ecfe0b8abb"><td class="mdescLeft">&#160;</td><td class="mdescRight">For setting the allowable mentions in a response.  <a href="../../d7/d5a/a02811.html#aabf78318ecfa0730456ec0ecfe0b8abb">More...</a><br /></td></tr>
+<tr class="separator:aabf78318ecfa0730456ec0ecfe0b8abb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af70945eeb5934a2c7286aa81408c25b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d5a/a02811.html">MessageResponseBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5a/a02811.html#af70945eeb5934a2c7286aa81408c25b5">addButton</a> (bool disabled, const std::string &amp;customIdNew, const std::string &amp;buttonLabel, <a class="el" href="../../dd/d94/a00888.html#gae05b1bfe988b0c2989b7bed279c9c95c">ButtonStyle</a> buttonStyle, const std::string &amp;emojiName=&quot;&quot;, <a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> emojiId=0, const std::string &amp;url=&quot;&quot;)</td></tr>
+<tr class="memdesc:af70945eeb5934a2c7286aa81408c25b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a button to the response <a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a>.  <a href="../../d7/d5a/a02811.html#af70945eeb5934a2c7286aa81408c25b5">More...</a><br /></td></tr>
+<tr class="separator:af70945eeb5934a2c7286aa81408c25b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb024c85aace9e7ba512d3d7614f0fd8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d5a/a02811.html">MessageResponseBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5a/a02811.html#acb024c85aace9e7ba512d3d7614f0fd8">addComponentRow</a> (<a class="el" href="../../dd/d9a/a02699.html">ActionRowData</a> dataPackage)</td></tr>
+<tr class="memdesc:acb024c85aace9e7ba512d3d7614f0fd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">For setting the components in a response.  <a href="../../d7/d5a/a02811.html#acb024c85aace9e7ba512d3d7614f0fd8">More...</a><br /></td></tr>
+<tr class="separator:acb024c85aace9e7ba512d3d7614f0fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a097c56971fcac19aebf3d03c4defd696"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d5a/a02811.html">MessageResponseBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5a/a02811.html#a097c56971fcac19aebf3d03c4defd696">addContent</a> (const std::string &amp;dataPackage)</td></tr>
+<tr class="memdesc:a097c56971fcac19aebf3d03c4defd696"><td class="mdescLeft">&#160;</td><td class="mdescRight">For setting the <a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a> content in a response.  <a href="../../d7/d5a/a02811.html#a097c56971fcac19aebf3d03c4defd696">More...</a><br /></td></tr>
+<tr class="separator:a097c56971fcac19aebf3d03c4defd696"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7836f5e0e2be3ddad71b6fbba81510c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d5a/a02811.html">MessageResponseBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5a/a02811.html#a7836f5e0e2be3ddad71b6fbba81510c5">addFile</a> (<a class="el" href="../../d4/d8c/a02359.html">File</a> theFile)</td></tr>
+<tr class="memdesc:a7836f5e0e2be3ddad71b6fbba81510c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a file to the current collection of files for this message response.  <a href="../../d7/d5a/a02811.html#a7836f5e0e2be3ddad71b6fbba81510c5">More...</a><br /></td></tr>
+<tr class="separator:a7836f5e0e2be3ddad71b6fbba81510c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fe2258d1df3f709e009eafb363e7a52"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d5a/a02811.html">MessageResponseBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5a/a02811.html#a4fe2258d1df3f709e009eafb363e7a52">addMessageEmbed</a> (<a class="el" href="../../dd/d1b/a02351.html">EmbedData</a> dataPackage)</td></tr>
+<tr class="memdesc:a4fe2258d1df3f709e009eafb363e7a52"><td class="mdescLeft">&#160;</td><td class="mdescRight">For setting the embeds in a response.  <a href="../../d7/d5a/a02811.html#a4fe2258d1df3f709e009eafb363e7a52">More...</a><br /></td></tr>
+<tr class="separator:a4fe2258d1df3f709e009eafb363e7a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4007c6bc0c1798d8bb824c1c6708a16d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d5a/a02811.html">MessageResponseBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5a/a02811.html#a4007c6bc0c1798d8bb824c1c6708a16d">addModal</a> (const std::string &amp;topTitleNew, const std::string &amp;topCustomIdNew, const std::string &amp;titleNew, const std::string &amp;customIdNew, bool required, int32_t minLength, int32_t maxLength, <a class="el" href="../../dd/d94/a00888.html#ga24a639fa950fb1c20605b41b9adfaa2c">TextInputStyle</a> inputStyle, const std::string &amp;label=&quot;&quot;, const std::string &amp;placeholder=&quot;&quot;)</td></tr>
+<tr class="memdesc:a4007c6bc0c1798d8bb824c1c6708a16d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a modal to the response <a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a>.  <a href="../../d7/d5a/a02811.html#a4007c6bc0c1798d8bb824c1c6708a16d">More...</a><br /></td></tr>
+<tr class="separator:a4007c6bc0c1798d8bb824c1c6708a16d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae67eca92c96c14b3dcc6373dd86429af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d5a/a02811.html">MessageResponseBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5a/a02811.html#ae67eca92c96c14b3dcc6373dd86429af">addSelectMenu</a> (bool disabled, const std::string &amp;customIdNew, std::vector&lt; <a class="el" href="../../dc/d8b/a02691.html">SelectOptionData</a> &gt; options, const std::string &amp;placeholder, int32_t maxValues, int32_t minValues)</td></tr>
+<tr class="memdesc:ae67eca92c96c14b3dcc6373dd86429af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a select-menu to the response <a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a>.  <a href="../../d7/d5a/a02811.html#ae67eca92c96c14b3dcc6373dd86429af">More...</a><br /></td></tr>
+<tr class="separator:ae67eca92c96c14b3dcc6373dd86429af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86725bc302b3d73c2cc149f7b87a42f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d5a/a02811.html">MessageResponseBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5a/a02811.html#a86725bc302b3d73c2cc149f7b87a42f9">setTTSStatus</a> (bool enabledTTs)</td></tr>
+<tr class="memdesc:a86725bc302b3d73c2cc149f7b87a42f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">For setting the tts status of a response.  <a href="../../d7/d5a/a02811.html#a86725bc302b3d73c2cc149f7b87a42f9">More...</a><br /></td></tr>
+<tr class="separator:a86725bc302b3d73c2cc149f7b87a42f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aabf78318ecfa0730456ec0ecfe0b8abb" name="aabf78318ecfa0730456ec0ecfe0b8abb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabf78318ecfa0730456ec0ecfe0b8abb">&#9670;&nbsp;</a></span>addAllowedMentions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d7/d5a/a02811.html">MessageResponseBase</a> &amp; DiscordCoreAPI::MessageResponseBase::addAllowedMentions </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d25/a02687.html">AllowedMentionsData</a>&#160;</td>
+          <td class="paramname"><em>dataPackage</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >For setting the allowable mentions in a response.</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dataPackage</td><td>An <a class="el" href="../../d5/d25/a02687.html" title="Allowable mentions for a Message.">AllowedMentionsData</a> structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d7/d5a/a02811.html" title="Message response base, for responding to messages.">MessageResponseBase</a>&amp; A reference to this data structure. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d2d/a00815_source.html#l00489">489</a> of file <a class="el" href="../../d8/d2d/a00815_source.html">FoundationEntities.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af70945eeb5934a2c7286aa81408c25b5" name="af70945eeb5934a2c7286aa81408c25b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af70945eeb5934a2c7286aa81408c25b5">&#9670;&nbsp;</a></span>addButton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d7/d5a/a02811.html">MessageResponseBase</a> &amp; DiscordCoreAPI::MessageResponseBase::addButton </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>disabled</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>customIdNew</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>buttonLabel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/d94/a00888.html#gae05b1bfe988b0c2989b7bed279c9c95c">ButtonStyle</a>&#160;</td>
+          <td class="paramname"><em>buttonStyle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>emojiName</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td>
+          <td class="paramname"><em>emojiId</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>url</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Adds a button to the response <a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a>.</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">disabled</td><td>Whether the button is active or not. </td></tr>
+    <tr><td class="paramname">customIdNew</td><td>A custom id to give for identifying the button. </td></tr>
+    <tr><td class="paramname">buttonLabel</td><td>A visible label for the button. </td></tr>
+    <tr><td class="paramname">buttonStyle</td><td>The style of the button. </td></tr>
+    <tr><td class="paramname">emojiName</td><td>An emoji name, if desired. </td></tr>
+    <tr><td class="paramname">emojiId</td><td>An emoji id, if desired. </td></tr>
+    <tr><td class="paramname">url</td><td>A url, if applicable. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d7/d5a/a02811.html" title="Message response base, for responding to messages.">MessageResponseBase</a>&amp; A reference to this data structure. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d2d/a00815_source.html#l00378">378</a> of file <a class="el" href="../../d8/d2d/a00815_source.html">FoundationEntities.cpp</a>.</p>
+
+</div>
+</div>
+<a id="acb024c85aace9e7ba512d3d7614f0fd8" name="acb024c85aace9e7ba512d3d7614f0fd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb024c85aace9e7ba512d3d7614f0fd8">&#9670;&nbsp;</a></span>addComponentRow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d7/d5a/a02811.html">MessageResponseBase</a> &amp; DiscordCoreAPI::MessageResponseBase::addComponentRow </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/d9a/a02699.html">ActionRowData</a>&#160;</td>
+          <td class="paramname"><em>dataPackage</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >For setting the components in a response.</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dataPackage</td><td>An <a class="el" href="../../dd/d9a/a02699.html" title="Action row data of Message components.">ActionRowData</a> structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d7/d5a/a02811.html" title="Message response base, for responding to messages.">MessageResponseBase</a>&amp; A reference to this data structure. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d2d/a00815_source.html#l00497">497</a> of file <a class="el" href="../../d8/d2d/a00815_source.html">FoundationEntities.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a097c56971fcac19aebf3d03c4defd696" name="a097c56971fcac19aebf3d03c4defd696"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a097c56971fcac19aebf3d03c4defd696">&#9670;&nbsp;</a></span>addContent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d7/d5a/a02811.html">MessageResponseBase</a> &amp; DiscordCoreAPI::MessageResponseBase::addContent </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>dataPackage</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >For setting the <a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a> content in a response.</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dataPackage</td><td>A std::string, containing the content. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d7/d5a/a02811.html" title="Message response base, for responding to messages.">MessageResponseBase</a>&amp; A reference to this data structure. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d2d/a00815_source.html#l00513">513</a> of file <a class="el" href="../../d8/d2d/a00815_source.html">FoundationEntities.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7836f5e0e2be3ddad71b6fbba81510c5" name="a7836f5e0e2be3ddad71b6fbba81510c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7836f5e0e2be3ddad71b6fbba81510c5">&#9670;&nbsp;</a></span>addFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d7/d5a/a02811.html">MessageResponseBase</a> &amp; DiscordCoreAPI::MessageResponseBase::addFile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/d8c/a02359.html">File</a>&#160;</td>
+          <td class="paramname"><em>theFile</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Adds a file to the current collection of files for this message response.</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">theFile</td><td>The file to be added. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d7/d5a/a02811.html" title="Message response base, for responding to messages.">MessageResponseBase</a>&amp; A reference to this data structure. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d2d/a00815_source.html#l00481">481</a> of file <a class="el" href="../../d8/d2d/a00815_source.html">FoundationEntities.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4fe2258d1df3f709e009eafb363e7a52" name="a4fe2258d1df3f709e009eafb363e7a52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fe2258d1df3f709e009eafb363e7a52">&#9670;&nbsp;</a></span>addMessageEmbed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d7/d5a/a02811.html">MessageResponseBase</a> &amp; DiscordCoreAPI::MessageResponseBase::addMessageEmbed </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/d1b/a02351.html">EmbedData</a>&#160;</td>
+          <td class="paramname"><em>dataPackage</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >For setting the embeds in a response.</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dataPackage</td><td>An <a class="el" href="../../dd/d1b/a02351.html" title="Embed data.">EmbedData</a> structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d7/d5a/a02811.html" title="Message response base, for responding to messages.">MessageResponseBase</a>&amp; A reference to this data structure. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d2d/a00815_source.html#l00505">505</a> of file <a class="el" href="../../d8/d2d/a00815_source.html">FoundationEntities.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4007c6bc0c1798d8bb824c1c6708a16d" name="a4007c6bc0c1798d8bb824c1c6708a16d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4007c6bc0c1798d8bb824c1c6708a16d">&#9670;&nbsp;</a></span>addModal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d7/d5a/a02811.html">MessageResponseBase</a> &amp; DiscordCoreAPI::MessageResponseBase::addModal </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>topTitleNew</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>topCustomIdNew</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>titleNew</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>customIdNew</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>required</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>minLength</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>maxLength</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/d94/a00888.html#ga24a639fa950fb1c20605b41b9adfaa2c">TextInputStyle</a>&#160;</td>
+          <td class="paramname"><em>inputStyle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>label</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>placeholder</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Adds a modal to the response <a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a>.</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">topTitleNew</td><td>A title for the modal. </td></tr>
+    <tr><td class="paramname">topCustomIdNew</td><td>A custom id to give for the modal. </td></tr>
+    <tr><td class="paramname">titleNew</td><td>A title for the modal's individual input. </td></tr>
+    <tr><td class="paramname">customIdNew</td><td>A custom id to give for the modal's individual input. </td></tr>
+    <tr><td class="paramname">required</td><td>Is it a required response? </td></tr>
+    <tr><td class="paramname">minLength</td><td>Minimum length. </td></tr>
+    <tr><td class="paramname">maxLength</td><td>Maximum length. </td></tr>
+    <tr><td class="paramname">inputStyle</td><td>The input style. </td></tr>
+    <tr><td class="paramname">label</td><td>A label for the modal. </td></tr>
+    <tr><td class="paramname">placeholder</td><td>A placeholder for the modal. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d7/d5a/a02811.html" title="Message response base, for responding to messages.">MessageResponseBase</a>&amp; A reference to this data structure. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d2d/a00815_source.html#l00449">449</a> of file <a class="el" href="../../d8/d2d/a00815_source.html">FoundationEntities.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae67eca92c96c14b3dcc6373dd86429af" name="ae67eca92c96c14b3dcc6373dd86429af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae67eca92c96c14b3dcc6373dd86429af">&#9670;&nbsp;</a></span>addSelectMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d7/d5a/a02811.html">MessageResponseBase</a> &amp; DiscordCoreAPI::MessageResponseBase::addSelectMenu </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>disabled</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>customIdNew</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="../../dc/d8b/a02691.html">SelectOptionData</a> &gt;&#160;</td>
+          <td class="paramname"><em>options</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>placeholder</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>maxValues</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>minValues</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Adds a select-menu to the response <a class="el" href="../../db/dd3/a03251.html" title="A single Message.">Message</a>.</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">disabled</td><td>Whether the select-menu is active or not. </td></tr>
+    <tr><td class="paramname">customIdNew</td><td>A custom id to give for identifying the select-menu. </td></tr>
+    <tr><td class="paramname">options</td><td>A std::vector of select-menu-options to offer. </td></tr>
+    <tr><td class="paramname">placeholder</td><td>Custom placeholder text if nothing is selected, max 100 characters. </td></tr>
+    <tr><td class="paramname">maxValues</td><td>Maximum number of selections that are possible. </td></tr>
+    <tr><td class="paramname">minValues</td><td>Minimum required number of selections that are required. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d7/d5a/a02811.html" title="Message response base, for responding to messages.">MessageResponseBase</a>&amp; A reference to this data structure. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d2d/a00815_source.html#l00412">412</a> of file <a class="el" href="../../d8/d2d/a00815_source.html">FoundationEntities.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a86725bc302b3d73c2cc149f7b87a42f9" name="a86725bc302b3d73c2cc149f7b87a42f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86725bc302b3d73c2cc149f7b87a42f9">&#9670;&nbsp;</a></span>setTTSStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d7/d5a/a02811.html">MessageResponseBase</a> &amp; DiscordCoreAPI::MessageResponseBase::setTTSStatus </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enabledTTs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >For setting the tts status of a response.</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enabledTTs</td><td>A bool. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d7/d5a/a02811.html" title="Message response base, for responding to messages.">MessageResponseBase</a>&amp; A reference to this data structure. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d2d/a00815_source.html#l00521">521</a> of file <a class="el" href="../../d8/d2d/a00815_source.html">FoundationEntities.cpp</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a></li>
+<li><a class="el" href="../../d8/d2d/a00815_source.html">FoundationEntities.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -134,7 +556,7 @@ Public Data Members</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d7/d5a/a02811.html">InteractionResponseData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d7/d5a/a02811.html">MessageResponseBase</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
