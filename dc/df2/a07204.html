@@ -102,39 +102,72 @@ $(document).ready(function(){initNavTree('dc/df2/a07204.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Login/Instantiation </div></div>
+  <div class="headertitle"><div class="title">Getting Guild Templates </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Login_Setup_Login_Instantiation"></a></p><ul>
-<li><u><b>NOTE FOR SHARDING:</b></u> Make sure to pass in the 5th argument to the <code><a class="el" href="../../d3/d39/a02005.html" title="DiscordCoreClient - The main class DiscordCoreAPI_Dll for this library.">DiscordCoreAPI::DiscordCoreClient</a></code> constructor which is a structure of type <code><a class="el" href="../../db/d6b/a03645.html" title="Sharding options for the library.">DiscordCoreAPI::ShardingOptions</a></code>.</li>
-<li>Install the dependencies, and <code>#include &lt;<a class="el" href="../../d8/db9/a00725.html">Index.hpp</a>&gt;</code>.</li>
-<li>Create a string with your bot's token.</li>
-<li>Create an object of type <code><a class="el" href="../../d3/d39/a02005.html" title="DiscordCoreClient - The main class DiscordCoreAPI_Dll for this library.">DiscordCoreAPI::DiscordCoreClient</a></code>, using your bot token as an argument, as well as a string to act as a "command prefix" for accepting commands via message input.</li>
-<li>Additionally-there are 4 optional arguments to the constructor which offer various potential configuration options, they are as follows: <br  />
- <code>std::vector&lt;<a class="el" href="../../da/d3b/a03641.html" title="Function data for repeated functions to be loaded.">DiscordCoreAPI::RepeatedFunctionData</a>&gt;</code> - For adding potentailly recurring functions. <br  />
- <code><a class="el" href="../../da/d7d/a03649.html" title="Logging options for the library.">DiscordCoreAPI::LoggingOptions</a></code> <br  />
- <code><a class="el" href="../../dc/d0b/a03653.html" title="For selecting the caching style of the library.">DiscordCoreAPI::CacheOptions</a></code> <br  />
- <code><a class="el" href="../../db/d6b/a03645.html" title="Sharding options for the library.">DiscordCoreAPI::ShardingOptions</a></code> <br  />
-</li>
-<li>Run the <code><a class="el" href="../../d3/d39/a02005.html#a78a2649f034ff89e98f56a32092debfb" title="Executes the library, and waits for completion.">DiscordCoreAPI::DiscordCoreClient::runBot()</a></code> function.</li>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Guild_Stuff_Getting_Guild_Templates"></a></p><ul>
+<li>Execute the, <code><a class="el" href="../../d1/db3/a03013.html#a9bcccf0df5c69197f1648abd988312b7" title="Collects a list of Guild Templates from a chosen Guild.">DiscordCoreAPI::Guilds::getGuildTemplatesAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../d4/d39/a02965.html" title="For collecting a list of Guild Templates from a chosen Guild.">DiscordCoreAPI::GetGuildTemplatesData</a></code>, with a return value of type <code>auto</code> or <code>vector&lt;<a class="el" href="../../d0/dce/a02617.html" title="Represents a Guild Template.">DiscordCoreAPI::GuildTemplateData</a>&gt;</code>.</li>
+<li>Call the function with <code>.get()</code> added to the end in order to wait for the results now.</li>
 </ul>
-<div class="fragment"><div class="line"><span class="comment">/// main.cpp-Main entry point.</span><span class="comment"></span></div>
+<div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
 <div class="line"><span class="comment">/// https://github.com/RealTimeChris/DiscordCoreAPI</span></div>
 <div class="line"><span class="comment"></span> </div>
+<div class="line"><span class="preprocessor">#pragma once</span></div>
+<div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d8/db9/a00725.html">Index.hpp</a>&gt;</span></div>
 <div class="line"> </div>
-<div class="line">int32_t main()</div>
-<div class="line">{</div>
-<div class="line">    std::string botToken {<span class="stringliteral">&quot;YOUR_BOT_TOKEN_HERE&quot;</span>};</div>
-<div class="line">    std::unique_ptr&lt;DiscordCoreAPI::DiscordCoreClient&gt; thePtr = std::make_unique&lt;DiscordCoreAPI::DiscordCoreClient&gt;(</div>
-<div class="line">        botToken, <span class="stringliteral">&quot;!&quot;</span>, functionVector,</div>
-<div class="line">        <a class="code hl_struct" href="../../dc/d0b/a03653.html">DiscordCoreAPI::CacheOptions</a> {.<a class="code hl_variable" href="../../d7/d92/a00887.html#ga4cb85b3ee028d76c1724ef07969c6f11">cacheGuildMembers</a> = <span class="keyword">true</span>, .cacheChannels = <span class="keyword">true</span>, .cacheGuilds = <span class="keyword">true</span>, .cacheRoles = <span class="keyword">true</span>, .cacheUsers = <span class="keyword">true</span>}, 1);</div>
-<div class="line">    thePtr-&gt;runBot();</div>
-<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d7/d46/a00890.html">DiscordCoreAPI</a> {</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">class </span>Test : <span class="keyword">public</span> <a class="code hl_struct" href="../../dd/dc1/a02857.html">DiscordCoreAPI::BaseFunction</a> {</div>
+<div class="line">      <span class="keyword">public</span>:</div>
+<div class="line">        Test() {</div>
+<div class="line">            this-&gt;commandName = <span class="stringliteral">&quot;test&quot;</span>;</div>
+<div class="line">            this-&gt;helpDescription = <span class="stringliteral">&quot;Testing purposes!&quot;</span>;</div>
+<div class="line">            <a class="code hl_class" href="../../dc/de0/a02349.html">DiscordCoreAPI::EmbedData</a> msgEmbed;</div>
+<div class="line">            msgEmbed.<a class="code hl_function" href="../../dc/de0/a02349.html#a9d4066a4861408bc00eccb22a12db7f9">setDescription</a>(<span class="stringliteral">&quot;------\nSimply enter !test or /test!\n------&quot;</span>);</div>
+<div class="line">            msgEmbed.<a class="code hl_function" href="../../dc/de0/a02349.html#a20ca60ec3235f44a223f3d3b687c0c9e">setTitle</a>(<span class="stringliteral">&quot;__**Test Usage:**__&quot;</span>);</div>
+<div class="line">            msgEmbed.<a class="code hl_function" href="../../dc/de0/a02349.html#ae356e6dc3c93658b7228b56da3187896">setTimeStamp</a>(<a class="code hl_function" href="../../d7/d92/a00887.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
+<div class="line">            msgEmbed.<a class="code hl_function" href="../../dc/de0/a02349.html#ab417d83fddf9df80eca98e9ec6e888aa">setColor</a>(<span class="stringliteral">&quot;FeFeFe&quot;</span>);</div>
+<div class="line">            this-&gt;helpEmbed = msgEmbed;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        std::unique_ptr&lt;DiscordCoreAPI::BaseFunction&gt; create() {</div>
+<div class="line">            <span class="keywordflow">return</span> std::make_unique&lt;Test&gt;();</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../dc/da3/a02853.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
+<div class="line">            <span class="keywordflow">try</span> {</div>
+<div class="line">                <a class="code hl_struct" href="../../d4/d39/a02965.html">DiscordCoreAPI::GetGuildTemplatesData</a> dataPackage01;</div>
+<div class="line">                dataPackage01.<a class="code hl_variable" href="../../d4/d39/a02965.html#ad12242d85c837766ad59103e5b2b748d">guildId</a> = args.<a class="code hl_variable" href="../../dc/da3/a02853.html#a80eabf8007466c61abda009ea3070942">eventData</a>.<a class="code hl_function" href="../../d8/d1e/a02801.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
+<div class="line"> </div>
+<div class="line">                <span class="keyword">auto</span> responseData = <a class="code hl_function" href="../../d1/db3/a03013.html#a9bcccf0df5c69197f1648abd988312b7">DiscordCoreAPI::Guilds::getGuildTemplatesAsync</a>(dataPackage01).get();</div>
+<div class="line"> </div>
+<div class="line">                <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; value: responseData) {</div>
+<div class="line">                    cout &lt;&lt; <span class="stringliteral">&quot;THE NAME: &quot;</span> &lt;&lt; value.name &lt;&lt; endl;</div>
+<div class="line">                }</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">            } <span class="keywordflow">catch</span> (...) {</div>
+<div class="line">                rethrowException(<span class="stringliteral">&quot;Test::execute()&quot;</span>);</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line">    };</div>
 <div class="line">}</div>
 <div class="ttc" id="aa00725_html"><div class="ttname"><a href="../../d8/db9/a00725.html">Index.hpp</a></div></div>
-<div class="ttc" id="aa00887_html_ga4cb85b3ee028d76c1724ef07969c6f11"><div class="ttname"><a href="../../d7/d92/a00887.html#ga4cb85b3ee028d76c1724ef07969c6f11">DiscordCoreAPI::CacheOptions::cacheGuildMembers</a></div><div class="ttdeci">bool cacheGuildMembers</div><div class="ttdoc">Do we cache GuildMembers?</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dae/a00767_source.html#l00250">Utilities.hpp:250</a></div></div>
-<div class="ttc" id="aa03653_html"><div class="ttname"><a href="../../dc/d0b/a03653.html">DiscordCoreAPI::CacheOptions</a></div><div class="ttdoc">For selecting the caching style of the library.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dae/a00767_source.html#l00249">Utilities.hpp:249</a></div></div>
+<div class="ttc" id="aa00887_html_ga63ce723358a8b7a00c14e055f2a26998"><div class="ttname"><a href="../../d7/d92/a00887.html#ga63ce723358a8b7a00c14e055f2a26998">DiscordCoreAPI::getTimeAndDate</a></div><div class="ttdeci">DiscordCoreAPI_Dll std::string getTimeAndDate()</div><div class="ttdoc">Acquires a timestamp with the current time and date - suitable for use in message-embeds.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/a00869_source.html#l00819">Utilities.cpp:819</a></div></div>
+<div class="ttc" id="aa00890_html"><div class="ttname"><a href="../../d7/d46/a00890.html">DiscordCoreAPI</a></div><div class="ttdoc">The main namespace for this library.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00027">ApplicationCommandEntities.hpp:27</a></div></div>
+<div class="ttc" id="aa02349_html"><div class="ttname"><a href="../../dc/de0/a02349.html">DiscordCoreAPI::EmbedData</a></div><div class="ttdoc">Embed data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l00727">FoundationEntities.hpp:727</a></div></div>
+<div class="ttc" id="aa02349_html_a20ca60ec3235f44a223f3d3b687c0c9e"><div class="ttname"><a href="../../dc/de0/a02349.html#a20ca60ec3235f44a223f3d3b687c0c9e">DiscordCoreAPI::EmbedData::setTitle</a></div><div class="ttdeci">EmbedData &amp; setTitle(const std::string &amp;titleNew)</div><div class="ttdoc">Sets the title of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l00864">FoundationEntities.hpp:864</a></div></div>
+<div class="ttc" id="aa02349_html_a9d4066a4861408bc00eccb22a12db7f9"><div class="ttname"><a href="../../dc/de0/a02349.html#a9d4066a4861408bc00eccb22a12db7f9">DiscordCoreAPI::EmbedData::setDescription</a></div><div class="ttdeci">EmbedData &amp; setDescription(const std::string &amp;descriptionNew)</div><div class="ttdoc">Sets the description (the main contents) of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l00840">FoundationEntities.hpp:840</a></div></div>
+<div class="ttc" id="aa02349_html_ab417d83fddf9df80eca98e9ec6e888aa"><div class="ttname"><a href="../../dc/de0/a02349.html#ab417d83fddf9df80eca98e9ec6e888aa">DiscordCoreAPI::EmbedData::setColor</a></div><div class="ttdeci">EmbedData &amp; setColor(const std::string &amp;hexColorValueNew)</div><div class="ttdoc">Sets the color of the embed, by applying a hex-color value.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l00848">FoundationEntities.hpp:848</a></div></div>
+<div class="ttc" id="aa02349_html_ae356e6dc3c93658b7228b56da3187896"><div class="ttname"><a href="../../dc/de0/a02349.html#ae356e6dc3c93658b7228b56da3187896">DiscordCoreAPI::EmbedData::setTimeStamp</a></div><div class="ttdeci">EmbedData &amp; setTimeStamp(const std::string &amp;timeStamp)</div><div class="ttdoc">Sets the timestamp on the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l00818">FoundationEntities.hpp:818</a></div></div>
+<div class="ttc" id="aa02801_html_a565fe2447237030a716f64b2599996dd"><div class="ttname"><a href="../../d8/d1e/a02801.html#a565fe2447237030a716f64b2599996dd">DiscordCoreAPI::InputEventData::getGuildId</a></div><div class="ttdeci">Snowflake getGuildId()</div><div class="ttdoc">Returns the Guild id, of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2d/a00815_source.html#l00132">FoundationEntities.cpp:132</a></div></div>
+<div class="ttc" id="aa02853_html"><div class="ttname"><a href="../../dc/da3/a02853.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l07780">FoundationEntities.hpp:7780</a></div></div>
+<div class="ttc" id="aa02853_html_a80eabf8007466c61abda009ea3070942"><div class="ttname"><a href="../../dc/da3/a02853.html#a80eabf8007466c61abda009ea3070942">DiscordCoreAPI::BaseFunctionArguments::eventData</a></div><div class="ttdeci">InputEventData eventData</div><div class="ttdoc">InputEventData representing the input event that triggered the command.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l07782">FoundationEntities.hpp:7782</a></div></div>
+<div class="ttc" id="aa02857_html"><div class="ttname"><a href="../../dd/dc1/a02857.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class DiscordCoreAPI_Dll for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l07797">FoundationEntities.hpp:7797</a></div></div>
+<div class="ttc" id="aa02965_html"><div class="ttname"><a href="../../d4/d39/a02965.html">DiscordCoreAPI::GetGuildTemplatesData</a></div><div class="ttdoc">For collecting a list of Guild Templates from a chosen Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d04/a00713_source.html#l00274">GuildEntities.hpp:274</a></div></div>
+<div class="ttc" id="aa02965_html_ad12242d85c837766ad59103e5b2b748d"><div class="ttname"><a href="../../d4/d39/a02965.html#ad12242d85c837766ad59103e5b2b748d">DiscordCoreAPI::GetGuildTemplatesData::guildId</a></div><div class="ttdeci">Snowflake guildId</div><div class="ttdoc">Guild from which you would like to collect the Templates from.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d04/a00713_source.html#l00275">GuildEntities.hpp:275</a></div></div>
+<div class="ttc" id="aa03013_html_a9bcccf0df5c69197f1648abd988312b7"><div class="ttname"><a href="../../d1/db3/a03013.html#a9bcccf0df5c69197f1648abd988312b7">DiscordCoreAPI::Guilds::getGuildTemplatesAsync</a></div><div class="ttdeci">static CoRoutine&lt; std::vector&lt; GuildTemplateData &gt; &gt; getGuildTemplatesAsync(GetGuildTemplatesData dataPackage)</div><div class="ttdoc">Collects a list of Guild Templates from a chosen Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d60/a00818_source.html#l00619">GuildEntities.cpp:619</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -142,7 +175,7 @@ $(document).ready(function(){initNavTree('dc/df2/a07204.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d1d/a07099.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../de/d32/a07101.html">Login/Setup</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d6/d82/a07115.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d8/dc2/a07126.html">Guild Stuff</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

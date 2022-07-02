@@ -102,11 +102,11 @@ $(document).ready(function(){initNavTree('df/d21/a07298.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Listing Active Threads </div></div>
+  <div class="headertitle"><div class="title">Getting a Stage Instance </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Thread_Stuff_Listing_Active_Threads"></a></p><ul>
-<li>Execute the, <code><a class="el" href="../../de/d29/a03573.html#a1584dcebbb864acb1d81e3a19af12111" title="Collects a list of Threads from a given Channel.">DiscordCoreAPI::Threads::getActiveThreadsAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../db/d72/a03549.html" title="For collecting the list of active Threads.">DiscordCoreAPI::GetActiveThreadsData</a></code>, with a return value of type <code>auto</code> or <code><a class="el" href="../../d1/d29/a02393.html" title="Data representing an active Thread.">DiscordCoreAPI::ActiveThreadsData</a></code>.</li>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Stage_Instance_Stuff_Getting_a_Stage_Instance"></a></p><ul>
+<li>Execute the, <code><a class="el" href="../../d2/d50/a03473.html#a26cd124cec9c5547f35208c2a2d21e16" title="Collects a StageInstance.">DiscordCoreAPI::StageInstances::getStageInstanceAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../d1/d15/a03457.html" title="For collecting a single StageInstance.">DiscordCoreAPI::GetStageInstanceData</a></code>, with a return value of type <code>auto</code> or <code><a class="el" href="../../d8/df7/a03469.html" title="A single StageInstance.">DiscordCoreAPI::StageInstance</a></code>.</li>
 <li>Call the function with <code>.get()</code> added to the end in order to wait for the results now.</li>
 </ul>
 <div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
@@ -131,20 +131,18 @@ $(document).ready(function(){initNavTree('df/d21/a07298.html','../../'); initRes
 <div class="line">            this-&gt;helpEmbed = msgEmbed;</div>
 <div class="line">        }</div>
 <div class="line"> </div>
-<div class="line">        std::unique_ptr&lt;DiscordCoreAPI::BaseFunction&gt; create() {</div>
+<div class="line">        unique_ptr&lt;DiscordCoreAPI::BaseFunction&gt; create() {</div>
 <div class="line">            <span class="keywordflow">return</span> std::make_unique&lt;Test&gt;();</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../dc/da3/a02853.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
 <div class="line">            <span class="keywordflow">try</span> {</div>
-<div class="line">                <a class="code hl_struct" href="../../db/d72/a03549.html">DiscordCoreAPI::GetActiveThreadsData</a> dataPackage;</div>
-<div class="line">                dataPackage.guildId = args.<a class="code hl_variable" href="../../dc/da3/a02853.html#a80eabf8007466c61abda009ea3070942">eventData</a>.<a class="code hl_function" href="../../d8/d1e/a02801.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
+<div class="line">                <a class="code hl_struct" href="../../d1/d15/a03457.html">DiscordCoreAPI::GetStageInstanceData</a> dataPackage;</div>
+<div class="line">                dataPackage.<a class="code hl_variable" href="../../d1/d15/a03457.html#a1768fc5e4e03290ac39d10542733d9aa">channelId</a> = <span class="stringliteral">&quot;914726178022101052&quot;</span>;</div>
 <div class="line"> </div>
-<div class="line">                <span class="keyword">auto</span> threadsVector = <a class="code hl_function" href="../../de/d29/a03573.html#a1584dcebbb864acb1d81e3a19af12111">DiscordCoreAPI::Threads::getActiveThreadsAsync</a>(dataPackage).get();</div>
+<div class="line">                <span class="keyword">auto</span> responseData = <a class="code hl_function" href="../../d2/d50/a03473.html#a26cd124cec9c5547f35208c2a2d21e16">DiscordCoreAPI::StageInstances::getStageInstanceAsync</a>(dataPackage).get();</div>
 <div class="line"> </div>
-<div class="line">                <span class="keywordflow">for</span> (<span class="keyword">auto</span> value: threadsVector.threads) {</div>
-<div class="line">                    cout &lt;&lt; <span class="stringliteral">&quot;THE NAME: &quot;</span> &lt;&lt; value.name &lt;&lt; endl;</div>
-<div class="line">                }</div>
+<div class="line">                cout &lt;&lt; <span class="stringliteral">&quot;THE TOPIC: &quot;</span> &lt;&lt; responseData.topic &lt;&lt; endl;</div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line">            } <span class="keywordflow">catch</span> (...) {</div>
@@ -161,12 +159,11 @@ $(document).ready(function(){initNavTree('df/d21/a07298.html','../../'); initRes
 <div class="ttc" id="aa02349_html_a9d4066a4861408bc00eccb22a12db7f9"><div class="ttname"><a href="../../dc/de0/a02349.html#a9d4066a4861408bc00eccb22a12db7f9">DiscordCoreAPI::EmbedData::setDescription</a></div><div class="ttdeci">EmbedData &amp; setDescription(const std::string &amp;descriptionNew)</div><div class="ttdoc">Sets the description (the main contents) of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l00840">FoundationEntities.hpp:840</a></div></div>
 <div class="ttc" id="aa02349_html_ab417d83fddf9df80eca98e9ec6e888aa"><div class="ttname"><a href="../../dc/de0/a02349.html#ab417d83fddf9df80eca98e9ec6e888aa">DiscordCoreAPI::EmbedData::setColor</a></div><div class="ttdeci">EmbedData &amp; setColor(const std::string &amp;hexColorValueNew)</div><div class="ttdoc">Sets the color of the embed, by applying a hex-color value.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l00848">FoundationEntities.hpp:848</a></div></div>
 <div class="ttc" id="aa02349_html_ae356e6dc3c93658b7228b56da3187896"><div class="ttname"><a href="../../dc/de0/a02349.html#ae356e6dc3c93658b7228b56da3187896">DiscordCoreAPI::EmbedData::setTimeStamp</a></div><div class="ttdeci">EmbedData &amp; setTimeStamp(const std::string &amp;timeStamp)</div><div class="ttdoc">Sets the timestamp on the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l00818">FoundationEntities.hpp:818</a></div></div>
-<div class="ttc" id="aa02801_html_a565fe2447237030a716f64b2599996dd"><div class="ttname"><a href="../../d8/d1e/a02801.html#a565fe2447237030a716f64b2599996dd">DiscordCoreAPI::InputEventData::getGuildId</a></div><div class="ttdeci">Snowflake getGuildId()</div><div class="ttdoc">Returns the Guild id, of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2d/a00815_source.html#l00132">FoundationEntities.cpp:132</a></div></div>
 <div class="ttc" id="aa02853_html"><div class="ttname"><a href="../../dc/da3/a02853.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l07780">FoundationEntities.hpp:7780</a></div></div>
-<div class="ttc" id="aa02853_html_a80eabf8007466c61abda009ea3070942"><div class="ttname"><a href="../../dc/da3/a02853.html#a80eabf8007466c61abda009ea3070942">DiscordCoreAPI::BaseFunctionArguments::eventData</a></div><div class="ttdeci">InputEventData eventData</div><div class="ttdoc">InputEventData representing the input event that triggered the command.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l07782">FoundationEntities.hpp:7782</a></div></div>
 <div class="ttc" id="aa02857_html"><div class="ttname"><a href="../../dd/dc1/a02857.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class DiscordCoreAPI_Dll for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l07797">FoundationEntities.hpp:7797</a></div></div>
-<div class="ttc" id="aa03549_html"><div class="ttname"><a href="../../db/d72/a03549.html">DiscordCoreAPI::GetActiveThreadsData</a></div><div class="ttdoc">For collecting the list of active Threads.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4a/a00758_source.html#l00151">ThreadEntities.hpp:151</a></div></div>
-<div class="ttc" id="aa03573_html_a1584dcebbb864acb1d81e3a19af12111"><div class="ttname"><a href="../../de/d29/a03573.html#a1584dcebbb864acb1d81e3a19af12111">DiscordCoreAPI::Threads::getActiveThreadsAsync</a></div><div class="ttdeci">static CoRoutine&lt; ActiveThreadsData &gt; getActiveThreadsAsync(GetActiveThreadsData dataPackage)</div><div class="ttdoc">Collects a list of Threads from a given Channel.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5e/a00860_source.html#l00151">ThreadEntities.cpp:151</a></div></div>
+<div class="ttc" id="aa03457_html"><div class="ttname"><a href="../../d1/d15/a03457.html">DiscordCoreAPI::GetStageInstanceData</a></div><div class="ttdoc">For collecting a single StageInstance.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d5c/a00752_source.html#l00038">StageInstanceEntities.hpp:38</a></div></div>
+<div class="ttc" id="aa03457_html_a1768fc5e4e03290ac39d10542733d9aa"><div class="ttname"><a href="../../d1/d15/a03457.html#a1768fc5e4e03290ac39d10542733d9aa">DiscordCoreAPI::GetStageInstanceData::channelId</a></div><div class="ttdeci">Snowflake channelId</div><div class="ttdoc">The Channel id from which you would like to collect the StageInstance.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d5c/a00752_source.html#l00039">StageInstanceEntities.hpp:39</a></div></div>
+<div class="ttc" id="aa03473_html_a26cd124cec9c5547f35208c2a2d21e16"><div class="ttname"><a href="../../d2/d50/a03473.html#a26cd124cec9c5547f35208c2a2d21e16">DiscordCoreAPI::StageInstances::getStageInstanceAsync</a></div><div class="ttdeci">static CoRoutine&lt; StageInstance &gt; getStageInstanceAsync(GetStageInstanceData dataPackage)</div><div class="ttdoc">Collects a StageInstance.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2f/a00854_source.html#l00056">StageInstanceEntities.cpp:56</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -174,7 +171,7 @@ $(document).ready(function(){initNavTree('df/d21/a07298.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d1d/a07099.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d8/d20/a07120.html">Thread Stuff</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d6/d82/a07115.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d7/d57/a07134.html">Stage-Instance Stuff</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

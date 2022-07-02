@@ -587,7 +587,7 @@
 <!-- Node14 -->
 <g id="node14" class="node">
 <title>Node14</title>
-<g id="a_node14"><a xlink:href="../../dd/d87/a03569.html" target="_top" xlink:title="Represents a single Thread.">
+<g id="a_node14"><a xlink:href="../../de/d5d/a03565.html" target="_top" xlink:title="Represents a single Thread.">
 <polygon fill="none" stroke="black" points="639,-1020.5 639,-1039.5 760,-1039.5 760,-1020.5 639,-1020.5"/>
 <text text-anchor="middle" x="699.5" y="-1027.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::Thread</text>
 </a>
@@ -723,7 +723,7 @@
 <!-- Node41 -->
 <g id="node41" class="node">
 <title>Node41</title>
-<g id="a_node41"><a xlink:href="../../d2/d50/a03473.html" target="_top" xlink:title="A single StageInstance.">
+<g id="a_node41"><a xlink:href="../../d8/df7/a03469.html" target="_top" xlink:title="A single StageInstance.">
 <polygon fill="none" stroke="black" points="431.5,-278.5 431.5,-297.5 585.5,-297.5 585.5,-278.5 431.5,-278.5"/>
 <text text-anchor="middle" x="508.5" y="-285.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::StageInstance</text>
 </a>
@@ -738,7 +738,7 @@
 <!-- Node43 -->
 <g id="node43" class="node">
 <title>Node43</title>
-<g id="a_node43"><a xlink:href="../../d8/dbb/a03501.html" target="_top" xlink:title="A single Sticker.">
+<g id="a_node43"><a xlink:href="../../dc/d8f/a03497.html" target="_top" xlink:title="A single Sticker.">
 <polygon fill="none" stroke="black" points="447.5,-240.5 447.5,-259.5 569.5,-259.5 569.5,-240.5 447.5,-240.5"/>
 <text text-anchor="middle" x="508.5" y="-247.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::Sticker</text>
 </a>
@@ -753,7 +753,7 @@
 <!-- Node49 -->
 <g id="node49" class="node">
 <title>Node49</title>
-<g id="a_node49"><a xlink:href="../../d4/d35/a03617.html" target="_top" xlink:title="A single User.">
+<g id="a_node49"><a xlink:href="../../d6/de0/a03613.html" target="_top" xlink:title="A single User.">
 <polygon fill="none" stroke="black" points="452.5,-38.5 452.5,-57.5 564.5,-57.5 564.5,-38.5 452.5,-38.5"/>
 <text text-anchor="middle" x="508.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::User</text>
 </a>
@@ -768,7 +768,7 @@
 <!-- Node50 -->
 <g id="node50" class="node">
 <title>Node50</title>
-<g id="a_node50"><a xlink:href="../../dc/d7d/a03625.html" target="_top" xlink:title="A type of User, to represent the Bot and some of its associated endpoints.">
+<g id="a_node50"><a xlink:href="../../dc/df8/a03621.html" target="_top" xlink:title="A type of User, to represent the Bot and some of its associated endpoints.">
 <polygon fill="none" stroke="black" points="636,-38.5 636,-57.5 763,-57.5 763,-38.5 636,-38.5"/>
 <text text-anchor="middle" x="699.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::BotUser</text>
 </a>
@@ -783,7 +783,7 @@
 <!-- Node52 -->
 <g id="node52" class="node">
 <title>Node52</title>
-<g id="a_node52"><a xlink:href="../../d4/dd0/a03749.html" target="_top" xlink:title="A single WebHook.">
+<g id="a_node52"><a xlink:href="../../d7/ded/a03745.html" target="_top" xlink:title="A single WebHook.">
 <polygon fill="none" stroke="black" points="441.5,-0.5 441.5,-19.5 575.5,-19.5 575.5,-0.5 441.5,-0.5"/>
 <text text-anchor="middle" x="508.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::WebHook</text>
 </a>

@@ -20,11 +20,11 @@ var searchData=
   ['setthumbnail_17',['setThumbnail',['../dc/de0/a02349.html#ad10d40c4e245002efe955ef15a0a5468',1,'DiscordCoreAPI::EmbedData']]],
   ['settimestamp_18',['setTimeStamp',['../dc/de0/a02349.html#ae356e6dc3c93658b7228b56da3187896',1,'DiscordCoreAPI::EmbedData']]],
   ['settitle_19',['setTitle',['../dc/de0/a02349.html#a20ca60ec3235f44a223f3d3b687c0c9e',1,'DiscordCoreAPI::EmbedData']]],
-  ['setttsstatus_20',['setTTSStatus',['../d7/d75/a02805.html#a2b1acb2afbf6ca004c55021126fa61b5',1,'DiscordCoreAPI::RespondToInputEventData::setTTSStatus()'],['../d5/d34/a02809.html#a86725bc302b3d73c2cc149f7b87a42f9',1,'DiscordCoreAPI::MessageResponseBase::setTTSStatus()'],['../d4/df9/a03701.html#a3e2fb96f922284144a456ab6cdf2f63d',1,'DiscordCoreAPI::ExecuteWebHookData::setTTSStatus()']]],
+  ['setttsstatus_20',['setTTSStatus',['../d7/d75/a02805.html#a2b1acb2afbf6ca004c55021126fa61b5',1,'DiscordCoreAPI::RespondToInputEventData::setTTSStatus()'],['../d5/d34/a02809.html#a86725bc302b3d73c2cc149f7b87a42f9',1,'DiscordCoreAPI::MessageResponseBase::setTTSStatus()'],['../d0/d0f/a03697.html#a3e2fb96f922284144a456ab6cdf2f63d',1,'DiscordCoreAPI::ExecuteWebHookData::setTTSStatus()']]],
   ['skip_21',['skip',['../dd/d8e/a03377.html#ae7c43fec03815d6eea1987c433858ef7',1,'DiscordCoreAPI::SongAPI']]],
-  ['startthreadinforumchannelasync_22',['startThreadInForumChannelAsync',['../de/d29/a03573.html#acb843a5a4de05cef5f74f5568d23a585',1,'DiscordCoreAPI::Threads']]],
-  ['startthreadwithmessageasync_23',['startThreadWithMessageAsync',['../de/d29/a03573.html#a2e50a6854ed8eb277cd55eab8e587a33',1,'DiscordCoreAPI::Threads']]],
-  ['startthreadwithoutmessageasync_24',['startThreadWithoutMessageAsync',['../de/d29/a03573.html#a4bf88758ae5c6a9ca970106ee3a939fe',1,'DiscordCoreAPI::Threads']]],
+  ['startthreadinforumchannelasync_22',['startThreadInForumChannelAsync',['../dd/d87/a03569.html#acb843a5a4de05cef5f74f5568d23a585',1,'DiscordCoreAPI::Threads']]],
+  ['startthreadwithmessageasync_23',['startThreadWithMessageAsync',['../dd/d87/a03569.html#a2e50a6854ed8eb277cd55eab8e587a33',1,'DiscordCoreAPI::Threads']]],
+  ['startthreadwithoutmessageasync_24',['startThreadWithoutMessageAsync',['../dd/d87/a03569.html#a4bf88758ae5c6a9ca970106ee3a939fe',1,'DiscordCoreAPI::Threads']]],
   ['stop_25',['stop',['../dd/d8e/a03377.html#ad3ea2df692e7786ba797699ec81f3781',1,'DiscordCoreAPI::SongAPI']]],
   ['syncguildtemplateasync_26',['syncGuildTemplateAsync',['../d1/db3/a03013.html#a1d4ac75c234991c6de6cf59aa48436c8',1,'DiscordCoreAPI::Guilds']]]
 ];

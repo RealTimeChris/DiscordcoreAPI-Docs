@@ -105,29 +105,21 @@ $(document).ready(function(){initNavTree('df/df7/a03561.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d0/d31/a03558.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::GetJoinedPrivateArchivedThreadsData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::GetActiveGuildThreadsData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For collecting joined private archived <a class="el" href="../../de/d29/a03573.html" title="An interface class for the Thread related endpoints.">Threads</a> from a given <a class="el" href="../../d2/d6f/a01957.html" title="A Channel object.">Channel</a>.  
+<p>For listing the active <a class="el" href="../../dd/d87/a03569.html" title="An interface class for the Thread related endpoints.">Threads</a> in a chosen <a class="el" href="../../d0/db8/a03001.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>.  
  <a href="../../df/df7/a03561.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d2/d4a/a00758_source.html">ThreadEntities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:ab551c6ee86756f5c1d47a9936db09fe6"><td class="memItemLeft" align="right" valign="top"><a id="ab551c6ee86756f5c1d47a9936db09fe6" name="ab551c6ee86756f5c1d47a9936db09fe6"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>before</b> {}</td></tr>
-<tr class="memdesc:ab551c6ee86756f5c1d47a9936db09fe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns threads before this timestamp. <br /></td></tr>
-<tr class="separator:ab551c6ee86756f5c1d47a9936db09fe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb8777d9b4583bf156cd30e8ae507d81"><td class="memItemLeft" align="right" valign="top"><a id="abb8777d9b4583bf156cd30e8ae507d81" name="abb8777d9b4583bf156cd30e8ae507d81"></a>
-<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>channelId</b> {}</td></tr>
-<tr class="memdesc:abb8777d9b4583bf156cd30e8ae507d81"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../d2/d6f/a01957.html" title="A Channel object.">Channel</a> to acquire the <a class="el" href="../../de/d29/a03573.html" title="An interface class for the Thread related endpoints.">Threads</a> from. <br /></td></tr>
-<tr class="separator:abb8777d9b4583bf156cd30e8ae507d81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92d53c94b026a90314b5d27c7bb498a4"><td class="memItemLeft" align="right" valign="top"><a id="a92d53c94b026a90314b5d27c7bb498a4" name="a92d53c94b026a90314b5d27c7bb498a4"></a>
-int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>limit</b> { 0 }</td></tr>
-<tr class="memdesc:a92d53c94b026a90314b5d27c7bb498a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of threads to return. <br /></td></tr>
-<tr class="separator:a92d53c94b026a90314b5d27c7bb498a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6ac764d9875ecdd6155a1ed2880897a"><td class="memItemLeft" align="right" valign="top"><a id="ab6ac764d9875ecdd6155a1ed2880897a" name="ab6ac764d9875ecdd6155a1ed2880897a"></a>
+<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildId</b> {}</td></tr>
+<tr class="memdesc:ab6ac764d9875ecdd6155a1ed2880897a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../d0/db8/a03001.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> from which to list the <a class="el" href="../../dd/d87/a03569.html" title="An interface class for the Thread related endpoints.">Threads</a> from. <br /></td></tr>
+<tr class="separator:ab6ac764d9875ecdd6155a1ed2880897a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d2/d4a/a00758_source.html">ThreadEntities.hpp</a></li>
@@ -138,7 +130,7 @@ int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>limit</b> { 0 }</t
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../df/df7/a03561.html">GetJoinedPrivateArchivedThreadsData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../df/df7/a03561.html">GetActiveGuildThreadsData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

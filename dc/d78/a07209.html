@@ -102,267 +102,87 @@ $(document).ready(function(){initNavTree('dc/d78/a07209.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Help </div></div>
+  <div class="headertitle"><div class="title">Modifying a Guild Welcome Screen </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Music_Bot_Help"></a> </p><div class="fragment"><div class="line"><span class="preprocessor">#pragma once</span></div>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Guild_Stuff_Modifying_a_Guild_Welcome_Screen"></a></p><ul>
+<li>Execute the, <code><a class="el" href="../../d1/db3/a03013.html#a2afb26f9f55a8e1c8f4b190694489986" title="Modifies the Guild welcome screen.">DiscordCoreAPI::Guilds::modifyGuildWelcomeScreenAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../dd/d72/a02953.html" title="For modifying a Guild&#39;s welcome screen.">DiscordCoreAPI::ModifyGuildWelcomeScreenData</a></code>, with a return value of type <code>auto</code> or <code><a class="el" href="../../d3/dff/a02565.html" title="Welcome screen data.">DiscordCoreAPI::WelcomeScreenData</a></code>.</li>
+<li>Call the function with <code>.get()</code> added to the end in order to wait for the results now.</li>
+</ul>
+<div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
+<div class="line"><span class="comment">/// https://github.com/RealTimeChris/DiscordCoreAPI</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line"><span class="preprocessor">#pragma once</span></div>
 <div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d8/db9/a00725.html">Index.hpp</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d8/db9/a00725.html">Index.hpp</a>&gt;</span></div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">namespace </span><a class="code hl_namespace" href="../../d7/d46/a00890.html">DiscordCoreAPI</a> {</div>
+<div class="line"><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d7/d46/a00890.html">DiscordCoreAPI</a> {</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">class </span>Help : <span class="keyword">public</span> <a class="code hl_struct" href="../../dd/dc1/a02857.html">DiscordCoreAPI::BaseFunction</a> {</div>
+<div class="line">    <span class="keyword">class </span>Test : <span class="keyword">public</span> <a class="code hl_struct" href="../../dd/dc1/a02857.html">DiscordCoreAPI::BaseFunction</a> {</div>
 <div class="line">      <span class="keyword">public</span>:</div>
-<div class="line">        Help() {</div>
-<div class="line">            this-&gt;commandName = <span class="stringliteral">&quot;help&quot;</span>;</div>
-<div class="line">            this-&gt;helpDescription = <span class="stringliteral">&quot;A help command for this bot!&quot;</span>;</div>
-<div class="line">            EmbedData msgEmbed;</div>
-<div class="line">            msgEmbed.setDescription(<span class="stringliteral">&quot;------\nSimply enter /help, and follow the instructions!\n------&quot;</span>);</div>
-<div class="line">            msgEmbed.setTitle(<span class="stringliteral">&quot;__**Help Usage:**__&quot;</span>);</div>
-<div class="line">            msgEmbed.setTimeStamp(<a class="code hl_function" href="../../d7/d92/a00887.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
-<div class="line">            msgEmbed.setColor(<span class="stringliteral">&quot;FeFeFe&quot;</span>);</div>
+<div class="line">        Test() {</div>
+<div class="line">            this-&gt;commandName = <span class="stringliteral">&quot;test&quot;</span>;</div>
+<div class="line">            this-&gt;helpDescription = <span class="stringliteral">&quot;Testing purposes!&quot;</span>;</div>
+<div class="line">            <a class="code hl_class" href="../../dc/de0/a02349.html">DiscordCoreAPI::EmbedData</a> msgEmbed;</div>
+<div class="line">            msgEmbed.<a class="code hl_function" href="../../dc/de0/a02349.html#a9d4066a4861408bc00eccb22a12db7f9">setDescription</a>(<span class="stringliteral">&quot;------\nSimply enter !test or /test!\n------&quot;</span>);</div>
+<div class="line">            msgEmbed.<a class="code hl_function" href="../../dc/de0/a02349.html#a20ca60ec3235f44a223f3d3b687c0c9e">setTitle</a>(<span class="stringliteral">&quot;__**Test Usage:**__&quot;</span>);</div>
+<div class="line">            msgEmbed.<a class="code hl_function" href="../../dc/de0/a02349.html#ae356e6dc3c93658b7228b56da3187896">setTimeStamp</a>(<a class="code hl_function" href="../../d7/d92/a00887.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
+<div class="line">            msgEmbed.<a class="code hl_function" href="../../dc/de0/a02349.html#ab417d83fddf9df80eca98e9ec6e888aa">setColor</a>(<span class="stringliteral">&quot;FeFeFe&quot;</span>);</div>
 <div class="line">            this-&gt;helpEmbed = msgEmbed;</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        std::unique_ptr&lt;DiscordCoreAPI::BaseFunction&gt; create() {</div>
-<div class="line">            <span class="keywordflow">return</span> std::make_unique&lt;Help&gt;();</div>
+<div class="line">            <span class="keywordflow">return</span> std::make_unique&lt;Test&gt;();</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../dc/da3/a02853.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
 <div class="line">            <span class="keywordflow">try</span> {</div>
-<div class="line">                Channel channel = <a class="code hl_function" href="../../db/d49/a01969.html#a29d67b396279c61b4b4b0032d171f681">Channels::getCachedChannelAsync</a>({.channelId = args.<a class="code hl_variable" href="../../dc/da3/a02853.html#a80eabf8007466c61abda009ea3070942">eventData</a>-&gt;<a class="code hl_function" href="../../d8/d1e/a02801.html#a97c397fe274250bfff73cf674810a8f5">getChannelId</a>()}).get();</div>
+<div class="line">                std::vector&lt;DiscordCoreAPI::WelcomeScreenChannelData&gt; theVector;</div>
+<div class="line">                <a class="code hl_struct" href="../../d1/d67/a02561.html">DiscordCoreAPI::WelcomeScreenChannelData</a> channelData;</div>
+<div class="line">                channelData.<a class="code hl_variable" href="../../d1/d67/a02561.html#a5f62299b2f15b6debe1ee73b3d7820d2">channelId</a> = args.<a class="code hl_variable" href="../../dc/da3/a02853.html#a80eabf8007466c61abda009ea3070942">eventData</a>.<a class="code hl_function" href="../../d8/d1e/a02801.html#a97c397fe274250bfff73cf674810a8f5">getChannelId</a>();</div>
+<div class="line">                channelData.<a class="code hl_variable" href="../../d1/d67/a02561.html#a09c6aa1410f9e32e57ddaf0e62dc5859">description</a> = <span class="stringliteral">&quot;TESTING CHANNEL!&quot;</span>;</div>
+<div class="line">                channelData.<a class="code hl_variable" href="../../d1/d67/a02561.html#aa09304d7e3bbb1ca3ae7d73d88b16d3c">emojiName</a> = <span class="stringliteral">&quot;🏳&quot;</span>;</div>
+<div class="line">                theVector.push_back(channelData);</div>
 <div class="line"> </div>
-<div class="line">                <span class="keywordflow">if</span> (channel.type != <a class="code hl_enumvalue" href="../../dd/d94/a00888.html#gga386b8a65a1195bd1bc61b75a7f308ffaa05918b8b3437675fd82f88f9488c639d">ChannelType::Dm</a>) {</div>
-<div class="line">                    <a class="code hl_function" href="../../d5/dcb/a03121.html#a721365d0ef437397ea553634f88b8ecf">InputEvents::deleteInputEventResponseAsync</a>(std::make_unique&lt;InputEventData&gt;(*args.<a class="code hl_variable" href="../../dc/da3/a02853.html#a80eabf8007466c61abda009ea3070942">eventData</a>)).<a class="code hl_function" href="../../d0/dc1/a01993.html#a904d030f3edbf8efac15b2cebba3e37a">get</a>();</div>
-<div class="line">                }</div>
+<div class="line">                <a class="code hl_struct" href="../../dd/d72/a02953.html">DiscordCoreAPI::ModifyGuildWelcomeScreenData</a> dataPackage01;</div>
+<div class="line">                dataPackage01.<a class="code hl_variable" href="../../dd/d72/a02953.html#addf4d23685a727de4c24ab95fc6e7e38">reason</a> = <span class="stringliteral">&quot;TESTING PURPOSES&quot;</span>;</div>
+<div class="line">                dataPackage01.<a class="code hl_variable" href="../../dd/d72/a02953.html#aca09a02e2f8e8154a33c7894aa79716e">guildId</a> = args.<a class="code hl_variable" href="../../dc/da3/a02853.html#a80eabf8007466c61abda009ea3070942">eventData</a>.<a class="code hl_function" href="../../d8/d1e/a02801.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
+<div class="line">                dataPackage01.<a class="code hl_variable" href="../../dd/d72/a02953.html#a4a22a12c3c5e101c12771b23ba476bee">description</a> = <span class="stringliteral">&quot;THE DESCRIPTION!&quot;</span>;</div>
+<div class="line">                dataPackage01.<a class="code hl_variable" href="../../dd/d72/a02953.html#aa50e1d4eeec66b62be500baf56d1bef5">welcomeChannels</a> = theVector;</div>
 <div class="line"> </div>
+<div class="line">                <span class="keyword">auto</span> responseData = <a class="code hl_function" href="../../d1/db3/a03013.html#a2afb26f9f55a8e1c8f4b190694489986">DiscordCoreAPI::Guilds::modifyGuildWelcomeScreenAsync</a>(dataPackage01).get();</div>
 <div class="line"> </div>
-<div class="line">                Guild guild = <a class="code hl_function" href="../../d1/db3/a03013.html#a82ab9685bbc1cd69019bfb42e2870a0e">Guilds::getCachedGuildAsync</a>({.guildId = args.<a class="code hl_variable" href="../../dc/da3/a02853.html#a80eabf8007466c61abda009ea3070942">eventData</a>-&gt;<a class="code hl_function" href="../../d8/d1e/a02801.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>()}).get();</div>
-<div class="line">                DiscordGuild discordGuild(guild);</div>
-<div class="line">                <span class="keywordtype">bool</span> isItFirst {<span class="keyword">true</span>};</div>
-<div class="line">                std::unique_ptr&lt;InputEventData&gt; newEvent01 {std::make_unique&lt;InputEventData&gt;(*args.<a class="code hl_variable" href="../../dc/da3/a02853.html#a80eabf8007466c61abda009ea3070942">eventData</a>)};</div>
-<div class="line">                RespondToInputEventData responseData02 {*newEvent01};</div>
-<div class="line">                responseData02.addContent(<span class="stringliteral">&quot;TEST&quot;</span>);</div>
-<div class="line">                responseData02.setResponseType(<a class="code hl_enumvalue" href="../../d7/d92/a00887.html#gga6a10916bec24a00f6d6a41d8d880c1faa6dc9f1599186d5895491f67863f9edd7">InputEventResponseType::Interaction_Response</a>);</div>
-<div class="line">                newEvent01 = <a class="code hl_function" href="../../d5/dcb/a03121.html#a91f7a025c00ec5b858a260ebcda49a3c">InputEvents::respondToInputEventAsync</a>(responseData02);</div>
-<div class="line">                RespondToInputEventData responseData {*newEvent01};</div>
-<div class="line">                <span class="keywordflow">while</span> (1) {</div>
-<div class="line">                    std::vector&lt;std::vector&lt;SelectOptionData&gt;&gt; selectOptions;</div>
-<div class="line">                    int32_t counter {0};</div>
-<div class="line">                    int32_t currentHelpPage {0};</div>
-<div class="line">                    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; [key, value]: args.<a class="code hl_variable" href="../../dc/da3/a02853.html#a20009c042119fe1463a36ed29d74bb1b">discordCoreClient</a>-&gt;<a class="code hl_variable" href="../../d3/d39/a02005.html#ac7c97f7a88b3f4a0a4699b6fcaa89619">commandController</a>.getFunctions()) {</div>
-<div class="line">                        <span class="keywordflow">if</span> (counter % 24 == 0) {</div>
-<div class="line">                            selectOptions.push_back(std::vector&lt;SelectOptionData&gt;());</div>
-<div class="line">                            currentHelpPage += 1;</div>
-<div class="line">                        }</div>
-<div class="line">                        std::string newString;</div>
-<div class="line">                        newString.push_back((<span class="keywordtype">char</span>)toupper(value-&gt;commandName[0]));</div>
-<div class="line">                        newString += value-&gt;commandName.substr(1, value-&gt;commandName.length()-1);</div>
-<div class="line">                        SelectOptionData newData;</div>
-<div class="line">                        newData.label = newString;</div>
-<div class="line">                        newData.description = value-&gt;helpDescription;</div>
-<div class="line">                        newData.value = convertToLowerCase(newString);</div>
-<div class="line">                        newData.emoji.name = <span class="stringliteral">&quot;✅&quot;</span>;</div>
-<div class="line">                        <span class="keywordtype">bool</span> doWeContinue {<span class="keyword">false</span>};</div>
-<div class="line">                        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; value02: selectOptions) {</div>
-<div class="line">                            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; value03: value02) {</div>
-<div class="line">                                <span class="keywordflow">if</span> (value03.value == newData.value) {</div>
-<div class="line">                                    doWeContinue = <span class="keyword">true</span>;</div>
-<div class="line">                                    <span class="keywordflow">break</span>;</div>
-<div class="line">                                }</div>
-<div class="line">                            }</div>
-<div class="line">                        }</div>
-<div class="line">                        <span class="keywordflow">if</span> (doWeContinue) {</div>
-<div class="line">                            <span class="keywordflow">continue</span>;</div>
-<div class="line">                        }</div>
-<div class="line">                        selectOptions.at((int64_t)currentHelpPage-(int64_t)1).push_back(newData);</div>
-<div class="line">                        counter += 1;</div>
-<div class="line">                    }</div>
-<div class="line">                    SelectOptionData newData;</div>
-<div class="line">                    newData.label = <span class="stringliteral">&quot;Go Back&quot;</span>;</div>
-<div class="line">                    newData.description = <span class="stringliteral">&quot;Go back to the previous menu.&quot;</span>;</div>
-<div class="line">                    newData.value = <span class="stringliteral">&quot;go back&quot;</span>;</div>
-<div class="line">                    newData.emoji.name = <span class="stringliteral">&quot;❌&quot;</span>;</div>
-<div class="line">                    std::vector&lt;std::vector&lt;SelectOptionData&gt;&gt; selectOptionsNew;</div>
-<div class="line">                    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; value: selectOptions) {</div>
-<div class="line">                        value.push_back(newData);</div>
-<div class="line">                        selectOptionsNew.push_back(value);</div>
-<div class="line">                    }</div>
+<div class="line">                cout &lt;&lt; boolalpha &lt;&lt; responseData.welcomeChannels.at(0).channelId &lt;&lt; endl;</div>
 <div class="line"> </div>
-<div class="line">                    int32_t counter02 {0};</div>
-<div class="line">                    std::string messageNew = <span class="stringliteral">&quot;------\nSelect which page of help items you would like to view, by clicking a button below!\n------&quot;</span>;</div>
-<div class="line">                    EmbedData msgEmbed;</div>
-<div class="line">                    msgEmbed.setAuthor(args.<a class="code hl_variable" href="../../dc/da3/a02853.html#a80eabf8007466c61abda009ea3070942">eventData</a>-&gt;<a class="code hl_function" href="../../d8/d1e/a02801.html#a3ebc65bb67fbd74518199db64e40559c">getUserName</a>(), args.<a class="code hl_variable" href="../../dc/da3/a02853.html#a80eabf8007466c61abda009ea3070942">eventData</a>-&gt;<a class="code hl_function" href="../../d8/d1e/a02801.html#a2dd12454f3ecd05f4cfbd22b027268bd">getAvatarUrl</a>());</div>
-<div class="line">                    msgEmbed.setColor(discordGuild.data.borderColor);</div>
-<div class="line">                    msgEmbed.setTimeStamp(<a class="code hl_function" href="../../d7/d92/a00887.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
-<div class="line">                    msgEmbed.setDescription(messageNew);</div>
-<div class="line">                    msgEmbed.setTitle(<span class="stringliteral">&quot;__**&quot;</span> + args.<a class="code hl_variable" href="../../dc/da3/a02853.html#a20009c042119fe1463a36ed29d74bb1b">discordCoreClient</a>-&gt;<a class="code hl_function" href="../../d3/d39/a02005.html#a497b6ef5b6407f58be5c6c6e85389fea">getBotUser</a>().<a class="code hl_variable" href="../../d4/d16/a02313.html#a0a2318d4a6ca1fa3928db530b6c97cf9">userName</a> + <span class="stringliteral">&quot; Help: Front Page**__&quot;</span>);</div>
-<div class="line"> </div>
-<div class="line">                    std::string msgString = <span class="stringliteral">&quot;------\nHello! How are you doing today?! I&#39;m &quot;</span> + args.<a class="code hl_variable" href="../../dc/da3/a02853.html#a20009c042119fe1463a36ed29d74bb1b">discordCoreClient</a>-&gt;<a class="code hl_function" href="../../d3/d39/a02005.html#a497b6ef5b6407f58be5c6c6e85389fea">getBotUser</a>().<a class="code hl_variable" href="../../d4/d16/a02313.html#a0a2318d4a6ca1fa3928db530b6c97cf9">userName</a> +</div>
-<div class="line">                        <span class="stringliteral">&quot; and I&#39;m here to help you out!\n&quot;</span> +</div>
-<div class="line">                        <span class="stringliteral">&quot;Please, select one of my commands from the drop-down menu below, to gain more information about them! (Or select &#39;Go Back&#39; to go back &quot;</span></div>
-<div class="line">                        <span class="stringliteral">&quot;to the previous menu)\n------&quot;</span>;</div>
-<div class="line">                    std::unique_ptr&lt;InputEventData&gt; newEvent {std::make_unique&lt;InputEventData&gt;()};</div>
-<div class="line">                    std::vector&lt;std::string&gt; numberEmojiNames {</div>
-<div class="line">                        <span class="stringliteral">&quot;✅&quot;</span>,</div>
-<div class="line">                        <span class="stringliteral">&quot;🍬&quot;</span>,</div>
-<div class="line">                        <span class="stringliteral">&quot;🅱&quot;</span>,</div>
-<div class="line">                        <span class="stringliteral">&quot;❌&quot;</span>,</div>
-<div class="line">                    };</div>
-<div class="line">                    std::vector&lt;std::string&gt; numberEmojiId;</div>
-<div class="line"> </div>
-<div class="line">                    responseData.addMessageEmbed(msgEmbed);</div>
-<div class="line">                    <span class="keywordflow">for</span> (uint32_t x = 0; x &lt; selectOptionsNew.size(); x += 1) {</div>
-<div class="line">                        std::string customId {<span class="stringliteral">&quot;select_page_&quot;</span> + std::to_string(x)};</div>
-<div class="line">                        responseData.addButton(<span class="keyword">false</span>, customId, std::to_string(x), <a class="code hl_enumvalue" href="../../dd/d94/a00888.html#ggae05b1bfe988b0c2989b7bed279c9c95ca505a83f220c02df2f85c3810cd9ceb38">ButtonStyle::Success</a>, numberEmojiNames[x]);</div>
-<div class="line">                        numberEmojiId.push_back(customId);</div>
-<div class="line">                    }</div>
-<div class="line">                    responseData.addButton(<span class="keyword">false</span>, <span class="stringliteral">&quot;exit&quot;</span>, <span class="stringliteral">&quot;Exit&quot;</span>, <a class="code hl_enumvalue" href="../../dd/d94/a00888.html#ggae05b1bfe988b0c2989b7bed279c9c95ca990816b607ebf99b1415760965e4d564">ButtonStyle::Danger</a>, <span class="stringliteral">&quot;❌&quot;</span>);</div>
-<div class="line">                    <span class="keywordflow">if</span> (isItFirst) {</div>
-<div class="line">                        responseData.setResponseType(<a class="code hl_enumvalue" href="../../d7/d92/a00887.html#gga6a10916bec24a00f6d6a41d8d880c1faad2a40ccde386d96e45615bb3f6c71ac2">InputEventResponseType::Ephemeral_Follow_Up_Message</a>);</div>
-<div class="line">                        isItFirst = <span class="keyword">false</span>;</div>
-<div class="line">                        newEvent01 = <a class="code hl_function" href="../../d5/dcb/a03121.html#a91f7a025c00ec5b858a260ebcda49a3c">InputEvents::respondToInputEventAsync</a>(responseData);</div>
-<div class="line">                    } <span class="keywordflow">else</span> {</div>
-<div class="line">                        responseData.setResponseType(InputEventResponseType::Edit_Ephemeral_Interaction_Response);</div>
-<div class="line">                        <a class="code hl_function" href="../../d5/dcb/a03121.html#a91f7a025c00ec5b858a260ebcda49a3c">InputEvents::respondToInputEventAsync</a>(responseData);</div>
-<div class="line">                    }</div>
-<div class="line">                    ButtonCollector button(*newEvent01);</div>
-<div class="line">                    <span class="keyword">auto</span> buttonData = button.collectButtonData(<span class="keyword">false</span>, 120000, 1, args.<a class="code hl_variable" href="../../dc/da3/a02853.html#a80eabf8007466c61abda009ea3070942">eventData</a>-&gt;getRequesterId()).get();</div>
-<div class="line">                    int32_t counter03 {0};</div>
-<div class="line">                    std::vector&lt;RespondToInputEventData&gt; editInteractionResponseData00;</div>
-<div class="line">                    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; value: selectOptionsNew) {</div>
-<div class="line">                        EmbedData msgEmbed00;</div>
-<div class="line">                        msgEmbed00.setAuthor(newEvent01-&gt;getUserName(), newEvent01-&gt;getAvatarUrl());</div>
-<div class="line">                        msgEmbed00.setColor(discordGuild.data.borderColor);</div>
-<div class="line">                        msgEmbed00.setTimeStamp(<a class="code hl_function" href="../../d7/d92/a00887.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
-<div class="line">                        msgEmbed00.setDescription(msgString);</div>
-<div class="line">                        msgEmbed00.setTitle(<span class="stringliteral">&quot;__**&quot;</span> + args.<a class="code hl_variable" href="../../dc/da3/a02853.html#a20009c042119fe1463a36ed29d74bb1b">discordCoreClient</a>-&gt;<a class="code hl_function" href="../../d3/d39/a02005.html#a497b6ef5b6407f58be5c6c6e85389fea">getBotUser</a>().<a class="code hl_variable" href="../../d4/d16/a02313.html#a0a2318d4a6ca1fa3928db530b6c97cf9">userName</a> + <span class="stringliteral">&quot; Help: Page &quot;</span> + std::to_string(counter03 + 1) + <span class="stringliteral">&quot; of &quot;</span> +</div>
-<div class="line">                                            std::to_string(selectOptions.size()) + <span class="stringliteral">&quot;**__&quot;</span>);</div>
-<div class="line">                        RespondToInputEventData responseData03(buttonData.at(0).interactionData);</div>
-<div class="line">                        responseData03.setResponseType(InputEventResponseType::Edit_Ephemeral_Interaction_Response);</div>
-<div class="line">                        responseData03.addMessageEmbed(msgEmbed00);</div>
-<div class="line">                        responseData03.addSelectMenu(<span class="keyword">false</span>, <span class="stringliteral">&quot;help_menu&quot;</span>, value, <span class="stringliteral">&quot;Commands&quot;</span>, 1, 1);</div>
-<div class="line">                        editInteractionResponseData00.push_back(responseData03);</div>
-<div class="line">                        counter03 += 1;</div>
-<div class="line">                    }</div>
-<div class="line">                    <span class="keywordflow">if</span> (buttonData.size() &gt; 0) {</div>
-<div class="line">                        <span class="keywordflow">if</span> (buttonData.at(0).buttonId == <span class="stringliteral">&quot;exit&quot;</span> || buttonData.at(0).buttonId == <span class="stringliteral">&quot;empty&quot;</span>) {</div>
-<div class="line">                            EmbedData msgEmbed00;</div>
-<div class="line">                            msgEmbed00.setAuthor(newEvent01-&gt;getUserName(), newEvent01-&gt;getAvatarUrl());</div>
-<div class="line">                            msgEmbed00.setColor(discordGuild.data.borderColor);</div>
-<div class="line">                            msgEmbed00.setTimeStamp(<a class="code hl_function" href="../../d7/d92/a00887.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
-<div class="line">                            msgEmbed00.setDescription(messageNew);</div>
-<div class="line">                            msgEmbed00.setTitle(<span class="stringliteral">&quot;__**&quot;</span> + args.<a class="code hl_variable" href="../../dc/da3/a02853.html#a20009c042119fe1463a36ed29d74bb1b">discordCoreClient</a>-&gt;<a class="code hl_function" href="../../d3/d39/a02005.html#a497b6ef5b6407f58be5c6c6e85389fea">getBotUser</a>().<a class="code hl_variable" href="../../d4/d16/a02313.html#a0a2318d4a6ca1fa3928db530b6c97cf9">userName</a> + <span class="stringliteral">&quot; Help: Page &quot;</span> + std::to_string(counter03 + 1) +</div>
-<div class="line">                                                <span class="stringliteral">&quot; of &quot;</span> + std::to_string(selectOptions.size()) + <span class="stringliteral">&quot;**__&quot;</span>);</div>
-<div class="line">                            RespondToInputEventData responseData03(buttonData.at(0).interactionData);</div>
-<div class="line">                            responseData03.setResponseType(InputEventResponseType::Edit_Ephemeral_Interaction_Response);</div>
-<div class="line">                            responseData03.addMessageEmbed(msgEmbed00);</div>
-<div class="line">                            newEvent = <a class="code hl_function" href="../../d5/dcb/a03121.html#a91f7a025c00ec5b858a260ebcda49a3c">InputEvents::respondToInputEventAsync</a>(responseData02);</div>
-<div class="line">                            <a class="code hl_function" href="../../d5/dcb/a03121.html#a721365d0ef437397ea553634f88b8ecf">InputEvents::deleteInputEventResponseAsync</a>(std::move(newEvent01)).<a class="code hl_function" href="../../d0/dc1/a01993.html#a904d030f3edbf8efac15b2cebba3e37a">get</a>();</div>
-<div class="line">                            <span class="keywordflow">break</span>;</div>
-<div class="line">                        }</div>
-<div class="line">                        counter02 = 0;</div>
-<div class="line">                        <span class="keywordflow">for</span> (int32_t y = 0; y &lt; numberEmojiId.size(); y += 1) {</div>
-<div class="line">                            <span class="keywordflow">if</span> (buttonData.at(0).buttonId == numberEmojiId[y]) {</div>
-<div class="line">                                counter02 = y;</div>
-<div class="line">                                <span class="keywordflow">break</span>;</div>
-<div class="line">                            }</div>
-<div class="line">                        }</div>
-<div class="line">                        newEvent = <a class="code hl_function" href="../../d5/dcb/a03121.html#a91f7a025c00ec5b858a260ebcda49a3c">InputEvents::respondToInputEventAsync</a>(editInteractionResponseData00.at(counter02));</div>
-<div class="line">                    } <span class="keywordflow">else</span> {</div>
-<div class="line">                        <a class="code hl_function" href="../../d5/dcb/a03121.html#a721365d0ef437397ea553634f88b8ecf">InputEvents::deleteInputEventResponseAsync</a>(std::move(newEvent)).<a class="code hl_function" href="../../d0/dc1/a01993.html#a904d030f3edbf8efac15b2cebba3e37a">get</a>();</div>
-<div class="line">                        <span class="keywordflow">break</span>;</div>
-<div class="line">                    }</div>
-<div class="line">                    SelectMenuCollector selectMenu(*newEvent01);</div>
-<div class="line">                    <span class="keyword">auto</span> selectMenuReturnData = selectMenu.collectSelectMenuData(<span class="keyword">false</span>, 120000, 1, args.<a class="code hl_variable" href="../../dc/da3/a02853.html#a80eabf8007466c61abda009ea3070942">eventData</a>-&gt;getRequesterId()).get();</div>
-<div class="line">                    <span class="keywordflow">if</span> (selectMenuReturnData.size() &gt; 0) {</div>
-<div class="line">                        EmbedData newEmbed;</div>
-<div class="line">                        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; [key, value]: args.<a class="code hl_variable" href="../../dc/da3/a02853.html#a20009c042119fe1463a36ed29d74bb1b">discordCoreClient</a>-&gt;<a class="code hl_variable" href="../../d3/d39/a02005.html#ac7c97f7a88b3f4a0a4699b6fcaa89619">commandController</a>.getFunctions()) {</div>
-<div class="line">                            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; valueNew: key) {</div>
-<div class="line">                                <span class="keywordflow">if</span> (valueNew == selectMenuReturnData.at(0).values.at(0)) {</div>
-<div class="line">                                    newEmbed = args.<a class="code hl_variable" href="../../dc/da3/a02853.html#a20009c042119fe1463a36ed29d74bb1b">discordCoreClient</a>-&gt;<a class="code hl_variable" href="../../d3/d39/a02005.html#ac7c97f7a88b3f4a0a4699b6fcaa89619">commandController</a>.getFunctions().at(key)-&gt;helpEmbed;</div>
-<div class="line">                                }</div>
-<div class="line">                            }</div>
-<div class="line">                        }</div>
-<div class="line">                        <span class="keywordflow">if</span> (selectMenuReturnData.at(0).values.at(0) == <span class="stringliteral">&quot;go back&quot;</span>) {</div>
-<div class="line">                            RespondToInputEventData responseData02(selectMenuReturnData.at(0).interactionData);</div>
-<div class="line">                            responseData02.setResponseType(InputEventResponseType::Edit_Ephemeral_Interaction_Response);</div>
-<div class="line">                            responseData02.addMessageEmbed(msgEmbed);</div>
-<div class="line">                            <span class="keywordflow">for</span> (uint32_t x = 0; x &lt; selectOptionsNew.size(); x += 1) {</div>
-<div class="line">                                std::string customId {<span class="stringliteral">&quot;select_page_&quot;</span> + std::to_string(x)};</div>
-<div class="line">                                responseData02.addButton(<span class="keyword">false</span>, customId, std::to_string(x), <a class="code hl_enumvalue" href="../../dd/d94/a00888.html#ggae05b1bfe988b0c2989b7bed279c9c95ca505a83f220c02df2f85c3810cd9ceb38">ButtonStyle::Success</a>, numberEmojiNames[x]);</div>
-<div class="line">                                numberEmojiId.push_back(customId);</div>
-<div class="line">                            }</div>
-<div class="line">                            responseData02.addButton(<span class="keyword">false</span>, <span class="stringliteral">&quot;exit&quot;</span>, <span class="stringliteral">&quot;Exit&quot;</span>, <a class="code hl_enumvalue" href="../../dd/d94/a00888.html#ggae05b1bfe988b0c2989b7bed279c9c95ca990816b607ebf99b1415760965e4d564">ButtonStyle::Danger</a>, <span class="stringliteral">&quot;❌&quot;</span>);</div>
-<div class="line">                            newEvent = <a class="code hl_function" href="../../d5/dcb/a03121.html#a91f7a025c00ec5b858a260ebcda49a3c">InputEvents::respondToInputEventAsync</a>(responseData02);</div>
-<div class="line">                            <span class="keywordflow">continue</span>;</div>
-<div class="line">                        }</div>
-<div class="line"> </div>
-<div class="line">                        RespondToInputEventData responseData02(selectMenuReturnData.at(0).interactionData);</div>
-<div class="line">                        responseData02.setResponseType(InputEventResponseType::Edit_Ephemeral_Interaction_Response);</div>
-<div class="line">                        responseData02.addMessageEmbed(newEmbed);</div>
-<div class="line">                        responseData02.addButton(<span class="keyword">false</span>, <span class="stringliteral">&quot;back&quot;</span>, <span class="stringliteral">&quot;Back&quot;</span>, <a class="code hl_enumvalue" href="../../dd/d94/a00888.html#ggae05b1bfe988b0c2989b7bed279c9c95ca505a83f220c02df2f85c3810cd9ceb38">ButtonStyle::Success</a>, <span class="stringliteral">&quot;🔙&quot;</span>);</div>
-<div class="line">                        responseData02.addButton(<span class="keyword">false</span>, <span class="stringliteral">&quot;exit&quot;</span>, <span class="stringliteral">&quot;Exit&quot;</span>, <a class="code hl_enumvalue" href="../../dd/d94/a00888.html#ggae05b1bfe988b0c2989b7bed279c9c95ca505a83f220c02df2f85c3810cd9ceb38">ButtonStyle::Success</a>, <span class="stringliteral">&quot;❌&quot;</span>);</div>
-<div class="line">                        newEvent = <a class="code hl_function" href="../../d5/dcb/a03121.html#a91f7a025c00ec5b858a260ebcda49a3c">InputEvents::respondToInputEventAsync</a>(responseData02);</div>
-<div class="line">                        <span class="keyword">auto</span> buttonReturnData02 = ButtonCollector {*newEvent01}.collectButtonData(<span class="keyword">false</span>, 120000, 1, args.<a class="code hl_variable" href="../../dc/da3/a02853.html#a80eabf8007466c61abda009ea3070942">eventData</a>-&gt;getRequesterId()).get();</div>
-<div class="line">                        <span class="keywordflow">if</span> (buttonReturnData02.size() &gt; 0) {</div>
-<div class="line">                            {</div>
-<div class="line">                            }</div>
-<div class="line">                            <span class="keywordflow">if</span> (buttonReturnData02.at(0).buttonId == <span class="stringliteral">&quot;back&quot;</span>) {</div>
-<div class="line">                                responseData = RespondToInputEventData {buttonReturnData02.at(0).interactionData};</div>
-<div class="line">                                <span class="keywordflow">continue</span>;</div>
-<div class="line">                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (buttonReturnData02.at(0).buttonId == <span class="stringliteral">&quot;exit&quot;</span> || buttonReturnData02.at(0).buttonId == <span class="stringliteral">&quot;empty&quot;</span>) {</div>
-<div class="line">                                RespondToInputEventData responseData02(buttonReturnData02.at(0).interactionData);</div>
-<div class="line">                                responseData02.setResponseType(InputEventResponseType::Edit_Ephemeral_Interaction_Response);</div>
-<div class="line">                                responseData02.addMessageEmbed(newEmbed);</div>
-<div class="line">                                newEvent = <a class="code hl_function" href="../../d5/dcb/a03121.html#a91f7a025c00ec5b858a260ebcda49a3c">InputEvents::respondToInputEventAsync</a>(responseData02);</div>
-<div class="line">                                <a class="code hl_function" href="../../d5/dcb/a03121.html#a721365d0ef437397ea553634f88b8ecf">InputEvents::deleteInputEventResponseAsync</a>(std::move(newEvent)).<a class="code hl_function" href="../../d0/dc1/a01993.html#a904d030f3edbf8efac15b2cebba3e37a">get</a>();</div>
-<div class="line">                                <span class="keywordflow">break</span>;</div>
-<div class="line">                            }</div>
-<div class="line">                        } <span class="keywordflow">else</span> {</div>
-<div class="line">                            <a class="code hl_function" href="../../d5/dcb/a03121.html#a721365d0ef437397ea553634f88b8ecf">InputEvents::deleteInputEventResponseAsync</a>(std::move(newEvent)).<a class="code hl_function" href="../../d0/dc1/a01993.html#a904d030f3edbf8efac15b2cebba3e37a">get</a>();</div>
-<div class="line">                            <span class="keywordflow">break</span>;</div>
-<div class="line">                        }</div>
-<div class="line">                    } <span class="keywordflow">else</span> {</div>
-<div class="line">                        <a class="code hl_function" href="../../d5/dcb/a03121.html#a721365d0ef437397ea553634f88b8ecf">InputEvents::deleteInputEventResponseAsync</a>(std::move(newEvent)).<a class="code hl_function" href="../../d0/dc1/a01993.html#a904d030f3edbf8efac15b2cebba3e37a">get</a>();</div>
-<div class="line">                        <span class="keywordflow">break</span>;</div>
-<div class="line">                    }</div>
-<div class="line">                }</div>
-<div class="line"> </div>
-<div class="line"> </div>
-<div class="line">                <span class="keywordflow">return</span>;</div>
 <div class="line">            } <span class="keywordflow">catch</span> (...) {</div>
-<div class="line">                <a class="code hl_function" href="../../d7/d92/a00887.html#ga805bf7170903087e933a7b81c8e39f15">reportException</a>(<span class="stringliteral">&quot;Help::execute()&quot;</span>);</div>
+<div class="line">                rethrowException(<span class="stringliteral">&quot;Test::execute()&quot;</span>);</div>
 <div class="line">            }</div>
 <div class="line">        }</div>
-<div class="line">        <span class="keyword">virtual</span> ~Help();</div>
 <div class="line">    };</div>
 <div class="line">}</div>
 <div class="ttc" id="aa00725_html"><div class="ttname"><a href="../../d8/db9/a00725.html">Index.hpp</a></div></div>
 <div class="ttc" id="aa00887_html_ga63ce723358a8b7a00c14e055f2a26998"><div class="ttname"><a href="../../d7/d92/a00887.html#ga63ce723358a8b7a00c14e055f2a26998">DiscordCoreAPI::getTimeAndDate</a></div><div class="ttdeci">DiscordCoreAPI_Dll std::string getTimeAndDate()</div><div class="ttdoc">Acquires a timestamp with the current time and date - suitable for use in message-embeds.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/a00869_source.html#l00819">Utilities.cpp:819</a></div></div>
-<div class="ttc" id="aa00887_html_ga805bf7170903087e933a7b81c8e39f15"><div class="ttname"><a href="../../d7/d92/a00887.html#ga805bf7170903087e933a7b81c8e39f15">DiscordCoreAPI::reportException</a></div><div class="ttdeci">DiscordCoreAPI_Dll void reportException(const std::string &amp;currentFunctionName, std::source_location theLocation=std::source_location::current())</div><div class="ttdoc">Prints the current file, line, and column from which the function is being called - typically from wi...</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/a00869_source.html#l00631">Utilities.cpp:631</a></div></div>
-<div class="ttc" id="aa00887_html_gga6a10916bec24a00f6d6a41d8d880c1faa6dc9f1599186d5895491f67863f9edd7"><div class="ttname"><a href="../../d7/d92/a00887.html#gga6a10916bec24a00f6d6a41d8d880c1faa6dc9f1599186d5895491f67863f9edd7">DiscordCoreAPI::InputEventResponseType::Interaction_Response</a></div><div class="ttdeci">@ Interaction_Response</div><div class="ttdoc">Interaction response.</div></div>
-<div class="ttc" id="aa00887_html_gga6a10916bec24a00f6d6a41d8d880c1faad2a40ccde386d96e45615bb3f6c71ac2"><div class="ttname"><a href="../../d7/d92/a00887.html#gga6a10916bec24a00f6d6a41d8d880c1faad2a40ccde386d96e45615bb3f6c71ac2">DiscordCoreAPI::InputEventResponseType::Ephemeral_Follow_Up_Message</a></div><div class="ttdeci">@ Ephemeral_Follow_Up_Message</div><div class="ttdoc">Ephemeral follow-up Message.</div></div>
-<div class="ttc" id="aa00888_html_gga386b8a65a1195bd1bc61b75a7f308ffaa05918b8b3437675fd82f88f9488c639d"><div class="ttname"><a href="../../dd/d94/a00888.html#gga386b8a65a1195bd1bc61b75a7f308ffaa05918b8b3437675fd82f88f9488c639d">DiscordCoreAPI::ChannelType::Dm</a></div><div class="ttdeci">@ Dm</div><div class="ttdoc">Direct-Message.</div></div>
-<div class="ttc" id="aa00888_html_ggae05b1bfe988b0c2989b7bed279c9c95ca505a83f220c02df2f85c3810cd9ceb38"><div class="ttname"><a href="../../dd/d94/a00888.html#ggae05b1bfe988b0c2989b7bed279c9c95ca505a83f220c02df2f85c3810cd9ceb38">DiscordCoreAPI::ButtonStyle::Success</a></div><div class="ttdeci">@ Success</div><div class="ttdoc">Success.</div></div>
-<div class="ttc" id="aa00888_html_ggae05b1bfe988b0c2989b7bed279c9c95ca990816b607ebf99b1415760965e4d564"><div class="ttname"><a href="../../dd/d94/a00888.html#ggae05b1bfe988b0c2989b7bed279c9c95ca990816b607ebf99b1415760965e4d564">DiscordCoreAPI::ButtonStyle::Danger</a></div><div class="ttdeci">@ Danger</div><div class="ttdoc">Danger.</div></div>
 <div class="ttc" id="aa00890_html"><div class="ttname"><a href="../../d7/d46/a00890.html">DiscordCoreAPI</a></div><div class="ttdoc">The main namespace for this library.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00027">ApplicationCommandEntities.hpp:27</a></div></div>
-<div class="ttc" id="aa01969_html_a29d67b396279c61b4b4b0032d171f681"><div class="ttname"><a href="../../db/d49/a01969.html#a29d67b396279c61b4b4b0032d171f681">DiscordCoreAPI::Channels::getCachedChannelAsync</a></div><div class="ttdeci">static CoRoutine&lt; ChannelData &gt; getCachedChannelAsync(GetChannelData dataPackage)</div><div class="ttdoc">Collects a Channel from the library's cache.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d12/a00794_source.html#l00106">ChannelEntities.cpp:106</a></div></div>
-<div class="ttc" id="aa01993_html_a904d030f3edbf8efac15b2cebba3e37a"><div class="ttname"><a href="../../d0/dc1/a01993.html#a904d030f3edbf8efac15b2cebba3e37a">DiscordCoreAPI::CoRoutine&lt; void &gt;::get</a></div><div class="ttdeci">void get()</div><div class="ttdoc">Gets the resulting value of the CoRoutine.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5b/a00695_source.html#l00303">CoRoutine.hpp:303</a></div></div>
-<div class="ttc" id="aa02005_html_a497b6ef5b6407f58be5c6c6e85389fea"><div class="ttname"><a href="../../d3/d39/a02005.html#a497b6ef5b6407f58be5c6c6e85389fea">DiscordCoreAPI::DiscordCoreClient::getBotUser</a></div><div class="ttdeci">BotUser getBotUser()</div><div class="ttdoc">For collecting a copy of the current bot's User.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d72/a00803_source.html#l00121">DiscordCoreClient.cpp:121</a></div></div>
-<div class="ttc" id="aa02005_html_ac7c97f7a88b3f4a0a4699b6fcaa89619"><div class="ttname"><a href="../../d3/d39/a02005.html#ac7c97f7a88b3f4a0a4699b6fcaa89619">DiscordCoreAPI::DiscordCoreClient::commandController</a></div><div class="ttdeci">CommandController commandController</div><div class="ttdoc">A command controller.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbb/a00698_source.html#l00083">DiscordCoreClient.hpp:83</a></div></div>
-<div class="ttc" id="aa02313_html_a0a2318d4a6ca1fa3928db530b6c97cf9"><div class="ttname"><a href="../../d4/d16/a02313.html#a0a2318d4a6ca1fa3928db530b6c97cf9">DiscordCoreAPI::UserData::userName</a></div><div class="ttdeci">StringWrapper userName</div><div class="ttdoc">The user's userName, not unique across the platform identify.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l00295">FoundationEntities.hpp:295</a></div></div>
-<div class="ttc" id="aa02801_html_a2dd12454f3ecd05f4cfbd22b027268bd"><div class="ttname"><a href="../../d8/d1e/a02801.html#a2dd12454f3ecd05f4cfbd22b027268bd">DiscordCoreAPI::InputEventData::getAvatarUrl</a></div><div class="ttdeci">std::string getAvatarUrl()</div><div class="ttdoc">Gets the avatar Url of the last User to trigger this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2d/a00815_source.html#l00084">FoundationEntities.cpp:84</a></div></div>
-<div class="ttc" id="aa02801_html_a3ebc65bb67fbd74518199db64e40559c"><div class="ttname"><a href="../../d8/d1e/a02801.html#a3ebc65bb67fbd74518199db64e40559c">DiscordCoreAPI::InputEventData::getUserName</a></div><div class="ttdeci">std::string getUserName()</div><div class="ttdoc">Returns the userName of the last User to trigger this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2d/a00815_source.html#l00078">FoundationEntities.cpp:78</a></div></div>
+<div class="ttc" id="aa02349_html"><div class="ttname"><a href="../../dc/de0/a02349.html">DiscordCoreAPI::EmbedData</a></div><div class="ttdoc">Embed data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l00727">FoundationEntities.hpp:727</a></div></div>
+<div class="ttc" id="aa02349_html_a20ca60ec3235f44a223f3d3b687c0c9e"><div class="ttname"><a href="../../dc/de0/a02349.html#a20ca60ec3235f44a223f3d3b687c0c9e">DiscordCoreAPI::EmbedData::setTitle</a></div><div class="ttdeci">EmbedData &amp; setTitle(const std::string &amp;titleNew)</div><div class="ttdoc">Sets the title of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l00864">FoundationEntities.hpp:864</a></div></div>
+<div class="ttc" id="aa02349_html_a9d4066a4861408bc00eccb22a12db7f9"><div class="ttname"><a href="../../dc/de0/a02349.html#a9d4066a4861408bc00eccb22a12db7f9">DiscordCoreAPI::EmbedData::setDescription</a></div><div class="ttdeci">EmbedData &amp; setDescription(const std::string &amp;descriptionNew)</div><div class="ttdoc">Sets the description (the main contents) of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l00840">FoundationEntities.hpp:840</a></div></div>
+<div class="ttc" id="aa02349_html_ab417d83fddf9df80eca98e9ec6e888aa"><div class="ttname"><a href="../../dc/de0/a02349.html#ab417d83fddf9df80eca98e9ec6e888aa">DiscordCoreAPI::EmbedData::setColor</a></div><div class="ttdeci">EmbedData &amp; setColor(const std::string &amp;hexColorValueNew)</div><div class="ttdoc">Sets the color of the embed, by applying a hex-color value.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l00848">FoundationEntities.hpp:848</a></div></div>
+<div class="ttc" id="aa02349_html_ae356e6dc3c93658b7228b56da3187896"><div class="ttname"><a href="../../dc/de0/a02349.html#ae356e6dc3c93658b7228b56da3187896">DiscordCoreAPI::EmbedData::setTimeStamp</a></div><div class="ttdeci">EmbedData &amp; setTimeStamp(const std::string &amp;timeStamp)</div><div class="ttdoc">Sets the timestamp on the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l00818">FoundationEntities.hpp:818</a></div></div>
+<div class="ttc" id="aa02561_html"><div class="ttname"><a href="../../d1/d67/a02561.html">DiscordCoreAPI::WelcomeScreenChannelData</a></div><div class="ttdoc">Welcome screen Channel data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03388">FoundationEntities.hpp:3388</a></div></div>
+<div class="ttc" id="aa02561_html_a09c6aa1410f9e32e57ddaf0e62dc5859"><div class="ttname"><a href="../../d1/d67/a02561.html#a09c6aa1410f9e32e57ddaf0e62dc5859">DiscordCoreAPI::WelcomeScreenChannelData::description</a></div><div class="ttdeci">std::string description</div><div class="ttdoc">Description of the welcome Channel.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03389">FoundationEntities.hpp:3389</a></div></div>
+<div class="ttc" id="aa02561_html_a5f62299b2f15b6debe1ee73b3d7820d2"><div class="ttname"><a href="../../d1/d67/a02561.html#a5f62299b2f15b6debe1ee73b3d7820d2">DiscordCoreAPI::WelcomeScreenChannelData::channelId</a></div><div class="ttdeci">Snowflake channelId</div><div class="ttdoc">Id of the welcome Channel.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03391">FoundationEntities.hpp:3391</a></div></div>
+<div class="ttc" id="aa02561_html_aa09304d7e3bbb1ca3ae7d73d88b16d3c"><div class="ttname"><a href="../../d1/d67/a02561.html#aa09304d7e3bbb1ca3ae7d73d88b16d3c">DiscordCoreAPI::WelcomeScreenChannelData::emojiName</a></div><div class="ttdeci">std::string emojiName</div><div class="ttdoc">Emoji name for the Channel.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03390">FoundationEntities.hpp:3390</a></div></div>
 <div class="ttc" id="aa02801_html_a565fe2447237030a716f64b2599996dd"><div class="ttname"><a href="../../d8/d1e/a02801.html#a565fe2447237030a716f64b2599996dd">DiscordCoreAPI::InputEventData::getGuildId</a></div><div class="ttdeci">Snowflake getGuildId()</div><div class="ttdoc">Returns the Guild id, of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2d/a00815_source.html#l00132">FoundationEntities.cpp:132</a></div></div>
 <div class="ttc" id="aa02801_html_a97c397fe274250bfff73cf674810a8f5"><div class="ttname"><a href="../../d8/d1e/a02801.html#a97c397fe274250bfff73cf674810a8f5">DiscordCoreAPI::InputEventData::getChannelId</a></div><div class="ttdeci">Snowflake getChannelId()</div><div class="ttdoc">Returns the Channel id of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2d/a00815_source.html#l00120">FoundationEntities.cpp:120</a></div></div>
 <div class="ttc" id="aa02853_html"><div class="ttname"><a href="../../dc/da3/a02853.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l07780">FoundationEntities.hpp:7780</a></div></div>
-<div class="ttc" id="aa02853_html_a20009c042119fe1463a36ed29d74bb1b"><div class="ttname"><a href="../../dc/da3/a02853.html#a20009c042119fe1463a36ed29d74bb1b">DiscordCoreAPI::BaseFunctionArguments::discordCoreClient</a></div><div class="ttdeci">DiscordCoreClient * discordCoreClient</div><div class="ttdoc">A pointer to the instance of DiscordCoreClient.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l07781">FoundationEntities.hpp:7781</a></div></div>
 <div class="ttc" id="aa02853_html_a80eabf8007466c61abda009ea3070942"><div class="ttname"><a href="../../dc/da3/a02853.html#a80eabf8007466c61abda009ea3070942">DiscordCoreAPI::BaseFunctionArguments::eventData</a></div><div class="ttdeci">InputEventData eventData</div><div class="ttdoc">InputEventData representing the input event that triggered the command.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l07782">FoundationEntities.hpp:7782</a></div></div>
 <div class="ttc" id="aa02857_html"><div class="ttname"><a href="../../dd/dc1/a02857.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class DiscordCoreAPI_Dll for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l07797">FoundationEntities.hpp:7797</a></div></div>
-<div class="ttc" id="aa03013_html_a82ab9685bbc1cd69019bfb42e2870a0e"><div class="ttname"><a href="../../d1/db3/a03013.html#a82ab9685bbc1cd69019bfb42e2870a0e">DiscordCoreAPI::Guilds::getCachedGuildAsync</a></div><div class="ttdeci">static CoRoutine&lt; GuildData &gt; getCachedGuildAsync(GetGuildData dataPackage)</div><div class="ttdoc">Collects a Guild from the library's cache.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d60/a00818_source.html#l00272">GuildEntities.cpp:272</a></div></div>
-<div class="ttc" id="aa03121_html_a721365d0ef437397ea553634f88b8ecf"><div class="ttname"><a href="../../d5/dcb/a03121.html#a721365d0ef437397ea553634f88b8ecf">DiscordCoreAPI::InputEvents::deleteInputEventResponseAsync</a></div><div class="ttdeci">static CoRoutine&lt; void &gt; deleteInputEventResponseAsync(InputEventData &amp;dataPackage, int32_t timeDelayNew=0)</div><div class="ttdoc">Deletes a previously sent &quot;input-event-response&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/daf/a00830_source.html#l00101">InputEvents.cpp:101</a></div></div>
-<div class="ttc" id="aa03121_html_a91f7a025c00ec5b858a260ebcda49a3c"><div class="ttname"><a href="../../d5/dcb/a03121.html#a91f7a025c00ec5b858a260ebcda49a3c">DiscordCoreAPI::InputEvents::respondToInputEventAsync</a></div><div class="ttdeci">static CoRoutine&lt; InputEventData &gt; respondToInputEventAsync(RespondToInputEventData dataPackage)</div><div class="ttdoc">Responds to one of a number of types of &quot;InputEvents&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/daf/a00830_source.html#l00028">InputEvents.cpp:28</a></div></div>
+<div class="ttc" id="aa02953_html"><div class="ttname"><a href="../../dd/d72/a02953.html">DiscordCoreAPI::ModifyGuildWelcomeScreenData</a></div><div class="ttdoc">For modifying a Guild's welcome screen.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d04/a00713_source.html#l00234">GuildEntities.hpp:234</a></div></div>
+<div class="ttc" id="aa02953_html_a4a22a12c3c5e101c12771b23ba476bee"><div class="ttname"><a href="../../dd/d72/a02953.html#a4a22a12c3c5e101c12771b23ba476bee">DiscordCoreAPI::ModifyGuildWelcomeScreenData::description</a></div><div class="ttdeci">std::string description</div><div class="ttdoc">The description of the welcome screen.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d04/a00713_source.html#l00236">GuildEntities.hpp:236</a></div></div>
+<div class="ttc" id="aa02953_html_aa50e1d4eeec66b62be500baf56d1bef5"><div class="ttname"><a href="../../dd/d72/a02953.html#aa50e1d4eeec66b62be500baf56d1bef5">DiscordCoreAPI::ModifyGuildWelcomeScreenData::welcomeChannels</a></div><div class="ttdeci">std::vector&lt; WelcomeScreenChannelData &gt; welcomeChannels</div><div class="ttdoc">Welcome channels for the welcome screen.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d04/a00713_source.html#l00235">GuildEntities.hpp:235</a></div></div>
+<div class="ttc" id="aa02953_html_aca09a02e2f8e8154a33c7894aa79716e"><div class="ttname"><a href="../../dd/d72/a02953.html#aca09a02e2f8e8154a33c7894aa79716e">DiscordCoreAPI::ModifyGuildWelcomeScreenData::guildId</a></div><div class="ttdeci">Snowflake guildId</div><div class="ttdoc">The Guild for which to modify the welcome screen of.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d04/a00713_source.html#l00239">GuildEntities.hpp:239</a></div></div>
+<div class="ttc" id="aa02953_html_addf4d23685a727de4c24ab95fc6e7e38"><div class="ttname"><a href="../../dd/d72/a02953.html#addf4d23685a727de4c24ab95fc6e7e38">DiscordCoreAPI::ModifyGuildWelcomeScreenData::reason</a></div><div class="ttdeci">std::string reason</div><div class="ttdoc">The reason for modifying the welcome screen.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d04/a00713_source.html#l00238">GuildEntities.hpp:238</a></div></div>
+<div class="ttc" id="aa03013_html_a2afb26f9f55a8e1c8f4b190694489986"><div class="ttname"><a href="../../d1/db3/a03013.html#a2afb26f9f55a8e1c8f4b190694489986">DiscordCoreAPI::Guilds::modifyGuildWelcomeScreenAsync</a></div><div class="ttdeci">static CoRoutine&lt; WelcomeScreenData &gt; modifyGuildWelcomeScreenAsync(ModifyGuildWelcomeScreenData dataPackage)</div><div class="ttdoc">Modifies the Guild welcome screen.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d60/a00818_source.html#l00578">GuildEntities.cpp:578</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -370,7 +190,7 @@ $(document).ready(function(){initNavTree('dc/d78/a07209.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../da/d52/a07100.html">Guides</a></li><li class="navelem"><a class="el" href="../../de/dfd/a07214.html">Music-Bot Guide</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d6/d82/a07115.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d8/dc2/a07126.html">Guild Stuff</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

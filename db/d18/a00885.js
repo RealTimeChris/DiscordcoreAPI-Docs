@@ -57,8 +57,8 @@ var a00885 =
       [ "previousSong", "dd/d4f/a02845.html#a8340e3dbc09571714ab35fe82db33f20", null ],
       [ "wasItAFail", "dd/d4f/a02845.html#ad548cb870648ce735ebd46e1926118f9", null ]
     ] ],
-    [ "DiscordCoreAPI::VoiceConnection", "d1/ddd/a03693.html", [
-      [ "getChannelId", "d1/ddd/a03693.html#a954404e216608f548c855d13cfd0e6f1", null ]
+    [ "DiscordCoreAPI::VoiceConnection", "d3/d4a/a03689.html", [
+      [ "getChannelId", "d3/d4a/a03689.html#a4a27e63d4ee8ddfc5b823a75710112d6", null ]
     ] ],
     [ "DiscordCoreAPI::AudioFrameType", "db/d18/a00885.html#gacf6f4590968be95774b156cf050c996c", [
       [ "DiscordCoreAPI::AudioFrameType::Unset", "db/d18/a00885.html#ggacf6f4590968be95774b156cf050c996cac9f88e098f6fe4e4e112eeb05ccb9671", null ],

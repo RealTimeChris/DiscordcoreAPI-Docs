@@ -5,7 +5,7 @@ var searchData=
   ['basefunctionarguments_2',['BaseFunctionArguments',['../dc/da3/a02853.html',1,'DiscordCoreAPI']]],
   ['batcheditguildapplicationcommandpermissionsdata_3',['BatchEditGuildApplicationCommandPermissionsData',['../d7/d6d/a01769.html',1,'DiscordCoreAPI']]],
   ['beginguildprunedata_4',['BeginGuildPruneData',['../dc/d86/a02909.html',1,'DiscordCoreAPI']]],
-  ['botuser_5',['BotUser',['../dc/d7d/a03625.html',1,'DiscordCoreAPI']]],
+  ['botuser_5',['BotUser',['../dc/df8/a03621.html',1,'DiscordCoreAPI']]],
   ['bulkoverwriteglobalapplicationcommandsdata_6',['BulkOverwriteGlobalApplicationCommandsData',['../d2/d70/a01729.html',1,'DiscordCoreAPI']]],
   ['bulkoverwriteguildapplicationcommandsdata_7',['BulkOverwriteGuildApplicationCommandsData',['../d6/d72/a01753.html',1,'DiscordCoreAPI']]],
   ['buttoncollector_8',['ButtonCollector',['../d6/d04/a03193.html',1,'DiscordCoreAPI']]],

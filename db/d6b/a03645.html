@@ -105,29 +105,49 @@ $(document).ready(function(){initNavTree('db/d6b/a03645.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../dc/dd9/a03642.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::ShardingOptions Struct Reference<div class="ingroups"><a class="el" href="../../d7/d92/a00887.html">Utilities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::LoggingOptions Struct Reference<div class="ingroups"><a class="el" href="../../d7/d92/a00887.html">Utilities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Sharding options for the library.  
+<p>Logging options for the library.  
  <a href="../../db/d6b/a03645.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d5/dae/a00767_source.html">Utilities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:gab793f231bd27a906e5e69e384082a884"><td class="memItemLeft" align="right" valign="top">
-int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>numberOfShardsForThisProcess</b> { 1 }</td></tr>
-<tr class="memdesc:gab793f231bd27a906e5e69e384082a884"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of shards to launch on the current process. <br /></td></tr>
-<tr class="separator:gab793f231bd27a906e5e69e384082a884"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf08286df09d610c2df2a1dd6bc4d8fb0"><td class="memItemLeft" align="right" valign="top">
-int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>startingShard</b> { 0 }</td></tr>
-<tr class="memdesc:gaf08286df09d610c2df2a1dd6bc4d8fb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The first shard to start on this process. <br /></td></tr>
-<tr class="separator:gaf08286df09d610c2df2a1dd6bc4d8fb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae44c80e287a2702d8ce164e90ddceb3c"><td class="memItemLeft" align="right" valign="top">
-int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>totalNumberOfShards</b> { 1 }</td></tr>
-<tr class="memdesc:gae44c80e287a2702d8ce164e90ddceb3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The total number of shards that will be launched across all processes. <br /></td></tr>
-<tr class="separator:gae44c80e287a2702d8ce164e90ddceb3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadbdf07149ca05113d5658114e4d5aee2"><td class="memItemLeft" align="right" valign="top">
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>logFFMPEGErrorMessages</b> { false }</td></tr>
+<tr class="memdesc:gadbdf07149ca05113d5658114e4d5aee2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do we log FFMPEG error messages to cout? <br /></td></tr>
+<tr class="separator:gadbdf07149ca05113d5658114e4d5aee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab79b5ddc5c8bf5d6101e1748148e8968"><td class="memItemLeft" align="right" valign="top">
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>logFFMPEGSuccessMessages</b> { false }</td></tr>
+<tr class="memdesc:gab79b5ddc5c8bf5d6101e1748148e8968"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do we log FFMPEG success messages to cout? <br /></td></tr>
+<tr class="separator:gab79b5ddc5c8bf5d6101e1748148e8968"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2c8e32ca719f7a02d0a950c5e81f4e86"><td class="memItemLeft" align="right" valign="top">
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>logGeneralErrorMessages</b> { false }</td></tr>
+<tr class="memdesc:ga2c8e32ca719f7a02d0a950c5e81f4e86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do we log general error messages to cout? <br /></td></tr>
+<tr class="separator:ga2c8e32ca719f7a02d0a950c5e81f4e86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab748a5dc3c950f4a29ddb5938502a7a4"><td class="memItemLeft" align="right" valign="top">
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>logGeneralSuccessMessages</b> { false }</td></tr>
+<tr class="memdesc:gab748a5dc3c950f4a29ddb5938502a7a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do we log general success messages to cout? <br /></td></tr>
+<tr class="separator:gab748a5dc3c950f4a29ddb5938502a7a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa90f4dcfee2986a12868ec08b6a81b86"><td class="memItemLeft" align="right" valign="top">
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>logHttpsErrorMessages</b> { false }</td></tr>
+<tr class="memdesc:gaa90f4dcfee2986a12868ec08b6a81b86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do we log Http response error messages to cout? <br /></td></tr>
+<tr class="separator:gaa90f4dcfee2986a12868ec08b6a81b86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa781c41c6fc37532bf63f2f8ccc1c203"><td class="memItemLeft" align="right" valign="top">
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>logHttpsSuccessMessages</b> { false }</td></tr>
+<tr class="memdesc:gaa781c41c6fc37532bf63f2f8ccc1c203"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do we log Http response success messages to cout? <br /></td></tr>
+<tr class="separator:gaa781c41c6fc37532bf63f2f8ccc1c203"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1ae4294313beb1e81a145394cc2292a1"><td class="memItemLeft" align="right" valign="top">
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>logWebSocketErrorMessages</b> { false }</td></tr>
+<tr class="memdesc:ga1ae4294313beb1e81a145394cc2292a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do we log the websocket error messages to cout? <br /></td></tr>
+<tr class="separator:ga1ae4294313beb1e81a145394cc2292a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6b201a80503c27c534994796cdc782f4"><td class="memItemLeft" align="right" valign="top">
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>logWebSocketSuccessMessages</b> { false }</td></tr>
+<tr class="memdesc:ga6b201a80503c27c534994796cdc782f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do we log the websocket success messages to cout? <br /></td></tr>
+<tr class="separator:ga6b201a80503c27c534994796cdc782f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d5/dae/a00767_source.html">Utilities.hpp</a></li>
@@ -138,7 +158,7 @@ int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>totalNumberOfShard
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../db/d6b/a03645.html">ShardingOptions</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../db/d6b/a03645.html">LoggingOptions</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

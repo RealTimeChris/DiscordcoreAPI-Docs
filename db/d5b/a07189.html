@@ -102,11 +102,11 @@ $(document).ready(function(){initNavTree('db/d5b/a07189.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Getting Guild Voice Regions </div></div>
+  <div class="headertitle"><div class="title">Getting a Guild Preview </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Guild_Stuff_Getting_Guild_Voice_Regions"></a></p><ul>
-<li>Execute the, <code><a class="el" href="../../d1/db3/a03013.html#a9b96761c5f166c0e4091ec2d953295b6" title="Gets the list of voice regions for a particular server.">DiscordCoreAPI::Guilds::getGuildVoiceRegionsAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../d8/dea/a02913.html" title="For collecting a list of Guild voice regions.">DiscordCoreAPI::GetGuildVoiceRegionsData</a></code>, with a return value of type <code>auto</code> or <code>std::vector&lt;<a class="el" href="../../dc/d4e/a02449.html" title="Structure representing Voice Region Data.">DiscordCoreAPI::VoiceRegionData</a>&gt;</code>.</li>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Guild_Stuff_Getting_a_Guild_Preview"></a></p><ul>
+<li>Execute the, <code><a class="el" href="../../d1/db3/a03013.html#ada9465a849f859746ddea3a4a3240d27" title="Acquires the preview Data of a chosen Guild.">DiscordCoreAPI::Guilds::getGuildPreviewAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../da/d3c/a02881.html" title="For acquiring a Guild preview of a chosen Guild.">DiscordCoreAPI::GetGuildPreviewData</a></code>, with a return value of type <code>auto</code> or <code><a class="el" href="../../d6/dae/a02581.html" title="Data representing a single Guild preview.">DiscordCoreAPI::GuildPreviewData</a></code>.</li>
 <li>Call the function with <code>.get()</code> added to the end in order to wait for the results now.</li>
 </ul>
 <div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
@@ -137,14 +137,12 @@ $(document).ready(function(){initNavTree('db/d5b/a07189.html','../../'); initRes
 <div class="line"> </div>
 <div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../dc/da3/a02853.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
 <div class="line">            <span class="keywordflow">try</span> {</div>
-<div class="line">                <a class="code hl_struct" href="../../d8/dea/a02913.html">DiscordCoreAPI::GetGuildVoiceRegionsData</a> dataPackage01;</div>
-<div class="line">                dataPackage01.<a class="code hl_variable" href="../../d8/dea/a02913.html#adbaf368d762c82430393fee8af0706fc">guildId</a> = args.<a class="code hl_variable" href="../../dc/da3/a02853.html#a80eabf8007466c61abda009ea3070942">eventData</a>.<a class="code hl_function" href="../../d8/d1e/a02801.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
+<div class="line">                <a class="code hl_struct" href="../../da/d3c/a02881.html">DiscordCoreAPI::GetGuildPreviewData</a> dataPackage00;</div>
+<div class="line">                dataPackage00.<a class="code hl_variable" href="../../da/d3c/a02881.html#ae6145937379afffa1a90a607406df8d2">guildId</a> = args.<a class="code hl_variable" href="../../dc/da3/a02853.html#a80eabf8007466c61abda009ea3070942">eventData</a>.<a class="code hl_function" href="../../d8/d1e/a02801.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
 <div class="line"> </div>
-<div class="line">                <span class="keyword">auto</span> responseData = <a class="code hl_function" href="../../d1/db3/a03013.html#a9b96761c5f166c0e4091ec2d953295b6">DiscordCoreAPI::Guilds::getGuildVoiceRegionsAsync</a>(dataPackage01).get();</div>
+<div class="line">                <span class="keyword">auto</span> guild = <a class="code hl_function" href="../../d1/db3/a03013.html#ada9465a849f859746ddea3a4a3240d27">DiscordCoreAPI::Guilds::getGuildPreviewAsync</a>(dataPackage00).get();</div>
 <div class="line"> </div>
-<div class="line">                <span class="keywordflow">for</span> (<span class="keyword">auto</span> value: responseData) {</div>
-<div class="line">                    cout &lt;&lt; value.name &lt;&lt; endl;</div>
-<div class="line">                }</div>
+<div class="line">                cout &lt;&lt; <span class="stringliteral">&quot;THE NAME: &quot;</span> &lt;&lt; guild.name &lt;&lt; endl;</div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line">            } <span class="keywordflow">catch</span> (...) {</div>
@@ -165,9 +163,9 @@ $(document).ready(function(){initNavTree('db/d5b/a07189.html','../../'); initRes
 <div class="ttc" id="aa02853_html"><div class="ttname"><a href="../../dc/da3/a02853.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l07780">FoundationEntities.hpp:7780</a></div></div>
 <div class="ttc" id="aa02853_html_a80eabf8007466c61abda009ea3070942"><div class="ttname"><a href="../../dc/da3/a02853.html#a80eabf8007466c61abda009ea3070942">DiscordCoreAPI::BaseFunctionArguments::eventData</a></div><div class="ttdeci">InputEventData eventData</div><div class="ttdoc">InputEventData representing the input event that triggered the command.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l07782">FoundationEntities.hpp:7782</a></div></div>
 <div class="ttc" id="aa02857_html"><div class="ttname"><a href="../../dd/dc1/a02857.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class DiscordCoreAPI_Dll for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l07797">FoundationEntities.hpp:7797</a></div></div>
-<div class="ttc" id="aa02913_html"><div class="ttname"><a href="../../d8/dea/a02913.html">DiscordCoreAPI::GetGuildVoiceRegionsData</a></div><div class="ttdoc">For collecting a list of Guild voice regions.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d04/a00713_source.html#l00179">GuildEntities.hpp:179</a></div></div>
-<div class="ttc" id="aa02913_html_adbaf368d762c82430393fee8af0706fc"><div class="ttname"><a href="../../d8/dea/a02913.html#adbaf368d762c82430393fee8af0706fc">DiscordCoreAPI::GetGuildVoiceRegionsData::guildId</a></div><div class="ttdeci">Snowflake guildId</div><div class="ttdoc">The Guild for which to collect the voice regions from.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d04/a00713_source.html#l00180">GuildEntities.hpp:180</a></div></div>
-<div class="ttc" id="aa03013_html_a9b96761c5f166c0e4091ec2d953295b6"><div class="ttname"><a href="../../d1/db3/a03013.html#a9b96761c5f166c0e4091ec2d953295b6">DiscordCoreAPI::Guilds::getGuildVoiceRegionsAsync</a></div><div class="ttdeci">static CoRoutine&lt; std::vector&lt; VoiceRegionData &gt; &gt; getGuildVoiceRegionsAsync(GetGuildVoiceRegionsData dataPackage)</div><div class="ttdoc">Gets the list of voice regions for a particular server.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d60/a00818_source.html#l00437">GuildEntities.cpp:437</a></div></div>
+<div class="ttc" id="aa02881_html"><div class="ttname"><a href="../../da/d3c/a02881.html">DiscordCoreAPI::GetGuildPreviewData</a></div><div class="ttdoc">For acquiring a Guild preview of a chosen Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d04/a00713_source.html#l00108">GuildEntities.hpp:108</a></div></div>
+<div class="ttc" id="aa02881_html_ae6145937379afffa1a90a607406df8d2"><div class="ttname"><a href="../../da/d3c/a02881.html#ae6145937379afffa1a90a607406df8d2">DiscordCoreAPI::GetGuildPreviewData::guildId</a></div><div class="ttdeci">Snowflake guildId</div><div class="ttdoc">The id of the Guild's preview to acquire.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d04/a00713_source.html#l00109">GuildEntities.hpp:109</a></div></div>
+<div class="ttc" id="aa03013_html_ada9465a849f859746ddea3a4a3240d27"><div class="ttname"><a href="../../d1/db3/a03013.html#ada9465a849f859746ddea3a4a3240d27">DiscordCoreAPI::Guilds::getGuildPreviewAsync</a></div><div class="ttdeci">static CoRoutine&lt; GuildPreviewData &gt; getGuildPreviewAsync(GetGuildPreviewData dataPackage)</div><div class="ttdoc">Acquires the preview Data of a chosen Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d60/a00818_source.html#l00286">GuildEntities.cpp:286</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -175,7 +173,7 @@ $(document).ready(function(){initNavTree('db/d5b/a07189.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d1d/a07099.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../da/d25/a07110.html">Guild Stuff</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d6/d82/a07115.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d8/dc2/a07126.html">Guild Stuff</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

@@ -102,11 +102,11 @@ $(document).ready(function(){initNavTree('de/de6/a07297.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Joining a Thread </div></div>
+  <div class="headertitle"><div class="title">Deleting a Stage Instance </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Thread_Stuff_Joining_a_Thread"></a></p><ul>
-<li>Execute the, <code><a class="el" href="../../de/d29/a03573.html#af4883d8cd3b60bb444e068889c2b7484" title="Joins a Thread.">DiscordCoreAPI::Threads::joinThreadAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../db/d0f/a03525.html" title="For joining a Thread.">DiscordCoreAPI::JoinThreadData</a></code>, with a return value of type <code>void</code>.</li>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Stage_Instance_Stuff_Deleting_a_Stage_Instance"></a></p><ul>
+<li>Execute the, <code><a class="el" href="../../d2/d50/a03473.html#aaffccd20e15a5005c628eaf5fd24f30e" title="Deletes a StageInstance.">DiscordCoreAPI::StageInstances::deleteStageInstanceAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../da/da5/a03465.html" title="For deleting a single StageInstance.">DiscordCoreAPI::DeleteStageInstanceData</a></code>, with a return value of type <code>void</code>.</li>
 <li>Call the function with <code>.get()</code> added to the end in order to wait for the results now.</li>
 </ul>
 <div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
@@ -131,22 +131,25 @@ $(document).ready(function(){initNavTree('de/de6/a07297.html','../../'); initRes
 <div class="line">            this-&gt;helpEmbed = msgEmbed;</div>
 <div class="line">        }</div>
 <div class="line"> </div>
-<div class="line">        std::unique_ptr&lt;DiscordCoreAPI::BaseFunction&gt; create() {</div>
+<div class="line">        unique_ptr&lt;DiscordCoreAPI::BaseFunction&gt; create() {</div>
 <div class="line">            <span class="keywordflow">return</span> std::make_unique&lt;Test&gt;();</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../dc/da3/a02853.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
 <div class="line">            <span class="keywordflow">try</span> {</div>
-<div class="line">                <a class="code hl_struct" href="../../db/d0f/a03525.html">DiscordCoreAPI::JoinThreadData</a> dataPackage;</div>
-<div class="line">                dataPackage.<a class="code hl_variable" href="../../db/d0f/a03525.html#a4996fd04b8e8833fcbbf0a44a039a969">channelId</a> = <span class="stringliteral">&quot;909400437902413896&quot;</span>;</div>
+<div class="line">                <a class="code hl_struct" href="../../da/da5/a03465.html">DiscordCoreAPI::DeleteStageInstanceData</a> dataPackage;</div>
+<div class="line">                dataPackage.<a class="code hl_variable" href="../../da/da5/a03465.html#a9060c3d7910893973ddd1c4e7d3f02de">channelId</a> = <span class="stringliteral">&quot;914726178022101052&quot;</span>;</div>
+<div class="line">                dataPackage.<a class="code hl_variable" href="../../da/da5/a03465.html#a3cd70e16f06059b2547a4d86f11f81a9">reason</a> = <span class="stringliteral">&quot;TESTING!&quot;</span>;</div>
 <div class="line"> </div>
-<div class="line">                <a class="code hl_function" href="../../de/d29/a03573.html#af4883d8cd3b60bb444e068889c2b7484">DiscordCoreAPI::Threads::joinThreadAsync</a>(dataPackage).<a class="code hl_function" href="../../d0/dc1/a01993.html#a904d030f3edbf8efac15b2cebba3e37a">get</a>();</div>
+<div class="line">                <a class="code hl_function" href="../../d2/d50/a03473.html#aaffccd20e15a5005c628eaf5fd24f30e">DiscordCoreAPI::StageInstances::deleteStageInstanceAsync</a>(dataPackage).<a class="code hl_function" href="../../d0/dc1/a01993.html#a904d030f3edbf8efac15b2cebba3e37a">get</a>();</div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line">            } <span class="keywordflow">catch</span> (...) {</div>
 <div class="line">                rethrowException(<span class="stringliteral">&quot;Test::execute()&quot;</span>);</div>
 <div class="line">            }</div>
 <div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">virtual</span> ~Test() = <span class="keywordflow">default</span>;</div>
 <div class="line">    };</div>
 <div class="line">}</div>
 <div class="ttc" id="aa00725_html"><div class="ttname"><a href="../../d8/db9/a00725.html">Index.hpp</a></div></div>
@@ -160,9 +163,10 @@ $(document).ready(function(){initNavTree('de/de6/a07297.html','../../'); initRes
 <div class="ttc" id="aa02349_html_ae356e6dc3c93658b7228b56da3187896"><div class="ttname"><a href="../../dc/de0/a02349.html#ae356e6dc3c93658b7228b56da3187896">DiscordCoreAPI::EmbedData::setTimeStamp</a></div><div class="ttdeci">EmbedData &amp; setTimeStamp(const std::string &amp;timeStamp)</div><div class="ttdoc">Sets the timestamp on the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l00818">FoundationEntities.hpp:818</a></div></div>
 <div class="ttc" id="aa02853_html"><div class="ttname"><a href="../../dc/da3/a02853.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l07780">FoundationEntities.hpp:7780</a></div></div>
 <div class="ttc" id="aa02857_html"><div class="ttname"><a href="../../dd/dc1/a02857.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class DiscordCoreAPI_Dll for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l07797">FoundationEntities.hpp:7797</a></div></div>
-<div class="ttc" id="aa03525_html"><div class="ttname"><a href="../../db/d0f/a03525.html">DiscordCoreAPI::JoinThreadData</a></div><div class="ttdoc">For joining a Thread.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4a/a00758_source.html#l00118">ThreadEntities.hpp:118</a></div></div>
-<div class="ttc" id="aa03525_html_a4996fd04b8e8833fcbbf0a44a039a969"><div class="ttname"><a href="../../db/d0f/a03525.html#a4996fd04b8e8833fcbbf0a44a039a969">DiscordCoreAPI::JoinThreadData::channelId</a></div><div class="ttdeci">Snowflake channelId</div><div class="ttdoc">The id of the Thread to join.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4a/a00758_source.html#l00119">ThreadEntities.hpp:119</a></div></div>
-<div class="ttc" id="aa03573_html_af4883d8cd3b60bb444e068889c2b7484"><div class="ttname"><a href="../../de/d29/a03573.html#af4883d8cd3b60bb444e068889c2b7484">DiscordCoreAPI::Threads::joinThreadAsync</a></div><div class="ttdeci">static CoRoutine&lt; void &gt; joinThreadAsync(JoinThreadData dataPackage)</div><div class="ttdoc">Joins a Thread.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5e/a00860_source.html#l00085">ThreadEntities.cpp:85</a></div></div>
+<div class="ttc" id="aa03465_html"><div class="ttname"><a href="../../da/da5/a03465.html">DiscordCoreAPI::DeleteStageInstanceData</a></div><div class="ttdoc">For deleting a single StageInstance.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d5c/a00752_source.html#l00051">StageInstanceEntities.hpp:51</a></div></div>
+<div class="ttc" id="aa03465_html_a3cd70e16f06059b2547a4d86f11f81a9"><div class="ttname"><a href="../../da/da5/a03465.html#a3cd70e16f06059b2547a4d86f11f81a9">DiscordCoreAPI::DeleteStageInstanceData::reason</a></div><div class="ttdeci">std::string reason</div><div class="ttdoc">Reason for deleting the StageInstance.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d5c/a00752_source.html#l00053">StageInstanceEntities.hpp:53</a></div></div>
+<div class="ttc" id="aa03465_html_a9060c3d7910893973ddd1c4e7d3f02de"><div class="ttname"><a href="../../da/da5/a03465.html#a9060c3d7910893973ddd1c4e7d3f02de">DiscordCoreAPI::DeleteStageInstanceData::channelId</a></div><div class="ttdeci">Snowflake channelId</div><div class="ttdoc">The Channel Id of the StageInstance.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d5c/a00752_source.html#l00052">StageInstanceEntities.hpp:52</a></div></div>
+<div class="ttc" id="aa03473_html_aaffccd20e15a5005c628eaf5fd24f30e"><div class="ttname"><a href="../../d2/d50/a03473.html#aaffccd20e15a5005c628eaf5fd24f30e">DiscordCoreAPI::StageInstances::deleteStageInstanceAsync</a></div><div class="ttdeci">static CoRoutine&lt; void &gt; deleteStageInstanceAsync(DeleteStageInstanceData dataPackage)</div><div class="ttdoc">Deletes a StageInstance.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2f/a00854_source.html#l00083">StageInstanceEntities.cpp:83</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -170,7 +174,7 @@ $(document).ready(function(){initNavTree('de/de6/a07297.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d1d/a07099.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d8/d20/a07120.html">Thread Stuff</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d6/d82/a07115.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d7/d57/a07134.html">Stage-Instance Stuff</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

@@ -1136,7 +1136,7 @@ $(document).ready(function(){initNavTree('df/d0e/a00800_source.html','../../'); 
 <div class="line"><a id="l01029" name="l01029"></a><span class="lineno"> 1029</span>    <span class="keywordtype">void</span> StickerVector::parseObject(<span class="keyword">const</span> nlohmann::json&amp; jsonObjectData, StickerVector* pDataStructure) {</div>
 <div class="line"><a id="l01030" name="l01030"></a><span class="lineno"> 1030</span>        pDataStructure-&gt;theStickers.reserve(jsonObjectData.size());</div>
 <div class="line"><a id="l01031" name="l01031"></a><span class="lineno"> 1031</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; value: jsonObjectData) {</div>
-<div class="line"><a id="l01032" name="l01032"></a><span class="lineno"> 1032</span>            <a class="code hl_class" href="../../d8/dbb/a03501.html">DiscordCoreAPI::Sticker</a> newData{ value };</div>
+<div class="line"><a id="l01032" name="l01032"></a><span class="lineno"> 1032</span>            <a class="code hl_class" href="../../dc/d8f/a03497.html">DiscordCoreAPI::Sticker</a> newData{ value };</div>
 <div class="line"><a id="l01033" name="l01033"></a><span class="lineno"> 1033</span>            pDataStructure-&gt;theStickers.push_back(newData);</div>
 <div class="line"><a id="l01034" name="l01034"></a><span class="lineno"> 1034</span>        }</div>
 <div class="line"><a id="l01035" name="l01035"></a><span class="lineno"> 1035</span>        pDataStructure-&gt;theStickers.shrink_to_fit();</div>
@@ -1327,7 +1327,7 @@ $(document).ready(function(){initNavTree('df/d0e/a00800_source.html','../../'); 
 <div class="line"><a id="l01220" name="l01220"></a><span class="lineno"> 1220</span>    <span class="keywordtype">void</span> UserVector::parseObject(<span class="keyword">const</span> nlohmann::json&amp; jsonObjectData, UserVector* pDataStructure) {</div>
 <div class="line"><a id="l01221" name="l01221"></a><span class="lineno"> 1221</span>        pDataStructure-&gt;theUsers.reserve(jsonObjectData.size());</div>
 <div class="line"><a id="l01222" name="l01222"></a><span class="lineno"> 1222</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; value: jsonObjectData) {</div>
-<div class="line"><a id="l01223" name="l01223"></a><span class="lineno"> 1223</span>            <a class="code hl_class" href="../../d4/d35/a03617.html">DiscordCoreAPI::User</a> newData{ value };</div>
+<div class="line"><a id="l01223" name="l01223"></a><span class="lineno"> 1223</span>            <a class="code hl_class" href="../../d6/de0/a03613.html">DiscordCoreAPI::User</a> newData{ value };</div>
 <div class="line"><a id="l01224" name="l01224"></a><span class="lineno"> 1224</span>            pDataStructure-&gt;theUsers.push_back(newData);</div>
 <div class="line"><a id="l01225" name="l01225"></a><span class="lineno"> 1225</span>        }</div>
 <div class="line"><a id="l01226" name="l01226"></a><span class="lineno"> 1226</span>        pDataStructure-&gt;theUsers.shrink_to_fit();</div>
@@ -1386,7 +1386,7 @@ $(document).ready(function(){initNavTree('df/d0e/a00800_source.html','../../'); 
 <div class="line"><a id="l01279" name="l01279"></a><span class="lineno"> 1279</span>    <span class="keywordtype">void</span> WebHookVector::parseObject(<span class="keyword">const</span> nlohmann::json&amp; jsonObjectData, WebHookVector* pDataStructure) {</div>
 <div class="line"><a id="l01280" name="l01280"></a><span class="lineno"> 1280</span>        pDataStructure-&gt;theWebHooks.reserve(jsonObjectData.size());</div>
 <div class="line"><a id="l01281" name="l01281"></a><span class="lineno"> 1281</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; value: jsonObjectData) {</div>
-<div class="line"><a id="l01282" name="l01282"></a><span class="lineno"> 1282</span>            <a class="code hl_class" href="../../d4/dd0/a03749.html">DiscordCoreAPI::WebHook</a> newData{ value };</div>
+<div class="line"><a id="l01282" name="l01282"></a><span class="lineno"> 1282</span>            <a class="code hl_class" href="../../d7/ded/a03745.html">DiscordCoreAPI::WebHook</a> newData{ value };</div>
 <div class="line"><a id="l01283" name="l01283"></a><span class="lineno"> 1283</span>            pDataStructure-&gt;theWebHooks.push_back(newData);</div>
 <div class="line"><a id="l01284" name="l01284"></a><span class="lineno"> 1284</span>        }</div>
 <div class="line"><a id="l01285" name="l01285"></a><span class="lineno"> 1285</span>        pDataStructure-&gt;theWebHooks.shrink_to_fit();</div>
@@ -1459,9 +1459,9 @@ $(document).ready(function(){initNavTree('df/d0e/a00800_source.html','../../'); 
 <div class="ttc" id="aa03249_html"><div class="ttname"><a href="../../d6/d24/a03249.html">DiscordCoreAPI::Message</a></div><div class="ttdoc">A single Message.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dc0/a00734_source.html#l00252">MessageEntities.hpp:252</a></div></div>
 <div class="ttc" id="aa03313_html"><div class="ttname"><a href="../../d8/dde/a03313.html">DiscordCoreAPI::Reaction</a></div><div class="ttdoc">A single Reaction.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/db2/a00737_source.html#l00153">ReactionEntities.hpp:153</a></div></div>
 <div class="ttc" id="aa03365_html"><div class="ttname"><a href="../../d7/d13/a03365.html">DiscordCoreAPI::Role</a></div><div class="ttdoc">A single Role.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/a00740_source.html#l00174">RoleEntities.hpp:174</a></div></div>
-<div class="ttc" id="aa03501_html"><div class="ttname"><a href="../../d8/dbb/a03501.html">DiscordCoreAPI::Sticker</a></div><div class="ttdoc">A single Sticker.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/ddd/a00755_source.html#l00071">StickerEntities.hpp:71</a></div></div>
-<div class="ttc" id="aa03617_html"><div class="ttname"><a href="../../d4/d35/a03617.html">DiscordCoreAPI::User</a></div><div class="ttdoc">A single User.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d2c/a00764_source.html#l00110">UserEntities.hpp:110</a></div></div>
-<div class="ttc" id="aa03749_html"><div class="ttname"><a href="../../d4/dd0/a03749.html">DiscordCoreAPI::WebHook</a></div><div class="ttdoc">A single WebHook.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dba/a00773_source.html#l00280">WebHookEntities.hpp:280</a></div></div>
+<div class="ttc" id="aa03497_html"><div class="ttname"><a href="../../dc/d8f/a03497.html">DiscordCoreAPI::Sticker</a></div><div class="ttdoc">A single Sticker.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/ddd/a00755_source.html#l00071">StickerEntities.hpp:71</a></div></div>
+<div class="ttc" id="aa03613_html"><div class="ttname"><a href="../../d6/de0/a03613.html">DiscordCoreAPI::User</a></div><div class="ttdoc">A single User.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d2c/a00764_source.html#l00110">UserEntities.hpp:110</a></div></div>
+<div class="ttc" id="aa03745_html"><div class="ttname"><a href="../../d7/ded/a03745.html">DiscordCoreAPI::WebHook</a></div><div class="ttdoc">A single WebHook.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dba/a00773_source.html#l00280">WebHookEntities.hpp:280</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->

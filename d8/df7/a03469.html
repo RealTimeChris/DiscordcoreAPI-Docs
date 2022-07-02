@@ -103,30 +103,57 @@ $(document).ready(function(){initNavTree('d8/df7/a03469.html','../../'); initRes
 
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d7/db0/a03466.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::DeleteStageInstanceData Struct Reference</div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::StageInstance Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For deleting a single <a class="el" href="../../d2/d50/a03473.html" title="A single StageInstance.">StageInstance</a>.  
+<p>A single <a class="el" href="../../d8/df7/a03469.html" title="A single StageInstance.">StageInstance</a>.  
  <a href="../../d8/df7/a03469.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../dd/d5c/a00752_source.html">StageInstanceEntities.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for DiscordCoreAPI::StageInstance:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/db5/a03468.svg" width="243" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Public Data Members</h2></td></tr>
-<tr class="memitem:a9060c3d7910893973ddd1c4e7d3f02de"><td class="memItemLeft" align="right" valign="top"><a id="a9060c3d7910893973ddd1c4e7d3f02de" name="a9060c3d7910893973ddd1c4e7d3f02de"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_methods_a02305"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a02305')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d7/dd6/a02305.html">DiscordCoreAPI::DiscordEntity</a></td></tr>
+<tr class="memitem:a880fa695445dc41f6d371d2a6ef1e8c0 inherit pub_methods_a02305"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd6/a02305.html#a880fa695445dc41f6d371d2a6ef1e8c0">getCreatedAtTimestamp</a> (<a class="el" href="../../d7/d92/a00887.html#ga5f837e6437665f0a390fe2c6271e3a91">TimeFormat</a> timeFormat)</td></tr>
+<tr class="memdesc:a880fa695445dc41f6d371d2a6ef1e8c0 inherit pub_methods_a02305"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the snowflake-id into a time and date stamp.  <a href="../../d7/dd6/a02305.html#a880fa695445dc41f6d371d2a6ef1e8c0">More...</a><br /></td></tr>
+<tr class="separator:a880fa695445dc41f6d371d2a6ef1e8c0 inherit pub_methods_a02305"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_a02573"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_a02573')"><img src="../../closed.png" alt="-"/>&#160;Public Data Members inherited from <a class="el" href="../../d2/ddf/a02573.html">DiscordCoreAPI::StageInstanceData</a></td></tr>
+<tr class="memitem:affe58dc268b416ebb4ba995765d32a01 inherit pub_attribs_a02573"><td class="memItemLeft" align="right" valign="top"><a id="affe58dc268b416ebb4ba995765d32a01" name="affe58dc268b416ebb4ba995765d32a01"></a>
 <a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>channelId</b> {}</td></tr>
-<tr class="memdesc:a9060c3d7910893973ddd1c4e7d3f02de"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../d2/d6f/a01957.html" title="A Channel object.">Channel</a> Id of the <a class="el" href="../../d2/d50/a03473.html" title="A single StageInstance.">StageInstance</a>. <br /></td></tr>
-<tr class="separator:a9060c3d7910893973ddd1c4e7d3f02de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3cd70e16f06059b2547a4d86f11f81a9"><td class="memItemLeft" align="right" valign="top"><a id="a3cd70e16f06059b2547a4d86f11f81a9" name="a3cd70e16f06059b2547a4d86f11f81a9"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>reason</b> {}</td></tr>
-<tr class="memdesc:a3cd70e16f06059b2547a4d86f11f81a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reason for deleting the <a class="el" href="../../d2/d50/a03473.html" title="A single StageInstance.">StageInstance</a>. <br /></td></tr>
-<tr class="separator:a3cd70e16f06059b2547a4d86f11f81a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:affe58dc268b416ebb4ba995765d32a01 inherit pub_attribs_a02573"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../d2/d6f/a01957.html" title="A Channel object.">Channel</a>'s id. <br /></td></tr>
+<tr class="separator:affe58dc268b416ebb4ba995765d32a01 inherit pub_attribs_a02573"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a261393f67282e676617c753361477c inherit pub_attribs_a02573"><td class="memItemLeft" align="right" valign="top"><a id="a4a261393f67282e676617c753361477c" name="a4a261393f67282e676617c753361477c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>discoverableDisabled</b> { false }</td></tr>
+<tr class="memdesc:a4a261393f67282e676617c753361477c inherit pub_attribs_a02573"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is it discoverable? <br /></td></tr>
+<tr class="separator:a4a261393f67282e676617c753361477c inherit pub_attribs_a02573"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03f79b8fc738795b665cb4f087e2fe1c inherit pub_attribs_a02573"><td class="memItemLeft" align="right" valign="top"><a id="a03f79b8fc738795b665cb4f087e2fe1c" name="a03f79b8fc738795b665cb4f087e2fe1c"></a>
+<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildId</b> {}</td></tr>
+<tr class="memdesc:a03f79b8fc738795b665cb4f087e2fe1c inherit pub_attribs_a02573"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../d0/db8/a03001.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> id for which the <a class="el" href="../../d2/d6f/a01957.html" title="A Channel object.">Channel</a> exists in. <br /></td></tr>
+<tr class="separator:a03f79b8fc738795b665cb4f087e2fe1c inherit pub_attribs_a02573"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff456f87ff49d6ccb7001374347e6a0d inherit pub_attribs_a02573"><td class="memItemLeft" align="right" valign="top"><a id="aff456f87ff49d6ccb7001374347e6a0d" name="aff456f87ff49d6ccb7001374347e6a0d"></a>
+<a class="el" href="../../dd/d94/a00888.html#ga2d811bf63fc62a193d2cd7a7a8eca1ff">StageInstancePrivacyLevel</a>&#160;</td><td class="memItemRight" valign="bottom"><b>privacyLevel</b> { 0 }</td></tr>
+<tr class="memdesc:aff456f87ff49d6ccb7001374347e6a0d inherit pub_attribs_a02573"><td class="mdescLeft">&#160;</td><td class="mdescRight">Privacy level of the <a class="el" href="../../d2/d6f/a01957.html" title="A Channel object.">Channel</a>. <br /></td></tr>
+<tr class="separator:aff456f87ff49d6ccb7001374347e6a0d inherit pub_attribs_a02573"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd3449aa2f7f4909fd6fb4a098130f38 inherit pub_attribs_a02573"><td class="memItemLeft" align="right" valign="top"><a id="acd3449aa2f7f4909fd6fb4a098130f38" name="acd3449aa2f7f4909fd6fb4a098130f38"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>topic</b> {}</td></tr>
+<tr class="memdesc:acd3449aa2f7f4909fd6fb4a098130f38 inherit pub_attribs_a02573"><td class="mdescLeft">&#160;</td><td class="mdescRight">The topic of the <a class="el" href="../../d8/df7/a03469.html" title="A single StageInstance.">StageInstance</a>. <br /></td></tr>
+<tr class="separator:acd3449aa2f7f4909fd6fb4a098130f38 inherit pub_attribs_a02573"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_a02305"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_a02305')"><img src="../../closed.png" alt="-"/>&#160;Public Data Members inherited from <a class="el" href="../../d7/dd6/a02305.html">DiscordCoreAPI::DiscordEntity</a></td></tr>
+<tr class="memitem:a903c33f2f50e17293b409cfe33bcd5e9 inherit pub_attribs_a02305"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd6/a02305.html#a903c33f2f50e17293b409cfe33bcd5e9">id</a> {}</td></tr>
+<tr class="separator:a903c33f2f50e17293b409cfe33bcd5e9 inherit pub_attribs_a02305"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="../../dd/d5c/a00752_source.html">StageInstanceEntities.hpp</a></li>
+<li><a class="el" href="../../df/d0e/a00800_source.html">DataParsingFunctions.cpp</a></li>
+<li><a class="el" href="../../d6/d2f/a00854_source.html">StageInstanceEntities.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -134,7 +161,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>reason</b> {}<
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d8/df7/a03469.html">DeleteStageInstanceData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d8/df7/a03469.html">StageInstance</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

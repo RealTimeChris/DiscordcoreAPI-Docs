@@ -37,7 +37,7 @@
 <area shape="rect" id="node4" href="$d5/d36/a01773.html" title="A single ApplicationCommand." alt="" coords="590,57,777,98"/>
 <area shape="rect" id="node11" href="$d8/d3a/a01869.html" title="Represents an auto&#45;moderation&#45;rule." alt="" coords="564,428,803,455"/>
 <area shape="rect" id="node13" href="$d2/d6f/a01957.html" title="A Channel object." alt="" coords="599,487,768,513"/>
-<area shape="rect" id="node14" href="$dd/d87/a03569.html" title="Represents a single Thread." alt="" coords="857,487,1019,513"/>
+<area shape="rect" id="node14" href="$de/d5d/a03565.html" title="Represents a single Thread." alt="" coords="857,487,1019,513"/>
 <area shape="rect" id="node21" href="$d0/db8/a03001.html" title="A discord Guild. Used to connect to/disconnect from voice." alt="" coords="607,836,759,863"/>
 <area shape="rect" id="node23" href="$d7/d8c/a03049.html" title="A single GuildMember." alt="" coords="584,887,783,913"/>
 <area shape="rect" id="node25" href="$dc/d45/a03085.html" title="A single GuildScheduledEvent responseData structure." alt="" coords="577,938,790,979"/>
@@ -46,9 +46,9 @@
 <area shape="rect" id="node31" href="$d6/d24/a03249.html" title="A single Message." alt="" coords="851,1105,1025,1132"/>
 <area shape="rect" id="node37" href="$d8/dde/a03313.html" title="A single Reaction." alt="" coords="597,1375,770,1401"/>
 <area shape="rect" id="node39" href="$d7/d13/a03365.html" title="A single Role." alt="" coords="609,1425,757,1452"/>
-<area shape="rect" id="node41" href="$d2/d50/a03473.html" title="A single StageInstance." alt="" coords="581,1476,786,1503"/>
-<area shape="rect" id="node43" href="$d8/dbb/a03501.html" title="A single Sticker." alt="" coords="602,1527,765,1553"/>
-<area shape="rect" id="node49" href="$d4/d35/a03617.html" title="A single User." alt="" coords="609,1796,758,1823"/>
-<area shape="rect" id="node50" href="$dc/d7d/a03625.html" title="A type of User, to represent the Bot and some of its associated endpoints." alt="" coords="853,1796,1023,1823"/>
-<area shape="rect" id="node52" href="$d4/dd0/a03749.html" title="A single WebHook." alt="" coords="594,1847,773,1873"/>
+<area shape="rect" id="node41" href="$d8/df7/a03469.html" title="A single StageInstance." alt="" coords="581,1476,786,1503"/>
+<area shape="rect" id="node43" href="$dc/d8f/a03497.html" title="A single Sticker." alt="" coords="602,1527,765,1553"/>
+<area shape="rect" id="node49" href="$d6/de0/a03613.html" title="A single User." alt="" coords="609,1796,758,1823"/>
+<area shape="rect" id="node50" href="$dc/df8/a03621.html" title="A type of User, to represent the Bot and some of its associated endpoints." alt="" coords="853,1796,1023,1823"/>
+<area shape="rect" id="node52" href="$d7/ded/a03745.html" title="A single WebHook." alt="" coords="594,1847,773,1873"/>
 </map>

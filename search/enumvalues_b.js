@@ -1,8 +1,8 @@
 var searchData=
 [
   ['large_0',['Large',['../dd/d94/a00888.html#gga134047ca54524ec347c753ff80349a06a3a69b34ce86dacb205936a8094f6c743',1,'DiscordCoreAPI']]],
-  ['link_1',['Link',['../dd/d94/a00888.html#ggae05b1bfe988b0c2989b7bed279c9c95ca97e7c9a7d06eac006a28bf05467fcc8b',1,'DiscordCoreAPI']]],
-  ['link_2',['link',['../dd/d94/a00888.html#gga0d827e203b3492c85c6ad56a04e6a2dca2a304a1348456ccd2234cd71a81bd338',1,'DiscordCoreAPI']]],
+  ['link_1',['link',['../dd/d94/a00888.html#gga0d827e203b3492c85c6ad56a04e6a2dca2a304a1348456ccd2234cd71a81bd338',1,'DiscordCoreAPI']]],
+  ['link_2',['Link',['../dd/d94/a00888.html#ggae05b1bfe988b0c2989b7bed279c9c95ca97e7c9a7d06eac006a28bf05467fcc8b',1,'DiscordCoreAPI']]],
   ['listen_3',['Listen',['../dd/d94/a00888.html#gga86a83f66f1f5372938c82a349188050bace6802b46091c31e2ec2363883fe8369',1,'DiscordCoreAPI']]],
   ['listening_4',['Listening',['../dd/d94/a00888.html#gga2274697e9d364c27f24c3dc688c9b88da962ef616821625a13a028ac14ac0fef8',1,'DiscordCoreAPI']]],
   ['loading_5',['Loading',['../dd/d94/a00888.html#gga59de4f3c2326235571e5b4c135f574eda16bfbf9c462762cf1cba4134ec53c504',1,'DiscordCoreAPI']]],

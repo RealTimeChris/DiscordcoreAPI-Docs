@@ -102,11 +102,11 @@ $(document).ready(function(){initNavTree('d7/de3/a07176.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Getting a Guild Vanity Invite </div></div>
+  <div class="headertitle"><div class="title">Getting Voice Regions </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Guild_Stuff_Getting_a_Guild_Vanity_Invite"></a></p><ul>
-<li>Execute the, <code><a class="el" href="../../d1/db3/a03013.html#a5aaf20b371d866854e3d80648d5a50ae" title="Gets the vanity invite responseData from a particular server.">DiscordCoreAPI::Guilds::getGuildVanityInviteAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../df/d7d/a02941.html" title="For geting the vanity invite responseData of a Guild.">DiscordCoreAPI::GetGuildVanityInviteData</a></code>, with a return value of type <code>auto</code> or <code><a class="el" href="../../df/d40/a02609.html" title="Invite data.">DiscordCoreAPI::InviteData</a></code>.</li>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Channel_Stuff_Getting_Voice_Regions"></a></p><ul>
+<li>Execute the, <code><a class="el" href="../../db/d49/a01969.html#ad95e0e4d584ab0ae78749092ee40089e" title="Collect a list of voice regions that are usable for the RTC-Region option of a given Channel.">DiscordCoreAPI::Channels::getVoiceRegionsAsync()</a></code> function, with a return value of type <code>auto</code> or <code>vector&lt;<a class="el" href="../../dc/d4e/a02449.html" title="Structure representing Voice Region Data.">DiscordCoreAPI::VoiceRegionData</a>&gt;</code>.</li>
 <li>Call the function with <code>.get()</code> added to the end in order to wait for the results now.</li>
 </ul>
 <div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
@@ -137,34 +137,32 @@ $(document).ready(function(){initNavTree('d7/de3/a07176.html','../../'); initRes
 <div class="line"> </div>
 <div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../dc/da3/a02853.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
 <div class="line">            <span class="keywordflow">try</span> {</div>
-<div class="line">                <a class="code hl_struct" href="../../df/d7d/a02941.html">DiscordCoreAPI::GetGuildVanityInviteData</a> dataPackage01;</div>
-<div class="line">                dataPackage01.<a class="code hl_variable" href="../../df/d7d/a02941.html#a31265fa5c3a7b002e86e4cae5402d9c9">guildId</a> = args.<a class="code hl_variable" href="../../dc/da3/a02853.html#a80eabf8007466c61abda009ea3070942">eventData</a>.<a class="code hl_function" href="../../d8/d1e/a02801.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
+<div class="line">                <span class="keyword">auto</span> responseData = <a class="code hl_function" href="../../db/d49/a01969.html#ad95e0e4d584ab0ae78749092ee40089e">DiscordCoreAPI::Channels::getVoiceRegionsAsync</a>().get();</div>
 <div class="line"> </div>
-<div class="line">                <span class="keyword">auto</span> responseData = <a class="code hl_function" href="../../d1/db3/a03013.html#a5aaf20b371d866854e3d80648d5a50ae">DiscordCoreAPI::Guilds::getGuildVanityInviteAsync</a>(dataPackage01).get();</div>
+<div class="line">                <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; value: responseData) {</div>
+<div class="line">                    cout &lt;&lt; <span class="stringliteral">&quot;THE REGION: &quot;</span> &lt;&lt; value.name &lt;&lt; endl;</div>
+<div class="line">                }</div>
 <div class="line"> </div>
-<div class="line">                cout &lt;&lt; boolalpha &lt;&lt; responseData.code &lt;&lt; endl;</div>
 <div class="line"> </div>
 <div class="line">            } <span class="keywordflow">catch</span> (...) {</div>
 <div class="line">                rethrowException(<span class="stringliteral">&quot;Test::execute()&quot;</span>);</div>
 <div class="line">            }</div>
 <div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">virtual</span> ~Test() = <span class="keywordflow">default</span>;</div>
 <div class="line">    };</div>
 <div class="line">}</div>
 <div class="ttc" id="aa00725_html"><div class="ttname"><a href="../../d8/db9/a00725.html">Index.hpp</a></div></div>
 <div class="ttc" id="aa00887_html_ga63ce723358a8b7a00c14e055f2a26998"><div class="ttname"><a href="../../d7/d92/a00887.html#ga63ce723358a8b7a00c14e055f2a26998">DiscordCoreAPI::getTimeAndDate</a></div><div class="ttdeci">DiscordCoreAPI_Dll std::string getTimeAndDate()</div><div class="ttdoc">Acquires a timestamp with the current time and date - suitable for use in message-embeds.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/a00869_source.html#l00819">Utilities.cpp:819</a></div></div>
 <div class="ttc" id="aa00890_html"><div class="ttname"><a href="../../d7/d46/a00890.html">DiscordCoreAPI</a></div><div class="ttdoc">The main namespace for this library.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00027">ApplicationCommandEntities.hpp:27</a></div></div>
+<div class="ttc" id="aa01969_html_ad95e0e4d584ab0ae78749092ee40089e"><div class="ttname"><a href="../../db/d49/a01969.html#ad95e0e4d584ab0ae78749092ee40089e">DiscordCoreAPI::Channels::getVoiceRegionsAsync</a></div><div class="ttdeci">static CoRoutine&lt; std::vector&lt; VoiceRegionData &gt; &gt; getVoiceRegionsAsync()</div><div class="ttdoc">Collect a list of voice regions that are usable for the RTC-Region option of a given Channel.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d12/a00794_source.html#l00284">ChannelEntities.cpp:284</a></div></div>
 <div class="ttc" id="aa02349_html"><div class="ttname"><a href="../../dc/de0/a02349.html">DiscordCoreAPI::EmbedData</a></div><div class="ttdoc">Embed data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l00727">FoundationEntities.hpp:727</a></div></div>
 <div class="ttc" id="aa02349_html_a20ca60ec3235f44a223f3d3b687c0c9e"><div class="ttname"><a href="../../dc/de0/a02349.html#a20ca60ec3235f44a223f3d3b687c0c9e">DiscordCoreAPI::EmbedData::setTitle</a></div><div class="ttdeci">EmbedData &amp; setTitle(const std::string &amp;titleNew)</div><div class="ttdoc">Sets the title of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l00864">FoundationEntities.hpp:864</a></div></div>
 <div class="ttc" id="aa02349_html_a9d4066a4861408bc00eccb22a12db7f9"><div class="ttname"><a href="../../dc/de0/a02349.html#a9d4066a4861408bc00eccb22a12db7f9">DiscordCoreAPI::EmbedData::setDescription</a></div><div class="ttdeci">EmbedData &amp; setDescription(const std::string &amp;descriptionNew)</div><div class="ttdoc">Sets the description (the main contents) of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l00840">FoundationEntities.hpp:840</a></div></div>
 <div class="ttc" id="aa02349_html_ab417d83fddf9df80eca98e9ec6e888aa"><div class="ttname"><a href="../../dc/de0/a02349.html#ab417d83fddf9df80eca98e9ec6e888aa">DiscordCoreAPI::EmbedData::setColor</a></div><div class="ttdeci">EmbedData &amp; setColor(const std::string &amp;hexColorValueNew)</div><div class="ttdoc">Sets the color of the embed, by applying a hex-color value.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l00848">FoundationEntities.hpp:848</a></div></div>
 <div class="ttc" id="aa02349_html_ae356e6dc3c93658b7228b56da3187896"><div class="ttname"><a href="../../dc/de0/a02349.html#ae356e6dc3c93658b7228b56da3187896">DiscordCoreAPI::EmbedData::setTimeStamp</a></div><div class="ttdeci">EmbedData &amp; setTimeStamp(const std::string &amp;timeStamp)</div><div class="ttdoc">Sets the timestamp on the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l00818">FoundationEntities.hpp:818</a></div></div>
-<div class="ttc" id="aa02801_html_a565fe2447237030a716f64b2599996dd"><div class="ttname"><a href="../../d8/d1e/a02801.html#a565fe2447237030a716f64b2599996dd">DiscordCoreAPI::InputEventData::getGuildId</a></div><div class="ttdeci">Snowflake getGuildId()</div><div class="ttdoc">Returns the Guild id, of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2d/a00815_source.html#l00132">FoundationEntities.cpp:132</a></div></div>
 <div class="ttc" id="aa02853_html"><div class="ttname"><a href="../../dc/da3/a02853.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l07780">FoundationEntities.hpp:7780</a></div></div>
-<div class="ttc" id="aa02853_html_a80eabf8007466c61abda009ea3070942"><div class="ttname"><a href="../../dc/da3/a02853.html#a80eabf8007466c61abda009ea3070942">DiscordCoreAPI::BaseFunctionArguments::eventData</a></div><div class="ttdeci">InputEventData eventData</div><div class="ttdoc">InputEventData representing the input event that triggered the command.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l07782">FoundationEntities.hpp:7782</a></div></div>
 <div class="ttc" id="aa02857_html"><div class="ttname"><a href="../../dd/dc1/a02857.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class DiscordCoreAPI_Dll for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l07797">FoundationEntities.hpp:7797</a></div></div>
-<div class="ttc" id="aa02941_html"><div class="ttname"><a href="../../df/d7d/a02941.html">DiscordCoreAPI::GetGuildVanityInviteData</a></div><div class="ttdoc">For geting the vanity invite responseData of a Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d04/a00713_source.html#l00218">GuildEntities.hpp:218</a></div></div>
-<div class="ttc" id="aa02941_html_a31265fa5c3a7b002e86e4cae5402d9c9"><div class="ttname"><a href="../../df/d7d/a02941.html#a31265fa5c3a7b002e86e4cae5402d9c9">DiscordCoreAPI::GetGuildVanityInviteData::guildId</a></div><div class="ttdeci">Snowflake guildId</div><div class="ttdoc">The id of the Guild to acquire the vanity invite from.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d04/a00713_source.html#l00219">GuildEntities.hpp:219</a></div></div>
-<div class="ttc" id="aa03013_html_a5aaf20b371d866854e3d80648d5a50ae"><div class="ttname"><a href="../../d1/db3/a03013.html#a5aaf20b371d866854e3d80648d5a50ae">DiscordCoreAPI::Guilds::getGuildVanityInviteAsync</a></div><div class="ttdeci">static CoRoutine&lt; InviteData &gt; getGuildVanityInviteAsync(GetGuildVanityInviteData dataPackage)</div><div class="ttdoc">Gets the vanity invite responseData from a particular server.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d60/a00818_source.html#l00522">GuildEntities.cpp:522</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -172,7 +170,7 @@ $(document).ready(function(){initNavTree('d7/de3/a07176.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d1d/a07099.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../da/d25/a07110.html">Guild Stuff</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d6/d82/a07115.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../df/d4a/a07125.html">Channel Stuff</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
