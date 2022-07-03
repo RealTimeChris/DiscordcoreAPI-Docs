@@ -31,7 +31,7 @@ var dir_9b16bdde4f6a21e020962bfdb0aa5092 =
     [ "ThreadPool.hpp", "d3/d4f/a00761.html", null ],
     [ "UserEntities.hpp", "d3/d2c/a00764.html", null ],
     [ "Utilities.hpp", "d5/dae/a00767.html", "d5/dae/a00767" ],
-    [ "VoiceConnection.hpp", "d0/d7e/a00770.html", null ],
+    [ "VoiceConnection.hpp", "d0/d7e/a00770.html", "d0/d7e/a00770" ],
     [ "WebHookEntities.hpp", "d8/dba/a00773.html", null ],
     [ "WebSocketEntities.hpp", "d9/dd4/a00776.html", null ],
     [ "YouTubeAPI.hpp", "d3/d95/a00779.html", null ]

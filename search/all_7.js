@@ -32,7 +32,7 @@ var searchData=
   ['getcacheduserasync_29',['getCachedUserAsync',['../dc/d7d/a03625.html#a01ba31f6c4c93a6716eb56afffe4a608',1,'DiscordCoreAPI::Users']]],
   ['getchannelasync_30',['getChannelAsync',['../db/d49/a01969.html#aab91933393035b3435e636e3b7c7699f',1,'DiscordCoreAPI::Channels']]],
   ['getchanneldata_31',['GetChannelData',['../d9/d65/a01905.html',1,'DiscordCoreAPI']]],
-  ['getchannelid_32',['getChannelId',['../d8/d1e/a02801.html#a97c397fe274250bfff73cf674810a8f5',1,'DiscordCoreAPI::InputEventData::getChannelId()'],['../d3/d4a/a03689.html#a4a27e63d4ee8ddfc5b823a75710112d6',1,'DiscordCoreAPI::VoiceConnection::getChannelId()']]],
+  ['getchannelid_32',['getChannelId',['../d8/d1e/a02801.html#a97c397fe274250bfff73cf674810a8f5',1,'DiscordCoreAPI::InputEventData::getChannelId()'],['../d3/d4a/a03689.html#ae790f8b154a461a5878a224f371eb546',1,'DiscordCoreAPI::VoiceConnection::getChannelId()']]],
   ['getchannelinvitesasync_33',['getChannelInvitesAsync',['../db/d49/a01969.html#a159777c36d823a8109a370fa2d8e30a9',1,'DiscordCoreAPI::Channels']]],
   ['getchannelinvitesdata_34',['GetChannelInvitesData',['../d2/d54/a01917.html',1,'DiscordCoreAPI']]],
   ['getchannelwebhooksasync_35',['getChannelWebHooksAsync',['../d1/ddb/a03753.html#a98e309d1201f50a6a090f6739ce7a3eb',1,'DiscordCoreAPI::WebHooks']]],

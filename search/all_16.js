@@ -31,8 +31,9 @@ var searchData=
   ['voiceconnection_2ecpp_28',['VoiceConnection.cpp',['../dc/d17/a00872.html',1,'']]],
   ['voiceconnection_2ehpp_29',['VoiceConnection.hpp',['../d0/d7e/a00770.html',1,'']]],
   ['voiceconnectionptr_30',['voiceConnectionPtr',['../d0/dea/a02585.html#adb2520cdbade6e08a4c4b3259a4ff9e9',1,'DiscordCoreAPI::GuildData']]],
-  ['voiceregiondata_31',['VoiceRegionData',['../dc/d4e/a02449.html',1,'DiscordCoreAPI']]],
-  ['voicestatedata_32',['VoiceStateData',['../d7/d1a/a02381.html',1,'DiscordCoreAPI']]],
-  ['voicestatedata_33',['voiceStateData',['../df/de4/a02241.html#a8e9c77a625f369e740c6e00089ee049e',1,'DiscordCoreAPI::OnVoiceStateUpdateData']]],
-  ['voicestates_34',['voiceStates',['../d0/dea/a02585.html#ab00244c98337a21ca2002bf55d9c0982',1,'DiscordCoreAPI::GuildData']]]
+  ['voiceconnectionstate_31',['VoiceConnectionState',['../d7/d46/a00890.html#ac0258b298f9b8f78d254009fd70bf938',1,'DiscordCoreAPI']]],
+  ['voiceregiondata_32',['VoiceRegionData',['../dc/d4e/a02449.html',1,'DiscordCoreAPI']]],
+  ['voicestatedata_33',['VoiceStateData',['../d7/d1a/a02381.html',1,'DiscordCoreAPI']]],
+  ['voicestatedata_34',['voiceStateData',['../df/de4/a02241.html#a8e9c77a625f369e740c6e00089ee049e',1,'DiscordCoreAPI::OnVoiceStateUpdateData']]],
+  ['voicestates_35',['voiceStates',['../d0/dea/a02585.html#ab00244c98337a21ca2002bf55d9c0982',1,'DiscordCoreAPI::GuildData']]]
 ];

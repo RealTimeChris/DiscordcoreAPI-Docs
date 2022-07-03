@@ -351,7 +351,7 @@ $(document).ready(function(){initNavTree('dc/d1b/a00827_source.html','../../'); 
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>            }</div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        }</div>
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>        other.erase(other.begin(), other.begin() + theCount);</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    }   </div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    }</div>
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span> </div>
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    std::unordered_map&lt;std::string, std::unique_ptr&lt;RateLimitData&gt;&gt;&amp; HttpsConnectionManager::getRateLimitValues() {</div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        <span class="keywordflow">return</span> this-&gt;rateLimitValues;</div>
@@ -560,7 +560,7 @@ $(document).ready(function(){initNavTree('dc/d1b/a00827_source.html','../../'); 
 <div class="line"><a id="l00453" name="l00453"></a><span class="lineno">  453</span>        };</div>
 <div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span>        <span class="keywordflow">return</span> theConnection.finalizeReturnValues(rateLimitData, theData);</div>
 <div class="line"><a id="l00455" name="l00455"></a><span class="lineno">  455</span>    }</div>
-<div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span>    </div>
+<div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span> </div>
 <div class="line"><a id="l00457" name="l00457"></a><span class="lineno">  457</span>    HttpsResponseData HttpsClient::executeByRateLimitData(<span class="keyword">const</span> HttpsWorkloadData&amp; workload) {</div>
 <div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span>        HttpsResponseData returnData{};</div>
 <div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span>        RateLimitData&amp; rateLimitData = *this-&gt;connectionManager.getRateLimitValues()[this-&gt;connectionManager.getRateLimitValueBuckets()[workload.workloadType]].get();</div>
@@ -625,16 +625,17 @@ $(document).ready(function(){initNavTree('dc/d1b/a00827_source.html','../../'); 
 <div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span>                    <span class="keyword">static_cast&lt;</span>int64_t<span class="keyword">&gt;</span>(std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(std::chrono::system_clock::now().time_since_epoch()).count());</div>
 <div class="line"><a id="l00519" name="l00519"></a><span class="lineno">  519</span>                <span class="keywordflow">if</span> (this-&gt;configManager-&gt;doWePrintHttpsErrorMessages()) {</div>
 <div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span>                    std::cout &lt;&lt; DiscordCoreAPI::shiftToBrightRed() &lt;&lt; workload.callStack + <span class="stringliteral">&quot;::httpRequest(), We&#39;ve hit rate limit! Time Remaining: &quot;</span></div>
-<div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span>                              &lt;&lt; std::to_string(this-&gt;connectionManager.getRateLimitValues()[this-&gt;connectionManager.getRateLimitValueBuckets()[workload.workloadType]]-&gt;msRemain) &lt;&lt; DiscordCoreAPI::reset() &lt;&lt; std::endl</div>
-<div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span>                              &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span>                }</div>
-<div class="line"><a id="l00524" name="l00524"></a><span class="lineno">  524</span>                returnData = this-&gt;executeByRateLimitData(workload);</div>
-<div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span>            }</div>
-<div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span>        }</div>
-<div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span>        <span class="keywordflow">return</span> returnData;</div>
-<div class="line"><a id="l00528" name="l00528"></a><span class="lineno">  528</span>    }</div>
-<div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span> </div>
-<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span>}</div>
+<div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span>                              &lt;&lt; std::to_string(this-&gt;connectionManager.getRateLimitValues()[this-&gt;connectionManager.getRateLimitValueBuckets()[workload.workloadType]]-&gt;msRemain)</div>
+<div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span>                              &lt;&lt; DiscordCoreAPI::reset() &lt;&lt; std::endl</div>
+<div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span>                              &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00524" name="l00524"></a><span class="lineno">  524</span>                }</div>
+<div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span>                returnData = this-&gt;executeByRateLimitData(workload);</div>
+<div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span>            }</div>
+<div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span>        }</div>
+<div class="line"><a id="l00528" name="l00528"></a><span class="lineno">  528</span>        <span class="keywordflow">return</span> returnData;</div>
+<div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span>    }</div>
+<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span> </div>
+<div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span>}</div>
 <div class="ttc" id="aa00695_html"><div class="ttname"><a href="../../d5/d5b/a00695.html">CoRoutine.hpp</a></div></div>
 <div class="ttc" id="aa00698_html"><div class="ttname"><a href="../../df/dbb/a00698.html">DiscordCoreClient.hpp</a></div></div>
 <div class="ttc" id="aa00722_html"><div class="ttname"><a href="../../db/d7c/a00722.html">Https.hpp</a></div></div>

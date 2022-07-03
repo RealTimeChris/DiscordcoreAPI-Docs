@@ -526,7 +526,7 @@ var a00888 =
     ] ],
     [ "DiscordCoreAPI::DeleteInteractionResponseData", "d0/d74/a03149.html", null ],
     [ "DiscordCoreAPI::DeleteInviteData", "d4/d69/a02989.html", [
-      [ "inviteId", "d4/d69/a02989.html#a88871fa2dd10b5b8b4d93f1689bb80cd", null ],
+      [ "inviteId", "d4/d69/a02989.html#a547700b4321d2e8bf73ffdf10306ade3", null ],
       [ "reason", "d4/d69/a02989.html#ac04f48ff7c81f2486aba6225d5995e53", null ]
     ] ],
     [ "DiscordCoreAPI::DeleteMessageData", "da/d0c/a03229.html", [
@@ -914,7 +914,7 @@ var a00888 =
     ] ],
     [ "DiscordCoreAPI::GetInviteData", "dd/d5c/a02985.html", [
       [ "guildScheduledEventId", "dd/d5c/a02985.html#ad6a901ecf670c485add6225e112f426d", null ],
-      [ "inviteId", "dd/d5c/a02985.html#a61edbf0b6ee46855dd8dab271420e02a", null ],
+      [ "inviteId", "dd/d5c/a02985.html#ac3b48c6cad06fb83598edecd810eefc0", null ],
       [ "withCount", "dd/d5c/a02985.html#adf02fbaf117503a1f331bfc7e3f0d4dd", null ],
       [ "withExpiration", "dd/d5c/a02985.html#ad9d0126a6b046bc69e5e3e0db42f3a90", null ]
     ] ],

@@ -17,7 +17,7 @@ var searchData=
   ['getcachedroleasync_14',['getCachedRoleAsync',['../d8/d60/a03373.html#a7cdfc6e07d7950d25399ea9e88852d1b',1,'DiscordCoreAPI::Roles']]],
   ['getcacheduserasync_15',['getCachedUserAsync',['../dc/d7d/a03625.html#a01ba31f6c4c93a6716eb56afffe4a608',1,'DiscordCoreAPI::Users']]],
   ['getchannelasync_16',['getChannelAsync',['../db/d49/a01969.html#aab91933393035b3435e636e3b7c7699f',1,'DiscordCoreAPI::Channels']]],
-  ['getchannelid_17',['getChannelId',['../d8/d1e/a02801.html#a97c397fe274250bfff73cf674810a8f5',1,'DiscordCoreAPI::InputEventData::getChannelId()'],['../d3/d4a/a03689.html#a4a27e63d4ee8ddfc5b823a75710112d6',1,'DiscordCoreAPI::VoiceConnection::getChannelId()']]],
+  ['getchannelid_17',['getChannelId',['../d8/d1e/a02801.html#a97c397fe274250bfff73cf674810a8f5',1,'DiscordCoreAPI::InputEventData::getChannelId()'],['../d3/d4a/a03689.html#ae790f8b154a461a5878a224f371eb546',1,'DiscordCoreAPI::VoiceConnection::getChannelId()']]],
   ['getchannelinvitesasync_18',['getChannelInvitesAsync',['../db/d49/a01969.html#a159777c36d823a8109a370fa2d8e30a9',1,'DiscordCoreAPI::Channels']]],
   ['getchannelwebhooksasync_19',['getChannelWebHooksAsync',['../d1/ddb/a03753.html#a98e309d1201f50a6a090f6739ce7a3eb',1,'DiscordCoreAPI::WebHooks']]],
   ['getcomponents_20',['getComponents',['../d8/d1e/a02801.html#ad8b41239baf5da58d2ef9db4b9d7f2cc',1,'DiscordCoreAPI::InputEventData']]],

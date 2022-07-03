@@ -511,14 +511,14 @@ $(document).ready(function(){initNavTree('df/d4c/a00851_source.html','../../'); 
 <div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>        }</div>
 <div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span> </div>
 <div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; [key, value]: theMap) {</div>
-<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>            std::lock_guard&lt;std::mutex&gt; theLock{ value-&gt;theMutex };</div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>            std::lock_guard&lt;std::mutex&gt; theLock{ value-&gt;theMutex01 };</div>
 <div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>            <span class="keywordflow">if</span> (FD_ISSET(value-&gt;theSocket, &amp;readSet)) {</div>
 <div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>                value-&gt;wantRead = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>                value-&gt;wantWrite = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>                std::string serverToClientBuffer{};</div>
 <div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>                serverToClientBuffer.resize(value-&gt;maxBufferSize);</div>
 <div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>                <span class="keywordtype">size_t</span> readBytes{ 0 };</div>
-<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>                <span class="keyword">auto</span> returnValue{ SSL_read_ex(value-&gt;ssl, serverToClientBuffer.data(), value-&gt;maxBufferSize, &amp;readBytes) };</div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>                <span class="keyword">auto</span> returnValue{ SSL_read_ex(value-&gt;ssl, serverToClientBuffer.data(), serverToClientBuffer.size(), &amp;readBytes) };</div>
 <div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>                <span class="keyword">auto</span> errorValue{ SSL_get_error(value-&gt;ssl, returnValue) };</div>
 <div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>                <span class="keywordflow">switch</span> (errorValue) {</div>
 <div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>                    <span class="keywordflow">case</span> SSL_ERROR_NONE: {</div>
@@ -668,7 +668,7 @@ $(document).ready(function(){initNavTree('df/d4c/a00851_source.html','../../'); 
 <div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>    }</div>
 <div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span> </div>
 <div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>    <span class="keywordtype">bool</span> WebSocketSSLShard::writeData(<span class="keyword">const</span> std::string&amp; dataToWrite, <span class="keywordtype">bool</span> priority) <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>        std::lock_guard&lt;std::mutex&gt; theLock{ this-&gt;theMutex };</div>
+<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>        std::lock_guard&lt;std::mutex&gt; theLock{ this-&gt;theMutex01 };</div>
 <div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>        std::string data = dataToWrite;</div>
 <div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>        <span class="keywordflow">if</span> (data.size() &gt; 0 &amp;&amp; this-&gt;ssl) {</div>
 <div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>            <span class="keywordflow">if</span> (priority &amp;&amp; data.size() &lt; (16 * 1024)) {</div>

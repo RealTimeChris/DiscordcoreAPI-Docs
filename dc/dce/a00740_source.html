@@ -391,7 +391,7 @@ $(document).ready(function(){initNavTree('dc/dce/a00740_source.html','../../'); 
 <div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> removeRole(<span class="keyword">const</span> uint64_t&amp; roleId);</div>
 <div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span> </div>
 <div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>      <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        <span class="keyword">static</span> std::unique_ptr&lt;std::unordered_map&lt;uint64_t, std::unique_ptr&lt;RoleData&gt;&gt;&gt; cache;</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        <span class="keyword">static</span> std::unique_ptr&lt;std::unordered_map&lt;Snowflake, std::unique_ptr&lt;RoleData&gt;&gt;&gt; cache;</div>
 <div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>        <span class="keyword">static</span> DiscordCoreInternal::HttpsClient* httpsClient;</div>
 <div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>        <span class="keyword">static</span> ConfigManager* configManager;</div>
 <div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>        <span class="keyword">static</span> std::shared_mutex theMutex;</div>
@@ -423,7 +423,7 @@ $(document).ready(function(){initNavTree('dc/dce/a00740_source.html','../../'); 
 <div class="ttc" id="aa03361_html"><div class="ttname"><a href="../../df/d67/a03361.html">DiscordCoreAPI::GetRoleData</a></div><div class="ttdoc">For getting a Role from the library's cache, or the Discord server.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/a00740_source.html#l00168">RoleEntities.hpp:168</a></div></div>
 <div class="ttc" id="aa03365_html"><div class="ttname"><a href="../../d7/d13/a03365.html">DiscordCoreAPI::Role</a></div><div class="ttdoc">A single Role.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/a00740_source.html#l00174">RoleEntities.hpp:174</a></div></div>
 <div class="ttc" id="aa03373_html"><div class="ttname"><a href="../../d8/d60/a03373.html">DiscordCoreAPI::Roles</a></div><div class="ttdoc">An interface class for the Role related Discord endpoints.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/a00740_source.html#l00224">RoleEntities.hpp:224</a></div></div>
-<div class="ttc" id="aa03685_html"><div class="ttname"><a href="../../da/da8/a03685.html">DiscordCoreAPI::Permissions</a></div><div class="ttdoc">Permissions class, for representing and manipulating Permission values.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dae/a00767_source.html#l00830">Utilities.hpp:830</a></div></div>
+<div class="ttc" id="aa03685_html"><div class="ttname"><a href="../../da/da8/a03685.html">DiscordCoreAPI::Permissions</a></div><div class="ttdoc">Permissions class, for representing and manipulating Permission values.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dae/a00767_source.html#l00828">Utilities.hpp:828</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
