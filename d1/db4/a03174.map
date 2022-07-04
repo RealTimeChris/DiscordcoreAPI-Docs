@@ -1,5 +1,0 @@
-<map id="DiscordCoreAPI::Interaction" name="DiscordCoreAPI::Interaction">
-<area shape="rect" id="node1" title="A single Interaction." alt="" coords="19,155,201,181"/>
-<area shape="rect" id="node2" href="$dc/d6a/a02779.html" title="Interaction data." alt="" coords="5,80,215,107"/>
-<area shape="rect" id="node3" href="$d2/d40/a02307.html" title="Base class DiscordCoreAPI_Dll for all Discord entities." alt="" coords="10,5,210,32"/>
-</map>

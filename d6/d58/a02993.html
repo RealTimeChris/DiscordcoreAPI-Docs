@@ -105,32 +105,215 @@ $(document).ready(function(){initNavTree('d6/d58/a02993.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d1/df2/a02990.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::GetCurrentUserGuildsData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::Guild Class Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For collecting a list of <a class="el" href="../../d0/db8/a03001.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>'s that the Bot is in.  
+<p>A discord <a class="el" href="../../d6/d58/a02993.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>. Used to connect to/disconnect from voice.  
  <a href="../../d6/d58/a02993.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d1/d04/a00713_source.html">GuildEntities.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for DiscordCoreAPI::Guild:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d6/d5d/a02992.svg" width="211" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:ae42a507972a54a0227def24c5c85b055"><td class="memItemLeft" align="right" valign="top"><a id="ae42a507972a54a0227def24c5c85b055" name="ae42a507972a54a0227def24c5c85b055"></a>
-<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>after</b> {}</td></tr>
-<tr class="memdesc:ae42a507972a54a0227def24c5c85b055"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get guilds after this <a class="el" href="../../d0/db8/a03001.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> ID. <br /></td></tr>
-<tr class="separator:ae42a507972a54a0227def24c5c85b055"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a064c0871723586cf804687d152bdd182"><td class="memItemLeft" align="right" valign="top"><a id="a064c0871723586cf804687d152bdd182" name="a064c0871723586cf804687d152bdd182"></a>
-<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>before</b> {}</td></tr>
-<tr class="memdesc:a064c0871723586cf804687d152bdd182"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get guilds before this <a class="el" href="../../d0/db8/a03001.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> ID. <br /></td></tr>
-<tr class="separator:a064c0871723586cf804687d152bdd182"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96754c6d0a421023fcf7d5aa0412f1f4"><td class="memItemLeft" align="right" valign="top"><a id="a96754c6d0a421023fcf7d5aa0412f1f4" name="a96754c6d0a421023fcf7d5aa0412f1f4"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>limit</b> { 0 }</td></tr>
-<tr class="memdesc:a96754c6d0a421023fcf7d5aa0412f1f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max number of guilds to return (1 - 200). <br /></td></tr>
-<tr class="separator:a96754c6d0a421023fcf7d5aa0412f1f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8062f66337dbc83ce686554b2ff637b4"><td class="memItemLeft" align="right" valign="top"><a id="a8062f66337dbc83ce686554b2ff637b4" name="a8062f66337dbc83ce686554b2ff637b4"></a>
+<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>afkChannelId</b> {}</td></tr>
+<tr class="memdesc:a8062f66337dbc83ce686554b2ff637b4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d2/d6f/a01957.html" title="A Channel object.">Channel</a> if of the "afk" <a class="el" href="../../d2/d6f/a01957.html" title="A Channel object.">Channel</a>. <br /></td></tr>
+<tr class="separator:a8062f66337dbc83ce686554b2ff637b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6295c099a6a16d6ac18ac7ec424a7c64"><td class="memItemLeft" align="right" valign="top"><a id="a6295c099a6a16d6ac18ac7ec424a7c64" name="a6295c099a6a16d6ac18ac7ec424a7c64"></a>
+<a class="el" href="../../dd/d94/a00888.html#gade1ab5324490db89a5c4853a34ceaac4">AfkTimeOutDurations</a>&#160;</td><td class="memItemRight" valign="bottom"><b>afkTimeOut</b> {}</td></tr>
+<tr class="memdesc:a6295c099a6a16d6ac18ac7ec424a7c64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time for an individual to time out as afk. <br /></td></tr>
+<tr class="separator:a6295c099a6a16d6ac18ac7ec424a7c64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a679b31e042854237d0479254fa59a56a"><td class="memItemLeft" align="right" valign="top"><a id="a679b31e042854237d0479254fa59a56a" name="a679b31e042854237d0479254fa59a56a"></a>
+<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>applicationId</b> {}</td></tr>
+<tr class="memdesc:a679b31e042854237d0479254fa59a56a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current application id. <br /></td></tr>
+<tr class="separator:a679b31e042854237d0479254fa59a56a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac57c7ef4bff6251237f711398d503f04"><td class="memItemLeft" align="right" valign="top"><a id="ac57c7ef4bff6251237f711398d503f04" name="ac57c7ef4bff6251237f711398d503f04"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>approximateMemberCount</b> { 0 }</td></tr>
+<tr class="memdesc:ac57c7ef4bff6251237f711398d503f04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Approximate member count. <br /></td></tr>
+<tr class="separator:ac57c7ef4bff6251237f711398d503f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab48ee95b1ec0ba486ef9675cce8533b"><td class="memItemLeft" align="right" valign="top"><a id="aab48ee95b1ec0ba486ef9675cce8533b" name="aab48ee95b1ec0ba486ef9675cce8533b"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>approximatePresenceCount</b> { 0 }</td></tr>
+<tr class="memdesc:aab48ee95b1ec0ba486ef9675cce8533b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Approximate quantity of presences. <br /></td></tr>
+<tr class="separator:aab48ee95b1ec0ba486ef9675cce8533b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a732d7d6cd8b7e41dc5391b2df9f69d40"><td class="memItemLeft" align="right" valign="top"><a id="a732d7d6cd8b7e41dc5391b2df9f69d40" name="a732d7d6cd8b7e41dc5391b2df9f69d40"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>banner</b> {}</td></tr>
+<tr class="memdesc:a732d7d6cd8b7e41dc5391b2df9f69d40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Url to the <a class="el" href="../../d6/d58/a02993.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>'s banner. <br /></td></tr>
+<tr class="separator:a732d7d6cd8b7e41dc5391b2df9f69d40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4050b12c71892bb2dcc0e05a32dfcbda"><td class="memItemLeft" align="right" valign="top"><a id="a4050b12c71892bb2dcc0e05a32dfcbda" name="a4050b12c71892bb2dcc0e05a32dfcbda"></a>
+<a class="el" href="../../dd/d94/a00888.html#ga44d0ac48a99c844abee9741673f9faf9">DefaultMessageNotificationLevel</a>&#160;</td><td class="memItemRight" valign="bottom"><b>defaultMessageNotifications</b> {}</td></tr>
+<tr class="memdesc:a4050b12c71892bb2dcc0e05a32dfcbda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default <a class="el" href="../../dc/dc7/a03241.html" title="A single Message.">Message</a> notification level. <br /></td></tr>
+<tr class="separator:a4050b12c71892bb2dcc0e05a32dfcbda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a959f8155b4ecdeee1f52d4ad37b67206"><td class="memItemLeft" align="right" valign="top"><a id="a959f8155b4ecdeee1f52d4ad37b67206" name="a959f8155b4ecdeee1f52d4ad37b67206"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>description</b> {}</td></tr>
+<tr class="memdesc:a959f8155b4ecdeee1f52d4ad37b67206"><td class="mdescLeft">&#160;</td><td class="mdescRight">Description of the <a class="el" href="../../d6/d58/a02993.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>. <br /></td></tr>
+<tr class="separator:a959f8155b4ecdeee1f52d4ad37b67206"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90edb4f08a464b8c42f875c3a1a58b9c"><td class="memItemLeft" align="right" valign="top"><a id="a90edb4f08a464b8c42f875c3a1a58b9c" name="a90edb4f08a464b8c42f875c3a1a58b9c"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>discoverySplash</b> {}</td></tr>
+<tr class="memdesc:a90edb4f08a464b8c42f875c3a1a58b9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Link to the discovery image's splash. <br /></td></tr>
+<tr class="separator:a90edb4f08a464b8c42f875c3a1a58b9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35cc86dcfb0f31ef12da02cf8ded3a22"><td class="memItemLeft" align="right" valign="top"><a id="a35cc86dcfb0f31ef12da02cf8ded3a22" name="a35cc86dcfb0f31ef12da02cf8ded3a22"></a>
+<a class="el" href="../../dd/d94/a00888.html#ga658fd7e41f40147ffb8a2a2ec8f0322b">ExplicitContentFilterLevel</a>&#160;</td><td class="memItemRight" valign="bottom"><b>explicitContentFilter</b> {}</td></tr>
+<tr class="memdesc:a35cc86dcfb0f31ef12da02cf8ded3a22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicit content filtering level, by default. <br /></td></tr>
+<tr class="separator:a35cc86dcfb0f31ef12da02cf8ded3a22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cabca2481f9f6c133f36aab80e0de86"><td class="memItemLeft" align="right" valign="top"><a id="a2cabca2481f9f6c133f36aab80e0de86" name="a2cabca2481f9f6c133f36aab80e0de86"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>iconHash</b> {}</td></tr>
+<tr class="memdesc:a2cabca2481f9f6c133f36aab80e0de86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Url to the <a class="el" href="../../d6/d58/a02993.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>'s icon. <br /></td></tr>
+<tr class="separator:a2cabca2481f9f6c133f36aab80e0de86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab721d2b037ce97081c67ec7e71526557"><td class="memItemLeft" align="right" valign="top"><a id="ab721d2b037ce97081c67ec7e71526557" name="ab721d2b037ce97081c67ec7e71526557"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>maxMembers</b> { 0 }</td></tr>
+<tr class="memdesc:ab721d2b037ce97081c67ec7e71526557"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max quantity of members. <br /></td></tr>
+<tr class="separator:ab721d2b037ce97081c67ec7e71526557"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a017623227f07a21019fda48ebb8db53f"><td class="memItemLeft" align="right" valign="top"><a id="a017623227f07a21019fda48ebb8db53f" name="a017623227f07a21019fda48ebb8db53f"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>maxPresences</b> { 0 }</td></tr>
+<tr class="memdesc:a017623227f07a21019fda48ebb8db53f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max number of presences allowed. <br /></td></tr>
+<tr class="separator:a017623227f07a21019fda48ebb8db53f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f7e8f15298005fea57765c976ef17c3"><td class="memItemLeft" align="right" valign="top"><a id="a6f7e8f15298005fea57765c976ef17c3" name="a6f7e8f15298005fea57765c976ef17c3"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>maxVideoChannelUsers</b> { 0 }</td></tr>
+<tr class="memdesc:a6f7e8f15298005fea57765c976ef17c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum quantity of users per video <a class="el" href="../../d2/d6f/a01957.html" title="A Channel object.">Channel</a>. <br /></td></tr>
+<tr class="separator:a6f7e8f15298005fea57765c976ef17c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ffdac36c42b9c7d2cb3eee068ef0ed9"><td class="memItemLeft" align="right" valign="top"><a id="a2ffdac36c42b9c7d2cb3eee068ef0ed9" name="a2ffdac36c42b9c7d2cb3eee068ef0ed9"></a>
+<a class="el" href="../../dd/d94/a00888.html#ga7cc6513a715010fe507a269fde186d52">MFALevel</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mfaLevel</b> {}</td></tr>
+<tr class="memdesc:a2ffdac36c42b9c7d2cb3eee068ef0ed9"><td class="mdescLeft">&#160;</td><td class="mdescRight">MFA level. <br /></td></tr>
+<tr class="separator:a2ffdac36c42b9c7d2cb3eee068ef0ed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad37f29f220cccd8503c32a05b17ca3b4"><td class="memItemLeft" align="right" valign="top"><a id="ad37f29f220cccd8503c32a05b17ca3b4" name="ad37f29f220cccd8503c32a05b17ca3b4"></a>
+<a class="el" href="../../dd/d94/a00888.html#ga72bfcad315b1367b1f8fc4bc5e2b1f7b">GuildNSFWLevel</a>&#160;</td><td class="memItemRight" valign="bottom"><b>nsfwLevel</b> { <a class="el" href="../../dd/d94/a00888.html#gga72bfcad315b1367b1f8fc4bc5e2b1f7ba7a1920d61156abc05a60135aefe8bc67">GuildNSFWLevel::Default</a> }</td></tr>
+<tr class="memdesc:ad37f29f220cccd8503c32a05b17ca3b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">NSFW warning level. <br /></td></tr>
+<tr class="separator:ad37f29f220cccd8503c32a05b17ca3b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0cc552ed8d97ced827e1f25964b3ec5"><td class="memItemLeft" align="right" valign="top"><a id="aa0cc552ed8d97ced827e1f25964b3ec5" name="aa0cc552ed8d97ced827e1f25964b3ec5"></a>
+<a class="el" href="../../d1/d83/a03669.html">Permissions</a>&#160;</td><td class="memItemRight" valign="bottom"><b>permissions</b> {}</td></tr>
+<tr class="memdesc:aa0cc552ed8d97ced827e1f25964b3ec5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current <a class="el" href="../../d1/d83/a03669.html" title="Permissions class, for representing and manipulating Permission values.">Permissions</a> for the bot in the <a class="el" href="../../d6/d58/a02993.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>. <br /></td></tr>
+<tr class="separator:aa0cc552ed8d97ced827e1f25964b3ec5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a8b7e522a521dc56335614816d50f2d"><td class="memItemLeft" align="right" valign="top"><a id="a3a8b7e522a521dc56335614816d50f2d" name="a3a8b7e522a521dc56335614816d50f2d"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>preferredLocale</b> {}</td></tr>
+<tr class="memdesc:a3a8b7e522a521dc56335614816d50f2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Preferred locale, for voice chat servers. <br /></td></tr>
+<tr class="separator:a3a8b7e522a521dc56335614816d50f2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bb3a8554084e39e4007b686ba7f1eda"><td class="memItemLeft" align="right" valign="top"><a id="a5bb3a8554084e39e4007b686ba7f1eda" name="a5bb3a8554084e39e4007b686ba7f1eda"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>premiumSubscriptionCount</b> { 0 }</td></tr>
+<tr class="memdesc:a5bb3a8554084e39e4007b686ba7f1eda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Premium subscription count. <br /></td></tr>
+<tr class="separator:a5bb3a8554084e39e4007b686ba7f1eda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad88c67546831f1cecaf131d38a5e4b39"><td class="memItemLeft" align="right" valign="top"><a id="ad88c67546831f1cecaf131d38a5e4b39" name="ad88c67546831f1cecaf131d38a5e4b39"></a>
+<a class="el" href="../../dd/d94/a00888.html#ga4f1bac847fbb936c1188ea55e8281e5f">PremiumTier</a>&#160;</td><td class="memItemRight" valign="bottom"><b>premiumTier</b> {}</td></tr>
+<tr class="memdesc:ad88c67546831f1cecaf131d38a5e4b39"><td class="mdescLeft">&#160;</td><td class="mdescRight">What is the premium tier? <br /></td></tr>
+<tr class="separator:ad88c67546831f1cecaf131d38a5e4b39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13d68001217f3462e541050bab128be4"><td class="memItemLeft" align="right" valign="top"><a id="a13d68001217f3462e541050bab128be4" name="a13d68001217f3462e541050bab128be4"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>publicUpdatesChannelId</b> {}</td></tr>
+<tr class="memdesc:a13d68001217f3462e541050bab128be4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Id of the public updates <a class="el" href="../../d2/d6f/a01957.html" title="A Channel object.">Channel</a>. <br /></td></tr>
+<tr class="separator:a13d68001217f3462e541050bab128be4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a843ddcc7a88789fca7d7cc220ae0b054"><td class="memItemLeft" align="right" valign="top"><a id="a843ddcc7a88789fca7d7cc220ae0b054" name="a843ddcc7a88789fca7d7cc220ae0b054"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>region</b> {}</td></tr>
+<tr class="memdesc:a843ddcc7a88789fca7d7cc220ae0b054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Region of the world where the <a class="el" href="../../d6/d58/a02993.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>'s servers are. <br /></td></tr>
+<tr class="separator:a843ddcc7a88789fca7d7cc220ae0b054"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7ec8819095483b1fa4baedfa521a355"><td class="memItemLeft" align="right" valign="top"><a id="ae7ec8819095483b1fa4baedfa521a355" name="ae7ec8819095483b1fa4baedfa521a355"></a>
+<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>rulesChannelId</b> {}</td></tr>
+<tr class="memdesc:ae7ec8819095483b1fa4baedfa521a355"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d2/d6f/a01957.html" title="A Channel object.">Channel</a> id for the <a class="el" href="../../d6/d58/a02993.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>'s rules <a class="el" href="../../d2/d6f/a01957.html" title="A Channel object.">Channel</a>. <br /></td></tr>
+<tr class="separator:ae7ec8819095483b1fa4baedfa521a355"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ce2d3a8c4a849e927e1ff7694699dbe"><td class="memItemLeft" align="right" valign="top"><a id="a3ce2d3a8c4a849e927e1ff7694699dbe" name="a3ce2d3a8c4a849e927e1ff7694699dbe"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>splash</b> {}</td></tr>
+<tr class="memdesc:a3ce2d3a8c4a849e927e1ff7694699dbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Url to the <a class="el" href="../../d6/d58/a02993.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>'s splash. <br /></td></tr>
+<tr class="separator:a3ce2d3a8c4a849e927e1ff7694699dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a350617de6477f1963ca057556c715517"><td class="memItemLeft" align="right" valign="top"><a id="a350617de6477f1963ca057556c715517" name="a350617de6477f1963ca057556c715517"></a>
+<a class="el" href="../../dd/d94/a00888.html#ga736f75efc352392eb96fe15b0a1747c1">SystemChannelFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><b>systemChannelFlags</b> {}</td></tr>
+<tr class="memdesc:a350617de6477f1963ca057556c715517"><td class="mdescLeft">&#160;</td><td class="mdescRight">System <a class="el" href="../../d2/d6f/a01957.html" title="A Channel object.">Channel</a> flags. <br /></td></tr>
+<tr class="separator:a350617de6477f1963ca057556c715517"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f90886758695cc656beefab0dada908"><td class="memItemLeft" align="right" valign="top"><a id="a9f90886758695cc656beefab0dada908" name="a9f90886758695cc656beefab0dada908"></a>
+<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>systemChannelId</b> {}</td></tr>
+<tr class="memdesc:a9f90886758695cc656beefab0dada908"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d2/d6f/a01957.html" title="A Channel object.">Channel</a> id for the <a class="el" href="../../d6/d58/a02993.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>'s system <a class="el" href="../../d2/d6f/a01957.html" title="A Channel object.">Channel</a>. <br /></td></tr>
+<tr class="separator:a9f90886758695cc656beefab0dada908"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22bc4962d40c7cb6e02884d84ff8cb13"><td class="memItemLeft" align="right" valign="top"><a id="a22bc4962d40c7cb6e02884d84ff8cb13" name="a22bc4962d40c7cb6e02884d84ff8cb13"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>vanityUrlCode</b> {}</td></tr>
+<tr class="memdesc:a22bc4962d40c7cb6e02884d84ff8cb13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vanity Url code, if applicable. <br /></td></tr>
+<tr class="separator:a22bc4962d40c7cb6e02884d84ff8cb13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1bba25cdfe2847e3b1ba3135a52a875"><td class="memItemLeft" align="right" valign="top"><a id="ad1bba25cdfe2847e3b1ba3135a52a875" name="ad1bba25cdfe2847e3b1ba3135a52a875"></a>
+<a class="el" href="../../dd/d94/a00888.html#ga2e8030ba5c8a6dcc6b24c051962ef1a7">VerificationLevel</a>&#160;</td><td class="memItemRight" valign="bottom"><b>verificationLevel</b> {}</td></tr>
+<tr class="memdesc:ad1bba25cdfe2847e3b1ba3135a52a875"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verification level required. <br /></td></tr>
+<tr class="separator:ad1bba25cdfe2847e3b1ba3135a52a875"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a589e88c0e6a9b127092292896d062bef"><td class="memItemLeft" align="right" valign="top"><a id="a589e88c0e6a9b127092292896d062bef" name="a589e88c0e6a9b127092292896d062bef"></a>
+<a class="el" href="../../dd/d98/a02557.html">WelcomeScreenData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>welcomeScreen</b> {}</td></tr>
+<tr class="memdesc:a589e88c0e6a9b127092292896d062bef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Welcome screen for the <a class="el" href="../../d6/d58/a02993.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>. <br /></td></tr>
+<tr class="separator:a589e88c0e6a9b127092292896d062bef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83619f9543e04998f425a1e1853cd92e"><td class="memItemLeft" align="right" valign="top"><a id="a83619f9543e04998f425a1e1853cd92e" name="a83619f9543e04998f425a1e1853cd92e"></a>
+<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>widgetChannelId</b> {}</td></tr>
+<tr class="memdesc:a83619f9543e04998f425a1e1853cd92e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d2/d6f/a01957.html" title="A Channel object.">Channel</a> id for the <a class="el" href="../../d6/d58/a02993.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>'s widget. <br /></td></tr>
+<tr class="separator:a83619f9543e04998f425a1e1853cd92e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_a02577"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_a02577')"><img src="../../closed.png" alt="-"/>&#160;Public Data Members inherited from <a class="el" href="../../da/d03/a02577.html">DiscordCoreAPI::GuildData</a></td></tr>
+<tr class="memitem:ad1c82a0471b69dab344310faf0047384 inherit pub_attribs_a02577"><td class="memItemLeft" align="right" valign="top"><a id="ad1c82a0471b69dab344310faf0047384" name="ad1c82a0471b69dab344310faf0047384"></a>
+std::vector&lt; <a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>channels</b> {}</td></tr>
+<tr class="memdesc:ad1c82a0471b69dab344310faf0047384 inherit pub_attribs_a02577"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of <a class="el" href="../../d6/d58/a02993.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> channels. <br /></td></tr>
+<tr class="separator:ad1c82a0471b69dab344310faf0047384 inherit pub_attribs_a02577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9576cd011f93512d0784923590589082 inherit pub_attribs_a02577"><td class="memItemLeft" align="right" valign="top"><a id="a9576cd011f93512d0784923590589082" name="a9576cd011f93512d0784923590589082"></a>
+<a class="el" href="../../d3/d39/a02005.html">DiscordCoreClient</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>discordCoreClient</b> { nullptr }</td></tr>
+<tr class="memdesc:a9576cd011f93512d0784923590589082 inherit pub_attribs_a02577"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pointer to the <a class="el" href="../../d3/d39/a02005.html" title="DiscordCoreClient - The main class DiscordCoreAPI_Dll for this library.">DiscordCoreClient</a>. <br /></td></tr>
+<tr class="separator:a9576cd011f93512d0784923590589082 inherit pub_attribs_a02577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8d566e347ea692a7c046701e90bd68b inherit pub_attribs_a02577"><td class="memItemLeft" align="right" valign="top"><a id="ad8d566e347ea692a7c046701e90bd68b" name="ad8d566e347ea692a7c046701e90bd68b"></a>
+std::vector&lt; StringWrapper &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>features</b> {}</td></tr>
+<tr class="memdesc:ad8d566e347ea692a7c046701e90bd68b inherit pub_attribs_a02577"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of <a class="el" href="../../d6/d58/a02993.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> features. <br /></td></tr>
+<tr class="separator:ad8d566e347ea692a7c046701e90bd68b inherit pub_attribs_a02577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa78f0a58803f2012c5a8c3472284ec87 inherit pub_attribs_a02577"><td class="memItemLeft" align="right" valign="top"><a id="aa78f0a58803f2012c5a8c3472284ec87" name="aa78f0a58803f2012c5a8c3472284ec87"></a>
+int8_t&#160;</td><td class="memItemRight" valign="bottom"><b>flags</b> { 0 }</td></tr>
+<tr class="memdesc:aa78f0a58803f2012c5a8c3472284ec87 inherit pub_attribs_a02577"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d6/d58/a02993.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> flags. <br /></td></tr>
+<tr class="separator:aa78f0a58803f2012c5a8c3472284ec87 inherit pub_attribs_a02577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97537278ef93760689098df60fec049a inherit pub_attribs_a02577"><td class="memItemLeft" align="right" valign="top"><a id="a97537278ef93760689098df60fec049a" name="a97537278ef93760689098df60fec049a"></a>
+StringWrapper&#160;</td><td class="memItemRight" valign="bottom"><b>icon</b> {}</td></tr>
+<tr class="memdesc:a97537278ef93760689098df60fec049a inherit pub_attribs_a02577"><td class="mdescLeft">&#160;</td><td class="mdescRight">Url to the <a class="el" href="../../d6/d58/a02993.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>'s icon. <br /></td></tr>
+<tr class="separator:a97537278ef93760689098df60fec049a inherit pub_attribs_a02577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6821545cfc4b9c07237e1503fb236ef9 inherit pub_attribs_a02577"><td class="memItemLeft" align="right" valign="top"><a id="a6821545cfc4b9c07237e1503fb236ef9" name="a6821545cfc4b9c07237e1503fb236ef9"></a>
+<a class="el" href="../../d1/df9/a03665.html">TimeStamp</a>&#160;</td><td class="memItemRight" valign="bottom"><b>joinedAt</b> { &quot;&quot; }</td></tr>
+<tr class="memdesc:a6821545cfc4b9c07237e1503fb236ef9 inherit pub_attribs_a02577"><td class="mdescLeft">&#160;</td><td class="mdescRight">When the bot joined this <a class="el" href="../../d6/d58/a02993.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>. <br /></td></tr>
+<tr class="separator:a6821545cfc4b9c07237e1503fb236ef9 inherit pub_attribs_a02577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad06c76300822f24840a993e25af658e9 inherit pub_attribs_a02577"><td class="memItemLeft" align="right" valign="top"><a id="ad06c76300822f24840a993e25af658e9" name="ad06c76300822f24840a993e25af658e9"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>memberCount</b> { 0 }</td></tr>
+<tr class="memdesc:ad06c76300822f24840a993e25af658e9 inherit pub_attribs_a02577"><td class="mdescLeft">&#160;</td><td class="mdescRight">Member count. <br /></td></tr>
+<tr class="separator:ad06c76300822f24840a993e25af658e9 inherit pub_attribs_a02577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49d5887b90cea6dc012edda96e6f1bf4 inherit pub_attribs_a02577"><td class="memItemLeft" align="right" valign="top"><a id="a49d5887b90cea6dc012edda96e6f1bf4" name="a49d5887b90cea6dc012edda96e6f1bf4"></a>
+std::vector&lt; <a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>members</b> {}</td></tr>
+<tr class="memdesc:a49d5887b90cea6dc012edda96e6f1bf4 inherit pub_attribs_a02577"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of <a class="el" href="../../d7/d8c/a03049.html" title="An interface class DiscordCoreAPI_Dll for the GuildMember related Discord endpoints.">GuildMembers</a>. <br /></td></tr>
+<tr class="separator:a49d5887b90cea6dc012edda96e6f1bf4 inherit pub_attribs_a02577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fc39246d0ce977a2bbccf653af39a12 inherit pub_attribs_a02577"><td class="memItemLeft" align="right" valign="top"><a id="a3fc39246d0ce977a2bbccf653af39a12" name="a3fc39246d0ce977a2bbccf653af39a12"></a>
+StringWrapper&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> {}</td></tr>
+<tr class="memdesc:a3fc39246d0ce977a2bbccf653af39a12 inherit pub_attribs_a02577"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../d6/d58/a02993.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>'s name. <br /></td></tr>
+<tr class="separator:a3fc39246d0ce977a2bbccf653af39a12 inherit pub_attribs_a02577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3c03f7887338777d6d295cf2be6e0f3 inherit pub_attribs_a02577"><td class="memItemLeft" align="right" valign="top"><a id="ac3c03f7887338777d6d295cf2be6e0f3" name="ac3c03f7887338777d6d295cf2be6e0f3"></a>
+<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ownerId</b> {}</td></tr>
+<tr class="memdesc:ac3c03f7887338777d6d295cf2be6e0f3 inherit pub_attribs_a02577"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d9/d0f/a03605.html" title="A single User.">User</a> id of the <a class="el" href="../../d6/d58/a02993.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>'s owner. <br /></td></tr>
+<tr class="separator:ac3c03f7887338777d6d295cf2be6e0f3 inherit pub_attribs_a02577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1246077e656c338764ec2dd87aa20187 inherit pub_attribs_a02577"><td class="memItemLeft" align="right" valign="top"><a id="a1246077e656c338764ec2dd87aa20187" name="a1246077e656c338764ec2dd87aa20187"></a>
+std::unordered_map&lt; <a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>, <a class="el" href="../../d1/d67/a02561.html">PresenceUpdateData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>presences</b> {}</td></tr>
+<tr class="memdesc:a1246077e656c338764ec2dd87aa20187 inherit pub_attribs_a02577"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map of presences for each <a class="el" href="../../dc/d23/a03041.html" title="A single GuildMember.">GuildMember</a>. <br /></td></tr>
+<tr class="separator:a1246077e656c338764ec2dd87aa20187 inherit pub_attribs_a02577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8d32fa3356a013fbf3267cee3afa731 inherit pub_attribs_a02577"><td class="memItemLeft" align="right" valign="top"><a id="af8d32fa3356a013fbf3267cee3afa731" name="af8d32fa3356a013fbf3267cee3afa731"></a>
+std::vector&lt; <a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>roles</b> {}</td></tr>
+<tr class="memdesc:af8d32fa3356a013fbf3267cee3afa731 inherit pub_attribs_a02577"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of <a class="el" href="../../d6/d58/a02993.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> roles. <br /></td></tr>
+<tr class="separator:af8d32fa3356a013fbf3267cee3afa731 inherit pub_attribs_a02577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb2520cdbade6e08a4c4b3259a4ff9e9 inherit pub_attribs_a02577"><td class="memItemLeft" align="right" valign="top"><a id="adb2520cdbade6e08a4c4b3259a4ff9e9" name="adb2520cdbade6e08a4c4b3259a4ff9e9"></a>
+<a class="el" href="../../d4/d78/a03677.html">VoiceConnection</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>voiceConnectionPtr</b> { nullptr }</td></tr>
+<tr class="memdesc:adb2520cdbade6e08a4c4b3259a4ff9e9 inherit pub_attribs_a02577"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pointer to the <a class="el" href="../../d4/d78/a03677.html" title="VoiceConnection class DiscordCoreAPI_Dll - represents the connection to a given voice Channel.">VoiceConnection</a>, if present. <br /></td></tr>
+<tr class="separator:adb2520cdbade6e08a4c4b3259a4ff9e9 inherit pub_attribs_a02577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab00244c98337a21ca2002bf55d9c0982 inherit pub_attribs_a02577"><td class="memItemLeft" align="right" valign="top"><a id="ab00244c98337a21ca2002bf55d9c0982" name="ab00244c98337a21ca2002bf55d9c0982"></a>
+std::unordered_map&lt; <a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>, <a class="el" href="../../d7/de7/a02373.html">VoiceStateData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>voiceStates</b> {}</td></tr>
+<tr class="memdesc:ab00244c98337a21ca2002bf55d9c0982 inherit pub_attribs_a02577"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map of Guild-member voice-states. <br /></td></tr>
+<tr class="separator:ab00244c98337a21ca2002bf55d9c0982 inherit pub_attribs_a02577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_a02297"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_a02297')"><img src="../../closed.png" alt="-"/>&#160;Public Data Members inherited from <a class="el" href="../../d1/db8/a02297.html">DiscordCoreAPI::DiscordEntity</a></td></tr>
+<tr class="memitem:a903c33f2f50e17293b409cfe33bcd5e9 inherit pub_attribs_a02297"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db8/a02297.html#a903c33f2f50e17293b409cfe33bcd5e9">id</a> {}</td></tr>
+<tr class="separator:a903c33f2f50e17293b409cfe33bcd5e9 inherit pub_attribs_a02297"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_methods_a02297"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a02297')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d1/db8/a02297.html">DiscordCoreAPI::DiscordEntity</a></td></tr>
+<tr class="memitem:a880fa695445dc41f6d371d2a6ef1e8c0 inherit pub_methods_a02297"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db8/a02297.html#a880fa695445dc41f6d371d2a6ef1e8c0">getCreatedAtTimestamp</a> (<a class="el" href="../../d7/d92/a00887.html#ga5f837e6437665f0a390fe2c6271e3a91">TimeFormat</a> timeFormat)</td></tr>
+<tr class="memdesc:a880fa695445dc41f6d371d2a6ef1e8c0 inherit pub_methods_a02297"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the snowflake-id into a time and date stamp.  <a href="../../d1/db8/a02297.html#a880fa695445dc41f6d371d2a6ef1e8c0">More...</a><br /></td></tr>
+<tr class="separator:a880fa695445dc41f6d371d2a6ef1e8c0 inherit pub_methods_a02297"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="../../d1/d04/a00713_source.html">GuildEntities.hpp</a></li>
+<li><a class="el" href="../../df/d0e/a00800_source.html">DataParsingFunctions.cpp</a></li>
+<li><a class="el" href="../../d3/d60/a00818_source.html">GuildEntities.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -138,7 +321,7 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>limit</b> { 0 }</
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d6/d58/a02993.html">GetCurrentUserGuildsData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d6/d58/a02993.html">Guild</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

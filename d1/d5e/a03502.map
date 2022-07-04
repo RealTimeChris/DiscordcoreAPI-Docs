@@ -1,5 +1,0 @@
-<map id="DiscordCoreAPI::Sticker" name="DiscordCoreAPI::Sticker">
-<area shape="rect" id="node1" title="A single Sticker." alt="" coords="24,155,187,181"/>
-<area shape="rect" id="node2" href="$d4/d70/a02579.html" title="Data representing a single Sticker." alt="" coords="10,80,201,107"/>
-<area shape="rect" id="node3" href="$d2/d40/a02307.html" title="Base class DiscordCoreAPI_Dll for all Discord entities." alt="" coords="5,5,205,32"/>
-</map>

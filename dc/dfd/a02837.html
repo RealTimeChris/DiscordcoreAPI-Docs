@@ -105,37 +105,36 @@ $(document).ready(function(){initNavTree('dc/dfd/a02837.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d3/d57/a02834.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::AudioFrameData Struct Reference<div class="ingroups"><a class="el" href="../../db/d18/a00885.html">Voice Connection</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::SongCompletionEventData Struct Reference<div class="ingroups"><a class="el" href="../../db/d18/a00885.html">Voice Connection</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Represents a single frame of audio data.  
+<p><a class="el" href="../../d0/d2b/a02833.html" title="A song from the various platforms.">Song</a> completion event data.  
  <a href="../../dc/dfd/a02837.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:ab419272ec8ce14a1924308f6c9d5e1a1"><td class="memItemLeft" align="right" valign="top"><a id="ab419272ec8ce14a1924308f6c9d5e1a1" name="ab419272ec8ce14a1924308f6c9d5e1a1"></a>
-<a class="el" href="../../d0/d2b/a02833.html">EncodedFrameData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>encodedFrameData</b> {}</td></tr>
-<tr class="memdesc:ab419272ec8ce14a1924308f6c9d5e1a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be filled if it's already encoded. <br /></td></tr>
-<tr class="separator:ab419272ec8ce14a1924308f6c9d5e1a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0feb0c6bdd519dd97dc1be80333d3978"><td class="memItemLeft" align="right" valign="top"><a id="a0feb0c6bdd519dd97dc1be80333d3978" name="a0feb0c6bdd519dd97dc1be80333d3978"></a>
-<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildMemberId</b> {}</td></tr>
-<tr class="memdesc:a0feb0c6bdd519dd97dc1be80333d3978"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Id of the <a class="el" href="../../d7/d8c/a03049.html" title="A single GuildMember.">GuildMember</a> from which it was sent. <br /></td></tr>
-<tr class="separator:a0feb0c6bdd519dd97dc1be80333d3978"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a659e7fccd24ee89ed3cde41dad742b08"><td class="memItemLeft" align="right" valign="top"><a id="a659e7fccd24ee89ed3cde41dad742b08" name="a659e7fccd24ee89ed3cde41dad742b08"></a>
-<a class="el" href="../../db/d4f/a02829.html">RawFrameData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>rawFrameData</b> {}</td></tr>
-<tr class="memdesc:a659e7fccd24ee89ed3cde41dad742b08"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be filled if it's raw audio data. <br /></td></tr>
-<tr class="separator:a659e7fccd24ee89ed3cde41dad742b08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26361ff6db91e6bb36538970cc9ef664"><td class="memItemLeft" align="right" valign="top"><a id="a26361ff6db91e6bb36538970cc9ef664" name="a26361ff6db91e6bb36538970cc9ef664"></a>
-<a class="el" href="../../db/d18/a00885.html#gacf6f4590968be95774b156cf050c996c">AudioFrameType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> { <a class="el" href="../../db/d18/a00885.html#ggacf6f4590968be95774b156cf050c996cac9f88e098f6fe4e4e112eeb05ccb9671">AudioFrameType::Unset</a> }</td></tr>
-<tr class="memdesc:a26361ff6db91e6bb36538970cc9ef664"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of audio frame. <br /></td></tr>
-<tr class="separator:a26361ff6db91e6bb36538970cc9ef664"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7561ce617cecc9215a0fc418ed4bb071"><td class="memItemLeft" align="right" valign="top"><a id="a7561ce617cecc9215a0fc418ed4bb071" name="a7561ce617cecc9215a0fc418ed4bb071"></a>
+<a class="el" href="../../da/d03/a02577.html">GuildData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guild</b> {}</td></tr>
+<tr class="memdesc:a7561ce617cecc9215a0fc418ed4bb071"><td class="mdescLeft">&#160;</td><td class="mdescRight">The sending <a class="el" href="../../d6/d58/a02993.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>. <br /></td></tr>
+<tr class="separator:a7561ce617cecc9215a0fc418ed4bb071"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae87a367bbce969153d18c827c65fd816"><td class="memItemLeft" align="right" valign="top"><a id="ae87a367bbce969153d18c827c65fd816" name="ae87a367bbce969153d18c827c65fd816"></a>
+<a class="el" href="../../df/def/a02369.html">GuildMemberData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildMember</b> {}</td></tr>
+<tr class="memdesc:ae87a367bbce969153d18c827c65fd816"><td class="mdescLeft">&#160;</td><td class="mdescRight">The sending <a class="el" href="../../dc/d23/a03041.html" title="A single GuildMember.">GuildMember</a>. <br /></td></tr>
+<tr class="separator:ae87a367bbce969153d18c827c65fd816"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8340e3dbc09571714ab35fe82db33f20"><td class="memItemLeft" align="right" valign="top"><a id="a8340e3dbc09571714ab35fe82db33f20" name="a8340e3dbc09571714ab35fe82db33f20"></a>
+<a class="el" href="../../d0/d2b/a02833.html">Song</a>&#160;</td><td class="memItemRight" valign="bottom"><b>previousSong</b> {}</td></tr>
+<tr class="memdesc:a8340e3dbc09571714ab35fe82db33f20"><td class="mdescLeft">&#160;</td><td class="mdescRight">The previously played <a class="el" href="../../d0/d2b/a02833.html" title="A song from the various platforms.">Song</a>. <br /></td></tr>
+<tr class="separator:a8340e3dbc09571714ab35fe82db33f20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad548cb870648ce735ebd46e1926118f9"><td class="memItemLeft" align="right" valign="top"><a id="ad548cb870648ce735ebd46e1926118f9" name="ad548cb870648ce735ebd46e1926118f9"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>wasItAFail</b> { false }</td></tr>
+<tr class="memdesc:ad548cb870648ce735ebd46e1926118f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this a replay? (Did a track recently fail to play?) <br /></td></tr>
+<tr class="separator:ad548cb870648ce735ebd46e1926118f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following files:<ul>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a></li>
-<li><a class="el" href="../../d3/db2/a00869_source.html">Utilities.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -143,7 +142,7 @@ Public Data Members</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dc/dfd/a02837.html">AudioFrameData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dc/dfd/a02837.html">SongCompletionEventData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

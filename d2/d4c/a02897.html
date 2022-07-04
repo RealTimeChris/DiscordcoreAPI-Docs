@@ -105,33 +105,29 @@ $(document).ready(function(){initNavTree('d2/d4c/a02897.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../dc/d38/a02894.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::CreateGuildBanData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::GetGuildPruneCountData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For banning a current <a class="el" href="../../d7/d8c/a03049.html" title="A single GuildMember.">GuildMember</a>.  
+<p>For collecting the <a class="el" href="../../d6/d58/a02993.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> prune count.  
  <a href="../../d2/d4c/a02897.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d1/d04/a00713_source.html">GuildEntities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:a8fee573e2a08687003f02471a669ac99"><td class="memItemLeft" align="right" valign="top"><a id="a8fee573e2a08687003f02471a669ac99" name="a8fee573e2a08687003f02471a669ac99"></a>
-int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>deleteMessageDays</b> { 0 }</td></tr>
-<tr class="memdesc:a8fee573e2a08687003f02471a669ac99"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of days of their <a class="el" href="../../d8/d81/a03265.html" title="An interface class for the Message related Discord endpoints.">Messages</a> to delete. <br /></td></tr>
-<tr class="separator:a8fee573e2a08687003f02471a669ac99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf40e829b9881299ad98dfe12abb09a2"><td class="memItemLeft" align="right" valign="top"><a id="abf40e829b9881299ad98dfe12abb09a2" name="abf40e829b9881299ad98dfe12abb09a2"></a>
+<tr class="memitem:a153eb98f7cd22264755f7f7a17b05ac3"><td class="memItemLeft" align="right" valign="top"><a id="a153eb98f7cd22264755f7f7a17b05ac3" name="a153eb98f7cd22264755f7f7a17b05ac3"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>days</b> { 0 }</td></tr>
+<tr class="memdesc:a153eb98f7cd22264755f7f7a17b05ac3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of days beyond which to prune the user's for inactivity. <br /></td></tr>
+<tr class="separator:a153eb98f7cd22264755f7f7a17b05ac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a123c5d64d16d39950b4f964818a3d040"><td class="memItemLeft" align="right" valign="top"><a id="a123c5d64d16d39950b4f964818a3d040" name="a123c5d64d16d39950b4f964818a3d040"></a>
 <a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildId</b> {}</td></tr>
-<tr class="memdesc:abf40e829b9881299ad98dfe12abb09a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the <a class="el" href="../../d0/db8/a03001.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> from which to ban the member. <br /></td></tr>
-<tr class="separator:abf40e829b9881299ad98dfe12abb09a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e7474d0eb4a5838430c76cb8b577cb5"><td class="memItemLeft" align="right" valign="top"><a id="a5e7474d0eb4a5838430c76cb8b577cb5" name="a5e7474d0eb4a5838430c76cb8b577cb5"></a>
-<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildMemberId</b> {}</td></tr>
-<tr class="memdesc:a5e7474d0eb4a5838430c76cb8b577cb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the member to be banned. <br /></td></tr>
-<tr class="separator:a5e7474d0eb4a5838430c76cb8b577cb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b267135fd7454b60d9800ac854b61aa"><td class="memItemLeft" align="right" valign="top"><a id="a3b267135fd7454b60d9800ac854b61aa" name="a3b267135fd7454b60d9800ac854b61aa"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>reason</b> {}</td></tr>
-<tr class="memdesc:a3b267135fd7454b60d9800ac854b61aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">The reason for the ban. <br /></td></tr>
-<tr class="separator:a3b267135fd7454b60d9800ac854b61aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:a123c5d64d16d39950b4f964818a3d040"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../d6/d58/a02993.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> to be pruned. <br /></td></tr>
+<tr class="separator:a123c5d64d16d39950b4f964818a3d040"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecf783c0e495d9a0a0abd5fd14f99908"><td class="memItemLeft" align="right" valign="top"><a id="aecf783c0e495d9a0a0abd5fd14f99908" name="aecf783c0e495d9a0a0abd5fd14f99908"></a>
+std::vector&lt; <a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>includeRoles</b> {}</td></tr>
+<tr class="memdesc:aecf783c0e495d9a0a0abd5fd14f99908"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d7/d13/a03365.html" title="An interface class for the Role related Discord endpoints.">Roles</a> to be included in the prune. <br /></td></tr>
+<tr class="separator:aecf783c0e495d9a0a0abd5fd14f99908"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d1/d04/a00713_source.html">GuildEntities.hpp</a></li>
@@ -142,7 +138,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>reason</b> {}<
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d2/d4c/a02897.html">CreateGuildBanData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d2/d4c/a02897.html">GetGuildPruneCountData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

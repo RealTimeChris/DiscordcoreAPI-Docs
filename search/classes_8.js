@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['jointhreaddata_0',['JoinThreadData',['../d8/dbe/a03521.html',1,'DiscordCoreAPI']]]
+  ['jointhreaddata_0',['JoinThreadData',['../d7/df2/a03513.html',1,'DiscordCoreAPI']]]
 ];

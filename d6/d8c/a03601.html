@@ -105,33 +105,25 @@ $(document).ready(function(){initNavTree('d6/d8c/a03601.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d9/df0/a03598.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::ModifyUserVoiceStateData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::ModifyCurrentUserData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For modifying a <a class="el" href="../../d6/de0/a03613.html" title="A single User.">User</a>'s voice state.  
+<p>For modifying the Bot's <a class="el" href="../../d9/d0f/a03605.html" title="A single User.">User</a> responseData.  
  <a href="../../d6/d8c/a03601.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d3/d2c/a00764_source.html">UserEntities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:af9944274b005ef2632e3f54280ffcfab"><td class="memItemLeft" align="right" valign="top"><a id="af9944274b005ef2632e3f54280ffcfab" name="af9944274b005ef2632e3f54280ffcfab"></a>
-<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>channelId</b> {}</td></tr>
-<tr class="memdesc:af9944274b005ef2632e3f54280ffcfab"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the <a class="el" href="../../d2/d6f/a01957.html" title="A Channel object.">Channel</a> the user is currently in. <br /></td></tr>
-<tr class="separator:af9944274b005ef2632e3f54280ffcfab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad91dde0ef34ab77cce3dbcd72f0a38b6"><td class="memItemLeft" align="right" valign="top"><a id="ad91dde0ef34ab77cce3dbcd72f0a38b6" name="ad91dde0ef34ab77cce3dbcd72f0a38b6"></a>
-<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildId</b> {}</td></tr>
-<tr class="memdesc:ad91dde0ef34ab77cce3dbcd72f0a38b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../d0/db8/a03001.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> within which you would like to modify their voice state. <br /></td></tr>
-<tr class="separator:ad91dde0ef34ab77cce3dbcd72f0a38b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49ffb874f378b11f3b585b0bb7a908e5"><td class="memItemLeft" align="right" valign="top"><a id="a49ffb874f378b11f3b585b0bb7a908e5" name="a49ffb874f378b11f3b585b0bb7a908e5"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>suppress</b> { false }</td></tr>
-<tr class="memdesc:a49ffb874f378b11f3b585b0bb7a908e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggles the user's suppress state. <br /></td></tr>
-<tr class="separator:a49ffb874f378b11f3b585b0bb7a908e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a496748887004d87f9cf522c8ff5ca3ed"><td class="memItemLeft" align="right" valign="top"><a id="a496748887004d87f9cf522c8ff5ca3ed" name="a496748887004d87f9cf522c8ff5ca3ed"></a>
-<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>userId</b> {}</td></tr>
-<tr class="memdesc:a496748887004d87f9cf522c8ff5ca3ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">The user for which you would like to modify the voice state of. <br /></td></tr>
-<tr class="separator:a496748887004d87f9cf522c8ff5ca3ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84c81d4d262df043045673f7d9297660"><td class="memItemLeft" align="right" valign="top"><a id="a84c81d4d262df043045673f7d9297660" name="a84c81d4d262df043045673f7d9297660"></a>
+std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>avatar</b> {}</td></tr>
+<tr class="memdesc:a84c81d4d262df043045673f7d9297660"><td class="mdescLeft">&#160;</td><td class="mdescRight">If passed, modifies the user's avatar. <br /></td></tr>
+<tr class="separator:a84c81d4d262df043045673f7d9297660"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a008d962925d265f7458952dc8dcd5c75"><td class="memItemLeft" align="right" valign="top"><a id="a008d962925d265f7458952dc8dcd5c75" name="a008d962925d265f7458952dc8dcd5c75"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>userName</b> {}</td></tr>
+<tr class="memdesc:a008d962925d265f7458952dc8dcd5c75"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d9/d0f/a03605.html" title="A single User.">User</a>'s userName, if changed may cause the user's discriminator to be randomized. <br /></td></tr>
+<tr class="separator:a008d962925d265f7458952dc8dcd5c75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d3/d2c/a00764_source.html">UserEntities.hpp</a></li>
@@ -142,7 +134,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>suppress</b> { false 
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d6/d8c/a03601.html">ModifyUserVoiceStateData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d6/d8c/a03601.html">ModifyCurrentUserData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

@@ -1,4 +1,4 @@
-<map id="DiscordCoreAPI::MessageInteractionData" name="DiscordCoreAPI::MessageInteractionData">
-<area shape="rect" id="node1" title="Message Interaction data." alt="" coords="5,80,268,107"/>
-<area shape="rect" id="node2" href="$d7/dd6/a02305.html" title="Base class DiscordCoreAPI_Dll for all Discord entities." alt="" coords="37,5,237,32"/>
+<map id="DiscordCoreAPI::StickerItemData" name="DiscordCoreAPI::StickerItemData">
+<area shape="rect" id="node1" title="Message Sticker item data." alt="" coords="5,80,220,107"/>
+<area shape="rect" id="node2" href="$d1/db8/a02297.html" title="Base class DiscordCoreAPI_Dll for all Discord entities." alt="" coords="13,5,213,32"/>
 </map>

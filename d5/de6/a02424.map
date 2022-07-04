@@ -1,4 +1,4 @@
-<map id="DiscordCoreAPI::GuildApplicationCommandPermissionsData" name="DiscordCoreAPI::GuildApplicationCommandPermissionsData">
-<area shape="rect" id="node1" title="Represents the Permissions for accessing an ApplicationCommand from within a Guild." alt="" coords="5,80,221,121"/>
-<area shape="rect" id="node2" href="$d7/dd6/a02305.html" title="Base class DiscordCoreAPI_Dll for all Discord entities." alt="" coords="13,5,213,32"/>
+<map id="DiscordCoreAPI::EmojiData" name="DiscordCoreAPI::EmojiData">
+<area shape="rect" id="node1" title="Data structure representing a single emoji." alt="" coords="14,80,197,107"/>
+<area shape="rect" id="node2" href="$d1/db8/a02297.html" title="Base class DiscordCoreAPI_Dll for all Discord entities." alt="" coords="5,5,205,32"/>
 </map>

@@ -105,11 +105,11 @@ $(document).ready(function(){initNavTree('df/d40/a02749.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d4/da5/a02746.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::StickerPackData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::ConnectionData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Represents a <a class="el" href="../../dc/d8f/a03497.html" title="A single Sticker.">Sticker</a> pack.  
+<p>Represents a single <a class="el" href="../../d9/d0f/a03605.html" title="A single User.">User</a> Connection.  
  <a href="../../df/d40/a02749.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a>&gt;</code></p>
@@ -118,34 +118,42 @@ $(document).ready(function(){initNavTree('df/d40/a02749.html','../../'); initRes
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:af750ef5346a94871aab9e176740d329f"><td class="memItemLeft" align="right" valign="top"><a id="af750ef5346a94871aab9e176740d329f" name="af750ef5346a94871aab9e176740d329f"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>bannerAssetId</b> {}</td></tr>
-<tr class="memdesc:af750ef5346a94871aab9e176740d329f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Id of the <a class="el" href="../../dc/d8f/a03497.html" title="A single Sticker.">Sticker</a> pack's banner image. <br /></td></tr>
-<tr class="separator:af750ef5346a94871aab9e176740d329f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42bb14d40c5cc718f7633ce50fc417ee"><td class="memItemLeft" align="right" valign="top"><a id="a42bb14d40c5cc718f7633ce50fc417ee" name="a42bb14d40c5cc718f7633ce50fc417ee"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>coverStickerId</b> {}</td></tr>
-<tr class="memdesc:a42bb14d40c5cc718f7633ce50fc417ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Id of a <a class="el" href="../../dc/d8f/a03497.html" title="A single Sticker.">Sticker</a> in the pack which is shown as the pack's icon. <br /></td></tr>
-<tr class="separator:a42bb14d40c5cc718f7633ce50fc417ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a798ff794c26b5ba4a6356b378a68e566"><td class="memItemLeft" align="right" valign="top"><a id="a798ff794c26b5ba4a6356b378a68e566" name="a798ff794c26b5ba4a6356b378a68e566"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>description</b> {}</td></tr>
-<tr class="memdesc:a798ff794c26b5ba4a6356b378a68e566"><td class="mdescLeft">&#160;</td><td class="mdescRight">Description of the <a class="el" href="../../dc/d8f/a03497.html" title="A single Sticker.">Sticker</a> pack. <br /></td></tr>
-<tr class="separator:a798ff794c26b5ba4a6356b378a68e566"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5367c24d998e593efb36aef1c22b1463"><td class="memItemLeft" align="right" valign="top"><a id="a5367c24d998e593efb36aef1c22b1463" name="a5367c24d998e593efb36aef1c22b1463"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>Id</b> {}</td></tr>
-<tr class="memdesc:a5367c24d998e593efb36aef1c22b1463"><td class="mdescLeft">&#160;</td><td class="mdescRight">Id of the <a class="el" href="../../dc/d8f/a03497.html" title="A single Sticker.">Sticker</a> pack. <br /></td></tr>
-<tr class="separator:a5367c24d998e593efb36aef1c22b1463"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58c74c15a0a8f58e4364e8dd704ab2bd"><td class="memItemLeft" align="right" valign="top"><a id="a58c74c15a0a8f58e4364e8dd704ab2bd" name="a58c74c15a0a8f58e4364e8dd704ab2bd"></a>
+<tr class="memitem:a38746665c0b34bc922fce3e24dcbc6f1"><td class="memItemLeft" align="right" valign="top"><a id="a38746665c0b34bc922fce3e24dcbc6f1" name="a38746665c0b34bc922fce3e24dcbc6f1"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>friendSync</b> { false }</td></tr>
+<tr class="memdesc:a38746665c0b34bc922fce3e24dcbc6f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether friend sync is enabled for this connection. <br /></td></tr>
+<tr class="separator:a38746665c0b34bc922fce3e24dcbc6f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bb887622c5bd23cc7459183ea990ed1"><td class="memItemLeft" align="right" valign="top"><a id="a0bb887622c5bd23cc7459183ea990ed1" name="a0bb887622c5bd23cc7459183ea990ed1"></a>
+<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>id</b> {}</td></tr>
+<tr class="memdesc:a0bb887622c5bd23cc7459183ea990ed1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Id of the connection account. <br /></td></tr>
+<tr class="separator:a0bb887622c5bd23cc7459183ea990ed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06ecf3ff29f7be9ac1880bd94897b358"><td class="memItemLeft" align="right" valign="top"><a id="a06ecf3ff29f7be9ac1880bd94897b358" name="a06ecf3ff29f7be9ac1880bd94897b358"></a>
+std::vector&lt; <a class="el" href="../../d1/df7/a02501.html">IntegrationData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>integrations</b> {}</td></tr>
+<tr class="memdesc:a06ecf3ff29f7be9ac1880bd94897b358"><td class="mdescLeft">&#160;</td><td class="mdescRight">An array of partial server integrations. <br /></td></tr>
+<tr class="separator:a06ecf3ff29f7be9ac1880bd94897b358"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4eb54d466c16f4e6f7d426f8b141992f"><td class="memItemLeft" align="right" valign="top"><a id="a4eb54d466c16f4e6f7d426f8b141992f" name="a4eb54d466c16f4e6f7d426f8b141992f"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> {}</td></tr>
-<tr class="memdesc:a58c74c15a0a8f58e4364e8dd704ab2bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the <a class="el" href="../../dc/d8f/a03497.html" title="A single Sticker.">Sticker</a> pack. <br /></td></tr>
-<tr class="separator:a58c74c15a0a8f58e4364e8dd704ab2bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d7cd49f8accb04059db688200630a06"><td class="memItemLeft" align="right" valign="top"><a id="a5d7cd49f8accb04059db688200630a06" name="a5d7cd49f8accb04059db688200630a06"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>skuId</b> {}</td></tr>
-<tr class="memdesc:a5d7cd49f8accb04059db688200630a06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Id of the pack's SKU. <br /></td></tr>
-<tr class="separator:a5d7cd49f8accb04059db688200630a06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac53b8c7b87e099d01859c49f1c424c1e"><td class="memItemLeft" align="right" valign="top"><a id="ac53b8c7b87e099d01859c49f1c424c1e" name="ac53b8c7b87e099d01859c49f1c424c1e"></a>
-std::vector&lt; <a class="el" href="../../da/d03/a02577.html">StickerData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>stickers</b> {}</td></tr>
-<tr class="memdesc:ac53b8c7b87e099d01859c49f1c424c1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of <a class="el" href="../../dc/d8f/a03497.html" title="A single Sticker.">Sticker</a> objects the stickers in the pack. <br /></td></tr>
-<tr class="separator:ac53b8c7b87e099d01859c49f1c424c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:a4eb54d466c16f4e6f7d426f8b141992f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The userName of the connection account. <br /></td></tr>
+<tr class="separator:a4eb54d466c16f4e6f7d426f8b141992f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae40fcf4f7e4bccf513bd9d5ba3354a84"><td class="memItemLeft" align="right" valign="top"><a id="ae40fcf4f7e4bccf513bd9d5ba3354a84" name="ae40fcf4f7e4bccf513bd9d5ba3354a84"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>revoked</b> { false }</td></tr>
+<tr class="memdesc:ae40fcf4f7e4bccf513bd9d5ba3354a84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the connection is revoked. <br /></td></tr>
+<tr class="separator:ae40fcf4f7e4bccf513bd9d5ba3354a84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4e61629ad28145be4f663952094cf5f"><td class="memItemLeft" align="right" valign="top"><a id="af4e61629ad28145be4f663952094cf5f" name="af4e61629ad28145be4f663952094cf5f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>showActivity</b> { false }</td></tr>
+<tr class="memdesc:af4e61629ad28145be4f663952094cf5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether activities related to this connection will be shown in presence updates. <br /></td></tr>
+<tr class="separator:af4e61629ad28145be4f663952094cf5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67977f8509bac9cd49be5a178e31ed90"><td class="memItemLeft" align="right" valign="top"><a id="a67977f8509bac9cd49be5a178e31ed90" name="a67977f8509bac9cd49be5a178e31ed90"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> {}</td></tr>
+<tr class="memdesc:a67977f8509bac9cd49be5a178e31ed90"><td class="mdescLeft">&#160;</td><td class="mdescRight">The service of the connection(twitch, youtube). <br /></td></tr>
+<tr class="separator:a67977f8509bac9cd49be5a178e31ed90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf954f442707c731e0334b1907a7bc00"><td class="memItemLeft" align="right" valign="top"><a id="aaf954f442707c731e0334b1907a7bc00" name="aaf954f442707c731e0334b1907a7bc00"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>verified</b> { false }</td></tr>
+<tr class="memdesc:aaf954f442707c731e0334b1907a7bc00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the connection is verified. <br /></td></tr>
+<tr class="separator:aaf954f442707c731e0334b1907a7bc00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3d571163fcbf7b456157c22c73500f4"><td class="memItemLeft" align="right" valign="top"><a id="ac3d571163fcbf7b456157c22c73500f4" name="ac3d571163fcbf7b456157c22c73500f4"></a>
+<a class="el" href="../../dd/d94/a00888.html#gac5fbc4a3b87f9470e6be7acf38492c14">ConnectionVisibilityTypes</a>&#160;</td><td class="memItemRight" valign="bottom"><b>visibility</b> {}</td></tr>
+<tr class="memdesc:ac3d571163fcbf7b456157c22c73500f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visibility of this connection. <br /></td></tr>
+<tr class="separator:ac3d571163fcbf7b456157c22c73500f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a></li>
@@ -156,7 +164,7 @@ std::vector&lt; <a class="el" href="../../da/d03/a02577.html">StickerData</a> &g
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../df/d40/a02749.html">StickerPackData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../df/d40/a02749.html">ConnectionData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

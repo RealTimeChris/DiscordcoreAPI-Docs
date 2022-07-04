@@ -105,28 +105,37 @@ $(document).ready(function(){initNavTree('db/d4f/a02829.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d9/dff/a02826.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::RawFrameData Struct Reference<div class="ingroups"><a class="el" href="../../db/d18/a00885.html">Voice Connection</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::AudioFrameData Struct Reference<div class="ingroups"><a class="el" href="../../db/d18/a00885.html">Voice Connection</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Represents a single frame of raw audio data.  
+<p>Represents a single frame of audio data.  
  <a href="../../db/d4f/a02829.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:ab96281fec6f0c35fc2d6df49077bf8f9"><td class="memItemLeft" align="right" valign="top"><a id="ab96281fec6f0c35fc2d6df49077bf8f9" name="ab96281fec6f0c35fc2d6df49077bf8f9"></a>
-std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>data</b> {}</td></tr>
-<tr class="memdesc:ab96281fec6f0c35fc2d6df49077bf8f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The audio data. <br /></td></tr>
-<tr class="separator:ab96281fec6f0c35fc2d6df49077bf8f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a859b4a88ab2a0e4ed52e5cd4f6d3462b"><td class="memItemLeft" align="right" valign="top"><a id="a859b4a88ab2a0e4ed52e5cd4f6d3462b" name="a859b4a88ab2a0e4ed52e5cd4f6d3462b"></a>
-int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>sampleCount</b> { -1 }</td></tr>
-<tr class="memdesc:a859b4a88ab2a0e4ed52e5cd4f6d3462b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of samples per this frame. <br /></td></tr>
-<tr class="separator:a859b4a88ab2a0e4ed52e5cd4f6d3462b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab419272ec8ce14a1924308f6c9d5e1a1"><td class="memItemLeft" align="right" valign="top"><a id="ab419272ec8ce14a1924308f6c9d5e1a1" name="ab419272ec8ce14a1924308f6c9d5e1a1"></a>
+<a class="el" href="../../df/d7d/a02825.html">EncodedFrameData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>encodedFrameData</b> {}</td></tr>
+<tr class="memdesc:ab419272ec8ce14a1924308f6c9d5e1a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be filled if it's already encoded. <br /></td></tr>
+<tr class="separator:ab419272ec8ce14a1924308f6c9d5e1a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0feb0c6bdd519dd97dc1be80333d3978"><td class="memItemLeft" align="right" valign="top"><a id="a0feb0c6bdd519dd97dc1be80333d3978" name="a0feb0c6bdd519dd97dc1be80333d3978"></a>
+<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildMemberId</b> {}</td></tr>
+<tr class="memdesc:a0feb0c6bdd519dd97dc1be80333d3978"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Id of the <a class="el" href="../../dc/d23/a03041.html" title="A single GuildMember.">GuildMember</a> from which it was sent. <br /></td></tr>
+<tr class="separator:a0feb0c6bdd519dd97dc1be80333d3978"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a659e7fccd24ee89ed3cde41dad742b08"><td class="memItemLeft" align="right" valign="top"><a id="a659e7fccd24ee89ed3cde41dad742b08" name="a659e7fccd24ee89ed3cde41dad742b08"></a>
+<a class="el" href="../../db/de9/a02821.html">RawFrameData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>rawFrameData</b> {}</td></tr>
+<tr class="memdesc:a659e7fccd24ee89ed3cde41dad742b08"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be filled if it's raw audio data. <br /></td></tr>
+<tr class="separator:a659e7fccd24ee89ed3cde41dad742b08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26361ff6db91e6bb36538970cc9ef664"><td class="memItemLeft" align="right" valign="top"><a id="a26361ff6db91e6bb36538970cc9ef664" name="a26361ff6db91e6bb36538970cc9ef664"></a>
+<a class="el" href="../../db/d18/a00885.html#gacf6f4590968be95774b156cf050c996c">AudioFrameType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> { <a class="el" href="../../db/d18/a00885.html#ggacf6f4590968be95774b156cf050c996cac9f88e098f6fe4e4e112eeb05ccb9671">AudioFrameType::Unset</a> }</td></tr>
+<tr class="memdesc:a26361ff6db91e6bb36538970cc9ef664"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of audio frame. <br /></td></tr>
+<tr class="separator:a26361ff6db91e6bb36538970cc9ef664"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<hr/>The documentation for this struct was generated from the following files:<ul>
 <li><a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a></li>
+<li><a class="el" href="../../d3/db2/a00869_source.html">Utilities.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -134,7 +143,7 @@ int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>sampleCount</b> { 
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../db/d4f/a02829.html">RawFrameData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../db/d4f/a02829.html">AudioFrameData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

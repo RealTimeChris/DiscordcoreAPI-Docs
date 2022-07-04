@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['youtubeformatvector_0',['YouTubeFormatVector',['../d3/d32/a02665.html',1,'DiscordCoreAPI']]]
+  ['youtubeformatvector_0',['YouTubeFormatVector',['../da/de8/a02657.html',1,'DiscordCoreAPI']]]
 ];

@@ -105,29 +105,45 @@ $(document).ready(function(){initNavTree('d2/d76/a03021.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../de/df2/a03018.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::ListGuildMembersData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::AddGuildMemberData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For listing the <a class="el" href="../../d2/df1/a03057.html" title="An interface class DiscordCoreAPI_Dll for the GuildMember related Discord endpoints.">GuildMembers</a> of a chosen <a class="el" href="../../d0/db8/a03001.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>.  
+<p>For adding a new <a class="el" href="../../dc/d23/a03041.html" title="A single GuildMember.">GuildMember</a> to a chosen <a class="el" href="../../d6/d58/a02993.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>.  
  <a href="../../d2/d76/a03021.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d2/d94/a00716_source.html">GuildMemberEntities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:ac5780c2b5f9c1f9b73a3d0fda32474db"><td class="memItemLeft" align="right" valign="top"><a id="ac5780c2b5f9c1f9b73a3d0fda32474db" name="ac5780c2b5f9c1f9b73a3d0fda32474db"></a>
-<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>after</b> {}</td></tr>
-<tr class="memdesc:ac5780c2b5f9c1f9b73a3d0fda32474db"><td class="mdescLeft">&#160;</td><td class="mdescRight">The highest user id in the previous page. <br /></td></tr>
-<tr class="separator:ac5780c2b5f9c1f9b73a3d0fda32474db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abeebaa77717fb1bf19ab3889c3fe3f50"><td class="memItemLeft" align="right" valign="top"><a id="abeebaa77717fb1bf19ab3889c3fe3f50" name="abeebaa77717fb1bf19ab3889c3fe3f50"></a>
+<tr class="memitem:a90a47e5e401a85e31ccfb5fa6ce9532b"><td class="memItemLeft" align="right" valign="top"><a id="a90a47e5e401a85e31ccfb5fa6ce9532b" name="a90a47e5e401a85e31ccfb5fa6ce9532b"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>accessToken</b> {}</td></tr>
+<tr class="memdesc:a90a47e5e401a85e31ccfb5fa6ce9532b"><td class="mdescLeft">&#160;</td><td class="mdescRight">An oauth2 access token granted with the guilds.join to the bot's application for the user you want to add. <br /></td></tr>
+<tr class="separator:a90a47e5e401a85e31ccfb5fa6ce9532b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc3fa3c84a95e641f764c7aec5327e4a"><td class="memItemLeft" align="right" valign="top"><a id="abc3fa3c84a95e641f764c7aec5327e4a" name="abc3fa3c84a95e641f764c7aec5327e4a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>deaf</b> {}</td></tr>
+<tr class="memdesc:abc3fa3c84a95e641f764c7aec5327e4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the user is deafened in voice channels. <br /></td></tr>
+<tr class="separator:abc3fa3c84a95e641f764c7aec5327e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb4806c5252263e9a2337c91beb7e0d3"><td class="memItemLeft" align="right" valign="top"><a id="aeb4806c5252263e9a2337c91beb7e0d3" name="aeb4806c5252263e9a2337c91beb7e0d3"></a>
 <a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildId</b> {}</td></tr>
-<tr class="memdesc:abeebaa77717fb1bf19ab3889c3fe3f50"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d0/db8/a03001.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> from which to list the <a class="el" href="../../d2/df1/a03057.html" title="An interface class DiscordCoreAPI_Dll for the GuildMember related Discord endpoints.">GuildMembers</a>. <br /></td></tr>
-<tr class="separator:abeebaa77717fb1bf19ab3889c3fe3f50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ba5daf6f91db54266d91115c1e4b620"><td class="memItemLeft" align="right" valign="top"><a id="a4ba5daf6f91db54266d91115c1e4b620" name="a4ba5daf6f91db54266d91115c1e4b620"></a>
-int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>limit</b> { 0 }</td></tr>
-<tr class="memdesc:a4ba5daf6f91db54266d91115c1e4b620"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max number of members to return (1 - 1000). <br /></td></tr>
-<tr class="separator:a4ba5daf6f91db54266d91115c1e4b620"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:aeb4806c5252263e9a2337c91beb7e0d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../d6/d58/a02993.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> to add the new <a class="el" href="../../dc/d23/a03041.html" title="A single GuildMember.">GuildMember</a> to. <br /></td></tr>
+<tr class="separator:aeb4806c5252263e9a2337c91beb7e0d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab33dd88bf4e968676953fc7372447748"><td class="memItemLeft" align="right" valign="top"><a id="ab33dd88bf4e968676953fc7372447748" name="ab33dd88bf4e968676953fc7372447748"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>mute</b> {}</td></tr>
+<tr class="memdesc:ab33dd88bf4e968676953fc7372447748"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the user is muted in voice channels. <br /></td></tr>
+<tr class="separator:ab33dd88bf4e968676953fc7372447748"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff61e8e17c528ec91010a9520ba7cb9d"><td class="memItemLeft" align="right" valign="top"><a id="aff61e8e17c528ec91010a9520ba7cb9d" name="aff61e8e17c528ec91010a9520ba7cb9d"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>nick</b> {}</td></tr>
+<tr class="memdesc:aff61e8e17c528ec91010a9520ba7cb9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value to set users nickname to. <br /></td></tr>
+<tr class="separator:aff61e8e17c528ec91010a9520ba7cb9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e11bd70c489cf1e4987cad404a1ad7c"><td class="memItemLeft" align="right" valign="top"><a id="a4e11bd70c489cf1e4987cad404a1ad7c" name="a4e11bd70c489cf1e4987cad404a1ad7c"></a>
+std::vector&lt; <a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>roles</b> {}</td></tr>
+<tr class="memdesc:a4e11bd70c489cf1e4987cad404a1ad7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of <a class="el" href="../../d3/dfd/a03357.html" title="A single Role.">Role</a> ids the member is assigned. <br /></td></tr>
+<tr class="separator:a4e11bd70c489cf1e4987cad404a1ad7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a885b24557769a06eb217a4031486222b"><td class="memItemLeft" align="right" valign="top"><a id="a885b24557769a06eb217a4031486222b" name="a885b24557769a06eb217a4031486222b"></a>
+<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>userId</b> {}</td></tr>
+<tr class="memdesc:a885b24557769a06eb217a4031486222b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../d9/d0f/a03605.html" title="A single User.">User</a> id of the user you wish to add. <br /></td></tr>
+<tr class="separator:a885b24557769a06eb217a4031486222b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d2/d94/a00716_source.html">GuildMemberEntities.hpp</a></li>
@@ -138,7 +154,7 @@ int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>limit</b> { 0 }</t
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d2/d76/a03021.html">ListGuildMembersData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d2/d76/a03021.html">AddGuildMemberData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

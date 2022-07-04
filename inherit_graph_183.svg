@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d8/d1e/a02801.html" target="_top" xlink:title="Data representing an input&#45;event, which is any Message or Interaction that is coming into the bot as ...">
+<g id="a_node1"><a xlink:href="df/d9c/a02793.html" target="_top" xlink:title="Data representing an input&#45;event, which is any Message or Interaction that is coming into the bot as ...">
 <polygon fill="none" stroke="black" points="0,-0.5 0,-19.5 157,-19.5 157,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="78.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::InputEventData</text>
 </a>

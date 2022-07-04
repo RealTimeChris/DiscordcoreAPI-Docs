@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d9/da5/a02757.html" target="_top" xlink:title="Represents a single User Connection.">
+<g id="a_node1"><a xlink:href="df/d40/a02749.html" target="_top" xlink:title="Represents a single User Connection.">
 <polygon fill="none" stroke="black" points="0,-0.5 0,-19.5 161,-19.5 161,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="80.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::ConnectionData</text>
 </a>

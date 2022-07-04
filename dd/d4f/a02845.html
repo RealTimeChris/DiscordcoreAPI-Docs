@@ -105,33 +105,29 @@ $(document).ready(function(){initNavTree('dd/d4f/a02845.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../dd/dd1/a02842.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::SongCompletionEventData Struct Reference<div class="ingroups"><a class="el" href="../../db/d18/a00885.html">Voice Connection</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::BaseFunctionArguments Struct Reference<div class="ingroups"><a class="el" href="../../d7/d92/a00887.html">Utilities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="../../d7/d1c/a02841.html" title="A song from the various platforms.">Song</a> completion event data.  
+<p>Base arguments for the command classes.  
  <a href="../../dd/d4f/a02845.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:a7561ce617cecc9215a0fc418ed4bb071"><td class="memItemLeft" align="right" valign="top"><a id="a7561ce617cecc9215a0fc418ed4bb071" name="a7561ce617cecc9215a0fc418ed4bb071"></a>
-<a class="el" href="../../d0/dea/a02585.html">GuildData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guild</b> {}</td></tr>
-<tr class="memdesc:a7561ce617cecc9215a0fc418ed4bb071"><td class="mdescLeft">&#160;</td><td class="mdescRight">The sending <a class="el" href="../../d0/db8/a03001.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>. <br /></td></tr>
-<tr class="separator:a7561ce617cecc9215a0fc418ed4bb071"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae87a367bbce969153d18c827c65fd816"><td class="memItemLeft" align="right" valign="top"><a id="ae87a367bbce969153d18c827c65fd816" name="ae87a367bbce969153d18c827c65fd816"></a>
-<a class="el" href="../../dd/d75/a02377.html">GuildMemberData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildMember</b> {}</td></tr>
-<tr class="memdesc:ae87a367bbce969153d18c827c65fd816"><td class="mdescLeft">&#160;</td><td class="mdescRight">The sending <a class="el" href="../../d7/d8c/a03049.html" title="A single GuildMember.">GuildMember</a>. <br /></td></tr>
-<tr class="separator:ae87a367bbce969153d18c827c65fd816"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8340e3dbc09571714ab35fe82db33f20"><td class="memItemLeft" align="right" valign="top"><a id="a8340e3dbc09571714ab35fe82db33f20" name="a8340e3dbc09571714ab35fe82db33f20"></a>
-<a class="el" href="../../d7/d1c/a02841.html">Song</a>&#160;</td><td class="memItemRight" valign="bottom"><b>previousSong</b> {}</td></tr>
-<tr class="memdesc:a8340e3dbc09571714ab35fe82db33f20"><td class="mdescLeft">&#160;</td><td class="mdescRight">The previously played <a class="el" href="../../d7/d1c/a02841.html" title="A song from the various platforms.">Song</a>. <br /></td></tr>
-<tr class="separator:a8340e3dbc09571714ab35fe82db33f20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad548cb870648ce735ebd46e1926118f9"><td class="memItemLeft" align="right" valign="top"><a id="ad548cb870648ce735ebd46e1926118f9" name="ad548cb870648ce735ebd46e1926118f9"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>wasItAFail</b> { false }</td></tr>
-<tr class="memdesc:ad548cb870648ce735ebd46e1926118f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this a replay? (Did a track recently fail to play?) <br /></td></tr>
-<tr class="separator:ad548cb870648ce735ebd46e1926118f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8aa3768bc544196777248b9df5cefe0d"><td class="memItemLeft" align="right" valign="top"><a id="a8aa3768bc544196777248b9df5cefe0d" name="a8aa3768bc544196777248b9df5cefe0d"></a>
+<a class="el" href="../../d5/d34/a02809.html">CommandData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>commandData</b> {}</td></tr>
+<tr class="memdesc:a8aa3768bc544196777248b9df5cefe0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The input command's data. <br /></td></tr>
+<tr class="separator:a8aa3768bc544196777248b9df5cefe0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20009c042119fe1463a36ed29d74bb1b"><td class="memItemLeft" align="right" valign="top"><a id="a20009c042119fe1463a36ed29d74bb1b" name="a20009c042119fe1463a36ed29d74bb1b"></a>
+<a class="el" href="../../d3/d39/a02005.html">DiscordCoreClient</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>discordCoreClient</b> { nullptr }</td></tr>
+<tr class="memdesc:a20009c042119fe1463a36ed29d74bb1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pointer to the instance of <a class="el" href="../../d3/d39/a02005.html" title="DiscordCoreClient - The main class DiscordCoreAPI_Dll for this library.">DiscordCoreClient</a>. <br /></td></tr>
+<tr class="separator:a20009c042119fe1463a36ed29d74bb1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80eabf8007466c61abda009ea3070942"><td class="memItemLeft" align="right" valign="top"><a id="a80eabf8007466c61abda009ea3070942" name="a80eabf8007466c61abda009ea3070942"></a>
+<a class="el" href="../../df/d9c/a02793.html">InputEventData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>eventData</b> {}</td></tr>
+<tr class="memdesc:a80eabf8007466c61abda009ea3070942"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../df/d9c/a02793.html" title="Data representing an input-event, which is any Message or Interaction that is coming into the bot as ...">InputEventData</a> representing the input event that triggered the command. <br /></td></tr>
+<tr class="separator:a80eabf8007466c61abda009ea3070942"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a></li>
@@ -142,7 +138,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>wasItAFail</b> { fals
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dd/d4f/a02845.html">SongCompletionEventData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dd/d4f/a02845.html">BaseFunctionArguments</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

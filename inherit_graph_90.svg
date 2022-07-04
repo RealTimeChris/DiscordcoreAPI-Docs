@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="df/d7d/a02825.html" target="_top" xlink:title="Represents a download Url.">
+<g id="a_node1"><a xlink:href="db/d27/a02817.html" target="_top" xlink:title="Represents a download Url.">
 <polygon fill="none" stroke="black" points="0,-0.5 0,-19.5 146,-19.5 146,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="73" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::DownloadUrl</text>
 </a>

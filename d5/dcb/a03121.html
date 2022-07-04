@@ -103,116 +103,19 @@ $(document).ready(function(){initNavTree('d5/dcb/a03121.html','../../'); initRes
 
 <div class="header">
   <div class="summary">
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="../../dc/d00/a03118.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::InputEvents Class Reference<div class="ingroups"><a class="el" href="../../dd/d08/a00884.html">Main Endpoints</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::CreateEphemeralInteractionResponseData Class Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For handling <a class="el" href="../../d6/de0/a03613.html" title="A single User.">User</a> input - <a class="el" href="../../d8/d81/a03265.html" title="An interface class for the Message related Discord endpoints.">Messages</a> or <a class="el" href="../../d7/d90/a03177.html" title="An interface class for the Interaction related Discord endpoints.">Interactions</a>.  
+<p>For creating an ephemeral <a class="el" href="../../d5/d1d/a03165.html" title="A single Interaction.">Interaction</a> response.  
  <a href="../../d5/dcb/a03121.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="../../df/d3b/a00728_source.html">InputEvents.hpp</a>&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a721365d0ef437397ea553634f88b8ecf"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d3/def/a01985.html">CoRoutine</a>&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dcb/a03121.html#a721365d0ef437397ea553634f88b8ecf">deleteInputEventResponseAsync</a> (<a class="el" href="../../d8/d1e/a02801.html">InputEventData</a> &amp;dataPackage, int32_t timeDelayNew=0)</td></tr>
-<tr class="memdesc:a721365d0ef437397ea553634f88b8ecf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes a previously sent "input-event-response".  <a href="../../d5/dcb/a03121.html#a721365d0ef437397ea553634f88b8ecf">More...</a><br /></td></tr>
-<tr class="separator:a721365d0ef437397ea553634f88b8ecf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91f7a025c00ec5b858a260ebcda49a3c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d3/def/a01985.html">CoRoutine</a>&lt; <a class="el" href="../../d8/d1e/a02801.html">InputEventData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dcb/a03121.html#a91f7a025c00ec5b858a260ebcda49a3c">respondToInputEventAsync</a> (<a class="el" href="../../d7/d75/a02805.html">RespondToInputEventData</a> dataPackage)</td></tr>
-<tr class="memdesc:a91f7a025c00ec5b858a260ebcda49a3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Responds to one of a number of types of "InputEvents".  <a href="../../d5/dcb/a03121.html#a91f7a025c00ec5b858a260ebcda49a3c">More...</a><br /></td></tr>
-<tr class="separator:a91f7a025c00ec5b858a260ebcda49a3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a721365d0ef437397ea553634f88b8ecf" name="a721365d0ef437397ea553634f88b8ecf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a721365d0ef437397ea553634f88b8ecf">&#9670;&nbsp;</a></span>deleteInputEventResponseAsync()</h2>
+<p><code>#include &lt;<a class="el" href="../../df/df7/a00731_source.html">InteractionEntities.hpp</a>&gt;</code></p>
 
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d3/def/a01985.html">CoRoutine</a>&lt; void &gt; DiscordCoreAPI::InputEvents::deleteInputEventResponseAsync </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d8/d1e/a02801.html">InputEventData</a> &amp;&#160;</td>
-          <td class="paramname"><em>dataPackage</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int32_t&#160;</td>
-          <td class="paramname"><em>timeDelayNew</em> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >Deletes a previously sent "input-event-response".</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dataPackage</td><td>A std::unique_ptr containing an <a class="el" href="../../d8/d1e/a02801.html" title="Data representing an input-event, which is any Message or Interaction that is coming into the bot as ...">InputEventData</a> structure. </td></tr>
-    <tr><td class="paramname">timeDelayNew</td><td>An int32_t representing the desired delay until the message is deleted, in std::chrono::milliseconds. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../d3/def/a01985.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> containing void. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d9/daf/a00830_source.html#l00101">101</a> of file <a class="el" href="../../d9/daf/a00830_source.html">InputEvents.cpp</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d5/dcb/a03121_a721365d0ef437397ea553634f88b8ecf_cgraph.svg" width="722" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-
-</div>
-</div>
-<a id="a91f7a025c00ec5b858a260ebcda49a3c" name="a91f7a025c00ec5b858a260ebcda49a3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91f7a025c00ec5b858a260ebcda49a3c">&#9670;&nbsp;</a></span>respondToInputEventAsync()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d3/def/a01985.html">CoRoutine</a>&lt; <a class="el" href="../../d8/d1e/a02801.html">InputEventData</a> &gt; DiscordCoreAPI::InputEvents::respondToInputEventAsync </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d7/d75/a02805.html">RespondToInputEventData</a>&#160;</td>
-          <td class="paramname"><em>dataPackage</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >Responds to one of a number of types of "InputEvents".</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dataPackage</td><td>A <a class="el" href="../../d7/d75/a02805.html" title="Data for responding to an input-event.">RespondToInputEventData</a> structure. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>An std::unique_ptr containing an <a class="el" href="../../d8/d1e/a02801.html" title="Data representing an input-event, which is any Message or Interaction that is coming into the bot as ...">InputEventData</a> structure. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d9/daf/a00830_source.html#l00028">28</a> of file <a class="el" href="../../d9/daf/a00830_source.html">InputEvents.cpp</a>.</p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="../../df/d3b/a00728_source.html">InputEvents.hpp</a></li>
-<li><a class="el" href="../../d9/daf/a00830_source.html">InputEvents.cpp</a></li>
+<p>Inherits DiscordCoreAPI::InteractionResponse.</p>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li><a class="el" href="../../df/df7/a00731_source.html">InteractionEntities.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -220,7 +123,7 @@ Here is the call graph for this function:</div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d5/dcb/a03121.html">InputEvents</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d5/dcb/a03121.html">CreateEphemeralInteractionResponseData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

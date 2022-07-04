@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="da/d7d/a02785.html" target="_top" xlink:title="Data from the GetGatewatBot endpoint.">
+<g id="a_node1"><a xlink:href="d5/db0/a02777.html" target="_top" xlink:title="Data from the GetGatewatBot endpoint.">
 <polygon fill="none" stroke="black" points="0,-0.5 0,-19.5 165,-19.5 165,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="82.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::GatewayBotData</text>
 </a>

@@ -103,39 +103,34 @@ $(document).ready(function(){initNavTree('d7/d40/a03681.html','../../'); initRes
 
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d4/db1/a03678.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::TimeStamp Class Reference<div class="ingroups"><a class="el" href="../../d7/d92/a00887.html">Utilities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::CreateWebHookData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Class for representing a timestamp, as well as working with time-related values.  
+<p>For creating a new <a class="el" href="../../d3/dc0/a03733.html" title="A single WebHook.">WebHook</a>.  
  <a href="../../d7/d40/a03681.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="../../d5/dae/a00767_source.html">Utilities.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../d8/dba/a00773_source.html">WebHookEntities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:ga6d6d1ce8ebf0ba0c6a0890ab64e87381"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d92/a00887.html#ga6d6d1ce8ebf0ba0c6a0890ab64e87381">getDateTimeStamp</a> (<a class="el" href="../../d7/d92/a00887.html#ga5f837e6437665f0a390fe2c6271e3a91">TimeFormat</a> timeFormat)</td></tr>
-<tr class="memdesc:ga6d6d1ce8ebf0ba0c6a0890ab64e87381"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collects a timestamp using the format TimeFormat, as a string.  <a href="../../d7/d92/a00887.html#ga6d6d1ce8ebf0ba0c6a0890ab64e87381">More...</a><br /></td></tr>
-<tr class="separator:ga6d6d1ce8ebf0ba0c6a0890ab64e87381"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1a7847af4e3c4d666eb9cb45b3933edc"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d92/a00887.html#ga1a7847af4e3c4d666eb9cb45b3933edc">getOriginalTimeStamp</a> ()</td></tr>
-<tr class="memdesc:ga1a7847af4e3c4d666eb9cb45b3933edc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the original timestamp, from a Discord entity.  <a href="../../d7/d92/a00887.html#ga1a7847af4e3c4d666eb9cb45b3933edc">More...</a><br /></td></tr>
-<tr class="separator:ga1a7847af4e3c4d666eb9cb45b3933edc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga97e7849b93d0e7f6086d30cfead2cb64"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d92/a00887.html#ga97e7849b93d0e7f6086d30cfead2cb64">hasTimeElapsed</a> (uint64_t days=0, uint64_t hours=0, uint64_t minutes=0)</td></tr>
-<tr class="memdesc:ga97e7849b93d0e7f6086d30cfead2cb64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deduces whether or not a chosen period of time has passed, for a chosen timestamp.  <a href="../../d7/d92/a00887.html#ga97e7849b93d0e7f6086d30cfead2cb64">More...</a><br /></td></tr>
-<tr class="separator:ga97e7849b93d0e7f6086d30cfead2cb64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ga06a5cb025dd8627b04a15a96e889f967"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d92/a00887.html#ga06a5cb025dd8627b04a15a96e889f967">getFutureISO8601TimeStamp</a> (int32_t minutesToAdd, int32_t hoursToAdd=0, int32_t daysToAdd=0, int32_t monthsToAdd=0, int32_t yearsToAdd=0)</td></tr>
-<tr class="memdesc:ga06a5cb025dd8627b04a15a96e889f967"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collects a timestamp that is a chosen number of minutes ahead of the current time.  <a href="../../d7/d92/a00887.html#ga06a5cb025dd8627b04a15a96e889f967">More...</a><br /></td></tr>
-<tr class="separator:ga06a5cb025dd8627b04a15a96e889f967"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Data Members</h2></td></tr>
+<tr class="memitem:abd2a5b440d3eb2a1daa5fd7cb3d0742b"><td class="memItemLeft" align="right" valign="top"><a id="abd2a5b440d3eb2a1daa5fd7cb3d0742b" name="abd2a5b440d3eb2a1daa5fd7cb3d0742b"></a>
+std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>avatar</b> {}</td></tr>
+<tr class="memdesc:abd2a5b440d3eb2a1daa5fd7cb3d0742b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Image for the default webhook avatar. <br /></td></tr>
+<tr class="separator:abd2a5b440d3eb2a1daa5fd7cb3d0742b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9cfb9ecc35232101605bce70c000f03"><td class="memItemLeft" align="right" valign="top"><a id="aa9cfb9ecc35232101605bce70c000f03" name="aa9cfb9ecc35232101605bce70c000f03"></a>
+<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>channelId</b> {}</td></tr>
+<tr class="memdesc:aa9cfb9ecc35232101605bce70c000f03"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../d2/d6f/a01957.html" title="A Channel object.">Channel</a> within which to create the <a class="el" href="../../d3/dc0/a03733.html" title="A single WebHook.">WebHook</a>. <br /></td></tr>
+<tr class="separator:aa9cfb9ecc35232101605bce70c000f03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed2bbdbf37159b013291bbe766d89df6"><td class="memItemLeft" align="right" valign="top"><a id="aed2bbdbf37159b013291bbe766d89df6" name="aed2bbdbf37159b013291bbe766d89df6"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> {}</td></tr>
+<tr class="memdesc:aed2bbdbf37159b013291bbe766d89df6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the webhook(1 - 80 characters). <br /></td></tr>
+<tr class="separator:aed2bbdbf37159b013291bbe766d89df6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="../../d5/dae/a00767_source.html">Utilities.hpp</a></li>
-<li><a class="el" href="../../d3/db2/a00869_source.html">Utilities.cpp</a></li>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="../../d8/dba/a00773_source.html">WebHookEntities.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -143,7 +138,7 @@ Static Public Member Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d7/d40/a03681.html">TimeStamp</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d7/d40/a03681.html">CreateWebHookData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

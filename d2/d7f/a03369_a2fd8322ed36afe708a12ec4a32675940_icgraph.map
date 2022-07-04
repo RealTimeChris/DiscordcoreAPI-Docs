@@ -1,0 +1,4 @@
+<map id="DiscordCoreAPI::SongAPI::isLoopAllEnabled" name="DiscordCoreAPI::SongAPI::isLoopAllEnabled">
+<area shape="rect" id="node1" title="Returns the current loop&#45;all status of the current Guild&#39;s Playlist." alt="" coords="227,5,400,47"/>
+<area shape="rect" id="node2" href="$d2/d7f/a03369.html#ae7c43fec03815d6eea1987c433858ef7" title="Skips to the next Song in the queue, if applicable." alt="" coords="5,5,179,47"/>
+</map>

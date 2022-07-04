@@ -102,64 +102,153 @@ $(document).ready(function(){initNavTree('dc/df3/a07216.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Running a Function on a Timer </div></div>
+  <div class="headertitle"><div class="title">Pause </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_General_Usage_Running_a_Function_on_a_Timer"></a></p><ul>
-<li>Create a function who's argument is of type <code><a class="el" href="../../d3/d39/a02005.html" title="DiscordCoreClient - The main class DiscordCoreAPI_Dll for this library.">DiscordCoreAPI::DiscordCoreClient</a>*</code>, with a return type of <code>void</code>.</li>
-<li>Create a data value of type <code>std::vector&lt;<a class="el" href="../../d3/d63/a03637.html" title="Function data for repeated functions to be loaded.">DiscordCoreAPI::RepeatedFunctionData</a>&gt;</code>.</li>
-<li>Create a data value of type <code><a class="el" href="../../d3/d63/a03637.html" title="Function data for repeated functions to be loaded.">DiscordCoreAPI::RepeatedFunctionData</a></code>, and fill out its members, and stuff it inside the vector. Be sure to set <code>repeated</code> to true if you would like the function call to be recurring.</li>
-<li>Pass this vector as a second argument to the <code><a class="el" href="../../d3/d39/a02005.html" title="DiscordCoreClient - The main class DiscordCoreAPI_Dll for this library.">DiscordCoreAPI::DiscordCoreClient</a></code> constructor - now the functions it contains will run on a schedule defined by the <code>intervalInMs</code> member of the data structure.</li>
-<li>Do this with as many functions as you would like!</li>
-</ul>
-<div class="fragment"><div class="line"><span class="comment">/// main.cpp-Main entry point.</span><span class="comment"></span></div>
-<div class="line"><span class="comment">/// Jun 17, 2021</span></div>
-<div class="line"><span class="comment">/// https://github.com/RealTimeChris/DiscordCoreAPI</span></div>
-<div class="line"><span class="comment"></span> </div>
-<div class="line"><span class="preprocessor">#include &lt;../Include/Index.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;Commands/CommandsList.hpp&quot;</span></div>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Music_Bot_Pause"></a> </p><div class="fragment"><div class="line"><span class="preprocessor">#pragma once</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> onBoot02(DiscordCoreAPI::DiscordCoreClients* thePtr) {</div>
-<div class="line">    std::vector&lt;DiscordCoreAPI::ActivityData&gt; activities;</div>
-<div class="line">    <a class="code hl_struct" href="../../dd/d68/a02553.html">DiscordCoreAPI::ActivityData</a> activity;</div>
-<div class="line">    activity.<a class="code hl_variable" href="../../dd/d68/a02553.html#a1e0949d2f171ea28605b0099e6208c4c">name</a> = <span class="stringliteral">&quot;!help for my commands!&quot;</span>;</div>
-<div class="line">    activity.<a class="code hl_variable" href="../../dd/d68/a02553.html#aa822aa8052afc85a05fc5e74839be4cd">type</a> = <a class="code hl_enumvalue" href="../../dd/d94/a00888.html#gga2274697e9d364c27f24c3dc688c9b88da63d72051e901c069f8aa1b32aa0c43bb">DiscordCoreAPI::ActivityType::Game</a>;</div>
-<div class="line">    activities.push_back(activity);</div>
-<div class="line">    thePtr-&gt;getBotUser().updatePresence({.activities = activities, .status = <span class="stringliteral">&quot;online&quot;</span>, .afk = <span class="keyword">false</span>});</div>
-<div class="line">}</div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d8/db9/a00725.html">Index.hpp</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;HelperFunctions.hpp&quot;</span></div>
 <div class="line"> </div>
-<div class="line">int32_t main() {</div>
-<div class="line">    std::string botToken = <span class="stringliteral">&quot;YOUR_BOT_TOKEN_HERE&quot;</span>;</div>
-<div class="line">    std::vector&lt;DiscordCoreAPI::RepeatedFunctionData&gt; functionVector;</div>
-<div class="line">    <a class="code hl_struct" href="../../d3/d63/a03637.html">DiscordCoreAPI::RepeatedFunctionData</a> function01;</div>
-<div class="line">    function01.<a class="code hl_variable" href="../../d7/d92/a00887.html#gab3113ed967aef68dc02622fcc8d1a8a1">function</a> = onBoot02;</div>
-<div class="line">    function01.<a class="code hl_variable" href="../../d7/d92/a00887.html#gad6cd7f6c69dd885d3fc19ee1478835b0">intervalInMs</a> = 500;</div>
-<div class="line">    function01.<a class="code hl_variable" href="../../d7/d92/a00887.html#gad5779846654b535a8a63abe4be753e13">repeated</a> = <span class="keyword">false</span>;</div>
-<div class="line">    functionVector.push_back(function01);</div>
-<div class="line">    <a class="code hl_struct" href="../../da/d7d/a03649.html">DiscordCoreAPI::CacheOptions</a> cacheOptions;</div>
-<div class="line">    cacheOptions.<a class="code hl_variable" href="../../d7/d92/a00887.html#ga4cb85b3ee028d76c1724ef07969c6f11">cacheGuildMembers</a> = <span class="keyword">true</span>;</div>
-<div class="line">    cacheOptions.<a class="code hl_variable" href="../../d7/d92/a00887.html#ga03ce5155f9329e01777eb58df32f09a8">cacheChannels</a> = <span class="keyword">true</span>;</div>
-<div class="line">    cacheOptions.<a class="code hl_variable" href="../../d7/d92/a00887.html#ga75daaa749e6fc1776ee6e704e628173e">cacheGuilds</a> = <span class="keyword">true</span>;</div>
-<div class="line">    cacheOptions.<a class="code hl_variable" href="../../d7/d92/a00887.html#ga1ca359d47d90cd2e057cdd36baff3d6d">cacheRoles</a> = <span class="keyword">true</span>;</div>
-<div class="line">    cacheOptions.<a class="code hl_variable" href="../../d7/d92/a00887.html#ga921da3e80c8b89da1d2b8e9732a4bdca">cacheUsers</a> = <span class="keyword">true</span>;</div>
-<div class="line">    <span class="keyword">auto</span> thePtr = std::make_unique&lt;DiscordCoreAPI::DiscordCoreClient&gt;(botToken, functionVector, cacheOptions);</div>
-<div class="line">    thePtr-&gt;runBot();</div>
-<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">    <span class="keyword">namespace </span><a class="code hl_namespace" href="../../d7/d46/a00890.html">DiscordCoreAPI</a> {</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">class </span>Pause : <span class="keyword">public</span> <a class="code hl_struct" href="../../d5/dd2/a02849.html">DiscordCoreAPI::BaseFunction</a> {</div>
+<div class="line">      <span class="keyword">public</span>:</div>
+<div class="line">        Pause() {</div>
+<div class="line">            this-&gt;commandName = <span class="stringliteral">&quot;pause&quot;</span>;</div>
+<div class="line">            this-&gt;helpDescription = <span class="stringliteral">&quot;Pauses the currently playing music.&quot;</span>;</div>
+<div class="line">            EmbedData msgEmbed;</div>
+<div class="line">            msgEmbed.setDescription(<span class="stringliteral">&quot;------\nSimply enter /pause!\n------&quot;</span>);</div>
+<div class="line">            msgEmbed.setTitle(<span class="stringliteral">&quot;__**Pause Usage:**__&quot;</span>);</div>
+<div class="line">            msgEmbed.setTimeStamp(<a class="code hl_function" href="../../d7/d92/a00887.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
+<div class="line">            msgEmbed.setColor(<span class="stringliteral">&quot;FeFeFe&quot;</span>);</div>
+<div class="line">            this-&gt;helpEmbed = msgEmbed;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        std::unique_ptr&lt;DiscordCoreAPI::BaseFunction&gt; create() {</div>
+<div class="line">            <span class="keywordflow">return</span> std::make_unique&lt;Pause&gt;();</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../dd/d4f/a02845.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
+<div class="line">            <span class="keywordflow">try</span> {</div>
+<div class="line">                Channel channel = <a class="code hl_function" href="../../db/d49/a01969.html#a29d67b396279c61b4b4b0032d171f681">Channels::getCachedChannelAsync</a>({.channelId = args.<a class="code hl_variable" href="../../dd/d4f/a02845.html#a80eabf8007466c61abda009ea3070942">eventData</a>-&gt;<a class="code hl_function" href="../../df/d9c/a02793.html#a97c397fe274250bfff73cf674810a8f5">getChannelId</a>()}).get();</div>
+<div class="line"> </div>
+<div class="line">                <span class="keywordtype">bool</span> areWeInADm = areWeInADM(*args.<a class="code hl_variable" href="../../dd/d4f/a02845.html#a80eabf8007466c61abda009ea3070942">eventData</a>, channel);</div>
+<div class="line"> </div>
+<div class="line">                <span class="keywordflow">if</span> (areWeInADm) {</div>
+<div class="line">                    <span class="keywordflow">return</span>;</div>
+<div class="line">                }</div>
+<div class="line"> </div>
+<div class="line">                <a class="code hl_function" href="../../d0/dcd/a03113.html#a721365d0ef437397ea553634f88b8ecf">InputEvents::deleteInputEventResponseAsync</a>(std::make_unique&lt;InputEventData&gt;(*args.<a class="code hl_variable" href="../../dd/d4f/a02845.html#a80eabf8007466c61abda009ea3070942">eventData</a>)).<a class="code hl_function" href="../../d0/dc1/a01993.html#a904d030f3edbf8efac15b2cebba3e37a">get</a>();</div>
+<div class="line"> </div>
+<div class="line">                Guild guild = <a class="code hl_function" href="../../de/da4/a03005.html#a82ab9685bbc1cd69019bfb42e2870a0e">Guilds::getCachedGuildAsync</a>({.guildId = args.<a class="code hl_variable" href="../../dd/d4f/a02845.html#a80eabf8007466c61abda009ea3070942">eventData</a>-&gt;<a class="code hl_function" href="../../df/d9c/a02793.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>()}).get();</div>
+<div class="line"> </div>
+<div class="line">                DiscordGuild discordGuild(guild);</div>
+<div class="line"> </div>
+<div class="line">                <span class="keywordtype">bool</span> checkIfAllowedInChannel = checkIfAllowedPlayingInChannel(*args.<a class="code hl_variable" href="../../dd/d4f/a02845.html#a80eabf8007466c61abda009ea3070942">eventData</a>, discordGuild);</div>
+<div class="line"> </div>
+<div class="line">                <span class="keywordflow">if</span> (!checkIfAllowedInChannel) {</div>
+<div class="line">                    <span class="keywordflow">return</span>;</div>
+<div class="line">                }</div>
+<div class="line"> </div>
+<div class="line">                GuildMember guildMember =</div>
+<div class="line">                    <a class="code hl_function" href="../../d7/d8c/a03049.html#a8985a29afb27c8e010bcf581528e5559">GuildMembers::getCachedGuildMemberAsync</a>({.guildMemberId = args.<a class="code hl_variable" href="../../dd/d4f/a02845.html#a80eabf8007466c61abda009ea3070942">eventData</a>-&gt;<a class="code hl_function" href="../../df/d9c/a02793.html#a70865601071ddd3f49a50b280a0d4894">getAuthorId</a>(), .guildId = args.<a class="code hl_variable" href="../../dd/d4f/a02845.html#a80eabf8007466c61abda009ea3070942">eventData</a>-&gt;<a class="code hl_function" href="../../df/d9c/a02793.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>()}).get();</div>
+<div class="line"> </div>
+<div class="line">                <span class="keywordtype">bool</span> doWeHaveControl = checkIfWeHaveControl(*args.<a class="code hl_variable" href="../../dd/d4f/a02845.html#a80eabf8007466c61abda009ea3070942">eventData</a>, discordGuild, guildMember);</div>
+<div class="line"> </div>
+<div class="line">                <span class="keywordflow">if</span> (!doWeHaveControl) {</div>
+<div class="line">                    <span class="keywordflow">return</span>;</div>
+<div class="line">                }</div>
+<div class="line"> </div>
+<div class="line">                VoiceConnection* voiceConnection = guild.connectToVoice(guildMember.voiceData.channelId, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line">                loadPlaylist(discordGuild);</div>
+<div class="line">                <span class="keywordflow">if</span> (voiceConnection == <span class="keyword">nullptr</span>) {</div>
+<div class="line">                    EmbedData newEmbed;</div>
+<div class="line">                    newEmbed.setAuthor(args.<a class="code hl_variable" href="../../dd/d4f/a02845.html#a80eabf8007466c61abda009ea3070942">eventData</a>-&gt;<a class="code hl_function" href="../../df/d9c/a02793.html#a3ebc65bb67fbd74518199db64e40559c">getUserName</a>(), args.<a class="code hl_variable" href="../../dd/d4f/a02845.html#a80eabf8007466c61abda009ea3070942">eventData</a>-&gt;<a class="code hl_function" href="../../df/d9c/a02793.html#a2dd12454f3ecd05f4cfbd22b027268bd">getAvatarUrl</a>());</div>
+<div class="line">                    newEmbed.setDescription(<span class="stringliteral">&quot;------\n__**Sorry, but there is no voice connection that is currently held by me!**__\n------&quot;</span>);</div>
+<div class="line">                    newEmbed.setTimeStamp(<a class="code hl_function" href="../../d7/d92/a00887.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
+<div class="line">                    newEmbed.setTitle(<span class="stringliteral">&quot;__**Connection Issue:**__&quot;</span>);</div>
+<div class="line">                    newEmbed.setColor(discordGuild.data.borderColor);</div>
+<div class="line">                    RespondToInputEventData dataPackage(*args.<a class="code hl_variable" href="../../dd/d4f/a02845.html#a80eabf8007466c61abda009ea3070942">eventData</a>);</div>
+<div class="line">                    dataPackage.setResponseType(<a class="code hl_enumvalue" href="../../d7/d92/a00887.html#gga6a10916bec24a00f6d6a41d8d880c1faa519f139398504899a626aa10d9fcfd30">InputEventResponseType::Ephemeral_Interaction_Response</a>);</div>
+<div class="line">                    dataPackage.addMessageEmbed(newEmbed);</div>
+<div class="line">                    <span class="keyword">auto</span> newEvent = <a class="code hl_function" href="../../d0/dcd/a03113.html#a91f7a025c00ec5b858a260ebcda49a3c">InputEvents::respondToInputEventAsync</a>(dataPackage);</div>
+<div class="line">                    <span class="keywordflow">return</span>;</div>
+<div class="line">                }</div>
+<div class="line"> </div>
+<div class="line">                <span class="keywordflow">if</span> (guildMember.voiceData.channelId == 0 || guildMember.voiceData.channelId != voiceConnection-&gt;getChannelId()) {</div>
+<div class="line">                    EmbedData newEmbed;</div>
+<div class="line">                    newEmbed.setAuthor(args.<a class="code hl_variable" href="../../dd/d4f/a02845.html#a80eabf8007466c61abda009ea3070942">eventData</a>-&gt;<a class="code hl_function" href="../../df/d9c/a02793.html#a3ebc65bb67fbd74518199db64e40559c">getUserName</a>(), args.<a class="code hl_variable" href="../../dd/d4f/a02845.html#a80eabf8007466c61abda009ea3070942">eventData</a>-&gt;<a class="code hl_function" href="../../df/d9c/a02793.html#a2dd12454f3ecd05f4cfbd22b027268bd">getAvatarUrl</a>());</div>
+<div class="line">                    newEmbed.setDescription(<span class="stringliteral">&quot;------\n__**Sorry, but you need to be in a correct voice channel to issue those commands!**__\n------&quot;</span>);</div>
+<div class="line">                    newEmbed.setTimeStamp(<a class="code hl_function" href="../../d7/d92/a00887.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
+<div class="line">                    newEmbed.setTitle(<span class="stringliteral">&quot;__**Pauseping Issue:**__&quot;</span>);</div>
+<div class="line">                    newEmbed.setColor(discordGuild.data.borderColor);</div>
+<div class="line">                    RespondToInputEventData dataPackage(*args.<a class="code hl_variable" href="../../dd/d4f/a02845.html#a80eabf8007466c61abda009ea3070942">eventData</a>);</div>
+<div class="line">                    dataPackage.setResponseType(<a class="code hl_enumvalue" href="../../d7/d92/a00887.html#gga6a10916bec24a00f6d6a41d8d880c1faa519f139398504899a626aa10d9fcfd30">InputEventResponseType::Ephemeral_Interaction_Response</a>);</div>
+<div class="line">                    dataPackage.addMessageEmbed(newEmbed);</div>
+<div class="line">                    <span class="keyword">auto</span> newEvent = <a class="code hl_function" href="../../d0/dcd/a03113.html#a91f7a025c00ec5b858a260ebcda49a3c">InputEvents::respondToInputEventAsync</a>(dataPackage);</div>
+<div class="line">                    <span class="keywordflow">return</span>;</div>
+<div class="line">                }</div>
+<div class="line"> </div>
+<div class="line">                <span class="keywordflow">if</span> (!guild.areWeConnected() || !<a class="code hl_function" href="../../d2/d7f/a03369.html#a8e40f67db4878b84c427a5eca6f27943">SongAPI::areWeCurrentlyPlaying</a>(guild.id)) {</div>
+<div class="line">                    std::string msgString = <span class="stringliteral">&quot;------\n**There&#39;s no music playing to be paused!**\n------&quot;</span>;</div>
+<div class="line">                    EmbedData msgEmbed;</div>
+<div class="line">                    msgEmbed.setAuthor(args.<a class="code hl_variable" href="../../dd/d4f/a02845.html#a80eabf8007466c61abda009ea3070942">eventData</a>-&gt;<a class="code hl_function" href="../../df/d9c/a02793.html#a3ebc65bb67fbd74518199db64e40559c">getUserName</a>(), args.<a class="code hl_variable" href="../../dd/d4f/a02845.html#a80eabf8007466c61abda009ea3070942">eventData</a>-&gt;<a class="code hl_function" href="../../df/d9c/a02793.html#a2dd12454f3ecd05f4cfbd22b027268bd">getAvatarUrl</a>());</div>
+<div class="line">                    msgEmbed.setColor(discordGuild.data.borderColor);</div>
+<div class="line">                    msgEmbed.setDescription(msgString);</div>
+<div class="line">                    msgEmbed.setTimeStamp(<a class="code hl_function" href="../../d7/d92/a00887.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
+<div class="line">                    msgEmbed.setTitle(<span class="stringliteral">&quot;__**Pausing Issue:**__&quot;</span>);</div>
+<div class="line">                    RespondToInputEventData dataPackage(*args.<a class="code hl_variable" href="../../dd/d4f/a02845.html#a80eabf8007466c61abda009ea3070942">eventData</a>);</div>
+<div class="line">                    dataPackage.setResponseType(<a class="code hl_enumvalue" href="../../d7/d92/a00887.html#gga6a10916bec24a00f6d6a41d8d880c1faa519f139398504899a626aa10d9fcfd30">InputEventResponseType::Ephemeral_Interaction_Response</a>);</div>
+<div class="line">                    dataPackage.addMessageEmbed(msgEmbed);</div>
+<div class="line">                    <span class="keyword">auto</span> newEvent = <a class="code hl_function" href="../../d0/dcd/a03113.html#a91f7a025c00ec5b858a260ebcda49a3c">InputEvents::respondToInputEventAsync</a>(dataPackage);</div>
+<div class="line">                    <span class="keywordflow">return</span>;</div>
+<div class="line">                }</div>
+<div class="line">                <a class="code hl_function" href="../../d2/d7f/a03369.html#add9b20835e7262cd42c59592d9c714dd">SongAPI::pauseToggle</a>(guild.id);</div>
+<div class="line"> </div>
+<div class="line">                EmbedData msgEmbed;</div>
+<div class="line">                msgEmbed.setAuthor(args.<a class="code hl_variable" href="../../dd/d4f/a02845.html#a80eabf8007466c61abda009ea3070942">eventData</a>-&gt;<a class="code hl_function" href="../../df/d9c/a02793.html#a3ebc65bb67fbd74518199db64e40559c">getUserName</a>(), args.<a class="code hl_variable" href="../../dd/d4f/a02845.html#a80eabf8007466c61abda009ea3070942">eventData</a>-&gt;<a class="code hl_function" href="../../df/d9c/a02793.html#a2dd12454f3ecd05f4cfbd22b027268bd">getAvatarUrl</a>());</div>
+<div class="line">                msgEmbed.setColor(discordGuild.data.borderColor);</div>
+<div class="line">                msgEmbed.setDescription(<span class="stringliteral">&quot;\n------\n__**Songs Remaining In Queue:**__ &quot;</span> + std::to_string(<a class="code hl_function" href="../../d2/d7f/a03369.html#a90ec9e3a293baa5abc72428ac30e2b14">SongAPI::getPlaylist</a>(guild.id).<a class="code hl_variable" href="../../d7/d1c/a02841.html#a8c9c499e7eda1f2b35a633575e450a4f">songQueue</a>.size()) +</div>
+<div class="line">                                        <span class="stringliteral">&quot;\n------&quot;</span>);</div>
+<div class="line">                msgEmbed.setTimeStamp(<a class="code hl_function" href="../../d7/d92/a00887.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
+<div class="line">                msgEmbed.setTitle(<span class="stringliteral">&quot;__**Paused Playback:**__&quot;</span>);</div>
+<div class="line">                RespondToInputEventData dataPackage(*args.<a class="code hl_variable" href="../../dd/d4f/a02845.html#a80eabf8007466c61abda009ea3070942">eventData</a>);</div>
+<div class="line">                dataPackage.setResponseType(<a class="code hl_enumvalue" href="../../d7/d92/a00887.html#gga6a10916bec24a00f6d6a41d8d880c1faa519f139398504899a626aa10d9fcfd30">InputEventResponseType::Ephemeral_Interaction_Response</a>);</div>
+<div class="line">                dataPackage.addMessageEmbed(msgEmbed);</div>
+<div class="line">                <span class="keyword">auto</span> newEvent = <a class="code hl_function" href="../../d0/dcd/a03113.html#a91f7a025c00ec5b858a260ebcda49a3c">InputEvents::respondToInputEventAsync</a>(dataPackage);</div>
+<div class="line"> </div>
+<div class="line">                <span class="keywordflow">return</span>;</div>
+<div class="line">            } <span class="keywordflow">catch</span> (...) {</div>
+<div class="line">                <a class="code hl_function" href="../../d7/d92/a00887.html#ga805bf7170903087e933a7b81c8e39f15">reportException</a>(<span class="stringliteral">&quot;Pause::execute Error: &quot;</span>);</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keyword">virtual</span> ~Pause();</div>
+<div class="line">    };</div>
 <div class="line">}</div>
-<div class="ttc" id="aa00887_html_ga03ce5155f9329e01777eb58df32f09a8"><div class="ttname"><a href="../../d7/d92/a00887.html#ga03ce5155f9329e01777eb58df32f09a8">DiscordCoreAPI::CacheOptions::cacheChannels</a></div><div class="ttdeci">bool cacheChannels</div><div class="ttdoc">Do we cache Channels?</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dae/a00767_source.html#l00251">Utilities.hpp:251</a></div></div>
-<div class="ttc" id="aa00887_html_ga1ca359d47d90cd2e057cdd36baff3d6d"><div class="ttname"><a href="../../d7/d92/a00887.html#ga1ca359d47d90cd2e057cdd36baff3d6d">DiscordCoreAPI::CacheOptions::cacheRoles</a></div><div class="ttdeci">bool cacheRoles</div><div class="ttdoc">Do we cache Roles?</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dae/a00767_source.html#l00253">Utilities.hpp:253</a></div></div>
-<div class="ttc" id="aa00887_html_ga4cb85b3ee028d76c1724ef07969c6f11"><div class="ttname"><a href="../../d7/d92/a00887.html#ga4cb85b3ee028d76c1724ef07969c6f11">DiscordCoreAPI::CacheOptions::cacheGuildMembers</a></div><div class="ttdeci">bool cacheGuildMembers</div><div class="ttdoc">Do we cache GuildMembers?</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dae/a00767_source.html#l00250">Utilities.hpp:250</a></div></div>
-<div class="ttc" id="aa00887_html_ga75daaa749e6fc1776ee6e704e628173e"><div class="ttname"><a href="../../d7/d92/a00887.html#ga75daaa749e6fc1776ee6e704e628173e">DiscordCoreAPI::CacheOptions::cacheGuilds</a></div><div class="ttdeci">bool cacheGuilds</div><div class="ttdoc">Do we cache Guilds?</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dae/a00767_source.html#l00252">Utilities.hpp:252</a></div></div>
-<div class="ttc" id="aa00887_html_ga921da3e80c8b89da1d2b8e9732a4bdca"><div class="ttname"><a href="../../d7/d92/a00887.html#ga921da3e80c8b89da1d2b8e9732a4bdca">DiscordCoreAPI::CacheOptions::cacheUsers</a></div><div class="ttdeci">bool cacheUsers</div><div class="ttdoc">Do we cache Users?</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dae/a00767_source.html#l00254">Utilities.hpp:254</a></div></div>
-<div class="ttc" id="aa00887_html_gab3113ed967aef68dc02622fcc8d1a8a1"><div class="ttname"><a href="../../d7/d92/a00887.html#gab3113ed967aef68dc02622fcc8d1a8a1">DiscordCoreAPI::RepeatedFunctionData::function</a></div><div class="ttdeci">std::function&lt; void(DiscordCoreClient *)&gt; function</div><div class="ttdoc">The std::function pointer to be loaded.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dae/a00767_source.html#l00217">Utilities.hpp:217</a></div></div>
-<div class="ttc" id="aa00887_html_gad5779846654b535a8a63abe4be753e13"><div class="ttname"><a href="../../d7/d92/a00887.html#gad5779846654b535a8a63abe4be753e13">DiscordCoreAPI::RepeatedFunctionData::repeated</a></div><div class="ttdeci">bool repeated</div><div class="ttdoc">Whether or not the std::function is repeating.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dae/a00767_source.html#l00219">Utilities.hpp:219</a></div></div>
-<div class="ttc" id="aa00887_html_gad6cd7f6c69dd885d3fc19ee1478835b0"><div class="ttname"><a href="../../d7/d92/a00887.html#gad6cd7f6c69dd885d3fc19ee1478835b0">DiscordCoreAPI::RepeatedFunctionData::intervalInMs</a></div><div class="ttdeci">uint32_t intervalInMs</div><div class="ttdoc">The time interval at which to call the std::function.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dae/a00767_source.html#l00218">Utilities.hpp:218</a></div></div>
-<div class="ttc" id="aa00888_html_gga2274697e9d364c27f24c3dc688c9b88da63d72051e901c069f8aa1b32aa0c43bb"><div class="ttname"><a href="../../dd/d94/a00888.html#gga2274697e9d364c27f24c3dc688c9b88da63d72051e901c069f8aa1b32aa0c43bb">DiscordCoreAPI::ActivityType::Game</a></div><div class="ttdeci">@ Game</div><div class="ttdoc">Game.</div></div>
-<div class="ttc" id="aa02553_html"><div class="ttname"><a href="../../dd/d68/a02553.html">DiscordCoreAPI::ActivityData</a></div><div class="ttdoc">Activity data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03245">FoundationEntities.hpp:3245</a></div></div>
-<div class="ttc" id="aa02553_html_a1e0949d2f171ea28605b0099e6208c4c"><div class="ttname"><a href="../../dd/d68/a02553.html#a1e0949d2f171ea28605b0099e6208c4c">DiscordCoreAPI::ActivityData::name</a></div><div class="ttdeci">StringWrapper name</div><div class="ttdoc">Name of the activity.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03256">FoundationEntities.hpp:3256</a></div></div>
-<div class="ttc" id="aa02553_html_aa822aa8052afc85a05fc5e74839be4cd"><div class="ttname"><a href="../../dd/d68/a02553.html#aa822aa8052afc85a05fc5e74839be4cd">DiscordCoreAPI::ActivityData::type</a></div><div class="ttdeci">ActivityType type</div><div class="ttdoc">Activity data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03253">FoundationEntities.hpp:3253</a></div></div>
-<div class="ttc" id="aa03637_html"><div class="ttname"><a href="../../d3/d63/a03637.html">DiscordCoreAPI::RepeatedFunctionData</a></div><div class="ttdoc">Function data for repeated functions to be loaded.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dae/a00767_source.html#l00216">Utilities.hpp:216</a></div></div>
-<div class="ttc" id="aa03649_html"><div class="ttname"><a href="../../da/d7d/a03649.html">DiscordCoreAPI::CacheOptions</a></div><div class="ttdoc">For selecting the caching style of the library.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dae/a00767_source.html#l00249">Utilities.hpp:249</a></div></div>
+<div class="ttc" id="aa00725_html"><div class="ttname"><a href="../../d8/db9/a00725.html">Index.hpp</a></div></div>
+<div class="ttc" id="aa00887_html_ga63ce723358a8b7a00c14e055f2a26998"><div class="ttname"><a href="../../d7/d92/a00887.html#ga63ce723358a8b7a00c14e055f2a26998">DiscordCoreAPI::getTimeAndDate</a></div><div class="ttdeci">DiscordCoreAPI_Dll std::string getTimeAndDate()</div><div class="ttdoc">Acquires a timestamp with the current time and date - suitable for use in message-embeds.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/a00869_source.html#l00817">Utilities.cpp:817</a></div></div>
+<div class="ttc" id="aa00887_html_ga805bf7170903087e933a7b81c8e39f15"><div class="ttname"><a href="../../d7/d92/a00887.html#ga805bf7170903087e933a7b81c8e39f15">DiscordCoreAPI::reportException</a></div><div class="ttdeci">DiscordCoreAPI_Dll void reportException(const std::string &amp;currentFunctionName, std::source_location theLocation=std::source_location::current())</div><div class="ttdoc">Prints the current file, line, and column from which the function is being called - typically from wi...</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/a00869_source.html#l00629">Utilities.cpp:629</a></div></div>
+<div class="ttc" id="aa00887_html_gga6a10916bec24a00f6d6a41d8d880c1faa519f139398504899a626aa10d9fcfd30"><div class="ttname"><a href="../../d7/d92/a00887.html#gga6a10916bec24a00f6d6a41d8d880c1faa519f139398504899a626aa10d9fcfd30">DiscordCoreAPI::InputEventResponseType::Ephemeral_Interaction_Response</a></div><div class="ttdeci">@ Ephemeral_Interaction_Response</div><div class="ttdoc">Ephemeral Interaction response.</div></div>
+<div class="ttc" id="aa00890_html"><div class="ttname"><a href="../../d7/d46/a00890.html">DiscordCoreAPI</a></div><div class="ttdoc">The main namespace for this library.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00025">ApplicationCommandEntities.hpp:25</a></div></div>
+<div class="ttc" id="aa01969_html_a29d67b396279c61b4b4b0032d171f681"><div class="ttname"><a href="../../db/d49/a01969.html#a29d67b396279c61b4b4b0032d171f681">DiscordCoreAPI::Channels::getCachedChannelAsync</a></div><div class="ttdeci">static CoRoutine&lt; ChannelData &gt; getCachedChannelAsync(GetChannelData dataPackage)</div><div class="ttdoc">Collects a Channel from the library's cache.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d12/a00794_source.html#l00215">ChannelEntities.cpp:215</a></div></div>
+<div class="ttc" id="aa01993_html_a904d030f3edbf8efac15b2cebba3e37a"><div class="ttname"><a href="../../d0/dc1/a01993.html#a904d030f3edbf8efac15b2cebba3e37a">DiscordCoreAPI::CoRoutine&lt; void &gt;::get</a></div><div class="ttdeci">void get()</div><div class="ttdoc">Gets the resulting value of the CoRoutine.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5b/a00695_source.html#l00301">CoRoutine.hpp:301</a></div></div>
+<div class="ttc" id="aa02793_html_a2dd12454f3ecd05f4cfbd22b027268bd"><div class="ttname"><a href="../../df/d9c/a02793.html#a2dd12454f3ecd05f4cfbd22b027268bd">DiscordCoreAPI::InputEventData::getAvatarUrl</a></div><div class="ttdeci">std::string getAvatarUrl()</div><div class="ttdoc">Gets the avatar Url of the last User to trigger this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2d/a00815_source.html#l00141">FoundationEntities.cpp:141</a></div></div>
+<div class="ttc" id="aa02793_html_a3ebc65bb67fbd74518199db64e40559c"><div class="ttname"><a href="../../df/d9c/a02793.html#a3ebc65bb67fbd74518199db64e40559c">DiscordCoreAPI::InputEventData::getUserName</a></div><div class="ttdeci">std::string getUserName()</div><div class="ttdoc">Returns the userName of the last User to trigger this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2d/a00815_source.html#l00135">FoundationEntities.cpp:135</a></div></div>
+<div class="ttc" id="aa02793_html_a565fe2447237030a716f64b2599996dd"><div class="ttname"><a href="../../df/d9c/a02793.html#a565fe2447237030a716f64b2599996dd">DiscordCoreAPI::InputEventData::getGuildId</a></div><div class="ttdeci">Snowflake getGuildId()</div><div class="ttdoc">Returns the Guild id, of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2d/a00815_source.html#l00189">FoundationEntities.cpp:189</a></div></div>
+<div class="ttc" id="aa02793_html_a70865601071ddd3f49a50b280a0d4894"><div class="ttname"><a href="../../df/d9c/a02793.html#a70865601071ddd3f49a50b280a0d4894">DiscordCoreAPI::InputEventData::getAuthorId</a></div><div class="ttdeci">Snowflake getAuthorId()</div><div class="ttdoc">Returns the User id of the last requester of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2d/a00815_source.html#l00159">FoundationEntities.cpp:159</a></div></div>
+<div class="ttc" id="aa02793_html_a97c397fe274250bfff73cf674810a8f5"><div class="ttname"><a href="../../df/d9c/a02793.html#a97c397fe274250bfff73cf674810a8f5">DiscordCoreAPI::InputEventData::getChannelId</a></div><div class="ttdeci">Snowflake getChannelId()</div><div class="ttdoc">Returns the Channel id of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2d/a00815_source.html#l00177">FoundationEntities.cpp:177</a></div></div>
+<div class="ttc" id="aa02841_html_a8c9c499e7eda1f2b35a633575e450a4f"><div class="ttname"><a href="../../d7/d1c/a02841.html#a8c9c499e7eda1f2b35a633575e450a4f">DiscordCoreAPI::Playlist::songQueue</a></div><div class="ttdeci">std::vector&lt; Song &gt; songQueue</div><div class="ttdoc">The list of Songs that are stored to be played.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l07718">FoundationEntities.hpp:7718</a></div></div>
+<div class="ttc" id="aa02845_html"><div class="ttname"><a href="../../dd/d4f/a02845.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l07730">FoundationEntities.hpp:7730</a></div></div>
+<div class="ttc" id="aa02845_html_a80eabf8007466c61abda009ea3070942"><div class="ttname"><a href="../../dd/d4f/a02845.html#a80eabf8007466c61abda009ea3070942">DiscordCoreAPI::BaseFunctionArguments::eventData</a></div><div class="ttdeci">InputEventData eventData</div><div class="ttdoc">InputEventData representing the input event that triggered the command.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l07732">FoundationEntities.hpp:7732</a></div></div>
+<div class="ttc" id="aa02849_html"><div class="ttname"><a href="../../d5/dd2/a02849.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class DiscordCoreAPI_Dll for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l07747">FoundationEntities.hpp:7747</a></div></div>
+<div class="ttc" id="aa03005_html_a82ab9685bbc1cd69019bfb42e2870a0e"><div class="ttname"><a href="../../de/da4/a03005.html#a82ab9685bbc1cd69019bfb42e2870a0e">DiscordCoreAPI::Guilds::getCachedGuildAsync</a></div><div class="ttdeci">static CoRoutine&lt; GuildData &gt; getCachedGuildAsync(GetGuildData dataPackage)</div><div class="ttdoc">Collects a Guild from the library's cache.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d60/a00818_source.html#l00269">GuildEntities.cpp:269</a></div></div>
+<div class="ttc" id="aa03049_html_a8985a29afb27c8e010bcf581528e5559"><div class="ttname"><a href="../../d7/d8c/a03049.html#a8985a29afb27c8e010bcf581528e5559">DiscordCoreAPI::GuildMembers::getCachedGuildMemberAsync</a></div><div class="ttdeci">static CoRoutine&lt; GuildMemberData &gt; getCachedGuildMemberAsync(GetGuildMemberData dataPackage)</div><div class="ttdoc">Collects a GuildMember from the library's cache.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d8b/a00821_source.html#l00108">GuildMemberEntities.cpp:108</a></div></div>
+<div class="ttc" id="aa03113_html_a721365d0ef437397ea553634f88b8ecf"><div class="ttname"><a href="../../d0/dcd/a03113.html#a721365d0ef437397ea553634f88b8ecf">DiscordCoreAPI::InputEvents::deleteInputEventResponseAsync</a></div><div class="ttdeci">static CoRoutine&lt; void &gt; deleteInputEventResponseAsync(InputEventData &amp;dataPackage, int32_t timeDelayNew=0)</div><div class="ttdoc">Deletes a previously sent &quot;input-event-response&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/daf/a00830_source.html#l00099">InputEvents.cpp:99</a></div></div>
+<div class="ttc" id="aa03113_html_a91f7a025c00ec5b858a260ebcda49a3c"><div class="ttname"><a href="../../d0/dcd/a03113.html#a91f7a025c00ec5b858a260ebcda49a3c">DiscordCoreAPI::InputEvents::respondToInputEventAsync</a></div><div class="ttdeci">static CoRoutine&lt; InputEventData &gt; respondToInputEventAsync(RespondToInputEventData dataPackage)</div><div class="ttdoc">Responds to one of a number of types of &quot;InputEvents&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/daf/a00830_source.html#l00026">InputEvents.cpp:26</a></div></div>
+<div class="ttc" id="aa03369_html_a8e40f67db4878b84c427a5eca6f27943"><div class="ttname"><a href="../../d2/d7f/a03369.html#a8e40f67db4878b84c427a5eca6f27943">DiscordCoreAPI::SongAPI::areWeCurrentlyPlaying</a></div><div class="ttdeci">static bool areWeCurrentlyPlaying(const uint64_t &amp;guildId)</div><div class="ttdoc">Checks if there is currently playing music for the current Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dcf/a00845_source.html#l00120">SongAPI.cpp:120</a></div></div>
+<div class="ttc" id="aa03369_html_a90ec9e3a293baa5abc72428ac30e2b14"><div class="ttname"><a href="../../d2/d7f/a03369.html#a90ec9e3a293baa5abc72428ac30e2b14">DiscordCoreAPI::SongAPI::getPlaylist</a></div><div class="ttdeci">static Playlist getPlaylist(const uint64_t &amp;guildId)</div><div class="ttdoc">Collects the Playlist from the SongAPI.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dcf/a00845_source.html#l00242">SongAPI.cpp:242</a></div></div>
+<div class="ttc" id="aa03369_html_add9b20835e7262cd42c59592d9c714dd"><div class="ttname"><a href="../../d2/d7f/a03369.html#add9b20835e7262cd42c59592d9c714dd">DiscordCoreAPI::SongAPI::pauseToggle</a></div><div class="ttdeci">static void pauseToggle(const uint64_t &amp;guildId)</div><div class="ttdoc">Toggles pausing on and off.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dcf/a00845_source.html#l00116">SongAPI.cpp:116</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -167,7 +256,7 @@ $(document).ready(function(){initNavTree('dc/df3/a07216.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d6/d82/a07115.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../df/df1/a07118.html">General Usage</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../da/d52/a07100.html">Guides</a></li><li class="navelem"><a class="el" href="../../de/dfd/a07214.html">Music-Bot Guide</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

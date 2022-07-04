@@ -103,15 +103,42 @@ $(document).ready(function(){initNavTree('d9/dd6/a02441.html','../../'); initRes
 
 <div class="header">
   <div class="summary">
+<a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../da/d6b/a02438.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::UpdateChannelData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::VoiceRegionData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For updating/modifying a given <a class="el" href="../../d2/d6f/a01957.html" title="A Channel object.">Channel</a>'s properties.  
+<p>Structure representing Voice Region Data.  
  <a href="../../d9/dd6/a02441.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a>&gt;</code></p>
+
+<p>Inherits DiscordCoreAPI::DataParser&lt; ObjectType &gt;.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Data Members</h2></td></tr>
+<tr class="memitem:a228884e61ddb6ce052b81f4bffd2e4f5"><td class="memItemLeft" align="right" valign="top"><a id="a228884e61ddb6ce052b81f4bffd2e4f5" name="a228884e61ddb6ce052b81f4bffd2e4f5"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>custom</b> { false }</td></tr>
+<tr class="memdesc:a228884e61ddb6ce052b81f4bffd2e4f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether this is a custom voice region(used for events / etc). <br /></td></tr>
+<tr class="separator:a228884e61ddb6ce052b81f4bffd2e4f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3051c463aa66ace2b8672d1656fe184b"><td class="memItemLeft" align="right" valign="top"><a id="a3051c463aa66ace2b8672d1656fe184b" name="a3051c463aa66ace2b8672d1656fe184b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>deprecated</b> { false }</td></tr>
+<tr class="memdesc:a3051c463aa66ace2b8672d1656fe184b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether this is a deprecated voice region(avoid switching to these). <br /></td></tr>
+<tr class="separator:a3051c463aa66ace2b8672d1656fe184b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adabb61c074b51bc43327bed549af7432"><td class="memItemLeft" align="right" valign="top"><a id="adabb61c074b51bc43327bed549af7432" name="adabb61c074b51bc43327bed549af7432"></a>
+<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>id</b> {}</td></tr>
+<tr class="memdesc:adabb61c074b51bc43327bed549af7432"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unique ID for the region. <br /></td></tr>
+<tr class="separator:adabb61c074b51bc43327bed549af7432"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf4eddd139bc15a17f1168eaf8699ff5"><td class="memItemLeft" align="right" valign="top"><a id="abf4eddd139bc15a17f1168eaf8699ff5" name="abf4eddd139bc15a17f1168eaf8699ff5"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> {}</td></tr>
+<tr class="memdesc:abf4eddd139bc15a17f1168eaf8699ff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the region. <br /></td></tr>
+<tr class="separator:abf4eddd139bc15a17f1168eaf8699ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1831183e13504a6afcf8840dcdb94f20"><td class="memItemLeft" align="right" valign="top"><a id="a1831183e13504a6afcf8840dcdb94f20" name="a1831183e13504a6afcf8840dcdb94f20"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>optimal</b> { false }</td></tr>
+<tr class="memdesc:a1831183e13504a6afcf8840dcdb94f20"><td class="mdescLeft">&#160;</td><td class="mdescRight">True for a single server that is closest to the current <a class="el" href="../../d9/d0f/a03605.html" title="A single User.">User</a>'s client. <br /></td></tr>
+<tr class="separator:a1831183e13504a6afcf8840dcdb94f20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a></li>
 </ul>
@@ -121,7 +148,7 @@ $(document).ready(function(){initNavTree('d9/dd6/a02441.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/dd6/a02441.html">UpdateChannelData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/dd6/a02441.html">VoiceRegionData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

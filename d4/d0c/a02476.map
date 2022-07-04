@@ -1,4 +1,4 @@
-<map id="DiscordCoreAPI::TeamObjectData" name="DiscordCoreAPI::TeamObjectData">
-<area shape="rect" id="node1" title="Team object data." alt="" coords="5,80,224,107"/>
-<area shape="rect" id="node2" href="$d7/dd6/a02305.html" title="Base class DiscordCoreAPI_Dll for all Discord entities." alt="" coords="15,5,215,32"/>
+<map id="DiscordCoreAPI::ApplicationData" name="DiscordCoreAPI::ApplicationData">
+<area shape="rect" id="node1" title="Application data." alt="" coords="5,80,219,107"/>
+<area shape="rect" id="node2" href="$d1/db8/a02297.html" title="Base class DiscordCoreAPI_Dll for all Discord entities." alt="" coords="12,5,212,32"/>
 </map>

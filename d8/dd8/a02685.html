@@ -105,37 +105,83 @@ $(document).ready(function(){initNavTree('d8/dd8/a02685.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../df/dad/a02682.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::AllowedMentionsData Class Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::ComponentData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Allowable mentions for a <a class="el" href="../../d6/d24/a03249.html" title="A single Message.">Message</a>.  
+<p>Represents a single Message-component.  
  <a href="../../d8/dd8/a02685.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a>&gt;</code></p>
-
-<p>Inherits DiscordCoreAPI::DataParser&lt; ObjectType &gt;.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:ae1aa7adc3af7dcceb510890c56e747a8"><td class="memItemLeft" align="right" valign="top"><a id="ae1aa7adc3af7dcceb510890c56e747a8" name="ae1aa7adc3af7dcceb510890c56e747a8"></a>
-std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>parse</b> {}</td></tr>
-<tr class="memdesc:ae1aa7adc3af7dcceb510890c56e747a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">A std::vector of allowed mention types to parse from the content. <br /></td></tr>
-<tr class="separator:ae1aa7adc3af7dcceb510890c56e747a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b5bbf6ae635d36358d4a269770ac8d1"><td class="memItemLeft" align="right" valign="top"><a id="a6b5bbf6ae635d36358d4a269770ac8d1" name="a6b5bbf6ae635d36358d4a269770ac8d1"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>repliedUser</b> { false }</td></tr>
-<tr class="memdesc:a6b5bbf6ae635d36358d4a269770ac8d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">For replies, whether to mention the author of the <a class="el" href="../../d6/d24/a03249.html" title="A single Message.">Message</a> being replied to (default false). <br /></td></tr>
-<tr class="separator:a6b5bbf6ae635d36358d4a269770ac8d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2f0e579e111e63009cdb14a8f9638d4"><td class="memItemLeft" align="right" valign="top"><a id="ae2f0e579e111e63009cdb14a8f9638d4" name="ae2f0e579e111e63009cdb14a8f9638d4"></a>
-std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>roles</b> {}</td></tr>
-<tr class="memdesc:ae2f0e579e111e63009cdb14a8f9638d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of role_ids to mention (Max size of 100) <br /></td></tr>
-<tr class="separator:ae2f0e579e111e63009cdb14a8f9638d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a369252aa93e7ae0dad54ac9bc46e671e"><td class="memItemLeft" align="right" valign="top"><a id="a369252aa93e7ae0dad54ac9bc46e671e" name="a369252aa93e7ae0dad54ac9bc46e671e"></a>
-std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>users</b> {}</td></tr>
-<tr class="memdesc:a369252aa93e7ae0dad54ac9bc46e671e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of user_ids to mention (Max size of 100) <br /></td></tr>
-<tr class="separator:a369252aa93e7ae0dad54ac9bc46e671e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa062520a08ab29442e79d57e8af4ef8"><td class="memItemLeft" align="right" valign="top"><a id="afa062520a08ab29442e79d57e8af4ef8" name="afa062520a08ab29442e79d57e8af4ef8"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>customId</b> {}</td></tr>
+<tr class="memdesc:afa062520a08ab29442e79d57e8af4ef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">A developer-defined identifier for the component, max 100 characters. <br /></td></tr>
+<tr class="separator:afa062520a08ab29442e79d57e8af4ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c485f3b27e68c4a8530ba976ce7b8fe"><td class="memItemLeft" align="right" valign="top"><a id="a5c485f3b27e68c4a8530ba976ce7b8fe" name="a5c485f3b27e68c4a8530ba976ce7b8fe"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>disabled</b> { false }</td></tr>
+<tr class="memdesc:a5c485f3b27e68c4a8530ba976ce7b8fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the component is disabled, default false. <br /></td></tr>
+<tr class="separator:a5c485f3b27e68c4a8530ba976ce7b8fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a340f1c96787e2f9e39074dfd3e44b272"><td class="memItemLeft" align="right" valign="top"><a id="a340f1c96787e2f9e39074dfd3e44b272" name="a340f1c96787e2f9e39074dfd3e44b272"></a>
+<a class="el" href="../../d9/d9d/a02425.html">EmojiData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>emoji</b> {}</td></tr>
+<tr class="memdesc:a340f1c96787e2f9e39074dfd3e44b272"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emoji name, id, and animated. <br /></td></tr>
+<tr class="separator:a340f1c96787e2f9e39074dfd3e44b272"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1feb797c46edcece86627f5b1375b5e4"><td class="memItemLeft" align="right" valign="top"><a id="a1feb797c46edcece86627f5b1375b5e4" name="a1feb797c46edcece86627f5b1375b5e4"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>label</b> {}</td></tr>
+<tr class="memdesc:a1feb797c46edcece86627f5b1375b5e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The label for this component. <br /></td></tr>
+<tr class="separator:a1feb797c46edcece86627f5b1375b5e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b544d60870533d2d239c77cd0bbd5fd"><td class="memItemLeft" align="right" valign="top"><a id="a6b544d60870533d2d239c77cd0bbd5fd" name="a6b544d60870533d2d239c77cd0bbd5fd"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>maxLength</b> { 0 }</td></tr>
+<tr class="memdesc:a6b544d60870533d2d239c77cd0bbd5fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum input length for a text input. <br /></td></tr>
+<tr class="separator:a6b544d60870533d2d239c77cd0bbd5fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae54831a3655f205501d670bb05cbc9bf"><td class="memItemLeft" align="right" valign="top"><a id="ae54831a3655f205501d670bb05cbc9bf" name="ae54831a3655f205501d670bb05cbc9bf"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>maxValues</b> { 0 }</td></tr>
+<tr class="memdesc:ae54831a3655f205501d670bb05cbc9bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum number of items that can be chosen; default 1, max 25. <br /></td></tr>
+<tr class="separator:ae54831a3655f205501d670bb05cbc9bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48b22387369c193ce518cb7166231152"><td class="memItemLeft" align="right" valign="top"><a id="a48b22387369c193ce518cb7166231152" name="a48b22387369c193ce518cb7166231152"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>minLength</b> { 0 }</td></tr>
+<tr class="memdesc:a48b22387369c193ce518cb7166231152"><td class="mdescLeft">&#160;</td><td class="mdescRight">The minimum input length for a text input. <br /></td></tr>
+<tr class="separator:a48b22387369c193ce518cb7166231152"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1a934c4d8f6447283bc6041663007d8"><td class="memItemLeft" align="right" valign="top"><a id="af1a934c4d8f6447283bc6041663007d8" name="af1a934c4d8f6447283bc6041663007d8"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>minValues</b> { 0 }</td></tr>
+<tr class="memdesc:af1a934c4d8f6447283bc6041663007d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The minimum number of items that must be chosen; default 1, min 0, max 25. <br /></td></tr>
+<tr class="separator:af1a934c4d8f6447283bc6041663007d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed0f9e251b9d330a889165de2453f13b"><td class="memItemLeft" align="right" valign="top"><a id="aed0f9e251b9d330a889165de2453f13b" name="aed0f9e251b9d330a889165de2453f13b"></a>
+std::vector&lt; <a class="el" href="../../d4/d9d/a02681.html">SelectOptionData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>options</b> {}</td></tr>
+<tr class="memdesc:aed0f9e251b9d330a889165de2453f13b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aray of select options the choices in the select, max 25. <br /></td></tr>
+<tr class="separator:aed0f9e251b9d330a889165de2453f13b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76c2b8355bbfe90fce69a4367f275ec4"><td class="memItemLeft" align="right" valign="top"><a id="a76c2b8355bbfe90fce69a4367f275ec4" name="a76c2b8355bbfe90fce69a4367f275ec4"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>placeholder</b> {}</td></tr>
+<tr class="memdesc:a76c2b8355bbfe90fce69a4367f275ec4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Custom placeholder text if nothing is selected, max 100 characters. <br /></td></tr>
+<tr class="separator:a76c2b8355bbfe90fce69a4367f275ec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14d6331e877af774dff230fb4f3a81a5"><td class="memItemLeft" align="right" valign="top"><a id="a14d6331e877af774dff230fb4f3a81a5" name="a14d6331e877af774dff230fb4f3a81a5"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>required</b> { false }</td></tr>
+<tr class="memdesc:a14d6331e877af774dff230fb4f3a81a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether this component is required to be filled. <br /></td></tr>
+<tr class="separator:a14d6331e877af774dff230fb4f3a81a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13d67e42e218bccad86770608a52ae84"><td class="memItemLeft" align="right" valign="top"><a id="a13d67e42e218bccad86770608a52ae84" name="a13d67e42e218bccad86770608a52ae84"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>style</b> {}</td></tr>
+<tr class="memdesc:a13d67e42e218bccad86770608a52ae84"><td class="mdescLeft">&#160;</td><td class="mdescRight">One of ButtonStyle, or TextInputStyle. <br /></td></tr>
+<tr class="separator:a13d67e42e218bccad86770608a52ae84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a545ff321a6fae1f05e633a90e4e988b7"><td class="memItemLeft" align="right" valign="top"><a id="a545ff321a6fae1f05e633a90e4e988b7" name="a545ff321a6fae1f05e633a90e4e988b7"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>title</b> {}</td></tr>
+<tr class="memdesc:a545ff321a6fae1f05e633a90e4e988b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Url, for url types. <br /></td></tr>
+<tr class="separator:a545ff321a6fae1f05e633a90e4e988b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f4f117d34e1a3fb5af6a99867204584"><td class="memItemLeft" align="right" valign="top"><a id="a4f4f117d34e1a3fb5af6a99867204584" name="a4f4f117d34e1a3fb5af6a99867204584"></a>
+<a class="el" href="../../dd/d94/a00888.html#ga47e4c44581b62205fa6a62f8354a8a76">ComponentType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> {}</td></tr>
+<tr class="memdesc:a4f4f117d34e1a3fb5af6a99867204584"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integer component type. <br /></td></tr>
+<tr class="separator:a4f4f117d34e1a3fb5af6a99867204584"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaefef8326a452dd9f38ad292e71d2fa"><td class="memItemLeft" align="right" valign="top"><a id="acaefef8326a452dd9f38ad292e71d2fa" name="acaefef8326a452dd9f38ad292e71d2fa"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>url</b> {}</td></tr>
+<tr class="memdesc:acaefef8326a452dd9f38ad292e71d2fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Url, for url types. <br /></td></tr>
+<tr class="separator:acaefef8326a452dd9f38ad292e71d2fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad28c4a5808ebdfd1848343b18ea17f3d"><td class="memItemLeft" align="right" valign="top"><a id="ad28c4a5808ebdfd1848343b18ea17f3d" name="ad28c4a5808ebdfd1848343b18ea17f3d"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>value</b> {}</td></tr>
+<tr class="memdesc:ad28c4a5808ebdfd1848343b18ea17f3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pre-filled value for this component. <br /></td></tr>
+<tr class="separator:ad28c4a5808ebdfd1848343b18ea17f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a></li>
 </ul>
 </div><!-- contents -->
@@ -144,7 +190,7 @@ std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bott
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d8/dd8/a02685.html">AllowedMentionsData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d8/dd8/a02685.html">ComponentData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

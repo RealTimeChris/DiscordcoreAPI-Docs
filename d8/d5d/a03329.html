@@ -105,33 +105,57 @@ $(document).ready(function(){initNavTree('d8/d5d/a03329.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../dc/de3/a03326.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::RemoveGuildMemberRoleData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::CreateGuildRoleData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For removing a <a class="el" href="../../d7/d13/a03365.html" title="A single Role.">Role</a> from a <a class="el" href="../../d7/d8c/a03049.html" title="A single GuildMember.">GuildMember</a>.  
+<p>For creating a new <a class="el" href="../../d3/dfd/a03357.html" title="A single Role.">Role</a> within a chosen <a class="el" href="../../d6/d58/a02993.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>.  
  <a href="../../d8/d5d/a03329.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../dc/dce/a00740_source.html">RoleEntities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:a706792daf69fe0dd6a74357c88e38bb0"><td class="memItemLeft" align="right" valign="top"><a id="a706792daf69fe0dd6a74357c88e38bb0" name="a706792daf69fe0dd6a74357c88e38bb0"></a>
+<tr class="memitem:a398520632c0269aacb45ec077902bf9a"><td class="memItemLeft" align="right" valign="top"><a id="a398520632c0269aacb45ec077902bf9a" name="a398520632c0269aacb45ec077902bf9a"></a>
 <a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildId</b> {}</td></tr>
-<tr class="memdesc:a706792daf69fe0dd6a74357c88e38bb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the <a class="el" href="../../d0/db8/a03001.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> within which to remove the <a class="el" href="../../d7/d13/a03365.html" title="A single Role.">Role</a>. <br /></td></tr>
-<tr class="separator:a706792daf69fe0dd6a74357c88e38bb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31dc2d11a5800fac8d3b19800de457be"><td class="memItemLeft" align="right" valign="top"><a id="a31dc2d11a5800fac8d3b19800de457be" name="a31dc2d11a5800fac8d3b19800de457be"></a>
+<tr class="memdesc:a398520632c0269aacb45ec077902bf9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Which <a class="el" href="../../d6/d58/a02993.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> to make the <a class="el" href="../../d3/dfd/a03357.html" title="A single Role.">Role</a> in. <br /></td></tr>
+<tr class="separator:a398520632c0269aacb45ec077902bf9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac46f7cf3cf3802e081176ff250099b54"><td class="memItemLeft" align="right" valign="top"><a id="ac46f7cf3cf3802e081176ff250099b54" name="ac46f7cf3cf3802e081176ff250099b54"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>hexColorValue</b> {}</td></tr>
+<tr class="memdesc:ac46f7cf3cf3802e081176ff250099b54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hex color-value between 0 and ffffff. <br /></td></tr>
+<tr class="separator:ac46f7cf3cf3802e081176ff250099b54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cc80c2d5315cc7e9d9a6c61c8c2fb73"><td class="memItemLeft" align="right" valign="top"><a id="a4cc80c2d5315cc7e9d9a6c61c8c2fb73" name="a4cc80c2d5315cc7e9d9a6c61c8c2fb73"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>hoist</b> { false }</td></tr>
+<tr class="memdesc:a4cc80c2d5315cc7e9d9a6c61c8c2fb73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this <a class="el" href="../../d3/dfd/a03357.html" title="A single Role.">Role</a> hoisted above the rest of them? <br /></td></tr>
+<tr class="separator:a4cc80c2d5315cc7e9d9a6c61c8c2fb73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcf327c4b30e5ee1b55003de1b2af099"><td class="memItemLeft" align="right" valign="top"><a id="adcf327c4b30e5ee1b55003de1b2af099" name="adcf327c4b30e5ee1b55003de1b2af099"></a>
+std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>icon</b> {}</td></tr>
+<tr class="memdesc:adcf327c4b30e5ee1b55003de1b2af099"><td class="mdescLeft">&#160;</td><td class="mdescRight">Image data the role's icon image (if the guild has the ROLE_ICONS feature) null. <br /></td></tr>
+<tr class="separator:adcf327c4b30e5ee1b55003de1b2af099"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e8847343248870ebe327ff5fd03a5c2"><td class="memItemLeft" align="right" valign="top"><a id="a6e8847343248870ebe327ff5fd03a5c2" name="a6e8847343248870ebe327ff5fd03a5c2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>mentionable</b> { false }</td></tr>
+<tr class="memdesc:a6e8847343248870ebe327ff5fd03a5c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is it mentionable by others in the <a class="el" href="../../d6/d58/a02993.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>. <br /></td></tr>
+<tr class="separator:a6e8847343248870ebe327ff5fd03a5c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e84d41794e4591550e11a18830bab5b"><td class="memItemLeft" align="right" valign="top"><a id="a1e84d41794e4591550e11a18830bab5b" name="a1e84d41794e4591550e11a18830bab5b"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> {}</td></tr>
+<tr class="memdesc:a1e84d41794e4591550e11a18830bab5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of the <a class="el" href="../../d3/dfd/a03357.html" title="A single Role.">Role</a>. <br /></td></tr>
+<tr class="separator:a1e84d41794e4591550e11a18830bab5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd8595e36c4065aca6e8a6d77e502b79"><td class="memItemLeft" align="right" valign="top"><a id="acd8595e36c4065aca6e8a6d77e502b79" name="acd8595e36c4065aca6e8a6d77e502b79"></a>
+<a class="el" href="../../d1/d83/a03669.html">Permissions</a>&#160;</td><td class="memItemRight" valign="bottom"><b>permissions</b> {}</td></tr>
+<tr class="memdesc:acd8595e36c4065aca6e8a6d77e502b79"><td class="mdescLeft">&#160;</td><td class="mdescRight">The base permissions to give the <a class="el" href="../../d3/dfd/a03357.html" title="A single Role.">Role</a>. <br /></td></tr>
+<tr class="separator:acd8595e36c4065aca6e8a6d77e502b79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d3d2b0e27c022c58e3f120da54f9d71"><td class="memItemLeft" align="right" valign="top"><a id="a0d3d2b0e27c022c58e3f120da54f9d71" name="a0d3d2b0e27c022c58e3f120da54f9d71"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>position</b> { 0 }</td></tr>
+<tr class="memdesc:a0d3d2b0e27c022c58e3f120da54f9d71"><td class="mdescLeft">&#160;</td><td class="mdescRight">The position amongst the other roles. <br /></td></tr>
+<tr class="separator:a0d3d2b0e27c022c58e3f120da54f9d71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab884babbd0a212f93a31d8d5fe3012f2"><td class="memItemLeft" align="right" valign="top"><a id="ab884babbd0a212f93a31d8d5fe3012f2" name="ab884babbd0a212f93a31d8d5fe3012f2"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>reason</b> {}</td></tr>
-<tr class="memdesc:a31dc2d11a5800fac8d3b19800de457be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reason for removing the <a class="el" href="../../d7/d8c/a03049.html" title="A single GuildMember.">GuildMember</a>'s <a class="el" href="../../d7/d13/a03365.html" title="A single Role.">Role</a>. <br /></td></tr>
-<tr class="separator:a31dc2d11a5800fac8d3b19800de457be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa91ca8ec5e79637aeeed3624cc7921a9"><td class="memItemLeft" align="right" valign="top"><a id="aa91ca8ec5e79637aeeed3624cc7921a9" name="aa91ca8ec5e79637aeeed3624cc7921a9"></a>
-<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>roleId</b> {}</td></tr>
-<tr class="memdesc:aa91ca8ec5e79637aeeed3624cc7921a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the <a class="el" href="../../d7/d13/a03365.html" title="A single Role.">Role</a> to be removed. <br /></td></tr>
-<tr class="separator:aa91ca8ec5e79637aeeed3624cc7921a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28761055f269567a6a9db2b5a0bd7f83"><td class="memItemLeft" align="right" valign="top"><a id="a28761055f269567a6a9db2b5a0bd7f83" name="a28761055f269567a6a9db2b5a0bd7f83"></a>
-<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>userId</b> {}</td></tr>
-<tr class="memdesc:a28761055f269567a6a9db2b5a0bd7f83"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the <a class="el" href="../../d6/de0/a03613.html" title="A single User.">User</a> from whom to remove the <a class="el" href="../../d7/d13/a03365.html" title="A single Role.">Role</a>. <br /></td></tr>
-<tr class="separator:a28761055f269567a6a9db2b5a0bd7f83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:ab884babbd0a212f93a31d8d5fe3012f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reason for creating the <a class="el" href="../../d3/dfd/a03357.html" title="A single Role.">Role</a>. <br /></td></tr>
+<tr class="separator:ab884babbd0a212f93a31d8d5fe3012f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8aeba51267533e438a927261d10cd82b"><td class="memItemLeft" align="right" valign="top"><a id="a8aeba51267533e438a927261d10cd82b" name="a8aeba51267533e438a927261d10cd82b"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>unicodeEmoji</b> {}</td></tr>
+<tr class="memdesc:a8aeba51267533e438a927261d10cd82b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The role's unicode emoji as a standard emoji. <br /></td></tr>
+<tr class="separator:a8aeba51267533e438a927261d10cd82b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../dc/dce/a00740_source.html">RoleEntities.hpp</a></li>
@@ -142,7 +166,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>reason</b> {}<
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d8/d5d/a03329.html">RemoveGuildMemberRoleData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d8/d5d/a03329.html">CreateGuildRoleData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

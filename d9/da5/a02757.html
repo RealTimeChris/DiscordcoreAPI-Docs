@@ -105,11 +105,11 @@ $(document).ready(function(){initNavTree('d9/da5/a02757.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d2/d83/a02754.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::ConnectionData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::ApplicationCommandInteractionDataOption Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Represents a single <a class="el" href="../../d6/de0/a03613.html" title="A single User.">User</a> Connection.  
+<p><a class="el" href="../../d5/d36/a01773.html" title="A single ApplicationCommand.">ApplicationCommand</a> <a class="el" href="../../d5/d1d/a03165.html" title="A single Interaction.">Interaction</a> data option.  
  <a href="../../d9/da5/a02757.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a>&gt;</code></p>
@@ -118,42 +118,34 @@ $(document).ready(function(){initNavTree('d9/da5/a02757.html','../../'); initRes
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:a38746665c0b34bc922fce3e24dcbc6f1"><td class="memItemLeft" align="right" valign="top"><a id="a38746665c0b34bc922fce3e24dcbc6f1" name="a38746665c0b34bc922fce3e24dcbc6f1"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>friendSync</b> { false }</td></tr>
-<tr class="memdesc:a38746665c0b34bc922fce3e24dcbc6f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether friend sync is enabled for this connection. <br /></td></tr>
-<tr class="separator:a38746665c0b34bc922fce3e24dcbc6f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bb887622c5bd23cc7459183ea990ed1"><td class="memItemLeft" align="right" valign="top"><a id="a0bb887622c5bd23cc7459183ea990ed1" name="a0bb887622c5bd23cc7459183ea990ed1"></a>
-<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>id</b> {}</td></tr>
-<tr class="memdesc:a0bb887622c5bd23cc7459183ea990ed1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Id of the connection account. <br /></td></tr>
-<tr class="separator:a0bb887622c5bd23cc7459183ea990ed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06ecf3ff29f7be9ac1880bd94897b358"><td class="memItemLeft" align="right" valign="top"><a id="a06ecf3ff29f7be9ac1880bd94897b358" name="a06ecf3ff29f7be9ac1880bd94897b358"></a>
-std::vector&lt; <a class="el" href="../../d6/d28/a02509.html">IntegrationData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>integrations</b> {}</td></tr>
-<tr class="memdesc:a06ecf3ff29f7be9ac1880bd94897b358"><td class="mdescLeft">&#160;</td><td class="mdescRight">An array of partial server integrations. <br /></td></tr>
-<tr class="separator:a06ecf3ff29f7be9ac1880bd94897b358"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4eb54d466c16f4e6f7d426f8b141992f"><td class="memItemLeft" align="right" valign="top"><a id="a4eb54d466c16f4e6f7d426f8b141992f" name="a4eb54d466c16f4e6f7d426f8b141992f"></a>
+<tr class="memitem:a948f8a84f059e920e763e4c8538138ac"><td class="memItemLeft" align="right" valign="top"><a id="a948f8a84f059e920e763e4c8538138ac" name="a948f8a84f059e920e763e4c8538138ac"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>focused</b> { false }</td></tr>
+<tr class="memdesc:a948f8a84f059e920e763e4c8538138ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if this option is the currently focused option for autocomplete. <br /></td></tr>
+<tr class="separator:a948f8a84f059e920e763e4c8538138ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72b4a016cfa1c742a55447d8e390f40b"><td class="memItemLeft" align="right" valign="top"><a id="a72b4a016cfa1c742a55447d8e390f40b" name="a72b4a016cfa1c742a55447d8e390f40b"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> {}</td></tr>
-<tr class="memdesc:a4eb54d466c16f4e6f7d426f8b141992f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The userName of the connection account. <br /></td></tr>
-<tr class="separator:a4eb54d466c16f4e6f7d426f8b141992f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae40fcf4f7e4bccf513bd9d5ba3354a84"><td class="memItemLeft" align="right" valign="top"><a id="ae40fcf4f7e4bccf513bd9d5ba3354a84" name="ae40fcf4f7e4bccf513bd9d5ba3354a84"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>revoked</b> { false }</td></tr>
-<tr class="memdesc:ae40fcf4f7e4bccf513bd9d5ba3354a84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the connection is revoked. <br /></td></tr>
-<tr class="separator:ae40fcf4f7e4bccf513bd9d5ba3354a84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4e61629ad28145be4f663952094cf5f"><td class="memItemLeft" align="right" valign="top"><a id="af4e61629ad28145be4f663952094cf5f" name="af4e61629ad28145be4f663952094cf5f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>showActivity</b> { false }</td></tr>
-<tr class="memdesc:af4e61629ad28145be4f663952094cf5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether activities related to this connection will be shown in presence updates. <br /></td></tr>
-<tr class="separator:af4e61629ad28145be4f663952094cf5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67977f8509bac9cd49be5a178e31ed90"><td class="memItemLeft" align="right" valign="top"><a id="a67977f8509bac9cd49be5a178e31ed90" name="a67977f8509bac9cd49be5a178e31ed90"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> {}</td></tr>
-<tr class="memdesc:a67977f8509bac9cd49be5a178e31ed90"><td class="mdescLeft">&#160;</td><td class="mdescRight">The service of the connection(twitch, youtube). <br /></td></tr>
-<tr class="separator:a67977f8509bac9cd49be5a178e31ed90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf954f442707c731e0334b1907a7bc00"><td class="memItemLeft" align="right" valign="top"><a id="aaf954f442707c731e0334b1907a7bc00" name="aaf954f442707c731e0334b1907a7bc00"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>verified</b> { false }</td></tr>
-<tr class="memdesc:aaf954f442707c731e0334b1907a7bc00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the connection is verified. <br /></td></tr>
-<tr class="separator:aaf954f442707c731e0334b1907a7bc00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3d571163fcbf7b456157c22c73500f4"><td class="memItemLeft" align="right" valign="top"><a id="ac3d571163fcbf7b456157c22c73500f4" name="ac3d571163fcbf7b456157c22c73500f4"></a>
-<a class="el" href="../../dd/d94/a00888.html#gac5fbc4a3b87f9470e6be7acf38492c14">ConnectionVisibilityTypes</a>&#160;</td><td class="memItemRight" valign="bottom"><b>visibility</b> {}</td></tr>
-<tr class="memdesc:ac3d571163fcbf7b456157c22c73500f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visibility of this connection. <br /></td></tr>
-<tr class="separator:ac3d571163fcbf7b456157c22c73500f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:a72b4a016cfa1c742a55447d8e390f40b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of the current option. <br /></td></tr>
+<tr class="separator:a72b4a016cfa1c742a55447d8e390f40b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a445f9f541b1870b0b4acd99f0cf2d9ad"><td class="memItemLeft" align="right" valign="top"><a id="a445f9f541b1870b0b4acd99f0cf2d9ad" name="a445f9f541b1870b0b4acd99f0cf2d9ad"></a>
+std::vector&lt; <a class="el" href="../../d9/da5/a02757.html">ApplicationCommandInteractionDataOption</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>options</b> {}</td></tr>
+<tr class="memdesc:a445f9f541b1870b0b4acd99f0cf2d9ad"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d5/d36/a01773.html" title="A single ApplicationCommand.">ApplicationCommand</a> <a class="el" href="../../d5/d1d/a03165.html" title="A single Interaction.">Interaction</a> data options. <br /></td></tr>
+<tr class="separator:a445f9f541b1870b0b4acd99f0cf2d9ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ef2d56f6817533364650272e49c1fef"><td class="memItemLeft" align="right" valign="top"><a id="a5ef2d56f6817533364650272e49c1fef" name="a5ef2d56f6817533364650272e49c1fef"></a>
+<a class="el" href="../../dd/d94/a00888.html#ga1545487c64a71c2b5c36cde9f2bed49d">ApplicationCommandOptionType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> {}</td></tr>
+<tr class="memdesc:a5ef2d56f6817533364650272e49c1fef"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of <a class="el" href="../../d5/d36/a01773.html" title="A single ApplicationCommand.">ApplicationCommand</a> options. <br /></td></tr>
+<tr class="separator:a5ef2d56f6817533364650272e49c1fef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a940e9cde3ade536406b7e8a9c0a458b8"><td class="memItemLeft" align="right" valign="top"><a id="a940e9cde3ade536406b7e8a9c0a458b8" name="a940e9cde3ade536406b7e8a9c0a458b8"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>valueBool</b> { false }</td></tr>
+<tr class="memdesc:a940e9cde3ade536406b7e8a9c0a458b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">the value if it's a bool. <br /></td></tr>
+<tr class="separator:a940e9cde3ade536406b7e8a9c0a458b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb53acf590417ff204608fda1fd3d782"><td class="memItemLeft" align="right" valign="top"><a id="abb53acf590417ff204608fda1fd3d782" name="abb53acf590417ff204608fda1fd3d782"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>valueInt</b> { 0 }</td></tr>
+<tr class="memdesc:abb53acf590417ff204608fda1fd3d782"><td class="mdescLeft">&#160;</td><td class="mdescRight">The value if it's an int32_t. <br /></td></tr>
+<tr class="separator:abb53acf590417ff204608fda1fd3d782"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5956ae3b94b9c23fe9174e0838217c88"><td class="memItemLeft" align="right" valign="top"><a id="a5956ae3b94b9c23fe9174e0838217c88" name="a5956ae3b94b9c23fe9174e0838217c88"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>valueString</b> {}</td></tr>
+<tr class="memdesc:a5956ae3b94b9c23fe9174e0838217c88"><td class="mdescLeft">&#160;</td><td class="mdescRight">The value if it's a std::string. <br /></td></tr>
+<tr class="separator:a5956ae3b94b9c23fe9174e0838217c88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a></li>
@@ -164,7 +156,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>verified</b> { false 
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/da5/a02757.html">ConnectionData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/da5/a02757.html">ApplicationCommandInteractionDataOption</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

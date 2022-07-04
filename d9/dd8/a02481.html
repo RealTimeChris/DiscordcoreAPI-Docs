@@ -103,29 +103,41 @@ $(document).ready(function(){initNavTree('d9/dd8/a02481.html','../../'); initRes
 
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d4/deb/a02478.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::InstallParamsData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::AuthorizationInfoData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Install params data, for application data.  
+<p>Authorization info structure.  
  <a href="../../d9/dd8/a02481.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a>&gt;</code></p>
 
 <p>Inherits DiscordCoreAPI::DataParser&lt; ObjectType &gt;.</p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:aa6c614e5a5df4d83a5d3567167e87320"><td class="memItemLeft" align="right" valign="top"><a id="aa6c614e5a5df4d83a5d3567167e87320" name="aa6c614e5a5df4d83a5d3567167e87320"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AuthorizationInfoData</b> ()=default</td></tr>
+<tr class="memdesc:aa6c614e5a5df4d83a5d3567167e87320"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../d9/d0f/a03605.html" title="A single User.">User</a> who has authorized, if the <a class="el" href="../../d9/d0f/a03605.html" title="A single User.">User</a> has authorized with the identify scope. <br /></td></tr>
+<tr class="separator:aa6c614e5a5df4d83a5d3567167e87320"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:af509ce3bda59d06dbfc1203dc9462e6b"><td class="memItemLeft" align="right" valign="top"><a id="af509ce3bda59d06dbfc1203dc9462e6b" name="af509ce3bda59d06dbfc1203dc9462e6b"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>permissions</b> {}</td></tr>
-<tr class="memdesc:af509ce3bda59d06dbfc1203dc9462e6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The permissions to request for the bot role. <br /></td></tr>
-<tr class="separator:af509ce3bda59d06dbfc1203dc9462e6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a914070e6267de80a9ae8cf9fd1b7cb95"><td class="memItemLeft" align="right" valign="top"><a id="a914070e6267de80a9ae8cf9fd1b7cb95" name="a914070e6267de80a9ae8cf9fd1b7cb95"></a>
+<tr class="memitem:ae24823a4df7ddeea3e67ed7a1aeae4cd"><td class="memItemLeft" align="right" valign="top"><a id="ae24823a4df7ddeea3e67ed7a1aeae4cd" name="ae24823a4df7ddeea3e67ed7a1aeae4cd"></a>
+<a class="el" href="../../d0/dc2/a02477.html">ApplicationData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>application</b> {}</td></tr>
+<tr class="memdesc:ae24823a4df7ddeea3e67ed7a1aeae4cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partial application object the current application. <br /></td></tr>
+<tr class="separator:ae24823a4df7ddeea3e67ed7a1aeae4cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07abf5416ced0186c8a312caa5aff5a9"><td class="memItemLeft" align="right" valign="top"><a id="a07abf5416ced0186c8a312caa5aff5a9" name="a07abf5416ced0186c8a312caa5aff5a9"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>expires</b> {}</td></tr>
+<tr class="memdesc:a07abf5416ced0186c8a312caa5aff5a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">When the access token expires. <br /></td></tr>
+<tr class="separator:a07abf5416ced0186c8a312caa5aff5a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50fe487c0fd15c9e2f1d77aa6ef5440a"><td class="memItemLeft" align="right" valign="top"><a id="a50fe487c0fd15c9e2f1d77aa6ef5440a" name="a50fe487c0fd15c9e2f1d77aa6ef5440a"></a>
 std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>scopes</b> {}</td></tr>
-<tr class="memdesc:a914070e6267de80a9ae8cf9fd1b7cb95"><td class="mdescLeft">&#160;</td><td class="mdescRight">The scopes to add the application to the server with. <br /></td></tr>
-<tr class="separator:a914070e6267de80a9ae8cf9fd1b7cb95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:a50fe487c0fd15c9e2f1d77aa6ef5440a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of strings - the scopes the <a class="el" href="../../d9/d0f/a03605.html" title="A single User.">User</a> has authorized the application for. <br /></td></tr>
+<tr class="separator:a50fe487c0fd15c9e2f1d77aa6ef5440a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a></li>
@@ -136,7 +148,7 @@ std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bott
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/dd8/a02481.html">InstallParamsData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/dd8/a02481.html">AuthorizationInfoData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

@@ -1,7 +1,7 @@
 var a07118 =
 [
-    [ "Running a Command", "d2/d9e/a07215.html", null ],
-    [ "Running a Function on a Timer", "dc/df3/a07216.html", null ],
-    [ "Listening for a Discord Event", "de/dfd/a07214.html", null ],
-    [ "Using a Message Collector", "db/d73/a07217.html", null ]
+    [ "Creating a Stage Instance", "d3/d91/a07280.html", null ],
+    [ "Getting a Stage Instance", "d1/dd6/a07282.html", null ],
+    [ "Modifying a Stage Instance", "d7/dba/a07283.html", null ],
+    [ "Deleting a Stage Instance", "d5/d95/a07281.html", null ]
 ];

@@ -1,5 +1,0 @@
-<map id="DiscordCoreAPI::InputEventData::getMessageId" name="DiscordCoreAPI::InputEventData::getMessageId">
-<area shape="rect" id="node1" title="Returns the Message id, if applicable, of this input&#45;event." alt="" coords="264,39,447,80"/>
-<area shape="rect" id="node2" href="$d6/d04/a03193.html#ac243db78f0fe0ce88c8c428110d77c37" title="Constructor." alt="" coords="5,5,216,47"/>
-<area shape="rect" id="node3" href="$d1/d30/a03185.html#a6e996a3f44583a72b1a01a784aa6021c" title="Constructor." alt="" coords="10,71,211,112"/>
-</map>

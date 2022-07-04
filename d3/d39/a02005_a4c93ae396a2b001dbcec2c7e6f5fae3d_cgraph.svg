@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../de/dad/a02257.html#afdd5d43985278f045d4d5bd4da4eb6a1" target="_top" xlink:title="For adding a function to handle this event.">
+<g id="a_node2"><a xlink:href="../../db/d7a/a02253.html#afdd5d43985278f045d4d5bd4da4eb6a1" target="_top" xlink:title="For adding a function to handle this event.">
 <polygon fill="none" stroke="black" points="181,-637.5 181,-667.5 334,-667.5 334,-637.5 181,-637.5"/>
 <text text-anchor="start" x="189" y="-655.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::EventManager</text>
 <text text-anchor="middle" x="257.5" y="-644.5" font-family="Helvetica,sans-Serif" font-size="10.00">::onChannelCreation</text>
@@ -37,7 +37,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="../../de/dad/a02257.html#a70322e6ec393f28fdb52ee7392836743" target="_top" xlink:title="For adding a function to handle this event.">
+<g id="a_node3"><a xlink:href="../../db/d7a/a02253.html#a70322e6ec393f28fdb52ee7392836743" target="_top" xlink:title="For adding a function to handle this event.">
 <polygon fill="none" stroke="black" points="181,-588.5 181,-618.5 334,-618.5 334,-588.5 181,-588.5"/>
 <text text-anchor="start" x="189" y="-606.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::EventManager</text>
 <text text-anchor="middle" x="257.5" y="-595.5" font-family="Helvetica,sans-Serif" font-size="10.00">::onChannelDeletion</text>
@@ -53,7 +53,7 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="../../de/dad/a02257.html#a59c76a9adce3b100ca29494eefec82a8" target="_top" xlink:title="For adding a function to handle this event.">
+<g id="a_node4"><a xlink:href="../../db/d7a/a02253.html#a59c76a9adce3b100ca29494eefec82a8" target="_top" xlink:title="For adding a function to handle this event.">
 <polygon fill="none" stroke="black" points="181,-539.5 181,-569.5 334,-569.5 334,-539.5 181,-539.5"/>
 <text text-anchor="start" x="189" y="-557.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::EventManager</text>
 <text text-anchor="middle" x="257.5" y="-546.5" font-family="Helvetica,sans-Serif" font-size="10.00">::onChannelUpdate</text>
@@ -69,7 +69,7 @@
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="../../de/dad/a02257.html#a99547f4876bf2dd0844a400ec4aa5620" target="_top" xlink:title="For adding a function to handle this event.">
+<g id="a_node5"><a xlink:href="../../db/d7a/a02253.html#a99547f4876bf2dd0844a400ec4aa5620" target="_top" xlink:title="For adding a function to handle this event.">
 <polygon fill="none" stroke="black" points="181,-490.5 181,-520.5 334,-520.5 334,-490.5 181,-490.5"/>
 <text text-anchor="start" x="189" y="-508.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::EventManager</text>
 <text text-anchor="middle" x="257.5" y="-497.5" font-family="Helvetica,sans-Serif" font-size="10.00">::onGuildCreation</text>
@@ -85,7 +85,7 @@
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
-<g id="a_node6"><a xlink:href="../../de/dad/a02257.html#a44db9787ae92bf002e4365f8616d143b" target="_top" xlink:title="For adding a function to handle this event.">
+<g id="a_node6"><a xlink:href="../../db/d7a/a02253.html#a44db9787ae92bf002e4365f8616d143b" target="_top" xlink:title="For adding a function to handle this event.">
 <polygon fill="none" stroke="black" points="181,-441.5 181,-471.5 334,-471.5 334,-441.5 181,-441.5"/>
 <text text-anchor="start" x="189" y="-459.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::EventManager</text>
 <text text-anchor="middle" x="257.5" y="-448.5" font-family="Helvetica,sans-Serif" font-size="10.00">::onGuildDeletion</text>
@@ -101,7 +101,7 @@
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
-<g id="a_node7"><a xlink:href="../../de/dad/a02257.html#a5bb14cd9a899540c9ad0aba30063cade" target="_top" xlink:title="For adding a function to handle this event.">
+<g id="a_node7"><a xlink:href="../../db/d7a/a02253.html#a5bb14cd9a899540c9ad0aba30063cade" target="_top" xlink:title="For adding a function to handle this event.">
 <polygon fill="none" stroke="black" points="181,-392.5 181,-422.5 334,-422.5 334,-392.5 181,-392.5"/>
 <text text-anchor="start" x="189" y="-410.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::EventManager</text>
 <text text-anchor="middle" x="257.5" y="-399.5" font-family="Helvetica,sans-Serif" font-size="10.00">::onGuildMemberAdd</text>
@@ -117,7 +117,7 @@
 <!-- Node8 -->
 <g id="node8" class="node">
 <title>Node8</title>
-<g id="a_node8"><a xlink:href="../../de/dad/a02257.html#a6ffc054e22b6cd101b8ca9f8864b486a" target="_top" xlink:title="For adding a function to handle this event.">
+<g id="a_node8"><a xlink:href="../../db/d7a/a02253.html#a6ffc054e22b6cd101b8ca9f8864b486a" target="_top" xlink:title="For adding a function to handle this event.">
 <polygon fill="none" stroke="black" points="181,-343.5 181,-373.5 334,-373.5 334,-343.5 181,-343.5"/>
 <text text-anchor="start" x="189" y="-361.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::EventManager</text>
 <text text-anchor="middle" x="257.5" y="-350.5" font-family="Helvetica,sans-Serif" font-size="10.00">::onGuildMemberRemove</text>
@@ -133,7 +133,7 @@
 <!-- Node9 -->
 <g id="node9" class="node">
 <title>Node9</title>
-<g id="a_node9"><a xlink:href="../../de/dad/a02257.html#a0d5d9f534510c5b0c96bf1a6b6fcfb12" target="_top" xlink:title="For adding a function to handle this event.">
+<g id="a_node9"><a xlink:href="../../db/d7a/a02253.html#a0d5d9f534510c5b0c96bf1a6b6fcfb12" target="_top" xlink:title="For adding a function to handle this event.">
 <polygon fill="none" stroke="black" points="181,-294.5 181,-324.5 334,-324.5 334,-294.5 181,-294.5"/>
 <text text-anchor="start" x="189" y="-312.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::EventManager</text>
 <text text-anchor="middle" x="257.5" y="-301.5" font-family="Helvetica,sans-Serif" font-size="10.00">::onGuildMemberUpdate</text>
@@ -149,7 +149,7 @@
 <!-- Node10 -->
 <g id="node10" class="node">
 <title>Node10</title>
-<g id="a_node10"><a xlink:href="../../de/dad/a02257.html#af14c84ab7f5483441dab915f54e734b4" target="_top" xlink:title="For adding a function to handle this event.">
+<g id="a_node10"><a xlink:href="../../db/d7a/a02253.html#af14c84ab7f5483441dab915f54e734b4" target="_top" xlink:title="For adding a function to handle this event.">
 <polygon fill="none" stroke="black" points="181,-245.5 181,-275.5 334,-275.5 334,-245.5 181,-245.5"/>
 <text text-anchor="start" x="189" y="-263.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::EventManager</text>
 <text text-anchor="middle" x="257.5" y="-252.5" font-family="Helvetica,sans-Serif" font-size="10.00">::onGuildUpdate</text>
@@ -165,7 +165,7 @@
 <!-- Node11 -->
 <g id="node11" class="node">
 <title>Node11</title>
-<g id="a_node11"><a xlink:href="../../de/dad/a02257.html#ab034058a568269f3b10dd8266e8a22ff" target="_top" xlink:title="For adding a function to handle this event.">
+<g id="a_node11"><a xlink:href="../../db/d7a/a02253.html#ab034058a568269f3b10dd8266e8a22ff" target="_top" xlink:title="For adding a function to handle this event.">
 <polygon fill="none" stroke="black" points="181,-196.5 181,-226.5 334,-226.5 334,-196.5 181,-196.5"/>
 <text text-anchor="start" x="189" y="-214.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::EventManager</text>
 <text text-anchor="middle" x="257.5" y="-203.5" font-family="Helvetica,sans-Serif" font-size="10.00">::onRoleCreation</text>
@@ -181,7 +181,7 @@
 <!-- Node12 -->
 <g id="node12" class="node">
 <title>Node12</title>
-<g id="a_node12"><a xlink:href="../../de/dad/a02257.html#a5e775d491eba96768ed6245d7d2e2f75" target="_top" xlink:title="For adding a function to handle this event.">
+<g id="a_node12"><a xlink:href="../../db/d7a/a02253.html#a5e775d491eba96768ed6245d7d2e2f75" target="_top" xlink:title="For adding a function to handle this event.">
 <polygon fill="none" stroke="black" points="181,-147.5 181,-177.5 334,-177.5 334,-147.5 181,-147.5"/>
 <text text-anchor="start" x="189" y="-165.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::EventManager</text>
 <text text-anchor="middle" x="257.5" y="-154.5" font-family="Helvetica,sans-Serif" font-size="10.00">::onRoleDeletion</text>
@@ -197,7 +197,7 @@
 <!-- Node13 -->
 <g id="node13" class="node">
 <title>Node13</title>
-<g id="a_node13"><a xlink:href="../../de/dad/a02257.html#aba8f3dd05776bc5bbf87b5727fe288fd" target="_top" xlink:title="For adding a function to handle this event.">
+<g id="a_node13"><a xlink:href="../../db/d7a/a02253.html#aba8f3dd05776bc5bbf87b5727fe288fd" target="_top" xlink:title="For adding a function to handle this event.">
 <polygon fill="none" stroke="black" points="181,-98.5 181,-128.5 334,-128.5 334,-98.5 181,-98.5"/>
 <text text-anchor="start" x="189" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::EventManager</text>
 <text text-anchor="middle" x="257.5" y="-105.5" font-family="Helvetica,sans-Serif" font-size="10.00">::onRoleUpdate</text>
@@ -213,7 +213,7 @@
 <!-- Node14 -->
 <g id="node14" class="node">
 <title>Node14</title>
-<g id="a_node14"><a xlink:href="../../de/dad/a02257.html#a4e9a0687d7fbce04a606956282e9e48f" target="_top" xlink:title="For adding a function to handle this event.">
+<g id="a_node14"><a xlink:href="../../db/d7a/a02253.html#a4e9a0687d7fbce04a606956282e9e48f" target="_top" xlink:title="For adding a function to handle this event.">
 <polygon fill="none" stroke="black" points="181,-49.5 181,-79.5 334,-79.5 334,-49.5 181,-49.5"/>
 <text text-anchor="start" x="189" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::EventManager</text>
 <text text-anchor="middle" x="257.5" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">::onUserUpdate</text>
@@ -229,7 +229,7 @@
 <!-- Node15 -->
 <g id="node15" class="node">
 <title>Node15</title>
-<g id="a_node15"><a xlink:href="../../de/dad/a02257.html#a4029250f185d07d773342d0d8149098d" target="_top" xlink:title="For adding a function to handle this event.">
+<g id="a_node15"><a xlink:href="../../db/d7a/a02253.html#a4029250f185d07d773342d0d8149098d" target="_top" xlink:title="For adding a function to handle this event.">
 <polygon fill="none" stroke="black" points="181,-0.5 181,-30.5 334,-30.5 334,-0.5 181,-0.5"/>
 <text text-anchor="start" x="189" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::EventManager</text>
 <text text-anchor="middle" x="257.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">::onVoiceStateUpdate</text>

@@ -105,29 +105,29 @@ $(document).ready(function(){initNavTree('d6/def/a03033.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../da/d2f/a03030.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::ModifyCurrentGuildMemberData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::RemoveGuildMemberData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For modifying the Current <a class="el" href="../../d7/d8c/a03049.html" title="A single GuildMember.">GuildMember</a>'s values.  
+<p>For removing a <a class="el" href="../../dc/d23/a03041.html" title="A single GuildMember.">GuildMember</a> from a chosen <a class="el" href="../../d6/d58/a02993.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>.  
  <a href="../../d6/def/a03033.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d2/d94/a00716_source.html">GuildMemberEntities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:a8509f067628bb4610cdbf04bc2cd296f"><td class="memItemLeft" align="right" valign="top"><a id="a8509f067628bb4610cdbf04bc2cd296f" name="a8509f067628bb4610cdbf04bc2cd296f"></a>
+<tr class="memitem:ad0c821f69d4e393863ec714b0c26dace"><td class="memItemLeft" align="right" valign="top"><a id="ad0c821f69d4e393863ec714b0c26dace" name="ad0c821f69d4e393863ec714b0c26dace"></a>
 <a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildId</b> {}</td></tr>
-<tr class="memdesc:a8509f067628bb4610cdbf04bc2cd296f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../d0/db8/a03001.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> within which to modify the current user's values. <br /></td></tr>
-<tr class="separator:a8509f067628bb4610cdbf04bc2cd296f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac90bd35f368e45b4f2a4bcd8dfe575d9"><td class="memItemLeft" align="right" valign="top"><a id="ac90bd35f368e45b4f2a4bcd8dfe575d9" name="ac90bd35f368e45b4f2a4bcd8dfe575d9"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>nick</b> {}</td></tr>
-<tr class="memdesc:ac90bd35f368e45b4f2a4bcd8dfe575d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">A new nickname for the current user. <br /></td></tr>
-<tr class="separator:ac90bd35f368e45b4f2a4bcd8dfe575d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a840f12ae446d296fe8f2f42fc96d2240"><td class="memItemLeft" align="right" valign="top"><a id="a840f12ae446d296fe8f2f42fc96d2240" name="a840f12ae446d296fe8f2f42fc96d2240"></a>
+<tr class="memdesc:ad0c821f69d4e393863ec714b0c26dace"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d6/d58/a02993.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> from which to kick the chosen <a class="el" href="../../dc/d23/a03041.html" title="A single GuildMember.">GuildMember</a>. <br /></td></tr>
+<tr class="separator:ad0c821f69d4e393863ec714b0c26dace"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9afdc5a6a3bf3a44b18c5a6e411ceb70"><td class="memItemLeft" align="right" valign="top"><a id="a9afdc5a6a3bf3a44b18c5a6e411ceb70" name="a9afdc5a6a3bf3a44b18c5a6e411ceb70"></a>
+<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildMemberId</b> {}</td></tr>
+<tr class="memdesc:a9afdc5a6a3bf3a44b18c5a6e411ceb70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Id of the chosen <a class="el" href="../../dc/d23/a03041.html" title="A single GuildMember.">GuildMember</a> to kick. <br /></td></tr>
+<tr class="separator:a9afdc5a6a3bf3a44b18c5a6e411ceb70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42ca2c535a9b6b2e7b124dcb1cec6941"><td class="memItemLeft" align="right" valign="top"><a id="a42ca2c535a9b6b2e7b124dcb1cec6941" name="a42ca2c535a9b6b2e7b124dcb1cec6941"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>reason</b> {}</td></tr>
-<tr class="memdesc:a840f12ae446d296fe8f2f42fc96d2240"><td class="mdescLeft">&#160;</td><td class="mdescRight">A reason for modifying the current user's values. <br /></td></tr>
-<tr class="separator:a840f12ae446d296fe8f2f42fc96d2240"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:a42ca2c535a9b6b2e7b124dcb1cec6941"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reason for kicking the <a class="el" href="../../dc/d23/a03041.html" title="A single GuildMember.">GuildMember</a>. <br /></td></tr>
+<tr class="separator:a42ca2c535a9b6b2e7b124dcb1cec6941"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d2/d94/a00716_source.html">GuildMemberEntities.hpp</a></li>
@@ -138,7 +138,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>reason</b> {}<
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d6/def/a03033.html">ModifyCurrentGuildMemberData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d6/def/a03033.html">RemoveGuildMemberData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

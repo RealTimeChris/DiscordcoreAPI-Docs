@@ -105,11 +105,11 @@ $(document).ready(function(){initNavTree('d0/da6/a02677.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d5/dc3/a02674.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::ComponentInteractionData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::AllowedMentionsData Class Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Component <a class="el" href="../../d3/dcf/a03173.html" title="A single Interaction.">Interaction</a> data.  
+<p>Allowable mentions for a <a class="el" href="../../dc/dc7/a03241.html" title="A single Message.">Message</a>.  
  <a href="../../d0/da6/a02677.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a>&gt;</code></p>
@@ -118,20 +118,24 @@ $(document).ready(function(){initNavTree('d0/da6/a02677.html','../../'); initRes
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:aebb36008dac3348bce882b45f42ac9af"><td class="memItemLeft" align="right" valign="top"><a id="aebb36008dac3348bce882b45f42ac9af" name="aebb36008dac3348bce882b45f42ac9af"></a>
-<a class="el" href="../../dd/d94/a00888.html#ga47e4c44581b62205fa6a62f8354a8a76">ComponentType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>componentType</b> {}</td></tr>
-<tr class="memdesc:aebb36008dac3348bce882b45f42ac9af"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of component. <br /></td></tr>
-<tr class="separator:aebb36008dac3348bce882b45f42ac9af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec56ec5aeecb5ca442c212f09781b589"><td class="memItemLeft" align="right" valign="top"><a id="aec56ec5aeecb5ca442c212f09781b589" name="aec56ec5aeecb5ca442c212f09781b589"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>customId</b> {}</td></tr>
-<tr class="memdesc:aec56ec5aeecb5ca442c212f09781b589"><td class="mdescLeft">&#160;</td><td class="mdescRight">The custom id of the <a class="el" href="../../d3/dcf/a03173.html" title="A single Interaction.">Interaction</a> entity. <br /></td></tr>
-<tr class="separator:aec56ec5aeecb5ca442c212f09781b589"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc40e57bb7251ed688f00185811a5b8b"><td class="memItemLeft" align="right" valign="top"><a id="afc40e57bb7251ed688f00185811a5b8b" name="afc40e57bb7251ed688f00185811a5b8b"></a>
-std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>values</b> {}</td></tr>
-<tr class="memdesc:afc40e57bb7251ed688f00185811a5b8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The values of the components. <br /></td></tr>
-<tr class="separator:afc40e57bb7251ed688f00185811a5b8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1aa7adc3af7dcceb510890c56e747a8"><td class="memItemLeft" align="right" valign="top"><a id="ae1aa7adc3af7dcceb510890c56e747a8" name="ae1aa7adc3af7dcceb510890c56e747a8"></a>
+std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>parse</b> {}</td></tr>
+<tr class="memdesc:ae1aa7adc3af7dcceb510890c56e747a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">A std::vector of allowed mention types to parse from the content. <br /></td></tr>
+<tr class="separator:ae1aa7adc3af7dcceb510890c56e747a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b5bbf6ae635d36358d4a269770ac8d1"><td class="memItemLeft" align="right" valign="top"><a id="a6b5bbf6ae635d36358d4a269770ac8d1" name="a6b5bbf6ae635d36358d4a269770ac8d1"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>repliedUser</b> { false }</td></tr>
+<tr class="memdesc:a6b5bbf6ae635d36358d4a269770ac8d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">For replies, whether to mention the author of the <a class="el" href="../../dc/dc7/a03241.html" title="A single Message.">Message</a> being replied to (default false). <br /></td></tr>
+<tr class="separator:a6b5bbf6ae635d36358d4a269770ac8d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2f0e579e111e63009cdb14a8f9638d4"><td class="memItemLeft" align="right" valign="top"><a id="ae2f0e579e111e63009cdb14a8f9638d4" name="ae2f0e579e111e63009cdb14a8f9638d4"></a>
+std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>roles</b> {}</td></tr>
+<tr class="memdesc:ae2f0e579e111e63009cdb14a8f9638d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of role_ids to mention (Max size of 100) <br /></td></tr>
+<tr class="separator:ae2f0e579e111e63009cdb14a8f9638d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a369252aa93e7ae0dad54ac9bc46e671e"><td class="memItemLeft" align="right" valign="top"><a id="a369252aa93e7ae0dad54ac9bc46e671e" name="a369252aa93e7ae0dad54ac9bc46e671e"></a>
+std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>users</b> {}</td></tr>
+<tr class="memdesc:a369252aa93e7ae0dad54ac9bc46e671e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of user_ids to mention (Max size of 100) <br /></td></tr>
+<tr class="separator:a369252aa93e7ae0dad54ac9bc46e671e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a></li>
 </ul>
 </div><!-- contents -->
@@ -140,7 +144,7 @@ std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bott
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d0/da6/a02677.html">ComponentInteractionData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d0/da6/a02677.html">AllowedMentionsData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

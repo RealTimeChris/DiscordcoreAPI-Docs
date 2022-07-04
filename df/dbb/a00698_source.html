@@ -106,127 +106,125 @@ $(document).ready(function(){initNavTree('df/dbb/a00698_source.html','../../'); 
 </div><!--header-->
 <div class="contents">
 <a href="../../df/dbb/a00698.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">*</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">    DiscordCoreAPI, A bot library for Discord, written in C++, and featuring explicit multithreading through the usage of custom, asynchronous C++ CoRoutines.</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"></span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">    Copyright 2021, 2022 Chris M. (RealTimeChris)</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"></span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">    This file is part of DiscordCoreAPI.</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">    DiscordCoreAPI is free software: you can redistribute it and/or modify it under the terms of the GNU</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">    General Public License as published by the Free Software Foundation, either version 3 of the License,</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">    or (at your option) any later version.</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">    DiscordCoreAPI is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">    even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">    You should have received a copy of the GNU General Public License along with DiscordCoreAPI.</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">    If not, see &lt;https://www.gnu.org/licenses/&gt;.</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"></span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">*/</span><span class="comment"></span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">/// DiscordCoreClient01.hpp - Header file for the main/exposed DiscordCoreClient class.</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">/// May 12, 2021 Chris M.</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">/// https://discordcoreapi.com</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/// \file DiscordCoreClient.hpp</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"></span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;<a class="code" href="../../dc/de4/a00677.html">discordcoreapi/ApplicationCommandEntities.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;<a class="code" href="../../df/d9e/a00686.html">discordcoreapi/AutoModerationEntities.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;<a class="code" href="../../d1/d87/a00689.html">discordcoreapi/ChannelEntities.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../d5/d5b/a00695.html">discordcoreapi/CoRoutine.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/db6/a00692.html">discordcoreapi/CommandController.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../d4/d6a/a00704.html">discordcoreapi/EventEntities.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;<a class="code" href="../../d1/d56/a00707.html">discordcoreapi/EventManager.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;<a class="code" href="../../d4/deb/a00710.html">discordcoreapi/FoundationEntities.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;<a class="code" href="../../d1/d04/a00713.html">discordcoreapi/GuildEntities.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;<a class="code" href="../../d2/d94/a00716.html">discordcoreapi/GuildMemberEntities.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;<a class="code" href="../../dd/dd8/a00719.html">discordcoreapi/GuildScheduledEventEntities.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &lt;<a class="code" href="../../db/d7c/a00722.html">discordcoreapi/Https.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &lt;<a class="code" href="../../df/d3b/a00728.html">discordcoreapi/InputEvents.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#include &lt;<a class="code" href="../../df/df7/a00731.html">discordcoreapi/InteractionEntities.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#include &lt;<a class="code" href="../../d6/dc0/a00734.html">discordcoreapi/MessageEntities.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#include &lt;<a class="code" href="../../dd/db2/a00737.html">discordcoreapi/ReactionEntities.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#include &lt;<a class="code" href="../../dc/dce/a00740.html">discordcoreapi/RoleEntities.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#include &lt;<a class="code" href="../../d5/de8/a00749.html">discordcoreapi/SSLClients.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/d0a/a00743.html">discordcoreapi/SongAPI.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#include &lt;<a class="code" href="../../d4/dfa/a00746.html">discordcoreapi/SoundCloudAPI.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#include &lt;<a class="code" href="../../dd/d5c/a00752.html">discordcoreapi/StageInstanceEntities.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#include &lt;<a class="code" href="../../d2/ddd/a00755.html">discordcoreapi/StickerEntities.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#include &lt;<a class="code" href="../../d2/d4a/a00758.html">discordcoreapi/ThreadEntities.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#include &lt;<a class="code" href="../../d3/d4f/a00761.html">discordcoreapi/ThreadPool.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#include &lt;<a class="code" href="../../d3/d2c/a00764.html">discordcoreapi/UserEntities.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/d7e/a00770.html">discordcoreapi/VoiceConnection.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#include &lt;<a class="code" href="../../d8/dba/a00773.html">discordcoreapi/WebHookEntities.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#include &lt;<a class="code" href="../../d9/dd4/a00776.html">discordcoreapi/WebSocketEntities.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#include &lt;<a class="code" href="../../d3/d95/a00779.html">discordcoreapi/YouTubeAPI.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">    DiscordCoreAPI, A bot library for Discord, written in C++, and featuring explicit multithreading through the usage of custom, asynchronous C++ CoRoutines.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"></span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">    Copyright 2021, 2022 Chris M. (RealTimeChris)</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"></span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">    This file is part of DiscordCoreAPI.</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">    DiscordCoreAPI is free software: you can redistribute it and/or modify it under the terms of the GNU</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">    General Public License as published by the Free Software Foundation, either version 3 of the License,</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">    or (at your option) any later version.</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">    DiscordCoreAPI is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">    even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">    You should have received a copy of the GNU General Public License along with DiscordCoreAPI.</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">    If not, see &lt;https://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">*/</span><span class="comment"></span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">/// DiscordCoreClient01.hpp - Header file for the main/exposed DiscordCoreClient class.</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">/// May 12, 2021 Chris M.</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">/// https://discordcoreapi.com</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">/// \file DiscordCoreClient.hpp</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;<a class="code" href="../../dc/de4/a00677.html">discordcoreapi/ApplicationCommandEntities.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;<a class="code" href="../../df/d9e/a00686.html">discordcoreapi/AutoModerationEntities.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;<a class="code" href="../../d1/d87/a00689.html">discordcoreapi/ChannelEntities.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;<a class="code" href="../../d5/d5b/a00695.html">discordcoreapi/CoRoutine.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/db6/a00692.html">discordcoreapi/CommandController.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../d4/d6a/a00704.html">discordcoreapi/EventEntities.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../d1/d56/a00707.html">discordcoreapi/EventManager.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../d4/deb/a00710.html">discordcoreapi/FoundationEntities.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;<a class="code" href="../../d1/d04/a00713.html">discordcoreapi/GuildEntities.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;<a class="code" href="../../d2/d94/a00716.html">discordcoreapi/GuildMemberEntities.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;<a class="code" href="../../dd/dd8/a00719.html">discordcoreapi/GuildScheduledEventEntities.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;<a class="code" href="../../db/d7c/a00722.html">discordcoreapi/Https.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;<a class="code" href="../../df/d3b/a00728.html">discordcoreapi/InputEvents.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &lt;<a class="code" href="../../df/df7/a00731.html">discordcoreapi/InteractionEntities.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &lt;<a class="code" href="../../d6/dc0/a00734.html">discordcoreapi/MessageEntities.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#include &lt;<a class="code" href="../../dd/db2/a00737.html">discordcoreapi/ReactionEntities.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#include &lt;<a class="code" href="../../dc/dce/a00740.html">discordcoreapi/RoleEntities.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#include &lt;<a class="code" href="../../d5/de8/a00749.html">discordcoreapi/SSLClients.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/d0a/a00743.html">discordcoreapi/SongAPI.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#include &lt;<a class="code" href="../../d4/dfa/a00746.html">discordcoreapi/SoundCloudAPI.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#include &lt;<a class="code" href="../../dd/d5c/a00752.html">discordcoreapi/StageInstanceEntities.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#include &lt;<a class="code" href="../../d2/ddd/a00755.html">discordcoreapi/StickerEntities.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#include &lt;<a class="code" href="../../d2/d4a/a00758.html">discordcoreapi/ThreadEntities.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#include &lt;<a class="code" href="../../d3/d4f/a00761.html">discordcoreapi/ThreadPool.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#include &lt;<a class="code" href="../../d3/d2c/a00764.html">discordcoreapi/UserEntities.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/d7e/a00770.html">discordcoreapi/VoiceConnection.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#include &lt;<a class="code" href="../../d8/dba/a00773.html">discordcoreapi/WebHookEntities.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#include &lt;<a class="code" href="../../d9/dd4/a00776.html">discordcoreapi/WebSocketEntities.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#include &lt;<a class="code" href="../../d3/d95/a00779.html">discordcoreapi/YouTubeAPI.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d7/d46/a00890.html">DiscordCoreAPI</a> {</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d7/d46/a00890.html">DiscordCoreAPI</a> {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">using </span>VoiceConnectionMap = std::unordered_map&lt;uint64_t, std::unique_ptr&lt;VoiceConnection&gt;&gt;;</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">using </span>VoiceConnectionMap = std::unordered_map&lt;uint64_t, std::unique_ptr&lt;VoiceConnection&gt;&gt;;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">using </span>SoundCloudAPIMap = std::unordered_map&lt;uint64_t, std::unique_ptr&lt;DiscordCoreInternal::SoundCloudAPI&gt;&gt;;</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">using </span>SoundCloudAPIMap = std::unordered_map&lt;uint64_t, std::unique_ptr&lt;DiscordCoreInternal::SoundCloudAPI&gt;&gt;;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">using </span>YouTubeAPIMap = std::unordered_map&lt;uint64_t, std::unique_ptr&lt;DiscordCoreInternal::YouTubeAPI&gt;&gt;;</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">using </span>YouTubeAPIMap = std::unordered_map&lt;uint64_t, std::unique_ptr&lt;DiscordCoreInternal::YouTubeAPI&gt;&gt;;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">using </span>SongAPIMap = std::unordered_map&lt;uint64_t, std::unique_ptr&lt;SongAPI&gt;&gt;;</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keyword">using </span>SongAPIMap = std::unordered_map&lt;uint64_t, std::unique_ptr&lt;SongAPI&gt;&gt;;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    DiscordCoreAPI_Dll VoiceConnectionMap&amp; getVoiceConnectionMap();</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    DiscordCoreAPI_Dll VoiceConnectionMap&amp; getVoiceConnectionMap();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    DiscordCoreAPI_Dll SoundCloudAPIMap&amp; getSoundCloudAPIMap();</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    DiscordCoreAPI_Dll SoundCloudAPIMap&amp; getSoundCloudAPIMap();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    DiscordCoreAPI_Dll YouTubeAPIMap&amp; getYouTubeAPIMap();</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    DiscordCoreAPI_Dll YouTubeAPIMap&amp; getYouTubeAPIMap();</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    DiscordCoreAPI_Dll SongAPIMap&amp; getSongAPIMap();</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment"></span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">    /**</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">     * \addtogroup main_endpoints</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">     * @{</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment">     */</span><span class="comment"></span></div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">    /// DiscordCoreClient - The main class DiscordCoreAPI_Dll for this library. \brief DiscordCoreClient - The main class DiscordCoreAPI_Dll for this library.</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="../../d3/d39/a02005.html">   77</a></span><span class="comment"></span>    <span class="keyword">class </span>DiscordCoreAPI_Dll <a class="code hl_class" href="../../d3/d39/a02005.html">DiscordCoreClient</a> {</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>      <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keyword">friend</span> <span class="keyword">class </span>DiscordCoreInternal::BaseSocketAgent;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keyword">friend</span> <a class="code hl_class" href="../../d0/dea/a02585.html">GuildData</a>;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keyword">friend</span> <a class="code hl_class" href="../../d1/db3/a03013.html">Guilds</a>;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="../../d3/d39/a02005.html#ac7c97f7a88b3f4a0a4699b6fcaa89619">   83</a></span>        CommandController commandController{ <span class="keyword">this</span> };<span class="comment">///&lt; A command controller.</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="../../d3/d39/a02005.html#a99ce84589f6918e4c6a8803f6ff4592a">   84</a></span>        <a class="code hl_class" href="../../de/dad/a02257.html">EventManager</a> eventManager{};<span class="comment">///&lt; An EventManager.</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="comment"></span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="comment">        /// DiscordCoreClient constructor. \brief DiscordCoreClient constructor.</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="comment">        /// \param configData A DiscordCoreClientConfig structure to select various library options.</span></div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment"></span>        <a class="code hl_class" href="../../d3/d39/a02005.html">DiscordCoreClient</a>(<a class="code hl_struct" href="../../dc/d0b/a03653.html">DiscordCoreClientConfig</a> configData);</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="comment"></span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment">        /// For registering a function with the CommandController. \brief For registering a function with the CommandController.</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment">        /// \param functionNames A vector containing the possible names for activating this command/function.</span></div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="comment">        /// \param baseFunction A unique_ptr to the command to be registered.</span></div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="comment"></span>        <span class="keywordtype">void</span> registerFunction(<span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; functionNames, std::unique_ptr&lt;BaseFunction&gt; baseFunction);</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="comment"></span> </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="comment">        /// For collecting a copy of the current bot&#39;s User. \brief For collecting a copy of the current bot&#39;s User.</span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="comment">        /// \returns BotUser An instance of BotUser.</span></div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="comment"></span>        <a class="code hl_class" href="../../dc/df8/a03621.html">BotUser</a> getBotUser();</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="comment"></span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="comment">        /// Executes the library, and waits for completion. \brief Executes the library, and waits for completion.</span></div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment"></span>        <span class="keywordtype">void</span> runBot();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    DiscordCoreAPI_Dll SongAPIMap&amp; getSongAPIMap();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment"></span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment">    /**</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">     * \addtogroup main_endpoints</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">     * @{</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">     */</span><span class="comment"></span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">    /// DiscordCoreClient - The main class DiscordCoreAPI_Dll for this library. \brief DiscordCoreClient - The main class DiscordCoreAPI_Dll for this library.</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="../../d3/d39/a02005.html">   75</a></span><span class="comment"></span>    <span class="keyword">class </span>DiscordCoreAPI_Dll <a class="code hl_class" href="../../d3/d39/a02005.html">DiscordCoreClient</a> {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>      <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keyword">friend</span> <span class="keyword">class </span>DiscordCoreInternal::BaseSocketAgent;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keyword">friend</span> <a class="code hl_class" href="../../da/d03/a02577.html">GuildData</a>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keyword">friend</span> <a class="code hl_class" href="../../de/da4/a03005.html">Guilds</a>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="../../d3/d39/a02005.html#ac7c97f7a88b3f4a0a4699b6fcaa89619">   81</a></span>        CommandController commandController{ <span class="keyword">this</span> };<span class="comment">///&lt; A command controller.</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="../../d3/d39/a02005.html#a99ce84589f6918e4c6a8803f6ff4592a">   82</a></span>        <a class="code hl_class" href="../../db/d7a/a02253.html">EventManager</a> eventManager{};<span class="comment">///&lt; An EventManager.</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment"></span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="comment">        /// DiscordCoreClient constructor. \brief DiscordCoreClient constructor.</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="comment">        /// \param configData A DiscordCoreClientConfig structure to select various library options.</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="comment"></span>        <a class="code hl_class" href="../../d3/d39/a02005.html">DiscordCoreClient</a>(<a class="code hl_struct" href="../../db/d6b/a03645.html">DiscordCoreClientConfig</a> configData);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="comment"></span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment">        /// For registering a function with the CommandController. \brief For registering a function with the CommandController.</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="comment">        /// \param functionNames A vector containing the possible names for activating this command/function.</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment">        /// \param baseFunction A unique_ptr to the command to be registered.</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment"></span>        <span class="keywordtype">void</span> registerFunction(<span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; functionNames, std::unique_ptr&lt;BaseFunction&gt; baseFunction);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="comment"></span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="comment">        /// For collecting a copy of the current bot&#39;s User. \brief For collecting a copy of the current bot&#39;s User.</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="comment">        /// \returns BotUser An instance of BotUser.</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="comment"></span>        <a class="code hl_class" href="../../d6/de0/a03613.html">BotUser</a> getBotUser();</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="comment"></span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="comment">        /// Executes the library, and waits for completion. \brief Executes the library, and waits for completion.</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="comment"></span>        <span class="keywordtype">void</span> runBot();</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <a class="code hl_class" href="../../d3/d39/a02005.html">~DiscordCoreClient</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <a class="code hl_class" href="../../d3/d39/a02005.html">~DiscordCoreClient</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>      <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        std::unordered_map&lt;std::string, std::unique_ptr&lt;DiscordCoreInternal::BaseSocketAgent&gt;&gt; baseSocketAgentMap{};</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        std::unique_ptr&lt;DiscordCoreInternal::HttpsClient&gt; httpsClient{ <span class="keyword">nullptr</span> };</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        StopWatch&lt;std::chrono::milliseconds&gt; theStopWatch{ 5100ms };</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="preprocessor">#ifdef _WIN32</span></div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        DiscordCoreInternal::WSADataWrapper theWSAData{};</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        std::vector&lt;std::string&gt; threadIds{};</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        ConfigManager configManager{};</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        ThreadPool threadPool{};</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        BotUser currentUser{};</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>      <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        std::unordered_map&lt;std::string, std::unique_ptr&lt;DiscordCoreInternal::BaseSocketAgent&gt;&gt; baseSocketAgentMap{};</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        std::unique_ptr&lt;DiscordCoreInternal::HttpsClient&gt; httpsClient{ <span class="keyword">nullptr</span> };</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        StopWatch&lt;std::chrono::milliseconds&gt; theStopWatch{ 5100ms };</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="preprocessor">#ifdef _WIN32</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        DiscordCoreInternal::WSADataWrapper theWSAData{};</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        std::vector&lt;std::string&gt; threadIds{};</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        ConfigManager configManager{};</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        ThreadPool threadPool{};</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        BotUser currentUser{};</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        GatewayBotData getGateWayBot();</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        GatewayBotData getGateWayBot();</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keywordtype">bool</span> instantiateWebSockets();</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    };<span class="comment"></span></div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="comment">    /**@}*/</span></div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>}<span class="comment">// namespace DiscordCoreAPI</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keywordtype">bool</span> instantiateWebSockets();</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    };<span class="comment"></span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="comment">    /**@}*/</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>}<span class="comment">// namespace DiscordCoreAPI</span></div>
 <div class="ttc" id="aa00677_html"><div class="ttname"><a href="../../dc/de4/a00677.html">ApplicationCommandEntities.hpp</a></div></div>
 <div class="ttc" id="aa00686_html"><div class="ttname"><a href="../../df/d9e/a00686.html">AutoModerationEntities.hpp</a></div></div>
 <div class="ttc" id="aa00689_html"><div class="ttname"><a href="../../d1/d87/a00689.html">ChannelEntities.hpp</a></div></div>
@@ -256,13 +254,13 @@ $(document).ready(function(){initNavTree('df/dbb/a00698_source.html','../../'); 
 <div class="ttc" id="aa00773_html"><div class="ttname"><a href="../../d8/dba/a00773.html">WebHookEntities.hpp</a></div></div>
 <div class="ttc" id="aa00776_html"><div class="ttname"><a href="../../d9/dd4/a00776.html">WebSocketEntities.hpp</a></div></div>
 <div class="ttc" id="aa00779_html"><div class="ttname"><a href="../../d3/d95/a00779.html">YouTubeAPI.hpp</a></div></div>
-<div class="ttc" id="aa00890_html"><div class="ttname"><a href="../../d7/d46/a00890.html">DiscordCoreAPI</a></div><div class="ttdoc">The main namespace for this library.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00027">ApplicationCommandEntities.hpp:27</a></div></div>
-<div class="ttc" id="aa02005_html"><div class="ttname"><a href="../../d3/d39/a02005.html">DiscordCoreAPI::DiscordCoreClient</a></div><div class="ttdoc">DiscordCoreClient - The main class DiscordCoreAPI_Dll for this library.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbb/a00698_source.html#l00077">DiscordCoreClient.hpp:77</a></div></div>
-<div class="ttc" id="aa02257_html"><div class="ttname"><a href="../../de/dad/a02257.html">DiscordCoreAPI::EventManager</a></div><div class="ttdoc">Class for handling the assignment of event-handling functions.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d56/a00707_source.html#l00349">EventManager.hpp:349</a></div></div>
-<div class="ttc" id="aa02585_html"><div class="ttname"><a href="../../d0/dea/a02585.html">DiscordCoreAPI::GuildData</a></div><div class="ttdoc">Data structure representing a single Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03769">FoundationEntities.hpp:3769</a></div></div>
-<div class="ttc" id="aa03013_html"><div class="ttname"><a href="../../d1/db3/a03013.html">DiscordCoreAPI::Guilds</a></div><div class="ttdoc">An interface class for the Guild related Discord endpoints.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d04/a00713_source.html#l00492">GuildEntities.hpp:492</a></div></div>
-<div class="ttc" id="aa03621_html"><div class="ttname"><a href="../../dc/df8/a03621.html">DiscordCoreAPI::BotUser</a></div><div class="ttdoc">A type of User, to represent the Bot and some of its associated endpoints.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d2c/a00764_source.html#l00157">UserEntities.hpp:157</a></div></div>
-<div class="ttc" id="aa03653_html"><div class="ttname"><a href="../../dc/d0b/a03653.html">DiscordCoreAPI::DiscordCoreClientConfig</a></div><div class="ttdoc">Configuration data for the library's main class, DiscordCoreClient.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dae/a00767_source.html#l00258">Utilities.hpp:258</a></div></div>
+<div class="ttc" id="aa00890_html"><div class="ttname"><a href="../../d7/d46/a00890.html">DiscordCoreAPI</a></div><div class="ttdoc">The main namespace for this library.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00025">ApplicationCommandEntities.hpp:25</a></div></div>
+<div class="ttc" id="aa02005_html"><div class="ttname"><a href="../../d3/d39/a02005.html">DiscordCoreAPI::DiscordCoreClient</a></div><div class="ttdoc">DiscordCoreClient - The main class DiscordCoreAPI_Dll for this library.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbb/a00698_source.html#l00075">DiscordCoreClient.hpp:75</a></div></div>
+<div class="ttc" id="aa02253_html"><div class="ttname"><a href="../../db/d7a/a02253.html">DiscordCoreAPI::EventManager</a></div><div class="ttdoc">Class for handling the assignment of event-handling functions.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d56/a00707_source.html#l00347">EventManager.hpp:347</a></div></div>
+<div class="ttc" id="aa02577_html"><div class="ttname"><a href="../../da/d03/a02577.html">DiscordCoreAPI::GuildData</a></div><div class="ttdoc">Data structure representing a single Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03714">FoundationEntities.hpp:3714</a></div></div>
+<div class="ttc" id="aa03005_html"><div class="ttname"><a href="../../de/da4/a03005.html">DiscordCoreAPI::Guilds</a></div><div class="ttdoc">An interface class for the Guild related Discord endpoints.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d04/a00713_source.html#l00490">GuildEntities.hpp:490</a></div></div>
+<div class="ttc" id="aa03613_html"><div class="ttname"><a href="../../d6/de0/a03613.html">DiscordCoreAPI::BotUser</a></div><div class="ttdoc">A type of User, to represent the Bot and some of its associated endpoints.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d2c/a00764_source.html#l00155">UserEntities.hpp:155</a></div></div>
+<div class="ttc" id="aa03645_html"><div class="ttname"><a href="../../db/d6b/a03645.html">DiscordCoreAPI::DiscordCoreClientConfig</a></div><div class="ttdoc">Configuration data for the library's main class, DiscordCoreClient.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dae/a00767_source.html#l00255">Utilities.hpp:255</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->

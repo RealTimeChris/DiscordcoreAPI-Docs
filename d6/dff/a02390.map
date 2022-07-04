@@ -1,6 +1,0 @@
-<map id="DiscordCoreAPI::ChannelData" name="DiscordCoreAPI::ChannelData">
-<area shape="rect" id="node1" title="Data structure representing a single Channel." alt="" coords="7,80,203,107"/>
-<area shape="rect" id="node3" href="$dc/da8/a01959.html" title="A Channel object." alt="" coords="21,155,190,181"/>
-<area shape="rect" id="node2" href="$d2/d40/a02307.html" title="Base class DiscordCoreAPI_Dll for all Discord entities." alt="" coords="5,5,205,32"/>
-<area shape="rect" id="node4" href="$d3/da4/a03571.html" title="Represents a single Thread." alt="" coords="25,229,186,256"/>
-</map>

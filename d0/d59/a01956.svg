@@ -20,7 +20,7 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="../../de/d5d/a03565.html" target="_top" xlink:title="Represents a single Thread.">
+<g id="a_node4"><a xlink:href="../../d0/d20/a03557.html" target="_top" xlink:title="Represents a single Thread.">
 <polygon fill="none" stroke="black" points="14.5,-0.5 14.5,-19.5 135.5,-19.5 135.5,-0.5 14.5,-0.5"/>
 <text text-anchor="middle" x="75" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::Thread</text>
 </a>
@@ -35,7 +35,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../d3/d53/a02389.html" target="_top" xlink:title="Data structure representing a single Channel.">
+<g id="a_node2"><a xlink:href="../../d7/d1a/a02381.html" target="_top" xlink:title="Data structure representing a single Channel.">
 <polygon fill="none" stroke="black" points="1.5,-112.5 1.5,-131.5 148.5,-131.5 148.5,-112.5 1.5,-112.5"/>
 <text text-anchor="middle" x="75" y="-119.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::ChannelData</text>
 </a>
@@ -50,7 +50,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="../../d7/dd6/a02305.html" target="_top" xlink:title="Base class DiscordCoreAPI_Dll for all Discord entities.">
+<g id="a_node3"><a xlink:href="../../d1/db8/a02297.html" target="_top" xlink:title="Base class DiscordCoreAPI_Dll for all Discord entities.">
 <polygon fill="none" stroke="black" points="0,-168.5 0,-187.5 150,-187.5 150,-168.5 0,-168.5"/>
 <text text-anchor="middle" x="75" y="-175.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::DiscordEntity</text>
 </a>

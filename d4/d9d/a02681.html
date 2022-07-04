@@ -105,11 +105,11 @@ $(document).ready(function(){initNavTree('d4/d9d/a02681.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../dc/d64/a02678.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::ModalInteractionData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::SelectOptionData Class Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Modal interaction data, for inputs from text modals.  
+<p>Represents a single selection from a select-menu.  
  <a href="../../d4/d9d/a02681.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a>&gt;</code></p>
@@ -118,20 +118,28 @@ $(document).ready(function(){initNavTree('d4/d9d/a02681.html','../../'); initRes
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:a664ace7ed4a4713aaba333db876e66b7"><td class="memItemLeft" align="right" valign="top"><a id="a664ace7ed4a4713aaba333db876e66b7" name="a664ace7ed4a4713aaba333db876e66b7"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>customId</b> {}</td></tr>
-<tr class="memdesc:a664ace7ed4a4713aaba333db876e66b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The custom id of the <a class="el" href="../../d3/dcf/a03173.html" title="A single Interaction.">Interaction</a> entity. <br /></td></tr>
-<tr class="separator:a664ace7ed4a4713aaba333db876e66b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7bb5364c731b1f4c0f21822b00fe1dce"><td class="memItemLeft" align="right" valign="top"><a id="a7bb5364c731b1f4c0f21822b00fe1dce" name="a7bb5364c731b1f4c0f21822b00fe1dce"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>customIdSmall</b> {}</td></tr>
-<tr class="memdesc:a7bb5364c731b1f4c0f21822b00fe1dce"><td class="mdescLeft">&#160;</td><td class="mdescRight">The custom id of a particular modal input. <br /></td></tr>
-<tr class="separator:a7bb5364c731b1f4c0f21822b00fe1dce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf0129fbf192b455e9b9bc031de1228f"><td class="memItemLeft" align="right" valign="top"><a id="adf0129fbf192b455e9b9bc031de1228f" name="adf0129fbf192b455e9b9bc031de1228f"></a>
+<tr class="memitem:a87b1a14b1b4407e7ee4c51905b7ce0cd"><td class="memItemLeft" align="right" valign="top"><a id="a87b1a14b1b4407e7ee4c51905b7ce0cd" name="a87b1a14b1b4407e7ee4c51905b7ce0cd"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>_default</b> { false }</td></tr>
+<tr class="memdesc:a87b1a14b1b4407e7ee4c51905b7ce0cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is it the default option? <br /></td></tr>
+<tr class="separator:a87b1a14b1b4407e7ee4c51905b7ce0cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45f5cc6e66c695ee30b88abb6c08fa5b"><td class="memItemLeft" align="right" valign="top"><a id="a45f5cc6e66c695ee30b88abb6c08fa5b" name="a45f5cc6e66c695ee30b88abb6c08fa5b"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>description</b> {}</td></tr>
+<tr class="memdesc:a45f5cc6e66c695ee30b88abb6c08fa5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Description of the select-menu-option. <br /></td></tr>
+<tr class="separator:a45f5cc6e66c695ee30b88abb6c08fa5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62f65147b596a1e4188753417c8caad5"><td class="memItemLeft" align="right" valign="top"><a id="a62f65147b596a1e4188753417c8caad5" name="a62f65147b596a1e4188753417c8caad5"></a>
+<a class="el" href="../../d9/d9d/a02425.html">EmojiData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>emoji</b> {}</td></tr>
+<tr class="memdesc:a62f65147b596a1e4188753417c8caad5"><td class="mdescLeft">&#160;</td><td class="mdescRight">An optional emoji to put on it. <br /></td></tr>
+<tr class="separator:a62f65147b596a1e4188753417c8caad5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96cd888323e76a263a53a9c816a81dfb"><td class="memItemLeft" align="right" valign="top"><a id="a96cd888323e76a263a53a9c816a81dfb" name="a96cd888323e76a263a53a9c816a81dfb"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>label</b> {}</td></tr>
+<tr class="memdesc:a96cd888323e76a263a53a9c816a81dfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">A visible label for the select-menu-option. <br /></td></tr>
+<tr class="separator:a96cd888323e76a263a53a9c816a81dfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ff0de74976060d03159119294199747"><td class="memItemLeft" align="right" valign="top"><a id="a5ff0de74976060d03159119294199747" name="a5ff0de74976060d03159119294199747"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>value</b> {}</td></tr>
-<tr class="memdesc:adf0129fbf192b455e9b9bc031de1228f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The input value of the modal. <br /></td></tr>
-<tr class="separator:adf0129fbf192b455e9b9bc031de1228f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:a5ff0de74976060d03159119294199747"><td class="mdescLeft">&#160;</td><td class="mdescRight">A value for identifying the option. <br /></td></tr>
+<tr class="separator:a5ff0de74976060d03159119294199747"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a></li>
 </ul>
 </div><!-- contents -->
@@ -140,7 +148,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>value</b> {}</
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d4/d9d/a02681.html">ModalInteractionData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d4/d9d/a02681.html">SelectOptionData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

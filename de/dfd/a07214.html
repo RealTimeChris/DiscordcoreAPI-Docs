@@ -102,42 +102,35 @@ $(document).ready(function(){initNavTree('de/dfd/a07214.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Listening for a Discord Event </div></div>
+  <div class="headertitle"><div class="title">Music-Bot Guide </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_General_Usage_Listening_for_a_Discord_Event"></a></p><ul>
-<li>A complete list of possible events is <a href="https://discord.com/developers/docs/topics/gateway#commands-and-events-gateway-events">here</a>.</li>
-<li>Create a function that returns <code>void</code>, that takes an argument of a type that derives its name from the type of event that is being listened for, where the argument is of type <code>DiscordCoreAPI::EVENTNAME+Data</code>. For example, the argument for the <code><a class="el" href="../../de/dad/a02257.html#a99547f4876bf2dd0844a400ec4aa5620" title="For adding a function to handle this event.">DiscordCoreAPI::EventManager::onGuildCreation</a></code> event is <code><a class="el" href="../../da/d71/a02101.html" title="Data that is received as part of a Guild creation event.">DiscordCoreAPI::OnGuildCreationData</a></code>.</li>
-<li>The list of events can be found by dereferencing <code><a class="el" href="../../d3/d39/a02005.html#a99ce84589f6918e4c6a8803f6ff4592a" title="An EventManager.">DiscordCoreAPI::DiscordCoreClient::eventManager</a></code>, where you pass into the function found here, a pointer to your own created function.</li>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Music_Bot_Music_Bot_Guide"></a></p><ul>
+<li><a class="el" href="../../da/dae/a07213.html">Introduction</a></li>
+<li><a class="el" href="../../d7/dc6/a07210.html">Helper Functions</a></li>
+<li><a class="el" href="../../dc/d78/a07209.html">Help</a></li>
+<li><a class="el" href="../../db/d73/a07217.html">Play</a></li>
+<li><a class="el" href="../../db/db6/a07219.html">PlayRN</a></li>
+<li><a class="el" href="../../d2/d40/a07218.html">PlayQ</a></li>
+<li><a class="el" href="../../d5/d05/a07222.html">Skip</a></li>
+<li><a class="el" href="../../d2/d73/a07220.html">Queue</a></li>
+<li><a class="el" href="../../de/dbb/a07223.html">Stop</a></li>
+<li><a class="el" href="../../da/d80/a07207.html">Clear</a></li>
+<li><a class="el" href="../../dc/df3/a07216.html">Pause</a></li>
+<li><a class="el" href="../../de/d7c/a07221.html">Set Music Channel</a></li>
+<li><a class="el" href="../../d2/d2a/a07211.html">Loop All</a></li>
+<li><a class="el" href="../../df/d79/a07212.html">Loop Song</a></li>
+<li><a class="el" href="../../d2/d9e/a07215.html">NP(Now-Playing)</a></li>
+<li><a class="el" href="../../d2/d8e/a07208.html">Disconnect</a> </li>
 </ul>
-<div class="fragment"><div class="line"><span class="comment">/// main.cpp-Main entry point.</span><span class="comment"></span></div>
-<div class="line"><span class="comment">/// https://github.com/RealTimeChris/DiscordCoreAPI</span></div>
-<div class="line"><span class="comment"></span> </div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d8/db9/a00725.html">Index.hpp</a>&gt;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> onGuildCreation(<a class="code hl_struct" href="../../da/d71/a02101.html">DiscordCoreAPI::OnGuildCreationData</a> dataPackage) {</div>
-<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;Guild Name: &quot;</span> &lt;&lt; dataPackage.<a class="code hl_variable" href="../../da/d71/a02101.html#a08bcc71a65a765715e65b860b681709a">guild</a>.data.<a class="code hl_variable" href="../../d0/dea/a02585.html#a3fc39246d0ce977a2bbccf653af39a12">name</a> &lt;&lt; endl;</div>
-<div class="line">}</div>
-<div class="line"> </div>
-<div class="line">int32_t main() {</div>
-<div class="line">    std::string botToken {<span class="stringliteral">&quot;YOUR_BOT_TOKEN_HERE&quot;</span>};</div>
-<div class="line">    <span class="keyword">auto</span> thePtr = std::make_unique&lt;DiscordCoreAPI::DiscordCoreClient&gt;(botToken, <span class="stringliteral">&quot;!&quot;</span>);</div>
-<div class="line">    thePtr-&gt;eventManager-&gt;onGuildCreation(&amp;onGuildCreation);</div>
-<div class="line">    thePtr-&gt;runBot();</div>
-<div class="line">    <span class="keywordflow">return</span> 0;</div>
-<div class="line">}</div>
-<div class="ttc" id="aa00725_html"><div class="ttname"><a href="../../d8/db9/a00725.html">Index.hpp</a></div></div>
-<div class="ttc" id="aa02101_html"><div class="ttname"><a href="../../da/d71/a02101.html">DiscordCoreAPI::OnGuildCreationData</a></div><div class="ttdoc">Data that is received as part of a Guild creation event.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d56/a00707_source.html#l00125">EventManager.hpp:125</a></div></div>
-<div class="ttc" id="aa02101_html_a08bcc71a65a765715e65b860b681709a"><div class="ttname"><a href="../../da/d71/a02101.html#a08bcc71a65a765715e65b860b681709a">DiscordCoreAPI::OnGuildCreationData::guild</a></div><div class="ttdeci">Guild guild</div><div class="ttdoc">The new Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d56/a00707_source.html#l00126">EventManager.hpp:126</a></div></div>
-<div class="ttc" id="aa02585_html_a3fc39246d0ce977a2bbccf653af39a12"><div class="ttname"><a href="../../d0/dea/a02585.html#a3fc39246d0ce977a2bbccf653af39a12">DiscordCoreAPI::GuildData::name</a></div><div class="ttdeci">StringWrapper name</div><div class="ttdoc">The Guild's name.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03782">FoundationEntities.hpp:3782</a></div></div>
-</div><!-- fragment --> </div></div><!-- contents -->
+</div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d6/d82/a07115.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../df/df1/a07118.html">General Usage</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../da/d52/a07100.html">Guides</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

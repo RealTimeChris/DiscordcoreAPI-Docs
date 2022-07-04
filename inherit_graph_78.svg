@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="dd/d07/a03233.html" target="_top" xlink:title="For deleting a bulk of Messages.">
+<g id="a_node1"><a xlink:href="d5/da4/a03225.html" target="_top" xlink:title="For deleting a bulk of Messages.">
 <polygon fill="none" stroke="black" points="0,-0.5 0,-30.5 164,-30.5 164,-0.5 0,-0.5"/>
 <text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::DeleteMessages</text>
 <text text-anchor="middle" x="82" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">BulkData</text>

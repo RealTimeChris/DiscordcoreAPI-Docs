@@ -16,6 +16,7 @@ var searchData=
   ['ephemeral_5finteraction_5fresponse_13',['Ephemeral_Interaction_Response',['../d7/d92/a00887.html#gga6a10916bec24a00f6d6a41d8d880c1faa519f139398504899a626aa10d9fcfd30',1,'DiscordCoreAPI']]],
   ['etf_14',['Etf',['../d7/d92/a00887.html#gga4aa470ada1cb750f9e9775002a1a7365a5b815c1df45a62cf6d998434add6b144',1,'DiscordCoreAPI']]],
   ['everyone_15',['Everyone',['../dd/d94/a00888.html#ggac5fbc4a3b87f9470e6be7acf38492c14af9ae5e5c44e59f94680af569879f704a',1,'DiscordCoreAPI']]],
-  ['explicit_16',['Explicit',['../dd/d94/a00888.html#gga72bfcad315b1367b1f8fc4bc5e2b1f7ba9d71760e2dd451db2df354d0fd29cd7f',1,'DiscordCoreAPI']]],
-  ['external_17',['External',['../dd/d94/a00888.html#gga3be930a37ea8f73fdab875716ac40643ab206a1b4ea1097761f78e8876f6da779',1,'DiscordCoreAPI']]]
+  ['exiting_16',['Exiting',['../d7/d46/a00890.html#a7db510a888c180dab0d18c694308c066a0657d962b72e6f1f37dda8dad3684cb8',1,'DiscordCoreAPI']]],
+  ['explicit_17',['Explicit',['../dd/d94/a00888.html#gga72bfcad315b1367b1f8fc4bc5e2b1f7ba9d71760e2dd451db2df354d0fd29cd7f',1,'DiscordCoreAPI']]],
+  ['external_18',['External',['../dd/d94/a00888.html#gga3be930a37ea8f73fdab875716ac40643ab206a1b4ea1097761f78e8876f6da779',1,'DiscordCoreAPI']]]
 ];

@@ -105,21 +105,29 @@ $(document).ready(function(){initNavTree('d8/d85/a02189.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d5/d4d/a02186.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::OnMessageUpdateData Struct Reference<div class="ingroups"><a class="el" href="../../d2/dab/a00886.html">Discord Events</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::OnMessageDeletionData Struct Reference<div class="ingroups"><a class="el" href="../../d2/dab/a00886.html">Discord Events</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Data that is received as part of a <a class="el" href="../../d6/d24/a03249.html" title="A single Message.">Message</a> update event.  
+<p>Data that is received as part of a <a class="el" href="../../dc/dc7/a03241.html" title="A single Message.">Message</a> deletion event.  
  <a href="../../d8/d85/a02189.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d1/d56/a00707_source.html">EventManager.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:ae529ff108ac701c948e0f7f466e7077d"><td class="memItemLeft" align="right" valign="top"><a id="ae529ff108ac701c948e0f7f466e7077d" name="ae529ff108ac701c948e0f7f466e7077d"></a>
-<a class="el" href="../../d6/d24/a03249.html">Message</a>&#160;</td><td class="memItemRight" valign="bottom"><b>messageNew</b> {}</td></tr>
-<tr class="memdesc:ae529ff108ac701c948e0f7f466e7077d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The new <a class="el" href="../../d6/d24/a03249.html" title="A single Message.">Message</a>. <br /></td></tr>
-<tr class="separator:ae529ff108ac701c948e0f7f466e7077d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa6475f4d3998e79add4c7c39c4e66cf"><td class="memItemLeft" align="right" valign="top"><a id="aaa6475f4d3998e79add4c7c39c4e66cf" name="aaa6475f4d3998e79add4c7c39c4e66cf"></a>
+<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>channelId</b> {}</td></tr>
+<tr class="memdesc:aaa6475f4d3998e79add4c7c39c4e66cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the <a class="el" href="../../d2/d6f/a01957.html" title="A Channel object.">Channel</a> from which the <a class="el" href="../../dc/dc7/a03241.html" title="A single Message.">Message</a> was deleted. <br /></td></tr>
+<tr class="separator:aaa6475f4d3998e79add4c7c39c4e66cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3adac8f99154265d2e72a3073e2daa3b"><td class="memItemLeft" align="right" valign="top"><a id="a3adac8f99154265d2e72a3073e2daa3b" name="a3adac8f99154265d2e72a3073e2daa3b"></a>
+<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildId</b> {}</td></tr>
+<tr class="memdesc:a3adac8f99154265d2e72a3073e2daa3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the <a class="el" href="../../d6/d58/a02993.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> from which the <a class="el" href="../../dc/dc7/a03241.html" title="A single Message.">Message</a> was deleted. <br /></td></tr>
+<tr class="separator:a3adac8f99154265d2e72a3073e2daa3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72811a1e978775c566ed8c725a501b81"><td class="memItemLeft" align="right" valign="top"><a id="a72811a1e978775c566ed8c725a501b81" name="a72811a1e978775c566ed8c725a501b81"></a>
+<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>messageId</b> {}</td></tr>
+<tr class="memdesc:a72811a1e978775c566ed8c725a501b81"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the <a class="el" href="../../dc/dc7/a03241.html" title="A single Message.">Message</a> which was deleted. <br /></td></tr>
+<tr class="separator:a72811a1e978775c566ed8c725a501b81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d1/d56/a00707_source.html">EventManager.hpp</a></li>
@@ -130,7 +138,7 @@ Public Data Members</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d8/d85/a02189.html">OnMessageUpdateData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d8/d85/a02189.html">OnMessageDeletionData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

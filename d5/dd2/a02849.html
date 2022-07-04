@@ -103,36 +103,76 @@ $(document).ready(function(){initNavTree('d5/dd2/a02849.html','../../'); initRes
 
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d5/d4c/a02846.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::Playlist Struct Reference<div class="ingroups"><a class="el" href="../../db/d18/a00885.html">Voice Connection</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::BaseFunction Struct Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="../../d7/d92/a00887.html">Utilities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="../../d5/dd2/a02849.html" title="Playlist of songs and other variables.">Playlist</a> of songs and other variables.  
+<p>Base class DiscordCoreAPI_Dll for the command classes.  
  <a href="../../d5/dd2/a02849.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a569aae6f009db3c4bb30279c5f0aabfb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dd2/a02849.html#a569aae6f009db3c4bb30279c5f0aabfb">execute</a> (<a class="el" href="../../dd/d4f/a02845.html">BaseFunctionArguments</a> &amp;<a class="el" href="../../d5/dd2/a02849.html#ad8b27701a5792520007d9ff9fcbc1414">args</a>)=0</td></tr>
+<tr class="memdesc:a569aae6f009db3c4bb30279c5f0aabfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The base function for the command's execute function.  <a href="../../d5/dd2/a02849.html#a569aae6f009db3c4bb30279c5f0aabfb">More...</a><br /></td></tr>
+<tr class="separator:a569aae6f009db3c4bb30279c5f0aabfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:a149511219adde0142cd36495691a9f53"><td class="memItemLeft" align="right" valign="top"><a id="a149511219adde0142cd36495691a9f53" name="a149511219adde0142cd36495691a9f53"></a>
-<a class="el" href="../../d7/d1c/a02841.html">Song</a>&#160;</td><td class="memItemRight" valign="bottom"><b>currentSong</b> {}</td></tr>
-<tr class="memdesc:a149511219adde0142cd36495691a9f53"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current <a class="el" href="../../d7/d1c/a02841.html" title="A song from the various platforms.">Song</a> that is playing. <br /></td></tr>
-<tr class="separator:a149511219adde0142cd36495691a9f53"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8efee4a514b0be46174da6349d31ed56"><td class="memItemLeft" align="right" valign="top"><a id="a8efee4a514b0be46174da6349d31ed56" name="a8efee4a514b0be46174da6349d31ed56"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isLoopAllEnabled</b> { false }</td></tr>
-<tr class="memdesc:a8efee4a514b0be46174da6349d31ed56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is looping of the entire <a class="el" href="../../d5/dd2/a02849.html" title="Playlist of songs and other variables.">Playlist</a> currently enabled? <br /></td></tr>
-<tr class="separator:a8efee4a514b0be46174da6349d31ed56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77a8b68e299645ed185fb7352169e93a"><td class="memItemLeft" align="right" valign="top"><a id="a77a8b68e299645ed185fb7352169e93a" name="a77a8b68e299645ed185fb7352169e93a"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isLoopSongEnabled</b> { false }</td></tr>
-<tr class="memdesc:a77a8b68e299645ed185fb7352169e93a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is looping of Songs currently enabled? <br /></td></tr>
-<tr class="separator:a77a8b68e299645ed185fb7352169e93a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c9c499e7eda1f2b35a633575e450a4f"><td class="memItemLeft" align="right" valign="top"><a id="a8c9c499e7eda1f2b35a633575e450a4f" name="a8c9c499e7eda1f2b35a633575e450a4f"></a>
-std::vector&lt; <a class="el" href="../../d7/d1c/a02841.html">Song</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>songQueue</b> {}</td></tr>
-<tr class="memdesc:a8c9c499e7eda1f2b35a633575e450a4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of Songs that are stored to be played. <br /></td></tr>
-<tr class="separator:a8c9c499e7eda1f2b35a633575e450a4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8b27701a5792520007d9ff9fcbc1414"><td class="memItemLeft" align="right" valign="top"><a id="ad8b27701a5792520007d9ff9fcbc1414" name="ad8b27701a5792520007d9ff9fcbc1414"></a>
+<a class="el" href="../../dd/d4f/a02845.html">BaseFunctionArguments</a>&#160;</td><td class="memItemRight" valign="bottom"><b>args</b> {}</td></tr>
+<tr class="memdesc:ad8b27701a5792520007d9ff9fcbc1414"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function arguments. <br /></td></tr>
+<tr class="separator:ad8b27701a5792520007d9ff9fcbc1414"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a967464cb23215e0d9b6c2a489c825443"><td class="memItemLeft" align="right" valign="top"><a id="a967464cb23215e0d9b6c2a489c825443" name="a967464cb23215e0d9b6c2a489c825443"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>commandName</b> {}</td></tr>
+<tr class="memdesc:a967464cb23215e0d9b6c2a489c825443"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the command for calling purposes. <br /></td></tr>
+<tr class="separator:a967464cb23215e0d9b6c2a489c825443"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab84c4d2dce9a8419ece2d7f8edb62fce"><td class="memItemLeft" align="right" valign="top"><a id="ab84c4d2dce9a8419ece2d7f8edb62fce" name="ab84c4d2dce9a8419ece2d7f8edb62fce"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>helpDescription</b> {}</td></tr>
+<tr class="memdesc:ab84c4d2dce9a8419ece2d7f8edb62fce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Description of the command for the Help command. <br /></td></tr>
+<tr class="separator:ab84c4d2dce9a8419ece2d7f8edb62fce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaff0b459e0b659dde4b688814f3365d4"><td class="memItemLeft" align="right" valign="top"><a id="aaff0b459e0b659dde4b688814f3365d4" name="aaff0b459e0b659dde4b688814f3365d4"></a>
+<a class="el" href="../../d4/dfb/a02341.html">EmbedData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>helpEmbed</b> {}</td></tr>
+<tr class="memdesc:aaff0b459e0b659dde4b688814f3365d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="../../dc/dc7/a03241.html" title="A single Message.">Message</a> embed for displaying the command via the Help command. <br /></td></tr>
+<tr class="separator:aaff0b459e0b659dde4b688814f3365d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a569aae6f009db3c4bb30279c5f0aabfb" name="a569aae6f009db3c4bb30279c5f0aabfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a569aae6f009db3c4bb30279c5f0aabfb">&#9670;&nbsp;</a></span>execute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void DiscordCoreAPI::BaseFunction::execute </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/d4f/a02845.html">BaseFunctionArguments</a> &amp;&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >The base function for the command's execute function.</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>A reference to an instance of <a class="el" href="../../dd/d4f/a02845.html" title="Base arguments for the command classes.">BaseFunctionArguments</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a></li>
 </ul>
@@ -142,7 +182,7 @@ std::vector&lt; <a class="el" href="../../d7/d1c/a02841.html">Song</a> &gt;&#160
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d5/dd2/a02849.html">Playlist</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d5/dd2/a02849.html">BaseFunction</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

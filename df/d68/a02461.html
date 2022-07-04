@@ -105,11 +105,11 @@ $(document).ready(function(){initNavTree('df/d68/a02461.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../de/d91/a02458.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::BanData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::TeamMembersObjectData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Ban data.  
+<p>Team members object data.  
  <a href="../../df/d68/a02461.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a>&gt;</code></p>
@@ -118,18 +118,22 @@ $(document).ready(function(){initNavTree('df/d68/a02461.html','../../'); initRes
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:ad84275ac75ccc2107b9551b212e4fb52"><td class="memItemLeft" align="right" valign="top"><a id="ad84275ac75ccc2107b9551b212e4fb52" name="ad84275ac75ccc2107b9551b212e4fb52"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>failedDueToPerms</b> { false }</td></tr>
-<tr class="memdesc:ad84275ac75ccc2107b9551b212e4fb52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Failed due to perms? <br /></td></tr>
-<tr class="separator:ad84275ac75ccc2107b9551b212e4fb52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b171758102d1bf2f3e9add137bf1d56"><td class="memItemLeft" align="right" valign="top"><a id="a8b171758102d1bf2f3e9add137bf1d56" name="a8b171758102d1bf2f3e9add137bf1d56"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>reason</b> {}</td></tr>
-<tr class="memdesc:a8b171758102d1bf2f3e9add137bf1d56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reason for the ban. <br /></td></tr>
-<tr class="separator:a8b171758102d1bf2f3e9add137bf1d56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3a59b7284e58c0e5d74d3f3153fee17"><td class="memItemLeft" align="right" valign="top"><a id="ab3a59b7284e58c0e5d74d3f3153fee17" name="ab3a59b7284e58c0e5d74d3f3153fee17"></a>
-<a class="el" href="../../d4/d16/a02313.html">UserData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>user</b> {}</td></tr>
-<tr class="memdesc:ab3a59b7284e58c0e5d74d3f3153fee17"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d6/de0/a03613.html" title="A single User.">User</a> that was banned. <br /></td></tr>
-<tr class="separator:ab3a59b7284e58c0e5d74d3f3153fee17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a365694fa641993b574e81558efc22a31"><td class="memItemLeft" align="right" valign="top"><a id="a365694fa641993b574e81558efc22a31" name="a365694fa641993b574e81558efc22a31"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>membershipState</b> { 0 }</td></tr>
+<tr class="memdesc:a365694fa641993b574e81558efc22a31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current state. <br /></td></tr>
+<tr class="separator:a365694fa641993b574e81558efc22a31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a999ef15b656b630d47fe6db832f20a05"><td class="memItemLeft" align="right" valign="top"><a id="a999ef15b656b630d47fe6db832f20a05" name="a999ef15b656b630d47fe6db832f20a05"></a>
+std::vector&lt; <a class="el" href="../../d1/d83/a03669.html">Permissions</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>permissions</b> {}</td></tr>
+<tr class="memdesc:a999ef15b656b630d47fe6db832f20a05"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d1/d83/a03669.html" title="Permissions class, for representing and manipulating Permission values.">Permissions</a> for the team. <br /></td></tr>
+<tr class="separator:a999ef15b656b630d47fe6db832f20a05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4630defe706d3cbcc62ebf74bdae290"><td class="memItemLeft" align="right" valign="top"><a id="ab4630defe706d3cbcc62ebf74bdae290" name="ab4630defe706d3cbcc62ebf74bdae290"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>teamId</b> {}</td></tr>
+<tr class="memdesc:ab4630defe706d3cbcc62ebf74bdae290"><td class="mdescLeft">&#160;</td><td class="mdescRight">Id of the current team. <br /></td></tr>
+<tr class="separator:ab4630defe706d3cbcc62ebf74bdae290"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd1521f35768b585fc2c78dea4a79d5d"><td class="memItemLeft" align="right" valign="top"><a id="acd1521f35768b585fc2c78dea4a79d5d" name="acd1521f35768b585fc2c78dea4a79d5d"></a>
+<a class="el" href="../../d7/dd6/a02305.html">UserData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>user</b> {}</td></tr>
+<tr class="memdesc:acd1521f35768b585fc2c78dea4a79d5d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d9/d0f/a03605.html" title="A single User.">User</a> data of the current <a class="el" href="../../d9/d0f/a03605.html" title="A single User.">User</a>. <br /></td></tr>
+<tr class="separator:acd1521f35768b585fc2c78dea4a79d5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a></li>
@@ -140,7 +144,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>reason</b> {}<
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../df/d68/a02461.html">BanData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../df/d68/a02461.html">TeamMembersObjectData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
