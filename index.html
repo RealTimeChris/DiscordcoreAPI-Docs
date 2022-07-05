@@ -260,7 +260,8 @@ Build Instructions (Non-Vcpkg) - The Executable</h1>
 <li>Set up a main.cpp like <a href="https://github.com/RealTimeChris/Bot-Template-for-DiscordCoreAPI/blob/main/main.cpp">this one</a>, including the header <code><a class="el" href="d8/db9/a00725.html">discordcoreapi/Index.hpp</a></code>.</li>
 <li>Run in a terminal from within the same folder as the top-level CMakeLists.txt, <code>cmake -S . --preset Linux_OR_Windows-Debug_OR_Release</code>.</li>
 <li>Then run <code>cmake --build --preset Linux_OR_Windows-Debug_OR_Release</code>.</li>
-<li>If you used the bot template, the resultant executable will be within a folder called <code>Output Files/Debug_OR_Release</code>, in the top-level folder of the repo.</li>
+<li>Run within the same terminal and folder <code>cmake --install ./Build/Debug_OR_Release</code>.</li>
+<li>The default installation paths are: Windows = "ROOT_DRIVE:/Users/USERNAME/CMake/Bot-Template-For-DiscordCoreAPI", Linux = "/home/USERNAME/CMake/Bot-Template-For-DiscordCoreAPI"</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md21"></a>
 Roadmap</h1>
