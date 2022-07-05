@@ -153,7 +153,7 @@ $(document).ready(function(){initNavTree('d8/d6e/a07237.html','../../'); initRes
 <div class="line"> </div>
 <div class="line">                <span class="keywordflow">if</span> (args.<a class="code hl_variable" href="../../dd/d4f/a02845.html#a8aa3768bc544196777248b9df5cefe0d">commandData</a>.subCommandName == <span class="stringliteral">&quot;add&quot;</span>) {</div>
 <div class="line">                    std::string channelID = channel.id;</div>
-<div class="line">                    <span class="keywordflow">for</span> (uint32_t x = 0; x &lt; discordGuild.data.musicChannelIds.size(); x += 1) {</div>
+<div class="line">                    <span class="keywordflow">for</span> (uint32_t x = 0; x &lt; discordGuild.data.musicChannelIds.size(); x++) {</div>
 <div class="line">                        <span class="keywordflow">if</span> (channelID == discordGuild.data.musicChannelIds[x]) {</div>
 <div class="line">                            std::string msgString = <span class="stringliteral">&quot;------\n**That channel is already on the list of enabled channels!**\n------&quot;</span>;</div>
 <div class="line">                            EmbedData messageEmbed;</div>
@@ -191,7 +191,7 @@ $(document).ready(function(){initNavTree('d8/d6e/a07237.html','../../'); initRes
 <div class="line"> </div>
 <div class="line">                    std::string msgString;</div>
 <div class="line">                    <span class="keywordtype">bool</span> isItPresent = <span class="keyword">false</span>;</div>
-<div class="line">                    <span class="keywordflow">for</span> (uint32_t x = 0; x &lt; discordGuild.data.musicChannelIds.size(); x += 1) {</div>
+<div class="line">                    <span class="keywordflow">for</span> (uint32_t x = 0; x &lt; discordGuild.data.musicChannelIds.size(); x++) {</div>
 <div class="line">                        <span class="keywordflow">if</span> (channelID == discordGuild.data.musicChannelIds[x]) {</div>
 <div class="line">                            isItPresent = <span class="keyword">true</span>;</div>
 <div class="line">                            discordGuild.data.musicChannelIds.erase(discordGuild.data.musicChannelIds.begin() + x);</div>
@@ -235,7 +235,7 @@ $(document).ready(function(){initNavTree('d8/d6e/a07237.html','../../'); initRes
 <div class="line">                    <span class="keywordflow">if</span> (discordGuild.data.musicChannelIds.size() &gt; 0) {</div>
 <div class="line">                        msgString = <span class="stringliteral">&quot;__You&#39;ve removed the following channels from your list of enabled music channels:__\n------\n&quot;</span>;</div>
 <div class="line"> </div>
-<div class="line">                        <span class="keywordflow">for</span> (uint32_t x = 0; x &lt; discordGuild.data.musicChannelIds.size(); x += 1) {</div>
+<div class="line">                        <span class="keywordflow">for</span> (uint32_t x = 0; x &lt; discordGuild.data.musicChannelIds.size(); x++) {</div>
 <div class="line">                            std::string currentID = discordGuild.data.musicChannelIds[x];</div>
 <div class="line"> </div>
 <div class="line">                            msgString += <span class="stringliteral">&quot;__**Channel #&quot;</span> + std::to_string(x) + <span class="stringliteral">&quot;**__&lt;#&quot;</span> + currentID + <span class="stringliteral">&quot;&gt; \n&quot;</span>;</div>
@@ -264,7 +264,7 @@ $(document).ready(function(){initNavTree('d8/d6e/a07237.html','../../'); initRes
 <div class="line">                <span class="keywordflow">if</span> (args.<a class="code hl_variable" href="../../dd/d4f/a02845.html#a8aa3768bc544196777248b9df5cefe0d">commandData</a>.subCommandName == <span class="stringliteral">&quot;view&quot;</span>) {</div>
 <div class="line">                    std::string msgString = <span class="stringliteral">&quot;__You have the following channels enabled for music commands, on this server:__\n------\n&quot;</span>;</div>
 <div class="line"> </div>
-<div class="line">                    <span class="keywordflow">for</span> (uint32_t x = 0; x &lt; discordGuild.data.musicChannelIds.size(); x += 1) {</div>
+<div class="line">                    <span class="keywordflow">for</span> (uint32_t x = 0; x &lt; discordGuild.data.musicChannelIds.size(); x++) {</div>
 <div class="line">                        std::string currentID = discordGuild.data.musicChannelIds[x];</div>
 <div class="line"> </div>
 <div class="line">                        msgString += <span class="stringliteral">&quot;__**Channel #&quot;</span> + std::to_string(x) + <span class="stringliteral">&quot;:**__ &lt;#&quot;</span> + currentID + <span class="stringliteral">&quot;&gt; \n&quot;</span>;</div>

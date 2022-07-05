@@ -116,9 +116,9 @@ $(document).ready(function(){initNavTree('dd/df9/a07236.html','../../'); initRes
 <div class="line">        std::vector&lt;std::vector&lt;EmbedFieldData&gt;&gt; msgEmbedFields;</div>
 <div class="line">        msgEmbedFields.push_back(std::vector&lt;EmbedFieldData&gt;());</div>
 <div class="line">        int32_t msgEmbedFieldsPage{ 0 };</div>
-<div class="line">       <span class="keywordflow">for</span> (int32_t y = 0; y &lt; playlist.size(); y += 1) {</div>
+<div class="line">       <span class="keywordflow">for</span> (int32_t y = 0; y &lt; playlist.size(); y++) {</div>
 <div class="line">           <span class="keywordflow">if</span> (y % 25 == 0 &amp;&amp; y &gt; 0) {</div>
-<div class="line">               msgEmbedFieldsPage += 1;</div>
+<div class="line">               msgEmbedFieldsPage++;</div>
 <div class="line">               msgEmbedFields.push_back(std::vector&lt;EmbedFieldData&gt;());</div>
 <div class="line">           }</div>
 <div class="line">           EmbedFieldData msgEmbedField = { .value = <span class="stringliteral">&quot;__**Title:**__ [&quot;</span> + playlist.at(y).songTitle + <span class="stringliteral">&quot;](&quot;</span> + playlist.at(y).viewUrl + <span class="stringliteral">&quot;)\n__**Added By:**__ &lt;@!&quot;</span> + playlist.at(y).addedByUserId + <span class="stringliteral">&quot;&gt; (&quot;</span> + playlist.at(y).addedByUserName + <span class="stringliteral">&quot;)&quot;</span>, .name = <span class="stringliteral">&quot;__**&quot;</span> + std::to_string(y + 1) + <span class="stringliteral">&quot; of &quot;</span> + std::to_string(playlist.size()) + <span class="stringliteral">&quot;**__&quot;</span>,.Inline = <span class="keyword">false</span> };</div>
@@ -126,7 +126,7 @@ $(document).ready(function(){initNavTree('dd/df9/a07236.html','../../'); initRes
 <div class="line">       }</div>
 <div class="line">       msgEmbedFieldsPage = 0;</div>
 <div class="line">       std::vector&lt;EmbedData&gt; newMsgEmbeds;</div>
-<div class="line">       <span class="keywordflow">for</span> (int32_t y = 0; y &lt; msgEmbedFields.size(); y += 1) {</div>
+<div class="line">       <span class="keywordflow">for</span> (int32_t y = 0; y &lt; msgEmbedFields.size(); y++) {</div>
 <div class="line">           EmbedData msgEmbed;</div>
 <div class="line">           msgEmbed.setAuthor(originalEvent.getUserName(), originalEvent.getAvatarUrl());</div>
 <div class="line">           msgEmbed.setColor(discordGuild.data.borderColor);</div>
@@ -221,10 +221,10 @@ $(document).ready(function(){initNavTree('dd/df9/a07236.html','../../'); initRes
 <div class="line">                std::vector&lt;std::vector&lt;EmbedFieldData&gt;&gt; msgEmbedFields;</div>
 <div class="line">                msgEmbedFields.push_back(std::vector&lt;EmbedFieldData&gt;());</div>
 <div class="line">                int32_t msgEmbedFieldsPage{ 0 };</div>
-<div class="line">                <span class="keywordflow">for</span> (int32_t y = 0; y &lt; <a class="code hl_function" href="../../d2/d7f/a03369.html#a90ec9e3a293baa5abc72428ac30e2b14">SongAPI::getPlaylist</a>(guild.id).<a class="code hl_variable" href="../../d7/d1c/a02841.html#a8c9c499e7eda1f2b35a633575e450a4f">songQueue</a>.size(); y += 1) {</div>
+<div class="line">                <span class="keywordflow">for</span> (int32_t y = 0; y &lt; <a class="code hl_function" href="../../d2/d7f/a03369.html#a90ec9e3a293baa5abc72428ac30e2b14">SongAPI::getPlaylist</a>(guild.id).<a class="code hl_variable" href="../../d7/d1c/a02841.html#a8c9c499e7eda1f2b35a633575e450a4f">songQueue</a>.size(); y++) {</div>
 <div class="line">                    <span class="keywordflow">if</span> (y % 25 == 0 &amp;&amp; y &gt; 0) {</div>
 <div class="line">                        <span class="keywordflow">if</span> (y &gt; 0) {</div>
-<div class="line">                            msgEmbedFieldsPage += 1;</div>
+<div class="line">                            msgEmbedFieldsPage++;</div>
 <div class="line">                        }</div>
 <div class="line">                        msgEmbedFields.push_back(std::vector&lt;EmbedFieldData&gt;());</div>
 <div class="line">                    }</div>
@@ -234,7 +234,7 @@ $(document).ready(function(){initNavTree('dd/df9/a07236.html','../../'); initRes
 <div class="line">                }</div>
 <div class="line">                std::vector&lt;EmbedData&gt; msgEmbeds;</div>
 <div class="line">                msgEmbedFieldsPage = 0;</div>
-<div class="line">                <span class="keywordflow">for</span> (int32_t y = 0; y &lt; msgEmbedFields.size(); y += 1) {</div>
+<div class="line">                <span class="keywordflow">for</span> (int32_t y = 0; y &lt; msgEmbedFields.size(); y++) {</div>
 <div class="line">                    EmbedData msgEmbed;</div>
 <div class="line">                    msgEmbed.setAuthor(args.<a class="code hl_variable" href="../../dd/d4f/a02845.html#a80eabf8007466c61abda009ea3070942">eventData</a>-&gt;<a class="code hl_function" href="../../df/d9c/a02793.html#a3ebc65bb67fbd74518199db64e40559c">getUserName</a>(), args.<a class="code hl_variable" href="../../dd/d4f/a02845.html#a80eabf8007466c61abda009ea3070942">eventData</a>-&gt;<a class="code hl_function" href="../../df/d9c/a02793.html#a2dd12454f3ecd05f4cfbd22b027268bd">getAvatarUrl</a>()).setColor(discordGuild.data.borderColor).setTimeStamp(<a class="code hl_function" href="../../d7/d92/a00887.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>()).setTitle(<span class="stringliteral">&quot;__**Playlist, Page &quot;</span> + std::to_string(y + 1) + <span class="stringliteral">&quot; of &quot;</span> + std::to_string(msgEmbedFields.size()) + <span class="stringliteral">&quot;**__&quot;</span>).</div>
 <div class="line">                        setFooter(<span class="stringliteral">&quot;React with ✅ to edit the contents of the current page. React with ❌ to exit!&quot;</span>).setDescription(<span class="stringliteral">&quot;__**React with ✅ to edit the contents of the current page. React with ❌ to exit!**__&quot;</span>).fields = msgEmbedFields[y];</div>
@@ -275,7 +275,7 @@ $(document).ready(function(){initNavTree('dd/df9/a07236.html','../../'); initRes
 <div class="line">                        <span class="keywordflow">continue</span>;</div>
 <div class="line">                    }</div>
 <div class="line">                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (buttonCollectedData.at(0).buttonId == <span class="stringliteral">&quot;next&quot;</span> &amp;&amp; (currentPageIndex &lt; msgEmbeds.size())) {</div>
-<div class="line">                        currentPageIndex += 1;</div>
+<div class="line">                        currentPageIndex++;</div>
 <div class="line">                        RespondToInputEventData dataPackage(buttonCollectedData.at(0).interactionData);</div>
 <div class="line">                        dataPackage.setResponseType(<a class="code hl_enumvalue" href="../../d7/d92/a00887.html#gga6a10916bec24a00f6d6a41d8d880c1faa9f17700c2588d7159c91eb8c24be09f0">InputEventResponseType::Edit_Interaction_Response</a>);</div>
 <div class="line">                        dataPackage.addMessageEmbed(msgEmbeds[currentPageIndex]);</div>
@@ -288,7 +288,7 @@ $(document).ready(function(){initNavTree('dd/df9/a07236.html','../../'); initRes
 <div class="line">                        <span class="keywordflow">continue</span>;</div>
 <div class="line">                    }</div>
 <div class="line">                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (buttonCollectedData.at(0).buttonId == <span class="stringliteral">&quot;back&quot;</span> &amp;&amp; (currentPageIndex &gt; 0)) {</div>
-<div class="line">                        currentPageIndex -= 1;</div>
+<div class="line">                        currentPageIndex--;</div>
 <div class="line">                        RespondToInputEventData dataPackage(buttonCollectedData.at(0).interactionData);</div>
 <div class="line">                        dataPackage.setResponseType(<a class="code hl_enumvalue" href="../../d7/d92/a00887.html#gga6a10916bec24a00f6d6a41d8d880c1faa9f17700c2588d7159c91eb8c24be09f0">InputEventResponseType::Edit_Interaction_Response</a>);</div>
 <div class="line">                        dataPackage.addMessageEmbed(msgEmbeds[currentPageIndex]);</div>

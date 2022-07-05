@@ -153,7 +153,7 @@ $(document).ready(function(){initNavTree('d7/d4a/a07225.html','../../'); initRes
 <div class="line">                    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; [key, value]: args.<a class="code hl_variable" href="../../dd/d4f/a02845.html#a20009c042119fe1463a36ed29d74bb1b">discordCoreClient</a>-&gt;<a class="code hl_variable" href="../../d3/d39/a02005.html#ac7c97f7a88b3f4a0a4699b6fcaa89619">commandController</a>.getFunctions()) {</div>
 <div class="line">                        <span class="keywordflow">if</span> (counter % 24 == 0) {</div>
 <div class="line">                            selectOptions.push_back(std::vector&lt;SelectOptionData&gt;());</div>
-<div class="line">                            currentHelpPage += 1;</div>
+<div class="line">                            currentHelpPage++;</div>
 <div class="line">                        }</div>
 <div class="line">                        std::string newString;</div>
 <div class="line">                        newString.push_back((<span class="keywordtype">char</span>)toupper(value-&gt;commandName[0]));</div>
@@ -176,7 +176,7 @@ $(document).ready(function(){initNavTree('d7/d4a/a07225.html','../../'); initRes
 <div class="line">                            <span class="keywordflow">continue</span>;</div>
 <div class="line">                        }</div>
 <div class="line">                        selectOptions.at((int64_t)currentHelpPage-(int64_t)1).push_back(newData);</div>
-<div class="line">                        counter += 1;</div>
+<div class="line">                        counter++;</div>
 <div class="line">                    }</div>
 <div class="line">                    SelectOptionData newData;</div>
 <div class="line">                    newData.label = <span class="stringliteral">&quot;Go Back&quot;</span>;</div>
@@ -212,7 +212,7 @@ $(document).ready(function(){initNavTree('d7/d4a/a07225.html','../../'); initRes
 <div class="line">                    std::vector&lt;std::string&gt; numberEmojiId;</div>
 <div class="line"> </div>
 <div class="line">                    responseData.addMessageEmbed(msgEmbed);</div>
-<div class="line">                    <span class="keywordflow">for</span> (uint32_t x = 0; x &lt; selectOptionsNew.size(); x += 1) {</div>
+<div class="line">                    <span class="keywordflow">for</span> (uint32_t x = 0; x &lt; selectOptionsNew.size(); x++) {</div>
 <div class="line">                        std::string customId {<span class="stringliteral">&quot;select_page_&quot;</span> + std::to_string(x)};</div>
 <div class="line">                        responseData.addButton(<span class="keyword">false</span>, customId, std::to_string(x), <a class="code hl_enumvalue" href="../../dd/d94/a00888.html#ggae05b1bfe988b0c2989b7bed279c9c95ca505a83f220c02df2f85c3810cd9ceb38">ButtonStyle::Success</a>, numberEmojiNames[x]);</div>
 <div class="line">                        numberEmojiId.push_back(customId);</div>
@@ -243,7 +243,7 @@ $(document).ready(function(){initNavTree('d7/d4a/a07225.html','../../'); initRes
 <div class="line">                        responseData03.addMessageEmbed(msgEmbed00);</div>
 <div class="line">                        responseData03.addSelectMenu(<span class="keyword">false</span>, <span class="stringliteral">&quot;help_menu&quot;</span>, value, <span class="stringliteral">&quot;Commands&quot;</span>, 1, 1);</div>
 <div class="line">                        editInteractionResponseData00.push_back(responseData03);</div>
-<div class="line">                        counter03 += 1;</div>
+<div class="line">                        counter03++;</div>
 <div class="line">                    }</div>
 <div class="line">                    <span class="keywordflow">if</span> (buttonData.size() &gt; 0) {</div>
 <div class="line">                        <span class="keywordflow">if</span> (buttonData.at(0).buttonId == <span class="stringliteral">&quot;exit&quot;</span> || buttonData.at(0).buttonId == <span class="stringliteral">&quot;empty&quot;</span>) {</div>
@@ -262,7 +262,7 @@ $(document).ready(function(){initNavTree('d7/d4a/a07225.html','../../'); initRes
 <div class="line">                            <span class="keywordflow">break</span>;</div>
 <div class="line">                        }</div>
 <div class="line">                        counter02 = 0;</div>
-<div class="line">                        <span class="keywordflow">for</span> (int32_t y = 0; y &lt; numberEmojiId.size(); y += 1) {</div>
+<div class="line">                        <span class="keywordflow">for</span> (int32_t y = 0; y &lt; numberEmojiId.size(); y++) {</div>
 <div class="line">                            <span class="keywordflow">if</span> (buttonData.at(0).buttonId == numberEmojiId[y]) {</div>
 <div class="line">                                counter02 = y;</div>
 <div class="line">                                <span class="keywordflow">break</span>;</div>
@@ -288,7 +288,7 @@ $(document).ready(function(){initNavTree('d7/d4a/a07225.html','../../'); initRes
 <div class="line">                            RespondToInputEventData responseData02(selectMenuReturnData.at(0).interactionData);</div>
 <div class="line">                            responseData02.setResponseType(InputEventResponseType::Edit_Ephemeral_Interaction_Response);</div>
 <div class="line">                            responseData02.addMessageEmbed(msgEmbed);</div>
-<div class="line">                            <span class="keywordflow">for</span> (uint32_t x = 0; x &lt; selectOptionsNew.size(); x += 1) {</div>
+<div class="line">                            <span class="keywordflow">for</span> (uint32_t x = 0; x &lt; selectOptionsNew.size(); x++) {</div>
 <div class="line">                                std::string customId {<span class="stringliteral">&quot;select_page_&quot;</span> + std::to_string(x)};</div>
 <div class="line">                                responseData02.addButton(<span class="keyword">false</span>, customId, std::to_string(x), <a class="code hl_enumvalue" href="../../dd/d94/a00888.html#ggae05b1bfe988b0c2989b7bed279c9c95ca505a83f220c02df2f85c3810cd9ceb38">ButtonStyle::Success</a>, numberEmojiNames[x]);</div>
 <div class="line">                                numberEmojiId.push_back(customId);</div>

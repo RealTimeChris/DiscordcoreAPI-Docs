@@ -255,7 +255,7 @@ $(document).ready(function(){initNavTree('db/d34/a07235.html','../../'); initRes
 <div class="line">                std::vector&lt;EmbedData&gt; embedsFromSearch;</div>
 <div class="line">                uint32_t x = 0;</div>
 <div class="line">                <span class="keywordflow">for</span> (Song&amp; value: searchResults) {</div>
-<div class="line">                    x += 1;</div>
+<div class="line">                    x++;</div>
 <div class="line">                    EmbedData newEmbed;</div>
 <div class="line">                    newEmbed.setAuthor(args.<a class="code hl_variable" href="../../dd/d4f/a02845.html#a80eabf8007466c61abda009ea3070942">eventData</a>-&gt;<a class="code hl_function" href="../../df/d9c/a02793.html#a3ebc65bb67fbd74518199db64e40559c">getUserName</a>(), args.<a class="code hl_variable" href="../../dd/d4f/a02845.html#a80eabf8007466c61abda009ea3070942">eventData</a>-&gt;<a class="code hl_function" href="../../df/d9c/a02793.html#a2dd12454f3ecd05f4cfbd22b027268bd">getAvatarUrl</a>());</div>
 <div class="line">                    newEmbed.setDescription(<span class="stringliteral">&quot;__**Title:**__ [&quot;</span> + value.songTitle + <span class="stringliteral">&quot;](&quot;</span> + value.viewUrl + <span class="stringliteral">&quot;)&quot;</span> + <span class="stringliteral">&quot;\n__**Description:**__ &quot;</span> + value.description +</div>

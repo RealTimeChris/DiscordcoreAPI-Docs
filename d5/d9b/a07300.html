@@ -145,7 +145,7 @@ $(document).ready(function(){initNavTree('d5/d9b/a07300.html','../../'); initRes
 <div class="line">                dataPackage.<a class="code hl_variable" href="../../d2/d50/a03473.html#ad71413612e63919fca0ccc19935c8daf">tags</a> = <span class="stringliteral">&quot;testing&quot;</span>;</div>
 <div class="line">                vector&lt;uint8_t&gt; fileData { };</div>
 <div class="line">                fileData.resize(128 * 128);</div>
-<div class="line">                <span class="keywordflow">for</span> (uint32_t x = 0; x &lt; 128 * 128; x += 1) {</div>
+<div class="line">                <span class="keywordflow">for</span> (uint32_t x = 0; x &lt; 128 * 128; x++) {</div>
 <div class="line">                    fileData[x] = <span class="keyword">static_cast&lt;</span>uint8_t<span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(x)/<span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(128 * 128)) * 255;</div>
 <div class="line">                }</div>
 <div class="line">                dataPackage.<a class="code hl_variable" href="../../d2/d50/a03473.html#a57ee31151e22ae51a94279e742181cb7">file</a> = fileData;</div>

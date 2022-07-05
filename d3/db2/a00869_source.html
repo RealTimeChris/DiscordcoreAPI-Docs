@@ -339,13 +339,13 @@ $(document).ready(function(){initNavTree('d3/db2/a00869_source.html','../../'); 
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    }</div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    StringWrapper::operator nlohmann::json() {</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        nlohmann::json newValue{};</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        std::string theValue{};</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; value: <span class="keyword">static_cast&lt;</span>std::string<span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span>StringWrapper<span class="keyword">&gt;</span>(*<span class="keyword">this</span>))) {</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>            theValue.push_back(value);</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        nlohmann::json theValue;</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        std::string theString{};</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; value: <span class="keyword">static_cast&lt;</span>std::string<span class="keyword">&gt;</span>(*<span class="keyword">this</span>)) {</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>            theString.push_back(value);</div>
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        }</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        newValue = theValue;</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>        <span class="keywordflow">return</span> newValue;</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        theValue = theString;</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>        <span class="keywordflow">return</span> theValue;</div>
 <div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    }</div>
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span> </div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    <span class="keywordtype">void</span> StringWrapper::push_back(<span class="keywordtype">char</span> theChar) {</div>
