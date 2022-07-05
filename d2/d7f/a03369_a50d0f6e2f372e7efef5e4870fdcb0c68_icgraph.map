@@ -1,0 +1,5 @@
+<map id="DiscordCoreAPI::SongAPI::getCurrentSong" name="DiscordCoreAPI::SongAPI::getCurrentSong">
+<area shape="rect" id="node1" title="Collects the currently playing Song." alt="" coords="227,39,400,80"/>
+<area shape="rect" id="node2" href="$d2/d7f/a03369.html#ae7c43fec03815d6eea1987c433858ef7" title="Skips to the next Song in the queue, if applicable." alt="" coords="5,5,179,47"/>
+<area shape="rect" id="node3" href="$d2/d7f/a03369.html#ad3ea2df692e7786ba797699ec81f3781" title="Stops the currently playing Song." alt="" coords="5,71,179,112"/>
+</map>

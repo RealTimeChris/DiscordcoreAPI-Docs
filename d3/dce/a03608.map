@@ -1,0 +1,6 @@
+<map id="DiscordCoreAPI::BotUser" name="DiscordCoreAPI::BotUser">
+<area shape="rect" id="node1" title="A type of User, to represent the Bot and some of its associated endpoints." alt="" coords="21,229,190,256"/>
+<area shape="rect" id="node2" href="$d6/d8c/a03601.html" title="A single User." alt="" coords="31,155,180,181"/>
+<area shape="rect" id="node3" href="$d7/dd6/a02305.html" title="Data structure representing a single User." alt="" coords="17,80,193,107"/>
+<area shape="rect" id="node4" href="$d1/db8/a02297.html" title="Base class DiscordCoreAPI_Dll for all Discord entities." alt="" coords="5,5,205,32"/>
+</map>
