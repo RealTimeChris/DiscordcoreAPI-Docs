@@ -1,8 +1,8 @@
 var a00767 =
 [
-    [ "DiscordCoreAPI::CacheOptions", "dc/df8/a03621.html", "dc/df8/a03621" ],
-    [ "DiscordCoreAPI::DiscordCoreClientConfig", "dc/d7d/a03625.html", "dc/d7d/a03625" ],
-    [ "DiscordCoreAPI::LoggingOptions", "d4/d35/a03617.html", "d4/d35/a03617" ],
+    [ "DiscordCoreAPI::CacheOptions", "d6/de0/a03613.html", "d6/de0/a03613" ],
+    [ "DiscordCoreAPI::DiscordCoreClientConfig", "d4/d35/a03617.html", "d4/d35/a03617" ],
+    [ "DiscordCoreAPI::LoggingOptions", "d8/d13/a03609.html", "d8/d13/a03609" ],
     [ "GatewayIntents", "d5/dae/a00767.html#ga4703fe910d1719c0a0bef34e9b7500e3", [
       [ "Guilds", "d5/dae/a00767.html#gga4703fe910d1719c0a0bef34e9b7500e3ac5514110f8f4e8873da17c6c2b7b2b8e", null ],
       [ "Guild_Members", "d5/dae/a00767.html#gga4703fe910d1719c0a0bef34e9b7500e3af317825fad018118ad319336c01c130d", null ],

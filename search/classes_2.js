@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['cacheoptions_0',['CacheOptions',['../dc/df8/a03621.html',1,'DiscordCoreAPI']]],
+  ['cacheoptions_0',['CacheOptions',['../d6/de0/a03613.html',1,'DiscordCoreAPI']]],
   ['channel_1',['Channel',['../da/d76/a01941.html',1,'DiscordCoreAPI']]],
   ['channeldata_2',['ChannelData',['../df/def/a02369.html',1,'DiscordCoreAPI']]],
   ['channelmentiondata_3',['ChannelMentionData',['../df/dff/a02689.html',1,'DiscordCoreAPI']]],
@@ -31,12 +31,12 @@ var searchData=
   ['createguildfromguildtemplatedata_28',['CreateGuildFromGuildTemplateData',['../d2/d46/a02937.html',1,'DiscordCoreAPI']]],
   ['createguildroledata_29',['CreateGuildRoleData',['../d8/dde/a03313.html',1,'DiscordCoreAPI']]],
   ['createguildscheduledeventdata_30',['CreateGuildScheduledEventData',['../dc/d23/a03041.html',1,'DiscordCoreAPI']]],
-  ['createguildstickerdata_31',['CreateGuildStickerData',['../d4/d32/a03453.html',1,'DiscordCoreAPI']]],
+  ['createguildstickerdata_31',['CreateGuildStickerData',['../d9/d11/a03445.html',1,'DiscordCoreAPI']]],
   ['createguildtemplatedata_32',['CreateGuildTemplateData',['../d7/d6b/a02945.html',1,'DiscordCoreAPI']]],
   ['createinteractionresponsedata_33',['CreateInteractionResponseData',['../d0/dcd/a03113.html',1,'DiscordCoreAPI']]],
   ['createmessagedata_34',['CreateMessageData',['../d1/d5f/a03189.html',1,'DiscordCoreAPI']]],
   ['createreactiondata_35',['CreateReactionData',['../d2/daf/a03245.html',1,'DiscordCoreAPI']]],
-  ['createstageinstancedata_36',['CreateStageInstanceData',['../d9/d2c/a03421.html',1,'DiscordCoreAPI']]],
-  ['createwebhookdata_37',['CreateWebHookData',['../d9/dce/a03661.html',1,'DiscordCoreAPI']]],
+  ['createstageinstancedata_36',['CreateStageInstanceData',['../d6/daa/a03413.html',1,'DiscordCoreAPI']]],
+  ['createwebhookdata_37',['CreateWebHookData',['../dc/d0b/a03653.html',1,'DiscordCoreAPI']]],
   ['crosspostmessagedata_38',['CrosspostMessageData',['../dd/d61/a03197.html',1,'DiscordCoreAPI']]]
 ];

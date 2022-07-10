@@ -133,7 +133,7 @@ $(document).ready(function(){initNavTree('dc/d17/a00872_source.html','../../'); 
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keyword">extern</span> std::atomic_bool doWeQuit;</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    }</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    RTPPacket::RTPPacket(uint32_t timestampNew, uint16_t sequenceNew, uint32_t ssrcNew, <span class="keyword">const</span> std::vector&lt;uint8_t&gt;&amp; audioDataNew, <span class="keyword">const</span> std::string&amp; theKeysNew){</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    RTPPacket::RTPPacket(uint32_t timestampNew, uint16_t sequenceNew, uint32_t ssrcNew, <span class="keyword">const</span> std::vector&lt;uint8_t&gt;&amp; audioDataNew, <span class="keyword">const</span> std::string&amp; theKeysNew) {</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        this-&gt;audioData = audioDataNew;</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        this-&gt;timestamp = timestampNew;</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        this-&gt;sequence = sequenceNew;</div>
@@ -178,119 +178,119 @@ $(document).ready(function(){initNavTree('dc/d17/a00872_source.html','../../'); 
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordflow">return</span> std::string{};</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    }</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    VoiceConnection::VoiceConnection() noexcept : WebSocketMessageHandler(<span class="keywordtype">nullptr</span>) {}</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    VoiceConnection::VoiceConnection(DiscordCoreInternal::BaseSocketAgent* BaseSocketAgentNew, <span class="keyword">const</span> DiscordCoreInternal::VoiceConnectInitData&amp; initDataNew,</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        DiscordCoreAPI::ConfigManager* configManagerNew) noexcept</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        : WebSocketMessageHandler(configManagerNew) {</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        this-&gt;baseShard = BaseSocketAgentNew-&gt;sslShards[initDataNew.currentShard].get();</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        this-&gt;activeState.store(<a class="code hl_enumvalue" href="../../d7/d46/a00890.html#a7db510a888c180dab0d18c694308c066ae321c53b354930ba96f0243e652df458">VoiceActiveState::Connecting</a>);</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        this-&gt;baseSocketAgent = BaseSocketAgentNew;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        this-&gt;voiceConnectInitData = initDataNew;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        this-&gt;configManager = configManagerNew;</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    }</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="../../d1/d01/a03657.html#ae790f8b154a461a5878a224f371eb546">   86</a></span>    <a class="code hl_typedef" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> <a class="code hl_function" href="../../d1/d01/a03657.html#ae790f8b154a461a5878a224f371eb546">VoiceConnection::getChannelId</a>() noexcept {</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keywordflow">return</span> this-&gt;voiceConnectInitData.channelId;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    }</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    std::string VoiceConnection::encryptSingleAudioFrame(<span class="keyword">const</span> <a class="code hl_struct" href="../../d5/d34/a02809.html">EncodedFrameData</a>&amp; bufferToSend) <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keywordflow">if</span> (this-&gt;voiceConnectionData.secretKey.size() &gt; 0) {</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            this-&gt;sequenceIndex++;</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            this-&gt;timeStamp += 960;</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            <span class="keywordflow">return</span> RTPPacket{ this-&gt;timeStamp, this-&gt;sequenceIndex, this-&gt;voiceConnectionData.audioSSRC, bufferToSend.data, this-&gt;voiceConnectionData.secretKey };</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        }</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="keywordflow">return</span> std::string{};</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    }</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordtype">void</span> VoiceConnection::sendSingleAudioFrame(std::string&amp; audioDataPacketNew) <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="keywordflow">if</span> (this-&gt;datagramSocket &amp;&amp; this-&gt;datagramSocket-&gt;areWeStillConnected()) {</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            this-&gt;datagramSocket-&gt;writeData(audioDataPacketNew);</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            this-&gt;onClosed();</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        }</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    }</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    UnboundedMessageBlock&lt;AudioFrameData&gt;&amp; VoiceConnection::getAudioBuffer() noexcept {</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <span class="keywordflow">return</span> this-&gt;audioDataBuffer;</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    }</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordtype">void</span> VoiceConnection::sendSingleFrame(<span class="keyword">const</span> AudioFrameData&amp; frameData) <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        this-&gt;audioDataBuffer.send(frameData);</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    }</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keywordtype">void</span> VoiceConnection::onMessageReceived(DiscordCoreInternal::WebSocketSSLShard* theShard) <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <span class="keywordflow">try</span> {</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            std::string theMessage{};</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            <span class="keywordflow">if</span> (theShard-&gt;processedMessages.size() &gt; 0) {</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                theMessage = theShard-&gt;processedMessages.front();</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                theShard-&gt;processedMessages.pop();</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            }</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            <span class="keywordflow">if</span> (this-&gt;webSocketShard &amp;&amp; theMessage.size() &gt; 0) {</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                nlohmann::json payload = payload.parse(theMessage);</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                <span class="keywordflow">if</span> (this-&gt;configManager-&gt;doWePrintWebSocketSuccessMessages()) {</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                    std::cout &lt;&lt; DiscordCoreAPI::shiftToBrightGreen() &lt;&lt; <span class="stringliteral">&quot;Message received from Voice WebSocket: &quot;</span> &lt;&lt; theMessage &lt;&lt; DiscordCoreAPI::reset() &lt;&lt; std::endl</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                              &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                }</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                <span class="keywordflow">if</span> (payload.contains(<span class="stringliteral">&quot;op&quot;</span>) &amp;&amp; !payload[<span class="stringliteral">&quot;op&quot;</span>].is_null()) {</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                    <span class="keywordflow">switch</span> (payload[<span class="stringliteral">&quot;op&quot;</span>].get&lt;int32_t&gt;()) {</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                        <span class="keywordflow">case</span> 2: {</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                            this-&gt;voiceConnectionData.audioSSRC = payload[<span class="stringliteral">&quot;d&quot;</span>][<span class="stringliteral">&quot;ssrc&quot;</span>].get&lt;uint32_t&gt;();</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                            this-&gt;voiceConnectionData.voiceIp = payload[<span class="stringliteral">&quot;d&quot;</span>][<span class="stringliteral">&quot;ip&quot;</span>].get&lt;std::string&gt;();</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                            this-&gt;voiceConnectionData.voicePort = std::to_string(payload[<span class="stringliteral">&quot;d&quot;</span>][<span class="stringliteral">&quot;port&quot;</span>].get&lt;int64_t&gt;());</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; value: payload[<span class="stringliteral">&quot;d&quot;</span>][<span class="stringliteral">&quot;modes&quot;</span>]) {</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                                <span class="keywordflow">if</span> (value == <span class="stringliteral">&quot;xsalsa20_poly1305&quot;</span>) {</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                                    this-&gt;voiceConnectionData.voiceEncryptionMode = value;</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>                                }</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                            }</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                            this-&gt;connectionState.store(<a class="code hl_enumvalue" href="../../d7/d46/a00890.html#afe15cb95a487dea355bdfba55724535daa4c704063d3894a34897f424fbb6e1ba">VoiceConnectionState::Initializing_DatagramSocket</a>);</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>                        }</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                        <span class="keywordflow">case</span> 4: {</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>                            <span class="keywordflow">for</span> (uint32_t x = 0; x &lt; payload[<span class="stringliteral">&quot;d&quot;</span>][<span class="stringliteral">&quot;secret_key&quot;</span>].size(); x++) {</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>                                this-&gt;voiceConnectionData.secretKey.push_back(payload[<span class="stringliteral">&quot;d&quot;</span>][<span class="stringliteral">&quot;secret_key&quot;</span>][x].get&lt;uint8_t&gt;());</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                            }</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                            this-&gt;connectionState.store(<a class="code hl_enumvalue" href="../../d7/d46/a00890.html#afe15cb95a487dea355bdfba55724535da348170ab8d5fadb2ac2d40bc3dca0a2a">VoiceConnectionState::Collecting_Init_Data</a>);</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                        }</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                        <span class="keywordflow">case</span> 6: {</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                            this-&gt;webSocketShard-&gt;haveWeReceivedHeartbeatAck = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                        }</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                        <span class="keywordflow">case</span> 8: {</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>                            <span class="keywordflow">if</span> (payload[<span class="stringliteral">&quot;d&quot;</span>].contains(<span class="stringliteral">&quot;heartbeat_interval&quot;</span>)) {</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                                this-&gt;heartbeatInterval = <span class="keyword">static_cast&lt;</span>int32_t<span class="keyword">&gt;</span>(payload[<span class="stringliteral">&quot;d&quot;</span>][<span class="stringliteral">&quot;heartbeat_interval&quot;</span>].get&lt;<span class="keywordtype">float</span>&gt;());</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                                this-&gt;webSocketShard-&gt;areWeHeartBeating = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                                this-&gt;connectionState.store(<a class="code hl_enumvalue" href="../../d7/d46/a00890.html#afe15cb95a487dea355bdfba55724535da7e98b13b3e8895e0d9b06562f1fbf3bd">VoiceConnectionState::Sending_Identify</a>);</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                            }</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                        }</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                    }</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                }</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>            }</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        } <span class="keywordflow">catch</span> (...) {</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            <span class="keywordflow">if</span> (this-&gt;configManager-&gt;doWePrintWebSocketErrorMessages()) {</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                <a class="code hl_function" href="../../dd/d94/a00888.html#ga805bf7170903087e933a7b81c8e39f15">DiscordCoreAPI::reportException</a>(<span class="stringliteral">&quot;VoiceConnection::onMessageReceived()&quot;</span>);</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>            }</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>            this-&gt;onClosed();</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        }</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    }</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <span class="keywordtype">void</span> VoiceConnection::sendVoiceData(<span class="keyword">const</span> std::string&amp; responseData) <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        <span class="keywordflow">try</span> {</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>            <span class="keywordflow">if</span> (responseData.size() == 0) {</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>                <span class="keywordflow">if</span> (this-&gt;configManager-&gt;doWePrintWebSocketErrorMessages()) {</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                    std::cout &lt;&lt; DiscordCoreAPI::shiftToBrightRed() &lt;&lt; <span class="stringliteral">&quot;Please specify voice data to send&quot;</span> &lt;&lt; DiscordCoreAPI::reset() &lt;&lt; std::endl &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>                }</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>                <span class="keywordflow">if</span> (this-&gt;datagramSocket &amp;&amp; this-&gt;datagramSocket-&gt;areWeStillConnected()) {</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>                    std::string theData = responseData;</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>                    this-&gt;datagramSocket-&gt;writeData(theData);</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>                }</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>                <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    VoiceConnection::VoiceConnection() noexcept : WebSocketMessageHandler(<span class="keywordtype">nullptr</span>) {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    VoiceConnection::VoiceConnection(DiscordCoreInternal::BaseSocketAgent* BaseSocketAgentNew, <span class="keyword">const</span> DiscordCoreInternal::VoiceConnectInitData&amp; initDataNew,</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        DiscordCoreAPI::ConfigManager* configManagerNew) noexcept</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        : WebSocketMessageHandler(configManagerNew) {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        this-&gt;baseShard = BaseSocketAgentNew-&gt;sslShards[initDataNew.currentShard].get();</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        this-&gt;activeState.store(<a class="code hl_enumvalue" href="../../d7/d46/a00890.html#a7db510a888c180dab0d18c694308c066ae321c53b354930ba96f0243e652df458">VoiceActiveState::Connecting</a>);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        this-&gt;baseSocketAgent = BaseSocketAgentNew;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        this-&gt;voiceConnectInitData = initDataNew;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        this-&gt;configManager = configManagerNew;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    }</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="../../da/d7d/a03649.html#ae790f8b154a461a5878a224f371eb546">   87</a></span>    <a class="code hl_typedef" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> <a class="code hl_function" href="../../da/d7d/a03649.html#ae790f8b154a461a5878a224f371eb546">VoiceConnection::getChannelId</a>() noexcept {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keywordflow">return</span> this-&gt;voiceConnectInitData.channelId;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    }</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    std::string VoiceConnection::encryptSingleAudioFrame(<span class="keyword">const</span> <a class="code hl_struct" href="../../d5/d34/a02809.html">EncodedFrameData</a>&amp; bufferToSend) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keywordflow">if</span> (this-&gt;voiceConnectionData.secretKey.size() &gt; 0) {</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            this-&gt;sequenceIndex++;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            this-&gt;timeStamp += 960;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            <span class="keywordflow">return</span> RTPPacket{ this-&gt;timeStamp, this-&gt;sequenceIndex, this-&gt;voiceConnectionData.audioSSRC, bufferToSend.data, this-&gt;voiceConnectionData.secretKey };</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        }</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordflow">return</span> std::string{};</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    }</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordtype">void</span> VoiceConnection::sendSingleAudioFrame(std::string&amp; audioDataPacketNew) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="keywordflow">if</span> (this-&gt;datagramSocket &amp;&amp; this-&gt;datagramSocket-&gt;areWeStillConnected()) {</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            this-&gt;datagramSocket-&gt;writeData(audioDataPacketNew);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            this-&gt;onClosed();</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        }</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    }</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    UnboundedMessageBlock&lt;AudioFrameData&gt;&amp; VoiceConnection::getAudioBuffer() noexcept {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keywordflow">return</span> this-&gt;audioDataBuffer;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    }</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keywordtype">void</span> VoiceConnection::sendSingleFrame(<span class="keyword">const</span> AudioFrameData&amp; frameData) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        this-&gt;audioDataBuffer.send(frameData);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    }</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keywordtype">void</span> VoiceConnection::onMessageReceived(DiscordCoreInternal::WebSocketSSLShard* theShard) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            std::string theMessage{};</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            <span class="keywordflow">if</span> (theShard-&gt;processedMessages.size() &gt; 0) {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                theMessage = theShard-&gt;processedMessages.front();</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                theShard-&gt;processedMessages.pop();</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            }</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            <span class="keywordflow">if</span> (this-&gt;webSocketShard &amp;&amp; theMessage.size() &gt; 0) {</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                nlohmann::json payload = payload.parse(theMessage);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                <span class="keywordflow">if</span> (this-&gt;configManager-&gt;doWePrintWebSocketSuccessMessages()) {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                    std::cout &lt;&lt; DiscordCoreAPI::shiftToBrightGreen() &lt;&lt; <span class="stringliteral">&quot;Message received from Voice WebSocket: &quot;</span> &lt;&lt; theMessage &lt;&lt; DiscordCoreAPI::reset() &lt;&lt; std::endl</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                              &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                }</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                <span class="keywordflow">if</span> (payload.contains(<span class="stringliteral">&quot;op&quot;</span>) &amp;&amp; !payload[<span class="stringliteral">&quot;op&quot;</span>].is_null()) {</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                    <span class="keywordflow">switch</span> (payload[<span class="stringliteral">&quot;op&quot;</span>].get&lt;int32_t&gt;()) {</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                        <span class="keywordflow">case</span> 2: {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                            this-&gt;voiceConnectionData.audioSSRC = payload[<span class="stringliteral">&quot;d&quot;</span>][<span class="stringliteral">&quot;ssrc&quot;</span>].get&lt;uint32_t&gt;();</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                            this-&gt;voiceConnectionData.voiceIp = payload[<span class="stringliteral">&quot;d&quot;</span>][<span class="stringliteral">&quot;ip&quot;</span>].get&lt;std::string&gt;();</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                            this-&gt;voiceConnectionData.voicePort = std::to_string(payload[<span class="stringliteral">&quot;d&quot;</span>][<span class="stringliteral">&quot;port&quot;</span>].get&lt;int64_t&gt;());</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; value: payload[<span class="stringliteral">&quot;d&quot;</span>][<span class="stringliteral">&quot;modes&quot;</span>]) {</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                                <span class="keywordflow">if</span> (value == <span class="stringliteral">&quot;xsalsa20_poly1305&quot;</span>) {</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>                                    this-&gt;voiceConnectionData.voiceEncryptionMode = value;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                                }</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                            }</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                            this-&gt;connectionState.store(<a class="code hl_enumvalue" href="../../d7/d46/a00890.html#afe15cb95a487dea355bdfba55724535daa4c704063d3894a34897f424fbb6e1ba">VoiceConnectionState::Initializing_DatagramSocket</a>);</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                        }</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>                        <span class="keywordflow">case</span> 4: {</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>                            <span class="keywordflow">for</span> (uint32_t x = 0; x &lt; payload[<span class="stringliteral">&quot;d&quot;</span>][<span class="stringliteral">&quot;secret_key&quot;</span>].size(); x++) {</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                                this-&gt;voiceConnectionData.secretKey.push_back(payload[<span class="stringliteral">&quot;d&quot;</span>][<span class="stringliteral">&quot;secret_key&quot;</span>][x].get&lt;uint8_t&gt;());</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                            }</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                            this-&gt;connectionState.store(<a class="code hl_enumvalue" href="../../d7/d46/a00890.html#afe15cb95a487dea355bdfba55724535da348170ab8d5fadb2ac2d40bc3dca0a2a">VoiceConnectionState::Collecting_Init_Data</a>);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                        }</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                        <span class="keywordflow">case</span> 6: {</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                            this-&gt;webSocketShard-&gt;haveWeReceivedHeartbeatAck = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                        }</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>                        <span class="keywordflow">case</span> 8: {</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                            <span class="keywordflow">if</span> (payload[<span class="stringliteral">&quot;d&quot;</span>].contains(<span class="stringliteral">&quot;heartbeat_interval&quot;</span>)) {</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                                this-&gt;heartbeatInterval = <span class="keyword">static_cast&lt;</span>int32_t<span class="keyword">&gt;</span>(payload[<span class="stringliteral">&quot;d&quot;</span>][<span class="stringliteral">&quot;heartbeat_interval&quot;</span>].get&lt;<span class="keywordtype">float</span>&gt;());</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                                this-&gt;webSocketShard-&gt;areWeHeartBeating = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                                this-&gt;connectionState.store(<a class="code hl_enumvalue" href="../../d7/d46/a00890.html#afe15cb95a487dea355bdfba55724535da7e98b13b3e8895e0d9b06562f1fbf3bd">VoiceConnectionState::Sending_Identify</a>);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                            }</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                        }</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                    }</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                }</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            }</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        } <span class="keywordflow">catch</span> (...) {</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>            <span class="keywordflow">if</span> (this-&gt;configManager-&gt;doWePrintWebSocketErrorMessages()) {</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                <a class="code hl_function" href="../../dd/d94/a00888.html#ga805bf7170903087e933a7b81c8e39f15">DiscordCoreAPI::reportException</a>(<span class="stringliteral">&quot;VoiceConnection::onMessageReceived()&quot;</span>);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>            }</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>            this-&gt;onClosed();</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        }</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    }</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    <span class="keywordtype">void</span> VoiceConnection::sendVoiceData(<span class="keyword">const</span> std::string&amp; responseData) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>            <span class="keywordflow">if</span> (responseData.size() == 0) {</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                <span class="keywordflow">if</span> (this-&gt;configManager-&gt;doWePrintWebSocketErrorMessages()) {</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>                    std::cout &lt;&lt; DiscordCoreAPI::shiftToBrightRed() &lt;&lt; <span class="stringliteral">&quot;Please specify voice data to send&quot;</span> &lt;&lt; DiscordCoreAPI::reset() &lt;&lt; std::endl &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>                }</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>                <span class="keywordflow">if</span> (this-&gt;datagramSocket &amp;&amp; this-&gt;datagramSocket-&gt;areWeStillConnected()) {</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>                    std::string theData = responseData;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>                    this-&gt;datagramSocket-&gt;writeData(theData);</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>                } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>                    this-&gt;onClosed();</div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>                }</div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>            }</div>
@@ -401,7 +401,7 @@ $(document).ready(function(){initNavTree('dc/d17/a00872_source.html','../../'); 
 <div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    <span class="keywordtype">bool</span> VoiceConnection::collectAndProcessAMessage(<a class="code hl_enumeration" href="../../d7/d46/a00890.html#afe15cb95a487dea355bdfba55724535d">VoiceConnectionState</a> stateToWaitFor) <span class="keyword">noexcept</span> {</div>
 <div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>        DiscordCoreAPI::StopWatch theStopWatch{ 2500ms };</div>
 <div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>        <span class="keywordflow">while</span> (!Globals::doWeQuit.load() &amp;&amp; this-&gt;connectionState.load() != stateToWaitFor) {</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>            this-&gt;webSocketShard-&gt;processIO(10000);</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>            this-&gt;webSocketShard-&gt;processIO(100000);</div>
 <div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>            <span class="keywordflow">if</span> (!this-&gt;webSocketShard-&gt;areWeStillConnected()) {</div>
 <div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>            }</div>
@@ -653,7 +653,7 @@ $(document).ready(function(){initNavTree('dc/d17/a00872_source.html','../../'); 
 <div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>                    <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>                }</div>
 <div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>                <span class="keywordflow">for</span> (uint32_t x = 0; x &lt; 5; x++) {</div>
-<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>                    this-&gt;webSocketShard-&gt;processIO(10000);</div>
+<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>                    this-&gt;webSocketShard-&gt;processIO(100000);</div>
 <div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>                }</div>
 <div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>                <span class="keywordflow">if</span> (!this-&gt;parseConnectionHeaders(this-&gt;webSocketShard.get())) {</div>
 <div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>                    this-&gt;currentReconnectTries++;</div>
@@ -791,7 +791,7 @@ $(document).ready(function(){initNavTree('dc/d17/a00872_source.html','../../'); 
 <div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span>    <span class="keywordtype">bool</span> VoiceConnection::voiceConnect() noexcept {</div>
 <div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span>        <span class="keywordflow">try</span> {</div>
 <div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span>            <span class="keywordflow">if</span> (!this-&gt;datagramSocket) {</div>
-<div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span>                this-&gt;datagramSocket = std::make_unique&lt;DiscordCoreInternal::DatagramSocketSSLClient&gt;();</div>
+<div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span>                this-&gt;datagramSocket = std::make_unique&lt;DiscordCoreInternal::DatagramSocketClient&gt;();</div>
 <div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span>            }</div>
 <div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span>            <span class="keywordflow">if</span> (!this-&gt;datagramSocket-&gt;areWeStillConnected()) {</div>
 <div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span>                <span class="keywordflow">if</span> (!this-&gt;datagramSocket-&gt;connect(this-&gt;voiceConnectionData.voiceIp, this-&gt;voiceConnectionData.voicePort)) {</div>
@@ -829,7 +829,7 @@ $(document).ready(function(){initNavTree('dc/d17/a00872_source.html','../../'); 
 <div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span>                    }</div>
 <div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span>                    this-&gt;voiceConnectionData.externalIp = message;</div>
 <div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span>                    this-&gt;areWeConnectedBool.store(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00725" name="l00725"></a><span class="lineno">  725</span>                    this-&gt;voiceConnectionDataBuffer.<a class="code hl_function" href="../../db/d6b/a03645.html#a1096795a528f8831115b7b5184f591a6">clearContents</a>();</div>
+<div class="line"><a id="l00725" name="l00725"></a><span class="lineno">  725</span>                    this-&gt;voiceConnectionDataBuffer.<a class="code hl_function" href="../../d3/d63/a03637.html#a1096795a528f8831115b7b5184f591a6">clearContents</a>();</div>
 <div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span>                }</div>
 <div class="line"><a id="l00728" name="l00728"></a><span class="lineno">  728</span>            } <span class="keywordflow">else</span> {</div>
@@ -950,7 +950,7 @@ $(document).ready(function(){initNavTree('dc/d17/a00872_source.html','../../'); 
 <div class="ttc" id="aa00885_html_ggacf6f4590968be95774b156cf050c996ca72ef2b9b6965d078e3c7f95487a82d1c"><div class="ttname"><a href="../../db/d18/a00885.html#ggacf6f4590968be95774b156cf050c996ca72ef2b9b6965d078e3c7f95487a82d1c">DiscordCoreAPI::AudioFrameType::Skip</a></div><div class="ttdeci">@ Skip</div><div class="ttdoc">Skip.</div></div>
 <div class="ttc" id="aa00885_html_ggacf6f4590968be95774b156cf050c996cac9f88e098f6fe4e4e112eeb05ccb9671"><div class="ttname"><a href="../../db/d18/a00885.html#ggacf6f4590968be95774b156cf050c996cac9f88e098f6fe4e4e112eeb05ccb9671">DiscordCoreAPI::AudioFrameType::Unset</a></div><div class="ttdeci">@ Unset</div><div class="ttdoc">Unset.</div></div>
 <div class="ttc" id="aa00888_html_ga805bf7170903087e933a7b81c8e39f15"><div class="ttname"><a href="../../dd/d94/a00888.html#ga805bf7170903087e933a7b81c8e39f15">DiscordCoreAPI::reportException</a></div><div class="ttdeci">DiscordCoreAPI_Dll void reportException(const std::string &amp;currentFunctionName, std::source_location theLocation=std::source_location::current())</div><div class="ttdoc">Prints the current file, line, and column from which the function is being called - typically from wi...</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/a00869_source.html#l00888">Utilities.cpp:888</a></div></div>
-<div class="ttc" id="aa00888_html_gabeb353982ff7e75352fc30c8543641ef"><div class="ttname"><a href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">DiscordCoreAPI::Snowflake</a></div><div class="ttdeci">uint64_t Snowflake</div><div class="ttdoc">For ids of DiscordEntities.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l00325">FoundationEntities.hpp:325</a></div></div>
+<div class="ttc" id="aa00888_html_gabeb353982ff7e75352fc30c8543641ef"><div class="ttname"><a href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">DiscordCoreAPI::Snowflake</a></div><div class="ttdeci">uint64_t Snowflake</div><div class="ttdoc">For ids of DiscordEntities.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l00324">FoundationEntities.hpp:324</a></div></div>
 <div class="ttc" id="aa00890_html"><div class="ttname"><a href="../../d7/d46/a00890.html">DiscordCoreAPI</a></div><div class="ttdoc">The main namespace for this library.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00025">ApplicationCommandEntities.hpp:25</a></div></div>
 <div class="ttc" id="aa00890_html_a7db510a888c180dab0d18c694308c066a0657d962b72e6f1f37dda8dad3684cb8"><div class="ttname"><a href="../../d7/d46/a00890.html#a7db510a888c180dab0d18c694308c066a0657d962b72e6f1f37dda8dad3684cb8">DiscordCoreAPI::VoiceActiveState::Exiting</a></div><div class="ttdeci">@ Exiting</div><div class="ttdoc">Exiting.</div></div>
 <div class="ttc" id="aa00890_html_a7db510a888c180dab0d18c694308c066ac23e2b09ebe6bf4cb5e2a9abe85c0be2"><div class="ttname"><a href="../../d7/d46/a00890.html#a7db510a888c180dab0d18c694308c066ac23e2b09ebe6bf4cb5e2a9abe85c0be2">DiscordCoreAPI::VoiceActiveState::Stopped</a></div><div class="ttdeci">@ Stopped</div><div class="ttdoc">Stopped.</div></div>
@@ -966,15 +966,15 @@ $(document).ready(function(){initNavTree('dc/d17/a00872_source.html','../../'); 
 <div class="ttc" id="aa00890_html_afe15cb95a487dea355bdfba55724535daa4c704063d3894a34897f424fbb6e1ba"><div class="ttname"><a href="../../d7/d46/a00890.html#afe15cb95a487dea355bdfba55724535daa4c704063d3894a34897f424fbb6e1ba">DiscordCoreAPI::VoiceConnectionState::Initializing_DatagramSocket</a></div><div class="ttdeci">@ Initializing_DatagramSocket</div><div class="ttdoc">Initializing the datagram udp socket.</div></div>
 <div class="ttc" id="aa00890_html_afe15cb95a487dea355bdfba55724535dada02982bc0569abf1fba40d83e4332d8"><div class="ttname"><a href="../../d7/d46/a00890.html#afe15cb95a487dea355bdfba55724535dada02982bc0569abf1fba40d83e4332d8">DiscordCoreAPI::VoiceConnectionState::Collecting_Session_Description</a></div><div class="ttdeci">@ Collecting_Session_Description</div><div class="ttdoc">Collecting the session-description payload.</div></div>
 <div class="ttc" id="aa00890_html_afe15cb95a487dea355bdfba55724535dafe47ea48e4a9d0424e3354d4a5e10bfe"><div class="ttname"><a href="../../d7/d46/a00890.html#afe15cb95a487dea355bdfba55724535dafe47ea48e4a9d0424e3354d4a5e10bfe">DiscordCoreAPI::VoiceConnectionState::Sending_Select_Protocol</a></div><div class="ttdeci">@ Sending_Select_Protocol</div><div class="ttdoc">Sending the select-protocol payload.</div></div>
-<div class="ttc" id="aa02805_html_ab96281fec6f0c35fc2d6df49077bf8f9"><div class="ttname"><a href="../../d7/d75/a02805.html#ab96281fec6f0c35fc2d6df49077bf8f9">DiscordCoreAPI::RawFrameData::data</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; data</div><div class="ttdoc">The audio data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03683">FoundationEntities.hpp:3683</a></div></div>
-<div class="ttc" id="aa02809_html"><div class="ttname"><a href="../../d5/d34/a02809.html">DiscordCoreAPI::EncodedFrameData</a></div><div class="ttdoc">Represents a single frame of encoded audio data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03688">FoundationEntities.hpp:3688</a></div></div>
-<div class="ttc" id="aa02809_html_a7f2af927375244279ff7cc5dc57f834a"><div class="ttname"><a href="../../d5/d34/a02809.html#a7f2af927375244279ff7cc5dc57f834a">DiscordCoreAPI::EncodedFrameData::data</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; data</div><div class="ttdoc">The audio data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03689">FoundationEntities.hpp:3689</a></div></div>
-<div class="ttc" id="aa02813_html_a659e7fccd24ee89ed3cde41dad742b08"><div class="ttname"><a href="../../d3/d85/a02813.html#a659e7fccd24ee89ed3cde41dad742b08">DiscordCoreAPI::AudioFrameData::rawFrameData</a></div><div class="ttdeci">RawFrameData rawFrameData</div><div class="ttdoc">To be filled if it's raw audio data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03706">FoundationEntities.hpp:3706</a></div></div>
-<div class="ttc" id="aa02813_html_ab419272ec8ce14a1924308f6c9d5e1a1"><div class="ttname"><a href="../../d3/d85/a02813.html#ab419272ec8ce14a1924308f6c9d5e1a1">DiscordCoreAPI::AudioFrameData::encodedFrameData</a></div><div class="ttdeci">EncodedFrameData encodedFrameData</div><div class="ttdoc">To be filled if it's already encoded.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03704">FoundationEntities.hpp:3704</a></div></div>
+<div class="ttc" id="aa02805_html_ab96281fec6f0c35fc2d6df49077bf8f9"><div class="ttname"><a href="../../d7/d75/a02805.html#ab96281fec6f0c35fc2d6df49077bf8f9">DiscordCoreAPI::RawFrameData::data</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; data</div><div class="ttdoc">The audio data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03673">FoundationEntities.hpp:3673</a></div></div>
+<div class="ttc" id="aa02809_html"><div class="ttname"><a href="../../d5/d34/a02809.html">DiscordCoreAPI::EncodedFrameData</a></div><div class="ttdoc">Represents a single frame of encoded audio data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03678">FoundationEntities.hpp:3678</a></div></div>
+<div class="ttc" id="aa02809_html_a7f2af927375244279ff7cc5dc57f834a"><div class="ttname"><a href="../../d5/d34/a02809.html#a7f2af927375244279ff7cc5dc57f834a">DiscordCoreAPI::EncodedFrameData::data</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; data</div><div class="ttdoc">The audio data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03679">FoundationEntities.hpp:3679</a></div></div>
+<div class="ttc" id="aa02813_html_a659e7fccd24ee89ed3cde41dad742b08"><div class="ttname"><a href="../../d3/d85/a02813.html#a659e7fccd24ee89ed3cde41dad742b08">DiscordCoreAPI::AudioFrameData::rawFrameData</a></div><div class="ttdeci">RawFrameData rawFrameData</div><div class="ttdoc">To be filled if it's raw audio data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03696">FoundationEntities.hpp:3696</a></div></div>
+<div class="ttc" id="aa02813_html_ab419272ec8ce14a1924308f6c9d5e1a1"><div class="ttname"><a href="../../d3/d85/a02813.html#ab419272ec8ce14a1924308f6c9d5e1a1">DiscordCoreAPI::AudioFrameData::encodedFrameData</a></div><div class="ttdeci">EncodedFrameData encodedFrameData</div><div class="ttdoc">To be filled if it's already encoded.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03694">FoundationEntities.hpp:3694</a></div></div>
 <div class="ttc" id="aa02989_html_a82ab9685bbc1cd69019bfb42e2870a0e"><div class="ttname"><a href="../../d4/d69/a02989.html#a82ab9685bbc1cd69019bfb42e2870a0e">DiscordCoreAPI::Guilds::getCachedGuildAsync</a></div><div class="ttdeci">static CoRoutine&lt; GuildData &gt; getCachedGuildAsync(GetGuildData dataPackage)</div><div class="ttdoc">Collects a Guild from the library's cache.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d60/a00818_source.html#l00404">GuildEntities.cpp:404</a></div></div>
 <div class="ttc" id="aa03033_html_a8985a29afb27c8e010bcf581528e5559"><div class="ttname"><a href="../../d6/def/a03033.html#a8985a29afb27c8e010bcf581528e5559">DiscordCoreAPI::GuildMembers::getCachedGuildMemberAsync</a></div><div class="ttdeci">static CoRoutine&lt; GuildMemberData &gt; getCachedGuildMemberAsync(GetGuildMemberData dataPackage)</div><div class="ttdoc">Collects a GuildMember from the library's cache.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d8b/a00821_source.html#l00137">GuildMemberEntities.cpp:137</a></div></div>
-<div class="ttc" id="aa03645_html_a1096795a528f8831115b7b5184f591a6"><div class="ttname"><a href="../../db/d6b/a03645.html#a1096795a528f8831115b7b5184f591a6">DiscordCoreAPI::UnboundedMessageBlock::clearContents</a></div><div class="ttdeci">void clearContents()</div><div class="ttdoc">Clears the contents of the messaging block.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dae/a00767_source.html#l00778">Utilities.hpp:778</a></div></div>
-<div class="ttc" id="aa03657_html_ae790f8b154a461a5878a224f371eb546"><div class="ttname"><a href="../../d1/d01/a03657.html#ae790f8b154a461a5878a224f371eb546">DiscordCoreAPI::VoiceConnection::getChannelId</a></div><div class="ttdeci">Snowflake getChannelId() noexcept</div><div class="ttdoc">Collects the currently connected-to voice Channel's id.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d17/a00872_source.html#l00086">VoiceConnection.cpp:86</a></div></div>
+<div class="ttc" id="aa03637_html_a1096795a528f8831115b7b5184f591a6"><div class="ttname"><a href="../../d3/d63/a03637.html#a1096795a528f8831115b7b5184f591a6">DiscordCoreAPI::UnboundedMessageBlock::clearContents</a></div><div class="ttdeci">void clearContents()</div><div class="ttdoc">Clears the contents of the messaging block.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dae/a00767_source.html#l00777">Utilities.hpp:777</a></div></div>
+<div class="ttc" id="aa03649_html_ae790f8b154a461a5878a224f371eb546"><div class="ttname"><a href="../../da/d7d/a03649.html#ae790f8b154a461a5878a224f371eb546">DiscordCoreAPI::VoiceConnection::getChannelId</a></div><div class="ttdeci">Snowflake getChannelId() noexcept</div><div class="ttdoc">Collects the currently connected-to voice Channel's id.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d17/a00872_source.html#l00087">VoiceConnection.cpp:87</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->

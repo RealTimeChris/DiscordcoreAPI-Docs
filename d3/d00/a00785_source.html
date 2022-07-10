@@ -337,7 +337,7 @@ $(document).ready(function(){initNavTree('d3/d00/a00785_source.html','../../'); 
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>            frameData.sampleCount = -5;</div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>            stream-&gt;outDataBuffer.send(frameData);</div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>            stream-&gt;areWeQuitting = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>            <span class="keywordflow">return</span> AVERROR_EOF;</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>int32_t<span class="keyword">&gt;</span>(stream-&gt;bytesRead);</div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        }</div>
 <div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>int32_t<span class="keyword">&gt;</span>(stream-&gt;bytesRead);</div>
 <div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    }</div>
@@ -615,9 +615,9 @@ $(document).ready(function(){initNavTree('d3/d00/a00785_source.html','../../'); 
 <div class="line"><a id="l00508" name="l00508"></a><span class="lineno">  508</span> </div>
 <div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span>};</div>
 <div class="ttc" id="aa00680_html"><div class="ttname"><a href="../../d4/d9b/a00680.html">AudioDecoder.hpp</a></div></div>
-<div class="ttc" id="aa02805_html"><div class="ttname"><a href="../../d7/d75/a02805.html">DiscordCoreAPI::RawFrameData</a></div><div class="ttdoc">Represents a single frame of raw audio data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03682">FoundationEntities.hpp:3682</a></div></div>
-<div class="ttc" id="aa02805_html_a859b4a88ab2a0e4ed52e5cd4f6d3462b"><div class="ttname"><a href="../../d7/d75/a02805.html#a859b4a88ab2a0e4ed52e5cd4f6d3462b">DiscordCoreAPI::RawFrameData::sampleCount</a></div><div class="ttdeci">int32_t sampleCount</div><div class="ttdoc">The number of samples per this frame.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03684">FoundationEntities.hpp:3684</a></div></div>
-<div class="ttc" id="aa02805_html_ab96281fec6f0c35fc2d6df49077bf8f9"><div class="ttname"><a href="../../d7/d75/a02805.html#ab96281fec6f0c35fc2d6df49077bf8f9">DiscordCoreAPI::RawFrameData::data</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; data</div><div class="ttdoc">The audio data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03683">FoundationEntities.hpp:3683</a></div></div>
+<div class="ttc" id="aa02805_html"><div class="ttname"><a href="../../d7/d75/a02805.html">DiscordCoreAPI::RawFrameData</a></div><div class="ttdoc">Represents a single frame of raw audio data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03672">FoundationEntities.hpp:3672</a></div></div>
+<div class="ttc" id="aa02805_html_a859b4a88ab2a0e4ed52e5cd4f6d3462b"><div class="ttname"><a href="../../d7/d75/a02805.html#a859b4a88ab2a0e4ed52e5cd4f6d3462b">DiscordCoreAPI::RawFrameData::sampleCount</a></div><div class="ttdeci">int32_t sampleCount</div><div class="ttdoc">The number of samples per this frame.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03674">FoundationEntities.hpp:3674</a></div></div>
+<div class="ttc" id="aa02805_html_ab96281fec6f0c35fc2d6df49077bf8f9"><div class="ttname"><a href="../../d7/d75/a02805.html#ab96281fec6f0c35fc2d6df49077bf8f9">DiscordCoreAPI::RawFrameData::data</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; data</div><div class="ttdoc">The audio data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03673">FoundationEntities.hpp:3673</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->

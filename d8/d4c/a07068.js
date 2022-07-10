@@ -1,9 +1,14 @@
 var a07068 =
 [
-    [ "Getting a List of Guild Scheduled Events", "d5/d2e/a07186.html", null ],
-    [ "Creating a Guild Scheduled Event", "d5/d5e/a07183.html", null ],
-    [ "Getting a Guild Scheduled Event", "d7/da0/a07185.html", null ],
-    [ "Modifying a Guild Scheduled Event", "d5/dae/a07188.html", null ],
-    [ "Deleting a Guild Scheduled Event", "dc/dc2/a07184.html", null ],
-    [ "Getting Guild Scheduled Event Users", "d9/df4/a07187.html", null ]
+    [ "Creating a Reaction", "de/dfd/a07214.html", null ],
+    [ "Deleting Own Reaction", "d2/d40/a07218.html", null ],
+    [ "Deleting User Reaction", "db/db6/a07219.html", null ],
+    [ "Getting Reactions", "d5/d05/a07222.html", null ],
+    [ "Deleting All Reactions", "db/d73/a07217.html", null ],
+    [ "Deleting All Reactions for Emoji", "dc/df3/a07216.html", null ],
+    [ "Getting A list of Guild Emoji", "de/d7c/a07221.html", null ],
+    [ "Getting a Guild Emoji", "d2/d73/a07220.html", null ],
+    [ "Creating a Guild Emoji", "da/dae/a07213.html", null ],
+    [ "Modifying a Guild Emoji", "de/dbb/a07223.html", null ],
+    [ "Deleting a Guild Emoji", "d2/d9e/a07215.html", null ]
 ];

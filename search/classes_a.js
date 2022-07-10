@@ -18,8 +18,8 @@ var searchData=
   ['modifyautomoderationruledata_15',['ModifyAutoModerationRuleData',['../d9/d63/a01877.html',1,'DiscordCoreAPI']]],
   ['modifychanneldata_16',['ModifyChannelData',['../dd/d2e/a01949.html',1,'DiscordCoreAPI']]],
   ['modifycurrentguildmemberdata_17',['ModifyCurrentGuildMemberData',['../db/dc5/a03009.html',1,'DiscordCoreAPI']]],
-  ['modifycurrentuserdata_18',['ModifyCurrentUserData',['../da/d3e/a03581.html',1,'DiscordCoreAPI']]],
-  ['modifycurrentuservoicestatedata_19',['ModifyCurrentUserVoiceStateData',['../dd/d87/a03569.html',1,'DiscordCoreAPI']]],
+  ['modifycurrentuserdata_18',['ModifyCurrentUserData',['../de/d29/a03573.html',1,'DiscordCoreAPI']]],
+  ['modifycurrentuservoicestatedata_19',['ModifyCurrentUserVoiceStateData',['../df/df7/a03561.html',1,'DiscordCoreAPI']]],
   ['modifyguildchannelpositiondata_20',['ModifyGuildChannelPositionData',['../dc/dc8/a01929.html',1,'DiscordCoreAPI']]],
   ['modifyguildchannelpositionsdata_21',['ModifyGuildChannelPositionsData',['../dc/da7/a01933.html',1,'DiscordCoreAPI']]],
   ['modifyguilddata_22',['ModifyGuildData',['../dd/d5c/a02985.html',1,'DiscordCoreAPI']]],
@@ -28,12 +28,12 @@ var searchData=
   ['modifyguildroledata_25',['ModifyGuildRoleData',['../d8/d12/a03325.html',1,'DiscordCoreAPI']]],
   ['modifyguildrolepositionsdata_26',['ModifyGuildRolePositionsData',['../df/d15/a03321.html',1,'DiscordCoreAPI']]],
   ['modifyguildscheduledeventdata_27',['ModifyGuildScheduledEventData',['../d7/d8c/a03049.html',1,'DiscordCoreAPI']]],
-  ['modifyguildstickerdata_28',['ModifyGuildStickerData',['../d1/d15/a03457.html',1,'DiscordCoreAPI']]],
+  ['modifyguildstickerdata_28',['ModifyGuildStickerData',['../d7/dc5/a03449.html',1,'DiscordCoreAPI']]],
   ['modifyguildtemplatedata_29',['ModifyGuildTemplateData',['../dd/d72/a02953.html',1,'DiscordCoreAPI']]],
   ['modifyguildwelcomescreendata_30',['ModifyGuildWelcomeScreenData',['../dd/d0d/a02929.html',1,'DiscordCoreAPI']]],
   ['modifyguildwidgetdata_31',['ModifyGuildWidgetData',['../dc/d86/a02909.html',1,'DiscordCoreAPI']]],
-  ['modifystageinstancedata_32',['ModifyStageInstanceData',['../d2/d9b/a03429.html',1,'DiscordCoreAPI']]],
-  ['modifyuservoicestatedata_33',['ModifyUserVoiceStateData',['../de/d29/a03573.html',1,'DiscordCoreAPI']]],
-  ['modifywebhookdata_34',['ModifyWebHookData',['../d3/d4a/a03689.html',1,'DiscordCoreAPI']]],
-  ['modifywebhookwithtokendata_35',['ModifyWebHookWithTokenData',['../d1/ddd/a03693.html',1,'DiscordCoreAPI']]]
+  ['modifystageinstancedata_32',['ModifyStageInstanceData',['../d9/d2c/a03421.html',1,'DiscordCoreAPI']]],
+  ['modifyuservoicestatedata_33',['ModifyUserVoiceStateData',['../de/d5d/a03565.html',1,'DiscordCoreAPI']]],
+  ['modifywebhookdata_34',['ModifyWebHookData',['../d7/d40/a03681.html',1,'DiscordCoreAPI']]],
+  ['modifywebhookwithtokendata_35',['ModifyWebHookWithTokenData',['../da/da8/a03685.html',1,'DiscordCoreAPI']]]
 ];

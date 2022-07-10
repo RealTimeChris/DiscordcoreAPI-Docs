@@ -105,37 +105,28 @@ $(document).ready(function(){initNavTree('d0/d20/a03557.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d6/d76/a03554.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::UpdatePresenceData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::RemoveRecipientFromGroupDMData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For updating a <a class="el" href="../../d0/d92/a03585.html" title="A single User.">User</a>'s presence.  
+<p>For removing a <a class="el" href="../../da/df8/a03577.html" title="A single User.">User</a> from a group Dm.  
  <a href="../../d0/d20/a03557.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d3/d2c/a00764_source.html">UserEntities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:a49b1047005c02ad1950cc86aefd6585c"><td class="memItemLeft" align="right" valign="top"><a id="a49b1047005c02ad1950cc86aefd6585c" name="a49b1047005c02ad1950cc86aefd6585c"></a>
-std::vector&lt; <a class="el" href="../../dc/db6/a02533.html">ActivityData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>activities</b> {}</td></tr>
-<tr class="memdesc:a49b1047005c02ad1950cc86aefd6585c"><td class="mdescLeft">&#160;</td><td class="mdescRight">A vector of activities. <br /></td></tr>
-<tr class="separator:a49b1047005c02ad1950cc86aefd6585c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5efd4b15beea018d2a94458d60503df"><td class="memItemLeft" align="right" valign="top"><a id="ae5efd4b15beea018d2a94458d60503df" name="ae5efd4b15beea018d2a94458d60503df"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>afk</b> { false }</td></tr>
-<tr class="memdesc:ae5efd4b15beea018d2a94458d60503df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Are we afk. <br /></td></tr>
-<tr class="separator:ae5efd4b15beea018d2a94458d60503df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a539da7753f83799e099f088b479d5c9f"><td class="memItemLeft" align="right" valign="top"><a id="a539da7753f83799e099f088b479d5c9f" name="a539da7753f83799e099f088b479d5c9f"></a>
-int64_t&#160;</td><td class="memItemRight" valign="bottom"><b>since</b> { 0 }</td></tr>
-<tr class="memdesc:a539da7753f83799e099f088b479d5c9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">When was the activity started? <br /></td></tr>
-<tr class="separator:a539da7753f83799e099f088b479d5c9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa86e11b481e7cf3982bf38103bf5530d"><td class="memItemLeft" align="right" valign="top"><a id="aa86e11b481e7cf3982bf38103bf5530d" name="aa86e11b481e7cf3982bf38103bf5530d"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>status</b> {}</td></tr>
-<tr class="memdesc:aa86e11b481e7cf3982bf38103bf5530d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current status. <br /></td></tr>
-<tr class="separator:aa86e11b481e7cf3982bf38103bf5530d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2972a1fd2122a7a4fef75cf201163131"><td class="memItemLeft" align="right" valign="top"><a id="a2972a1fd2122a7a4fef75cf201163131" name="a2972a1fd2122a7a4fef75cf201163131"></a>
+<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>channelId</b> {}</td></tr>
+<tr class="memdesc:a2972a1fd2122a7a4fef75cf201163131"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../da/d76/a01941.html" title="A Channel object.">Channel</a> Id of the Dm. <br /></td></tr>
+<tr class="separator:a2972a1fd2122a7a4fef75cf201163131"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af011a01575db9f2f100ff22af40a3c07"><td class="memItemLeft" align="right" valign="top"><a id="af011a01575db9f2f100ff22af40a3c07" name="af011a01575db9f2f100ff22af40a3c07"></a>
+<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>userId</b> {}</td></tr>
+<tr class="memdesc:af011a01575db9f2f100ff22af40a3c07"><td class="mdescLeft">&#160;</td><td class="mdescRight">The user's Id. <br /></td></tr>
+<tr class="separator:af011a01575db9f2f100ff22af40a3c07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following files:<ul>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d3/d2c/a00764_source.html">UserEntities.hpp</a></li>
-<li><a class="el" href="../../dd/db2/a00866_source.html">UserEntities.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -143,7 +134,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>status</b> {}<
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d0/d20/a03557.html">UpdatePresenceData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d0/d20/a03557.html">RemoveRecipientFromGroupDMData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

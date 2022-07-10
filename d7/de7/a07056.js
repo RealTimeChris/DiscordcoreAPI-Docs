@@ -1,4 +1,5 @@
 var a07056 =
 [
-    [ "Music-Bot Guide", "d0/d0f/a07170.html", "d0/d0f/a07170" ]
+    [ "Instantiating/Creating a Button", "da/d52/a07100.html", null ],
+    [ "Collecting Button Input", "d9/d1d/a07099.html", null ]
 ];

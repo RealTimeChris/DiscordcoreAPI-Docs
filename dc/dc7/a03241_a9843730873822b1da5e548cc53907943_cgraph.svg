@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../d3/d63/a03637.html#a97e7849b93d0e7f6086d30cfead2cb64" target="_top" xlink:title="Deduces whether or not a chosen period of time has passed, for a chosen timestamp.">
+<g id="a_node2"><a xlink:href="../../d8/d33/a03629.html#a97e7849b93d0e7f6086d30cfead2cb64" target="_top" xlink:title="Deduces whether or not a chosen period of time has passed, for a chosen timestamp.">
 <polygon fill="none" stroke="black" points="173,-0.5 173,-30.5 314,-30.5 314,-0.5 173,-0.5"/>
 <text text-anchor="start" x="181" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::TimeStamp</text>
 <text text-anchor="middle" x="243.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">::hasTimeElapsed</text>

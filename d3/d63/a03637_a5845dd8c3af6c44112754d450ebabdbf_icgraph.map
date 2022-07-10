@@ -1,0 +1,8 @@
+<map id="DiscordCoreAPI::UnboundedMessageBlock::tryReceive" name="DiscordCoreAPI::UnboundedMessageBlock::tryReceive">
+<area shape="rect" id="node1" title="Tries to receive an object of type ObjectType to be placed into a reference." alt="" coords="529,100,716,141"/>
+<area shape="rect" id="node2" href="$db/d49/a01969.html#a9fc31b4ff6a73922169844d6ad1851b5" title="Cancels the currently executing CoRoutine and returns the current result." alt="" coords="286,5,469,47"/>
+<area shape="rect" id="node3" href="$d5/d92/a01977.html#a566ebc1b6eacc88c5c2913908e6a2c8f" title="Cancels the currently executing CoRoutine and returns the current result." alt="" coords="286,71,469,112"/>
+<area shape="rect" id="node4" href="$db/d49/a01969.html#a4677e19e0a190bf91b35c2345533ed6b" title="Gets the resulting value of the CoRoutine." alt="" coords="273,137,481,163"/>
+<area shape="rect" id="node5" href="$d5/d92/a01977.html#a904d030f3edbf8efac15b2cebba3e37a" title="Gets the resulting value of the CoRoutine." alt="" coords="286,188,469,229"/>
+<area shape="rect" id="node6" href="$df/d92/a03097.html#a721365d0ef437397ea553634f88b8ecf" title="Deletes a previously sent &quot;input&#45;event&#45;response&quot;." alt="" coords="5,188,225,229"/>
+</map>

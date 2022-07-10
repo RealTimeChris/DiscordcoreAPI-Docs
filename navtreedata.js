@@ -48,8 +48,8 @@ var NAVTREE =
     [ "The CMAKE Package", "index.html#autotoc_md19", null ],
     [ "Build Instructions (Non-Vcpkg) - The Executable", "index.html#autotoc_md20", null ],
     [ "Roadmap", "index.html#autotoc_md21", null ],
-    [ "Docs/Examples", "d8/dcd/a07055.html", "d8/dcd/a07055" ],
-    [ "Guides", "d7/de7/a07056.html", "d7/de7/a07056" ],
+    [ "Docs/Examples", "de/dd7/a07051.html", "de/dd7/a07051" ],
+    [ "Guides", "d4/d15/a07052.html", "d4/d15/a07052" ],
     [ "Modules", "modules.html", "modules" ],
     [ "Included Files", "files.html", [
       [ "File List", "files.html", "files_dup" ]
@@ -60,17 +60,17 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "d0/d02/a07177.html",
-"d1/d86/a03209.html",
-"d3/d55/a03341.html#a387e48e015b6c0bac2fcfa10e4a2cdd5",
-"d5/d27/a03157.html#ad2b79c7aeda60afc5c353ca95d574761",
-"d7/d13/a02873.html#a5e7474d0eb4a5838430c76cb8b577cb5",
-"d8/ddd/a03317.html#ae2fa2e7c5eec51f7c2c02fe0d4852f23",
-"d9/d9d/a02425.html#a53217ca3a2985efdb94e3a98cac5fcd8",
-"db/d38/a02789.html#a4007c6bc0c1798d8bb824c1c6708a16d",
-"dc/dc8/a01929.html#a21128c5806a1aa5058ab6cf9bdce6c3f",
-"dd/d94/a00888.html#gga1aef35b556dafaf1aa08c1dec6313d44a126a8fe92113fc3fc11878c8c004266c",
-"dd/d94/a00888.html#ggabf76b7b06351e7fc14b8c72f9aa2c15fa514a1e846ba12fb1e8c24ac166e0f0bb",
-"de/dd3/a01873.html#a74dd569e6cb37f5a714e7237632a7904"
+"d1/d3a/a03353.html#ad3ea2df692e7786ba797699ec81f3781",
+"d3/d4c/a03517.html#abb8777d9b4583bf156cd30e8ae507d81",
+"d5/d1d/a03165.html#a8347fd97b7e3874e2cb092d4659b94dc",
+"d6/dfb/a07205.html",
+"d8/dd4/a07226.html",
+"d9/d97/a01953.html#a159777c36d823a8109a370fa2d8e30a9",
+"db/d27/a02817.html#ab525395fd504775391a724d4ba74f37c",
+"dc/dc7/a03241.html#a2ada29a2229e184e988024a152e15f67",
+"dd/d94/a00888.html#gga1545487c64a71c2b5c36cde9f2bed49daa0faef0851b4294c06f2b94bb1cb2044",
+"dd/d94/a00888.html#ggabf76b7b06351e7fc14b8c72f9aa2c15fa111870c8563a6a4c7875896164773675",
+"de/dd3/a01873.html#ac0eb6fa50670d9dce2f5531de926abc1"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

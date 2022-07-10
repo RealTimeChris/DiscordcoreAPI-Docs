@@ -103,44 +103,59 @@ $(document).ready(function(){initNavTree('d0/d92/a03585.html','../../'); initRes
 
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Public Data Members</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="../../d3/d11/a03582.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::User Class Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::BotUser Class Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>A single <a class="el" href="../../d0/d92/a03585.html" title="A single User.">User</a>.  
+<p>A type of <a class="el" href="../../da/df8/a03577.html" title="A single User.">User</a>, to represent the Bot and some of its associated endpoints.  
  <a href="../../d0/d92/a03585.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d3/d2c/a00764_source.html">UserEntities.hpp</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for DiscordCoreAPI::User:</div>
+Inheritance diagram for DiscordCoreAPI::BotUser:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/dda/a03584.svg" width="211" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/dda/a03584.svg" width="211" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 <center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Public Data Members</h2></td></tr>
-<tr class="memitem:a8e64ef1bc60dbb0cd93de9733ac1b9f8"><td class="memItemLeft" align="right" valign="top"><a id="a8e64ef1bc60dbb0cd93de9733ac1b9f8" name="a8e64ef1bc60dbb0cd93de9733ac1b9f8"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a5eeec46e2c648796f043b04422349cd3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d92/a03585.html#a5eeec46e2c648796f043b04422349cd3">updatePresence</a> (<a class="el" href="../../db/d72/a03549.html">UpdatePresenceData</a> &amp;dataPackage)</td></tr>
+<tr class="memdesc:a5eeec46e2c648796f043b04422349cd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the bot's current activity status, to be viewed by others in the same server as the bot.  <a href="../../d0/d92/a03585.html#a5eeec46e2c648796f043b04422349cd3">More...</a><br /></td></tr>
+<tr class="separator:a5eeec46e2c648796f043b04422349cd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a153ffd093382c85633829194c195360a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d92/a03585.html#a153ffd093382c85633829194c195360a">updateVoiceStatus</a> (<a class="el" href="../../d3/d27/a02453.html">UpdateVoiceStateData</a> &amp;datdataPackageaPackage)</td></tr>
+<tr class="memdesc:a153ffd093382c85633829194c195360a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the bot's current voice-status. Joins/leaves a <a class="el" href="../../da/d76/a01941.html" title="A Channel object.">Channel</a>, and/or self deafens/mutes.  <a href="../../d0/d92/a03585.html#a153ffd093382c85633829194c195360a">More...</a><br /></td></tr>
+<tr class="separator:a153ffd093382c85633829194c195360a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_a02285"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a02285')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../df/d4d/a02285.html">DiscordCoreAPI::DiscordEntity</a></td></tr>
+<tr class="memitem:a880fa695445dc41f6d371d2a6ef1e8c0 inherit pub_methods_a02285"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d4d/a02285.html#a880fa695445dc41f6d371d2a6ef1e8c0">getCreatedAtTimestamp</a> (<a class="el" href="../../d7/d92/a00887.html#ga5f837e6437665f0a390fe2c6271e3a91">TimeFormat</a> timeFormat)</td></tr>
+<tr class="memdesc:a880fa695445dc41f6d371d2a6ef1e8c0 inherit pub_methods_a02285"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the snowflake-id into a time and date stamp.  <a href="../../df/d4d/a02285.html#a880fa695445dc41f6d371d2a6ef1e8c0">More...</a><br /></td></tr>
+<tr class="separator:a880fa695445dc41f6d371d2a6ef1e8c0 inherit pub_methods_a02285"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_attribs_a03577"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_a03577')"><img src="../../closed.png" alt="-"/>&#160;Public Data Members inherited from <a class="el" href="../../da/df8/a03577.html">DiscordCoreAPI::User</a></td></tr>
+<tr class="memitem:a8e64ef1bc60dbb0cd93de9733ac1b9f8 inherit pub_attribs_a03577"><td class="memItemLeft" align="right" valign="top"><a id="a8e64ef1bc60dbb0cd93de9733ac1b9f8" name="a8e64ef1bc60dbb0cd93de9733ac1b9f8"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>accentColor</b> { 0 }</td></tr>
-<tr class="memdesc:a8e64ef1bc60dbb0cd93de9733ac1b9f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The user 's banner color encoded as an integer representation of hexadecimal color code. <br /></td></tr>
-<tr class="separator:a8e64ef1bc60dbb0cd93de9733ac1b9f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ebda776fc3dfd10e923117bcd13820c"><td class="memItemLeft" align="right" valign="top"><a id="a5ebda776fc3dfd10e923117bcd13820c" name="a5ebda776fc3dfd10e923117bcd13820c"></a>
+<tr class="memdesc:a8e64ef1bc60dbb0cd93de9733ac1b9f8 inherit pub_attribs_a03577"><td class="mdescLeft">&#160;</td><td class="mdescRight">The user 's banner color encoded as an integer representation of hexadecimal color code. <br /></td></tr>
+<tr class="separator:a8e64ef1bc60dbb0cd93de9733ac1b9f8 inherit pub_attribs_a03577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ebda776fc3dfd10e923117bcd13820c inherit pub_attribs_a03577"><td class="memItemLeft" align="right" valign="top"><a id="a5ebda776fc3dfd10e923117bcd13820c" name="a5ebda776fc3dfd10e923117bcd13820c"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>banner</b> {}</td></tr>
-<tr class="memdesc:a5ebda776fc3dfd10e923117bcd13820c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The user's banner hash. <br /></td></tr>
-<tr class="separator:a5ebda776fc3dfd10e923117bcd13820c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a3c30806e2797dcbfd04584a2fca659"><td class="memItemLeft" align="right" valign="top"><a id="a4a3c30806e2797dcbfd04584a2fca659" name="a4a3c30806e2797dcbfd04584a2fca659"></a>
+<tr class="memdesc:a5ebda776fc3dfd10e923117bcd13820c inherit pub_attribs_a03577"><td class="mdescLeft">&#160;</td><td class="mdescRight">The user's banner hash. <br /></td></tr>
+<tr class="separator:a5ebda776fc3dfd10e923117bcd13820c inherit pub_attribs_a03577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a3c30806e2797dcbfd04584a2fca659 inherit pub_attribs_a03577"><td class="memItemLeft" align="right" valign="top"><a id="a4a3c30806e2797dcbfd04584a2fca659" name="a4a3c30806e2797dcbfd04584a2fca659"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>email</b> {}</td></tr>
-<tr class="memdesc:a4a3c30806e2797dcbfd04584a2fca659"><td class="mdescLeft">&#160;</td><td class="mdescRight">The user's email. <br /></td></tr>
-<tr class="separator:a4a3c30806e2797dcbfd04584a2fca659"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56fd6aed59c14412d56cc265ffb21644"><td class="memItemLeft" align="right" valign="top"><a id="a56fd6aed59c14412d56cc265ffb21644" name="a56fd6aed59c14412d56cc265ffb21644"></a>
+<tr class="memdesc:a4a3c30806e2797dcbfd04584a2fca659 inherit pub_attribs_a03577"><td class="mdescLeft">&#160;</td><td class="mdescRight">The user's email. <br /></td></tr>
+<tr class="separator:a4a3c30806e2797dcbfd04584a2fca659 inherit pub_attribs_a03577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56fd6aed59c14412d56cc265ffb21644 inherit pub_attribs_a03577"><td class="memItemLeft" align="right" valign="top"><a id="a56fd6aed59c14412d56cc265ffb21644" name="a56fd6aed59c14412d56cc265ffb21644"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>locale</b> {}</td></tr>
-<tr class="memdesc:a56fd6aed59c14412d56cc265ffb21644"><td class="mdescLeft">&#160;</td><td class="mdescRight">The user' s chosen language option. <br /></td></tr>
-<tr class="separator:a56fd6aed59c14412d56cc265ffb21644"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af05a76dd8fb484b3c46129ce469b30d0"><td class="memItemLeft" align="right" valign="top"><a id="af05a76dd8fb484b3c46129ce469b30d0" name="af05a76dd8fb484b3c46129ce469b30d0"></a>
+<tr class="memdesc:a56fd6aed59c14412d56cc265ffb21644 inherit pub_attribs_a03577"><td class="mdescLeft">&#160;</td><td class="mdescRight">The user' s chosen language option. <br /></td></tr>
+<tr class="separator:a56fd6aed59c14412d56cc265ffb21644 inherit pub_attribs_a03577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af05a76dd8fb484b3c46129ce469b30d0 inherit pub_attribs_a03577"><td class="memItemLeft" align="right" valign="top"><a id="af05a76dd8fb484b3c46129ce469b30d0" name="af05a76dd8fb484b3c46129ce469b30d0"></a>
 <a class="el" href="../../dd/d94/a00888.html#ga20b0597c0eb18775ccf99082c4c425d1">PremiumType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>premiumType</b> {}</td></tr>
-<tr class="memdesc:af05a76dd8fb484b3c46129ce469b30d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of Nitro subscription on a user ' s account. <br /></td></tr>
-<tr class="separator:af05a76dd8fb484b3c46129ce469b30d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:af05a76dd8fb484b3c46129ce469b30d0 inherit pub_attribs_a03577"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of Nitro subscription on a user ' s account. <br /></td></tr>
+<tr class="separator:af05a76dd8fb484b3c46129ce469b30d0 inherit pub_attribs_a03577"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_a02293"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_a02293')"><img src="../../closed.png" alt="-"/>&#160;Public Data Members inherited from <a class="el" href="../../dd/dc5/a02293.html">DiscordCoreAPI::UserData</a></td></tr>
 <tr class="memitem:ab0fc8b0700c4d21969504329595888f1 inherit pub_attribs_a02293"><td class="memItemLeft" align="right" valign="top"><a id="ab0fc8b0700c4d21969504329595888f1" name="ab0fc8b0700c4d21969504329595888f1"></a>
 StringWrapper&#160;</td><td class="memItemRight" valign="bottom"><b>avatar</b> {}</td></tr>
@@ -161,17 +176,52 @@ StringWrapper&#160;</td><td class="memItemRight" valign="bottom"><b>userName</b>
 <tr class="inherit_header pub_attribs_a02285"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_a02285')"><img src="../../closed.png" alt="-"/>&#160;Public Data Members inherited from <a class="el" href="../../df/d4d/a02285.html">DiscordCoreAPI::DiscordEntity</a></td></tr>
 <tr class="memitem:a903c33f2f50e17293b409cfe33bcd5e9 inherit pub_attribs_a02285"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d4d/a02285.html#a903c33f2f50e17293b409cfe33bcd5e9">id</a> {}</td></tr>
 <tr class="separator:a903c33f2f50e17293b409cfe33bcd5e9 inherit pub_attribs_a02285"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_methods_a02285"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a02285')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../df/d4d/a02285.html">DiscordCoreAPI::DiscordEntity</a></td></tr>
-<tr class="memitem:a880fa695445dc41f6d371d2a6ef1e8c0 inherit pub_methods_a02285"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d4d/a02285.html#a880fa695445dc41f6d371d2a6ef1e8c0">getCreatedAtTimestamp</a> (<a class="el" href="../../d7/d92/a00887.html#ga5f837e6437665f0a390fe2c6271e3a91">TimeFormat</a> timeFormat)</td></tr>
-<tr class="memdesc:a880fa695445dc41f6d371d2a6ef1e8c0 inherit pub_methods_a02285"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the snowflake-id into a time and date stamp.  <a href="../../df/d4d/a02285.html#a880fa695445dc41f6d371d2a6ef1e8c0">More...</a><br /></td></tr>
-<tr class="separator:a880fa695445dc41f6d371d2a6ef1e8c0 inherit pub_methods_a02285"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a5eeec46e2c648796f043b04422349cd3" name="a5eeec46e2c648796f043b04422349cd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5eeec46e2c648796f043b04422349cd3">&#9670;&nbsp;</a></span>updatePresence()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DiscordCoreAPI::BotUser::updatePresence </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d72/a03549.html">UpdatePresenceData</a> &amp;&#160;</td>
+          <td class="paramname"><em>dataPackage</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Updates the bot's current activity status, to be viewed by others in the same server as the bot. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../dd/db2/a00866_source.html#l00123">123</a> of file <a class="el" href="../../dd/db2/a00866_source.html">UserEntities.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a153ffd093382c85633829194c195360a" name="a153ffd093382c85633829194c195360a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a153ffd093382c85633829194c195360a">&#9670;&nbsp;</a></span>updateVoiceStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DiscordCoreAPI::BotUser::updateVoiceStatus </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d3/d27/a02453.html">UpdateVoiceStateData</a> &amp;&#160;</td>
+          <td class="paramname"><em>datdataPackageaPackage</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Updates the bot's current voice-status. Joins/leaves a <a class="el" href="../../da/d76/a01941.html" title="A Channel object.">Channel</a>, and/or self deafens/mutes. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../dd/db2/a00866_source.html#l00103">103</a> of file <a class="el" href="../../dd/db2/a00866_source.html">UserEntities.cpp</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="../../d3/d2c/a00764_source.html">UserEntities.hpp</a></li>
-<li><a class="el" href="../../df/d0e/a00800_source.html">DataParsingFunctions.cpp</a></li>
 <li><a class="el" href="../../dd/db2/a00866_source.html">UserEntities.cpp</a></li>
 </ul>
 </div><!-- contents -->
@@ -180,7 +230,7 @@ Additional Inherited Members</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d0/d92/a03585.html">User</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d0/d92/a03585.html">BotUser</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

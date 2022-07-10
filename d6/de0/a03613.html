@@ -105,29 +105,37 @@ $(document).ready(function(){initNavTree('d6/de0/a03613.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../df/d0b/a03610.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::ShardingOptions Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::CacheOptions Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Sharding options for the library.  
+<p>For selecting the caching style of the library.  
  <a href="../../d6/de0/a03613.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d5/dae/a00767_source.html">Utilities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:ab793f231bd27a906e5e69e384082a884"><td class="memItemLeft" align="right" valign="top"><a id="ab793f231bd27a906e5e69e384082a884" name="ab793f231bd27a906e5e69e384082a884"></a>
-int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>numberOfShardsForThisProcess</b> { 1 }</td></tr>
-<tr class="memdesc:ab793f231bd27a906e5e69e384082a884"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of shards to launch on the current process. <br /></td></tr>
-<tr class="separator:ab793f231bd27a906e5e69e384082a884"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af08286df09d610c2df2a1dd6bc4d8fb0"><td class="memItemLeft" align="right" valign="top"><a id="af08286df09d610c2df2a1dd6bc4d8fb0" name="af08286df09d610c2df2a1dd6bc4d8fb0"></a>
-int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>startingShard</b> { 0 }</td></tr>
-<tr class="memdesc:af08286df09d610c2df2a1dd6bc4d8fb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The first shard to start on this process. <br /></td></tr>
-<tr class="separator:af08286df09d610c2df2a1dd6bc4d8fb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae44c80e287a2702d8ce164e90ddceb3c"><td class="memItemLeft" align="right" valign="top"><a id="ae44c80e287a2702d8ce164e90ddceb3c" name="ae44c80e287a2702d8ce164e90ddceb3c"></a>
-int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>totalNumberOfShards</b> { 1 }</td></tr>
-<tr class="memdesc:ae44c80e287a2702d8ce164e90ddceb3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The total number of shards that will be launched across all processes. <br /></td></tr>
-<tr class="separator:ae44c80e287a2702d8ce164e90ddceb3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03ce5155f9329e01777eb58df32f09a8"><td class="memItemLeft" align="right" valign="top"><a id="a03ce5155f9329e01777eb58df32f09a8" name="a03ce5155f9329e01777eb58df32f09a8"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>cacheChannels</b> { true }</td></tr>
+<tr class="memdesc:a03ce5155f9329e01777eb58df32f09a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do we cache <a class="el" href="../../d9/d97/a01953.html" title="An interface class for the Channel related endpoints.">Channels</a>? <br /></td></tr>
+<tr class="separator:a03ce5155f9329e01777eb58df32f09a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cb85b3ee028d76c1724ef07969c6f11"><td class="memItemLeft" align="right" valign="top"><a id="a4cb85b3ee028d76c1724ef07969c6f11" name="a4cb85b3ee028d76c1724ef07969c6f11"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>cacheGuildMembers</b> { true }</td></tr>
+<tr class="memdesc:a4cb85b3ee028d76c1724ef07969c6f11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do we cache <a class="el" href="../../d6/def/a03033.html" title="An interface class for the GuildMember related Discord endpoints.">GuildMembers</a>? <br /></td></tr>
+<tr class="separator:a4cb85b3ee028d76c1724ef07969c6f11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75daaa749e6fc1776ee6e704e628173e"><td class="memItemLeft" align="right" valign="top"><a id="a75daaa749e6fc1776ee6e704e628173e" name="a75daaa749e6fc1776ee6e704e628173e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>cacheGuilds</b> { true }</td></tr>
+<tr class="memdesc:a75daaa749e6fc1776ee6e704e628173e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do we cache <a class="el" href="../../d4/d69/a02989.html" title="An interface class for the Guild related Discord endpoints.">Guilds</a>? <br /></td></tr>
+<tr class="separator:a75daaa749e6fc1776ee6e704e628173e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ca359d47d90cd2e057cdd36baff3d6d"><td class="memItemLeft" align="right" valign="top"><a id="a1ca359d47d90cd2e057cdd36baff3d6d" name="a1ca359d47d90cd2e057cdd36baff3d6d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>cacheRoles</b> { true }</td></tr>
+<tr class="memdesc:a1ca359d47d90cd2e057cdd36baff3d6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do we cache <a class="el" href="../../d6/df3/a03349.html" title="An interface class for the Role related Discord endpoints.">Roles</a>? <br /></td></tr>
+<tr class="separator:a1ca359d47d90cd2e057cdd36baff3d6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a921da3e80c8b89da1d2b8e9732a4bdca"><td class="memItemLeft" align="right" valign="top"><a id="a921da3e80c8b89da1d2b8e9732a4bdca" name="a921da3e80c8b89da1d2b8e9732a4bdca"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>cacheUsers</b> { true }</td></tr>
+<tr class="memdesc:a921da3e80c8b89da1d2b8e9732a4bdca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do we cache <a class="el" href="../../d1/d3c/a03589.html" title="An interface class for the User related Discord endpoints.">Users</a>? <br /></td></tr>
+<tr class="separator:a921da3e80c8b89da1d2b8e9732a4bdca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d5/dae/a00767_source.html">Utilities.hpp</a></li>
@@ -138,7 +146,7 @@ int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>totalNumberOfShard
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d6/de0/a03613.html">ShardingOptions</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d6/de0/a03613.html">CacheOptions</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

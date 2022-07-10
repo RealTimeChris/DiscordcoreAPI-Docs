@@ -102,11 +102,11 @@ $(document).ready(function(){initNavTree('da/d0c/a07262.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Getting Current User Authorization Info </div></div>
+  <div class="headertitle"><div class="title">Modifying Current User's Voice State </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_User_Stuff_Getting_Current_User_Authorization_Info"></a></p><ul>
-<li>Execute the, <code><a class="el" href="../../de/d3a/a03597.html#af099e89c0325aa00cd58515be7aa715e" title="Collects the Authorization info associated with the current Bot.">DiscordCoreAPI::Users::getCurrentUserAuthorizationInfoAsync()</a></code> function, with a return value of type <code>auto</code> or <code><a class="el" href="../../de/dcb/a02469.html" title="Authorization info structure.">DiscordCoreAPI::AuthorizationInfoData</a></code>.</li>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_User_Stuff_Modifying_Current_User_s_Voice_State"></a></p><ul>
+<li>Execute the, <code><a class="el" href="../../d1/d3c/a03589.html#a7f4ee5a5c8cab3d22592b8d369add287" title="Sets the bot&#39;s current voice state.">DiscordCoreAPI::Users::modifyCurrentUserVoiceStateAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../df/df7/a03561.html" title="For updating the bot&#39;s current voice state.">DiscordCoreAPI::ModifyCurrentUserVoiceStateData</a></code>, with a return value of type <code>void</code>.</li>
 <li>Call the function with <code>.get()</code> added to the end in order to wait for the results now.</li>
 </ul>
 <div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
@@ -131,36 +131,44 @@ $(document).ready(function(){initNavTree('da/d0c/a07262.html','../../'); initRes
 <div class="line">            this-&gt;helpEmbed = msgEmbed;</div>
 <div class="line">        }</div>
 <div class="line"> </div>
-<div class="line">        std::unique_ptr&lt;DiscordCoreAPI::BaseFunction&gt; create() {</div>
+<div class="line">        unique_ptr&lt;DiscordCoreAPI::BaseFunction&gt; create() {</div>
 <div class="line">            <span class="keywordflow">return</span> std::make_unique&lt;Test&gt;();</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../d0/d2b/a02833.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
 <div class="line">            <span class="keywordflow">try</span> {</div>
-<div class="line">                <span class="keyword">auto</span> responseData = <a class="code hl_function" href="../../de/d3a/a03597.html#af099e89c0325aa00cd58515be7aa715e">DiscordCoreAPI::Users::getCurrentUserAuthorizationInfoAsync</a>().get();</div>
+<div class="line">                <a class="code hl_struct" href="../../df/df7/a03561.html">DiscordCoreAPI::ModifyCurrentUserVoiceStateData</a> dataPackage;</div>
+<div class="line">                dataPackage.<a class="code hl_variable" href="../../df/df7/a03561.html#a4b397b5eb2f6198fdb19d0481c96f79c">guildId</a> = args.eventData.<a class="code hl_function" href="../../d9/d95/a02781.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
+<div class="line">                dataPackage.<a class="code hl_variable" href="../../df/df7/a03561.html#a2f2074ac5b91f863865413439eff47ca">channelId</a> = args.eventData.<a class="code hl_function" href="../../d9/d95/a02781.html#a97c397fe274250bfff73cf674810a8f5">getChannelId</a>();</div>
+<div class="line">                dataPackage.<a class="code hl_variable" href="../../df/df7/a03561.html#ae0e5c3ef1f543c9d6bd637246896bbb0">suppress</a> = <span class="keyword">false</span>;</div>
 <div class="line"> </div>
-<div class="line">                cout &lt;&lt; <span class="stringliteral">&quot;THE NAME: &quot;</span> &lt;&lt; responseData.user.userName &lt;&lt; endl;</div>
+<div class="line">                <a class="code hl_function" href="../../d1/d3c/a03589.html#a7f4ee5a5c8cab3d22592b8d369add287">DiscordCoreAPI::Users::modifyCurrentUserVoiceStateAsync</a>(dataPackage).<a class="code hl_function" href="../../d5/d92/a01977.html#a904d030f3edbf8efac15b2cebba3e37a">get</a>();</div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line">            } <span class="keywordflow">catch</span> (...) {</div>
 <div class="line">                rethrowException(<span class="stringliteral">&quot;Test::execute()&quot;</span>);</div>
 <div class="line">            }</div>
 <div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">        <span class="keyword">virtual</span> ~Test() = <span class="keywordflow">default</span>;</div>
 <div class="line">    };</div>
 <div class="line">}</div>
 <div class="ttc" id="aa00725_html"><div class="ttname"><a href="../../d8/db9/a00725.html">Index.hpp</a></div></div>
 <div class="ttc" id="aa00888_html_ga63ce723358a8b7a00c14e055f2a26998"><div class="ttname"><a href="../../dd/d94/a00888.html#ga63ce723358a8b7a00c14e055f2a26998">DiscordCoreAPI::getTimeAndDate</a></div><div class="ttdeci">DiscordCoreAPI_Dll std::string getTimeAndDate()</div><div class="ttdoc">Acquires a timestamp with the current time and date - suitable for use in message-embeds.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/a00869_source.html#l01085">Utilities.cpp:1085</a></div></div>
 <div class="ttc" id="aa00890_html"><div class="ttname"><a href="../../d7/d46/a00890.html">DiscordCoreAPI</a></div><div class="ttdoc">The main namespace for this library.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00025">ApplicationCommandEntities.hpp:25</a></div></div>
-<div class="ttc" id="aa02329_html"><div class="ttname"><a href="../../d0/d71/a02329.html">DiscordCoreAPI::EmbedData</a></div><div class="ttdoc">Embed data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l00600">FoundationEntities.hpp:600</a></div></div>
+<div class="ttc" id="aa01977_html_a904d030f3edbf8efac15b2cebba3e37a"><div class="ttname"><a href="../../d5/d92/a01977.html#a904d030f3edbf8efac15b2cebba3e37a">DiscordCoreAPI::CoRoutine&lt; void &gt;::get</a></div><div class="ttdeci">void get()</div><div class="ttdoc">Gets the resulting value of the CoRoutine.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5b/a00695_source.html#l00303">CoRoutine.hpp:303</a></div></div>
+<div class="ttc" id="aa02329_html"><div class="ttname"><a href="../../d0/d71/a02329.html">DiscordCoreAPI::EmbedData</a></div><div class="ttdoc">Embed data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l00599">FoundationEntities.hpp:599</a></div></div>
 <div class="ttc" id="aa02329_html_a20ca60ec3235f44a223f3d3b687c0c9e"><div class="ttname"><a href="../../d0/d71/a02329.html#a20ca60ec3235f44a223f3d3b687c0c9e">DiscordCoreAPI::EmbedData::setTitle</a></div><div class="ttdeci">EmbedData &amp; setTitle(const std::string &amp;titleNew)</div><div class="ttdoc">Sets the title of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2d/a00815_source.html#l00362">FoundationEntities.cpp:362</a></div></div>
 <div class="ttc" id="aa02329_html_a9d4066a4861408bc00eccb22a12db7f9"><div class="ttname"><a href="../../d0/d71/a02329.html#a9d4066a4861408bc00eccb22a12db7f9">DiscordCoreAPI::EmbedData::setDescription</a></div><div class="ttdeci">EmbedData &amp; setDescription(const std::string &amp;descriptionNew)</div><div class="ttdoc">Sets the description (the main contents) of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2d/a00815_source.html#l00347">FoundationEntities.cpp:347</a></div></div>
 <div class="ttc" id="aa02329_html_ab417d83fddf9df80eca98e9ec6e888aa"><div class="ttname"><a href="../../d0/d71/a02329.html#ab417d83fddf9df80eca98e9ec6e888aa">DiscordCoreAPI::EmbedData::setColor</a></div><div class="ttdeci">EmbedData &amp; setColor(const std::string &amp;hexColorValueNew)</div><div class="ttdoc">Sets the color of the embed, by applying a hex-color value.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2d/a00815_source.html#l00352">FoundationEntities.cpp:352</a></div></div>
 <div class="ttc" id="aa02329_html_ae356e6dc3c93658b7228b56da3187896"><div class="ttname"><a href="../../d0/d71/a02329.html#ae356e6dc3c93658b7228b56da3187896">DiscordCoreAPI::EmbedData::setTimeStamp</a></div><div class="ttdeci">EmbedData &amp; setTimeStamp(const std::string &amp;timeStamp)</div><div class="ttdoc">Sets the timestamp on the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2d/a00815_source.html#l00333">FoundationEntities.cpp:333</a></div></div>
-<div class="ttc" id="aa02833_html"><div class="ttname"><a href="../../d0/d2b/a02833.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03800">FoundationEntities.hpp:3800</a></div></div>
-<div class="ttc" id="aa02837_html"><div class="ttname"><a href="../../dc/dfd/a02837.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03811">FoundationEntities.hpp:3811</a></div></div>
-<div class="ttc" id="aa03597_html_af099e89c0325aa00cd58515be7aa715e"><div class="ttname"><a href="../../de/d3a/a03597.html#af099e89c0325aa00cd58515be7aa715e">DiscordCoreAPI::Users::getCurrentUserAuthorizationInfoAsync</a></div><div class="ttdeci">static CoRoutine&lt; AuthorizationInfoData &gt; getCurrentUserAuthorizationInfoAsync()</div><div class="ttdoc">Collects the Authorization info associated with the current Bot.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/db2/a00866_source.html#l00253">UserEntities.cpp:253</a></div></div>
+<div class="ttc" id="aa02781_html_a565fe2447237030a716f64b2599996dd"><div class="ttname"><a href="../../d9/d95/a02781.html#a565fe2447237030a716f64b2599996dd">DiscordCoreAPI::InputEventData::getGuildId</a></div><div class="ttdeci">Snowflake getGuildId()</div><div class="ttdoc">Returns the Guild id, of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2d/a00815_source.html#l01599">FoundationEntities.cpp:1599</a></div></div>
+<div class="ttc" id="aa02781_html_a97c397fe274250bfff73cf674810a8f5"><div class="ttname"><a href="../../d9/d95/a02781.html#a97c397fe274250bfff73cf674810a8f5">DiscordCoreAPI::InputEventData::getChannelId</a></div><div class="ttdeci">Snowflake getChannelId()</div><div class="ttdoc">Returns the Channel id of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2d/a00815_source.html#l01591">FoundationEntities.cpp:1591</a></div></div>
+<div class="ttc" id="aa02833_html"><div class="ttname"><a href="../../d0/d2b/a02833.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03789">FoundationEntities.hpp:3789</a></div></div>
+<div class="ttc" id="aa02837_html"><div class="ttname"><a href="../../dc/dfd/a02837.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03800">FoundationEntities.hpp:3800</a></div></div>
+<div class="ttc" id="aa03561_html"><div class="ttname"><a href="../../df/df7/a03561.html">DiscordCoreAPI::ModifyCurrentUserVoiceStateData</a></div><div class="ttdoc">For updating the bot's current voice state.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d2c/a00764_source.html#l00059">UserEntities.hpp:59</a></div></div>
+<div class="ttc" id="aa03561_html_a2f2074ac5b91f863865413439eff47ca"><div class="ttname"><a href="../../df/df7/a03561.html#a2f2074ac5b91f863865413439eff47ca">DiscordCoreAPI::ModifyCurrentUserVoiceStateData::channelId</a></div><div class="ttdeci">Snowflake channelId</div><div class="ttdoc">The id of the Channel the user is currently in.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d2c/a00764_source.html#l00061">UserEntities.hpp:61</a></div></div>
+<div class="ttc" id="aa03561_html_a4b397b5eb2f6198fdb19d0481c96f79c"><div class="ttname"><a href="../../df/df7/a03561.html#a4b397b5eb2f6198fdb19d0481c96f79c">DiscordCoreAPI::ModifyCurrentUserVoiceStateData::guildId</a></div><div class="ttdeci">Snowflake guildId</div><div class="ttdoc">The Guild within which to update the bot's voice state.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d2c/a00764_source.html#l00063">UserEntities.hpp:63</a></div></div>
+<div class="ttc" id="aa03561_html_ae0e5c3ef1f543c9d6bd637246896bbb0"><div class="ttname"><a href="../../df/df7/a03561.html#ae0e5c3ef1f543c9d6bd637246896bbb0">DiscordCoreAPI::ModifyCurrentUserVoiceStateData::suppress</a></div><div class="ttdeci">bool suppress</div><div class="ttdoc">Toggles the user's suppress state.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d2c/a00764_source.html#l00062">UserEntities.hpp:62</a></div></div>
+<div class="ttc" id="aa03589_html_a7f4ee5a5c8cab3d22592b8d369add287"><div class="ttname"><a href="../../d1/d3c/a03589.html#a7f4ee5a5c8cab3d22592b8d369add287">DiscordCoreAPI::Users::modifyCurrentUserVoiceStateAsync</a></div><div class="ttdeci">static CoRoutine&lt; void &gt; modifyCurrentUserVoiceStateAsync(ModifyCurrentUserVoiceStateData dataPackage)</div><div class="ttdoc">Sets the bot's current voice state.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/db2/a00866_source.html#l00170">UserEntities.cpp:170</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -168,7 +176,7 @@ $(document).ready(function(){initNavTree('da/d0c/a07262.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d8/dcd/a07055.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d9/d8e/a07077.html">User Stuff</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../de/dd7/a07051.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d4/db7/a07073.html">User Stuff</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
