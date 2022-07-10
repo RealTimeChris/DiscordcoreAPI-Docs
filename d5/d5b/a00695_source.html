@@ -128,87 +128,87 @@ $(document).ready(function(){initNavTree('d5/d5b/a00695_source.html','../../'); 
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;<a class="code" href="../../d4/deb/a00710.html">discordcoreapi/FoundationEntities.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;<a class="code" href="../../d3/d4f/a00761.html">discordcoreapi/ThreadPool.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d7/d46/a00890.html">DiscordCoreAPI</a> {<span class="comment"></span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">    /**</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">     * \addtogroup utilities</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">     * @{</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">     */</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment"></span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">    /// The current status of the associated CoRoutine. \brief The current status of the associated CoRoutine.</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="../../d7/d92/a00887.html#ga422a91ba942835ea1809a91d1fe1e1d5">   32</a></span><span class="comment"></span>    <span class="keyword">enum class</span> <a class="code hl_enumeration" href="../../d7/d92/a00887.html#ga422a91ba942835ea1809a91d1fe1e1d5">CoRoutineStatus</a> {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <a class="code hl_enumvalue" href="../../d7/d92/a00887.html#gga422a91ba942835ea1809a91d1fe1e1d5ae599161956d626eda4cb0a5ffb85271c">Idle</a> = 0,<span class="comment">///&lt; Idle.</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <a class="code hl_enumvalue" href="../../d7/d92/a00887.html#gga422a91ba942835ea1809a91d1fe1e1d5a5bda814c4aedb126839228f1a3d92f09">Running</a> = 1,<span class="comment">///&lt; Running.</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <a class="code hl_enumvalue" href="../../d7/d92/a00887.html#gga422a91ba942835ea1809a91d1fe1e1d5aae94f80b3ce82062a5dd7815daa04f9d">Complete</a> = 2,<span class="comment">///&lt; Complete.</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <a class="code hl_enumvalue" href="../../d7/d92/a00887.html#gga422a91ba942835ea1809a91d1fe1e1d5aa149e85a44aeec9140e92733d9ed694e">Cancelled</a> = 3<span class="comment">///&lt; Cancelled.</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    };</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment"></span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">    /// An error type for CoRoutines. \brief An error type for CoRoutines.</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../d2/d23/a01961.html">   40</a></span><span class="comment"></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../d2/d23/a01961.html">CoRoutineError</a> : <span class="keyword">public</span> std::runtime_error {</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <a class="code hl_struct" href="../../d2/d23/a01961.html">CoRoutineError</a>(<span class="keyword">const</span> std::string&amp; theMessage) : std::runtime_error(theMessage){};</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    };</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">class </span>DiscordCoreAPI_Dll CoRoutineBase {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>      <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keyword">inline</span> <span class="keyword">static</span> DiscordCoreInternal::CoRoutineThreadPool threadPool{};</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keyword">virtual</span> ~CoRoutineBase() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    };</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment"></span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">    /// A CoRoutine - representing a potentially asynchronous operation/function. \brief A CoRoutine - representing a potentially asynchronous operation/function.</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">    /// \tparam ReturnType The type of parameter that is returned by the CoRoutine.</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="../../db/d49/a01969.html">   52</a></span><span class="comment"></span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ReturnType&gt; <span class="keyword">class </span><a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine</a> : <span class="keyword">public</span> CoRoutineBase {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>      <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keyword">class </span>promise_type {</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>          <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ReturnType02&gt; <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine</a>;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <span class="keywordtype">void</span> requestStop() {</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                this-&gt;areWeStoppedBool.store(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            }</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="keywordtype">bool</span> areWeStopped() {</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                <span class="keywordflow">return</span> this-&gt;areWeStoppedBool.load();</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            }</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <span class="keywordtype">void</span> return_value(ReturnType&amp;&amp; at) {</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                *this-&gt;result = std::move(at);</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            }</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <span class="keywordtype">void</span> return_value(ReturnType&amp; at) {</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                *this-&gt;result = at;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            }</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <span class="keyword">auto</span> get_return_object() {</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                <span class="keywordflow">return</span> <a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine&lt;ReturnType&gt;</a>{ std::coroutine_handle&lt;CoRoutine&lt;ReturnType&gt;::promise_type&gt;::from_promise(*<span class="keyword">this</span>) };</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            }</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            <span class="keyword">auto</span> initial_suspend() {</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                <span class="keywordflow">return</span> std::suspend_never{};</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            }</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keyword">auto</span> final_suspend() <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                this-&gt;areWeDone.store(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                <span class="keywordflow">return</span> std::suspend_always{};</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            }</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            <span class="keywordtype">void</span> unhandled_exception() {</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                this-&gt;exceptionBuffer.send(std::current_exception());</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            }</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>          <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            <a class="code hl_class" href="../../d3/d63/a03637.html">UnboundedMessageBlock&lt;std::exception_ptr&gt;</a> exceptionBuffer{};</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            std::atomic_bool areWeStoppedBool{ <span class="keyword">false</span> };</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            std::atomic_bool areWeDone{ <span class="keyword">false</span> };</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            ReturnType* result{};</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        };</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine&lt;ReturnType&gt;</a>&amp; operator=(<a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine&lt;ReturnType&gt;</a>&amp;&amp; other) <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            <span class="keywordflow">if</span> (<span class="keyword">this</span> != &amp;other) {</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                this-&gt;coroutineHandle = other.coroutineHandle;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                other.coroutineHandle = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                this-&gt;exceptionBuffer = &amp;this-&gt;coroutineHandle.promise().exceptionBuffer;</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                this-&gt;areWeDone = &amp;this-&gt;coroutineHandle.promise().areWeDone;</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                this-&gt;coroutineHandle.promise().result = &amp;this-&gt;result;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;coroutine&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d7/d46/a00890.html">DiscordCoreAPI</a> {<span class="comment"></span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">    /**</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">     * \addtogroup utilities</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">     * @{</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment"></span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">    /// The current status of the associated CoRoutine. \brief The current status of the associated CoRoutine.</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../d7/d92/a00887.html#ga422a91ba942835ea1809a91d1fe1e1d5">   33</a></span><span class="comment"></span>    <span class="keyword">enum class</span> <a class="code hl_enumeration" href="../../d7/d92/a00887.html#ga422a91ba942835ea1809a91d1fe1e1d5">CoRoutineStatus</a> {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <a class="code hl_enumvalue" href="../../d7/d92/a00887.html#gga422a91ba942835ea1809a91d1fe1e1d5ae599161956d626eda4cb0a5ffb85271c">Idle</a> = 0,<span class="comment">///&lt; Idle.</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <a class="code hl_enumvalue" href="../../d7/d92/a00887.html#gga422a91ba942835ea1809a91d1fe1e1d5a5bda814c4aedb126839228f1a3d92f09">Running</a> = 1,<span class="comment">///&lt; Running.</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <a class="code hl_enumvalue" href="../../d7/d92/a00887.html#gga422a91ba942835ea1809a91d1fe1e1d5aae94f80b3ce82062a5dd7815daa04f9d">Complete</a> = 2,<span class="comment">///&lt; Complete.</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <a class="code hl_enumvalue" href="../../d7/d92/a00887.html#gga422a91ba942835ea1809a91d1fe1e1d5aa149e85a44aeec9140e92733d9ed694e">Cancelled</a> = 3<span class="comment">///&lt; Cancelled.</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    };</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment"></span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">    /// An error type for CoRoutines. \brief An error type for CoRoutines.</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="../../d2/d23/a01961.html">   41</a></span><span class="comment"></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../d2/d23/a01961.html">CoRoutineError</a> : <span class="keyword">public</span> std::runtime_error {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <a class="code hl_struct" href="../../d2/d23/a01961.html">CoRoutineError</a>(<span class="keyword">const</span> std::string&amp; theMessage) : std::runtime_error(theMessage){};</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    };</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">class </span>DiscordCoreAPI_Dll CoRoutineBase {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>      <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keyword">inline</span> <span class="keyword">static</span> DiscordCoreInternal::CoRoutineThreadPool threadPool{};</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keyword">virtual</span> ~CoRoutineBase() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    };</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment"></span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">    /// A CoRoutine - representing a potentially asynchronous operation/function. \brief A CoRoutine - representing a potentially asynchronous operation/function.</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">    /// \tparam ReturnType The type of parameter that is returned by the CoRoutine.</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="../../db/d49/a01969.html">   53</a></span><span class="comment"></span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ReturnType&gt; <span class="keyword">class </span><a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine</a> : <span class="keyword">public</span> CoRoutineBase {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>      <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keyword">class </span>promise_type {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>          <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ReturnType02&gt; <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine</a>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <span class="keywordtype">void</span> requestStop() {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                this-&gt;areWeStoppedBool.store(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            }</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            <span class="keywordtype">bool</span> areWeStopped() {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                <span class="keywordflow">return</span> this-&gt;areWeStoppedBool.load();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <span class="keywordtype">void</span> return_value(ReturnType&amp;&amp; at) {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                this-&gt;result = std::move(at);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <span class="keywordtype">void</span> return_value(ReturnType&amp; at) {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                this-&gt;result = at;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <span class="keyword">auto</span> get_return_object() {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                <span class="keywordflow">return</span> <a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine&lt;ReturnType&gt;</a>{ std::coroutine_handle&lt;CoRoutine&lt;ReturnType&gt;::promise_type&gt;::from_promise(*<span class="keyword">this</span>) };</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            <span class="keyword">auto</span> initial_suspend() {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                <span class="keywordflow">return</span> std::suspend_never{};</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            <span class="keyword">auto</span> final_suspend() <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                this-&gt;areWeDone.store(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                <span class="keywordflow">return</span> std::suspend_always{};</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            <span class="keywordtype">void</span> unhandled_exception() {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                this-&gt;exceptionBuffer.send(std::current_exception());</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            }</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>          <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            <a class="code hl_class" href="../../d3/d63/a03637.html">UnboundedMessageBlock&lt;std::exception_ptr&gt;</a> exceptionBuffer{};</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            std::atomic_bool areWeStoppedBool{ <span class="keyword">false</span> };</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            std::atomic_bool areWeDone{ <span class="keyword">false</span> };</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            ReturnType result{};</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        };</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine&lt;ReturnType&gt;</a>&amp; operator=(<a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine&lt;ReturnType&gt;</a>&amp;&amp; other) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            <span class="keywordflow">if</span> (<span class="keyword">this</span> != &amp;other) {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                this-&gt;coroutineHandle = other.coroutineHandle;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                other.coroutineHandle = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                this-&gt;exceptionBuffer = &amp;this-&gt;coroutineHandle.promise().exceptionBuffer;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                this-&gt;areWeDone = &amp;this-&gt;coroutineHandle.promise().areWeDone;</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                this-&gt;currentStatus = other.currentStatus;</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                other.currentStatus = <a class="code hl_enumvalue" href="../../d7/d92/a00887.html#gga422a91ba942835ea1809a91d1fe1e1d5aa149e85a44aeec9140e92733d9ed694e">CoRoutineStatus::Cancelled</a>;</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            }</div>
@@ -231,46 +231,46 @@ $(document).ready(function(){initNavTree('d5/d5b/a00695_source.html','../../'); 
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            this-&gt;coroutineHandle = coroutineHandleNew;</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            this-&gt;exceptionBuffer = &amp;this-&gt;coroutineHandle.promise().exceptionBuffer;</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            this-&gt;areWeDone = &amp;this-&gt;coroutineHandle.promise().areWeDone;</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            this-&gt;coroutineHandle.promise().result = &amp;this-&gt;result;</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        }</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine</a>(std::coroutine_handle&lt;<a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine&lt;ReturnType&gt;::promise_type</a>&gt; coroutineHandleNew) {</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            *<span class="keyword">this</span> = coroutineHandleNew;</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        };</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <a class="code hl_class" href="../../db/d49/a01969.html">~CoRoutine</a>() {</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            <span class="keywordflow">if</span> (<span class="keyword">this</span> &amp;&amp; this-&gt;coroutineHandle) {</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                <span class="keywordflow">if</span> (this-&gt;coroutineHandle.done()) {</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                    this-&gt;coroutineHandle.destroy();</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>                }</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>            }</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        }</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="comment"></span> </div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="comment">        /// Collects the status of the CoRoutine. \brief Collects the status of the CoRoutine.</span></div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="comment">        /// \returns DiscordCoreAPI::CoRoutineStatus The status of the CoRoutine.</span></div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="../../db/d49/a01969.html#a282f0c3595d985cfa1bfe00828627f99">  145</a></span><span class="comment"></span>        <a class="code hl_enumeration" href="../../d7/d92/a00887.html#ga422a91ba942835ea1809a91d1fe1e1d5">CoRoutineStatus</a> <a class="code hl_function" href="../../db/d49/a01969.html#a282f0c3595d985cfa1bfe00828627f99">getStatus</a>() {</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            <span class="keywordflow">if</span> (!this-&gt;coroutineHandle) {</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                this-&gt;currentStatus = <a class="code hl_enumvalue" href="../../d7/d92/a00887.html#gga422a91ba942835ea1809a91d1fe1e1d5aa149e85a44aeec9140e92733d9ed694e">CoRoutineStatus::Cancelled</a>;</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (this-&gt;coroutineHandle &amp;&amp; !this-&gt;coroutineHandle.done()) {</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                this-&gt;currentStatus = <a class="code hl_enumvalue" href="../../d7/d92/a00887.html#gga422a91ba942835ea1809a91d1fe1e1d5a5bda814c4aedb126839228f1a3d92f09">CoRoutineStatus::Running</a>;</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (this-&gt;coroutineHandle &amp;&amp; this-&gt;coroutineHandle.done()) {</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                this-&gt;currentStatus = <a class="code hl_enumvalue" href="../../d7/d92/a00887.html#gga422a91ba942835ea1809a91d1fe1e1d5aae94f80b3ce82062a5dd7815daa04f9d">CoRoutineStatus::Complete</a>;</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>            }</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            <span class="keywordflow">return</span> this-&gt;currentStatus;</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        }</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="comment"></span> </div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="comment">        /// Gets the resulting value of the CoRoutine. \brief Gets the resulting value of the CoRoutine.</span></div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="comment">        /// \returns ReturnType The return value of the CoRoutine.</span></div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="../../db/d49/a01969.html#a4677e19e0a190bf91b35c2345533ed6b">  158</a></span><span class="comment"></span>        ReturnType <a class="code hl_function" href="../../db/d49/a01969.html#a4677e19e0a190bf91b35c2345533ed6b">get</a>() {</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            <span class="keywordflow">if</span> (<span class="keyword">this</span> &amp;&amp; this-&gt;coroutineHandle) {</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                <span class="keywordflow">while</span> (!this-&gt;areWeDone-&gt;load()) {</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                    std::this_thread::sleep_for(1ms);</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                }</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                std::exception_ptr exceptionPtr{};</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                <span class="keywordflow">while</span> (this-&gt;exceptionBuffer-&gt;<a class="code hl_function" href="../../d3/d63/a03637.html#a5845dd8c3af6c44112754d450ebabdbf">tryReceive</a>(exceptionPtr)) {</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                    std::rethrow_exception(exceptionPtr);</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>                }</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        }</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        <a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine</a>(std::coroutine_handle&lt;<a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine&lt;ReturnType&gt;::promise_type</a>&gt; coroutineHandleNew) {</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            *<span class="keyword">this</span> = coroutineHandleNew;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        };</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        <a class="code hl_class" href="../../db/d49/a01969.html">~CoRoutine</a>() {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>            <span class="keywordflow">if</span> (<span class="keyword">this</span> &amp;&amp; this-&gt;coroutineHandle) {</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                <span class="keywordflow">if</span> (this-&gt;coroutineHandle.done()) {</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                    this-&gt;coroutineHandle.destroy();</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                }</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>            }</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        }</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="comment"></span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="comment">        /// Collects the status of the CoRoutine. \brief Collects the status of the CoRoutine.</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="comment">        /// \returns DiscordCoreAPI::CoRoutineStatus The status of the CoRoutine.</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="../../db/d49/a01969.html#a282f0c3595d985cfa1bfe00828627f99">  144</a></span><span class="comment"></span>        <a class="code hl_enumeration" href="../../d7/d92/a00887.html#ga422a91ba942835ea1809a91d1fe1e1d5">CoRoutineStatus</a> <a class="code hl_function" href="../../db/d49/a01969.html#a282f0c3595d985cfa1bfe00828627f99">getStatus</a>() {</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            <span class="keywordflow">if</span> (!this-&gt;coroutineHandle) {</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>                this-&gt;currentStatus = <a class="code hl_enumvalue" href="../../d7/d92/a00887.html#gga422a91ba942835ea1809a91d1fe1e1d5aa149e85a44aeec9140e92733d9ed694e">CoRoutineStatus::Cancelled</a>;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (this-&gt;coroutineHandle &amp;&amp; !this-&gt;coroutineHandle.done()) {</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                this-&gt;currentStatus = <a class="code hl_enumvalue" href="../../d7/d92/a00887.html#gga422a91ba942835ea1809a91d1fe1e1d5a5bda814c4aedb126839228f1a3d92f09">CoRoutineStatus::Running</a>;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (this-&gt;coroutineHandle &amp;&amp; this-&gt;coroutineHandle.done()) {</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                this-&gt;currentStatus = <a class="code hl_enumvalue" href="../../d7/d92/a00887.html#gga422a91ba942835ea1809a91d1fe1e1d5aae94f80b3ce82062a5dd7815daa04f9d">CoRoutineStatus::Complete</a>;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>            }</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>            <span class="keywordflow">return</span> this-&gt;currentStatus;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        }</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="comment"></span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="comment">        /// Gets the resulting value of the CoRoutine. \brief Gets the resulting value of the CoRoutine.</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="comment">        /// \returns ReturnType The return value of the CoRoutine.</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="../../db/d49/a01969.html#a4677e19e0a190bf91b35c2345533ed6b">  157</a></span><span class="comment"></span>        ReturnType <a class="code hl_function" href="../../db/d49/a01969.html#a4677e19e0a190bf91b35c2345533ed6b">get</a>() {</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            <span class="keywordflow">if</span> (<span class="keyword">this</span> &amp;&amp; this-&gt;coroutineHandle) {</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                <span class="keywordflow">while</span> (!this-&gt;areWeDone-&gt;load()) {</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                    std::this_thread::sleep_for(1ms);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                }</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                std::exception_ptr exceptionPtr{};</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                <span class="keywordflow">while</span> (this-&gt;exceptionBuffer-&gt;<a class="code hl_function" href="../../d3/d63/a03637.html#a5845dd8c3af6c44112754d450ebabdbf">tryReceive</a>(exceptionPtr)) {</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                    std::rethrow_exception(exceptionPtr);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                }</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>                this-&gt;result = std::move(this-&gt;coroutineHandle.promise().result);</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>                <span class="keywordflow">return</span> this-&gt;result;</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>            } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                <span class="keywordflow">throw</span> <a class="code hl_struct" href="../../d2/d23/a01961.html">CoRoutineError</a>(<span class="stringliteral">&quot;CoRoutine::get(), You called get() on a CoRoutine that is &quot;</span></div>
@@ -477,17 +477,17 @@ $(document).ready(function(){initNavTree('d5/d5b/a00695_source.html','../../'); 
 <div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>};<span class="comment">// namespace DiscordCoreAPI</span></div>
 <div class="ttc" id="aa00710_html"><div class="ttname"><a href="../../d4/deb/a00710.html">FoundationEntities.hpp</a></div></div>
 <div class="ttc" id="aa00761_html"><div class="ttname"><a href="../../d3/d4f/a00761.html">ThreadPool.hpp</a></div></div>
-<div class="ttc" id="aa00887_html_ga422a91ba942835ea1809a91d1fe1e1d5"><div class="ttname"><a href="../../d7/d92/a00887.html#ga422a91ba942835ea1809a91d1fe1e1d5">DiscordCoreAPI::CoRoutineStatus</a></div><div class="ttdeci">CoRoutineStatus</div><div class="ttdoc">The current status of the associated CoRoutine.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5b/a00695_source.html#l00032">CoRoutine.hpp:32</a></div></div>
+<div class="ttc" id="aa00887_html_ga422a91ba942835ea1809a91d1fe1e1d5"><div class="ttname"><a href="../../d7/d92/a00887.html#ga422a91ba942835ea1809a91d1fe1e1d5">DiscordCoreAPI::CoRoutineStatus</a></div><div class="ttdeci">CoRoutineStatus</div><div class="ttdoc">The current status of the associated CoRoutine.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5b/a00695_source.html#l00033">CoRoutine.hpp:33</a></div></div>
 <div class="ttc" id="aa00887_html_ga7cf0823c4aaed2bf49257a8f2ccd053f"><div class="ttname"><a href="../../d7/d92/a00887.html#ga7cf0823c4aaed2bf49257a8f2ccd053f">DiscordCoreAPI::NewThreadAwaitable</a></div><div class="ttdeci">auto NewThreadAwaitable()</div><div class="ttdoc">An awaitable that can be used to launch the CoRoutine onto a new thread - as well as return the handl...</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5b/a00695_source.html#l00365">CoRoutine.hpp:365</a></div></div>
 <div class="ttc" id="aa00887_html_gga422a91ba942835ea1809a91d1fe1e1d5a5bda814c4aedb126839228f1a3d92f09"><div class="ttname"><a href="../../d7/d92/a00887.html#gga422a91ba942835ea1809a91d1fe1e1d5a5bda814c4aedb126839228f1a3d92f09">DiscordCoreAPI::CoRoutineStatus::Running</a></div><div class="ttdeci">@ Running</div><div class="ttdoc">Running.</div></div>
 <div class="ttc" id="aa00887_html_gga422a91ba942835ea1809a91d1fe1e1d5aa149e85a44aeec9140e92733d9ed694e"><div class="ttname"><a href="../../d7/d92/a00887.html#gga422a91ba942835ea1809a91d1fe1e1d5aa149e85a44aeec9140e92733d9ed694e">DiscordCoreAPI::CoRoutineStatus::Cancelled</a></div><div class="ttdeci">@ Cancelled</div><div class="ttdoc">Cancelled.</div></div>
 <div class="ttc" id="aa00887_html_gga422a91ba942835ea1809a91d1fe1e1d5aae94f80b3ce82062a5dd7815daa04f9d"><div class="ttname"><a href="../../d7/d92/a00887.html#gga422a91ba942835ea1809a91d1fe1e1d5aae94f80b3ce82062a5dd7815daa04f9d">DiscordCoreAPI::CoRoutineStatus::Complete</a></div><div class="ttdeci">@ Complete</div><div class="ttdoc">Complete.</div></div>
 <div class="ttc" id="aa00887_html_gga422a91ba942835ea1809a91d1fe1e1d5ae599161956d626eda4cb0a5ffb85271c"><div class="ttname"><a href="../../d7/d92/a00887.html#gga422a91ba942835ea1809a91d1fe1e1d5ae599161956d626eda4cb0a5ffb85271c">DiscordCoreAPI::CoRoutineStatus::Idle</a></div><div class="ttdeci">@ Idle</div><div class="ttdoc">Idle.</div></div>
 <div class="ttc" id="aa00890_html"><div class="ttname"><a href="../../d7/d46/a00890.html">DiscordCoreAPI</a></div><div class="ttdoc">The main namespace for this library.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00025">ApplicationCommandEntities.hpp:25</a></div></div>
-<div class="ttc" id="aa01961_html"><div class="ttname"><a href="../../d2/d23/a01961.html">DiscordCoreAPI::CoRoutineError</a></div><div class="ttdoc">An error type for CoRoutines.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5b/a00695_source.html#l00040">CoRoutine.hpp:40</a></div></div>
-<div class="ttc" id="aa01969_html"><div class="ttname"><a href="../../db/d49/a01969.html">DiscordCoreAPI::CoRoutine</a></div><div class="ttdoc">A CoRoutine - representing a potentially asynchronous operation/function.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5b/a00695_source.html#l00052">CoRoutine.hpp:52</a></div></div>
-<div class="ttc" id="aa01969_html_a282f0c3595d985cfa1bfe00828627f99"><div class="ttname"><a href="../../db/d49/a01969.html#a282f0c3595d985cfa1bfe00828627f99">DiscordCoreAPI::CoRoutine::getStatus</a></div><div class="ttdeci">CoRoutineStatus getStatus()</div><div class="ttdoc">Collects the status of the CoRoutine.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5b/a00695_source.html#l00145">CoRoutine.hpp:145</a></div></div>
-<div class="ttc" id="aa01969_html_a4677e19e0a190bf91b35c2345533ed6b"><div class="ttname"><a href="../../db/d49/a01969.html#a4677e19e0a190bf91b35c2345533ed6b">DiscordCoreAPI::CoRoutine::get</a></div><div class="ttdeci">ReturnType get()</div><div class="ttdoc">Gets the resulting value of the CoRoutine.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5b/a00695_source.html#l00158">CoRoutine.hpp:158</a></div></div>
+<div class="ttc" id="aa01961_html"><div class="ttname"><a href="../../d2/d23/a01961.html">DiscordCoreAPI::CoRoutineError</a></div><div class="ttdoc">An error type for CoRoutines.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5b/a00695_source.html#l00041">CoRoutine.hpp:41</a></div></div>
+<div class="ttc" id="aa01969_html"><div class="ttname"><a href="../../db/d49/a01969.html">DiscordCoreAPI::CoRoutine</a></div><div class="ttdoc">A CoRoutine - representing a potentially asynchronous operation/function.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5b/a00695_source.html#l00053">CoRoutine.hpp:53</a></div></div>
+<div class="ttc" id="aa01969_html_a282f0c3595d985cfa1bfe00828627f99"><div class="ttname"><a href="../../db/d49/a01969.html#a282f0c3595d985cfa1bfe00828627f99">DiscordCoreAPI::CoRoutine::getStatus</a></div><div class="ttdeci">CoRoutineStatus getStatus()</div><div class="ttdoc">Collects the status of the CoRoutine.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5b/a00695_source.html#l00144">CoRoutine.hpp:144</a></div></div>
+<div class="ttc" id="aa01969_html_a4677e19e0a190bf91b35c2345533ed6b"><div class="ttname"><a href="../../db/d49/a01969.html#a4677e19e0a190bf91b35c2345533ed6b">DiscordCoreAPI::CoRoutine::get</a></div><div class="ttdeci">ReturnType get()</div><div class="ttdoc">Gets the resulting value of the CoRoutine.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5b/a00695_source.html#l00157">CoRoutine.hpp:157</a></div></div>
 <div class="ttc" id="aa01969_html_a9fc31b4ff6a73922169844d6ad1851b5"><div class="ttname"><a href="../../db/d49/a01969.html#a9fc31b4ff6a73922169844d6ad1851b5">DiscordCoreAPI::CoRoutine::cancel</a></div><div class="ttdeci">ReturnType cancel()</div><div class="ttdoc">Cancels the currently executing CoRoutine and returns the current result.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5b/a00695_source.html#l00177">CoRoutine.hpp:177</a></div></div>
 <div class="ttc" id="aa01977_html"><div class="ttname"><a href="../../d5/d92/a01977.html">DiscordCoreAPI::CoRoutine&lt; void &gt;</a></div><div class="ttdoc">A CoRoutine - representing a potentially asynchronous operation/function.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5b/a00695_source.html#l00206">CoRoutine.hpp:206</a></div></div>
 <div class="ttc" id="aa01977_html_a566ebc1b6eacc88c5c2913908e6a2c8f"><div class="ttname"><a href="../../d5/d92/a01977.html#a566ebc1b6eacc88c5c2913908e6a2c8f">DiscordCoreAPI::CoRoutine&lt; void &gt;::cancel</a></div><div class="ttdeci">void cancel()</div><div class="ttdoc">Cancels the currently executing CoRoutine and returns the current result.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5b/a00695_source.html#l00319">CoRoutine.hpp:319</a></div></div>
@@ -495,7 +495,7 @@ $(document).ready(function(){initNavTree('d5/d5b/a00695_source.html','../../'); 
 <div class="ttc" id="aa01977_html_a904d030f3edbf8efac15b2cebba3e37a"><div class="ttname"><a href="../../d5/d92/a01977.html#a904d030f3edbf8efac15b2cebba3e37a">DiscordCoreAPI::CoRoutine&lt; void &gt;::get</a></div><div class="ttdeci">void get()</div><div class="ttdoc">Gets the resulting value of the CoRoutine.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5b/a00695_source.html#l00303">CoRoutine.hpp:303</a></div></div>
 <div class="ttc" id="aa01985_html"><div class="ttname"><a href="../../d3/def/a01985.html">DiscordCoreAPI::NewThreadAwaiter</a></div><div class="ttdoc">An awaitable that can be used to launch the CoRoutine onto a new thread - as well as return the handl...</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5b/a00695_source.html#l00344">CoRoutine.hpp:344</a></div></div>
 <div class="ttc" id="aa03637_html"><div class="ttname"><a href="../../d3/d63/a03637.html">DiscordCoreAPI::UnboundedMessageBlock&lt; std::exception_ptr &gt;</a></div></div>
-<div class="ttc" id="aa03637_html_a5845dd8c3af6c44112754d450ebabdbf"><div class="ttname"><a href="../../d3/d63/a03637.html#a5845dd8c3af6c44112754d450ebabdbf">DiscordCoreAPI::UnboundedMessageBlock::tryReceive</a></div><div class="ttdeci">bool tryReceive(ObjectType &amp;theObject)</div><div class="ttdoc">Tries to receive an object of type ObjectType to be placed into a reference.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dae/a00767_source.html#l00785">Utilities.hpp:785</a></div></div>
+<div class="ttc" id="aa03637_html_a5845dd8c3af6c44112754d450ebabdbf"><div class="ttname"><a href="../../d3/d63/a03637.html#a5845dd8c3af6c44112754d450ebabdbf">DiscordCoreAPI::UnboundedMessageBlock::tryReceive</a></div><div class="ttdeci">bool tryReceive(ObjectType &amp;theObject)</div><div class="ttdoc">Tries to receive an object of type ObjectType to be placed into a reference.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dae/a00767_source.html#l00788">Utilities.hpp:788</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
