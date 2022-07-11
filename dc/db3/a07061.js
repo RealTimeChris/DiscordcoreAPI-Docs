@@ -1,18 +1,11 @@
 var a07061 =
 [
-    [ "Getting a Channel", "da/dea/a07108.html", null ],
-    [ "Modifying a Channel", "d8/dfa/a07113.html", null ],
-    [ "Deleting/Closing a Channel", "d0/da5/a07104.html", null ],
-    [ "Getting a Direct-Message Channel", "d2/da1/a07109.html", null ],
-    [ "Edit Channel Permission Overwrites", "dc/da2/a07106.html", null ],
-    [ "Getting Channel Invites", "da/d25/a07110.html", null ],
-    [ "Creating a Channel Invite", "de/d32/a07101.html", null ],
-    [ "Deleting Permission Overwrites", "db/d3a/a07105.html", null ],
-    [ "Following a News Channel", "de/dde/a07107.html", null ],
-    [ "Triggering the Typing Indicator", "d6/d82/a07115.html", null ],
-    [ "Getting Guild Channels", "df/ded/a07111.html", null ],
-    [ "Creating a Guild Channel", "d4/d5e/a07103.html", null ],
-    [ "Modifying Guild Channel Positions", "d4/dff/a07114.html", null ],
-    [ "Creating a Direct-Message", "d3/dd9/a07102.html", null ],
-    [ "Getting Voice Regions", "d0/d5f/a07112.html", null ]
+    [ "Adding a Role to a Guild Member", "dc/df3/a07216.html", null ],
+    [ "Removing a Role from a Guild Member", "de/dbb/a07223.html", null ],
+    [ "Getting Guild Roles", "db/db6/a07219.html", null ],
+    [ "Getting a Role", "d2/d40/a07218.html", null ],
+    [ "Creating a Guild Role", "db/d73/a07217.html", null ],
+    [ "Modifying Guild Role Positions", "de/d7c/a07221.html", null ],
+    [ "Modifying a Guild Role", "d2/d73/a07220.html", null ],
+    [ "Removing a Guild Role", "d5/d05/a07222.html", null ]
 ];

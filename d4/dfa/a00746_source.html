@@ -146,11 +146,11 @@ $(document).ready(function(){initNavTree('d4/dfa/a00746_source.html','../../'); 
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keyword">const</span> std::string appVersion{ <span class="stringliteral">&quot;1654762087&quot;</span> };</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        HttpsClient* httpsClient{ <span class="keyword">nullptr</span> };</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <a class="code hl_class" href="../../db/d27/a02817.html">DiscordCoreAPI::Song</a> collectFinalSong(<span class="keyword">const</span> <a class="code hl_class" href="../../d8/d26/a02357.html">DiscordCoreAPI::GuildMemberData</a>&amp; addedByGuildMember, <a class="code hl_class" href="../../db/d27/a02817.html">DiscordCoreAPI::Song</a>&amp; newSong);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        std::vector&lt;DiscordCoreAPI::Song&gt; collectSearchResults(<span class="keyword">const</span> std::string&amp; theString);</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        std::vector&lt;DiscordCoreAPI::Song&gt; collectSearchResults(<span class="keyword">const</span> std::string&amp; theString);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <a class="code hl_class" href="../../db/d27/a02817.html">DiscordCoreAPI::Song</a> constructDownloadInfo(<a class="code hl_class" href="../../db/d27/a02817.html">DiscordCoreAPI::Song</a>&amp; newSong);</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <a class="code hl_class" href="../../db/d27/a02817.html">DiscordCoreAPI::Song</a> constructDownloadInfo(<a class="code hl_class" href="../../db/d27/a02817.html">DiscordCoreAPI::Song</a>&amp; newSong);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <a class="code hl_class" href="../../db/d27/a02817.html">DiscordCoreAPI::Song</a> collectFinalSong(<a class="code hl_class" href="../../db/d27/a02817.html">DiscordCoreAPI::Song</a>&amp; newSong);</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        std::string collectClientId();</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    };</div>
@@ -159,13 +159,13 @@ $(document).ready(function(){initNavTree('d4/dfa/a00746_source.html','../../'); 
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        SoundCloudAPI(DiscordCoreAPI::ConfigManager* configManagerNew, HttpsClient* httpsClient, <span class="keyword">const</span> Snowflake&amp; guildId);</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <a class="code hl_class" href="../../db/d27/a02817.html">DiscordCoreAPI::Song</a> collectFinalSong(<span class="keyword">const</span> <a class="code hl_class" href="../../d8/d26/a02357.html">DiscordCoreAPI::GuildMemberData</a>&amp; addedByGuildMember, <a class="code hl_class" href="../../db/d27/a02817.html">DiscordCoreAPI::Song</a>&amp; newSong);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordtype">void</span> weFailedToDownloadOrDecode(<span class="keyword">const</span> <a class="code hl_class" href="../../db/d27/a02817.html">DiscordCoreAPI::Song</a>&amp; newSong, std::stop_token stopToken, int32_t currentReconnectTries);</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordtype">void</span> weFailedToDownloadOrDecode(<span class="keyword">const</span> <a class="code hl_class" href="../../db/d27/a02817.html">DiscordCoreAPI::Song</a>&amp; newSong, std::stop_token stopToken, int32_t currentReconnectTries);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordtype">void</span> downloadAndStreamAudio(<span class="keyword">const</span> <a class="code hl_class" href="../../db/d27/a02817.html">DiscordCoreAPI::Song</a>&amp; newSong, std::stop_token stopToken, int32_t currentReconnectTries);</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordtype">void</span> downloadAndStreamAudio(<span class="keyword">const</span> <a class="code hl_class" href="../../db/d27/a02817.html">DiscordCoreAPI::Song</a>&amp; newSong, std::stop_token stopToken, int32_t currentReconnectTries);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        std::vector&lt;DiscordCoreAPI::Song&gt; searchForSong(<span class="keyword">const</span> std::string&amp; searchQuery);</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        std::vector&lt;DiscordCoreAPI::Song&gt; searchForSong(<span class="keyword">const</span> std::string&amp; searchQuery);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <a class="code hl_class" href="../../db/d27/a02817.html">DiscordCoreAPI::Song</a> collectFinalSong(<a class="code hl_class" href="../../db/d27/a02817.html">DiscordCoreAPI::Song</a>&amp; newSong);</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordtype">void</span> cancelCurrentSong();</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
@@ -181,7 +181,6 @@ $(document).ready(function(){initNavTree('d4/dfa/a00746_source.html','../../'); 
 <div class="ttc" id="aa00695_html"><div class="ttname"><a href="../../d5/d5b/a00695.html">CoRoutine.hpp</a></div></div>
 <div class="ttc" id="aa00722_html"><div class="ttname"><a href="../../db/d7c/a00722.html">Https.hpp</a></div></div>
 <div class="ttc" id="aa00888_html_gabeb353982ff7e75352fc30c8543641ef"><div class="ttname"><a href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">DiscordCoreAPI::Snowflake</a></div><div class="ttdeci">uint64_t Snowflake</div><div class="ttdoc">For ids of DiscordEntities.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l00324">FoundationEntities.hpp:324</a></div></div>
-<div class="ttc" id="aa02357_html"><div class="ttname"><a href="../../d8/d26/a02357.html">DiscordCoreAPI::GuildMemberData</a></div><div class="ttdoc">Data structure representing a single GuildMember. Data structure representing a single Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l00810">FoundationEntities.hpp:810</a></div></div>
 <div class="ttc" id="aa02817_html"><div class="ttname"><a href="../../db/d27/a02817.html">DiscordCoreAPI::Song</a></div><div class="ttdoc">A song from the various platforms.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03706">FoundationEntities.hpp:3706</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

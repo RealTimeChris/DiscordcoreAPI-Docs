@@ -1,5 +1,6 @@
 var a07057 =
 [
-    [ "Instantiating/Creating a Select-Menu", "d0/d02/a07177.html", null ],
-    [ "Collecting Select-Menu Input", "d7/de3/a07176.html", null ]
+    [ "Creating an Interaction Response", "dc/dc2/a07184.html", null ],
+    [ "Editing an Interaction Response", "d5/d2e/a07186.html", null ],
+    [ "Deleting an Interaction Response", "d7/da0/a07185.html", null ]
 ];
