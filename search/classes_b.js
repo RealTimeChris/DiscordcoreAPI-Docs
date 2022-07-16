@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['newthreadawaiter_0',['NewThreadAwaiter',['../d3/def/a01985.html',1,'DiscordCoreAPI']]]
+  ['newthreadawaiter_2216',['NewThreadAwaiter',['../d3/def/a01985.html',1,'DiscordCoreAPI']]]
 ];
