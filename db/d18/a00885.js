@@ -1,26 +1,26 @@
 var a00885 =
 [
-    [ "DiscordCoreAPI::AudioFrameData", "d3/d85/a02813.html", [
+    [ "AudioFrameData", "d3/d85/a02813.html", [
       [ "encodedFrameData", "d3/d85/a02813.html#ab419272ec8ce14a1924308f6c9d5e1a1", null ],
       [ "guildMemberId", "d3/d85/a02813.html#a0feb0c6bdd519dd97dc1be80333d3978", null ],
       [ "rawFrameData", "d3/d85/a02813.html#a659e7fccd24ee89ed3cde41dad742b08", null ],
       [ "type", "d3/d85/a02813.html#a26361ff6db91e6bb36538970cc9ef664", null ]
     ] ],
-    [ "DiscordCoreAPI::EncodedFrameData", "d5/d34/a02809.html", [
+    [ "EncodedFrameData", "d5/d34/a02809.html", [
       [ "data", "d5/d34/a02809.html#a7f2af927375244279ff7cc5dc57f834a", null ],
       [ "sampleCount", "d5/d34/a02809.html#acf84fc02245a621d85398cb05ad16aa4", null ]
     ] ],
-    [ "DiscordCoreAPI::Playlist", "df/d7d/a02825.html", [
+    [ "Playlist", "df/d7d/a02825.html", [
       [ "currentSong", "df/d7d/a02825.html#a149511219adde0142cd36495691a9f53", null ],
       [ "isLoopAllEnabled", "df/d7d/a02825.html#a8efee4a514b0be46174da6349d31ed56", null ],
       [ "isLoopSongEnabled", "df/d7d/a02825.html#a77a8b68e299645ed185fb7352169e93a", null ],
       [ "songQueue", "df/d7d/a02825.html#a8c9c499e7eda1f2b35a633575e450a4f", null ]
     ] ],
-    [ "DiscordCoreAPI::RawFrameData", "d7/d75/a02805.html", [
+    [ "RawFrameData", "d7/d75/a02805.html", [
       [ "data", "d7/d75/a02805.html#ab96281fec6f0c35fc2d6df49077bf8f9", null ],
       [ "sampleCount", "d7/d75/a02805.html#a859b4a88ab2a0e4ed52e5cd4f6d3462b", null ]
     ] ],
-    [ "DiscordCoreAPI::Song", "db/d27/a02817.html", [
+    [ "Song", "db/d27/a02817.html", [
       [ "addedByUserId", "db/d27/a02817.html#af895a83beeded73fb962feed1c313e57", null ],
       [ "addedByUserName", "db/d27/a02817.html#a89ea35c3d4d91830bccdc8dc63e1c752", null ],
       [ "description", "db/d27/a02817.html#ad1518d7d0b878704693b9764f4da53df", null ],
@@ -30,7 +30,7 @@ var a00885 =
       [ "type", "db/d27/a02817.html#afcae65858fa57aa83b883274a3f74912", null ],
       [ "viewUrl", "db/d27/a02817.html#ab525395fd504775391a724d4ba74f37c", null ]
     ] ],
-    [ "DiscordCoreAPI::SongAPI", "d1/d3a/a03353.html", [
+    [ "SongAPI", "d1/d3a/a03353.html", [
       [ "addSongToQueue", "d1/d3a/a03353.html#a05c23714bff2161ce39dec8d17e704ad", null ],
       [ "areWeCurrentlyPlaying", "d1/d3a/a03353.html#a8e40f67db4878b84c427a5eca6f27943", null ],
       [ "getCurrentSong", "d1/d3a/a03353.html#a50d0f6e2f372e7efef5e4870fdcb0c68", null ],
@@ -51,19 +51,19 @@ var a00885 =
       [ "skip", "d1/d3a/a03353.html#ae7c43fec03815d6eea1987c433858ef7", null ],
       [ "stop", "d1/d3a/a03353.html#ad3ea2df692e7786ba797699ec81f3781", null ]
     ] ],
-    [ "DiscordCoreAPI::SongCompletionEventData", "db/de9/a02821.html", [
+    [ "SongCompletionEventData", "db/de9/a02821.html", [
       [ "guild", "db/de9/a02821.html#a7561ce617cecc9215a0fc418ed4bb071", null ],
       [ "guildMember", "db/de9/a02821.html#ae87a367bbce969153d18c827c65fd816", null ],
       [ "previousSong", "db/de9/a02821.html#a8340e3dbc09571714ab35fe82db33f20", null ],
       [ "wasItAFail", "db/de9/a02821.html#ad548cb870648ce735ebd46e1926118f9", null ]
     ] ],
-    [ "DiscordCoreAPI::VoiceConnection", "da/d7d/a03649.html", [
+    [ "VoiceConnection", "da/d7d/a03649.html", [
       [ "getChannelId", "da/d7d/a03649.html#ae790f8b154a461a5878a224f371eb546", null ]
     ] ],
-    [ "DiscordCoreAPI::AudioFrameType", "db/d18/a00885.html#gacf6f4590968be95774b156cf050c996c", [
-      [ "DiscordCoreAPI::AudioFrameType::Unset", "db/d18/a00885.html#ggacf6f4590968be95774b156cf050c996cac9f88e098f6fe4e4e112eeb05ccb9671", null ],
-      [ "DiscordCoreAPI::AudioFrameType::Encoded", "db/d18/a00885.html#ggacf6f4590968be95774b156cf050c996cab0aa2396f48df83a99237187e7758e35", null ],
-      [ "DiscordCoreAPI::AudioFrameType::RawPCM", "db/d18/a00885.html#ggacf6f4590968be95774b156cf050c996ca5e4428fdbbb1ef8971739c61d8662c5a", null ],
-      [ "DiscordCoreAPI::AudioFrameType::Skip", "db/d18/a00885.html#ggacf6f4590968be95774b156cf050c996ca72ef2b9b6965d078e3c7f95487a82d1c", null ]
+    [ "AudioFrameType", "db/d18/a00885.html#gacf6f4590968be95774b156cf050c996c", [
+      [ "Unset", "db/d18/a00885.html#ggacf6f4590968be95774b156cf050c996cac9f88e098f6fe4e4e112eeb05ccb9671", null ],
+      [ "Encoded", "db/d18/a00885.html#ggacf6f4590968be95774b156cf050c996cab0aa2396f48df83a99237187e7758e35", null ],
+      [ "RawPCM", "db/d18/a00885.html#ggacf6f4590968be95774b156cf050c996ca5e4428fdbbb1ef8971739c61d8662c5a", null ],
+      [ "Skip", "db/d18/a00885.html#ggacf6f4590968be95774b156cf050c996ca72ef2b9b6965d078e3c7f95487a82d1c", null ]
     ] ]
 ];

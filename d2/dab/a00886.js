@@ -1,6 +1,6 @@
 var a00886 =
 [
-    [ "DiscordCoreAPI::EventManager", "d9/d13/a02237.html", [
+    [ "EventManager", "d9/d13/a02237.html", [
       [ "onApplicationCommandsPermissionsUpdate", "d9/d13/a02237.html#a11fb2b60f3565088d9eb50295cdb401d", null ],
       [ "onApplicationCommandsPermissionsUpdate", "d9/d13/a02237.html#aea438633d5e1f7ad70e13b41a57fa973", null ],
       [ "onAutoCompleteEntry", "d9/d13/a02237.html#a8c959622e87a917c546327c78fb36191", null ],
@@ -112,193 +112,193 @@ var a00886 =
       [ "onWebhookUpdate", "d9/d13/a02237.html#a2402767a8af5989e9202273f6b9e7cb2", null ],
       [ "onWebhookUpdate", "d9/d13/a02237.html#a538d81370e4d32405224019c7b1068ab", null ]
     ] ],
-    [ "DiscordCoreAPI::OnApplicationCommandPermissionsUpdateData", "d8/d45/a02021.html", null ],
-    [ "DiscordCoreAPI::OnAutoCompleteEntryData", "d5/d3d/a02233.html", [
+    [ "OnApplicationCommandPermissionsUpdateData", "d8/d45/a02021.html", null ],
+    [ "OnAutoCompleteEntryData", "d5/d3d/a02233.html", [
       [ "inputEvent", "d5/d3d/a02233.html#a5930709336b6f4407cd82781a826318d", null ]
     ] ],
-    [ "DiscordCoreAPI::OnAutoModerationActionExecutionData", "dd/dfc/a02037.html", null ],
-    [ "DiscordCoreAPI::OnAutoModerationRuleCreationData", "da/d3e/a02025.html", null ],
-    [ "DiscordCoreAPI::OnAutoModerationRuleDeletionData", "d6/d94/a02033.html", null ],
-    [ "DiscordCoreAPI::OnAutoModerationRuleUpdateData", "d6/d19/a02029.html", null ],
-    [ "DiscordCoreAPI::OnChannelCreationData", "d3/dea/a02041.html", [
+    [ "OnAutoModerationActionExecutionData", "dd/dfc/a02037.html", null ],
+    [ "OnAutoModerationRuleCreationData", "da/d3e/a02025.html", null ],
+    [ "OnAutoModerationRuleDeletionData", "d6/d94/a02033.html", null ],
+    [ "OnAutoModerationRuleUpdateData", "d6/d19/a02029.html", null ],
+    [ "OnChannelCreationData", "d3/dea/a02041.html", [
       [ "channel", "d3/dea/a02041.html#ae91b51f3e5dacc5b1bf35843b3e65e59", null ]
     ] ],
-    [ "DiscordCoreAPI::OnChannelDeletionData", "d8/d5a/a02049.html", [
+    [ "OnChannelDeletionData", "d8/d5a/a02049.html", [
       [ "channel", "d8/d5a/a02049.html#a6c9801639a1d8ecbe7b6c93676441874", null ]
     ] ],
-    [ "DiscordCoreAPI::OnChannelPinsUpdateData", "d0/d55/a02053.html", [
+    [ "OnChannelPinsUpdateData", "d0/d55/a02053.html", [
       [ "dataPackage", "d0/d55/a02053.html#af9a05437fb13224d2997e09f2a275083", null ]
     ] ],
-    [ "DiscordCoreAPI::OnChannelUpdateData", "d7/d13/a02045.html", [
+    [ "OnChannelUpdateData", "d7/d13/a02045.html", [
       [ "channelNew", "d7/d13/a02045.html#ab0d74332e83e2e448b11285c9854dbf5", null ],
       [ "channelOld", "d7/d13/a02045.html#a2b0677552febfde6aa318d03db044692", null ]
     ] ],
-    [ "DiscordCoreAPI::OnGuildBanAddData", "d3/d1e/a02093.html", [
+    [ "OnGuildBanAddData", "d3/d1e/a02093.html", [
       [ "guildId", "d3/d1e/a02093.html#a2a499dfb3ea1f8accc703acf66f03eca", null ],
       [ "user", "d3/d1e/a02093.html#aa2b80091d76ccaa262990d460879f057", null ]
     ] ],
-    [ "DiscordCoreAPI::OnGuildBanRemoveData", "d4/dbb/a02097.html", [
+    [ "OnGuildBanRemoveData", "d4/dbb/a02097.html", [
       [ "guildId", "d4/dbb/a02097.html#a255d2baee17be99727bc7f6dd794ee34", null ],
       [ "user", "d4/dbb/a02097.html#a89ecae180fb92a9a6f09fe3b3b44aeca", null ]
     ] ],
-    [ "DiscordCoreAPI::OnGuildCreationData", "d2/d50/a02081.html", [
+    [ "OnGuildCreationData", "d2/d50/a02081.html", [
       [ "guild", "d2/d50/a02081.html#a08bcc71a65a765715e65b860b681709a", null ]
     ] ],
-    [ "DiscordCoreAPI::OnGuildDeletionData", "db/ddd/a02089.html", [
+    [ "OnGuildDeletionData", "db/ddd/a02089.html", [
       [ "guild", "db/ddd/a02089.html#a5f3ddbc0f9b23eae751590939a74afcc", null ]
     ] ],
-    [ "DiscordCoreAPI::OnGuildEmojisUpdateData", "da/d71/a02101.html", [
+    [ "OnGuildEmojisUpdateData", "da/d71/a02101.html", [
       [ "updateData", "da/d71/a02101.html#ab00589d931b1b73aab2b70681fd95a92", null ]
     ] ],
-    [ "DiscordCoreAPI::OnGuildIntegrationsUpdateData", "d7/d16/a02109.html", [
+    [ "OnGuildIntegrationsUpdateData", "d7/d16/a02109.html", [
       [ "guildId", "d7/d16/a02109.html#acc185500072efe780478f148ad4d0518", null ]
     ] ],
-    [ "DiscordCoreAPI::OnGuildMemberAddData", "d8/dc6/a02113.html", [
+    [ "OnGuildMemberAddData", "d8/dc6/a02113.html", [
       [ "guildMember", "d8/dc6/a02113.html#a651f5d46772dd806b3d6e7321bf35ee7", null ]
     ] ],
-    [ "DiscordCoreAPI::OnGuildMemberRemoveData", "d0/d79/a02117.html", [
+    [ "OnGuildMemberRemoveData", "d0/d79/a02117.html", [
       [ "guildId", "d0/d79/a02117.html#a9eea2ab55d4bea27507729257f4e8807", null ],
       [ "user", "d0/d79/a02117.html#a28939363f2cb5786bb8efe93687c40b0", null ]
     ] ],
-    [ "DiscordCoreAPI::OnGuildMembersChunkData", "d8/db2/a02125.html", [
+    [ "OnGuildMembersChunkData", "d8/db2/a02125.html", [
       [ "chunkEventData", "d8/db2/a02125.html#aa9e107b07155f27b41153848cf87ee5d", null ]
     ] ],
-    [ "DiscordCoreAPI::OnGuildMemberUpdateData", "d6/d3b/a02121.html", [
+    [ "OnGuildMemberUpdateData", "d6/d3b/a02121.html", [
       [ "guildMemberNew", "d6/d3b/a02121.html#a6fe24914a6b08873aa067d91ddebc7f8", null ],
       [ "guildMemberOld", "d6/d3b/a02121.html#a67e8a0e98398494f5ef2d73c38fb271a", null ]
     ] ],
-    [ "DiscordCoreAPI::OnGuildStickersUpdateData", "db/d7a/a02105.html", [
+    [ "OnGuildStickersUpdateData", "db/d7a/a02105.html", [
       [ "updateData", "db/d7a/a02105.html#a16da9ba0832ff2d81727204adcfd2a4c", null ]
     ] ],
-    [ "DiscordCoreAPI::OnGuildUpdateData", "d2/dde/a02085.html", [
+    [ "OnGuildUpdateData", "d2/dde/a02085.html", [
       [ "guildNew", "d2/dde/a02085.html#a07ca9e9b31e04081d93291109f5c6cad", null ],
       [ "guildOld", "d2/dde/a02085.html#abecbb9a456fb47b7c8da904cf8bfec2a", null ]
     ] ],
-    [ "DiscordCoreAPI::OnInputEventCreationData", "d0/dfd/a02017.html", [
+    [ "OnInputEventCreationData", "d0/dfd/a02017.html", [
       [ "inputEventData", "d0/dfd/a02017.html#a017d64a7abb9b22f207d95a001f187eb", null ]
     ] ],
-    [ "DiscordCoreAPI::OnIntegrationCreationData", "d5/d88/a02141.html", [
+    [ "OnIntegrationCreationData", "d5/d88/a02141.html", [
       [ "guildId", "d5/d88/a02141.html#a26e716556daf6cc41b2485fb3cfb3820", null ],
       [ "integrationData", "d5/d88/a02141.html#a979e3e5a0cab569a52120d1079f5896b", null ]
     ] ],
-    [ "DiscordCoreAPI::OnIntegrationDeletionData", "d2/da0/a02149.html", [
+    [ "OnIntegrationDeletionData", "d2/da0/a02149.html", [
       [ "applicationId", "d2/da0/a02149.html#ac8df67e9db9e811638de4b9b9a171815", null ],
       [ "guildId", "d2/da0/a02149.html#ad5309384390200ddc31c8c697d7fd400", null ],
       [ "id", "d2/da0/a02149.html#a5d5e7c9b2ec6a0728ccc55f274724623", null ]
     ] ],
-    [ "DiscordCoreAPI::OnIntegrationUpdateData", "d7/d2d/a02145.html", [
+    [ "OnIntegrationUpdateData", "d7/d2d/a02145.html", [
       [ "guildId", "d7/d2d/a02145.html#af3c58f7e60b14f2742deb552819fb19f", null ],
       [ "integrationData", "d7/d2d/a02145.html#a6592af8300d9e6c6dd43d25fd667a385", null ]
     ] ],
-    [ "DiscordCoreAPI::OnInteractionCreationData", "df/dbf/a02161.html", [
+    [ "OnInteractionCreationData", "df/dbf/a02161.html", [
       [ "interactionData", "df/dbf/a02161.html#a7ea18beb42f2312c9ca8ebddbfea0d71", null ]
     ] ],
-    [ "DiscordCoreAPI::OnInviteCreationData", "df/de9/a02153.html", [
+    [ "OnInviteCreationData", "df/de9/a02153.html", [
       [ "invite", "df/de9/a02153.html#aa7502ca1c22689765e2cf291afda8396", null ]
     ] ],
-    [ "DiscordCoreAPI::OnInviteDeletionData", "db/dcf/a02157.html", [
+    [ "OnInviteDeletionData", "db/dcf/a02157.html", [
       [ "channelId", "db/dcf/a02157.html#ae9b2832014cc39b5677965c28413c6d2", null ],
       [ "code", "db/dcf/a02157.html#a2993eb30bbe315322419ee747122eb3e", null ],
       [ "guildId", "db/dcf/a02157.html#a1073c4126095c8b59d99336cbe2daa3e", null ]
     ] ],
-    [ "DiscordCoreAPI::OnMessageCreationData", "d7/d4c/a02165.html", [
+    [ "OnMessageCreationData", "d7/d4c/a02165.html", [
       [ "message", "d7/d4c/a02165.html#a53b54486935b342a4b82d54f3ea29d5b", null ]
     ] ],
-    [ "DiscordCoreAPI::OnMessageDeleteBulkData", "d3/d90/a02177.html", [
+    [ "OnMessageDeleteBulkData", "d3/d90/a02177.html", [
       [ "channelId", "d3/d90/a02177.html#a75a37021c674f36dbc36fbf9d3dae131", null ],
       [ "guildId", "d3/d90/a02177.html#aa54b39655a0e01480e96e0aa11fa8896", null ],
       [ "ids", "d3/d90/a02177.html#a55ad19826179e1a70a3bc4216e343b77", null ]
     ] ],
-    [ "DiscordCoreAPI::OnMessageDeletionData", "d4/d63/a02173.html", [
+    [ "OnMessageDeletionData", "d4/d63/a02173.html", [
       [ "channelId", "d4/d63/a02173.html#aaa6475f4d3998e79add4c7c39c4e66cf", null ],
       [ "guildId", "d4/d63/a02173.html#a3adac8f99154265d2e72a3073e2daa3b", null ],
       [ "messageId", "d4/d63/a02173.html#a72811a1e978775c566ed8c725a501b81", null ]
     ] ],
-    [ "DiscordCoreAPI::OnMessageUpdateData", "de/d08/a02169.html", [
+    [ "OnMessageUpdateData", "de/d08/a02169.html", [
       [ "messageNew", "de/d08/a02169.html#ae529ff108ac701c948e0f7f466e7077d", null ]
     ] ],
-    [ "DiscordCoreAPI::OnPresenceUpdateData", "de/df6/a02197.html", [
+    [ "OnPresenceUpdateData", "de/df6/a02197.html", [
       [ "presenceData", "de/df6/a02197.html#a0b946256b6a7044532a0095f8dc6e344", null ]
     ] ],
-    [ "DiscordCoreAPI::OnReactionAddData", "d5/d85/a02181.html", [
+    [ "OnReactionAddData", "d5/d85/a02181.html", [
       [ "reaction", "d5/d85/a02181.html#ad2ef00bab2e1aee7a78ee1be5099ce2b", null ]
     ] ],
-    [ "DiscordCoreAPI::OnReactionRemoveAllData", "d8/d85/a02189.html", [
+    [ "OnReactionRemoveAllData", "d8/d85/a02189.html", [
       [ "channelId", "d8/d85/a02189.html#a9341d102488b735367a36165ba77462b", null ],
       [ "guildId", "d8/d85/a02189.html#af6b736ef0295d36fd0c406383e8878a8", null ],
       [ "messageId", "d8/d85/a02189.html#a5326be8b6d1af64e19962ebeefd1a150", null ]
     ] ],
-    [ "DiscordCoreAPI::OnReactionRemoveData", "dd/d02/a02185.html", [
+    [ "OnReactionRemoveData", "dd/d02/a02185.html", [
       [ "reactionRemoveData", "dd/d02/a02185.html#a68a2f8ec697fa86fbc8e2721dc010f62", null ]
     ] ],
-    [ "DiscordCoreAPI::OnReactionRemoveEmojiData", "d5/dbb/a02193.html", [
+    [ "OnReactionRemoveEmojiData", "d5/dbb/a02193.html", [
       [ "channelId", "d5/dbb/a02193.html#ae39b0179a3df27c82b027585e5f4b36b", null ],
       [ "emoji", "d5/dbb/a02193.html#abf1ec24a5cae56ace5d9c51798053918", null ],
       [ "guildId", "d5/dbb/a02193.html#a6691c25fc7ceacc153f8f74776587e72", null ],
       [ "messageId", "d5/dbb/a02193.html#aa32e4ac9fd4d42be39a14307b0db6b05", null ]
     ] ],
-    [ "DiscordCoreAPI::OnRoleCreationData", "db/d26/a02129.html", [
+    [ "OnRoleCreationData", "db/d26/a02129.html", [
       [ "guildId", "db/d26/a02129.html#a7f4ffd2654e9fcc795e44ab5fb295e0f", null ],
       [ "role", "db/d26/a02129.html#a075293560c9ccaf6cf3ed434aaa83ea0", null ]
     ] ],
-    [ "DiscordCoreAPI::OnRoleDeletionData", "de/d74/a02137.html", [
+    [ "OnRoleDeletionData", "de/d74/a02137.html", [
       [ "guildId", "de/d74/a02137.html#a8c9eeb0686431818a616c353a448711e", null ],
       [ "roleOld", "de/d74/a02137.html#a01a3a271148304bfc258f2badceb4647", null ]
     ] ],
-    [ "DiscordCoreAPI::OnRoleUpdateData", "da/d67/a02133.html", [
+    [ "OnRoleUpdateData", "da/d67/a02133.html", [
       [ "guildId", "da/d67/a02133.html#a9c3bb062d8372a2655760fe3a82015f9", null ],
       [ "roleNew", "da/d67/a02133.html#aa771ab644bfec6081882a49f10c076e8", null ],
       [ "roleOld", "da/d67/a02133.html#aaec3dc027a30d9d6eb04c0b86a5a0a45", null ]
     ] ],
-    [ "DiscordCoreAPI::OnStageInstanceCreationData", "dd/d14/a02201.html", [
+    [ "OnStageInstanceCreationData", "dd/d14/a02201.html", [
       [ "stageInstance", "dd/d14/a02201.html#a2275875720978749783f83618610a412", null ]
     ] ],
-    [ "DiscordCoreAPI::OnStageInstanceDeletionData", "db/db1/a02209.html", [
+    [ "OnStageInstanceDeletionData", "db/db1/a02209.html", [
       [ "stageInstance", "db/db1/a02209.html#a40a9dc8e3dd1b9efd7c79e7955761f21", null ]
     ] ],
-    [ "DiscordCoreAPI::OnStageInstanceUpdateData", "dc/d43/a02205.html", [
+    [ "OnStageInstanceUpdateData", "dc/d43/a02205.html", [
       [ "stageInstance", "dc/d43/a02205.html#ad596619bab1f635d6d1825914fae44f1", null ]
     ] ],
-    [ "DiscordCoreAPI::OnThreadCreationData", "d2/dea/a02057.html", [
+    [ "OnThreadCreationData", "d2/dea/a02057.html", [
       [ "thread", "d2/dea/a02057.html#a18fe7ab0b2636443095e5590d701b5fb", null ]
     ] ],
-    [ "DiscordCoreAPI::OnThreadDeletionData", "d0/d67/a02065.html", [
+    [ "OnThreadDeletionData", "d0/d67/a02065.html", [
       [ "thread", "d0/d67/a02065.html#ab8a5bbb0194dda0a6847b9115abfc89b", null ]
     ] ],
-    [ "DiscordCoreAPI::OnThreadListSyncData", "d3/d48/a02069.html", [
+    [ "OnThreadListSyncData", "d3/d48/a02069.html", [
       [ "threadListSyncData", "d3/d48/a02069.html#a1cc13ce62ed7ac1e0a13ce807bb1e759", null ]
     ] ],
-    [ "DiscordCoreAPI::OnThreadMembersUpdateData", "db/dac/a02077.html", [
+    [ "OnThreadMembersUpdateData", "db/dac/a02077.html", [
       [ "threadMembersUpdateData", "db/dac/a02077.html#a2bec817b78f28fef284ef42adba84892", null ]
     ] ],
-    [ "DiscordCoreAPI::OnThreadMemberUpdateData", "de/df8/a02073.html", [
+    [ "OnThreadMemberUpdateData", "de/df8/a02073.html", [
       [ "threadMember", "de/df8/a02073.html#a798b9ed52032e219c444c11d71581719", null ]
     ] ],
-    [ "DiscordCoreAPI::OnThreadUpdateData", "d8/de6/a02061.html", [
+    [ "OnThreadUpdateData", "d8/de6/a02061.html", [
       [ "thread", "d8/de6/a02061.html#a855d92f064bf87b262af5779a6634677", null ]
     ] ],
-    [ "DiscordCoreAPI::OnTypingStartData", "de/d8e/a02213.html", [
+    [ "OnTypingStartData", "de/d8e/a02213.html", [
       [ "typingStartData", "de/d8e/a02213.html#a9fe7a5a7deaac75c753a17493d7fc512", null ]
     ] ],
-    [ "DiscordCoreAPI::OnUserUpdateData", "da/da2/a02217.html", [
+    [ "OnUserUpdateData", "da/da2/a02217.html", [
       [ "userNew", "da/da2/a02217.html#a5a8ee7bfff26053fcf2108dcacb5f57e", null ],
       [ "userOld", "da/da2/a02217.html#a29b9ab2df8755c3b6b4e29fefe0ac862", null ]
     ] ],
-    [ "DiscordCoreAPI::OnVoiceServerUpdateData", "d4/dc0/a02225.html", [
+    [ "OnVoiceServerUpdateData", "d4/dc0/a02225.html", [
       [ "endpoint", "d4/dc0/a02225.html#ae82e94935e5211623cf75cb3d41b4428", null ],
       [ "guildId", "d4/dc0/a02225.html#a67454ab888a2a1b8e5892b1cc41e399f", null ],
       [ "token", "d4/dc0/a02225.html#a8e74e8ef0b1ef975c01ebb81992778cd", null ]
     ] ],
-    [ "DiscordCoreAPI::OnVoiceStateUpdateData", "dd/dd6/a02221.html", [
+    [ "OnVoiceStateUpdateData", "dd/dd6/a02221.html", [
       [ "voiceStateData", "dd/dd6/a02221.html#a8e9c77a625f369e740c6e00089ee049e", null ]
     ] ],
-    [ "DiscordCoreAPI::OnWebhookUpdateData", "da/d3b/a02229.html", [
+    [ "OnWebhookUpdateData", "da/d3b/a02229.html", [
       [ "channelId", "da/d3b/a02229.html#ab47af67c996edd8e241078f22bb679be", null ],
       [ "guildId", "da/d3b/a02229.html#a2543ca885ab8b2973460ad74a0684614", null ]
     ] ],
-    [ "DiscordCoreInternal::EventDelegate< ReturnType, ArgTypes >", "d8/d98/a02009.html", [
+    [ "EventDelegate", "d8/d98/a02009.html", [
       [ "EventDelegate", "d8/d98/a02009.html#abbc90f53869443c33a4763d0ecbcc9ad", null ],
       [ "EventDelegate", "d8/d98/a02009.html#a79944ed8c619dc1cf729ed3e0bb0a04a", null ]
     ] ],
-    [ "DiscordCoreInternal::EventDelegateToken", "d3/d39/a02005.html", null ]
+    [ "EventDelegateToken", "d3/d39/a02005.html", null ]
 ];
