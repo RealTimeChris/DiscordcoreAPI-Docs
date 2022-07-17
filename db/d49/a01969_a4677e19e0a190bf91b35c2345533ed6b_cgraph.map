@@ -1,0 +1,4 @@
+<map id="DiscordCoreAPI::CoRoutine::get" name="DiscordCoreAPI::CoRoutine::get">
+<area shape="rect" id="node1" title="Gets the resulting value of the CoRoutine." alt="" coords="5,13,232,39"/>
+<area shape="rect" id="node2" href="$d3/d63/a03637.html#a5845dd8c3af6c44112754d450ebabdbf" title="Tries to receive an object of type ObjectType to be placed into a reference." alt="" coords="280,5,484,47"/>
+</map>

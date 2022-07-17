@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['searchguildmembersdata_2298',['SearchGuildMembersData',['../d0/db8/a03001.html',1,'DiscordCoreAPI']]],
+  ['secretsdata_2299',['SecretsData',['../d0/dbf/a02521.html',1,'DiscordCoreAPI']]],
+  ['selectmenucollector_2300',['SelectMenuCollector',['../d0/d04/a03161.html',1,'DiscordCoreAPI']]],
+  ['selectmenuresponsedata_2301',['SelectMenuResponseData',['../d5/d27/a03157.html',1,'DiscordCoreAPI']]],
+  ['selectoptiondata_2302',['SelectOptionData',['../d6/dbb/a02669.html',1,'DiscordCoreAPI']]],
+  ['senddmdata_2303',['SendDMData',['../d6/d04/a03193.html',1,'DiscordCoreAPI']]],
+  ['sessionstartdata_2304',['SessionStartData',['../dd/d4a/a02761.html',1,'DiscordCoreAPI']]],
+  ['shardingoptions_2305',['ShardingOptions',['../d9/d0f/a03605.html',1,'DiscordCoreAPI']]],
+  ['song_2306',['Song',['../db/d27/a02817.html',1,'DiscordCoreAPI']]],
+  ['songapi_2307',['SongAPI',['../d1/d3a/a03353.html',1,'DiscordCoreAPI']]],
+  ['songcompletioneventdata_2308',['SongCompletionEventData',['../db/de9/a02821.html',1,'DiscordCoreAPI']]],
+  ['stageinstance_2309',['StageInstance',['../d2/d9b/a03429.html',1,'DiscordCoreAPI']]],
+  ['stageinstancedata_2310',['StageInstanceData',['../dd/d68/a02553.html',1,'DiscordCoreAPI']]],
+  ['stageinstances_2311',['StageInstances',['../d0/d19/a03433.html',1,'DiscordCoreAPI']]],
+  ['startthreadinforumchanneldata_2312',['StartThreadInForumChannelData',['../d9/d74/a03477.html',1,'DiscordCoreAPI']]],
+  ['startthreadwithmessagedata_2313',['StartThreadWithMessageData',['../d8/df7/a03469.html',1,'DiscordCoreAPI']]],
+  ['startthreadwithoutmessagedata_2314',['StartThreadWithoutMessageData',['../d2/d50/a03473.html',1,'DiscordCoreAPI']]],
+  ['sticker_2315',['Sticker',['../d1/d15/a03457.html',1,'DiscordCoreAPI']]],
+  ['stickerdata_2316',['StickerData',['../dd/d98/a02557.html',1,'DiscordCoreAPI']]],
+  ['stickeritemdata_2317',['StickerItemData',['../dc/d1d/a02713.html',1,'DiscordCoreAPI']]],
+  ['stickerpackdata_2318',['StickerPackData',['../dd/d01/a02729.html',1,'DiscordCoreAPI']]],
+  ['stickers_2319',['Stickers',['../da/da5/a03465.html',1,'DiscordCoreAPI']]],
+  ['syncguildtemplatedata_2320',['SyncGuildTemplateData',['../dd/d4c/a02949.html',1,'DiscordCoreAPI']]]
+];

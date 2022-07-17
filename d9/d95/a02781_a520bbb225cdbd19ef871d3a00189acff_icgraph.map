@@ -1,0 +1,5 @@
+<map id="DiscordCoreAPI::InputEventData::getInteractionData" name="DiscordCoreAPI::InputEventData::getInteractionData">
+<area shape="rect" id="node1" title="Returns the InteractionData, if applicable, of this input&#45;event." alt="" coords="284,39,484,80"/>
+<area shape="rect" id="node2" href="$dc/d10/a03169.html#ac243db78f0fe0ce88c8c428110d77c37" title="Constructor." alt="" coords="5,5,236,47"/>
+<area shape="rect" id="node3" href="$d0/d04/a03161.html#a6e996a3f44583a72b1a01a784aa6021c" title="Constructor." alt="" coords="9,71,232,112"/>
+</map>
