@@ -207,16 +207,16 @@ $(document).ready(function(){initNavTree('d0/d7e/a00770_source.html','../../'); 
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <a class="code hl_class" href="../../d3/d63/a03637.html">UnboundedMessageBlock&lt;DiscordCoreInternal::VoiceConnectionData&gt;</a> voiceConnectionDataBuffer{};</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        std::atomic&lt;VoiceActiveState&gt; lastActiveState{ VoiceActiveState::Connecting };</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        std::atomic&lt;VoiceActiveState&gt; activeState{ VoiceActiveState::Connecting };</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        std::unique_ptr&lt;DiscordCoreInternal::AudioEncoder&gt; encoder{ <span class="keyword">nullptr</span> };</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        DiscordCoreInternal::VoiceConnectionData voiceConnectionDataFinal{};</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        DiscordCoreInternal::BaseSocketAgent* baseSocketAgent{ <span class="keyword">nullptr</span> };</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        DiscordCoreInternal::VoiceConnectInitData voiceConnectInitData{};</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        DiscordCoreInternal::WebSocketSSLShard* baseShard{ <span class="keyword">nullptr</span> };</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <a class="code hl_class" href="../../d3/d63/a03637.html">UnboundedMessageBlock&lt;AudioFrameData&gt;</a> audioDataBuffer{};</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        std::unique_ptr&lt;std::jthread&gt; taskThread01{ <span class="keyword">nullptr</span> };</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        std::unique_ptr&lt;std::jthread&gt; taskThread02{ <span class="keyword">nullptr</span> };</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        std::atomic_bool areWeConnectedBool{ <span class="keyword">false</span> };</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        std::queue&lt;ConnectionPackage&gt; connections{};</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        DiscordCoreInternal::VoiceConnectionData voiceConnectionDataFinal{};</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        DiscordCoreInternal::BaseSocketAgent* baseSocketAgent{ <span class="keyword">nullptr</span> };</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        DiscordCoreInternal::VoiceConnectInitData voiceConnectInitData{};</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        DiscordCoreInternal::WebSocketSSLShard* baseShard{ <span class="keyword">nullptr</span> };</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <a class="code hl_class" href="../../d3/d63/a03637.html">UnboundedMessageBlock&lt;AudioFrameData&gt;</a> audioDataBuffer{};</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        std::unique_ptr&lt;std::jthread&gt; taskThread01{ <span class="keyword">nullptr</span> };</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        std::unique_ptr&lt;std::jthread&gt; taskThread02{ <span class="keyword">nullptr</span> };</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        std::atomic_bool areWeConnectedBool{ <span class="keyword">false</span> };</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        std::queue&lt;ConnectionPackage&gt; connections{};</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        DiscordCoreInternal::AudioEncoder encoder{};</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        std::atomic_bool areWePlaying{ <span class="keyword">false</span> };</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keyword">const</span> int64_t maxReconnectTries{ 10 };</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        int64_t currentReconnectTries{ 0 };</div>

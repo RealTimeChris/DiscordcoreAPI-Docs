@@ -1,9 +1,8 @@
 var a07063 =
 [
-    [ "Getting a Sticker", "d7/dbb/a07231.html", null ],
-    [ "Getting Nitro Sticker Packs", "df/d74/a07232.html", null ],
-    [ "Getting a List of Guild Stickers", "d2/da4/a07230.html", null ],
-    [ "Creating a Guild Sticker", "df/da9/a07228.html", null ],
-    [ "Modifying a Guild Sticker", "df/dff/a07233.html", null ],
-    [ "Deleting a Guild Sticker", "dd/d22/a07229.html", null ]
+    [ "Listing Auto-Moderation-Rules", "de/ddd/a07085.html", null ],
+    [ "Getting an Auto-Moderation-Rule", "df/d45/a07084.html", null ],
+    [ "Creating an Auto-Moderation-Rule", "d4/db3/a07082.html", null ],
+    [ "Modifying an Auto-Moderation-Rule", "d3/d45/a07086.html", null ],
+    [ "Deleting an Auto-Moderation-Rule", "dd/d63/a07083.html", null ]
 ];

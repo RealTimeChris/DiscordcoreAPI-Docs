@@ -1,0 +1,26 @@
+var a07039 =
+[
+    [ "Login/Setup", "d7/dfb/a07041.html", "d7/dfb/a07041" ],
+    [ "General Usage", "d1/d43/a07042.html", "d1/d43/a07042" ],
+    [ "Autocomplete Stuff", "d0/dac/a07043.html", "d0/dac/a07043" ],
+    [ "Button Stuff", "db/d73/a07044.html", "db/d73/a07044" ],
+    [ "Select-Menu Stuff", "dc/df5/a07045.html", "dc/df5/a07045" ],
+    [ "Modal Stuff", "de/d0a/a07046.html", "de/d0a/a07046" ],
+    [ "Voice Connection Stuff", "da/d09/a07047.html", "da/d09/a07047" ],
+    [ "Application-Command Stuff", "d3/da4/a07048.html", "d3/da4/a07048" ],
+    [ "Channel Stuff", "d9/d49/a07049.html", "d9/d49/a07049" ],
+    [ "Guild Stuff", "d8/de3/a07050.html", "d8/de3/a07050" ],
+    [ "Auto-Moderation-Rule Stuff", "d1/d84/a07063.html", "d1/d84/a07063" ],
+    [ "Guild-Member Stuff", "de/dd7/a07051.html", "de/dd7/a07051" ],
+    [ "Guild Scheduled Event Stuff", "d4/d15/a07052.html", "d4/d15/a07052" ],
+    [ "Input Event Stuff", "d9/d0e/a07053.html", "d9/d0e/a07053" ],
+    [ "Interaction Stuff", "d5/d78/a07054.html", "d5/d78/a07054" ],
+    [ "Message Stuff", "d8/dcd/a07055.html", "d8/dcd/a07055" ],
+    [ "Reaction Stuff", "d7/de7/a07056.html", "d7/de7/a07056" ],
+    [ "Role Stuff", "dc/d3d/a07057.html", "dc/d3d/a07057" ],
+    [ "Stage-Instance Stuff", "dd/d67/a07058.html", "dd/d67/a07058" ],
+    [ "Sticker Stuff", "db/d67/a07059.html", "db/d67/a07059" ],
+    [ "Thread Stuff", "d4/df2/a07060.html", "d4/df2/a07060" ],
+    [ "User Stuff", "dc/db3/a07061.html", "dc/db3/a07061" ],
+    [ "Webhook Stuff", "d6/d0e/a07062.html", "d6/d0e/a07062" ]
+];

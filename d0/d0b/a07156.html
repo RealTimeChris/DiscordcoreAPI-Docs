@@ -102,30 +102,31 @@ $(document).ready(function(){initNavTree('d0/d0b/a07156.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Loop Song </div></div>
+  <div class="headertitle"><div class="title">Pause </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Music_Bot_LoopSong"></a> </p><div class="fragment"><div class="line"><span class="preprocessor">#pragma once</span></div>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Music_Bot_Pause"></a> </p><div class="fragment"><div class="line"><span class="preprocessor">#pragma once</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d8/db9/a00725.html">Index.hpp</a>&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;HelperFunctions.hpp&quot;</span></div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">namespace </span><a class="code hl_namespace" href="../../d7/d46/a00890.html">DiscordCoreAPI</a> {</div>
-<div class="line">    <span class="keyword">class </span>LoopSong : <span class="keyword">public</span> <a class="code hl_struct" href="../../dc/dfd/a02837.html">DiscordCoreAPI::BaseFunction</a> {</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">class </span>Pause : <span class="keyword">public</span> <a class="code hl_struct" href="../../dc/dfd/a02837.html">DiscordCoreAPI::BaseFunction</a> {</div>
 <div class="line">      <span class="keyword">public</span>:</div>
-<div class="line">        LoopSong() {</div>
-<div class="line">            this-&gt;commandName = <span class="stringliteral">&quot;LoopSong&quot;</span>;</div>
-<div class="line">            this-&gt;helpDescription = <span class="stringliteral">&quot;Enables or disables looping of the current song.&quot;</span>;</div>
+<div class="line">        Pause() {</div>
+<div class="line">            this-&gt;commandName = <span class="stringliteral">&quot;pause&quot;</span>;</div>
+<div class="line">            this-&gt;helpDescription = <span class="stringliteral">&quot;Pauses the currently playing music.&quot;</span>;</div>
 <div class="line">            EmbedData msgEmbed;</div>
-<div class="line">            msgEmbed.setDescription(<span class="stringliteral">&quot;------\nSimply enter /loopsong!\n------&quot;</span>);</div>
-<div class="line">            msgEmbed.setTitle(<span class="stringliteral">&quot;__**Loop-Song Usage:**__&quot;</span>);</div>
+<div class="line">            msgEmbed.setDescription(<span class="stringliteral">&quot;------\nSimply enter /pause!\n------&quot;</span>);</div>
+<div class="line">            msgEmbed.setTitle(<span class="stringliteral">&quot;__**Pause Usage:**__&quot;</span>);</div>
 <div class="line">            msgEmbed.setTimeStamp(getTimeAndDate());</div>
 <div class="line">            msgEmbed.setColor(<span class="stringliteral">&quot;FeFeFe&quot;</span>);</div>
 <div class="line">            this-&gt;helpEmbed = msgEmbed;</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        std::unique_ptr&lt;DiscordCoreAPI::BaseFunction&gt; create() {</div>
-<div class="line">            <span class="keywordflow">return</span> std::make_unique&lt;LoopSong&gt;();</div>
+<div class="line">            <span class="keywordflow">return</span> std::make_unique&lt;Pause&gt;();</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../d0/d2b/a02833.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
@@ -144,9 +145,9 @@ $(document).ready(function(){initNavTree('d0/d0b/a07156.html','../../'); initRes
 <div class="line"> </div>
 <div class="line">                DiscordGuild discordGuild(guild);</div>
 <div class="line"> </div>
-<div class="line">                <span class="keywordtype">bool</span> areWeAllowed = checkIfAllowedPlayingInChannel(*args.eventData, discordGuild);</div>
+<div class="line">                <span class="keywordtype">bool</span> checkIfAllowedInChannel = checkIfAllowedPlayingInChannel(*args.eventData, discordGuild);</div>
 <div class="line"> </div>
-<div class="line">                <span class="keywordflow">if</span> (!areWeAllowed) {</div>
+<div class="line">                <span class="keywordflow">if</span> (!checkIfAllowedInChannel) {</div>
 <div class="line">                    <span class="keywordflow">return</span>;</div>
 <div class="line">                }</div>
 <div class="line"> </div>
@@ -159,22 +160,59 @@ $(document).ready(function(){initNavTree('d0/d0b/a07156.html','../../'); initRes
 <div class="line">                    <span class="keywordflow">return</span>;</div>
 <div class="line">                }</div>
 <div class="line"> </div>
-<div class="line">                <span class="keywordflow">if</span> (SongAPI::isLoopSongEnabled(guild.id)) {</div>
-<div class="line">                    SongAPI::setLoopSongStatus(<span class="keyword">false</span>, guild.id);</div>
-<div class="line">                } <span class="keywordflow">else</span> {</div>
-<div class="line">                    SongAPI::setLoopSongStatus(<span class="keyword">true</span>, guild.id);</div>
+<div class="line">                VoiceConnection* voiceConnection = guild.connectToVoice(guildMember.voiceData.channelId, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line">                loadPlaylist(discordGuild);</div>
+<div class="line">                <span class="keywordflow">if</span> (voiceConnection == <span class="keyword">nullptr</span>) {</div>
+<div class="line">                    EmbedData newEmbed;</div>
+<div class="line">                    newEmbed.setAuthor(args.eventData-&gt;<a class="code hl_function" href="../../d9/d95/a02781.html#a3ebc65bb67fbd74518199db64e40559c">getUserName</a>(), args.eventData-&gt;<a class="code hl_function" href="../../d9/d95/a02781.html#a2dd12454f3ecd05f4cfbd22b027268bd">getAvatarUrl</a>());</div>
+<div class="line">                    newEmbed.setDescription(<span class="stringliteral">&quot;------\n__**Sorry, but there is no voice connection that is currently held by me!**__\n------&quot;</span>);</div>
+<div class="line">                    newEmbed.setTimeStamp(<a class="code hl_function" href="../../dd/d94/a00888.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
+<div class="line">                    newEmbed.setTitle(<span class="stringliteral">&quot;__**Connection Issue:**__&quot;</span>);</div>
+<div class="line">                    newEmbed.setColor(discordGuild.data.borderColor);</div>
+<div class="line">                    RespondToInputEventData dataPackage(*args.eventData);</div>
+<div class="line">                    dataPackage.setResponseType(InputEventResponseType::Ephemeral_Interaction_Response);</div>
+<div class="line">                    dataPackage.addMessageEmbed(newEmbed);</div>
+<div class="line">                    <span class="keyword">auto</span> newEvent = InputEvents::respondToInputEventAsync(dataPackage);</div>
+<div class="line">                    <span class="keywordflow">return</span>;</div>
 <div class="line">                }</div>
+<div class="line"> </div>
+<div class="line">                <span class="keywordflow">if</span> (guildMember.voiceData.channelId == 0 || guildMember.voiceData.channelId != voiceConnection-&gt;getChannelId()) {</div>
+<div class="line">                    EmbedData newEmbed;</div>
+<div class="line">                    newEmbed.setAuthor(args.eventData-&gt;<a class="code hl_function" href="../../d9/d95/a02781.html#a3ebc65bb67fbd74518199db64e40559c">getUserName</a>(), args.eventData-&gt;<a class="code hl_function" href="../../d9/d95/a02781.html#a2dd12454f3ecd05f4cfbd22b027268bd">getAvatarUrl</a>());</div>
+<div class="line">                    newEmbed.setDescription(<span class="stringliteral">&quot;------\n__**Sorry, but you need to be in a correct voice channel to issue those commands!**__\n------&quot;</span>);</div>
+<div class="line">                    newEmbed.setTimeStamp(<a class="code hl_function" href="../../dd/d94/a00888.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
+<div class="line">                    newEmbed.setTitle(<span class="stringliteral">&quot;__**Pauseping Issue:**__&quot;</span>);</div>
+<div class="line">                    newEmbed.setColor(discordGuild.data.borderColor);</div>
+<div class="line">                    RespondToInputEventData dataPackage(*args.eventData);</div>
+<div class="line">                    dataPackage.setResponseType(InputEventResponseType::Ephemeral_Interaction_Response);</div>
+<div class="line">                    dataPackage.addMessageEmbed(newEmbed);</div>
+<div class="line">                    <span class="keyword">auto</span> newEvent = InputEvents::respondToInputEventAsync(dataPackage);</div>
+<div class="line">                    <span class="keywordflow">return</span>;</div>
+<div class="line">                }</div>
+<div class="line"> </div>
+<div class="line">                <span class="keywordflow">if</span> (!guild.areWeConnected() || !SongAPI::areWeCurrentlyPlaying(guild.id)) {</div>
+<div class="line">                    std::string msgString = <span class="stringliteral">&quot;------\n**There&#39;s no music playing to be paused!**\n------&quot;</span>;</div>
+<div class="line">                    EmbedData msgEmbed;</div>
+<div class="line">                    msgEmbed.setAuthor(args.eventData-&gt;<a class="code hl_function" href="../../d9/d95/a02781.html#a3ebc65bb67fbd74518199db64e40559c">getUserName</a>(), args.eventData-&gt;<a class="code hl_function" href="../../d9/d95/a02781.html#a2dd12454f3ecd05f4cfbd22b027268bd">getAvatarUrl</a>());</div>
+<div class="line">                    msgEmbed.setColor(discordGuild.data.borderColor);</div>
+<div class="line">                    msgEmbed.setDescription(msgString);</div>
+<div class="line">                    msgEmbed.setTimeStamp(<a class="code hl_function" href="../../dd/d94/a00888.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
+<div class="line">                    msgEmbed.setTitle(<span class="stringliteral">&quot;__**Pausing Issue:**__&quot;</span>);</div>
+<div class="line">                    RespondToInputEventData dataPackage(*args.eventData);</div>
+<div class="line">                    dataPackage.setResponseType(InputEventResponseType::Ephemeral_Interaction_Response);</div>
+<div class="line">                    dataPackage.addMessageEmbed(msgEmbed);</div>
+<div class="line">                    <span class="keyword">auto</span> newEvent = InputEvents::respondToInputEventAsync(dataPackage);</div>
+<div class="line">                    <span class="keywordflow">return</span>;</div>
+<div class="line">                }</div>
+<div class="line">                SongAPI::pauseToggle(guild.id);</div>
+<div class="line"> </div>
 <div class="line">                EmbedData msgEmbed;</div>
 <div class="line">                msgEmbed.setAuthor(args.eventData-&gt;<a class="code hl_function" href="../../d9/d95/a02781.html#a3ebc65bb67fbd74518199db64e40559c">getUserName</a>(), args.eventData-&gt;<a class="code hl_function" href="../../d9/d95/a02781.html#a2dd12454f3ecd05f4cfbd22b027268bd">getAvatarUrl</a>());</div>
 <div class="line">                msgEmbed.setColor(discordGuild.data.borderColor);</div>
-<div class="line">                <span class="keywordflow">if</span> (SongAPI::isLoopSongEnabled(guild.id)) {</div>
-<div class="line">                    msgEmbed.setDescription(<span class="stringliteral">&quot;\n------\n__**Looping-Song has been enabled!**__\n------\n&quot;</span>);</div>
-<div class="line">                } <span class="keywordflow">else</span> {</div>
-<div class="line">                    msgEmbed.setDescription(<span class="stringliteral">&quot;\n------\n__**Looping-Song has been disabled!**__\n------\n&quot;</span>);</div>
-<div class="line">                }</div>
-<div class="line">                savePlaylist(discordGuild);</div>
+<div class="line">                msgEmbed.setDescription(<span class="stringliteral">&quot;\n------\n__**Songs Remaining In Queue:**__ &quot;</span> + std::to_string(SongAPI::getPlaylist(guild.id).songQueue.size()) +</div>
+<div class="line">                                        <span class="stringliteral">&quot;\n------&quot;</span>);</div>
 <div class="line">                msgEmbed.setTimeStamp(<a class="code hl_function" href="../../dd/d94/a00888.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
-<div class="line">                msgEmbed.setTitle(<span class="stringliteral">&quot;__**Looping-Song Change:**__&quot;</span>);</div>
+<div class="line">                msgEmbed.setTitle(<span class="stringliteral">&quot;__**Paused Playback:**__&quot;</span>);</div>
 <div class="line">                RespondToInputEventData dataPackage(*args.eventData);</div>
 <div class="line">                dataPackage.setResponseType(InputEventResponseType::Ephemeral_Interaction_Response);</div>
 <div class="line">                dataPackage.addMessageEmbed(msgEmbed);</div>
@@ -182,10 +220,10 @@ $(document).ready(function(){initNavTree('d0/d0b/a07156.html','../../'); initRes
 <div class="line"> </div>
 <div class="line">                <span class="keywordflow">return</span>;</div>
 <div class="line">            } <span class="keywordflow">catch</span> (...) {</div>
-<div class="line">                <a class="code hl_function" href="../../dd/d94/a00888.html#ga805bf7170903087e933a7b81c8e39f15">reportException</a>(<span class="stringliteral">&quot;LoopSong::execute Error: &quot;</span>);</div>
+<div class="line">                <a class="code hl_function" href="../../dd/d94/a00888.html#ga805bf7170903087e933a7b81c8e39f15">reportException</a>(<span class="stringliteral">&quot;Pause::execute Error: &quot;</span>);</div>
 <div class="line">            }</div>
 <div class="line">        }</div>
-<div class="line">        <span class="keyword">virtual</span> ~LoopSong();</div>
+<div class="line">        <span class="keyword">virtual</span> ~Pause();</div>
 <div class="line">    };</div>
 <div class="line">}</div>
 <div class="ttc" id="aa00725_html"><div class="ttname"><a href="../../d8/db9/a00725.html">Index.hpp</a></div></div>
@@ -206,7 +244,7 @@ $(document).ready(function(){initNavTree('d0/d0b/a07156.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../db/d73/a07044.html">Guides</a></li><li class="navelem"><a class="el" href="../../d1/d40/a07158.html">Music-Bot Guide</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dc/d14/a07040.html">Guides</a></li><li class="navelem"><a class="el" href="../../d1/d77/a07154.html">Music-Bot Guide</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

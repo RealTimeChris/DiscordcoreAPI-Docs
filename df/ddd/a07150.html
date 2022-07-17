@@ -102,76 +102,173 @@ $(document).ready(function(){initNavTree('df/ddd/a07150.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Instantiating/Creating a Modal-Input </div></div>
+  <div class="headertitle"><div class="title">Helper Functions </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Modal_Stuff_Instantiating_Creating_a_Modal"></a></p><ul>
-<li>Create a data structure of type <code><a class="el" href="../../da/d7d/a02785.html" title="Data for responding to an input-event.">DiscordCoreAPI::RespondToInputEventData</a></code>.</li>
-<li>Add a modal-text-input using the <code><a class="el" href="../../da/d7d/a02785.html#acc9eb079def7c382a73da4af107b6dab" title="Adds a modal to the response Message.">DiscordCoreAPI::RespondToInputEventData::addModal</a></code> function of the <code><a class="el" href="../../da/d7d/a02785.html" title="Data for responding to an input-event.">DiscordCoreAPI::RespondToInputEventData</a></code> structure.</li>
-<li>Call the <code><a class="el" href="../../df/d92/a03097.html#a91f7a025c00ec5b858a260ebcda49a3c" title="Responds to one of a number of types of &quot;InputEvents&quot;.">DiscordCoreAPI::InputEvents::respondToInputEventAsync</a></code> function, passing it the <code><a class="el" href="../../da/d7d/a02785.html" title="Data for responding to an input-event.">DiscordCoreAPI::RespondToInputEventData</a></code> structure. <div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
-<div class="line"><span class="comment">/// https://github.com/RealTimeChris/DiscordCoreAPI</span></div>
-<div class="line"><span class="comment"></span> </div>
-<div class="line"><span class="preprocessor">#pragma once</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d8/db9/a00725.html">Index.hpp</a>&quot;</span></div>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Music_Bot_HelperFunctions"></a> </p><div class="fragment"><div class="line"><span class="preprocessor">#pragma once</span></div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">namespace </span><a class="code hl_namespace" href="../../d7/d46/a00890.html">DiscordCoreAPI</a> {</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">class </span>Test : <span class="keyword">public</span> <a class="code hl_struct" href="../../dc/dfd/a02837.html">DiscordCoreAPI::BaseFunction</a> {</div>
-<div class="line">      <span class="keyword">public</span>:</div>
-<div class="line">        Test() {</div>
-<div class="line">            this-&gt;commandName = <span class="stringliteral">&quot;test&quot;</span>;</div>
-<div class="line">            this-&gt;helpDescription = <span class="stringliteral">&quot;Testing purposes!&quot;</span>;</div>
-<div class="line">            <a class="code hl_class" href="../../d0/d71/a02329.html">DiscordCoreAPI::EmbedData</a> msgEmbed;</div>
-<div class="line">            msgEmbed.<a class="code hl_function" href="../../d0/d71/a02329.html#a9d4066a4861408bc00eccb22a12db7f9">setDescription</a>(<span class="stringliteral">&quot;------\nSimply enter !test or /test!\n------&quot;</span>);</div>
-<div class="line">            msgEmbed.<a class="code hl_function" href="../../d0/d71/a02329.html#a20ca60ec3235f44a223f3d3b687c0c9e">setTitle</a>(<span class="stringliteral">&quot;__**Test Usage:**__&quot;</span>);</div>
-<div class="line">            msgEmbed.<a class="code hl_function" href="../../d0/d71/a02329.html#ae356e6dc3c93658b7228b56da3187896">setTimeStamp</a>(getTimeAndDate());</div>
-<div class="line">            msgEmbed.<a class="code hl_function" href="../../d0/d71/a02329.html#ab417d83fddf9df80eca98e9ec6e888aa">setColor</a>(<span class="stringliteral">&quot;FeFeFe&quot;</span>);</div>
-<div class="line">            this-&gt;helpEmbed = msgEmbed;</div>
+<div class="line">    <span class="keywordtype">bool</span> areWeInADM(InputEventData eventData, Channel channel, <span class="keywordtype">bool</span> displayResponse = <span class="keyword">true</span>) {</div>
+<div class="line">        <span class="keyword">auto</span> currentChannelType = channel.type;</div>
+<div class="line">        <span class="keywordflow">if</span> (currentChannelType == <a class="code hl_enumvalue" href="../../dd/d94/a00888.html#gga386b8a65a1195bd1bc61b75a7f308ffaa05918b8b3437675fd82f88f9488c639d">ChannelType::Dm</a>) {</div>
+<div class="line">            <span class="keywordflow">if</span> (displayResponse) {</div>
+<div class="line">                std::string msgString = <span class="stringliteral">&quot;------\n**Sorry, but we can&#39;t do that in a direct message!**\n------&quot;</span>;</div>
+<div class="line">                std::unique_ptr&lt;EmbedData&gt; msgEmbed(<span class="keyword">new</span> EmbedData());</div>
+<div class="line">                msgEmbed-&gt;setAuthor(eventData.getMessageData().interaction.user.userName, eventData.getMessageData().author.avatar);</div>
+<div class="line">                msgEmbed-&gt;setColor(<span class="stringliteral">&quot;FEFEFE&quot;</span>);</div>
+<div class="line">                msgEmbed-&gt;setDescription(msgString);</div>
+<div class="line">                msgEmbed-&gt;setTimeStamp(<a class="code hl_function" href="../../dd/d94/a00888.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
+<div class="line">                msgEmbed-&gt;setTitle(<span class="stringliteral">&quot;__**Direct Message Issue:**__&quot;</span>);</div>
+<div class="line">                std::unique_ptr&lt;RespondToInputEventData&gt; responseData(<span class="keyword">new</span> RespondToInputEventData(eventData));</div>
+<div class="line">                responseData-&gt;setResponseType(<a class="code hl_enumvalue" href="../../dd/d94/a00888.html#gga6a10916bec24a00f6d6a41d8d880c1faa519f139398504899a626aa10d9fcfd30">InputEventResponseType::Ephemeral_Interaction_Response</a>);</div>
+<div class="line">                responseData-&gt;addMessageEmbed(*msgEmbed);</div>
+<div class="line">                <span class="keyword">auto</span> event01 = <a class="code hl_function" href="../../df/d92/a03097.html#a91f7a025c00ec5b858a260ebcda49a3c">InputEvents::respondToInputEventAsync</a>(*responseData);</div>
+<div class="line">            }</div>
+<div class="line">            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line">        }</div>
+<div class="line">        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">        std::unique_ptr&lt;DiscordCoreAPI::BaseFunction&gt; create() {</div>
-<div class="line">            <span class="keywordflow">return</span> std::make_unique&lt;Test&gt;();</div>
-<div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../d0/d2b/a02833.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
-<div class="line">            <span class="keywordflow">try</span> {</div>
-<div class="line">                <a class="code hl_class" href="../../da/d7d/a02785.html">DiscordCoreAPI::RespondToInputEventData</a> dataPackage {args.eventData};</div>
-<div class="line">                dataPackage.addModal(<span class="stringliteral">&quot;Test Modal&quot;</span>, <span class="stringliteral">&quot;test_modal&quot;</span>, <span class="stringliteral">&quot;Test Modal Small&quot;</span>, <span class="stringliteral">&quot;test_modal&quot;</span>, <span class="keyword">true</span>, 1, 46, TextInputStyle::Paragraph, <span class="stringliteral">&quot;TEST MODAL&quot;</span>,</div>
-<div class="line">                                     <span class="stringliteral">&quot;TestModal&quot;</span>);</div>
-<div class="line">                dataPackage.type = <a class="code hl_enumvalue" href="../../dd/d94/a00888.html#gga6a10916bec24a00f6d6a41d8d880c1faa6dc9f1599186d5895491f67863f9edd7">DiscordCoreAPI::InputEventResponseType::Interaction_Response</a>;</div>
-<div class="line">                <span class="keyword">auto</span> newEvent = <a class="code hl_function" href="../../df/d92/a03097.html#a91f7a025c00ec5b858a260ebcda49a3c">DiscordCoreAPI::InputEvents::respondToInputEventAsync</a>(dataPackage);</div>
-<div class="line"> </div>
-<div class="line"> </div>
-<div class="line">            } <span class="keywordflow">catch</span> (...) {</div>
-<div class="line">                reportException(<span class="stringliteral">&quot;Test::execute()&quot;</span>);</div>
+<div class="line">    <span class="keywordtype">bool</span> checkIfAllowedPlayingInChannel(InputEventData eventData, DiscordGuild discordGuild) {</div>
+<div class="line">        <span class="keywordtype">bool</span> isItFound = <span class="keyword">true</span>;</div>
+<div class="line">        <span class="keywordflow">if</span> (discordGuild.data.musicChannelIds.size() &gt; 0) {</div>
+<div class="line">            isItFound = <span class="keyword">false</span>;</div>
+<div class="line">            std::string msgString = <span class="stringliteral">&quot;------\n**Sorry, but please do that in one of the following channels:**\n------\n&quot;</span>;</div>
+<div class="line">            std::unique_ptr&lt;EmbedData&gt; msgEmbed(<span class="keyword">new</span> EmbedData());</div>
+<div class="line">            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; value: discordGuild.data.musicChannelIds) {</div>
+<div class="line">                <span class="keywordflow">if</span> (eventData.getChannelId() == value) {</div>
+<div class="line">                    isItFound = <span class="keyword">true</span>;</div>
+<div class="line">                    <span class="keywordflow">break</span>;</div>
+<div class="line">                } <span class="keywordflow">else</span> {</div>
+<div class="line">                    msgString += <span class="stringliteral">&quot;&lt;#&quot;</span> + value + <span class="stringliteral">&quot;&gt;\n&quot;</span>;</div>
+<div class="line">                }</div>
+<div class="line">            }</div>
+<div class="line">            msgString += <span class="stringliteral">&quot;------&quot;</span>;</div>
+<div class="line">            <span class="keywordflow">if</span> (isItFound == <span class="keyword">false</span>) {</div>
+<div class="line">                msgEmbed-&gt;setAuthor(eventData.getUserName(), eventData.getAvatarUrl());</div>
+<div class="line">                msgEmbed-&gt;setColor(discordGuild.data.borderColor);</div>
+<div class="line">                msgEmbed-&gt;setDescription(msgString);</div>
+<div class="line">                msgEmbed-&gt;setTitle(<span class="stringliteral">&quot;__**Permissions Issue:**__&quot;</span>);</div>
+<div class="line">                std::unique_ptr&lt;RespondToInputEventData&gt; replyMessageData(<span class="keyword">new</span> RespondToInputEventData(eventData));</div>
+<div class="line">                replyMessageData-&gt;addMessageEmbed(*msgEmbed);</div>
+<div class="line">                ;</div>
+<div class="line">                replyMessageData-&gt;setResponseType(<a class="code hl_enumvalue" href="../../dd/d94/a00888.html#gga6a10916bec24a00f6d6a41d8d880c1faa519f139398504899a626aa10d9fcfd30">InputEventResponseType::Ephemeral_Interaction_Response</a>);</div>
+<div class="line">                <a class="code hl_function" href="../../df/d92/a03097.html#a91f7a025c00ec5b858a260ebcda49a3c">InputEvents::respondToInputEventAsync</a>(*replyMessageData);</div>
 <div class="line">            }</div>
 <div class="line">        }</div>
-<div class="line">        <span class="keyword">virtual</span> ~Test() = <span class="keywordflow">default</span>;</div>
-<div class="line">    };</div>
+<div class="line">        <span class="keywordflow">return</span> isItFound;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">bool</span> checkIfWeHaveControl(InputEventData eventData, DiscordGuild guildData, GuildMember guildMember) {</div>
+<div class="line">        <span class="keywordflow">if</span> (guildData.data.djRoleId == 0) {</div>
+<div class="line">            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordtype">bool</span> doWeHaveControl = <span class="keyword">false</span>;</div>
+<div class="line">        DiscordGuildMember guildMemberData(guildMember);</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">auto</span> myRoles = <a class="code hl_function" href="../../d6/df3/a03349.html#a20b1e7f73eb0ddb76d0db68fbd1a689d">Roles::getGuildMemberRolesAsync</a>({.guildMember = guildMember, .guildId = guildData.data.guildId}).get();</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keyword">auto</span> value: myRoles) {</div>
+<div class="line">            <span class="keywordflow">if</span> (value.id == guildData.data.djRoleId) {</div>
+<div class="line">                doWeHaveControl = <span class="keyword">true</span>;</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">if</span> (!doWeHaveControl) {</div>
+<div class="line">            std::string msgString = <span class="stringliteral">&quot;------\n**Sorry, but you lack the permissions to do that!**\n------&quot;</span>;</div>
+<div class="line">            std::unique_ptr&lt;EmbedData&gt; msgEmbed(<span class="keyword">new</span> EmbedData());</div>
+<div class="line">            msgEmbed-&gt;setAuthor(guildMember.user.userName, guildMember.user.avatar);</div>
+<div class="line">            msgEmbed-&gt;setDescription(msgString);</div>
+<div class="line">            msgEmbed-&gt;setColor(guildData.data.borderColor);</div>
+<div class="line">            msgEmbed-&gt;setTimeStamp(<a class="code hl_function" href="../../dd/d94/a00888.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
+<div class="line">            msgEmbed-&gt;setTitle(<span class="stringliteral">&quot;Permissions Issue&quot;</span>);</div>
+<div class="line">            std::unique_ptr&lt;RespondToInputEventData&gt; dataPackage(<span class="keyword">new</span> RespondToInputEventData(eventData));</div>
+<div class="line">            dataPackage-&gt;addMessageEmbed(*msgEmbed);</div>
+<div class="line">            dataPackage-&gt;setResponseType(<a class="code hl_enumvalue" href="../../dd/d94/a00888.html#gga6a10916bec24a00f6d6a41d8d880c1faa519f139398504899a626aa10d9fcfd30">InputEventResponseType::Ephemeral_Interaction_Response</a>);</div>
+<div class="line">            <a class="code hl_function" href="../../df/d92/a03097.html#a91f7a025c00ec5b858a260ebcda49a3c">InputEvents::respondToInputEventAsync</a>(*dataPackage);</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">return</span> doWeHaveControl;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">bool</span> checkForBotCommanderStatus(GuildMember guildMember, DiscordUser discordUser) {</div>
+<div class="line">        <span class="keywordtype">bool</span> areWeACommander;</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; value: discordUser.data.botCommanders) {</div>
+<div class="line">            <span class="keywordflow">if</span> (guildMember.user.id == value) {</div>
+<div class="line">                areWeACommander = <span class="keyword">true</span>;</div>
+<div class="line">                <span class="keywordflow">return</span> areWeACommander;</div>
+<div class="line">                <span class="keywordflow">break</span>;</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">bool</span> doWeHaveAdminPermissions(BaseFunctionArguments args, InputEventData eventData, DiscordGuild discordGuild, Channel channel, GuildMember guildMember,</div>
+<div class="line">                                  <span class="keywordtype">bool</span> displayResponse = <span class="keyword">true</span>) {</div>
+<div class="line">        <span class="keywordtype">bool</span> doWeHaveAdmin = guildMember.permissions.checkForPermission(guildMember, channel, <a class="code hl_enumvalue" href="../../dd/d94/a00888.html#ggabf76b7b06351e7fc14b8c72f9aa2c15fa7b7bc2512ee1fedcd76bdc68926d4f7b">Permission::Administrator</a>);</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">if</span> (doWeHaveAdmin) {</div>
+<div class="line">            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordtype">bool</span> areWeACommander =</div>
+<div class="line">            checkForBotCommanderStatus(guildMember, DiscordUser(args.discordCoreClient-&gt;getBotUser().userName, args.discordCoreClient-&gt;getBotUser().id));</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">if</span> (areWeACommander) {</div>
+<div class="line">            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">if</span> (displayResponse) {</div>
+<div class="line">            std::string msgString = <span class="stringliteral">&quot;------\n**Sorry, but you don&#39;t have the permissions required for that!**\n------&quot;</span>;</div>
+<div class="line">            std::unique_ptr&lt;EmbedData&gt; msgEmbed(<span class="keyword">new</span> EmbedData());</div>
+<div class="line">            msgEmbed-&gt;setAuthor(guildMember.user.userName, guildMember.user.avatar);</div>
+<div class="line">            msgEmbed-&gt;setColor(discordGuild.data.borderColor);</div>
+<div class="line">            msgEmbed-&gt;setDescription(msgString);</div>
+<div class="line">            msgEmbed-&gt;setTimeStamp(<a class="code hl_function" href="../../dd/d94/a00888.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
+<div class="line">            msgEmbed-&gt;setTitle(<span class="stringliteral">&quot;__**Permissions Issue:**__&quot;</span>);</div>
+<div class="line">            std::unique_ptr&lt;RespondToInputEventData&gt; dataPackage(<span class="keyword">new</span> RespondToInputEventData(eventData));</div>
+<div class="line">            dataPackage-&gt;addMessageEmbed(*msgEmbed);</div>
+<div class="line">            dataPackage-&gt;setResponseType(<a class="code hl_enumvalue" href="../../dd/d94/a00888.html#gga6a10916bec24a00f6d6a41d8d880c1faa519f139398504899a626aa10d9fcfd30">InputEventResponseType::Ephemeral_Interaction_Response</a>);</div>
+<div class="line">            <a class="code hl_function" href="../../df/d92/a03097.html#a91f7a025c00ec5b858a260ebcda49a3c">InputEvents::respondToInputEventAsync</a>(*dataPackage);</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">float</span> applyAsymptoticTransform(<span class="keywordtype">float</span> inputModValue, <span class="keywordtype">float</span> horizontalStretch, <span class="keywordtype">float</span> ceiling) {</div>
+<div class="line">        <span class="keywordtype">float</span> finalModValue = 0;</div>
+<div class="line">        <span class="keywordtype">float</span> newInputModValue = inputModValue;</div>
+<div class="line">        <span class="keywordflow">if</span> (newInputModValue == 0) {</div>
+<div class="line">            newInputModValue++;</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">if</span> (newInputModValue &lt;= 0) {</div>
+<div class="line">            <span class="keywordtype">float</span> newInputValue = newInputModValue * -1;</div>
+<div class="line"> </div>
+<div class="line">            finalModValue =</div>
+<div class="line">                -1 * (float)trunc((ceiling * pow(newInputValue, 3))/((pow(newInputValue, 3) + (int64_t)horizontalStretch * (int64_t)newInputValue)));</div>
+<div class="line">            <span class="keywordflow">return</span> finalModValue;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        finalModValue =</div>
+<div class="line">            (float)trunc((ceiling * pow(newInputModValue, 3))/((pow(newInputModValue, 3) + (int64_t)horizontalStretch * (int64_t)newInputModValue)));</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">return</span> finalModValue;</div>
+<div class="line">    }</div>
 <div class="line">}</div>
-<div class="ttc" id="aa00725_html"><div class="ttname"><a href="../../d8/db9/a00725.html">Index.hpp</a></div></div>
-<div class="ttc" id="aa00888_html_gga6a10916bec24a00f6d6a41d8d880c1faa6dc9f1599186d5895491f67863f9edd7"><div class="ttname"><a href="../../dd/d94/a00888.html#gga6a10916bec24a00f6d6a41d8d880c1faa6dc9f1599186d5895491f67863f9edd7">DiscordCoreAPI::InputEventResponseType::Interaction_Response</a></div><div class="ttdeci">@ Interaction_Response</div><div class="ttdoc">Interaction response.</div></div>
+<div class="ttc" id="aa00888_html_ga63ce723358a8b7a00c14e055f2a26998"><div class="ttname"><a href="../../dd/d94/a00888.html#ga63ce723358a8b7a00c14e055f2a26998">DiscordCoreAPI::getTimeAndDate</a></div><div class="ttdeci">DiscordCoreAPI_Dll std::string getTimeAndDate()</div><div class="ttdoc">Acquires a timestamp with the current time and date - suitable for use in message-embeds.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/a00869_source.html#l01120">Utilities.cpp:1120</a></div></div>
+<div class="ttc" id="aa00888_html_gga386b8a65a1195bd1bc61b75a7f308ffaa05918b8b3437675fd82f88f9488c639d"><div class="ttname"><a href="../../dd/d94/a00888.html#gga386b8a65a1195bd1bc61b75a7f308ffaa05918b8b3437675fd82f88f9488c639d">DiscordCoreAPI::ChannelType::Dm</a></div><div class="ttdeci">@ Dm</div><div class="ttdoc">Direct-Message.</div></div>
+<div class="ttc" id="aa00888_html_gga6a10916bec24a00f6d6a41d8d880c1faa519f139398504899a626aa10d9fcfd30"><div class="ttname"><a href="../../dd/d94/a00888.html#gga6a10916bec24a00f6d6a41d8d880c1faa519f139398504899a626aa10d9fcfd30">DiscordCoreAPI::InputEventResponseType::Ephemeral_Interaction_Response</a></div><div class="ttdeci">@ Ephemeral_Interaction_Response</div><div class="ttdoc">Ephemeral Interaction response.</div></div>
+<div class="ttc" id="aa00888_html_ggabf76b7b06351e7fc14b8c72f9aa2c15fa7b7bc2512ee1fedcd76bdc68926d4f7b"><div class="ttname"><a href="../../dd/d94/a00888.html#ggabf76b7b06351e7fc14b8c72f9aa2c15fa7b7bc2512ee1fedcd76bdc68926d4f7b">DiscordCoreAPI::Permission::Administrator</a></div><div class="ttdeci">@ Administrator</div><div class="ttdoc">Administrator.</div></div>
 <div class="ttc" id="aa00890_html"><div class="ttname"><a href="../../d7/d46/a00890.html">DiscordCoreAPI</a></div><div class="ttdoc">The main namespace for this library.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00025">ApplicationCommandEntities.hpp:25</a></div></div>
-<div class="ttc" id="aa02329_html"><div class="ttname"><a href="../../d0/d71/a02329.html">DiscordCoreAPI::EmbedData</a></div><div class="ttdoc">Embed data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l00599">FoundationEntities.hpp:599</a></div></div>
-<div class="ttc" id="aa02329_html_a20ca60ec3235f44a223f3d3b687c0c9e"><div class="ttname"><a href="../../d0/d71/a02329.html#a20ca60ec3235f44a223f3d3b687c0c9e">DiscordCoreAPI::EmbedData::setTitle</a></div><div class="ttdeci">EmbedData &amp; setTitle(const std::string &amp;titleNew)</div><div class="ttdoc">Sets the title of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2d/a00815_source.html#l00362">FoundationEntities.cpp:362</a></div></div>
-<div class="ttc" id="aa02329_html_a9d4066a4861408bc00eccb22a12db7f9"><div class="ttname"><a href="../../d0/d71/a02329.html#a9d4066a4861408bc00eccb22a12db7f9">DiscordCoreAPI::EmbedData::setDescription</a></div><div class="ttdeci">EmbedData &amp; setDescription(const std::string &amp;descriptionNew)</div><div class="ttdoc">Sets the description (the main contents) of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2d/a00815_source.html#l00347">FoundationEntities.cpp:347</a></div></div>
-<div class="ttc" id="aa02329_html_ab417d83fddf9df80eca98e9ec6e888aa"><div class="ttname"><a href="../../d0/d71/a02329.html#ab417d83fddf9df80eca98e9ec6e888aa">DiscordCoreAPI::EmbedData::setColor</a></div><div class="ttdeci">EmbedData &amp; setColor(const std::string &amp;hexColorValueNew)</div><div class="ttdoc">Sets the color of the embed, by applying a hex-color value.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2d/a00815_source.html#l00352">FoundationEntities.cpp:352</a></div></div>
-<div class="ttc" id="aa02329_html_ae356e6dc3c93658b7228b56da3187896"><div class="ttname"><a href="../../d0/d71/a02329.html#ae356e6dc3c93658b7228b56da3187896">DiscordCoreAPI::EmbedData::setTimeStamp</a></div><div class="ttdeci">EmbedData &amp; setTimeStamp(const std::string &amp;timeStamp)</div><div class="ttdoc">Sets the timestamp on the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2d/a00815_source.html#l00333">FoundationEntities.cpp:333</a></div></div>
-<div class="ttc" id="aa02785_html"><div class="ttname"><a href="../../da/d7d/a02785.html">DiscordCoreAPI::RespondToInputEventData</a></div><div class="ttdoc">Data for responding to an input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03417">FoundationEntities.hpp:3417</a></div></div>
-<div class="ttc" id="aa02833_html"><div class="ttname"><a href="../../d0/d2b/a02833.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03794">FoundationEntities.hpp:3794</a></div></div>
-<div class="ttc" id="aa02837_html"><div class="ttname"><a href="../../dc/dfd/a02837.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03805">FoundationEntities.hpp:3805</a></div></div>
 <div class="ttc" id="aa03097_html_a91f7a025c00ec5b858a260ebcda49a3c"><div class="ttname"><a href="../../df/d92/a03097.html#a91f7a025c00ec5b858a260ebcda49a3c">DiscordCoreAPI::InputEvents::respondToInputEventAsync</a></div><div class="ttdeci">static CoRoutine&lt; InputEventData &gt; respondToInputEventAsync(RespondToInputEventData dataPackage)</div><div class="ttdoc">Responds to one of a number of types of &quot;InputEvents&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/daf/a00830_source.html#l00026">InputEvents.cpp:26</a></div></div>
-</div><!-- fragment --> </li>
-</ul>
-</div></div><!-- contents -->
+<div class="ttc" id="aa03349_html_a20b1e7f73eb0ddb76d0db68fbd1a689d"><div class="ttname"><a href="../../d6/df3/a03349.html#a20b1e7f73eb0ddb76d0db68fbd1a689d">DiscordCoreAPI::Roles::getGuildMemberRolesAsync</a></div><div class="ttdeci">static CoRoutine&lt; std::vector&lt; Role &gt; &gt; getGuildMemberRolesAsync(GetGuildMemberRolesData dataPackage)</div><div class="ttdoc">Collects the Roles that a GuildMember has.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d11/a00842_source.html#l00258">RoleEntities.cpp:258</a></div></div>
+</div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d0/dac/a07043.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d8/de3/a07050.html">Modal Stuff</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dc/d14/a07040.html">Guides</a></li><li class="navelem"><a class="el" href="../../d1/d77/a07154.html">Music-Bot Guide</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

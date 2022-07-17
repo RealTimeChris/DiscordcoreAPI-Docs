@@ -102,11 +102,11 @@ $(document).ready(function(){initNavTree('df/d74/a07232.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Getting Nitro Sticker Packs </div></div>
+  <div class="headertitle"><div class="title">Getting a List of Thread Members </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Sticker_Stuff_Getting_Nitro_Sticker_Packs"></a></p><ul>
-<li>Execute the, <code><a class="el" href="../../da/da5/a03465.html#a4cff15150c58e1cb8cb148da37425ba5" title="Gets a list of nitro-available Sticker packs.">DiscordCoreAPI::Stickers::getNitroStickerPacksAsync()</a></code> function, with a return value of type <code>auto</code> or <code>vector&lt;<a class="el" href="../../dd/d01/a02729.html" title="Represents a Sticker pack.">DiscordCoreAPI::StickerPackData</a>&gt;</code>.</li>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Thread_Stuff_Getting_a_List_of_Thread_Members"></a></p><ul>
+<li>Execute the, <code><a class="el" href="../../d0/d33/a03529.html#ad9a931416387dfa4b6353293c42a40db" title="Collects a list of ThreadMembers if they exist.">DiscordCoreAPI::Threads::getThreadMembersAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../d8/dbb/a03501.html" title="For collecting the list of ThreadMembers from a Thread.">DiscordCoreAPI::GetThreadMembersData</a></code>, with a return value of type <code>auto</code> or <code>vector&lt;<a class="el" href="../../dc/d0a/a02345.html" title="Data for a single member of a Thread.">DiscordCoreAPI::ThreadMemberData</a>&gt;</code>.</li>
 <li>Call the function with <code>.get()</code> added to the end in order to wait for the results now.</li>
 </ul>
 <div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
@@ -131,25 +131,22 @@ $(document).ready(function(){initNavTree('df/d74/a07232.html','../../'); initRes
 <div class="line">            this-&gt;helpEmbed = msgEmbed;</div>
 <div class="line">        }</div>
 <div class="line"> </div>
-<div class="line">        unique_ptr&lt;DiscordCoreAPI::BaseFunction&gt; create() {</div>
+<div class="line">        std::unique_ptr&lt;DiscordCoreAPI::BaseFunction&gt; create() {</div>
 <div class="line">            <span class="keywordflow">return</span> std::make_unique&lt;Test&gt;();</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../d0/d2b/a02833.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
 <div class="line">            <span class="keywordflow">try</span> {</div>
-<div class="line">                <span class="keyword">auto</span> responseData = <a class="code hl_function" href="../../da/da5/a03465.html#a4cff15150c58e1cb8cb148da37425ba5">DiscordCoreAPI::Stickers::getNitroStickerPacksAsync</a>().get();</div>
+<div class="line">                <a class="code hl_struct" href="../../d8/dbb/a03501.html">DiscordCoreAPI::GetThreadMembersData</a> dataPackage;</div>
+<div class="line">                dataPackage.<a class="code hl_variable" href="../../d8/dbb/a03501.html#ae8d30bbe8d44dc29545ba0d18f5f9b81">channelId</a> = <span class="stringliteral">&quot;909444594146639913&quot;</span>;</div>
 <div class="line"> </div>
-<div class="line">                <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; value: responseData) {</div>
-<div class="line">                    cout &lt;&lt; <span class="stringliteral">&quot;THE NAME: &quot;</span> &lt;&lt; value.name &lt;&lt; endl;</div>
-<div class="line">                }</div>
+<div class="line">                <span class="keyword">auto</span> newThreadMembers = <a class="code hl_function" href="../../d0/d33/a03529.html#ad9a931416387dfa4b6353293c42a40db">DiscordCoreAPI::Threads::getThreadMembersAsync</a>(dataPackage).get();</div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line">            } <span class="keywordflow">catch</span> (...) {</div>
 <div class="line">                rethrowException(<span class="stringliteral">&quot;Test::execute()&quot;</span>);</div>
 <div class="line">            }</div>
 <div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">        <span class="keyword">virtual</span> ~Test() = <span class="keywordflow">default</span>;</div>
 <div class="line">    };</div>
 <div class="line">}</div>
 <div class="ttc" id="aa00725_html"><div class="ttname"><a href="../../d8/db9/a00725.html">Index.hpp</a></div></div>
@@ -161,7 +158,9 @@ $(document).ready(function(){initNavTree('df/d74/a07232.html','../../'); initRes
 <div class="ttc" id="aa02329_html_ae356e6dc3c93658b7228b56da3187896"><div class="ttname"><a href="../../d0/d71/a02329.html#ae356e6dc3c93658b7228b56da3187896">DiscordCoreAPI::EmbedData::setTimeStamp</a></div><div class="ttdeci">EmbedData &amp; setTimeStamp(const std::string &amp;timeStamp)</div><div class="ttdoc">Sets the timestamp on the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2d/a00815_source.html#l00333">FoundationEntities.cpp:333</a></div></div>
 <div class="ttc" id="aa02833_html"><div class="ttname"><a href="../../d0/d2b/a02833.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03794">FoundationEntities.hpp:3794</a></div></div>
 <div class="ttc" id="aa02837_html"><div class="ttname"><a href="../../dc/dfd/a02837.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03805">FoundationEntities.hpp:3805</a></div></div>
-<div class="ttc" id="aa03465_html_a4cff15150c58e1cb8cb148da37425ba5"><div class="ttname"><a href="../../da/da5/a03465.html#a4cff15150c58e1cb8cb148da37425ba5">DiscordCoreAPI::Stickers::getNitroStickerPacksAsync</a></div><div class="ttdeci">static CoRoutine&lt; std::vector&lt; StickerPackData &gt; &gt; getNitroStickerPacksAsync()</div><div class="ttdoc">Gets a list of nitro-available Sticker packs.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d82/a00857_source.html#l00060">StickerEntities.cpp:60</a></div></div>
+<div class="ttc" id="aa03501_html"><div class="ttname"><a href="../../d8/dbb/a03501.html">DiscordCoreAPI::GetThreadMembersData</a></div><div class="ttdoc">For collecting the list of ThreadMembers from a Thread.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4a/a00758_source.html#l00099">ThreadEntities.hpp:99</a></div></div>
+<div class="ttc" id="aa03501_html_ae8d30bbe8d44dc29545ba0d18f5f9b81"><div class="ttname"><a href="../../d8/dbb/a03501.html#ae8d30bbe8d44dc29545ba0d18f5f9b81">DiscordCoreAPI::GetThreadMembersData::channelId</a></div><div class="ttdeci">Snowflake channelId</div><div class="ttdoc">The id of the Thread to collect them from.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4a/a00758_source.html#l00100">ThreadEntities.hpp:100</a></div></div>
+<div class="ttc" id="aa03529_html_ad9a931416387dfa4b6353293c42a40db"><div class="ttname"><a href="../../d0/d33/a03529.html#ad9a931416387dfa4b6353293c42a40db">DiscordCoreAPI::Threads::getThreadMembersAsync</a></div><div class="ttdeci">static CoRoutine&lt; std::vector&lt; ThreadMemberData &gt; &gt; getThreadMembersAsync(GetThreadMembersData dataPackage)</div><div class="ttdoc">Collects a list of ThreadMembers if they exist.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5e/a00860_source.html#l00165">ThreadEntities.cpp:165</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -169,7 +168,7 @@ $(document).ready(function(){initNavTree('df/d74/a07232.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d0/dac/a07043.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d1/d84/a07063.html">Sticker Stuff</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d9d/a07039.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d4/df2/a07060.html">Thread Stuff</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

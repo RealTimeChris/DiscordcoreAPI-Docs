@@ -102,19 +102,17 @@ $(document).ready(function(){initNavTree('d4/def/a07096.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Deleting/Closing a Channel </div></div>
+  <div class="headertitle"><div class="title">Getting a Channel </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Channel_Stuff_Deleting_a_Channel"></a></p><ul>
-<li>Execute the <code><a class="el" href="../../d9/d97/a01953.html#a58132bbe95cc5b7521d680a05f3af212" title="Delete a Channel, or close a private message.">DiscordCoreAPI::Channels::deleteOrCloseChannelAsync()</a></code> function, while passing in a data structure of type <code><a class="el" href="../../dd/d80/a01893.html" title="For deleting or closing a Channel.">DiscordCoreAPI::DeleteOrCloseChannelData</a></code>, with a return value of type <code>void</code>.</li>
-<li>Call the function with <code>.get()</code> added to the end in order to wait for its return value now.</li>
-</ul>
-<div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Channel_Stuff_Getting_a_Channel"></a></p><ul>
+<li>Execute the <code><a class="el" href="../../d9/d97/a01953.html#a29d67b396279c61b4b4b0032d171f681" title="Collects a Channel from the library&#39;s cache.">DiscordCoreAPI::Channels::getCachedChannelAsync()</a></code> (which collects it from the cache), or <code>getChannelAsync()</code> (which collects it from the Discord servers) function, while passing to it a data structure of type <code><a class="el" href="../../d9/d9b/a01889.html" title="For collecting a Channel from Discord&#39;s servers.">DiscordCoreAPI::GetChannelData</a></code>, with a return type of <code>auto</code> or <code><a class="el" href="../../da/d76/a01941.html" title="A Channel object.">DiscordCoreAPI::Channel</a></code>.</li>
+<li>Call the function with <code>.get()</code> added to the end in order to wait for the results now. <div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
 <div class="line"><span class="comment">/// https://github.com/RealTimeChris/DiscordCoreAPI</span></div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="preprocessor">#pragma once</span></div>
 <div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d8/db9/a00725.html">Index.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d8/db9/a00725.html">Index.hpp</a>&quot;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d7/d46/a00890.html">DiscordCoreAPI</a> {</div>
 <div class="line"> </div>
@@ -136,25 +134,14 @@ $(document).ready(function(){initNavTree('d4/def/a07096.html','../../'); initRes
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../d0/d2b/a02833.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
-<div class="line">            <span class="keywordflow">try</span> {</div>
-<div class="line">                <a class="code hl_struct" href="../../dd/d80/a01893.html">DiscordCoreAPI::DeleteOrCloseChannelData</a> dataPackage;</div>
-<div class="line">                dataPackage.<a class="code hl_variable" href="../../dd/d80/a01893.html#a9b8799ea285555f67dbb44e2e41c9cc3">channelId</a> = args.eventData.<a class="code hl_function" href="../../d9/d95/a02781.html#a97c397fe274250bfff73cf674810a8f5">getChannelId</a>();</div>
-<div class="line">                dataPackage.<a class="code hl_variable" href="../../dd/d80/a01893.html#ad5f08f1deaf0ec08fb236924ab2ab0c5">reason</a> = <span class="stringliteral">&quot;DELETING!&quot;</span>;</div>
+<div class="line">            Channel channel = Channels::getCachedChannelAsync({args.eventData.<a class="code hl_function" href="../../d9/d95/a02781.html#a97c397fe274250bfff73cf674810a8f5">getChannelId</a>()}).get();</div>
 <div class="line"> </div>
-<div class="line">                Channels::deleteOrCloseChannelAsync(dataPackage).get();</div>
-<div class="line"> </div>
-<div class="line"> </div>
-<div class="line">            } <span class="keywordflow">catch</span> (...) {</div>
-<div class="line">                rethrowException(<span class="stringliteral">&quot;Test::execute()&quot;</span>);</div>
-<div class="line">            }</div>
+<div class="line">            Channel channel = Channels::getChannelAsync({args.eventData.<a class="code hl_function" href="../../d9/d95/a02781.html#a97c397fe274250bfff73cf674810a8f5">getChannelId</a>()}).get();</div>
 <div class="line">        }</div>
 <div class="line">    };</div>
 <div class="line">}</div>
 <div class="ttc" id="aa00725_html"><div class="ttname"><a href="../../d8/db9/a00725.html">Index.hpp</a></div></div>
 <div class="ttc" id="aa00890_html"><div class="ttname"><a href="../../d7/d46/a00890.html">DiscordCoreAPI</a></div><div class="ttdoc">The main namespace for this library.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00025">ApplicationCommandEntities.hpp:25</a></div></div>
-<div class="ttc" id="aa01893_html"><div class="ttname"><a href="../../dd/d80/a01893.html">DiscordCoreAPI::DeleteOrCloseChannelData</a></div><div class="ttdoc">For deleting or closing a Channel.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d87/a00689_source.html#l00038">ChannelEntities.hpp:38</a></div></div>
-<div class="ttc" id="aa01893_html_a9b8799ea285555f67dbb44e2e41c9cc3"><div class="ttname"><a href="../../dd/d80/a01893.html#a9b8799ea285555f67dbb44e2e41c9cc3">DiscordCoreAPI::DeleteOrCloseChannelData::channelId</a></div><div class="ttdeci">Snowflake channelId</div><div class="ttdoc">The id of the Channel to close/delete.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d87/a00689_source.html#l00039">ChannelEntities.hpp:39</a></div></div>
-<div class="ttc" id="aa01893_html_ad5f08f1deaf0ec08fb236924ab2ab0c5"><div class="ttname"><a href="../../dd/d80/a01893.html#ad5f08f1deaf0ec08fb236924ab2ab0c5">DiscordCoreAPI::DeleteOrCloseChannelData::reason</a></div><div class="ttdeci">std::string reason</div><div class="ttdoc">The reason for deleting/closing the Channel.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d87/a00689_source.html#l00040">ChannelEntities.hpp:40</a></div></div>
 <div class="ttc" id="aa02329_html"><div class="ttname"><a href="../../d0/d71/a02329.html">DiscordCoreAPI::EmbedData</a></div><div class="ttdoc">Embed data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l00599">FoundationEntities.hpp:599</a></div></div>
 <div class="ttc" id="aa02329_html_a20ca60ec3235f44a223f3d3b687c0c9e"><div class="ttname"><a href="../../d0/d71/a02329.html#a20ca60ec3235f44a223f3d3b687c0c9e">DiscordCoreAPI::EmbedData::setTitle</a></div><div class="ttdeci">EmbedData &amp; setTitle(const std::string &amp;titleNew)</div><div class="ttdoc">Sets the title of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2d/a00815_source.html#l00362">FoundationEntities.cpp:362</a></div></div>
 <div class="ttc" id="aa02329_html_a9d4066a4861408bc00eccb22a12db7f9"><div class="ttname"><a href="../../d0/d71/a02329.html#a9d4066a4861408bc00eccb22a12db7f9">DiscordCoreAPI::EmbedData::setDescription</a></div><div class="ttdeci">EmbedData &amp; setDescription(const std::string &amp;descriptionNew)</div><div class="ttdoc">Sets the description (the main contents) of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2d/a00815_source.html#l00347">FoundationEntities.cpp:347</a></div></div>
@@ -163,14 +150,16 @@ $(document).ready(function(){initNavTree('d4/def/a07096.html','../../'); initRes
 <div class="ttc" id="aa02781_html_a97c397fe274250bfff73cf674810a8f5"><div class="ttname"><a href="../../d9/d95/a02781.html#a97c397fe274250bfff73cf674810a8f5">DiscordCoreAPI::InputEventData::getChannelId</a></div><div class="ttdeci">Snowflake getChannelId()</div><div class="ttdoc">Returns the Channel id of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2d/a00815_source.html#l01603">FoundationEntities.cpp:1603</a></div></div>
 <div class="ttc" id="aa02833_html"><div class="ttname"><a href="../../d0/d2b/a02833.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03794">FoundationEntities.hpp:3794</a></div></div>
 <div class="ttc" id="aa02837_html"><div class="ttname"><a href="../../dc/dfd/a02837.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03805">FoundationEntities.hpp:3805</a></div></div>
-</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- fragment --> </li>
+</ul>
+</div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d0/dac/a07043.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d9/d0e/a07053.html">Channel Stuff</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d9d/a07039.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d9/d49/a07049.html">Channel Stuff</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

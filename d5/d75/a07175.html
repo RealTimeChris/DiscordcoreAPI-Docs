@@ -102,11 +102,11 @@ $(document).ready(function(){initNavTree('d5/d75/a07175.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Getting Guild Scheduled Event Users </div></div>
+  <div class="headertitle"><div class="title">Listing Guild Members </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Guild_Scheduled_Event_Stuff_Getting_Guild_Scheduled_Event_Users"></a></p><ul>
-<li>Execute the, from the <code><a class="el" href="../../d4/d44/a03065.html#a90fd12d61cf3ec715f60ee803e513c10" title="Collects a list of Users for a given GuildScheduledEvent.">DiscordCoreAPI::GuildScheduledEvents::getGuildScheduledEventUsersAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../d2/df1/a03057.html" title="For collecting a list of Guild Scheduled Event Users.">DiscordCoreAPI::GetGuildScheduledEventUsersData</a></code>, with a return value of type <code>auto</code> or <code>std::vector&lt;<a class="el" href="../../d6/dae/a02581.html" title="Data representing a single GuildScheduledEventUser.">DiscordCoreAPI::GuildScheduledEventUserData</a>&gt;</code>.</li>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Guild_Member_Stuff_Listing_Guild_Members"></a></p><ul>
+<li>Execute the, <code><a class="el" href="../../d6/def/a03033.html#a12a2c7ea1b19c2fae7dcbd660b0b3d17" title="Lists all of the GuildMembers of a chosen Guild.">DiscordCoreAPI::GuildMembers::listGuildMembersAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../d2/daa/a02997.html" title="For listing the GuildMembers of a chosen Guild.">DiscordCoreAPI::ListGuildMembersData</a></code>, with a return value of type <code>auto</code> or <code>std::vector&lt;<a class="el" href="../../dd/de7/a03025.html" title="A single GuildMember.">DiscordCoreAPI::GuildMember</a>&gt;</code>.</li>
 <li>Call the function with <code>.get()</code> added to the end in order to wait for the results now.</li>
 </ul>
 <div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
@@ -131,27 +131,20 @@ $(document).ready(function(){initNavTree('d5/d75/a07175.html','../../'); initRes
 <div class="line">            this-&gt;helpEmbed = msgEmbed;</div>
 <div class="line">        }</div>
 <div class="line"> </div>
-<div class="line">        unique_ptr&lt;DiscordCoreAPI::BaseFunction&gt; create() {</div>
+<div class="line">        std::unique_ptr&lt;DiscordCoreAPI::BaseFunction&gt; create() {</div>
 <div class="line">            <span class="keywordflow">return</span> std::make_unique&lt;Test&gt;();</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../d0/d2b/a02833.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
 <div class="line">            <span class="keywordflow">try</span> {</div>
-<div class="line">                <a class="code hl_struct" href="../../db/ddb/a03037.html">DiscordCoreAPI::GetGuildScheduledEventsData</a> dataPackage01;</div>
-<div class="line">                dataPackage01.<a class="code hl_variable" href="../../db/ddb/a03037.html#a359ca7d7616314ab0204e501edf59851">guildId</a> = args.eventData.<a class="code hl_function" href="../../d9/d95/a02781.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
-<div class="line">                dataPackage01.<a class="code hl_variable" href="../../db/ddb/a03037.html#a2ef97d1da504598508bd1d2238f4d888">withUserCount</a> = <span class="keyword">true</span>;</div>
-<div class="line">                <span class="keyword">auto</span> responseData01 = <a class="code hl_function" href="../../d4/d44/a03065.html#a13ad59288c8018bb02c4d54629d0bba9">DiscordCoreAPI::GuildScheduledEvents::getGuildScheduledEventsAsync</a>(dataPackage01).get();</div>
+<div class="line">                <a class="code hl_struct" href="../../d2/daa/a02997.html">DiscordCoreAPI::ListGuildMembersData</a> dataPackage;</div>
+<div class="line">                dataPackage.<a class="code hl_variable" href="../../d2/daa/a02997.html#abeebaa77717fb1bf19ab3889c3fe3f50">guildId</a> = args.eventData.<a class="code hl_function" href="../../d9/d95/a02781.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
+<div class="line">                dataPackage.<a class="code hl_variable" href="../../d2/daa/a02997.html#a4ba5daf6f91db54266d91115c1e4b620">limit</a> = 20;</div>
 <div class="line"> </div>
-<div class="line">                <a class="code hl_struct" href="../../d2/df1/a03057.html">DiscordCoreAPI::GetGuildScheduledEventUsersData</a> dataPackage;</div>
-<div class="line">                dataPackage.<a class="code hl_variable" href="../../d2/df1/a03057.html#a238c67643827521dd616598fd8f3efbd">limit</a> = 50;</div>
-<div class="line">                dataPackage.<a class="code hl_variable" href="../../d2/df1/a03057.html#a875828d5bbde2467b428965daad4c1be">guildId</a> = args.eventData.<a class="code hl_function" href="../../d9/d95/a02781.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
-<div class="line">                dataPackage.<a class="code hl_variable" href="../../d2/df1/a03057.html#a57b6d2681176906e4ad06e53b27a5510">withMember</a> = <span class="keyword">true</span>;</div>
-<div class="line">                dataPackage.<a class="code hl_variable" href="../../d2/df1/a03057.html#a97fd698612b4ce7bf36a66df58797aeb">guildScheduledEventId</a> = responseData01[0].id;</div>
+<div class="line">                <span class="keyword">auto</span> guildMembers = <a class="code hl_function" href="../../d6/def/a03033.html#a12a2c7ea1b19c2fae7dcbd660b0b3d17">DiscordCoreAPI::GuildMembers::listGuildMembersAsync</a>(dataPackage).get();</div>
 <div class="line"> </div>
-<div class="line">                <span class="keyword">auto</span> responseData = <a class="code hl_function" href="../../d4/d44/a03065.html#a90fd12d61cf3ec715f60ee803e513c10">DiscordCoreAPI::GuildScheduledEvents::getGuildScheduledEventUsersAsync</a>(dataPackage).get();</div>
-<div class="line"> </div>
-<div class="line">                <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; value: responseData) {</div>
-<div class="line">                    cout &lt;&lt; <span class="stringliteral">&quot;THE USER NAME: &quot;</span> &lt;&lt; value.user.userName &lt;&lt; endl;</div>
+<div class="line">                <span class="keywordflow">for</span> (<span class="keyword">auto</span> value: guildMembers) {</div>
+<div class="line">                    cout &lt;&lt; <span class="stringliteral">&quot;THE NAME: &quot;</span> &lt;&lt; value.user.userName &lt;&lt; endl;</div>
 <div class="line">                }</div>
 <div class="line"> </div>
 <div class="line"> </div>
@@ -171,16 +164,10 @@ $(document).ready(function(){initNavTree('d5/d75/a07175.html','../../'); initRes
 <div class="ttc" id="aa02781_html_a565fe2447237030a716f64b2599996dd"><div class="ttname"><a href="../../d9/d95/a02781.html#a565fe2447237030a716f64b2599996dd">DiscordCoreAPI::InputEventData::getGuildId</a></div><div class="ttdeci">Snowflake getGuildId()</div><div class="ttdoc">Returns the Guild id, of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2d/a00815_source.html#l01611">FoundationEntities.cpp:1611</a></div></div>
 <div class="ttc" id="aa02833_html"><div class="ttname"><a href="../../d0/d2b/a02833.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03794">FoundationEntities.hpp:3794</a></div></div>
 <div class="ttc" id="aa02837_html"><div class="ttname"><a href="../../dc/dfd/a02837.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03805">FoundationEntities.hpp:3805</a></div></div>
-<div class="ttc" id="aa03037_html"><div class="ttname"><a href="../../db/ddb/a03037.html">DiscordCoreAPI::GetGuildScheduledEventsData</a></div><div class="ttdoc">For collecting a list of a Guild's scheduled events.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dd8/a00719_source.html#l00032">GuildScheduledEventEntities.hpp:32</a></div></div>
-<div class="ttc" id="aa03037_html_a2ef97d1da504598508bd1d2238f4d888"><div class="ttname"><a href="../../db/ddb/a03037.html#a2ef97d1da504598508bd1d2238f4d888">DiscordCoreAPI::GetGuildScheduledEventsData::withUserCount</a></div><div class="ttdeci">bool withUserCount</div><div class="ttdoc">Do we collect the user counts?</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dd8/a00719_source.html#l00033">GuildScheduledEventEntities.hpp:33</a></div></div>
-<div class="ttc" id="aa03037_html_a359ca7d7616314ab0204e501edf59851"><div class="ttname"><a href="../../db/ddb/a03037.html#a359ca7d7616314ab0204e501edf59851">DiscordCoreAPI::GetGuildScheduledEventsData::guildId</a></div><div class="ttdeci">Snowflake guildId</div><div class="ttdoc">Guild from which we would like to collect the events.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dd8/a00719_source.html#l00034">GuildScheduledEventEntities.hpp:34</a></div></div>
-<div class="ttc" id="aa03057_html"><div class="ttname"><a href="../../d2/df1/a03057.html">DiscordCoreAPI::GetGuildScheduledEventUsersData</a></div><div class="ttdoc">For collecting a list of Guild Scheduled Event Users.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dd8/a00719_source.html#l00083">GuildScheduledEventEntities.hpp:83</a></div></div>
-<div class="ttc" id="aa03057_html_a238c67643827521dd616598fd8f3efbd"><div class="ttname"><a href="../../d2/df1/a03057.html#a238c67643827521dd616598fd8f3efbd">DiscordCoreAPI::GetGuildScheduledEventUsersData::limit</a></div><div class="ttdeci">uint32_t limit</div><div class="ttdoc">How many users to receive from the event.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dd8/a00719_source.html#l00089">GuildScheduledEventEntities.hpp:89</a></div></div>
-<div class="ttc" id="aa03057_html_a57b6d2681176906e4ad06e53b27a5510"><div class="ttname"><a href="../../d2/df1/a03057.html#a57b6d2681176906e4ad06e53b27a5510">DiscordCoreAPI::GetGuildScheduledEventUsersData::withMember</a></div><div class="ttdeci">bool withMember</div><div class="ttdoc">Include Guild member responseData if it exists.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dd8/a00719_source.html#l00085">GuildScheduledEventEntities.hpp:85</a></div></div>
-<div class="ttc" id="aa03057_html_a875828d5bbde2467b428965daad4c1be"><div class="ttname"><a href="../../d2/df1/a03057.html#a875828d5bbde2467b428965daad4c1be">DiscordCoreAPI::GetGuildScheduledEventUsersData::guildId</a></div><div class="ttdeci">Snowflake guildId</div><div class="ttdoc">The Guild within which to modify the event.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dd8/a00719_source.html#l00086">GuildScheduledEventEntities.hpp:86</a></div></div>
-<div class="ttc" id="aa03057_html_a97fd698612b4ce7bf36a66df58797aeb"><div class="ttname"><a href="../../d2/df1/a03057.html#a97fd698612b4ce7bf36a66df58797aeb">DiscordCoreAPI::GetGuildScheduledEventUsersData::guildScheduledEventId</a></div><div class="ttdeci">Snowflake guildScheduledEventId</div><div class="ttdoc">The id of the event to modify.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dd8/a00719_source.html#l00084">GuildScheduledEventEntities.hpp:84</a></div></div>
-<div class="ttc" id="aa03065_html_a13ad59288c8018bb02c4d54629d0bba9"><div class="ttname"><a href="../../d4/d44/a03065.html#a13ad59288c8018bb02c4d54629d0bba9">DiscordCoreAPI::GuildScheduledEvents::getGuildScheduledEventsAsync</a></div><div class="ttdeci">static CoRoutine&lt; std::vector&lt; GuildScheduledEvent &gt; &gt; getGuildScheduledEventsAsync(GetGuildScheduledEventsData dataPackage)</div><div class="ttdoc">Gets a list of a given Guild's scheduled events.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d1c/a00824_source.html#l00072">GuildScheduledEventEntities.cpp:72</a></div></div>
-<div class="ttc" id="aa03065_html_a90fd12d61cf3ec715f60ee803e513c10"><div class="ttname"><a href="../../d4/d44/a03065.html#a90fd12d61cf3ec715f60ee803e513c10">DiscordCoreAPI::GuildScheduledEvents::getGuildScheduledEventUsersAsync</a></div><div class="ttdeci">static CoRoutine&lt; std::vector&lt; GuildScheduledEventUserData &gt; &gt; getGuildScheduledEventUsersAsync(GetGuildScheduledEventUsersData dataPackage)</div><div class="ttdoc">Collects a list of Users for a given GuildScheduledEvent.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d1c/a00824_source.html#l00123">GuildScheduledEventEntities.cpp:123</a></div></div>
+<div class="ttc" id="aa02997_html"><div class="ttname"><a href="../../d2/daa/a02997.html">DiscordCoreAPI::ListGuildMembersData</a></div><div class="ttdoc">For listing the GuildMembers of a chosen Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00040">GuildMemberEntities.hpp:40</a></div></div>
+<div class="ttc" id="aa02997_html_a4ba5daf6f91db54266d91115c1e4b620"><div class="ttname"><a href="../../d2/daa/a02997.html#a4ba5daf6f91db54266d91115c1e4b620">DiscordCoreAPI::ListGuildMembersData::limit</a></div><div class="ttdeci">int32_t limit</div><div class="ttdoc">Max number of members to return (1 - 1000).</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00043">GuildMemberEntities.hpp:43</a></div></div>
+<div class="ttc" id="aa02997_html_abeebaa77717fb1bf19ab3889c3fe3f50"><div class="ttname"><a href="../../d2/daa/a02997.html#abeebaa77717fb1bf19ab3889c3fe3f50">DiscordCoreAPI::ListGuildMembersData::guildId</a></div><div class="ttdeci">Snowflake guildId</div><div class="ttdoc">Guild from which to list the GuildMembers.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00041">GuildMemberEntities.hpp:41</a></div></div>
+<div class="ttc" id="aa03033_html_a12a2c7ea1b19c2fae7dcbd660b0b3d17"><div class="ttname"><a href="../../d6/def/a03033.html#a12a2c7ea1b19c2fae7dcbd660b0b3d17">DiscordCoreAPI::GuildMembers::listGuildMembersAsync</a></div><div class="ttdeci">static CoRoutine&lt; std::vector&lt; GuildMember &gt; &gt; listGuildMembersAsync(ListGuildMembersData dataPackage)</div><div class="ttdoc">Lists all of the GuildMembers of a chosen Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d8b/a00821_source.html#l00154">GuildMemberEntities.cpp:154</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -188,7 +175,7 @@ $(document).ready(function(){initNavTree('d5/d75/a07175.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d0/dac/a07043.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d7/de7/a07056.html">Guild Scheduled Event Stuff</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d9d/a07039.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../de/dd7/a07051.html">Guild-Member Stuff</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

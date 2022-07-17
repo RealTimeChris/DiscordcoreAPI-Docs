@@ -102,11 +102,11 @@ $(document).ready(function(){initNavTree('d0/daa/a07251.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Getting the Current User </div></div>
+  <div class="headertitle"><div class="title">Modifying the Current User </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_User_Stuff_Getting_the_Current_User"></a></p><ul>
-<li>Execute the, <code><a class="el" href="../../d1/d3c/a03589.html#ae3a9a5debbc8171092afbd04a6084090" title="Collects the Bot&#39;s current User responseData.">DiscordCoreAPI::Users::getCurrentUserAsync()</a></code> function, with a return value of type <code>auto</code> or <code><a class="el" href="../../da/df8/a03577.html" title="A single User.">DiscordCoreAPI::User</a></code>.</li>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_User_Stuff_Modifying_the_Current_User"></a></p><ul>
+<li>Execute the, <code><a class="el" href="../../d1/d3c/a03589.html#a068421aad1858062f59d5127cda1f112" title="Modifies the Bot&#39;s User responseData.">DiscordCoreAPI::Users::modifyCurrentUserAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../de/d29/a03573.html" title="For modifying the Bot&#39;s User responseData.">DiscordCoreAPI::ModifyCurrentUserData</a></code>, with a return value of type <code>auto</code> or <code><a class="el" href="../../da/df8/a03577.html" title="A single User.">DiscordCoreAPI::User</a></code>.</li>
 <li>Call the function with <code>.get()</code> added to the end in order to wait for the results now.</li>
 </ul>
 <div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
@@ -137,7 +137,10 @@ $(document).ready(function(){initNavTree('d0/daa/a07251.html','../../'); initRes
 <div class="line"> </div>
 <div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../d0/d2b/a02833.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
 <div class="line">            <span class="keywordflow">try</span> {</div>
-<div class="line">                <span class="keyword">auto</span> currentUser = <a class="code hl_function" href="../../d1/d3c/a03589.html#ae3a9a5debbc8171092afbd04a6084090">DiscordCoreAPI::Users::getCurrentUserAsync</a>().get();</div>
+<div class="line">                <a class="code hl_struct" href="../../de/d29/a03573.html">DiscordCoreAPI::ModifyCurrentUserData</a> dataPackage;</div>
+<div class="line">                dataPackage.<a class="code hl_variable" href="../../de/d29/a03573.html#a008d962925d265f7458952dc8dcd5c75">userName</a> = <span class="stringliteral">&quot;MBot_GameHouse&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">                <span class="keyword">auto</span> currentUser = <a class="code hl_function" href="../../d1/d3c/a03589.html#a068421aad1858062f59d5127cda1f112">DiscordCoreAPI::Users::modifyCurrentUserAsync</a>(dataPackage).get();</div>
 <div class="line"> </div>
 <div class="line">                cout &lt;&lt; currentUser.userName &lt;&lt; endl;</div>
 <div class="line"> </div>
@@ -159,7 +162,9 @@ $(document).ready(function(){initNavTree('d0/daa/a07251.html','../../'); initRes
 <div class="ttc" id="aa02329_html_ae356e6dc3c93658b7228b56da3187896"><div class="ttname"><a href="../../d0/d71/a02329.html#ae356e6dc3c93658b7228b56da3187896">DiscordCoreAPI::EmbedData::setTimeStamp</a></div><div class="ttdeci">EmbedData &amp; setTimeStamp(const std::string &amp;timeStamp)</div><div class="ttdoc">Sets the timestamp on the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2d/a00815_source.html#l00333">FoundationEntities.cpp:333</a></div></div>
 <div class="ttc" id="aa02833_html"><div class="ttname"><a href="../../d0/d2b/a02833.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03794">FoundationEntities.hpp:3794</a></div></div>
 <div class="ttc" id="aa02837_html"><div class="ttname"><a href="../../dc/dfd/a02837.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03805">FoundationEntities.hpp:3805</a></div></div>
-<div class="ttc" id="aa03589_html_ae3a9a5debbc8171092afbd04a6084090"><div class="ttname"><a href="../../d1/d3c/a03589.html#ae3a9a5debbc8171092afbd04a6084090">DiscordCoreAPI::Users::getCurrentUserAsync</a></div><div class="ttdeci">static CoRoutine&lt; UserData &gt; getCurrentUserAsync()</div><div class="ttdoc">Collects the Bot's current User responseData.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/db2/a00866_source.html#l00188">UserEntities.cpp:188</a></div></div>
+<div class="ttc" id="aa03573_html"><div class="ttname"><a href="../../de/d29/a03573.html">DiscordCoreAPI::ModifyCurrentUserData</a></div><div class="ttdoc">For modifying the Bot's User responseData.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d2c/a00764_source.html#l00080">UserEntities.hpp:80</a></div></div>
+<div class="ttc" id="aa03573_html_a008d962925d265f7458952dc8dcd5c75"><div class="ttname"><a href="../../de/d29/a03573.html#a008d962925d265f7458952dc8dcd5c75">DiscordCoreAPI::ModifyCurrentUserData::userName</a></div><div class="ttdeci">std::string userName</div><div class="ttdoc">User's userName, if changed may cause the user's discriminator to be randomized.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d2c/a00764_source.html#l00082">UserEntities.hpp:82</a></div></div>
+<div class="ttc" id="aa03589_html_a068421aad1858062f59d5127cda1f112"><div class="ttname"><a href="../../d1/d3c/a03589.html#a068421aad1858062f59d5127cda1f112">DiscordCoreAPI::Users::modifyCurrentUserAsync</a></div><div class="ttdeci">static CoRoutine&lt; User &gt; modifyCurrentUserAsync(ModifyCurrentUserData dataPackage)</div><div class="ttdoc">Modifies the Bot's User responseData.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/db2/a00866_source.html#l00222">UserEntities.cpp:222</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -167,7 +172,7 @@ $(document).ready(function(){initNavTree('d0/daa/a07251.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d0/dac/a07043.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../de/d2e/a07065.html">User Stuff</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d9d/a07039.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../dc/db3/a07061.html">User Stuff</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

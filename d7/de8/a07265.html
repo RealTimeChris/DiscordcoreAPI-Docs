@@ -102,11 +102,11 @@ $(document).ready(function(){initNavTree('d7/de8/a07265.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Getting a WebHook </div></div>
+  <div class="headertitle"><div class="title">Modifying a WebHook </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_WebHook_Stuff_Getting_a_WebHook"></a></p><ul>
-<li>Execute the, <code><a class="el" href="../../dd/df6/a03713.html#a8d5e89e1fae47fc871c846fc46d1cb11" title="Collects a single WebHook.">DiscordCoreAPI::WebHooks::getWebHookAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../d9/da3/a03673.html" title="Collects a single WebHook.">DiscordCoreAPI::GetWebHookData</a></code>, with a return value of type <code>auto</code> or <code><a class="el" href="../../d2/d47/a03705.html" title="A single WebHook.">DiscordCoreAPI::WebHook</a></code>.</li>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_WebHook_Stuff_Modifying_a_WebHook"></a></p><ul>
+<li>Execute the, <code><a class="el" href="../../dd/df6/a03713.html#a21ee542887a63d9021f7d16f49d7ca38" title="Modifies a single WebHook.">DiscordCoreAPI::WebHooks::modifyWebHookAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../d7/d40/a03681.html" title="For modifying a WebHook.">DiscordCoreAPI::ModifyWebHookData</a></code>, with a return value of type <code>auto</code> or <code><a class="el" href="../../d2/d47/a03705.html" title="A single WebHook.">DiscordCoreAPI::WebHook</a></code>.</li>
 <li>Call the function with <code>.get()</code> added to the end in order to wait for the results now.</li>
 </ul>
 <div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
@@ -142,10 +142,11 @@ $(document).ready(function(){initNavTree('d7/de8/a07265.html','../../'); initRes
 <div class="line"> </div>
 <div class="line">                <span class="keyword">auto</span> newWebHooks = <a class="code hl_function" href="../../dd/df6/a03713.html#a157a654e748b04fc7112071ee43ec787">DiscordCoreAPI::WebHooks::getGuildWebHooksAsync</a>(dataPackage).get();</div>
 <div class="line"> </div>
-<div class="line">                <a class="code hl_struct" href="../../d9/da3/a03673.html">DiscordCoreAPI::GetWebHookData</a> dataPackage01;</div>
-<div class="line">                dataPackage01.<a class="code hl_variable" href="../../d9/da3/a03673.html#ac814438c83dabb92aba4eef76052d240">webHookId</a> = newWebHooks[0].id;</div>
+<div class="line">                <a class="code hl_struct" href="../../d7/d40/a03681.html">DiscordCoreAPI::ModifyWebHookData</a> dataPackage01;</div>
+<div class="line">                dataPackage01.<a class="code hl_variable" href="../../d7/d40/a03681.html#ab70337999faf11b6fda15dbf40b1b80a">webHookId</a> = newWebHooks[0].id;</div>
+<div class="line">                dataPackage01.<a class="code hl_variable" href="../../d7/d40/a03681.html#a882b8b47ff5ce4c9c7f728fb160a93d0">name</a> = <span class="stringliteral">&quot;NEW TEST NAME&quot;</span>;</div>
 <div class="line"> </div>
-<div class="line">                <span class="keyword">auto</span> newWebHook = <a class="code hl_function" href="../../dd/df6/a03713.html#a8d5e89e1fae47fc871c846fc46d1cb11">DiscordCoreAPI::WebHooks::getWebHookAsync</a>(dataPackage01).get();</div>
+<div class="line">                <span class="keyword">auto</span> newWebHook = <a class="code hl_function" href="../../dd/df6/a03713.html#a21ee542887a63d9021f7d16f49d7ca38">DiscordCoreAPI::WebHooks::modifyWebHookAsync</a>(dataPackage01).get();</div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line">            } <span class="keywordflow">catch</span> (...) {</div>
@@ -168,10 +169,11 @@ $(document).ready(function(){initNavTree('d7/de8/a07265.html','../../'); initRes
 <div class="ttc" id="aa02837_html"><div class="ttname"><a href="../../dc/dfd/a02837.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03805">FoundationEntities.hpp:3805</a></div></div>
 <div class="ttc" id="aa03669_html"><div class="ttname"><a href="../../d1/d83/a03669.html">DiscordCoreAPI::GetGuildWebHooksData</a></div><div class="ttdoc">For collecting a list of WebHooks from a chosen Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dba/a00773_source.html#l00162">WebHookEntities.hpp:162</a></div></div>
 <div class="ttc" id="aa03669_html_a2138f34efe5bed2b871a0c4e8a82d488"><div class="ttname"><a href="../../d1/d83/a03669.html#a2138f34efe5bed2b871a0c4e8a82d488">DiscordCoreAPI::GetGuildWebHooksData::guildId</a></div><div class="ttdeci">Snowflake guildId</div><div class="ttdoc">The Guild from which to collect the WebHooks.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dba/a00773_source.html#l00163">WebHookEntities.hpp:163</a></div></div>
-<div class="ttc" id="aa03673_html"><div class="ttname"><a href="../../d9/da3/a03673.html">DiscordCoreAPI::GetWebHookData</a></div><div class="ttdoc">Collects a single WebHook.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dba/a00773_source.html#l00167">WebHookEntities.hpp:167</a></div></div>
-<div class="ttc" id="aa03673_html_ac814438c83dabb92aba4eef76052d240"><div class="ttname"><a href="../../d9/da3/a03673.html#ac814438c83dabb92aba4eef76052d240">DiscordCoreAPI::GetWebHookData::webHookId</a></div><div class="ttdeci">Snowflake webHookId</div><div class="ttdoc">Id of the desired WebHook to collect.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dba/a00773_source.html#l00168">WebHookEntities.hpp:168</a></div></div>
+<div class="ttc" id="aa03681_html"><div class="ttname"><a href="../../d7/d40/a03681.html">DiscordCoreAPI::ModifyWebHookData</a></div><div class="ttdoc">For modifying a WebHook.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dba/a00773_source.html#l00178">WebHookEntities.hpp:178</a></div></div>
+<div class="ttc" id="aa03681_html_a882b8b47ff5ce4c9c7f728fb160a93d0"><div class="ttname"><a href="../../d7/d40/a03681.html#a882b8b47ff5ce4c9c7f728fb160a93d0">DiscordCoreAPI::ModifyWebHookData::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">The default name of the webhook.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dba/a00773_source.html#l00182">WebHookEntities.hpp:182</a></div></div>
+<div class="ttc" id="aa03681_html_ab70337999faf11b6fda15dbf40b1b80a"><div class="ttname"><a href="../../d7/d40/a03681.html#ab70337999faf11b6fda15dbf40b1b80a">DiscordCoreAPI::ModifyWebHookData::webHookId</a></div><div class="ttdeci">Snowflake webHookId</div><div class="ttdoc">The WebHook to be modified.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dba/a00773_source.html#l00181">WebHookEntities.hpp:181</a></div></div>
 <div class="ttc" id="aa03713_html_a157a654e748b04fc7112071ee43ec787"><div class="ttname"><a href="../../dd/df6/a03713.html#a157a654e748b04fc7112071ee43ec787">DiscordCoreAPI::WebHooks::getGuildWebHooksAsync</a></div><div class="ttdeci">static CoRoutine&lt; std::vector&lt; WebHook &gt; &gt; getGuildWebHooksAsync(GetGuildWebHooksData dataPackage)</div><div class="ttdoc">Collects a list of WebHooks from a chosen Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d93/a00875_source.html#l00255">WebHookEntities.cpp:255</a></div></div>
-<div class="ttc" id="aa03713_html_a8d5e89e1fae47fc871c846fc46d1cb11"><div class="ttname"><a href="../../dd/df6/a03713.html#a8d5e89e1fae47fc871c846fc46d1cb11">DiscordCoreAPI::WebHooks::getWebHookAsync</a></div><div class="ttdeci">static CoRoutine&lt; WebHook &gt; getWebHookAsync(GetWebHookData dataPackage)</div><div class="ttdoc">Collects a single WebHook.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d93/a00875_source.html#l00264">WebHookEntities.cpp:264</a></div></div>
+<div class="ttc" id="aa03713_html_a21ee542887a63d9021f7d16f49d7ca38"><div class="ttname"><a href="../../dd/df6/a03713.html#a21ee542887a63d9021f7d16f49d7ca38">DiscordCoreAPI::WebHooks::modifyWebHookAsync</a></div><div class="ttdeci">static CoRoutine&lt; WebHook &gt; modifyWebHookAsync(ModifyWebHookData dataPackage)</div><div class="ttdoc">Modifies a single WebHook.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d93/a00875_source.html#l00282">WebHookEntities.cpp:282</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -179,7 +181,7 @@ $(document).ready(function(){initNavTree('d7/de8/a07265.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d0/dac/a07043.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../dd/d41/a07066.html">Webhook Stuff</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d9d/a07039.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d6/d0e/a07062.html">Webhook Stuff</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

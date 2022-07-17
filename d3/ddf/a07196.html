@@ -102,11 +102,11 @@ $(document).ready(function(){initNavTree('d3/ddf/a07196.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Creating a Message </div></div>
+  <div class="headertitle"><div class="title">Getting a Message </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Message_Stuff_Creating_a_Message"></a></p><ul>
-<li>Execute the, <code><a class="el" href="../../dc/dc7/a03241.html#a64d985c14562deb99044d9eab00d0379" title="Creates a new Message.">DiscordCoreAPI::Messages::createMessageAsync()</a></code> function, while passing in a data structure of type <code><a class="el" href="../../d1/d5f/a03189.html" title="For creating a Message.">DiscordCoreAPI::CreateMessageData</a></code>, with a return value of type <code>auto</code>, or, <code><a class="el" href="../../d5/da4/a03225.html" title="A single Message.">DiscordCoreAPI::Message</a></code>.</li>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Message_Stuff_Getting_a_Message"></a></p><ul>
+<li>Execute the, <code><a class="el" href="../../dc/dc7/a03241.html#aa513167a4f89e3ebd8a97537893e35c1" title="Collects a Message from the Discord servers.">DiscordCoreAPI::Messages::getMessageAsync()</a></code> function, while passing in a data structure of type <code><a class="el" href="../../d1/d30/a03185.html" title="For getting a Message.">DiscordCoreAPI::GetMessageData</a></code>, with a return value of type <code>auto</code>, or, <code><a class="el" href="../../d5/da4/a03225.html" title="A single Message.">DiscordCoreAPI::Message</a></code>.</li>
 <li>Call the function with <code>.get()</code> added to the end in order to wait for its return value now.</li>
 </ul>
 <div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
@@ -137,10 +137,11 @@ $(document).ready(function(){initNavTree('d3/ddf/a07196.html','../../'); initRes
 <div class="line"> </div>
 <div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../d0/d2b/a02833.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
 <div class="line">            <span class="keywordflow">try</span> {</div>
-<div class="line">                <a class="code hl_class" href="../../d1/d5f/a03189.html">DiscordCoreAPI::CreateMessageData</a> dataPackage {args.eventData};</div>
-<div class="line">                dataPackage.addContent(<span class="stringliteral">&quot;TEST CONTENT&quot;</span>);</div>
+<div class="line">                <a class="code hl_struct" href="../../d1/d30/a03185.html">DiscordCoreAPI::GetMessageData</a> dataPackage;</div>
+<div class="line">                dataPackage.<a class="code hl_variable" href="../../d1/d30/a03185.html#a57a59a1ce80bf2de70826385cb5beccf">channelId</a> = args.eventData.<a class="code hl_function" href="../../d9/d95/a02781.html#a97c397fe274250bfff73cf674810a8f5">getChannelId</a>();</div>
+<div class="line">                dataPackage.<a class="code hl_variable" href="../../d1/d30/a03185.html#a068f14f1019ec65fdad77e5a856a8faa">id</a> = args.eventData.<a class="code hl_function" href="../../d9/d95/a02781.html#af7be2b81b312794ea5398591d1a7e305">getMessageId</a>();</div>
 <div class="line"> </div>
-<div class="line">                <a class="code hl_class" href="../../d5/da4/a03225.html">DiscordCoreAPI::Message</a> responseMessages = <a class="code hl_function" href="../../dc/dc7/a03241.html#a64d985c14562deb99044d9eab00d0379">DiscordCoreAPI::Messages::createMessageAsync</a>(dataPackage).get();</div>
+<div class="line">                <a class="code hl_class" href="../../d5/da4/a03225.html">DiscordCoreAPI::Message</a> responseMessages = <a class="code hl_function" href="../../dc/dc7/a03241.html#aa513167a4f89e3ebd8a97537893e35c1">DiscordCoreAPI::Messages::getMessageAsync</a>(dataPackage).get();</div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line">            } <span class="keywordflow">catch</span> (...) {</div>
@@ -156,11 +157,15 @@ $(document).ready(function(){initNavTree('d3/ddf/a07196.html','../../'); initRes
 <div class="ttc" id="aa02329_html_a9d4066a4861408bc00eccb22a12db7f9"><div class="ttname"><a href="../../d0/d71/a02329.html#a9d4066a4861408bc00eccb22a12db7f9">DiscordCoreAPI::EmbedData::setDescription</a></div><div class="ttdeci">EmbedData &amp; setDescription(const std::string &amp;descriptionNew)</div><div class="ttdoc">Sets the description (the main contents) of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2d/a00815_source.html#l00347">FoundationEntities.cpp:347</a></div></div>
 <div class="ttc" id="aa02329_html_ab417d83fddf9df80eca98e9ec6e888aa"><div class="ttname"><a href="../../d0/d71/a02329.html#ab417d83fddf9df80eca98e9ec6e888aa">DiscordCoreAPI::EmbedData::setColor</a></div><div class="ttdeci">EmbedData &amp; setColor(const std::string &amp;hexColorValueNew)</div><div class="ttdoc">Sets the color of the embed, by applying a hex-color value.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2d/a00815_source.html#l00352">FoundationEntities.cpp:352</a></div></div>
 <div class="ttc" id="aa02329_html_ae356e6dc3c93658b7228b56da3187896"><div class="ttname"><a href="../../d0/d71/a02329.html#ae356e6dc3c93658b7228b56da3187896">DiscordCoreAPI::EmbedData::setTimeStamp</a></div><div class="ttdeci">EmbedData &amp; setTimeStamp(const std::string &amp;timeStamp)</div><div class="ttdoc">Sets the timestamp on the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2d/a00815_source.html#l00333">FoundationEntities.cpp:333</a></div></div>
+<div class="ttc" id="aa02781_html_a97c397fe274250bfff73cf674810a8f5"><div class="ttname"><a href="../../d9/d95/a02781.html#a97c397fe274250bfff73cf674810a8f5">DiscordCoreAPI::InputEventData::getChannelId</a></div><div class="ttdeci">Snowflake getChannelId()</div><div class="ttdoc">Returns the Channel id of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2d/a00815_source.html#l01603">FoundationEntities.cpp:1603</a></div></div>
+<div class="ttc" id="aa02781_html_af7be2b81b312794ea5398591d1a7e305"><div class="ttname"><a href="../../d9/d95/a02781.html#af7be2b81b312794ea5398591d1a7e305">DiscordCoreAPI::InputEventData::getMessageId</a></div><div class="ttdeci">Snowflake getMessageId()</div><div class="ttdoc">Returns the Message id, if applicable, of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2d/a00815_source.html#l01615">FoundationEntities.cpp:1615</a></div></div>
 <div class="ttc" id="aa02833_html"><div class="ttname"><a href="../../d0/d2b/a02833.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03794">FoundationEntities.hpp:3794</a></div></div>
 <div class="ttc" id="aa02837_html"><div class="ttname"><a href="../../dc/dfd/a02837.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03805">FoundationEntities.hpp:3805</a></div></div>
-<div class="ttc" id="aa03189_html"><div class="ttname"><a href="../../d1/d5f/a03189.html">DiscordCoreAPI::CreateMessageData</a></div><div class="ttdoc">For creating a Message.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dc0/a00734_source.html#l00048">MessageEntities.hpp:48</a></div></div>
+<div class="ttc" id="aa03185_html"><div class="ttname"><a href="../../d1/d30/a03185.html">DiscordCoreAPI::GetMessageData</a></div><div class="ttdoc">For getting a Message.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dc0/a00734_source.html#l00042">MessageEntities.hpp:42</a></div></div>
+<div class="ttc" id="aa03185_html_a068f14f1019ec65fdad77e5a856a8faa"><div class="ttname"><a href="../../d1/d30/a03185.html#a068f14f1019ec65fdad77e5a856a8faa">DiscordCoreAPI::GetMessageData::id</a></div><div class="ttdeci">Snowflake id</div><div class="ttdoc">The id of the Message to collect.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dc0/a00734_source.html#l00044">MessageEntities.hpp:44</a></div></div>
+<div class="ttc" id="aa03185_html_a57a59a1ce80bf2de70826385cb5beccf"><div class="ttname"><a href="../../d1/d30/a03185.html#a57a59a1ce80bf2de70826385cb5beccf">DiscordCoreAPI::GetMessageData::channelId</a></div><div class="ttdeci">Snowflake channelId</div><div class="ttdoc">The Channel from which to collect the Message.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dc0/a00734_source.html#l00043">MessageEntities.hpp:43</a></div></div>
 <div class="ttc" id="aa03225_html"><div class="ttname"><a href="../../d5/da4/a03225.html">DiscordCoreAPI::Message</a></div><div class="ttdoc">A single Message.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dc0/a00734_source.html#l00148">MessageEntities.hpp:148</a></div></div>
-<div class="ttc" id="aa03241_html_a64d985c14562deb99044d9eab00d0379"><div class="ttname"><a href="../../dc/dc7/a03241.html#a64d985c14562deb99044d9eab00d0379">DiscordCoreAPI::Messages::createMessageAsync</a></div><div class="ttdeci">static CoRoutine&lt; Message &gt; createMessageAsync(CreateMessageData dataPackage)</div><div class="ttdoc">Creates a new Message.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d13/a00836_source.html#l00254">MessageEntities.cpp:254</a></div></div>
+<div class="ttc" id="aa03241_html_aa513167a4f89e3ebd8a97537893e35c1"><div class="ttname"><a href="../../dc/dc7/a03241.html#aa513167a4f89e3ebd8a97537893e35c1">DiscordCoreAPI::Messages::getMessageAsync</a></div><div class="ttdeci">static CoRoutine&lt; Message &gt; getMessageAsync(GetMessageData dataPackage)</div><div class="ttdoc">Collects a Message from the Discord servers.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d13/a00836_source.html#l00244">MessageEntities.cpp:244</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -168,7 +173,7 @@ $(document).ready(function(){initNavTree('d3/ddf/a07196.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d0/dac/a07043.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../db/d67/a07059.html">Message Stuff</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d9d/a07039.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d8/dcd/a07055.html">Message Stuff</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
