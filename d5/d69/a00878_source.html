@@ -1127,7 +1127,7 @@ $(document).ready(function(){initNavTree('d5/d69/a00878_source.html','../../'); 
 <div class="line"><a id="l01020" name="l01020"></a><span class="lineno"> 1020</span>        DiscordCoreAPI::getVoiceConnectionMap()[theConnectionData.guildId]-&gt;connect();</div>
 <div class="line"><a id="l01021" name="l01021"></a><span class="lineno"> 1021</span>    }</div>
 <div class="line"><a id="l01022" name="l01022"></a><span class="lineno"> 1022</span> </div>
-<div class="line"><a id="l01023" name="l01023"></a><span class="lineno"> 1023</span>    <span class="keywordtype">void</span> BaseSocketAgent::run(std::stop_token stopToken) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l01023" name="l01023"></a><span class="lineno"> 1023</span>    <span class="keywordtype">void</span> BaseSocketAgent::run(std::stop_token&amp; stopToken) <span class="keyword">noexcept</span> {</div>
 <div class="line"><a id="l01024" name="l01024"></a><span class="lineno"> 1024</span>        <span class="keywordflow">try</span> {</div>
 <div class="line"><a id="l01025" name="l01025"></a><span class="lineno"> 1025</span>            <span class="keywordflow">while</span> (!stopToken.stop_requested() &amp;&amp; !this-&gt;doWeQuit-&gt;load()) {</div>
 <div class="line"><a id="l01026" name="l01026"></a><span class="lineno"> 1026</span>                <span class="keywordflow">if</span> (this-&gt;connections.size() &gt; 0) {</div>
