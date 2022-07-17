@@ -1,6 +1,8 @@
 <map id="DiscordCoreAPI::Roles::getGuildRolesAsync" name="DiscordCoreAPI::Roles::getGuildRolesAsync">
-<area shape="rect" id="node1" title="Collects the Roles that a Guild has." alt="" coords="483,39,649,80"/>
-<area shape="rect" id="node2" href="$d6/df3/a03349.html#a20b1e7f73eb0ddb76d0db68fbd1a689d" title="Collects the Roles that a GuildMember has." alt="" coords="220,5,435,47"/>
-<area shape="rect" id="node3" href="$d6/df3/a03349.html#a288de1b0e26b722f78a4b68abc1c86aa" title="Collects a Role from the Discord servers." alt="" coords="244,71,411,112"/>
-<area shape="rect" id="node4" href="$d6/df3/a03349.html#a7cdfc6e07d7950d25399ea9e88852d1b" title="Collects a given Role from the library&#39;s cache." alt="" coords="5,71,172,112"/>
+<area shape="rect" id="node1" title="Collects the Roles that a Guild has." alt="" coords="988,69,1155,109"/>
+<area shape="rect" id="node2" href="$d6/df3/a03349.html#a20b1e7f73eb0ddb76d0db68fbd1a689d" title="Collects the Roles that a GuildMember has." alt="" coords="725,5,940,45"/>
+<area shape="rect" id="node3" href="$d6/df3/a03349.html#a288de1b0e26b722f78a4b68abc1c86aa" title="Collects a Role from the Discord servers." alt="" coords="749,69,916,109"/>
+<area shape="rect" id="node5" href="$d6/df3/a03349.html#a27cdc694fbb1843ea5bcd3cbd4a743c1" title="Updates a Role&#39;s positions." alt="" coords="227,99,463,139"/>
+<area shape="rect" id="node4" href="$d6/df3/a03349.html#a7cdfc6e07d7950d25399ea9e88852d1b" title="Collects a given Role from the library&#39;s cache." alt="" coords="511,69,677,109"/>
+<area shape="rect" id="node6" href="$d6/df3/a03349.html#afdfd3fb636d652e1819007f162d18fc6" title="Creates a new Role within the given Guild." alt="" coords="5,99,179,139"/>
 </map>
