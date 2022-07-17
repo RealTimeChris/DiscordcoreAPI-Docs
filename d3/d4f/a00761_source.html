@@ -154,7 +154,7 @@ $(document).ready(function(){initNavTree('d3/d4f/a00761_source.html','../../'); 
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        ThreadPool() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> storeThread(TimeElapsedHandlerNoArgs timeElapsedHandler, int64_t timeInterval, <span class="keywordtype">bool</span> repeated);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keyword">static</span> std::string storeThread(TimeElapsedHandlerNoArgs timeElapsedHandler, int64_t timeInterval);</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... ArgTypes&gt;</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> executeFunctionAfterTimePeriod(TimeElapsedHandler&lt;ArgTypes...&gt; timeElapsedHandler, int64_t timeInterval, <span class="keywordtype">bool</span> blockForCompletion, ArgTypes... args) {</div>

@@ -334,18 +334,27 @@ $(document).ready(function(){initNavTree('d5/d72/a00803_source.html','../../'); 
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        }</div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        this-&gt;currentUser = BotUser{ <a class="code hl_function" href="../../d1/d3c/a03589.html#ae3a9a5debbc8171092afbd04a6084090">Users::getCurrentUserAsync</a>().get(), this-&gt;baseSocketAgentMap[std::to_string(this-&gt;configManager.getStartingShard())].get() };</div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; value: this-&gt;configManager.getFunctionsToExecute()) {</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>            TimeElapsedHandlerNoArgs onSend = [=, <span class="keyword">this</span>]() -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>                value.function(<span class="keyword">this</span>);</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>            };</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>            ThreadPool::storeThread(onSend, value.intervalInMs, value.repeated);</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        }</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        <span class="keywordflow">if</span> (this-&gt;configManager.doWePrintGeneralSuccessMessages()) {</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>            std::cout &lt;&lt; shiftToBrightGreen() &lt;&lt; <span class="stringliteral">&quot;All of the shards are connected for the current process!&quot;</span> &lt;&lt; reset() &lt;&lt; std::endl &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        }</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    }</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span> </div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>}</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>            </div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>            <span class="keywordflow">if</span> (value.repeated) {</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>                TimeElapsedHandlerNoArgs onSend = [=, <span class="keyword">this</span>]() -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>                    value.function(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>                };</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>                ThreadPool::storeThread(onSend, value.intervalInMs);</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>                TimeElapsedHandler&lt;void*&gt; onSend = [=, <span class="keyword">this</span>](<span class="keywordtype">void</span>*) -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>                    value.function(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>                };</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>                ThreadPool::executeFunctionAfterTimePeriod(onSend, value.intervalInMs, <span class="keyword">false</span>, <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(&amp;onSend));</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>            }</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>            </div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        }</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>        <span class="keywordflow">if</span> (this-&gt;configManager.doWePrintGeneralSuccessMessages()) {</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>            std::cout &lt;&lt; shiftToBrightGreen() &lt;&lt; <span class="stringliteral">&quot;All of the shards are connected for the current process!&quot;</span> &lt;&lt; reset() &lt;&lt; std::endl &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>        }</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    }</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>}</div>
 <div class="ttc" id="aa00698_html"><div class="ttname"><a href="../../df/dbb/a00698.html">DiscordCoreClient.hpp</a></div></div>
 <div class="ttc" id="aa00890_html"><div class="ttname"><a href="../../d7/d46/a00890.html">DiscordCoreAPI</a></div><div class="ttdoc">The main namespace for this library.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00025">ApplicationCommandEntities.hpp:25</a></div></div>
 <div class="ttc" id="aa01957_html"><div class="ttname"><a href="../../d2/d6f/a01957.html">DiscordCoreAPI::CommandController</a></div><div class="ttdoc">A class for handling commands from user input.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5b/a00695_source.html#l00028">CommandController.hpp:28</a></div></div>
