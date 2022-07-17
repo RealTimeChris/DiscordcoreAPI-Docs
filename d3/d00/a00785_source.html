@@ -601,19 +601,13 @@ $(document).ready(function(){initNavTree('d3/d00/a00785_source.html','../../'); 
 <div class="line"><a id="l00494" name="l00494"></a><span class="lineno">  494</span>        this-&gt;inputDataBuffer.send(std::string());</div>
 <div class="line"><a id="l00495" name="l00495"></a><span class="lineno">  495</span>        this-&gt;inputDataBuffer.send(std::string());</div>
 <div class="line"><a id="l00496" name="l00496"></a><span class="lineno">  496</span>        this-&gt;areWeQuitting = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00497" name="l00497"></a><span class="lineno">  497</span>        <span class="keywordflow">if</span> (this-&gt;taskThread) {</div>
-<div class="line"><a id="l00498" name="l00498"></a><span class="lineno">  498</span>            this-&gt;taskThread-&gt;request_stop();</div>
-<div class="line"><a id="l00499" name="l00499"></a><span class="lineno">  499</span>            <span class="keywordflow">if</span> (this-&gt;taskThread-&gt;joinable()) {</div>
-<div class="line"><a id="l00500" name="l00500"></a><span class="lineno">  500</span>                this-&gt;taskThread-&gt;join();</div>
-<div class="line"><a id="l00501" name="l00501"></a><span class="lineno">  501</span>            }</div>
-<div class="line"><a id="l00502" name="l00502"></a><span class="lineno">  502</span>        }</div>
-<div class="line"><a id="l00503" name="l00503"></a><span class="lineno">  503</span>    }</div>
-<div class="line"><a id="l00504" name="l00504"></a><span class="lineno">  504</span> </div>
-<div class="line"><a id="l00505" name="l00505"></a><span class="lineno">  505</span>    AudioDecoder::~AudioDecoder() {</div>
-<div class="line"><a id="l00506" name="l00506"></a><span class="lineno">  506</span>        this-&gt;cancelMe();</div>
-<div class="line"><a id="l00507" name="l00507"></a><span class="lineno">  507</span>    }</div>
-<div class="line"><a id="l00508" name="l00508"></a><span class="lineno">  508</span> </div>
-<div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span>};</div>
+<div class="line"><a id="l00497" name="l00497"></a><span class="lineno">  497</span>    }</div>
+<div class="line"><a id="l00498" name="l00498"></a><span class="lineno">  498</span> </div>
+<div class="line"><a id="l00499" name="l00499"></a><span class="lineno">  499</span>    AudioDecoder::~AudioDecoder() {</div>
+<div class="line"><a id="l00500" name="l00500"></a><span class="lineno">  500</span>        this-&gt;cancelMe();</div>
+<div class="line"><a id="l00501" name="l00501"></a><span class="lineno">  501</span>    }</div>
+<div class="line"><a id="l00502" name="l00502"></a><span class="lineno">  502</span> </div>
+<div class="line"><a id="l00503" name="l00503"></a><span class="lineno">  503</span>};</div>
 <div class="ttc" id="aa00680_html"><div class="ttname"><a href="../../d4/d9b/a00680.html">AudioDecoder.hpp</a></div></div>
 <div class="ttc" id="aa02805_html"><div class="ttname"><a href="../../d7/d75/a02805.html">DiscordCoreAPI::RawFrameData</a></div><div class="ttdoc">Represents a single frame of raw audio data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03677">FoundationEntities.hpp:3677</a></div></div>
 <div class="ttc" id="aa02805_html_a859b4a88ab2a0e4ed52e5cd4f6d3462b"><div class="ttname"><a href="../../d7/d75/a02805.html#a859b4a88ab2a0e4ed52e5cd4f6d3462b">DiscordCoreAPI::RawFrameData::sampleCount</a></div><div class="ttdeci">int32_t sampleCount</div><div class="ttdoc">The number of samples per this frame.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03679">FoundationEntities.hpp:3679</a></div></div>

@@ -896,25 +896,9 @@ $(document).ready(function(){initNavTree('dc/d17/a00872_source.html','../../'); 
 <div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span>    }</div>
 <div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span> </div>
-<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>    VoiceConnection::~VoiceConnection() noexcept {</div>
-<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>        <span class="keywordflow">if</span> (this-&gt;taskThread02) {</div>
-<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span>            this-&gt;taskThread02-&gt;request_stop();</div>
-<div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span>            <span class="keywordflow">if</span> (this-&gt;taskThread02-&gt;joinable()) {</div>
-<div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span>                this-&gt;taskThread02-&gt;join();</div>
-<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span>                this-&gt;taskThread02.reset(<span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span>            }</div>
-<div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span>        }</div>
-<div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span> </div>
-<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span>        <span class="keywordflow">if</span> (this-&gt;taskThread01) {</div>
-<div class="line"><a id="l00802" name="l00802"></a><span class="lineno">  802</span>            this-&gt;taskThread01-&gt;request_stop();</div>
-<div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span>            <span class="keywordflow">if</span> (this-&gt;taskThread01-&gt;joinable()) {</div>
-<div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span>                this-&gt;taskThread01-&gt;join();</div>
-<div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span>                this-&gt;taskThread01.reset(<span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span>            }</div>
-<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span>        }</div>
-<div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span>    };</div>
-<div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span> </div>
-<div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span>}</div>
+<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>    VoiceConnection::~VoiceConnection() noexcept {};</div>
+<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span> </div>
+<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span>}</div>
 <div class="ttc" id="aa00698_html"><div class="ttname"><a href="../../df/dbb/a00698.html">DiscordCoreClient.hpp</a></div></div>
 <div class="ttc" id="aa00770_html"><div class="ttname"><a href="../../d0/d7e/a00770.html">VoiceConnection.hpp</a></div></div>
 <div class="ttc" id="aa00885_html_ggacf6f4590968be95774b156cf050c996ca5e4428fdbbb1ef8971739c61d8662c5a"><div class="ttname"><a href="../../db/d18/a00885.html#ggacf6f4590968be95774b156cf050c996ca5e4428fdbbb1ef8971739c61d8662c5a">DiscordCoreAPI::AudioFrameType::RawPCM</a></div><div class="ttdeci">@ RawPCM</div><div class="ttdoc">Raw PCM.</div></div>

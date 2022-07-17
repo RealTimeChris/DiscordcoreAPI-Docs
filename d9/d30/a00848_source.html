@@ -394,18 +394,8 @@ $(document).ready(function(){initNavTree('d9/d30/a00848_source.html','../../'); 
 <div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        };</div>
 <div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    }</div>
 <div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    SongAPI::~SongAPI() {</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>        <span class="keywordflow">if</span> (this-&gt;taskThread) {</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>            this-&gt;taskThread-&gt;request_stop();</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>            <span class="keywordflow">if</span> (this-&gt;taskThread-&gt;joinable()) {</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>                this-&gt;taskThread-&gt;join();</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>            }</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>            this-&gt;taskThread.reset(<span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>        }</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    }</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> </div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    std::mutex SongAPI::accessMutex{};</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>};</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    std::mutex SongAPI::accessMutex{};</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>};</div>
 <div class="ttc" id="aa00698_html"><div class="ttname"><a href="../../df/dbb/a00698.html">DiscordCoreClient.hpp</a></div></div>
 <div class="ttc" id="aa00746_html"><div class="ttname"><a href="../../d4/dfa/a00746.html">SongAPI.hpp</a></div></div>
 <div class="ttc" id="aa00749_html"><div class="ttname"><a href="../../d5/de8/a00749.html">SoundCloudAPI.hpp</a></div></div>
