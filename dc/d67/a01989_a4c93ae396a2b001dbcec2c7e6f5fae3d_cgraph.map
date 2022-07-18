@@ -1,17 +1,17 @@
 <map id="DiscordCoreAPI::DiscordCoreClient::DiscordCoreClient" name="DiscordCoreAPI::DiscordCoreClient::DiscordCoreClient">
-<area shape="rect" id="node1" title="DiscordCoreClient constructor." alt="" coords="5,431,199,472"/>
-<area shape="rect" id="node2" href="$d9/d13/a02237.html#ab1f1240c5018a2ef19fd5d94e2ae3709" title="For adding a function to handle this event." alt="" coords="247,5,451,47"/>
-<area shape="rect" id="node3" href="$d9/d13/a02237.html#a13654bf9a8148f798de2d23f51043212" title="For adding a function to handle this event." alt="" coords="247,71,451,112"/>
-<area shape="rect" id="node4" href="$d9/d13/a02237.html#a098c5aeea1a1f9a38551c44850b91dc0" title="For adding a function to handle this event." alt="" coords="247,136,451,177"/>
-<area shape="rect" id="node5" href="$d9/d13/a02237.html#ae9ae6b6a2349682fec0fa16261127d2a" title="For adding a function to handle this event." alt="" coords="247,201,451,243"/>
-<area shape="rect" id="node6" href="$d9/d13/a02237.html#a1074bd3961a496b1aecda8c1921bbd28" title="For adding a function to handle this event." alt="" coords="247,267,451,308"/>
-<area shape="rect" id="node7" href="$d9/d13/a02237.html#a2c0cbfac0943bfb869ec08a6003cce1c" title="For adding a function to handle this event." alt="" coords="247,332,451,373"/>
-<area shape="rect" id="node8" href="$d9/d13/a02237.html#a9b1234877c0ae908e4a4a85e381293a6" title="For adding a function to handle this event." alt="" coords="247,397,451,439"/>
-<area shape="rect" id="node9" href="$d9/d13/a02237.html#a3838e406997b4f22aa86822046bbbc7d" title="For adding a function to handle this event." alt="" coords="247,463,451,504"/>
-<area shape="rect" id="node10" href="$d9/d13/a02237.html#a145a73ddbb5a3c480586799f9e122e17" title="For adding a function to handle this event." alt="" coords="247,528,451,569"/>
-<area shape="rect" id="node11" href="$d9/d13/a02237.html#ad804ae50994389c1a1c92ba778132529" title="For adding a function to handle this event." alt="" coords="247,593,451,635"/>
-<area shape="rect" id="node12" href="$d9/d13/a02237.html#aab179fd16b55ebd8b50115a15853d731" title="For adding a function to handle this event." alt="" coords="247,659,451,700"/>
-<area shape="rect" id="node13" href="$d9/d13/a02237.html#ab267a93be7272fd518078d22d838c4fa" title="For adding a function to handle this event." alt="" coords="247,724,451,765"/>
-<area shape="rect" id="node14" href="$d9/d13/a02237.html#a3da4855acd5d0910d7444942720b67bf" title="For adding a function to handle this event." alt="" coords="247,789,451,831"/>
-<area shape="rect" id="node15" href="$d9/d13/a02237.html#ad7bf4a8b8f430d48f1165e6d3b52dc8a" title="For adding a function to handle this event." alt="" coords="247,855,451,896"/>
+<area shape="rect" id="node1" title="DiscordCoreClient constructor." alt="" coords="5,421,215,461"/>
+<area shape="rect" id="node2" href="$d9/d13/a02237.html#ab1f1240c5018a2ef19fd5d94e2ae3709" title="For adding a function to handle this event." alt="" coords="263,5,487,45"/>
+<area shape="rect" id="node3" href="$d9/d13/a02237.html#a13654bf9a8148f798de2d23f51043212" title="For adding a function to handle this event." alt="" coords="263,69,487,109"/>
+<area shape="rect" id="node4" href="$d9/d13/a02237.html#a098c5aeea1a1f9a38551c44850b91dc0" title="For adding a function to handle this event." alt="" coords="263,133,487,173"/>
+<area shape="rect" id="node5" href="$d9/d13/a02237.html#ae9ae6b6a2349682fec0fa16261127d2a" title="For adding a function to handle this event." alt="" coords="263,197,487,237"/>
+<area shape="rect" id="node6" href="$d9/d13/a02237.html#a1074bd3961a496b1aecda8c1921bbd28" title="For adding a function to handle this event." alt="" coords="263,261,487,301"/>
+<area shape="rect" id="node7" href="$d9/d13/a02237.html#a2c0cbfac0943bfb869ec08a6003cce1c" title="For adding a function to handle this event." alt="" coords="263,325,487,365"/>
+<area shape="rect" id="node8" href="$d9/d13/a02237.html#a9b1234877c0ae908e4a4a85e381293a6" title="For adding a function to handle this event." alt="" coords="263,389,487,429"/>
+<area shape="rect" id="node9" href="$d9/d13/a02237.html#a3838e406997b4f22aa86822046bbbc7d" title="For adding a function to handle this event." alt="" coords="263,453,487,493"/>
+<area shape="rect" id="node10" href="$d9/d13/a02237.html#a145a73ddbb5a3c480586799f9e122e17" title="For adding a function to handle this event." alt="" coords="263,517,487,557"/>
+<area shape="rect" id="node11" href="$d9/d13/a02237.html#ad804ae50994389c1a1c92ba778132529" title="For adding a function to handle this event." alt="" coords="263,581,487,621"/>
+<area shape="rect" id="node12" href="$d9/d13/a02237.html#aab179fd16b55ebd8b50115a15853d731" title="For adding a function to handle this event." alt="" coords="263,645,487,685"/>
+<area shape="rect" id="node13" href="$d9/d13/a02237.html#ab267a93be7272fd518078d22d838c4fa" title="For adding a function to handle this event." alt="" coords="263,709,487,749"/>
+<area shape="rect" id="node14" href="$d9/d13/a02237.html#a3da4855acd5d0910d7444942720b67bf" title="For adding a function to handle this event." alt="" coords="263,773,487,813"/>
+<area shape="rect" id="node15" href="$d9/d13/a02237.html#ad7bf4a8b8f430d48f1165e6d3b52dc8a" title="For adding a function to handle this event." alt="" coords="263,837,487,877"/>
 </map>

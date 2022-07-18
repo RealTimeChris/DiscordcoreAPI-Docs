@@ -1,5 +1,5 @@
 <map id="DiscordCoreAPI::StageInstance" name="DiscordCoreAPI::StageInstance">
-<area shape="rect" id="node1" title="A single StageInstance." alt="" coords="19,155,224,181"/>
-<area shape="rect" id="node2" href="$dd/d68/a02553.html" title="Stage instance data." alt="" coords="5,80,237,107"/>
-<area shape="rect" id="node3" href="$df/d4d/a02285.html" title="Base class for all Discord entities." alt="" coords="21,5,221,32"/>
+<area shape="rect" id="node1" title="A single StageInstance." alt="" coords="21,152,243,177"/>
+<area shape="rect" id="node2" href="$dd/d68/a02553.html" title="Stage instance data." alt="" coords="5,79,259,104"/>
+<area shape="rect" id="node3" href="$df/d4d/a02285.html" title="Base class for all Discord entities." alt="" coords="23,5,241,31"/>
 </map>

@@ -2,7 +2,7 @@ var searchData=
 [
   ['ban_5fmembers_0',['Ban_Members',['../dd/d94/a00888.html#ggabf76b7b06351e7fc14b8c72f9aa2c15faceec4f8c277d21733c5a708fe1e3edba',1,'DiscordCoreAPI']]],
   ['bandata_1',['BanData',['../d9/dd6/a02441.html',1,'DiscordCoreAPI']]],
-  ['banner_2',['banner',['../dc/dc5/a02977.html#a732d7d6cd8b7e41dc5391b2df9f69d40',1,'DiscordCoreAPI::Guild::banner()'],['../dd/d5c/a02985.html#a762af35661cc581a9e89e8c3e344ca21',1,'DiscordCoreAPI::ModifyGuildData::banner()'],['../da/df8/a03577.html#a5ebda776fc3dfd10e923117bcd13820c',1,'DiscordCoreAPI::User::banner()']]],
+  ['banner_2',['banner',['../da/df8/a03577.html#a5ebda776fc3dfd10e923117bcd13820c',1,'DiscordCoreAPI::User::banner()'],['../dd/d5c/a02985.html#a762af35661cc581a9e89e8c3e344ca21',1,'DiscordCoreAPI::ModifyGuildData::banner()'],['../dc/dc5/a02977.html#a732d7d6cd8b7e41dc5391b2df9f69d40',1,'DiscordCoreAPI::Guild::banner()']]],
   ['banner1_3',['Banner1',['../dd/d94/a00888.html#gga91580f718416635d54374c2b956c9826a9713d3e30be4096f6520df83b1c91147',1,'DiscordCoreAPI']]],
   ['banner2_4',['Banner2',['../dd/d94/a00888.html#gga91580f718416635d54374c2b956c9826ad0504f5853ddaa517a1ecc0bb45d81c0',1,'DiscordCoreAPI']]],
   ['banner3_5',['Banner3',['../dd/d94/a00888.html#gga91580f718416635d54374c2b956c9826ae491b0d3b97385f2557b959b40bc79cf',1,'DiscordCoreAPI']]],
