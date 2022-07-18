@@ -656,84 +656,89 @@ $(document).ready(function(){initNavTree('d7/dcf/a00845_source.html','../../'); 
 <div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>        <span class="keywordflow">if</span> (FD_ISSET(this-&gt;theSocket, &amp;writeSet)) {</div>
 <div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>            <span class="keywordflow">if</span> (this-&gt;outputBuffers.size() &gt; 0) {</div>
 <div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>                std::string clientToServerString = this-&gt;outputBuffers.front();</div>
-<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>                <span class="keyword">auto</span> writtenBytes{ sendto(this-&gt;theSocket, clientToServerString.data(), <span class="keyword">static_cast&lt;</span>int32_t<span class="keyword">&gt;</span>(clientToServerString.size()), 0,</div>
-<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>                    <span class="keyword">reinterpret_cast&lt;</span>sockaddr*<span class="keyword">&gt;</span>(&amp;this-&gt;theAddress), <span class="keyword">sizeof</span>(this-&gt;theAddress)) };</div>
-<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>                <span class="keywordflow">if</span> (writtenBytes &lt; 0) {</div>
-<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>                    this-&gt;disconnect();</div>
-<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>                    <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>                    this-&gt;outputBuffers.erase(this-&gt;outputBuffers.begin());</div>
-<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>                }</div>
-<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>            }</div>
-<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>        }</div>
-<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span> </div>
-<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>        <span class="keywordflow">if</span> (FD_ISSET(this-&gt;theSocket, &amp;readSet)) {</div>
-<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>            std::string serverToClientBuffer{};</div>
-<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>            serverToClientBuffer.resize(this-&gt;maxBufferSize);</div>
-<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>            <span class="keyword">auto</span> readBytes{ recv(this-&gt;theSocket, serverToClientBuffer.data(), <span class="keyword">static_cast&lt;</span>int32_t<span class="keyword">&gt;</span>(serverToClientBuffer.size()), 0) };</div>
-<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>            <span class="keywordflow">if</span> (readBytes &lt; 0) {</div>
-<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>                this-&gt;disconnect();</div>
-<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>                this-&gt;inputBuffer.insert(this-&gt;inputBuffer.end(), serverToClientBuffer.begin(), serverToClientBuffer.begin() + readBytes);</div>
-<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>                this-&gt;bytesRead += readBytes;</div>
-<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>            }</div>
-<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>        }</div>
-<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>    }</div>
-<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span> </div>
-<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>    <span class="keywordtype">void</span> DatagramSocketClient::writeData(std::string&amp; dataToWrite) <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>        <span class="keywordflow">if</span> (dataToWrite.size() &gt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(16 * 1024)) {</div>
-<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>            <span class="keywordtype">size_t</span> remainingBytes{ dataToWrite.size() };</div>
-<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span>            <span class="keywordflow">while</span> (remainingBytes &gt; 0) {</div>
-<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span>                std::string newString{};</div>
-<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span>                <span class="keywordtype">size_t</span> amountToCollect{};</div>
-<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>                <span class="keywordflow">if</span> (dataToWrite.size() &gt;= <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(1024 * 16)) {</div>
-<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span>                    amountToCollect = <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(1024 * 16);</div>
-<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>                    amountToCollect = dataToWrite.size();</div>
-<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>                }</div>
-<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>                newString.insert(newString.begin(), dataToWrite.begin(), dataToWrite.begin() + amountToCollect);</div>
-<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>                std::unique_lock theLock{ this-&gt;theMutex };</div>
-<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span>                this-&gt;outputBuffers.push_back(newString);</div>
-<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>                dataToWrite.erase(dataToWrite.begin(), dataToWrite.begin() + amountToCollect);</div>
-<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>                remainingBytes = dataToWrite.size();</div>
-<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span>            }</div>
-<div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span>            std::unique_lock theLock{ this-&gt;theMutex };</div>
-<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span>            this-&gt;outputBuffers.push_back(dataToWrite);</div>
-<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span>        }</div>
-<div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span>    }</div>
-<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span> </div>
-<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span>    std::string DatagramSocketClient::getInputBuffer() noexcept {</div>
-<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>        std::unique_lock theLock{ this-&gt;theMutex };</div>
-<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>        std::string theReturnString = std::move(this-&gt;inputBuffer);</div>
-<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>        this-&gt;inputBuffer.clear();</div>
-<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span>        <span class="keywordflow">return</span> theReturnString;</div>
-<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span>    }</div>
-<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span> </div>
-<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span>    <span class="keywordtype">bool</span> DatagramSocketClient::areWeStillConnected() noexcept {</div>
-<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>        <span class="keywordflow">if</span> (this-&gt;theSocket != SOCKET_ERROR) {</div>
-<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span>        }</div>
-<div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span>    }</div>
-<div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span> </div>
-<div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span>    int64_t DatagramSocketClient::getBytesRead() noexcept {</div>
-<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>        std::unique_lock theLock{ this-&gt;theMutex };</div>
-<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span>        <span class="keywordflow">return</span> this-&gt;bytesRead;</div>
+<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span><span class="preprocessor">#ifdef WIN32</span></div>
+<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>                <span class="keyword">auto</span> writtenBytes{ sendto(this-&gt;theSocket, clientToServerString.data(), <span class="keyword">static_cast&lt;</span>int32_t<span class="keyword">&gt;</span>(clientToServerString.size()), 0,</div>
+<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>                    <span class="keyword">reinterpret_cast&lt;</span>SOCKADDR*<span class="keyword">&gt;</span>(&amp;this-&gt;theAddress), <span class="keyword">sizeof</span>(this-&gt;theAddress)) };</div>
+<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>                <span class="keyword">auto</span> writtenBytes{ sendto(this-&gt;theSocket, clientToServerString.data(), <span class="keyword">static_cast&lt;</span>int32_t<span class="keyword">&gt;</span>(clientToServerString.size()), 0,</div>
+<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>                    <span class="keyword">reinterpret_cast&lt;</span>sockaddr*<span class="keyword">&gt;</span>(&amp;this-&gt;theAddress), <span class="keyword">sizeof</span>(this-&gt;theAddress)) };</div>
+<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>                <span class="keywordflow">if</span> (writtenBytes &lt; 0) {</div>
+<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>                    this-&gt;disconnect();</div>
+<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>                    this-&gt;outputBuffers.erase(this-&gt;outputBuffers.begin());</div>
+<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>                }</div>
+<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>            }</div>
+<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>        }</div>
+<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span> </div>
+<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>        <span class="keywordflow">if</span> (FD_ISSET(this-&gt;theSocket, &amp;readSet)) {</div>
+<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>            std::string serverToClientBuffer{};</div>
+<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>            serverToClientBuffer.resize(this-&gt;maxBufferSize);</div>
+<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>            <span class="keyword">auto</span> readBytes{ recv(this-&gt;theSocket, serverToClientBuffer.data(), <span class="keyword">static_cast&lt;</span>int32_t<span class="keyword">&gt;</span>(serverToClientBuffer.size()), 0) };</div>
+<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>            <span class="keywordflow">if</span> (readBytes &lt; 0) {</div>
+<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>                this-&gt;disconnect();</div>
+<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>                this-&gt;inputBuffer.insert(this-&gt;inputBuffer.end(), serverToClientBuffer.begin(), serverToClientBuffer.begin() + readBytes);</div>
+<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>                this-&gt;bytesRead += readBytes;</div>
+<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>            }</div>
+<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>        }</div>
+<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span>    }</div>
+<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span> </div>
+<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span>    <span class="keywordtype">void</span> DatagramSocketClient::writeData(std::string&amp; dataToWrite) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>        <span class="keywordflow">if</span> (dataToWrite.size() &gt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(16 * 1024)) {</div>
+<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span>            <span class="keywordtype">size_t</span> remainingBytes{ dataToWrite.size() };</div>
+<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>            <span class="keywordflow">while</span> (remainingBytes &gt; 0) {</div>
+<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>                std::string newString{};</div>
+<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>                <span class="keywordtype">size_t</span> amountToCollect{};</div>
+<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>                <span class="keywordflow">if</span> (dataToWrite.size() &gt;= <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(1024 * 16)) {</div>
+<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>                    amountToCollect = <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(1024 * 16);</div>
+<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>                    amountToCollect = dataToWrite.size();</div>
+<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>                }</div>
+<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span>                newString.insert(newString.begin(), dataToWrite.begin(), dataToWrite.begin() + amountToCollect);</div>
+<div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span>                std::unique_lock theLock{ this-&gt;theMutex };</div>
+<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span>                this-&gt;outputBuffers.push_back(newString);</div>
+<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span>                dataToWrite.erase(dataToWrite.begin(), dataToWrite.begin() + amountToCollect);</div>
+<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span>                remainingBytes = dataToWrite.size();</div>
+<div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span>            }</div>
+<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span>            std::unique_lock theLock{ this-&gt;theMutex };</div>
+<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>            this-&gt;outputBuffers.push_back(dataToWrite);</div>
+<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>        }</div>
+<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>    }</div>
+<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span> </div>
+<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span>    std::string DatagramSocketClient::getInputBuffer() noexcept {</div>
+<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span>        std::unique_lock theLock{ this-&gt;theMutex };</div>
+<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span>        std::string theReturnString = std::move(this-&gt;inputBuffer);</div>
+<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>        this-&gt;inputBuffer.clear();</div>
+<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span>        <span class="keywordflow">return</span> theReturnString;</div>
+<div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span>    }</div>
+<div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span> </div>
+<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span>    <span class="keywordtype">bool</span> DatagramSocketClient::areWeStillConnected() noexcept {</div>
+<div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span>        <span class="keywordflow">if</span> (this-&gt;theSocket != SOCKET_ERROR) {</div>
+<div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span>        }</div>
 <div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>    }</div>
 <div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span> </div>
-<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>    <span class="keywordtype">void</span> DatagramSocketClient::disconnect() noexcept {</div>
+<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>    int64_t DatagramSocketClient::getBytesRead() noexcept {</div>
 <div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span>        std::unique_lock theLock{ this-&gt;theMutex };</div>
-<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>        this-&gt;theSocket = SOCKET_ERROR;</div>
-<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span>        this-&gt;inputBuffer.clear();</div>
-<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span>        this-&gt;outputBuffers.clear();</div>
-<div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span>    }</div>
-<div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span> </div>
-<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span>    std::mutex SSLConnectionInterface::contextMutex{};</div>
-<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span>    SSL_CTXWrapper SSLConnectionInterface::context{};</div>
-<div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span>}</div>
+<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>        <span class="keywordflow">return</span> this-&gt;bytesRead;</div>
+<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span>    }</div>
+<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span> </div>
+<div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span>    <span class="keywordtype">void</span> DatagramSocketClient::disconnect() noexcept {</div>
+<div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span>        std::unique_lock theLock{ this-&gt;theMutex };</div>
+<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span>        this-&gt;theSocket = SOCKET_ERROR;</div>
+<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span>        this-&gt;inputBuffer.clear();</div>
+<div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span>        this-&gt;outputBuffers.clear();</div>
+<div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span>    }</div>
+<div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span> </div>
+<div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span>    std::mutex SSLConnectionInterface::contextMutex{};</div>
+<div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span>    SSL_CTXWrapper SSLConnectionInterface::context{};</div>
+<div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span>}</div>
 <div class="ttc" id="aa00743_html"><div class="ttname"><a href="../../d0/d0a/a00743.html">SSLClients.hpp</a></div></div>
 <div class="ttc" id="aa00776_html"><div class="ttname"><a href="../../d9/dd4/a00776.html">WebSocketEntities.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
