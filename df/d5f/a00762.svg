@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../d4/deb/a00710.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="../../db/d7c/a00722.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="1152,-140 1007,-140 1007,-110 1152,-110 1152,-140"/>
 <text text-anchor="start" x="1015" y="-128" font-family="Helvetica,sans-Serif" font-size="10.00">discordcoreapi/Foundation</text>
 <text text-anchor="middle" x="1079.5" y="-117" font-family="Helvetica,sans-Serif" font-size="10.00">Entities.hpp</text>
@@ -36,7 +36,7 @@
 <!-- Node27 -->
 <g id="node27" class="node">
 <title>Node27</title>
-<g id="a_node27"><a xlink:href="../../db/d7c/a00722.html" target="_top" xlink:title=" ">
+<g id="a_node27"><a xlink:href="../../df/d9e/a00686.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="1472.5,-305 1334.5,-305 1334.5,-286 1472.5,-286 1472.5,-305"/>
 <text text-anchor="middle" x="1403.5" y="-293" font-family="Helvetica,sans-Serif" font-size="10.00">discordcoreapi/Https.hpp</text>
 </a>
@@ -66,7 +66,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="../../d5/dae/a00767.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="../../d1/d87/a00689.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="1154.5,-74 1004.5,-74 1004.5,-55 1154.5,-55 1154.5,-74"/>
 <text text-anchor="middle" x="1079.5" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">discordcoreapi/Utilities.hpp</text>
 </a>
@@ -426,7 +426,7 @@
 <!-- Node28 -->
 <g id="node28" class="node">
 <title>Node28</title>
-<g id="a_node28"><a xlink:href="../../d0/d0a/a00743.html" target="_top" xlink:title=" ">
+<g id="a_node28"><a xlink:href="../../dd/d57/a00701.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="1751,-250 1588,-250 1588,-231 1751,-231 1751,-250"/>
 <text text-anchor="middle" x="1669.5" y="-238" font-family="Helvetica,sans-Serif" font-size="10.00">discordcoreapi/SSLClients.hpp</text>
 </a>
@@ -447,7 +447,7 @@
 <!-- Node29 -->
 <g id="node29" class="node">
 <title>Node29</title>
-<g id="a_node29"><a xlink:href="../../d4/d6a/a00704.html" target="_top" xlink:title=" ">
+<g id="a_node29"><a xlink:href="../../d2/d4a/a00758.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="1283.5,-195 1107.5,-195 1107.5,-176 1283.5,-176 1283.5,-195"/>
 <text text-anchor="middle" x="1195.5" y="-183" font-family="Helvetica,sans-Serif" font-size="10.00">discordcoreapi/EventEntities.hpp</text>
 </a>

@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('d4/d9b/a00680_source.html','../../'); 
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">AudioDecoder.hpp</div></div>
+  <div class="headertitle"><div class="title">ChannelEntities.hpp</div></div>
 </div><!--header-->
 <div class="contents">
 <a href="../../d4/d9b/a00680.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
@@ -119,206 +119,341 @@ $(document).ready(function(){initNavTree('d4/d9b/a00680_source.html','../../'); 
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">    You should have received a copy of the GNU General Public License along with DiscordCoreAPI.</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">    If not, see &lt;https://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">*/</span><span class="comment"></span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">/// AudioDecoder.hpp - Header for the audio decoder class.</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">/// Jul 29, 2021</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">/// ChannelEntities.hpp - Header for the classes related classes and structs.</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">/// May 13, 2021</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">/// https://discordcoreapi.com</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">/// \file AudioDecoder.hpp</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">/// \file ChannelEntities.hpp</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;<a class="code" href="../../d4/d6a/a00704.html">discordcoreapi/EventEntities.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;<a class="code" href="../../d4/deb/a00710.html">discordcoreapi/FoundationEntities.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;<a class="code" href="../../db/d7c/a00722.html">discordcoreapi/FoundationEntities.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;<a class="code" href="../../df/d9e/a00686.html">discordcoreapi/Https.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;libavformat/avformat.h&gt;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;libswresample/swresample.h&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>}</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span>DiscordCoreInternal {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">struct </span>DiscordCoreAPI_Dll AVFrameWrapper {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keyword">struct </span>DiscordCoreAPI_Dll AVFrameDeleter {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <span class="keywordtype">void</span> operator()(AVFrame* other);</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        };</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        AVFrameWrapper&amp; operator=(AVFrame* other);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        AVFrameWrapper(AVFrame* other);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        AVFrame* operator-&gt;();</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keyword">operator</span> AVFrame*();</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        AVFrameWrapper() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>      <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        std::unique_ptr&lt;AVFrame, AVFrameDeleter&gt; thePtr{ <span class="keyword">nullptr</span>, AVFrameDeleter{} };</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    };</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">struct </span>DiscordCoreAPI_Dll AVCodecContextWrapper {</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keyword">struct </span>DiscordCoreAPI_Dll AVCodecContextDeleter {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keywordtype">void</span> operator()(AVCodecContext* other);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        };</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        AVCodecContextWrapper&amp; operator=(AVCodecContext* other);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        AVCodecContextWrapper(AVCodecContext* other);</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        AVCodecContext* operator-&gt;();</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keyword">operator</span> AVCodecContext*();</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        AVCodecContextWrapper() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>      <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        std::unique_ptr&lt;AVCodecContext, AVCodecContextDeleter&gt; thePtr{ <span class="keyword">nullptr</span>, AVCodecContextDeleter{} };</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    };</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keyword">struct </span>DiscordCoreAPI_Dll AVFormatContextWrapper01 {</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        AVFormatContextWrapper01() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        AVFormatContext* theContext{ <span class="keyword">nullptr</span> };</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordtype">bool</span> didItInitialize{ <span class="keyword">false</span> };</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    };</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keyword">struct </span>DiscordCoreAPI_Dll AVFormatContextWrapper {</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keyword">struct </span>DiscordCoreAPI_Dll AVFormatContextDeleter {</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            <span class="keywordtype">void</span> operator()(AVFormatContextWrapper01* other);</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        };</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        AVFormatContextWrapper&amp; operator=(AVFormatContext* other);</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        AVFormatContextWrapper(AVFormatContext* other);</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keywordtype">bool</span>* getBoolPtr();</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        AVFormatContext* operator-&gt;();</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        AVFormatContext** operator*();</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keyword">operator</span> AVFormatContext*();</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        AVFormatContextWrapper() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>      <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        std::unique_ptr&lt;AVFormatContextWrapper01, AVFormatContextDeleter&gt; thePtr{ <span class="keyword">new</span> AVFormatContextWrapper01{}, AVFormatContextDeleter{} };</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d7/d46/a00890.html">DiscordCoreAPI</a> {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment"></span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">    /**</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">     * \addtogroup foundation_entities</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">     * @{</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment"></span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">    /// For collecting a Channel from Discord&#39;s servers. \brief For collecting a Channel from Discord&#39;s servers.</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../d9/d9b/a01889.html">   33</a></span><span class="comment"></span>    <span class="keyword">struct </span>DiscordCoreAPI_Dll <a class="code hl_struct" href="../../d9/d9b/a01889.html">GetChannelData</a> {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="../../d9/d9b/a01889.html#a57b82224462313501dfe92cbfe8f59d9">   34</a></span>        <a class="code hl_typedef" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> channelId{};<span class="comment">///&lt; The id of the Channel to acquire.</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    };</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment"></span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">    /// For deleting or closing a Channel. \brief For deleting or closing a Channel.</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="../../dd/d80/a01893.html">   38</a></span><span class="comment"></span>    <span class="keyword">struct </span>DiscordCoreAPI_Dll <a class="code hl_struct" href="../../dd/d80/a01893.html">DeleteOrCloseChannelData</a> {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../dd/d80/a01893.html#a9b8799ea285555f67dbb44e2e41c9cc3">   39</a></span>        <a class="code hl_typedef" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> channelId{};<span class="comment">///&lt; The id of the Channel to close/delete.</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../dd/d80/a01893.html#ad5f08f1deaf0ec08fb236924ab2ab0c5">   40</a></span>        std::string reason{};<span class="comment">///&lt; The reason for deleting/closing the Channel.</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    };</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment"></span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">    /// For editing the Permission overwrites of a given Channel, for a given Role or User. \brief For editing the Permission overwrites of a given Channel, for a given Role or User.</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../d9/d0c/a01897.html">   44</a></span><span class="comment"></span>    <span class="keyword">struct </span>DiscordCoreAPI_Dll <a class="code hl_struct" href="../../d9/d0c/a01897.html">EditChannelPermissionOverwritesData</a> {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="../../d9/d0c/a01897.html#a4d0dd429d7319fcb4f8826471978f3cb">   45</a></span>        <a class="code hl_enumeration" href="../../dd/d94/a00888.html#gab0706e58604685b3231829069ebd95ae">PermissionOverwritesType</a> type{};<span class="comment">///&lt; The type of overwrite.</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="../../d9/d0c/a01897.html#a0eabfc141a44fb3b50a2967e184006e7">   46</a></span>        <a class="code hl_typedef" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> roleOrUserId{};<span class="comment">///&lt; The Role or User Id to modify the permissions for.</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="../../d9/d0c/a01897.html#af28f2ba481884fe0842c8d83174ae117">   47</a></span>        <a class="code hl_typedef" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> channelId{};<span class="comment">///&lt; The Channel id of the desired Channel to modify the permissions for.</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="../../d9/d0c/a01897.html#a96824d642f68cb2ca086e678ba9971ec">   48</a></span>        std::string reason{};<span class="comment">///&lt; Reason for editing the permission overwrites.</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="../../d9/d0c/a01897.html#aeddb23d9b5cc1dec937591d855b1840c">   49</a></span>        std::string allow{};<span class="comment">///&lt; The permissions to list as &quot;allowed&quot;.</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="../../d9/d0c/a01897.html#a53815988d5ea6005ff7ded4b284b93b0">   50</a></span>        std::string deny{};<span class="comment">///&lt; The permissions to list as &quot;deny&quot;.</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keyword">operator</span> std::string();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    };</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment"></span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">    /// For collecting the invites to a given Channel. \brief For collecting the invites to a given Channel.</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="../../d5/d99/a01901.html">   56</a></span><span class="comment"></span>    <span class="keyword">struct </span>DiscordCoreAPI_Dll <a class="code hl_struct" href="../../d5/d99/a01901.html">GetChannelInvitesData</a> {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <a class="code hl_typedef" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> channelId{};</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    };</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment"></span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">    /// For creating an invite to a given Channel. \brief For creating an invite to a given Channel.</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="../../d9/d65/a01905.html">   61</a></span><span class="comment"></span>    <span class="keyword">struct </span>DiscordCoreAPI_Dll <a class="code hl_struct" href="../../d9/d65/a01905.html">CreateChannelInviteData</a> {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="../../d9/d65/a01905.html#a703288cd67f5b059dd9e49eb2c7369d2">   62</a></span>        <a class="code hl_typedef" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> targetApplicationId{};<span class="comment">///&lt; The id of the embedded application to open for this invite, required if target_type is 2.</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="../../d9/d65/a01905.html#a27b12ac96489cc6cd39fa08758091291">   63</a></span>        <a class="code hl_enumeration" href="../../dd/d94/a00888.html#gaf1597fc8422339d53a1ebade14316dc1">InviteTargetTypes</a> targetType{};<span class="comment">///&lt; The type of target for this voice Channel invite.</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="../../d9/d65/a01905.html#a688d48caa87f9179196319fa8d148a4c">   64</a></span>        <a class="code hl_typedef" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> targetUserId{};<span class="comment">///&lt; Id of the user whose stream to display for this invite, required if target_type is 1.</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="../../d9/d65/a01905.html#a6ef9701776dfa17e5a059e0da607c7a3">   65</a></span>        <span class="keywordtype">bool</span> temporary{ <span class="keyword">false</span> };<span class="comment">///&lt; Whether this invite only grants temporary membership.</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="../../d9/d65/a01905.html#a7000658cc78d489ec95e884b9ed32a7e">   66</a></span>        <a class="code hl_typedef" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> channelId{};<span class="comment">///&lt; The id of the Channel to create the invite for.</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="../../d9/d65/a01905.html#a351adeb8fa07539cf8144b14f165c224">   67</a></span>        std::string reason{};<span class="comment">///&lt; Reason for creating the invite.</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="../../d9/d65/a01905.html#a29fa5668e319bb25ec0c21acf7b4192a">   68</a></span>        <span class="keywordtype">bool</span> unique{ <span class="keyword">false</span> };<span class="comment">///&lt; If true, don&#39;t try to reuse a similar invite (useful for creating many unique one time use invites).</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="../../d9/d65/a01905.html#a0418037ec479a19a7d50da0ce77b071e">   69</a></span>        int32_t maxUses{ 0 };<span class="comment">///&lt; Max number of uses or 0 for unlimited.between 0 and 100.</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="../../d9/d65/a01905.html#a65d68d9e94839568b5abb1badd04a428">   70</a></span>        int32_t maxAge{ 0 };<span class="comment">///&lt; Duration of invite in seconds before expiry, or 0 for never.between 0 and 604800 (7 days)  86400 (24 hours).</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keyword">operator</span> std::string();</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    };</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment"></span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment">    /// For deleting the Permission overwrites of a given Channel for a given Role or User. \brief For deleting the Permission overwrites of a given Channel for a given Role or User.</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="../../d9/d90/a01909.html">   76</a></span><span class="comment"></span>    <span class="keyword">struct </span>DiscordCoreAPI_Dll <a class="code hl_struct" href="../../d9/d90/a01909.html">DeleteChannelPermissionOverwritesData</a> {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="../../d9/d90/a01909.html#ae82c50425ec647cdf1efada78f314f62">   77</a></span>        <a class="code hl_typedef" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> roleOrUserId{};<span class="comment">///&lt; The Role or User id for whom to delete the Permission overwrites.</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="../../d9/d90/a01909.html#a1625af6cec06c990ff2bc58b2d4cd77b">   78</a></span>        <a class="code hl_typedef" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> channelId{};<span class="comment">///&lt; The id of the Channel to modify permissions for.</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="../../d9/d90/a01909.html#aeefba7d2ec05037a7b036b9200a0e34c">   79</a></span>        std::string reason{};<span class="comment">///&lt; Reason for deleting these permission overwrites.</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    };</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment"></span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">    /// For following a news Channel. \brief For following a news Channel.</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="../../d4/d07/a01913.html">   83</a></span><span class="comment"></span>    <span class="keyword">struct </span>DiscordCoreAPI_Dll <a class="code hl_struct" href="../../d4/d07/a01913.html">FollowNewsChannelData</a> {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <a class="code hl_typedef" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> targetChannelId{};</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <a class="code hl_typedef" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> channelId{};</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keyword">operator</span> std::string();</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    };</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="comment"></span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment">    /// For triggering the typing indicator in a given Channel. \brief For triggering the typing indicator in a given Channel.</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="../../d2/d54/a01917.html">   91</a></span><span class="comment"></span>    <span class="keyword">struct </span>DiscordCoreAPI_Dll <a class="code hl_struct" href="../../d2/d54/a01917.html">TriggerTypingIndicatorData</a> {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <a class="code hl_typedef" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> channelId{};</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    };</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="comment"></span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="comment">    /// For acquiring a list of Channels from a chosen Guild. \brief For acquiring a list of Channels from a chosen Guild.</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="../../da/d6c/a01921.html">   96</a></span><span class="comment"></span>    <span class="keyword">struct </span>DiscordCoreAPI_Dll <a class="code hl_struct" href="../../da/d6c/a01921.html">GetGuildChannelsData</a> {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="../../da/d6c/a01921.html#a4da70f569c52bae7dc91b33c77333399">   97</a></span>        <a class="code hl_typedef" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> guildId{};<span class="comment">///&lt; The Guild from which to collect the Channels from.</span></div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    };</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keyword">struct </span>DiscordCoreAPI_Dll SwrContextWrapper {</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="keyword">struct </span>DiscordCoreAPI_Dll SwrContextDeleter {</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            <span class="keywordtype">void</span> operator()(SwrContext* other);</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        };</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        SwrContextWrapper&amp; operator=(SwrContext* other);</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        SwrContextWrapper(SwrContext* other);</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keyword">operator</span> SwrContext*();</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        SwrContextWrapper() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>      <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        std::unique_ptr&lt;SwrContext, SwrContextDeleter&gt; thePtr{ <span class="keyword">nullptr</span>, SwrContextDeleter{} };</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    };</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keyword">struct </span>DiscordCoreAPI_Dll AVIOContextWrapper {</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <span class="keyword">struct </span>DiscordCoreAPI_Dll AVIOContextDeleter {</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            <span class="keywordtype">void</span> operator()(AVIOContext* other);</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        };</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        AVIOContextWrapper&amp; operator=(AVIOContext* other);</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        AVIOContextWrapper(AVIOContext* other);</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        AVIOContext* operator-&gt;();</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        <span class="keyword">operator</span> AVIOContext*();</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        AVIOContextWrapper() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>      <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        std::unique_ptr&lt;AVIOContext, AVIOContextDeleter&gt; thePtr{ <span class="keyword">nullptr</span>, AVIOContextDeleter{} };</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="comment"></span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment">    /// For creating a new Channel within a chosen Guild. \brief For creating a new Channel within a chosen Guild.</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="../../d6/d18/a01925.html">  101</a></span><span class="comment"></span>    <span class="keyword">struct </span>DiscordCoreAPI_Dll <a class="code hl_struct" href="../../d6/d18/a01925.html">CreateGuildChannelData</a> {</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="../../d6/d18/a01925.html#a18c9338822868b1e5c97e46c70984774">  102</a></span>        std::vector&lt;OverWriteData&gt; permissionOverwrites{};<span class="comment">///&lt; Array of overwrite objects   the Channel&#39;s permission overwrites.</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="../../d6/d18/a01925.html#a27da669187f37ccc1dce983394bd0697">  103</a></span>        int32_t defaultAutoArchiveDuration{ 0 };<span class="comment">///&lt; Defualt duration of time before archiving a thread.</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="../../d6/d18/a01925.html#a045c939b3c53fe4677eb4de8673d39e5">  104</a></span>        int32_t rateLimitPerUser{ 0 };<span class="comment">///&lt; Amount of seconds a user has to wait before sending another message(0 - 21600).</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="../../d6/d18/a01925.html#ac72c14c8d8fc752b66129956eb5f9e7c">  105</a></span>        int32_t userLimit{ 0 };<span class="comment">///&lt; The user limit of the voice Channel(voice only).</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="../../d6/d18/a01925.html#a0c9b79c763614cf9191f0e8e58abcc66">  106</a></span>        int32_t position{ 0 };<span class="comment">///&lt; Sorting position of the Channel.</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="../../d6/d18/a01925.html#a3605826b8ef9e559e54241c4a08d9a4f">  107</a></span>        int32_t bitrate{ 0 };<span class="comment">///&lt; The bitrate(in bits) of the voice Channel(voice only).</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="../../d6/d18/a01925.html#a45c737ddd58f81de57784e605421a1ef">  108</a></span>        std::string reason{};<span class="comment">///&lt; Reason for creating the Channel.</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="../../d6/d18/a01925.html#af1c7a0a1e9f6d00b62c9c98cfcf088c6">  109</a></span>        <a class="code hl_typedef" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> parentId{};<span class="comment">///&lt; Id of the parent category for a Channel.</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="../../d6/d18/a01925.html#a3a2d12b6ddf405c1145a3893e98e942a">  110</a></span>        std::string topic{};<span class="comment">///&lt; Channel topic(0 - 1024 characters).</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="../../d6/d18/a01925.html#a8e2ce588a9c35d074dd670a5b8d06b33">  111</a></span>        std::string name{};<span class="comment">///&lt; The name of the Channel.</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="../../d6/d18/a01925.html#a9a274147bdd5d21492ebced3bbe403e3">  112</a></span>        <a class="code hl_enumeration" href="../../dd/d94/a00888.html#ga386b8a65a1195bd1bc61b75a7f308ffa">ChannelType</a> type{};<span class="comment">///&lt; The type of Channel.</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="../../d6/d18/a01925.html#a0cf75079829c6a1bfd0b8547009f2892">  113</a></span>        <span class="keywordtype">bool</span> nsfw{ <span class="keyword">false</span> };<span class="comment">///&lt;  Whether the Channel is nsfw.</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="../../d6/d18/a01925.html#ab8a83ab644948551ecdf2ca079f37a12">  114</a></span>        <a class="code hl_typedef" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> guildId{};<span class="comment">///&lt; The Guild within which to create the Channel.</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <span class="keyword">operator</span> std::string();</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    };</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="comment"></span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="comment">    /// For modifying the Channel position responseData of a single Channel. \brief For modifying the Channel position responseData of a single Channel.</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="../../dc/dc8/a01929.html">  120</a></span><span class="comment"></span>    <span class="keyword">struct </span>DiscordCoreAPI_Dll <a class="code hl_struct" href="../../dc/dc8/a01929.html">ModifyGuildChannelPositionData</a> {</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="../../dc/dc8/a01929.html#a762eb3049e777960c5b2e88e193e7fba">  121</a></span>        <span class="keywordtype">bool</span> lockPermissions{ <span class="keyword">false</span> };<span class="comment">///&lt; Syncs the permission overwrites with the new parent, if moving to a new category.</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="../../dc/dc8/a01929.html#a21128c5806a1aa5058ab6cf9bdce6c3f">  122</a></span>        int32_t position{ 0 };<span class="comment">///&lt; Sorting position of the Channel.</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="../../dc/dc8/a01929.html#a6f9ed77dc53738201fbf5fce2143d87d">  123</a></span>        <a class="code hl_typedef" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> parentId{};<span class="comment">///&lt; The new parent ID for the Channel that is moved.</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="../../dc/dc8/a01929.html#a6d0eda8cc30c83339632de85bf38ae97">  124</a></span>        <a class="code hl_typedef" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> <span class="keywordtype">id</span>{};<span class="comment">///&lt; Channel id.</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    };</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="comment"></span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="comment">    /// For modifying the current positions of one or more Channels in the Guild. \brief For modifying the current positions of one or more Channels in the Guild.</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="../../dc/da7/a01933.html">  128</a></span><span class="comment"></span>    <span class="keyword">struct </span>DiscordCoreAPI_Dll <a class="code hl_struct" href="../../dc/da7/a01933.html">ModifyGuildChannelPositionsData</a> {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="../../dc/da7/a01933.html#a38d5e3055de30a1a355e3dc9e074a8b7">  129</a></span>        std::vector&lt;ModifyGuildChannelPositionData&gt; modifyChannelData{};<span class="comment">///&lt; Array of new Channel position&#39;s responseData.</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="../../dc/da7/a01933.html#acf35c8a3032362deecf4a35a208482fe">  130</a></span>        std::string reason{};<span class="comment">///&lt; Reason for re-ordering the Channel positions.</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="../../dc/da7/a01933.html#a35a94c1cf1cb99ede8c68ad9b8a588f5">  131</a></span>        <a class="code hl_typedef" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> guildId{};<span class="comment">///&lt; Guild within which to re-order the Channel positions.</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <span class="keyword">operator</span> std::string();</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    };</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="keyword">struct </span>DiscordCoreAPI_Dll AVPacketWrapper {</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        <span class="keyword">struct </span>DiscordCoreAPI_Dll AVPacketDeleter {</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>            <span class="keywordtype">void</span> operator()(AVPacket* other);</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        };</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        AVPacketWrapper&amp; operator=(AVPacket* other);</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        AVPacketWrapper(AVPacket* other);</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        AVPacket* operator-&gt;();</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        <span class="keyword">operator</span> AVPacket*();</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        AVPacketWrapper() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>      <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        std::unique_ptr&lt;AVPacket, AVPacketDeleter&gt; thePtr{ <span class="keyword">nullptr</span>, AVPacketDeleter{} };</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    };</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keyword">struct </span>DiscordCoreAPI_Dll BuildAudioDecoderData {</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>      <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        DiscordCoreAPI::ConfigManager* configManager{ <span class="keyword">nullptr</span> };</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        int64_t totalFileSize{ 0 };</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        int64_t bufferMaxSize{ 0 };</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    };</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <span class="keyword">class </span>DiscordCoreAPI_Dll AudioDecoder {</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>      <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        AudioDecoder(<span class="keyword">const</span> BuildAudioDecoderData&amp; dataPackage);</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        <span class="keywordtype">bool</span> getFrame(<a class="code hl_struct" href="../../d7/d75/a02805.html">DiscordCoreAPI::RawFrameData</a>&amp; dataPackage);</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        <span class="keywordtype">void</span> submitDataForDecoding(std::string dataToDecode);</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        <span class="keywordtype">bool</span> haveWeFailed();</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        <span class="keywordtype">void</span> startMe();</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        ~AudioDecoder();</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>      <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        int64_t audioStreamIndex{ 0 }, bufferMaxSize{ 0 }, bytesRead{ 0 }, totalFileSize{ 0 };</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        <a class="code hl_class" href="../../d3/d63/a03637.html">DiscordCoreAPI::UnboundedMessageBlock&lt;DiscordCoreAPI::RawFrameData&gt;</a> outDataBuffer{};</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        <a class="code hl_class" href="../../d3/d63/a03637.html">DiscordCoreAPI::UnboundedMessageBlock&lt;std::string&gt;</a> inputDataBuffer{};</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        DiscordCoreAPI::ConfigManager* configManager{ <span class="keyword">nullptr</span> };</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        std::atomic_int32_t refreshTimeForBuffer{ 10000 };</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        std::atomic_bool haveWeFailedBool{ <span class="keyword">false</span> };</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        AVCodecContextWrapper audioDecodeContext{};</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        std::atomic_bool areWeQuitting{ <span class="keyword">false</span> };</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        AVFormatContextWrapper formatContext{};</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        AVFrameWrapper frame{}, newFrame{};</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        AVIOContextWrapper ioContext{};</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        SwrContextWrapper swrContext{};</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        std::string currentBuffer{};</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        <span class="keywordtype">bool</span> haveWeBooted{ <span class="keyword">false</span> };</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        AVPacketWrapper packet{};</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        AVStream* audioStream{};</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        AVCodec* codec{};</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        std::unique_ptr&lt;std::jthread&gt; taskThread{ <span class="keyword">nullptr</span> };</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="comment"></span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="comment">    /// For collecting a direct-messaging Channel. \brief For collecting a direct-messaging Channel.</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="../../d9/d17/a01937.html">  137</a></span><span class="comment"></span>    <span class="keyword">struct </span>DiscordCoreAPI_Dll <a class="code hl_struct" href="../../d9/d17/a01937.html">CreateDMChannelData</a> {</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="../../d9/d17/a01937.html#ac17e0f4b4168af75ba7733f4f8a71e01">  138</a></span>        <a class="code hl_typedef" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> userId{};<span class="comment">///&lt; The User for whom to collect the direct-messaging Channel to.</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    };</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="comment"></span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="comment">    /// A Channel object. \brief A Channel object.</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="../../da/d76/a01941.html">  142</a></span><span class="comment"></span>    <span class="keyword">class </span>DiscordCoreAPI_Dll <a class="code hl_class" href="../../da/d76/a01941.html">Channel</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../df/def/a02369.html">ChannelData</a>, <span class="keyword">public</span> DataParser&lt;Channel&gt; {</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>      <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="../../da/d76/a01941.html#aaa2230dbc1e4c169ac97225fd0cc19ad">  144</a></span>        std::unordered_map&lt;uint64_t, UserData&gt; recipients{};<span class="comment">///&lt; Recipients, in the case of a group Dm or Dm.</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="../../da/d76/a01941.html#aae3679607e9e14142cdb1f8ed143d9a3">  145</a></span>        int32_t defaultAutoArchiveDuration{ 0 };<span class="comment">///&lt; Default time it takes to archive a thread.</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="../../da/d76/a01941.html#a39aa4d20c45ae8e1ff312f966f2bc9d4">  146</a></span>        <a class="code hl_struct" href="../../d4/dfb/a02341.html">ThreadMetadataData</a> threadMetadata{};<span class="comment">///&lt; Metadata in the case that this Channel is a Thread.</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="../../da/d76/a01941.html#aea077883a666dbbde68551bfcca42d5c">  147</a></span>        <a class="code hl_class" href="../../d8/d33/a03629.html">TimeStamp</a> lastPinTimestamp{ <span class="stringliteral">&quot;&quot;</span> };<span class="comment">///&lt; Timestamp of the last pinned Message.</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="../../da/d76/a01941.html#a9cc5e4be1c99b59fc97faa40700df0fb">  148</a></span>        int32_t videoQualityMode{ 0 };<span class="comment">///&lt; Video quality mode.</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="../../da/d76/a01941.html#a396183de09c759a5fde8fcf828befa8e">  149</a></span>        int32_t rateLimitPerUser{ 0 };<span class="comment">///&lt; Amount of seconds a User has to wait before sending another Message.</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="../../da/d76/a01941.html#ad724c999dbf82f743449a2fb1e132827">  150</a></span>        std::string lastMessageId{};<span class="comment">///&lt; Id of the last Message.</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="../../da/d76/a01941.html#a429fdf8b314b6f5b316b40c64579e8b1">  151</a></span>        <a class="code hl_class" href="../../dc/d0a/a02345.html">ThreadMemberData</a> member{};<span class="comment">///&lt; Thread member object for the current User, if they have joined the Thread.</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="../../da/d76/a01941.html#a6b6d6bea1a9154525aa0c9bba83cdaa6">  152</a></span>        int32_t messageCount{ 0 };<span class="comment">///&lt; An approximate count of Messages in a Thread stops counting at 50.</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="../../da/d76/a01941.html#a9d69bf1059097e8bb5cbd76d77fd4921">  153</a></span>        std::string permissions{};<span class="comment">///&lt; Computed permissions for the invoking user in the channel, including overwrites.</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="../../da/d76/a01941.html#a76e16c88df7f286a4dd9991eb2f8b689">  154</a></span>        <a class="code hl_typedef" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> applicationId{};<span class="comment">///&lt; Application id of the current application.</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="../../da/d76/a01941.html#a7ef4fab558e120ea5ee5d771d5a597c1">  155</a></span>        std::string rtcRegion{};<span class="comment">///&lt; Real-time clock region.</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="../../da/d76/a01941.html#a85388772690fe73a8b6b434924486fea">  156</a></span>        int32_t userLimit{ 0 };<span class="comment">///&lt; User limit, in the case of voice channels.</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="../../da/d76/a01941.html#a4cb02951cd2ced5b8aacd52a6448a48d">  157</a></span>        int32_t bitrate{ 0 };<span class="comment">///&lt; Bitrate of the Channel, if it is a voice Channel.</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="../../da/d76/a01941.html#a8a3b6240f407cf2c23cd9c86904a68b8">  158</a></span>        std::string topic{};<span class="comment">///&lt; The Channel&#39;s topic.</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="../../da/d76/a01941.html#a92b115382efdcb3ed6bd6603265910e4">  159</a></span>        std::string icon{};<span class="comment">///&lt; Icon for the Channel, if applicable.</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        <a class="code hl_class" href="../../da/d76/a01941.html">Channel</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        <a class="code hl_class" href="../../da/d76/a01941.html">Channel</a>&amp; operator=(<span class="keyword">const</span> nlohmann::json&amp; jsonObjectData);</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <a class="code hl_class" href="../../da/d76/a01941.html">Channel</a>(<span class="keyword">const</span> nlohmann::json&amp; jsonObjectData);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        <a class="code hl_class" href="../../da/d76/a01941.html">Channel</a>&amp; operator=(<a class="code hl_class" href="../../df/def/a02369.html">ChannelData</a>&amp;&amp;);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        <a class="code hl_class" href="../../da/d76/a01941.html">Channel</a>(<a class="code hl_class" href="../../df/def/a02369.html">ChannelData</a>&amp;&amp;);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        <a class="code hl_class" href="../../da/d76/a01941.html">Channel</a>&amp; operator=(<a class="code hl_class" href="../../df/def/a02369.html">ChannelData</a>&amp;);</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        <a class="code hl_class" href="../../da/d76/a01941.html">Channel</a>(<a class="code hl_class" href="../../df/def/a02369.html">ChannelData</a>&amp;);</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        <a class="code hl_class" href="../../da/d76/a01941.html">~Channel</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>      <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        <span class="keywordtype">void</span> parseObject(<span class="keyword">const</span> nlohmann::json&amp; jsonObjectData, <a class="code hl_class" href="../../da/d76/a01941.html">Channel</a>* pDataStructure);</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    };</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <span class="keyword">class </span>DiscordCoreAPI_Dll ChannelVector : <span class="keyword">public</span> DataParser&lt;ChannelVector&gt; {</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>      <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        ChannelVector() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        <span class="keyword">operator</span> std::vector&lt;Channel&gt;();</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        ChannelVector&amp; operator=(<span class="keyword">const</span> nlohmann::json&amp; jsonObjectData);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        ChannelVector(<span class="keyword">const</span> nlohmann::json&amp; jsonObjectData);</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        <span class="keyword">virtual</span> ~ChannelVector() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>      <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        std::vector&lt;Channel&gt; theChannels{};</div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        <span class="keyword">static</span> int32_t FileStreamRead(<span class="keywordtype">void</span>* opaque, uint8_t* buf, int32_t);</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        <span class="keywordtype">void</span> run(std::stop_token&amp; stopToken);</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        <span class="keywordtype">void</span> cancelMe();</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    };</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>}<span class="comment">// namespace DiscordCoreAPI</span></div>
-<div class="ttc" id="aa00704_html"><div class="ttname"><a href="../../d4/d6a/a00704.html">EventEntities.hpp</a></div></div>
-<div class="ttc" id="aa00710_html"><div class="ttname"><a href="../../d4/deb/a00710.html">FoundationEntities.hpp</a></div></div>
-<div class="ttc" id="aa02805_html"><div class="ttname"><a href="../../d7/d75/a02805.html">DiscordCoreAPI::RawFrameData</a></div><div class="ttdoc">Represents a single frame of raw audio data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03677">FoundationEntities.hpp:3677</a></div></div>
-<div class="ttc" id="aa03637_html"><div class="ttname"><a href="../../d3/d63/a03637.html">DiscordCoreAPI::UnboundedMessageBlock</a></div><div class="ttdoc">A thread-safe messaging block for data-structures.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dae/a00767_source.html#l00734">Utilities.hpp:734</a></div></div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        <span class="keywordtype">void</span> parseObject(<span class="keyword">const</span> nlohmann::json&amp; jsonObjectData, ChannelVector* pDataStructure);</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    };</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="comment"></span> </div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="comment">    /// For modifying a Channel&#39;s properties. \brief For modifying a Channel&#39;s properties.</span></div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno"><a class="line" href="../../dd/d2e/a01949.html">  200</a></span><span class="comment"></span>    <span class="keyword">struct </span>DiscordCoreAPI_Dll <a class="code hl_struct" href="../../dd/d2e/a01949.html">ModifyChannelData</a> {</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno"><a class="line" href="../../dd/d2e/a01949.html#af37bea4a0f58743bfd36b2c83ceefca4">  201</a></span>        <a class="code hl_struct" href="../../da/d18/a02421.html">UpdateChannelData</a> channelData{};<span class="comment">///&lt; The responseData of the Channel to be updated.</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno"><a class="line" href="../../dd/d2e/a01949.html#ac4b552dfcf3fc7a166359d1eba0e6915">  202</a></span>        <a class="code hl_typedef" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> channelId{};<span class="comment">///&lt; The id of the Channel to modify.</span></div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno"><a class="line" href="../../dd/d2e/a01949.html#a37c86f5fb5b72ff5c247bfccc2cc7b01">  203</a></span>        std::string reason{};<span class="comment">///&lt; A reason for modifying the Channel.</span></div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        <span class="keyword">operator</span> std::string();</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        <a class="code hl_struct" href="../../dd/d2e/a01949.html">ModifyChannelData</a>(<a class="code hl_class" href="../../da/d76/a01941.html">Channel</a> newData);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    };</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="comment"></span> </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="comment">    /**@}*/</span></div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span><span class="comment"></span> </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="comment">    /**</span></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span><span class="comment">     * \addtogroup main_endpoints</span></div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span><span class="comment">     * @{</span></div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span><span class="comment">     */</span><span class="comment"></span></div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span><span class="comment">    /// An interface class for the Channel related endpoints. \brief An interface class for the Channel-related endpoints.</span></div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno"><a class="line" href="../../d9/d97/a01953.html">  217</a></span><span class="comment"></span>    <span class="keyword">class </span>DiscordCoreAPI_Dll <a class="code hl_class" href="../../d9/d97/a01953.html">Channels</a> {</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>      <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="../../dc/d67/a01989.html">DiscordCoreClient</a>;</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>        <span class="keyword">friend</span> <span class="keyword">class </span>EventHandler;</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="../../dc/dc5/a02977.html">Guild</a>;</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> initialize(DiscordCoreInternal::HttpsClient*, ConfigManager* configManager);</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span><span class="comment"></span> </div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="comment">        /// Collects a Channel from the Discord servers. \brief Collects a Channel from the Discord servers.</span></div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span><span class="comment">        /// \param dataPackage A GetChannelData structure.</span></div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span><span class="comment">        /// \returns A CoRoutine containing a Channel.</span></div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span><span class="comment"></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine&lt;Channel&gt;</a> getChannelAsync(<a class="code hl_struct" href="../../d9/d9b/a01889.html">GetChannelData</a> dataPackage);</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span><span class="comment"></span> </div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span><span class="comment">        /// Collects a Channel from the library&#39;s cache. \brief Collects a Channel from the library&#39;s cache.</span></div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span><span class="comment">        /// \param dataPackage A GetChannelData structure.</span></div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span><span class="comment">        /// \returns A CoRoutine containing a Channel.</span></div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span><span class="comment"></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine&lt;ChannelData&gt;</a> getCachedChannelAsync(<a class="code hl_struct" href="../../d9/d9b/a01889.html">GetChannelData</a> dataPackage);</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span><span class="comment"></span> </div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span><span class="comment">        /// Modifies a Channel&#39;s properties. \brief Modifies a Channel&#39;s properties.</span></div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span><span class="comment">        /// \param dataPackage A ModifyChannelData structure.</span></div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span><span class="comment">        /// \returns A CoRoutine containing a Channel.</span></div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span><span class="comment"></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine&lt;Channel&gt;</a> modifyChannelAsync(<a class="code hl_struct" href="../../dd/d2e/a01949.html">ModifyChannelData</a> dataPackage);</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span><span class="comment"></span> </div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span><span class="comment">        /// Delete a Channel, or close a private message. \brief Delete a Channel, or close a private message.</span></div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span><span class="comment">        /// \param dataPackage A DeleteOrCloseChannelData structure.</span></div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span><span class="comment">        /// \returns A CoRoutine containing a Channel.</span></div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span><span class="comment"></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine&lt;void&gt;</a> deleteOrCloseChannelAsync(<a class="code hl_struct" href="../../dd/d80/a01893.html">DeleteOrCloseChannelData</a> dataPackage);</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span><span class="comment"></span> </div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span><span class="comment">        /// Edit the given Permissions overwrites for a given User or Role. \brief Edit the given Permissions overwrites for a given User or Role.</span></div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span><span class="comment">        /// \param dataPackage An EditChannelPermissionOverwritesData structure.</span></div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span><span class="comment">        /// \returns A CoRoutine containing void.</span></div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span><span class="comment"></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine&lt;void&gt;</a> editChannelPermissionOverwritesAsync(<a class="code hl_struct" href="../../d9/d0c/a01897.html">EditChannelPermissionOverwritesData</a> dataPackage);</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span><span class="comment"></span> </div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span><span class="comment">        /// Collects a vector of the invites to a given Channel. \brief Collects a vector of the invites to a given Channel.</span></div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span><span class="comment">        /// \param dataPackage A GetChannelInvitesData structure.</span></div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span><span class="comment">        /// \returns A CoRoutine containing a InviteDataVector.</span></div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span><span class="comment"></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine&lt;std::vector&lt;InviteData&gt;</a>&gt; getChannelInvitesAsync(<a class="code hl_struct" href="../../d5/d99/a01901.html">GetChannelInvitesData</a> dataPackage);</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span><span class="comment"></span> </div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span><span class="comment">        /// Creates an invite to a selected Channel. \brief Creates an invite to a selected Channel.</span></div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span><span class="comment">        /// \param dataPackage A CreateChannelInviteData structure.</span></div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span><span class="comment">        /// \returns A CoRoutine containing an InviteData.</span></div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span><span class="comment"></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine&lt;InviteData&gt;</a> createChannelInviteAsync(<a class="code hl_struct" href="../../d9/d65/a01905.html">CreateChannelInviteData</a> dataPackage);</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span><span class="comment"></span> </div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span><span class="comment">        /// Delete the given Permissions overwrites for a given User or Role. \brief Delete the given Permissions overwrites for a given User or Role.</span></div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span><span class="comment">        /// \param dataPackage A DeleteChannelPermissionOverwritesData structure</span></div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span><span class="comment">        /// \returns A CoRoutine containing void.</span></div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span><span class="comment"></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine&lt;void&gt;</a> deleteChannelPermissionOverwritesAsync(<a class="code hl_struct" href="../../d9/d90/a01909.html">DeleteChannelPermissionOverwritesData</a> dataPackage);</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span><span class="comment"></span> </div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span><span class="comment">        /// Follows a given new Channel with another Channel. \brief Follows a given new Channel with another Channel.</span></div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span><span class="comment">        /// \param dataPackage A FollowNewsChannelData structure.</span></div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span><span class="comment">        /// \returns A CoRoutine containing a Channel.</span></div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span><span class="comment"></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine&lt;Channel&gt;</a> followNewsChannelAsync(<a class="code hl_struct" href="../../d4/d07/a01913.html">FollowNewsChannelData</a> dataPackage);</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span><span class="comment"></span> </div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span><span class="comment">        /// Triggers the typing indicator for the bot in the given Channel. \brief Triggers the typing indicator for the bot in the given Channel.</span></div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span><span class="comment">        /// \param dataPackage A TriggerTypingIndicatorData structure.</span></div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span><span class="comment">        /// \returns A CoRoutine containing void.</span></div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span><span class="comment"></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine&lt;void&gt;</a> triggerTypingIndicatorAsync(<a class="code hl_struct" href="../../d2/d54/a01917.html">TriggerTypingIndicatorData</a> dataPackage);</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span><span class="comment"></span> </div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span><span class="comment">        /// Collects a list of Channels from a chosen Guild. \brief Collects a list of Channels from a chosen Guild.</span></div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span><span class="comment">        /// \param dataPackage A GetGuildChannelsData structure.</span></div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span><span class="comment">        /// \returns A CoRoutine containing a ChannelVector.</span></div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span><span class="comment"></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine&lt;std::vector&lt;Channel&gt;</a>&gt; getGuildChannelsAsync(<a class="code hl_struct" href="../../da/d6c/a01921.html">GetGuildChannelsData</a> dataPackage);</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span><span class="comment"></span> </div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span><span class="comment">        /// Creates a new Channel within a chosen Guild. \brief Creates a new Channel within a chosen Guild.</span></div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span><span class="comment">        /// \param dataPackage A CreateGuildChannelData structure.</span></div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span><span class="comment">        /// \returns A CoRoutine containing a Channel.</span></div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span><span class="comment"></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine&lt;Channel&gt;</a> createGuildChannelAsync(<a class="code hl_struct" href="../../d6/d18/a01925.html">CreateGuildChannelData</a> dataPackage);</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span><span class="comment"></span> </div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span><span class="comment">        /// Re-orders the Channel positions, within a chosen Guild. \brief Re-orders the Channel positions, within a chosen Guild.</span></div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span><span class="comment">        /// \param dataPackage A ModifyGuildChannelPositionsData  structure.</span></div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span><span class="comment">        /// \returns A CoRoutine containing void.</span></div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span><span class="comment"></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine&lt;void&gt;</a> modifyGuildChannelPositionsAsync(<a class="code hl_struct" href="../../dc/da7/a01933.html">ModifyGuildChannelPositionsData</a> dataPackage);</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span><span class="comment"></span> </div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span><span class="comment">        /// Collect a direct-Message Channel between the bot and the User. \brief Collect a direct-Message Channel between the bot and the User.</span></div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span><span class="comment">        /// \param dataPackage A CreateDMChannelData structure.</span></div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span><span class="comment">        /// \returns A CoRoutine containing a Channel.</span></div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span><span class="comment"></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine&lt;Channel&gt;</a> createDMChannelAsync(<a class="code hl_struct" href="../../d9/d17/a01937.html">CreateDMChannelData</a> dataPackage);</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span><span class="comment"></span> </div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span><span class="comment">        /// Collect a list of voice regions that are usable for the RTC-Region option of a given Channel.</span></div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span><span class="comment">        /// \brief Collect a list of voice regions that are usable for the RTC-Region option of a given Channel.</span></div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span><span class="comment">        /// \returns A CoRoutine containing a VoiceRegionDataVector.</span></div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span><span class="comment"></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine&lt;std::vector&lt;VoiceRegionData&gt;</a>&gt; getVoiceRegionsAsync();</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> </div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> insertChannel(<a class="code hl_class" href="../../df/def/a02369.html">ChannelData</a> dataPackage);</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span> </div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> removeChannel(<span class="keyword">const</span> uint64_t&amp; channelId);</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span> </div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>      <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>        <span class="keyword">static</span> std::unique_ptr&lt;std::unordered_map&lt;Snowflake, std::unique_ptr&lt;ChannelData&gt;&gt;&gt; cache;</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>        <span class="keyword">static</span> DiscordCoreInternal::HttpsClient* httpsClient;</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>        <span class="keyword">static</span> ConfigManager* configManager;</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>        <span class="keyword">static</span> std::shared_mutex theMutex;</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>    };<span class="comment"></span></div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span><span class="comment">    /**@}*/</span></div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>}<span class="comment">// namespace DiscordCoreAPI</span></div>
+<div class="ttc" id="aa00686_html"><div class="ttname"><a href="../../df/d9e/a00686.html">Https.hpp</a></div></div>
+<div class="ttc" id="aa00722_html"><div class="ttname"><a href="../../db/d7c/a00722.html">FoundationEntities.hpp</a></div></div>
+<div class="ttc" id="aa00888_html_ga386b8a65a1195bd1bc61b75a7f308ffa"><div class="ttname"><a href="../../dd/d94/a00888.html#ga386b8a65a1195bd1bc61b75a7f308ffa">DiscordCoreAPI::ChannelType</a></div><div class="ttdeci">ChannelType</div><div class="ttdoc">Channel types.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d7c/a00722_source.html#l00708">FoundationEntities.hpp:708</a></div></div>
+<div class="ttc" id="aa00888_html_gab0706e58604685b3231829069ebd95ae"><div class="ttname"><a href="../../dd/d94/a00888.html#gab0706e58604685b3231829069ebd95ae">DiscordCoreAPI::PermissionOverwritesType</a></div><div class="ttdeci">PermissionOverwritesType</div><div class="ttdoc">Permission overwrites types.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d7c/a00722_source.html#l00864">FoundationEntities.hpp:864</a></div></div>
+<div class="ttc" id="aa00888_html_gabeb353982ff7e75352fc30c8543641ef"><div class="ttname"><a href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">DiscordCoreAPI::Snowflake</a></div><div class="ttdeci">uint64_t Snowflake</div><div class="ttdoc">For ids of DiscordEntities.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d7c/a00722_source.html#l00324">FoundationEntities.hpp:324</a></div></div>
+<div class="ttc" id="aa00888_html_gaf1597fc8422339d53a1ebade14316dc1"><div class="ttname"><a href="../../dd/d94/a00888.html#gaf1597fc8422339d53a1ebade14316dc1">DiscordCoreAPI::InviteTargetTypes</a></div><div class="ttdeci">InviteTargetTypes</div><div class="ttdoc">Invite target types.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d7c/a00722_source.html#l02337">FoundationEntities.hpp:2337</a></div></div>
+<div class="ttc" id="aa00890_html"><div class="ttname"><a href="../../d7/d46/a00890.html">DiscordCoreAPI</a></div><div class="ttdoc">The main namespace for this library.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db9/a00725_source.html#l00025">ApplicationCommandEntities.hpp:25</a></div></div>
+<div class="ttc" id="aa01889_html"><div class="ttname"><a href="../../d9/d9b/a01889.html">DiscordCoreAPI::GetChannelData</a></div><div class="ttdoc">For collecting a Channel from Discord's servers.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d9b/a00680_source.html#l00033">ChannelEntities.hpp:33</a></div></div>
+<div class="ttc" id="aa01893_html"><div class="ttname"><a href="../../dd/d80/a01893.html">DiscordCoreAPI::DeleteOrCloseChannelData</a></div><div class="ttdoc">For deleting or closing a Channel.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d9b/a00680_source.html#l00038">ChannelEntities.hpp:38</a></div></div>
+<div class="ttc" id="aa01897_html"><div class="ttname"><a href="../../d9/d0c/a01897.html">DiscordCoreAPI::EditChannelPermissionOverwritesData</a></div><div class="ttdoc">For editing the Permission overwrites of a given Channel, for a given Role or User.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d9b/a00680_source.html#l00044">ChannelEntities.hpp:44</a></div></div>
+<div class="ttc" id="aa01901_html"><div class="ttname"><a href="../../d5/d99/a01901.html">DiscordCoreAPI::GetChannelInvitesData</a></div><div class="ttdoc">For collecting the invites to a given Channel.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d9b/a00680_source.html#l00056">ChannelEntities.hpp:56</a></div></div>
+<div class="ttc" id="aa01905_html"><div class="ttname"><a href="../../d9/d65/a01905.html">DiscordCoreAPI::CreateChannelInviteData</a></div><div class="ttdoc">For creating an invite to a given Channel.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d9b/a00680_source.html#l00061">ChannelEntities.hpp:61</a></div></div>
+<div class="ttc" id="aa01909_html"><div class="ttname"><a href="../../d9/d90/a01909.html">DiscordCoreAPI::DeleteChannelPermissionOverwritesData</a></div><div class="ttdoc">For deleting the Permission overwrites of a given Channel for a given Role or User.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d9b/a00680_source.html#l00076">ChannelEntities.hpp:76</a></div></div>
+<div class="ttc" id="aa01913_html"><div class="ttname"><a href="../../d4/d07/a01913.html">DiscordCoreAPI::FollowNewsChannelData</a></div><div class="ttdoc">For following a news Channel.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d9b/a00680_source.html#l00083">ChannelEntities.hpp:83</a></div></div>
+<div class="ttc" id="aa01917_html"><div class="ttname"><a href="../../d2/d54/a01917.html">DiscordCoreAPI::TriggerTypingIndicatorData</a></div><div class="ttdoc">For triggering the typing indicator in a given Channel.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d9b/a00680_source.html#l00091">ChannelEntities.hpp:91</a></div></div>
+<div class="ttc" id="aa01921_html"><div class="ttname"><a href="../../da/d6c/a01921.html">DiscordCoreAPI::GetGuildChannelsData</a></div><div class="ttdoc">For acquiring a list of Channels from a chosen Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d9b/a00680_source.html#l00096">ChannelEntities.hpp:96</a></div></div>
+<div class="ttc" id="aa01925_html"><div class="ttname"><a href="../../d6/d18/a01925.html">DiscordCoreAPI::CreateGuildChannelData</a></div><div class="ttdoc">For creating a new Channel within a chosen Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d9b/a00680_source.html#l00101">ChannelEntities.hpp:101</a></div></div>
+<div class="ttc" id="aa01929_html"><div class="ttname"><a href="../../dc/dc8/a01929.html">DiscordCoreAPI::ModifyGuildChannelPositionData</a></div><div class="ttdoc">For modifying the Channel position responseData of a single Channel.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d9b/a00680_source.html#l00120">ChannelEntities.hpp:120</a></div></div>
+<div class="ttc" id="aa01933_html"><div class="ttname"><a href="../../dc/da7/a01933.html">DiscordCoreAPI::ModifyGuildChannelPositionsData</a></div><div class="ttdoc">For modifying the current positions of one or more Channels in the Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d9b/a00680_source.html#l00128">ChannelEntities.hpp:128</a></div></div>
+<div class="ttc" id="aa01937_html"><div class="ttname"><a href="../../d9/d17/a01937.html">DiscordCoreAPI::CreateDMChannelData</a></div><div class="ttdoc">For collecting a direct-messaging Channel.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d9b/a00680_source.html#l00137">ChannelEntities.hpp:137</a></div></div>
+<div class="ttc" id="aa01941_html"><div class="ttname"><a href="../../da/d76/a01941.html">DiscordCoreAPI::Channel</a></div><div class="ttdoc">A Channel object.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d9b/a00680_source.html#l00142">ChannelEntities.hpp:142</a></div></div>
+<div class="ttc" id="aa01949_html"><div class="ttname"><a href="../../dd/d2e/a01949.html">DiscordCoreAPI::ModifyChannelData</a></div><div class="ttdoc">For modifying a Channel's properties.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d9b/a00680_source.html#l00200">ChannelEntities.hpp:200</a></div></div>
+<div class="ttc" id="aa01953_html"><div class="ttname"><a href="../../d9/d97/a01953.html">DiscordCoreAPI::Channels</a></div><div class="ttdoc">An interface class for the Channel related endpoints.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d9b/a00680_source.html#l00217">ChannelEntities.hpp:217</a></div></div>
+<div class="ttc" id="aa01969_html"><div class="ttname"><a href="../../db/d49/a01969.html">DiscordCoreAPI::CoRoutine</a></div><div class="ttdoc">A CoRoutine - representing a potentially asynchronous operation/function.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d2c/a00764_source.html#l00052">CoRoutine.hpp:52</a></div></div>
+<div class="ttc" id="aa01989_html"><div class="ttname"><a href="../../dc/d67/a01989.html">DiscordCoreAPI::DiscordCoreClient</a></div><div class="ttdoc">DiscordCoreClient - The main class for this library.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d56/a00707_source.html#l00075">DiscordCoreClient.hpp:75</a></div></div>
+<div class="ttc" id="aa02341_html"><div class="ttname"><a href="../../d4/dfb/a02341.html">DiscordCoreAPI::ThreadMetadataData</a></div><div class="ttdoc">Meta data for a Thread type of Channel.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d7c/a00722_source.html#l00725">FoundationEntities.hpp:725</a></div></div>
+<div class="ttc" id="aa02345_html"><div class="ttname"><a href="../../dc/d0a/a02345.html">DiscordCoreAPI::ThreadMemberData</a></div><div class="ttdoc">Data for a single member of a Thread.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d7c/a00722_source.html#l00745">FoundationEntities.hpp:745</a></div></div>
+<div class="ttc" id="aa02369_html"><div class="ttname"><a href="../../df/def/a02369.html">DiscordCoreAPI::ChannelData</a></div><div class="ttdoc">Data structure representing a single Channel.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d7c/a00722_source.html#l00892">FoundationEntities.hpp:892</a></div></div>
+<div class="ttc" id="aa02421_html"><div class="ttname"><a href="../../da/d18/a02421.html">DiscordCoreAPI::UpdateChannelData</a></div><div class="ttdoc">For updating/modifying a given Channel's properties.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d7c/a00722_source.html#l01196">FoundationEntities.hpp:1196</a></div></div>
+<div class="ttc" id="aa02977_html"><div class="ttname"><a href="../../dc/dc5/a02977.html">DiscordCoreAPI::Guild</a></div><div class="ttdoc">A discord Guild. Used to connect to/disconnect from voice.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5b/a00695_source.html#l00262">GuildEntities.hpp:262</a></div></div>
+<div class="ttc" id="aa03629_html"><div class="ttname"><a href="../../d8/d33/a03629.html">DiscordCoreAPI::TimeStamp</a></div><div class="ttdoc">Class for representing a timestamp, as well as working with time-related values.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d87/a00689_source.html#l00460">Utilities.hpp:460</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_856524284ebe840938865dc061f982fb.html">Include</a></li><li class="navelem"><a class="el" href="../../dir_9b16bdde4f6a21e020962bfdb0aa5092.html">discordcoreapi</a></li><li class="navelem"><a class="el" href="../../d4/d9b/a00680.html">AudioDecoder.hpp</a></li>
+    <li class="navelem"><a class="el" href="../../dir_856524284ebe840938865dc061f982fb.html">Include</a></li><li class="navelem"><a class="el" href="../../dir_9b16bdde4f6a21e020962bfdb0aa5092.html">discordcoreapi</a></li><li class="navelem"><a class="el" href="../../d4/d9b/a00680.html">ChannelEntities.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
