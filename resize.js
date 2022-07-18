@@ -61,9 +61,6 @@ function initResizable()
     var windowWidth = $(window).width() + "px";
     var sidenavWidth = $(sidenav).outerWidth();
     content.css({marginLeft:parseInt(sidenavWidth)+"px"});
-    if (typeof page_layout!=='undefined' && page_layout==1) {
-      footer.css({marginLeft:parseInt(sidenavWidth)+"px"});
-    }
     writeCookie('width',sidenavWidth-barWidth, null);
   }
 
@@ -71,9 +68,6 @@ function initResizable()
   {
     var windowWidth = $(window).width() + "px";
     content.css({marginLeft:parseInt(navWidth)+barWidth+"px"});
-    if (typeof page_layout!=='undefined' && page_layout==1) {
-      footer.css({marginLeft:parseInt(navWidth)+barWidth+"px"});
-    }
     sidenav.css({width:navWidth + "px"});
   }
 
