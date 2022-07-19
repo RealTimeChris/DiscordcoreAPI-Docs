@@ -105,21 +105,21 @@ $(document).ready(function(){initNavTree('d1/d04/a00713.html','../../'); initRes
   <div class="summary">
 <a href="#nested-classes">Classes and Structures</a> &#124;
 <a href="#namespaces">Namespaces</a>  </div>
-  <div class="headertitle"><div class="title">ChannelEntities.hpp File Reference</div></div>
+  <div class="headertitle"><div class="title">WebHookEntities.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="../../d3/d2c/a00764_source.html">discordcoreapi/FoundationEntities.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="../../d4/d6a/a00704_source.html">discordcoreapi/Https.hpp</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="../../db/d7c/a00722_source.html">discordcoreapi/FoundationEntities.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../df/dbb/a00698_source.html">discordcoreapi/MessageEntities.hpp</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for ChannelEntities.hpp:</div>
+Include dependency graph for WebHookEntities.hpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/d96/a00714.svg" width="3087" height="491"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/d96/a00714.svg" width="3112" height="564"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d3/d3b/a00715.svg" width="2248" height="403"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d3/d3b/a00715.svg" width="1983" height="403"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -127,53 +127,50 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes and Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d76/a01941.html">DiscordCoreAPI::Channel</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="../../da/d76/a01941.html" title="A Channel object.">Channel</a> object.  <a href="../../da/d76/a01941.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0b/a03653.html">DiscordCoreAPI::CreateWebHookData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For creating a new <a class="el" href="../../d2/d47/a03705.html" title="A single WebHook.">WebHook</a>.  <a href="../../dc/d0b/a03653.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d97/a01953.html">DiscordCoreAPI::Channels</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An interface class for the <a class="el" href="../../da/d76/a01941.html" title="A Channel object.">Channel</a> related endpoints.  <a href="../../d9/d97/a01953.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d4a/a03689.html">DiscordCoreAPI::DeleteWebHookData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For deleting a <a class="el" href="../../d2/d47/a03705.html" title="A single WebHook.">WebHook</a>.  <a href="../../d3/d4a/a03689.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d65/a01905.html">DiscordCoreAPI::CreateChannelInviteData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For creating an invite to a given <a class="el" href="../../da/d76/a01941.html" title="A Channel object.">Channel</a>.  <a href="../../d9/d65/a01905.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/df9/a03701.html">DiscordCoreAPI::DeleteWebHookMessageData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For deleting a <a class="el" href="../../d2/d47/a03705.html" title="A single WebHook.">WebHook</a> <a class="el" href="../../d5/da4/a03225.html" title="A single Message.">Message</a>.  <a href="../../d4/df9/a03701.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d17/a01937.html">DiscordCoreAPI::CreateDMChannelData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For collecting a direct-messaging <a class="el" href="../../da/d76/a01941.html" title="A Channel object.">Channel</a>.  <a href="../../d9/d17/a01937.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/ddd/a03693.html">DiscordCoreAPI::DeleteWebHookWithTokenData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For deleting a <a class="el" href="../../d2/d47/a03705.html" title="A single WebHook.">WebHook</a>, using its Token.  <a href="../../d1/ddd/a03693.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d18/a01925.html">DiscordCoreAPI::CreateGuildChannelData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For creating a new <a class="el" href="../../da/d76/a01941.html" title="A Channel object.">Channel</a> within a chosen <a class="el" href="../../dc/dc5/a02977.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>.  <a href="../../d6/d18/a01925.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dce/a03661.html">DiscordCoreAPI::EditWebHookData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For editing a <a class="el" href="../../d2/d47/a03705.html" title="A single WebHook.">WebHook</a> <a class="el" href="../../d5/da4/a03225.html" title="A single Message.">Message</a>.  <a href="../../d9/dce/a03661.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d90/a01909.html">DiscordCoreAPI::DeleteChannelPermissionOverwritesData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For deleting the Permission overwrites of a given <a class="el" href="../../da/d76/a01941.html" title="A Channel object.">Channel</a> for a given <a class="el" href="../../d3/d55/a03341.html" title="A single Role.">Role</a> or <a class="el" href="../../da/df8/a03577.html" title="A single User.">User</a>.  <a href="../../d9/d90/a01909.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d01/a03657.html">DiscordCoreAPI::ExecuteWebHookData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For executing a <a class="el" href="../../d2/d47/a03705.html" title="A single WebHook.">WebHook</a>.  <a href="../../d1/d01/a03657.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d80/a01893.html">DiscordCoreAPI::DeleteOrCloseChannelData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For deleting or closing a <a class="el" href="../../da/d76/a01941.html" title="A Channel object.">Channel</a>.  <a href="../../dd/d80/a01893.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/df9/a03665.html">DiscordCoreAPI::GetChannelWebHooksData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For collecting a list of <a class="el" href="../../dd/df6/a03713.html" title="An interface class for the WebHook related Discord endpoints.">WebHooks</a> from a chosen <a class="el" href="../../da/d76/a01941.html" title="A Channel object.">Channel</a>.  <a href="../../d1/df9/a03665.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d0c/a01897.html">DiscordCoreAPI::EditChannelPermissionOverwritesData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For editing the Permission overwrites of a given <a class="el" href="../../da/d76/a01941.html" title="A Channel object.">Channel</a>, for a given <a class="el" href="../../d3/d55/a03341.html" title="A single Role.">Role</a> or <a class="el" href="../../da/df8/a03577.html" title="A single User.">User</a>.  <a href="../../d9/d0c/a01897.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d83/a03669.html">DiscordCoreAPI::GetGuildWebHooksData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For collecting a list of <a class="el" href="../../dd/df6/a03713.html" title="An interface class for the WebHook related Discord endpoints.">WebHooks</a> from a chosen <a class="el" href="../../dc/dc5/a02977.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>.  <a href="../../d1/d83/a03669.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d07/a01913.html">DiscordCoreAPI::FollowNewsChannelData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For following a news <a class="el" href="../../da/d76/a01941.html" title="A Channel object.">Channel</a>.  <a href="../../d4/d07/a01913.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/da3/a03673.html">DiscordCoreAPI::GetWebHookData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collects a single <a class="el" href="../../d2/d47/a03705.html" title="A single WebHook.">WebHook</a>.  <a href="../../d9/da3/a03673.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d9b/a01889.html">DiscordCoreAPI::GetChannelData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For collecting a <a class="el" href="../../da/d76/a01941.html" title="A Channel object.">Channel</a> from Discord's servers.  <a href="../../d9/d9b/a01889.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d0f/a03697.html">DiscordCoreAPI::GetWebHookMessageData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For getting a <a class="el" href="../../d2/d47/a03705.html" title="A single WebHook.">WebHook</a> <a class="el" href="../../d5/da4/a03225.html" title="A single Message.">Message</a>.  <a href="../../d0/d0f/a03697.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d99/a01901.html">DiscordCoreAPI::GetChannelInvitesData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For collecting the invites to a given <a class="el" href="../../da/d76/a01941.html" title="A Channel object.">Channel</a>.  <a href="../../d5/d99/a01901.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d78/a03677.html">DiscordCoreAPI::GetWebHookWithTokenData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collects a single <a class="el" href="../../d2/d47/a03705.html" title="A single WebHook.">WebHook</a>, using the Token and Id.  <a href="../../d4/d78/a03677.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d6c/a01921.html">DiscordCoreAPI::GetGuildChannelsData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For acquiring a list of <a class="el" href="../../d9/d97/a01953.html" title="An interface class for the Channel related endpoints.">Channels</a> from a chosen <a class="el" href="../../dc/dc5/a02977.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>.  <a href="../../da/d6c/a01921.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d40/a03681.html">DiscordCoreAPI::ModifyWebHookData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For modifying a <a class="el" href="../../d2/d47/a03705.html" title="A single WebHook.">WebHook</a>.  <a href="../../d7/d40/a03681.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2e/a01949.html">DiscordCoreAPI::ModifyChannelData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For modifying a <a class="el" href="../../da/d76/a01941.html" title="A Channel object.">Channel</a>'s properties.  <a href="../../dd/d2e/a01949.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/da8/a03685.html">DiscordCoreAPI::ModifyWebHookWithTokenData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For modifying a <a class="el" href="../../d2/d47/a03705.html" title="A single WebHook.">WebHook</a>.  <a href="../../da/da8/a03685.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dc8/a01929.html">DiscordCoreAPI::ModifyGuildChannelPositionData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For modifying the <a class="el" href="../../da/d76/a01941.html" title="A Channel object.">Channel</a> position responseData of a single <a class="el" href="../../da/d76/a01941.html" title="A Channel object.">Channel</a>.  <a href="../../dc/dc8/a01929.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d47/a03705.html">DiscordCoreAPI::WebHook</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A single <a class="el" href="../../d2/d47/a03705.html" title="A single WebHook.">WebHook</a>.  <a href="../../d2/d47/a03705.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da7/a01933.html">DiscordCoreAPI::ModifyGuildChannelPositionsData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For modifying the current positions of one or more <a class="el" href="../../d9/d97/a01953.html" title="An interface class for the Channel related endpoints.">Channels</a> in the <a class="el" href="../../dc/dc5/a02977.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>.  <a href="../../dc/da7/a01933.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d54/a01917.html">DiscordCoreAPI::TriggerTypingIndicatorData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For triggering the typing indicator in a given <a class="el" href="../../da/d76/a01941.html" title="A Channel object.">Channel</a>.  <a href="../../d2/d54/a01917.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/df6/a03713.html">DiscordCoreAPI::WebHooks</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An interface class for the <a class="el" href="../../d2/d47/a03705.html" title="A single WebHook.">WebHook</a> related Discord endpoints.  <a href="../../dd/df6/a03713.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
@@ -188,7 +185,7 @@ Namespaces</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_856524284ebe840938865dc061f982fb.html">Include</a></li><li class="navelem"><a class="el" href="../../dir_9b16bdde4f6a21e020962bfdb0aa5092.html">discordcoreapi</a></li><li class="navelem"><a class="el" href="../../d1/d04/a00713.html">ChannelEntities.hpp</a></li>
+    <li class="navelem"><a class="el" href="../../dir_856524284ebe840938865dc061f982fb.html">Include</a></li><li class="navelem"><a class="el" href="../../dir_9b16bdde4f6a21e020962bfdb0aa5092.html">discordcoreapi</a></li><li class="navelem"><a class="el" href="../../d1/d04/a00713.html">WebHookEntities.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

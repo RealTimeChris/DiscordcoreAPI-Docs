@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['rate_5flimited_0',['Rate_Limited',['../d8/db9/a00725.html#a3416d66a838a63dc0df704fce23b6971aa42320bff0ecf00ae4af1cb62310398a',1,'DiscordCoreInternal']]],
+  ['rate_5flimited_0',['Rate_Limited',['../d1/d87/a00689.html#a3416d66a838a63dc0df704fce23b6971aa42320bff0ecf00ae4af1cb62310398a',1,'DiscordCoreInternal']]],
   ['rawpcm_1',['RawPCM',['../db/d18/a00885.html#ggacf6f4590968be95774b156cf050c996ca5e4428fdbbb1ef8971739c61d8662c5a',1,'DiscordCoreAPI']]],
   ['read_5fmessage_5fhistory_2',['Read_Message_History',['../dd/d94/a00888.html#ggabf76b7b06351e7fc14b8c72f9aa2c15fa845e83843425b636f5d6e6d881e10c01',1,'DiscordCoreAPI']]],
   ['recipient_5fadd_3',['Recipient_Add',['../dd/d94/a00888.html#gga4d6799439c0ec1d43d07d64effe58b0ea63ea5c833506efdbd3aa2a856d65a842',1,'DiscordCoreAPI']]],
