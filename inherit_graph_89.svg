@@ -753,7 +753,7 @@
 <!-- Node48 -->
 <g id="node49" class="node">
 <title>Node48</title>
-<g id="a_node49"><a xlink:href="da/df8/a03577.html" target="_top" xlink:title="A single User.">
+<g id="a_node49"><a xlink:href="de/d29/a03573.html" target="_top" xlink:title="A single User.">
 <polygon fill="none" stroke="black" points="610.5,-56 490.5,-56 490.5,-37 610.5,-37 610.5,-56"/>
 <text text-anchor="middle" x="550.5" y="-44" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::User</text>
 </a>
@@ -768,7 +768,7 @@
 <!-- Node49 -->
 <g id="node50" class="node">
 <title>Node49</title>
-<g id="a_node50"><a xlink:href="d0/d92/a03585.html" target="_top" xlink:title="A type of User, to represent the Bot and some of its associated endpoints.">
+<g id="a_node50"><a xlink:href="da/d3e/a03581.html" target="_top" xlink:title="A type of User, to represent the Bot and some of its associated endpoints.">
 <polygon fill="none" stroke="black" points="824,-56 687,-56 687,-37 824,-37 824,-56"/>
 <text text-anchor="middle" x="755.5" y="-44" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::BotUser</text>
 </a>

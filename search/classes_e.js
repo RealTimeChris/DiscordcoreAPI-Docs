@@ -9,7 +9,7 @@ var searchData=
   ['removeguildmemberdata_6',['RemoveGuildMemberData',['../dd/dfd/a03017.html',1,'DiscordCoreAPI']]],
   ['removeguildmemberroledata_7',['RemoveGuildMemberRoleData',['../d3/d34/a03305.html',1,'DiscordCoreAPI']]],
   ['removeguildroledata_8',['RemoveGuildRoleData',['../d8/d5d/a03329.html',1,'DiscordCoreAPI']]],
-  ['removerecipientfromgroupdmdata_9',['RemoveRecipientFromGroupDMData',['../d0/d20/a03557.html',1,'DiscordCoreAPI']]],
+  ['removerecipientfromgroupdmdata_9',['RemoveRecipientFromGroupDMData',['../d1/da6/a03553.html',1,'DiscordCoreAPI']]],
   ['removethreadmemberdata_10',['RemoveThreadMemberData',['../d6/d04/a03493.html',1,'DiscordCoreAPI']]],
   ['repeatedfunctiondata_11',['RepeatedFunctionData',['../d6/d8c/a03601.html',1,'DiscordCoreAPI']]],
   ['resolveddata_12',['ResolvedData',['../df/d50/a02725.html',1,'DiscordCoreAPI']]],

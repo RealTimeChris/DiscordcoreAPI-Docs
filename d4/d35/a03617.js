@@ -6,6 +6,7 @@ var a03617 =
     [ "connectionPort", "d4/d35/a03617.html#ad84143b5c2fc078c2e1cb840e82a5961", null ],
     [ "functionsToExecute", "d4/d35/a03617.html#a1bde3b3135b440c0605fa7a6c5142350", null ],
     [ "logOptions", "d4/d35/a03617.html#aa80164422e50651e607603948fe2e9af", null ],
+    [ "presenceData", "d4/d35/a03617.html#a8bdf8fb0a24083a5722e1190f40e55ca", null ],
     [ "shardOptions", "d4/d35/a03617.html#aea6396ced1c7d3143b9192ceeabd3508", null ],
     [ "textFormat", "d4/d35/a03617.html#a786a94b9809b2868d6c147f3194368cb", null ],
     [ "theIntents", "d4/d35/a03617.html#a27a22bde223bedf7cfc2860915b48b08", null ]

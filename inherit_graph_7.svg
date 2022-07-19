@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d1/da6/a03553.html" target="_top" xlink:title="For adding a user to a group Dm.">
+<g id="a_node1"><a xlink:href="db/d72/a03549.html" target="_top" xlink:title="For adding a user to a group Dm.">
 <polygon fill="none" stroke="black" points="162,-30 0,-30 0,0 162,0 162,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::AddRecipient</text>
 <text text-anchor="middle" x="81" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">ToGroupDMData</text>

@@ -11,10 +11,10 @@ var searchData=
   ['unboundedmessageblock_3c_20voiceconnectiondata_20_3e_8',['UnboundedMessageBlock&lt; VoiceConnectionData &gt;',['../d3/d63/a03637.html',1,'DiscordCoreAPI']]],
   ['unpinmessagedata_9',['UnpinMessageData',['../d1/da3/a03221.html',1,'DiscordCoreAPI']]],
   ['updatechanneldata_10',['UpdateChannelData',['../da/d18/a02421.html',1,'DiscordCoreAPI']]],
-  ['updatepresencedata_11',['UpdatePresenceData',['../db/d72/a03549.html',1,'DiscordCoreAPI']]],
+  ['updatepresencedata_11',['UpdatePresenceData',['../d1/d3c/a03589.html',1,'DiscordCoreInternal']]],
   ['updatevoicestatedata_12',['UpdateVoiceStateData',['../d3/d27/a02453.html',1,'DiscordCoreAPI']]],
-  ['user_13',['User',['../da/df8/a03577.html',1,'DiscordCoreAPI']]],
+  ['user_13',['User',['../de/d29/a03573.html',1,'DiscordCoreAPI']]],
   ['usercommandinteractiondata_14',['UserCommandInteractionData',['../d9/dfe/a02649.html',1,'DiscordCoreAPI']]],
   ['userdata_15',['UserData',['../dd/dc5/a02293.html',1,'DiscordCoreAPI']]],
-  ['users_16',['Users',['../d1/d3c/a03589.html',1,'DiscordCoreAPI']]]
+  ['users_16',['Users',['../d0/d92/a03585.html',1,'DiscordCoreAPI']]]
 ];

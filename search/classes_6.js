@@ -57,7 +57,7 @@ var searchData=
   ['getstickerdata_54',['GetStickerData',['../d5/d56/a03437.html',1,'DiscordCoreAPI']]],
   ['getthreadmemberdata_55',['GetThreadMemberData',['../dc/d8f/a03497.html',1,'DiscordCoreAPI']]],
   ['getthreadmembersdata_56',['GetThreadMembersData',['../d8/dbb/a03501.html',1,'DiscordCoreAPI']]],
-  ['getuserdata_57',['GetUserData',['../dd/d87/a03569.html',1,'DiscordCoreAPI']]],
+  ['getuserdata_57',['GetUserData',['../de/d5d/a03565.html',1,'DiscordCoreAPI']]],
   ['getwebhookdata_58',['GetWebHookData',['../d9/da3/a03673.html',1,'DiscordCoreAPI']]],
   ['getwebhookmessagedata_59',['GetWebHookMessageData',['../d0/d0f/a03697.html',1,'DiscordCoreAPI']]],
   ['getwebhookwithtokendata_60',['GetWebHookWithTokenData',['../d4/d78/a03677.html',1,'DiscordCoreAPI']]],

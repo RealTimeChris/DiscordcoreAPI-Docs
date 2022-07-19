@@ -3,6 +3,7 @@ var a00710 =
     [ "DiscordCoreAPI::CacheOptions", "d6/de0/a03613.html", "d6/de0/a03613" ],
     [ "DiscordCoreAPI::DiscordCoreClientConfig", "d4/d35/a03617.html", "d4/d35/a03617" ],
     [ "DiscordCoreAPI::LoggingOptions", "d8/d13/a03609.html", "d8/d13/a03609" ],
+    [ "DiscordCoreInternal::UpdatePresenceData", "d1/d3c/a03589.html", "d1/d3c/a03589" ],
     [ "GatewayIntents", "d4/deb/a00710.html#ga4703fe910d1719c0a0bef34e9b7500e3", [
       [ "Guilds", "d4/deb/a00710.html#gga4703fe910d1719c0a0bef34e9b7500e3ac5514110f8f4e8873da17c6c2b7b2b8e", null ],
       [ "Guild_Members", "d4/deb/a00710.html#gga4703fe910d1719c0a0bef34e9b7500e3af317825fad018118ad319336c01c130d", null ],

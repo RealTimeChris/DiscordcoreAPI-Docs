@@ -25,7 +25,7 @@ var searchData=
   ['listing_20auto_2dmoderation_2drules_22',['Listing Auto-Moderation-Rules',['../de/ddd/a07085.html',1,'automoderationrulestuff']]],
   ['listing_20guild_20members_23',['Listing Guild Members',['../d5/d75/a07175.html',1,'guildmemberstuff']]],
   ['loading_24',['Loading',['../dd/d94/a00888.html#gga59de4f3c2326235571e5b4c135f574eda16bfbf9c462762cf1cba4134ec53c504',1,'DiscordCoreAPI']]],
-  ['locale_25',['locale',['../d9/da5/a02757.html#acc31349b6fb3a7c487d48909c15ed147',1,'DiscordCoreAPI::InteractionData::locale()'],['../da/df8/a03577.html#a56fd6aed59c14412d56cc265ffb21644',1,'DiscordCoreAPI::User::locale()']]],
+  ['locale_25',['locale',['../d9/da5/a02757.html#acc31349b6fb3a7c487d48909c15ed147',1,'DiscordCoreAPI::InteractionData::locale()'],['../de/d29/a03573.html#a56fd6aed59c14412d56cc265ffb21644',1,'DiscordCoreAPI::User::locale()']]],
   ['locked_26',['locked',['../d4/dfb/a02341.html#adeff39689c4f8bd8bc3b73d71ea571ef',1,'DiscordCoreAPI::ThreadMetadataData']]],
   ['lockpermissions_27',['lockPermissions',['../dc/dc8/a01929.html#a762eb3049e777960c5b2e88e193e7fba',1,'DiscordCoreAPI::ModifyGuildChannelPositionData']]],
   ['logffmpegerrormessages_28',['logFFMPEGErrorMessages',['../d8/d13/a03609.html#adbdf07149ca05113d5658114e4d5aee2',1,'DiscordCoreAPI::LoggingOptions']]],
