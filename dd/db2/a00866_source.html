@@ -580,7 +580,7 @@ $(document).ready(function(){initNavTree('dd/db2/a00866_source.html','../../'); 
 <div class="line"><a id="l00473" name="l00473"></a><span class="lineno">  473</span>        HttpsResponseData theData{};</div>
 <div class="line"><a id="l00474" name="l00474"></a><span class="lineno">  474</span>        <span class="keywordtype">bool</span> haveWeCollectedSize{ <span class="keyword">false</span> };</div>
 <div class="line"><a id="l00475" name="l00475"></a><span class="lineno">  475</span>        <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
-<div class="line"><a id="l00476" name="l00476"></a><span class="lineno">  476</span>            <span class="keyword">auto</span> theResult = theConnection.processIO(1000000);</div>
+<div class="line"><a id="l00476" name="l00476"></a><span class="lineno">  476</span>            <span class="keyword">auto</span> theResult = theConnection.processIO(10000);</div>
 <div class="line"><a id="l00477" name="l00477"></a><span class="lineno">  477</span>            <span class="keywordflow">if</span> (theResult == ProcessIOResult::Disconnect) {</div>
 <div class="line"><a id="l00478" name="l00478"></a><span class="lineno">  478</span>                <span class="keywordflow">return</span> theData;</div>
 <div class="line"><a id="l00479" name="l00479"></a><span class="lineno">  479</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (theResult == ProcessIOResult::Reconnect) {</div>
