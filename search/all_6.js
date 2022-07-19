@@ -20,8 +20,8 @@ var searchData=
   ['formattype_17',['formatType',['../dd/d98/a02557.html#aa0bf897b5455e4e5b9933f9aeb126fd7',1,'DiscordCoreAPI::StickerData::formatType()'],['../dc/d1d/a02713.html#aafe15360328f7017e44fc35960e528b8',1,'DiscordCoreAPI::StickerItemData::formatType()']]],
   ['forumthreadmessagedata_18',['ForumThreadMessageData',['../d6/d8f/a02709.html',1,'DiscordCoreAPI']]],
   ['foundation_20entities_19',['Foundation Entities',['../dd/d94/a00888.html',1,'']]],
-  ['foundationentities_2ecpp_20',['FoundationEntities.cpp',['../d5/d72/a00803.html',1,'']]],
-  ['foundationentities_2ehpp_21',['FoundationEntities.hpp',['../d3/d2c/a00764.html',1,'']]],
+  ['foundationentities_2ecpp_20',['FoundationEntities.cpp',['../d6/d2f/a00854.html',1,'']]],
+  ['foundationentities_2ehpp_21',['FoundationEntities.hpp',['../d1/d87/a00689.html',1,'']]],
   ['friendsync_22',['friendSync',['../dc/de8/a02737.html#a38746665c0b34bc922fce3e24dcbc6f1',1,'DiscordCoreAPI::ConnectionData']]],
   ['function_23',['function',['../d6/d8c/a03601.html#ab3113ed967aef68dc02622fcc8d1a8a1',1,'DiscordCoreAPI::RepeatedFunctionData']]],
   ['functionstoexecute_24',['functionsToExecute',['../d4/d35/a03617.html#a1bde3b3135b440c0605fa7a6c5142350',1,'DiscordCoreAPI::DiscordCoreClientConfig']]]
