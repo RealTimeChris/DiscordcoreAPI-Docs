@@ -1,115 +1,380 @@
 var a00689 =
 [
-    [ "DiscordCoreAPI::CacheOptions", "d6/de0/a03613.html", "d6/de0/a03613" ],
-    [ "DiscordCoreAPI::DiscordCoreClientConfig", "d4/d35/a03617.html", "d4/d35/a03617" ],
-    [ "DiscordCoreAPI::LoggingOptions", "d8/d13/a03609.html", "d8/d13/a03609" ],
-    [ "DiscordCoreInternal::UpdatePresenceData", "d1/d3c/a03589.html", "d1/d3c/a03589" ],
-    [ "GatewayIntents", "d1/d87/a00689.html#ga4703fe910d1719c0a0bef34e9b7500e3", [
-      [ "Guilds", "d1/d87/a00689.html#gga4703fe910d1719c0a0bef34e9b7500e3ac5514110f8f4e8873da17c6c2b7b2b8e", null ],
-      [ "Guild_Members", "d1/d87/a00689.html#gga4703fe910d1719c0a0bef34e9b7500e3af317825fad018118ad319336c01c130d", null ],
-      [ "Guild_Bans", "d1/d87/a00689.html#gga4703fe910d1719c0a0bef34e9b7500e3a8a51acef92efa71b391edddb8e33887b", null ],
-      [ "Guild_Emojis", "d1/d87/a00689.html#gga4703fe910d1719c0a0bef34e9b7500e3aa4dd571686f289700ff3762b782b03dd", null ],
-      [ "Guild_Integrations", "d1/d87/a00689.html#gga4703fe910d1719c0a0bef34e9b7500e3a5f64759a0c71282a07c483958a2ab9b5", null ],
-      [ "Guild_Webhooks", "d1/d87/a00689.html#gga4703fe910d1719c0a0bef34e9b7500e3abf41946750b84cc3b6b85aadae4effc2", null ],
-      [ "Guild_Invites", "d1/d87/a00689.html#gga4703fe910d1719c0a0bef34e9b7500e3a9857e763bebb0f8c772cc11780c21902", null ],
-      [ "Guild_VoiceStates", "d1/d87/a00689.html#gga4703fe910d1719c0a0bef34e9b7500e3ac6ce2ea8a031b6d0f165620554c302a2", null ],
-      [ "Guild_Presences", "d1/d87/a00689.html#gga4703fe910d1719c0a0bef34e9b7500e3abf346fb9fab972c747f7a087d2f78ab6", null ],
-      [ "Guild_Messages", "d1/d87/a00689.html#gga4703fe910d1719c0a0bef34e9b7500e3ae74008f44c588437b8c4458b3964f12f", null ],
-      [ "Guild_Message_Reactions", "d1/d87/a00689.html#gga4703fe910d1719c0a0bef34e9b7500e3a93756dbe98434ceea347d67101bbc1fc", null ],
-      [ "Guild_Message_Typing", "d1/d87/a00689.html#gga4703fe910d1719c0a0bef34e9b7500e3a63514e719e740eafb08513babca6d927", null ],
-      [ "Direct_Messages", "d1/d87/a00689.html#gga4703fe910d1719c0a0bef34e9b7500e3afda51eea9d77118e4214ad76435642b2", null ],
-      [ "Direct_Message_Reactions", "d1/d87/a00689.html#gga4703fe910d1719c0a0bef34e9b7500e3ad1cbbb098df7e7a61069cf32871817ea", null ],
-      [ "Direct_Message_Typing", "d1/d87/a00689.html#gga4703fe910d1719c0a0bef34e9b7500e3a97d5533980941a4bb069ec49d48004ef", null ],
-      [ "Message_Content", "d1/d87/a00689.html#gga4703fe910d1719c0a0bef34e9b7500e3a67cf94cd3fd4621a7a2718a5e6012c47", null ],
-      [ "Guild_Scheduled_Events", "d1/d87/a00689.html#gga4703fe910d1719c0a0bef34e9b7500e3a07d7433ccb2cad65ad6e0d62c7bbda40", null ],
-      [ "Default_Intents", "d1/d87/a00689.html#gga4703fe910d1719c0a0bef34e9b7500e3a7c2ba354282081c538318e62c8677a37", null ],
-      [ "Privileged_Intents", "d1/d87/a00689.html#gga4703fe910d1719c0a0bef34e9b7500e3a0f5af78f0d7c97dc2fae48985630002f", null ],
-      [ "All_Intents", "d1/d87/a00689.html#gga4703fe910d1719c0a0bef34e9b7500e3a7b2e3dfc7eb5560c820c92fc591e9108", null ]
+    [ "DiscordCoreAPI::DownloadUrl", "d8/d1e/a02801.html", null ],
+    [ "Snowflake", "d1/d87/a00689.html#gabeb353982ff7e75352fc30c8543641ef", null ],
+    [ "ActionType", "d1/d87/a00689.html#gac22afe78c86c591bc07b41b4a9b1e789", [
+      [ "Block_Message", "d1/d87/a00689.html#ggac22afe78c86c591bc07b41b4a9b1e789a8d8f00cfe152848bf235effb85724a5f", null ],
+      [ "Send_Alert_Message", "d1/d87/a00689.html#ggac22afe78c86c591bc07b41b4a9b1e789af098b7a19831f24c7d3726c6321923c8", null ],
+      [ "Timeout", "d1/d87/a00689.html#ggac22afe78c86c591bc07b41b4a9b1e789ac85a251cc457840f1e032f1b733e9398", null ]
     ] ],
-    [ "InputEventResponseType", "d1/d87/a00689.html#ga6a10916bec24a00f6d6a41d8d880c1fa", [
-      [ "Unset", "d1/d87/a00689.html#gga6a10916bec24a00f6d6a41d8d880c1faac9f88e098f6fe4e4e112eeb05ccb9671", null ],
-      [ "Ephemeral_Deferred_Response", "d1/d87/a00689.html#gga6a10916bec24a00f6d6a41d8d880c1faa613f9d36adf07f398c85196b68537df5", null ],
-      [ "Interaction_Response", "d1/d87/a00689.html#gga6a10916bec24a00f6d6a41d8d880c1faa6dc9f1599186d5895491f67863f9edd7", null ],
-      [ "Ephemeral_Interaction_Response", "d1/d87/a00689.html#gga6a10916bec24a00f6d6a41d8d880c1faa519f139398504899a626aa10d9fcfd30", null ],
-      [ "Edit_Interaction_Response", "d1/d87/a00689.html#gga6a10916bec24a00f6d6a41d8d880c1faa9f17700c2588d7159c91eb8c24be09f0", null ],
-      [ "Follow_Up_Message", "d1/d87/a00689.html#gga6a10916bec24a00f6d6a41d8d880c1faae6b08a69e3c7b1485b6bb806833a7d8f", null ],
-      [ "Ephemeral_Follow_Up_Message", "d1/d87/a00689.html#gga6a10916bec24a00f6d6a41d8d880c1faad2a40ccde386d96e45615bb3f6c71ac2", null ],
-      [ "Edit_Follow_Up_Message", "d1/d87/a00689.html#gga6a10916bec24a00f6d6a41d8d880c1faabce5d25133b98891f605c9479da99d50", null ],
-      [ "Application_Command_AutoComplete_Result", "d1/d87/a00689.html#gga6a10916bec24a00f6d6a41d8d880c1faaa7879d34a434b3b46189f65c5add920e", null ],
-      [ "Modal_Interaction_Response", "d1/d87/a00689.html#gga6a10916bec24a00f6d6a41d8d880c1faa8b32d4a2469de62822c9f5d192618ad7", null ]
+    [ "ActivityType", "d1/d87/a00689.html#ga2274697e9d364c27f24c3dc688c9b88d", [
+      [ "Game", "d1/d87/a00689.html#gga2274697e9d364c27f24c3dc688c9b88da63d72051e901c069f8aa1b32aa0c43bb", null ],
+      [ "Streaming", "d1/d87/a00689.html#gga2274697e9d364c27f24c3dc688c9b88daac21d502848247aa2f578d0f718f5d1d", null ],
+      [ "Listening", "d1/d87/a00689.html#gga2274697e9d364c27f24c3dc688c9b88da962ef616821625a13a028ac14ac0fef8", null ],
+      [ "Watching", "d1/d87/a00689.html#gga2274697e9d364c27f24c3dc688c9b88da3627fc6c218d0a88700f606bf24b0d77", null ],
+      [ "Custom", "d1/d87/a00689.html#gga2274697e9d364c27f24c3dc688c9b88da90589c47f06eb971d548591f23c285af", null ],
+      [ "Competing", "d1/d87/a00689.html#gga2274697e9d364c27f24c3dc688c9b88da6d226da47d8ac4db351d62065919374e", null ]
     ] ],
-    [ "Permission", "d1/d87/a00689.html#gabf76b7b06351e7fc14b8c72f9aa2c15f", [
-      [ "Create_Instant_Invite", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15fa5879aaa7912a642378ec8a6c1059252c", null ],
-      [ "Kick_Members", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15faab4f20b3f0047fdd27e5f57c9fdd693a", null ],
-      [ "Ban_Members", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15faceec4f8c277d21733c5a708fe1e3edba", null ],
-      [ "Administrator", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15fa7b7bc2512ee1fedcd76bdc68926d4f7b", null ],
-      [ "Manage_Channels", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15facd4da401266424cfd480a2954925f4ef", null ],
-      [ "Manage_Guild", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15fad8af30a54680b001af3eaddda645512e", null ],
-      [ "Add_Reactions", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15fae07bccd26a6ec214a52d8bc730a9c555", null ],
-      [ "View_Audit_Log", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15fab0a47ab6dfee9026127bc2ef4dc966ab", null ],
-      [ "Priority_Speaker", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15fa78752af7e02a5db8dc03aa41833b1085", null ],
-      [ "Stream", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15faeae835e83c0494a376229f254f7d3392", null ],
-      [ "View_Channel", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15fa111870c8563a6a4c7875896164773675", null ],
-      [ "Send_Messages", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15fae9d9f30f856766609f518b59a5302d96", null ],
-      [ "Send_Tts_Messages", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15faa9b9004f753953e5ef2277d0fc40502c", null ],
-      [ "Manage_Messages", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15fa47dfbeade41b14ab533c5941166d7818", null ],
-      [ "Embed_Links", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15faf39fc2f9adea8b1fdb4b011d83333ece", null ],
-      [ "Attach_Files", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15fad2fc1904b615444b23a29d83e8f2a271", null ],
-      [ "Read_Message_History", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15fa845e83843425b636f5d6e6d881e10c01", null ],
-      [ "Mention_Everyone", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15fad1e4ae95adf0b6fc03a0aafab8a0872d", null ],
-      [ "Use_External_Emojis", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15faa18079b143a05eff11f39b8419c49829", null ],
-      [ "View_Guild_Insights", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15faf53e135cf9ab9ef5fa4c99e17033468a", null ],
-      [ "Connect", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15fa49ab28040dfa07f53544970c6d147e1e", null ],
-      [ "Speak", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15fa8b1e2b9b342dd37344c6343dc23a6733", null ],
-      [ "Mute_Members", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15fa97d6d6e2f712da46d9b5d8714d2bd9be", null ],
-      [ "Deafen_Members", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15faf7438cab00a7206a6f68a8538a840356", null ],
-      [ "Move_Members", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15fa6fe96865e87cb86be6188db977364a59", null ],
-      [ "Use_Vad", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15fae90f67af1487ad6292eb68cf2134b4af", null ],
-      [ "Change_Nickname", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15fa514a1e846ba12fb1e8c24ac166e0f0bb", null ],
-      [ "Manage_Nicknames", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15fa4d55938af64b1d68ff479342e797529d", null ],
-      [ "Manage_Roles", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15fa9922d43aa0c42f2c283c3bf5ddcb624d", null ],
-      [ "Manage_Webhooks", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15fa9043b52ebbe92890e3d06626a08a2cff", null ],
-      [ "Manage_Emojis_And_Stickers", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15fa69161fa87924d49f2553d9f1d8789541", null ],
-      [ "Use_Application_Commands", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15fa4307dc51606d4d31f2bb294b7b1511aa", null ],
-      [ "Request_To_Speak", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15fafc8fe0f0e416ca3a4f46ca1f2ed38296", null ],
-      [ "Manage_Events", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15fa1e75ea4969a5d60d55dd8bf2ea2c9720", null ],
-      [ "Manage_Threads", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15fab808db4980d2a72a058ec7d90515159e", null ],
-      [ "Create_Public_Threads", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15facae8a01383657eba60ffd629788f1bd3", null ],
-      [ "Create_Private_Threads", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15fa9f727c65f9cccadecb0358b9013f617b", null ],
-      [ "Use_External_Stickers", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15facc0a25fc875366176f8aa011f383f518", null ],
-      [ "Send_Messages_In_Threads", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15fa9a1f95041536309f1737b001857d9d82", null ],
-      [ "Start_Embedded_Activities", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15faf1e3639959259c1789194be31ae7f044", null ],
-      [ "Moderate_Members", "d1/d87/a00689.html#ggabf76b7b06351e7fc14b8c72f9aa2c15fade0a5f822809a2db7782ec36c9f1bd5b", null ]
+    [ "AfkTimeOutDurations", "d1/d87/a00689.html#gade1ab5324490db89a5c4853a34ceaac4", [
+      [ "Shortest", "d1/d87/a00689.html#ggade1ab5324490db89a5c4853a34ceaac4ace42b65744e60ed9b32e7d4f750a66a5", null ],
+      [ "Short", "d1/d87/a00689.html#ggade1ab5324490db89a5c4853a34ceaac4a30bb747c98bccdd11b3f89e644c4d0ad", null ],
+      [ "Medium", "d1/d87/a00689.html#ggade1ab5324490db89a5c4853a34ceaac4a87f8a6ab85c9ced3702b4ea641ad4bb5", null ],
+      [ "Long", "d1/d87/a00689.html#ggade1ab5324490db89a5c4853a34ceaac4a8394f0347c184cf156ac5924dccb773b", null ],
+      [ "Longest", "d1/d87/a00689.html#ggade1ab5324490db89a5c4853a34ceaac4a57376768531de0fb2ed2e71e67a91d3d", null ]
     ] ],
-    [ "TextFormat", "d1/d87/a00689.html#ga4aa470ada1cb750f9e9775002a1a7365", [
-      [ "Etf", "d1/d87/a00689.html#gga4aa470ada1cb750f9e9775002a1a7365a5b815c1df45a62cf6d998434add6b144", null ],
-      [ "Json", "d1/d87/a00689.html#gga4aa470ada1cb750f9e9775002a1a7365aeed8d85b888a6c015834240885ee6333", null ]
+    [ "ApplicationCommandOptionType", "d1/d87/a00689.html#ga1545487c64a71c2b5c36cde9f2bed49d", [
+      [ "Sub_Command", "d1/d87/a00689.html#gga1545487c64a71c2b5c36cde9f2bed49da556dd78e4a013f61e526933dd485cece", null ],
+      [ "Sub_Command_Group", "d1/d87/a00689.html#gga1545487c64a71c2b5c36cde9f2bed49da88cc677ed0b71be996a5275f2bc7c04e", null ],
+      [ "String", "d1/d87/a00689.html#gga1545487c64a71c2b5c36cde9f2bed49da27118326006d3829667a400ad23d5d98", null ],
+      [ "Integer", "d1/d87/a00689.html#gga1545487c64a71c2b5c36cde9f2bed49daa0faef0851b4294c06f2b94bb1cb2044", null ],
+      [ "Boolean", "d1/d87/a00689.html#gga1545487c64a71c2b5c36cde9f2bed49da27226c864bac7454a8504f8edb15d95b", null ],
+      [ "User", "d1/d87/a00689.html#gga1545487c64a71c2b5c36cde9f2bed49da8f9bfe9d1345237cb3b2b205864da075", null ],
+      [ "Channel", "d1/d87/a00689.html#gga1545487c64a71c2b5c36cde9f2bed49da781dc97dc62331eec3ea9ec4373a3ca8", null ],
+      [ "Role", "d1/d87/a00689.html#gga1545487c64a71c2b5c36cde9f2bed49dabbbabdbe1b262f75d99d62880b953be1", null ],
+      [ "Mentionable", "d1/d87/a00689.html#gga1545487c64a71c2b5c36cde9f2bed49da972a372cc6a5a32a7900a87c16caec60", null ],
+      [ "Number", "d1/d87/a00689.html#gga1545487c64a71c2b5c36cde9f2bed49dab2ee912b91d69b435159c7c3f6df7f5f", null ],
+      [ "Attachment", "d1/d87/a00689.html#gga1545487c64a71c2b5c36cde9f2bed49dae9cb217697088a98b1937d111d936281", null ]
     ] ],
-    [ "TimeFormat", "d1/d87/a00689.html#ga5f837e6437665f0a390fe2c6271e3a91", [
-      [ "LongDate", "d1/d87/a00689.html#gga5f837e6437665f0a390fe2c6271e3a91a46893ecaa2a5535d421dea60ed8cd9ad", null ],
-      [ "LongDateTime", "d1/d87/a00689.html#gga5f837e6437665f0a390fe2c6271e3a91aaf8ed09bd214dc99f090e7a54615c990", null ],
-      [ "LongTime", "d1/d87/a00689.html#gga5f837e6437665f0a390fe2c6271e3a91af9a0335a7d441261b3e96bfd8d7969f0", null ],
-      [ "ShortDate", "d1/d87/a00689.html#gga5f837e6437665f0a390fe2c6271e3a91a7c5b7580e4269fd93b25519beb510f81", null ],
-      [ "ShortDateTime", "d1/d87/a00689.html#gga5f837e6437665f0a390fe2c6271e3a91afca721616f2e8ad106360f72d88be853", null ],
-      [ "ShortTime", "d1/d87/a00689.html#gga5f837e6437665f0a390fe2c6271e3a91a085a3cce396fbb1bf82dbdab56b11043", null ]
+    [ "ApplicationCommandPermissionType", "d1/d87/a00689.html#ga7c7e93df904730371d131b2931e0265f", [
+      [ "Role", "d1/d87/a00689.html#gga7c7e93df904730371d131b2931e0265fabbbabdbe1b262f75d99d62880b953be1", null ],
+      [ "User", "d1/d87/a00689.html#gga7c7e93df904730371d131b2931e0265fa8f9bfe9d1345237cb3b2b205864da075", null ],
+      [ "Channel", "d1/d87/a00689.html#gga7c7e93df904730371d131b2931e0265fa781dc97dc62331eec3ea9ec4373a3ca8", null ]
     ] ],
-    [ "WebSocketCloseCode", "d1/d87/a00689.html#a3416d66a838a63dc0df704fce23b6971", [
-      [ "Normal_Close", "d1/d87/a00689.html#a3416d66a838a63dc0df704fce23b6971adfb230fccaffbdd5bc5cc19a0b6edbc3", null ],
-      [ "Unknown_Error", "d1/d87/a00689.html#a3416d66a838a63dc0df704fce23b6971a9f0b40369d46968daca4c442ca8dbe1c", null ],
-      [ "Unknown_Opcode", "d1/d87/a00689.html#a3416d66a838a63dc0df704fce23b6971a8ffdc93e8c17c90879fc9b340f1cf604", null ],
-      [ "Decode_Error", "d1/d87/a00689.html#a3416d66a838a63dc0df704fce23b6971a4c3d503c93fff6ee9ef8e8299b8a0245", null ],
-      [ "Not_Authenticated", "d1/d87/a00689.html#a3416d66a838a63dc0df704fce23b6971ac37e482dbe3fbef4f37bfab10b11daed", null ],
-      [ "Authentication_Failed", "d1/d87/a00689.html#a3416d66a838a63dc0df704fce23b6971a8611ab976214968bb77f6bd9ca29d2fd", null ],
-      [ "Already_Authenticated", "d1/d87/a00689.html#a3416d66a838a63dc0df704fce23b6971a637a097581305aed5a1c672f80afe9c0", null ],
-      [ "Invalid_Seq", "d1/d87/a00689.html#a3416d66a838a63dc0df704fce23b6971a8206d60d41fe5523e6eaea8097e035b2", null ],
-      [ "Rate_Limited", "d1/d87/a00689.html#a3416d66a838a63dc0df704fce23b6971aa42320bff0ecf00ae4af1cb62310398a", null ],
-      [ "Session_Timed", "d1/d87/a00689.html#a3416d66a838a63dc0df704fce23b6971ab866848ebe746cbe059d6e752d7adf78", null ],
-      [ "Invalid_Shard", "d1/d87/a00689.html#a3416d66a838a63dc0df704fce23b6971a7659808702883207fc35d87ddefe70c6", null ],
-      [ "Sharding_Required", "d1/d87/a00689.html#a3416d66a838a63dc0df704fce23b6971a11b2d79fa7ff7791df0033e03397ee72", null ],
-      [ "Invalid_API_Version", "d1/d87/a00689.html#a3416d66a838a63dc0df704fce23b6971a15e9637c77410cffdca68175359ce867", null ],
-      [ "Invalid_Intent", "d1/d87/a00689.html#a3416d66a838a63dc0df704fce23b6971a38bb27c82815e7da6cb8ac77a8450875", null ],
-      [ "Disallowed_Intent", "d1/d87/a00689.html#a3416d66a838a63dc0df704fce23b6971a93a332e57cb47271f3d4189e9dcc4ef2", null ]
+    [ "ApplicationCommandType", "d1/d87/a00689.html#ga0c1e88669ddc5cba35fdf5d84af435b8", [
+      [ "Chat_Input", "d1/d87/a00689.html#gga0c1e88669ddc5cba35fdf5d84af435b8a2be84bc520b8345a62d14e59215b1cca", null ],
+      [ "User", "d1/d87/a00689.html#gga0c1e88669ddc5cba35fdf5d84af435b8a8f9bfe9d1345237cb3b2b205864da075", null ],
+      [ "Message", "d1/d87/a00689.html#gga0c1e88669ddc5cba35fdf5d84af435b8a4c2a8fe7eaf24721cc7a9f0175115bd4", null ]
     ] ],
-    [ "getTimeAndDate", "d1/d87/a00689.html#ga63ce723358a8b7a00c14e055f2a26998", null ],
-    [ "reportException", "d1/d87/a00689.html#ga805bf7170903087e933a7b81c8e39f15", null ]
+    [ "ApplicationFlags", "d1/d87/a00689.html#gaf176f87f876c40bc60fae6d3bc488af6", [
+      [ "Gateway_Presence", "d1/d87/a00689.html#ggaf176f87f876c40bc60fae6d3bc488af6ac2fa29e9758a1c3f8177edd200411fb0", null ],
+      [ "Gateway_Presence_Limited", "d1/d87/a00689.html#ggaf176f87f876c40bc60fae6d3bc488af6a783c842c8b4dfbbbd056ab6e0a65083d", null ],
+      [ "Gateway_Guild_Members", "d1/d87/a00689.html#ggaf176f87f876c40bc60fae6d3bc488af6a2ec3f0f45648282b7cc453979267350c", null ],
+      [ "Gateway_Guild_Members_Limited", "d1/d87/a00689.html#ggaf176f87f876c40bc60fae6d3bc488af6a58aaf84a7364e74fcfb55c410120d17e", null ],
+      [ "Verificatino_Pending_Guild_Limit", "d1/d87/a00689.html#ggaf176f87f876c40bc60fae6d3bc488af6a1b16b1ed91c20a625d9b93b07c4731f5", null ],
+      [ "Embedded", "d1/d87/a00689.html#ggaf176f87f876c40bc60fae6d3bc488af6a069e7821d3b4c0bbf437147263eb4d0e", null ],
+      [ "Gateway_Message_Content", "d1/d87/a00689.html#ggaf176f87f876c40bc60fae6d3bc488af6a930a830082b075686fb588651214b04e", null ],
+      [ "Gateway_Message_Content_Limited", "d1/d87/a00689.html#ggaf176f87f876c40bc60fae6d3bc488af6a347fa98bcc7e0c74681aca737080c715", null ]
+    ] ],
+    [ "AudioFrameType", "d1/d87/a00689.html#gacf6f4590968be95774b156cf050c996c", [
+      [ "Unset", "d1/d87/a00689.html#ggacf6f4590968be95774b156cf050c996cac9f88e098f6fe4e4e112eeb05ccb9671", null ],
+      [ "Encoded", "d1/d87/a00689.html#ggacf6f4590968be95774b156cf050c996cab0aa2396f48df83a99237187e7758e35", null ],
+      [ "RawPCM", "d1/d87/a00689.html#ggacf6f4590968be95774b156cf050c996ca5e4428fdbbb1ef8971739c61d8662c5a", null ],
+      [ "Skip", "d1/d87/a00689.html#ggacf6f4590968be95774b156cf050c996ca72ef2b9b6965d078e3c7f95487a82d1c", null ]
+    ] ],
+    [ "AuditLogEvent", "d1/d87/a00689.html#ga1aef35b556dafaf1aa08c1dec6313d44", [
+      [ "Guild_Update", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44aec8bf9714631206c02a8e279c4ffa516", null ],
+      [ "Channel_Create", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44a9d1a493fd218de488eba27747dc397d7", null ],
+      [ "Channel_Update", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44a4a21720c42e8d5f384c63315cc53af73", null ],
+      [ "Channel_Delete", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44afcf74f31f4d7bd62340f0c1031fe5e2f", null ],
+      [ "Channel_Overwrite_Create", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44a3d5ee77dbe816ffaac71895c07bd9605", null ],
+      [ "Channel_Overwrite_Update", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44a126a8fe92113fc3fc11878c8c004266c", null ],
+      [ "Channel_Overwrite_Delete", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44a6654c7fc0b84c4598e23158f7aa8433d", null ],
+      [ "Member_Kick", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44a02250fdee25ca67397f77ec43b89b2c1", null ],
+      [ "Member_Prune", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44a857e89d277088e42ae8bd56a12ad666f", null ],
+      [ "Member_Ban_Add", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44a941f7b4da3421a8f1a967f1fa608580b", null ],
+      [ "Member_Ban_Remove", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44abdb4af5023d154e78d27dcc73abac3a8", null ],
+      [ "Member_Update", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44a41f8c1a8400142c51e6beb3c9ad6d0d0", null ],
+      [ "Member_Role_Update", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44aa2a7c8397bec1b59c05092041157b2a1", null ],
+      [ "Member_Move", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44ac350ebfd8b5165cdd550913f2dd8c1d8", null ],
+      [ "Member_Disconnect", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44ab0286fb6487bd4412727511dec9f74be", null ],
+      [ "Bot_Add", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44a8cbec7e006165ea94adea4b057653fce", null ],
+      [ "Role_Create", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44a50bfc11dde2929952ea49b0b935afd91", null ],
+      [ "Role_Update", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44a787c97ce952ae9ae3c0845c2ed197b05", null ],
+      [ "Role_Delete", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44af178591f397b2e25f6688d60b12e827f", null ],
+      [ "Invite_Create", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44a25f7f0d80cb4d148c7cd41f7f755b1da", null ],
+      [ "Invite_Update", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44a36a6902505966b85ae9940d55dc2bd2c", null ],
+      [ "Invite_Delete", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44afc3287a1a010224e752e942a7f7567eb", null ],
+      [ "Webhook_Create", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44aca45371c0cb6cabfdb4b518a6df1ce88", null ],
+      [ "Webhook_Update", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44a27cbd81de0f77e1d008c33acbc4f3bd5", null ],
+      [ "Webhook_Delete", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44a10739bae15aff9d481e1635e8d41d77c", null ],
+      [ "Emoji_Create", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44aeeda2af4fab89e3654fe4fd0bce3895b", null ],
+      [ "Emoji_Update", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44a648298a7b4a9be620cccc63a0efe131a", null ],
+      [ "Emoji_Delete", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44a149b489da005cc374917abc2b6ac322f", null ],
+      [ "Message_Delete", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44a12958b238e987ce9bd7e57e5e06be1bb", null ],
+      [ "Message_Bulk_Delete", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44a4fbdd8c199312d9285f95e39e59f7c93", null ],
+      [ "Message_Pin", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44aa81fb31aff6d6dde2c4880cec12e13ed", null ],
+      [ "Message_Unpin", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44aae6304d3c4062d629a5fa96c77c7754f", null ],
+      [ "Integration_Create", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44a9ca6eab0eea187f44ae38d533523e858", null ],
+      [ "Integration_Update", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44af500c30154839302900a68409c484f0d", null ],
+      [ "Integration_Delete", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44a6ef418174a6c2ad16fe6784540ea7a68", null ],
+      [ "Stage_Instance_Create", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44aa3cd50d8e19a0b1c466366d5646f8b48", null ],
+      [ "Stage_Instance_Update", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44a84b16e609863c42c20da57efc6176cf9", null ],
+      [ "Stage_Instance_Delete", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44ac14b39ed8c946322cb3db3d089e6a8f6", null ],
+      [ "Sticker_Create", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44adc3dff99fe71fd8513b236aeb15cffca", null ],
+      [ "Sticker_Update", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44a2604354b0ab9d858a5481d68678ba293", null ],
+      [ "Sticker_Delete", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44a9b055c08357911eaf85bfa703fb96210", null ],
+      [ "Guild_Scheduled_Event_Create", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44a80287afb1bbbbc11b4e41ba6e1ac9cb2", null ],
+      [ "Guild_Scheduled_Event_Update", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44a8e0842bcbcfdf3586cdb3567b587d87f", null ],
+      [ "Guild_Scheduled_Event_Delete", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44ab188d3d03c7f4884086a0a388e06cb2a", null ],
+      [ "Thread_Create", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44ae3aab1422a15bd4a94ff7c1089c1764f", null ],
+      [ "Thread_Update", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44a95738416220b8d78ae2851278da35790", null ],
+      [ "Thread_Delete", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44ad82aceab38ea284c3b42a3741fe9c2ff", null ],
+      [ "Application_Command_Permission_Update", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44a698900bd3904c7413e9337dfe8f18336", null ],
+      [ "Auto_Moderation_Rule_Create", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44af2bf73c283c2b0ab2c701d5811b66e63", null ],
+      [ "Auto_Moderation_Rule_Update", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44a694c500e93648d110c2c28449056ea34", null ],
+      [ "Auto_Moderation_Rule_Delete", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44aef09563ffa3cfd0868c7fb3ccb7e21f2", null ],
+      [ "Auto_Moderation_Block_Message", "d1/d87/a00689.html#gga1aef35b556dafaf1aa08c1dec6313d44aaadb800c4f33360bd02636c09cf412d3", null ]
+    ] ],
+    [ "ButtonStyle", "d1/d87/a00689.html#gae05b1bfe988b0c2989b7bed279c9c95c", [
+      [ "Primary", "d1/d87/a00689.html#ggae05b1bfe988b0c2989b7bed279c9c95ca074de7e7c226d5c60f8af14c20725352", null ],
+      [ "Success", "d1/d87/a00689.html#ggae05b1bfe988b0c2989b7bed279c9c95ca505a83f220c02df2f85c3810cd9ceb38", null ],
+      [ "Secondary", "d1/d87/a00689.html#ggae05b1bfe988b0c2989b7bed279c9c95ca0c7d6cf19426e01dcfa32434828ed266", null ],
+      [ "Danger", "d1/d87/a00689.html#ggae05b1bfe988b0c2989b7bed279c9c95ca990816b607ebf99b1415760965e4d564", null ],
+      [ "Link", "d1/d87/a00689.html#ggae05b1bfe988b0c2989b7bed279c9c95ca97e7c9a7d06eac006a28bf05467fcc8b", null ]
+    ] ],
+    [ "ChannelType", "d1/d87/a00689.html#ga386b8a65a1195bd1bc61b75a7f308ffa", [
+      [ "Guild_Text", "d1/d87/a00689.html#gga386b8a65a1195bd1bc61b75a7f308ffaa4dd9d9a9ba52f598fe565a3c90f5fffe", null ],
+      [ "Dm", "d1/d87/a00689.html#gga386b8a65a1195bd1bc61b75a7f308ffaa05918b8b3437675fd82f88f9488c639d", null ],
+      [ "Group_Dm", "d1/d87/a00689.html#gga386b8a65a1195bd1bc61b75a7f308ffaa538b56922dda4c3df2136537b5662b0b", null ],
+      [ "Guild_Category", "d1/d87/a00689.html#gga386b8a65a1195bd1bc61b75a7f308ffaa99bdf91e21dcb91631c438a3ebfd6995", null ],
+      [ "Guild_News", "d1/d87/a00689.html#gga386b8a65a1195bd1bc61b75a7f308ffaaa6f14331fab342fc6f0020b59735dacb", null ],
+      [ "Guild_Store", "d1/d87/a00689.html#gga386b8a65a1195bd1bc61b75a7f308ffaa0c6d955ecaa4a287493f9dcc0227c06d", null ],
+      [ "Guild_News_Thread", "d1/d87/a00689.html#gga386b8a65a1195bd1bc61b75a7f308ffaa06383cce0bb3865d8fb23383629adcec", null ],
+      [ "Guild_Public_Thread", "d1/d87/a00689.html#gga386b8a65a1195bd1bc61b75a7f308ffaa1438d08c98f1c5fae9687148fd1bdbb4", null ],
+      [ "Guild_Private_Thread", "d1/d87/a00689.html#gga386b8a65a1195bd1bc61b75a7f308ffaa1b9f0c214b7415530f877c6cb0d3e933", null ],
+      [ "Guild_Stage_Voice", "d1/d87/a00689.html#gga386b8a65a1195bd1bc61b75a7f308ffaa41751481764badd58310d15ff534eb39", null ],
+      [ "Guild_Directory", "d1/d87/a00689.html#gga386b8a65a1195bd1bc61b75a7f308ffaaa611f8126699c39881b696e765c7b2a8", null ],
+      [ "Guild_Forum", "d1/d87/a00689.html#gga386b8a65a1195bd1bc61b75a7f308ffaaea79645637335dbd33109110a583791e", null ]
+    ] ],
+    [ "ComponentType", "d1/d87/a00689.html#ga47e4c44581b62205fa6a62f8354a8a76", [
+      [ "ActionRow", "d1/d87/a00689.html#gga47e4c44581b62205fa6a62f8354a8a76a8e998ea90554aad70bf27db5de287374", null ],
+      [ "Button", "d1/d87/a00689.html#gga47e4c44581b62205fa6a62f8354a8a76a87b7760f14fbff78d8819291f36ab9a0", null ],
+      [ "SelectMenu", "d1/d87/a00689.html#gga47e4c44581b62205fa6a62f8354a8a76add8ed5c5d2ea5d10cc541206babed3f9", null ],
+      [ "TextInput", "d1/d87/a00689.html#gga47e4c44581b62205fa6a62f8354a8a76ac852755f85e80bfa21ab754f8dde93dc", null ]
+    ] ],
+    [ "ConnectionVisibilityTypes", "d1/d87/a00689.html#gac5fbc4a3b87f9470e6be7acf38492c14", [
+      [ "None", "d1/d87/a00689.html#ggac5fbc4a3b87f9470e6be7acf38492c14a6adf97f83acf6453d4a6a4b1070f3754", null ],
+      [ "Everyone", "d1/d87/a00689.html#ggac5fbc4a3b87f9470e6be7acf38492c14af9ae5e5c44e59f94680af569879f704a", null ]
+    ] ],
+    [ "DefaultMessageNotificationLevel", "d1/d87/a00689.html#ga44d0ac48a99c844abee9741673f9faf9", [
+      [ "All_Messages", "d1/d87/a00689.html#gga44d0ac48a99c844abee9741673f9faf9a63d0b369b18d420be2340091889053bc", null ],
+      [ "Only_Mentions", "d1/d87/a00689.html#gga44d0ac48a99c844abee9741673f9faf9ab19530324fdb7a426e22ab4fea9381ab", null ]
+    ] ],
+    [ "EmbedType", "d1/d87/a00689.html#ga0d827e203b3492c85c6ad56a04e6a2dc", [
+      [ "Rich", "d1/d87/a00689.html#gga0d827e203b3492c85c6ad56a04e6a2dca84814b43bd0271bd407e14ca38654207", null ],
+      [ "Image", "d1/d87/a00689.html#gga0d827e203b3492c85c6ad56a04e6a2dcabe53a0541a6d36f6ecb879fa2c584b08", null ],
+      [ "Video", "d1/d87/a00689.html#gga0d827e203b3492c85c6ad56a04e6a2dca34e2d1989a1dbf75cd631596133ee5ee", null ],
+      [ "Gifv", "d1/d87/a00689.html#gga0d827e203b3492c85c6ad56a04e6a2dca8206993a58bc2e114e33825a5e77510f", null ],
+      [ "Article", "d1/d87/a00689.html#gga0d827e203b3492c85c6ad56a04e6a2dca5e2f8ee473fdebc99fef4dc9e7ee3146", null ],
+      [ "link", "d1/d87/a00689.html#gga0d827e203b3492c85c6ad56a04e6a2dca2a304a1348456ccd2234cd71a81bd338", null ]
+    ] ],
+    [ "EventType", "d1/d87/a00689.html#ga5dd2e40b084b06961a22cbc0fd491a72", [
+      [ "Message_Send", "d1/d87/a00689.html#gga5dd2e40b084b06961a22cbc0fd491a72a6eb425c885a6ff6df42c6b8b4964c4bf", null ]
+    ] ],
+    [ "ExplicitContentFilterLevel", "d1/d87/a00689.html#ga658fd7e41f40147ffb8a2a2ec8f0322b", [
+      [ "Disabled", "d1/d87/a00689.html#gga658fd7e41f40147ffb8a2a2ec8f0322bab9f5c797ebbf55adccdd8539a65a0241", null ],
+      [ "Members_Without_Roles", "d1/d87/a00689.html#gga658fd7e41f40147ffb8a2a2ec8f0322baf865d27c53a7f947b023b94fd44efb2e", null ],
+      [ "All_Members", "d1/d87/a00689.html#gga658fd7e41f40147ffb8a2a2ec8f0322ba844821bbfa007241034a6c47ffdc737c", null ]
+    ] ],
+    [ "GuildFlags", "d1/d87/a00689.html#ga134047ca54524ec347c753ff80349a06", [
+      [ "WidgetEnabled", "d1/d87/a00689.html#gga134047ca54524ec347c753ff80349a06a71b6d652ce04145b0d3647faf5cc80f0", null ],
+      [ "Unavailable", "d1/d87/a00689.html#gga134047ca54524ec347c753ff80349a06a453e6aa38d87b28ccae545967c53004f", null ],
+      [ "Owner", "d1/d87/a00689.html#gga134047ca54524ec347c753ff80349a06ab6f4a2ec6356bbd56d49f2096bf9d3d3", null ],
+      [ "Large", "d1/d87/a00689.html#gga134047ca54524ec347c753ff80349a06a3a69b34ce86dacb205936a8094f6c743", null ],
+      [ "Premium_Progress_Bar_Enabled", "d1/d87/a00689.html#gga134047ca54524ec347c753ff80349a06afc5ab9db8e891c384278cb275c7c43cb", null ]
+    ] ],
+    [ "GuildNSFWLevel", "d1/d87/a00689.html#ga72bfcad315b1367b1f8fc4bc5e2b1f7b", [
+      [ "Default", "d1/d87/a00689.html#gga72bfcad315b1367b1f8fc4bc5e2b1f7ba7a1920d61156abc05a60135aefe8bc67", null ],
+      [ "Explicit", "d1/d87/a00689.html#gga72bfcad315b1367b1f8fc4bc5e2b1f7ba9d71760e2dd451db2df354d0fd29cd7f", null ],
+      [ "Safe", "d1/d87/a00689.html#gga72bfcad315b1367b1f8fc4bc5e2b1f7bac6eea0560cd6f377e78dff2c85cc9122", null ],
+      [ "Age_Restricted", "d1/d87/a00689.html#gga72bfcad315b1367b1f8fc4bc5e2b1f7bac225ad23bb3c523fd03c7556f8106b6c", null ]
+    ] ],
+    [ "GuildScheduledEventEntityType", "d1/d87/a00689.html#ga3be930a37ea8f73fdab875716ac40643", [
+      [ "None", "d1/d87/a00689.html#gga3be930a37ea8f73fdab875716ac40643a6adf97f83acf6453d4a6a4b1070f3754", null ],
+      [ "State_Instance", "d1/d87/a00689.html#gga3be930a37ea8f73fdab875716ac40643af9796928de1809a268d53353c8eaa666", null ],
+      [ "Voice", "d1/d87/a00689.html#gga3be930a37ea8f73fdab875716ac40643ad7a3fdf1351b72249a47454751549deb", null ],
+      [ "External", "d1/d87/a00689.html#gga3be930a37ea8f73fdab875716ac40643ab206a1b4ea1097761f78e8876f6da779", null ]
+    ] ],
+    [ "GuildScheduledEventPrivacyLevel", "d1/d87/a00689.html#ga823190c71b2ac8925b8f53f0b0b17c20", [
+      [ "Public", "d1/d87/a00689.html#gga823190c71b2ac8925b8f53f0b0b17c20a3d067bedfe2f4677470dd6ccf64d05ed", null ],
+      [ "Guild_Only", "d1/d87/a00689.html#gga823190c71b2ac8925b8f53f0b0b17c20acbdc236efc81089d5c3004ca4692391d", null ]
+    ] ],
+    [ "GuildScheduledEventStatus", "d1/d87/a00689.html#ga7eb11b08602561ca5e539540d753aa53", [
+      [ "Scheduled", "d1/d87/a00689.html#gga7eb11b08602561ca5e539540d753aa53a2b7dabba0077abe3732e0418b048a56b", null ],
+      [ "Active", "d1/d87/a00689.html#gga7eb11b08602561ca5e539540d753aa53a4d3d769b812b6faa6b76e1a8abaece2d", null ],
+      [ "Completed", "d1/d87/a00689.html#gga7eb11b08602561ca5e539540d753aa53a07ca5050e697392c9ed47e6453f1453f", null ],
+      [ "Canceled", "d1/d87/a00689.html#gga7eb11b08602561ca5e539540d753aa53a0e22fe7d45f8e5632a4abf369b24e29c", null ]
+    ] ],
+    [ "InteractionCallbackType", "d1/d87/a00689.html#gaf9e947457ef4ec645c7d8e157b74534c", [
+      [ "Pong", "d1/d87/a00689.html#ggaf9e947457ef4ec645c7d8e157b74534ca4d94412495a32342e1b8c78f7960f2bc", null ],
+      [ "Channel_Message_With_Source", "d1/d87/a00689.html#ggaf9e947457ef4ec645c7d8e157b74534cabd2a1c7dcd30de42328da736f2f3f6e8", null ],
+      [ "Deferred_Channel_Message_With_Source", "d1/d87/a00689.html#ggaf9e947457ef4ec645c7d8e157b74534ca81d601154ddf8876edc6a5ce48b42ff3", null ],
+      [ "Deferred_Update_Message", "d1/d87/a00689.html#ggaf9e947457ef4ec645c7d8e157b74534cabee74b6d5c8bd9bdf99062eaaaae8c38", null ],
+      [ "Update_Message", "d1/d87/a00689.html#ggaf9e947457ef4ec645c7d8e157b74534cafff540a6fb7caea5823184374b558d9f", null ],
+      [ "Application_Command_Autocomplete_Result", "d1/d87/a00689.html#ggaf9e947457ef4ec645c7d8e157b74534caf4c9613259d38d4f2df1ff33123997f7", null ],
+      [ "Modal", "d1/d87/a00689.html#ggaf9e947457ef4ec645c7d8e157b74534cac59d6df802c32f037c2a15ff75faec17", null ]
+    ] ],
+    [ "InteractionType", "d1/d87/a00689.html#gab146109b14d510e29c5603ab83373ee9", [
+      [ "Ping", "d1/d87/a00689.html#ggab146109b14d510e29c5603ab83373ee9ab85815d04cec053ce6deb8021f2df1b8", null ],
+      [ "Application_Command", "d1/d87/a00689.html#ggab146109b14d510e29c5603ab83373ee9a8a748d9921ec46953c8d65c0bc41be1a", null ],
+      [ "Message_Component", "d1/d87/a00689.html#ggab146109b14d510e29c5603ab83373ee9a182c36adde843ab7be8dd2f94b766e81", null ],
+      [ "Application_Command_Autocomplete", "d1/d87/a00689.html#ggab146109b14d510e29c5603ab83373ee9a7826936ca5a112a4cfbf61e27719cde8", null ],
+      [ "Modal_Submit", "d1/d87/a00689.html#ggab146109b14d510e29c5603ab83373ee9acf55c8bb4c892ac222236d215d978cc8", null ]
+    ] ],
+    [ "InviteTargetTypes", "d1/d87/a00689.html#gaf1597fc8422339d53a1ebade14316dc1", [
+      [ "Stream", "d1/d87/a00689.html#ggaf1597fc8422339d53a1ebade14316dc1aeae835e83c0494a376229f254f7d3392", null ],
+      [ "Embedded_Application", "d1/d87/a00689.html#ggaf1597fc8422339d53a1ebade14316dc1a1848b0b30db5fd475ae9e393483c26c0", null ]
+    ] ],
+    [ "KeywordPresetType", "d1/d87/a00689.html#gabbe8da5b6c45624468b15e4466104949", [
+      [ "Profanity", "d1/d87/a00689.html#ggabbe8da5b6c45624468b15e4466104949acba95a42c53bdc6fbf3ddf9bf10a4069", null ],
+      [ "Sexual_Content", "d1/d87/a00689.html#ggabbe8da5b6c45624468b15e4466104949a2b09fccbbca41afb9b76b070171c9bc6", null ],
+      [ "Slurs", "d1/d87/a00689.html#ggabbe8da5b6c45624468b15e4466104949ae4663be2b90be86d756e7fbbcb2dc1d6", null ]
+    ] ],
+    [ "MessageActivityType", "d1/d87/a00689.html#ga86a83f66f1f5372938c82a349188050b", [
+      [ "Join", "d1/d87/a00689.html#gga86a83f66f1f5372938c82a349188050baa286d9991c6a547ae25a5f5216164b8f", null ],
+      [ "Spectate", "d1/d87/a00689.html#gga86a83f66f1f5372938c82a349188050ba0a48c2298d30982281b41a6009732cc3", null ],
+      [ "Listen", "d1/d87/a00689.html#gga86a83f66f1f5372938c82a349188050bace6802b46091c31e2ec2363883fe8369", null ],
+      [ "Join_Request", "d1/d87/a00689.html#gga86a83f66f1f5372938c82a349188050badcff62ba2ddf475f8a80b991422eb683", null ]
+    ] ],
+    [ "MessageFlags", "d1/d87/a00689.html#ga59de4f3c2326235571e5b4c135f574ed", [
+      [ "Crossposted", "d1/d87/a00689.html#gga59de4f3c2326235571e5b4c135f574eda64b0e186040158d002ed9cfdb4b73027", null ],
+      [ "Is_Crosspost", "d1/d87/a00689.html#gga59de4f3c2326235571e5b4c135f574eda4aa29658e4f0222dba73717992e4503c", null ],
+      [ "Suppress_Embeds", "d1/d87/a00689.html#gga59de4f3c2326235571e5b4c135f574edaf34ff6daebdb419bb013421048088a5e", null ],
+      [ "Source_Message_Deleted", "d1/d87/a00689.html#gga59de4f3c2326235571e5b4c135f574eda21bac26e77d017231db923eaeecdfb8c", null ],
+      [ "Urgent", "d1/d87/a00689.html#gga59de4f3c2326235571e5b4c135f574eda2708565083321423b1a3244979bade9b", null ],
+      [ "Has_Thread", "d1/d87/a00689.html#gga59de4f3c2326235571e5b4c135f574eda763989c2ce30b079d395924705472d5d", null ],
+      [ "Ephemeral", "d1/d87/a00689.html#gga59de4f3c2326235571e5b4c135f574eda446700a09f499c4dd922bfa13b27479d", null ],
+      [ "Loading", "d1/d87/a00689.html#gga59de4f3c2326235571e5b4c135f574eda16bfbf9c462762cf1cba4134ec53c504", null ]
+    ] ],
+    [ "MessageType", "d1/d87/a00689.html#ga4d6799439c0ec1d43d07d64effe58b0e", [
+      [ "Default", "d1/d87/a00689.html#gga4d6799439c0ec1d43d07d64effe58b0ea7a1920d61156abc05a60135aefe8bc67", null ],
+      [ "Recipient_Add", "d1/d87/a00689.html#gga4d6799439c0ec1d43d07d64effe58b0ea63ea5c833506efdbd3aa2a856d65a842", null ],
+      [ "Recipient_Remove", "d1/d87/a00689.html#gga4d6799439c0ec1d43d07d64effe58b0eab4e9134b5bfbf42f3fbe07f8d9f3a711", null ],
+      [ "Call", "d1/d87/a00689.html#gga4d6799439c0ec1d43d07d64effe58b0eac3755e61202abd74da5885d2e9c9160e", null ],
+      [ "Channel_Name_Change", "d1/d87/a00689.html#gga4d6799439c0ec1d43d07d64effe58b0eab9cabe47581a1cdd33119041aa18c5ff", null ],
+      [ "Channel_Icon_Change", "d1/d87/a00689.html#gga4d6799439c0ec1d43d07d64effe58b0ea7e57d3cbe52c43659ad763d87c97f685", null ],
+      [ "Channel_Pinned_Message", "d1/d87/a00689.html#gga4d6799439c0ec1d43d07d64effe58b0eaa71f4f75c0ea3266533d69f50cf671e1", null ],
+      [ "Guild_Member_Join", "d1/d87/a00689.html#gga4d6799439c0ec1d43d07d64effe58b0ea447ad2958e50ee5b716eff610c939ca6", null ],
+      [ "User_Premium_Guild_Subscription", "d1/d87/a00689.html#gga4d6799439c0ec1d43d07d64effe58b0ea0fc5cb1934ded9961dbd8604bc59a91d", null ],
+      [ "User_Premium_Guild_Subscription_Tier_1", "d1/d87/a00689.html#gga4d6799439c0ec1d43d07d64effe58b0eafd37758d1b9c1a9b9a95f8dd59fc90ed", null ],
+      [ "User_Premium_Guild_Subscription_Tier_2", "d1/d87/a00689.html#gga4d6799439c0ec1d43d07d64effe58b0ea7962bdb600e9c9a402d334b22719fe05", null ],
+      [ "User_Premium_Guild_Subscription_Tier_3", "d1/d87/a00689.html#gga4d6799439c0ec1d43d07d64effe58b0ea25d42c9d055f7472778e4d2cf478c9e6", null ],
+      [ "Channel_Follow_Add", "d1/d87/a00689.html#gga4d6799439c0ec1d43d07d64effe58b0ea806177bd47754aac82ea90d7c8b8e589", null ],
+      [ "Guild_Discovery_Disqualified", "d1/d87/a00689.html#gga4d6799439c0ec1d43d07d64effe58b0eaf724fc527d8728ef3b86a9944bf3e636", null ],
+      [ "Guild_Discovery_Requalified", "d1/d87/a00689.html#gga4d6799439c0ec1d43d07d64effe58b0ea941cb3bf531b298c86ce70b001869f46", null ],
+      [ "Guild_Discovery_Grace_Period_Initial_Warning", "d1/d87/a00689.html#gga4d6799439c0ec1d43d07d64effe58b0ea10e023f178cea9b3702b7e6ccf1682f7", null ],
+      [ "Guild_Discovery_Grace_Period_Final_Warning", "d1/d87/a00689.html#gga4d6799439c0ec1d43d07d64effe58b0ea03675f48c3409225955443bb5cbe44ab", null ],
+      [ "Thread_Created", "d1/d87/a00689.html#gga4d6799439c0ec1d43d07d64effe58b0ea8ec3fdb6f1fa4686d4bf6de39f486299", null ],
+      [ "Reply", "d1/d87/a00689.html#gga4d6799439c0ec1d43d07d64effe58b0ea25d8df6e580905091a0d5ef5b9e05bf0", null ],
+      [ "Chat_Input_Command", "d1/d87/a00689.html#gga4d6799439c0ec1d43d07d64effe58b0eaf3f9f405b5ae8130db5cc6009365475e", null ],
+      [ "Thread_Starter_Message", "d1/d87/a00689.html#gga4d6799439c0ec1d43d07d64effe58b0eac142dc56438decb437867363b9108433", null ],
+      [ "Guild_Invite_Reminder", "d1/d87/a00689.html#gga4d6799439c0ec1d43d07d64effe58b0eacd3e4b8cdefdda5669749cdb418e3495", null ],
+      [ "Context_Menu_Command", "d1/d87/a00689.html#gga4d6799439c0ec1d43d07d64effe58b0ea53c3156f84aa89bb4dbe7b7536d7a708", null ]
+    ] ],
+    [ "MFALevel", "d1/d87/a00689.html#ga7cc6513a715010fe507a269fde186d52", [
+      [ "None", "d1/d87/a00689.html#gga7cc6513a715010fe507a269fde186d52a6adf97f83acf6453d4a6a4b1070f3754", null ],
+      [ "Elevated", "d1/d87/a00689.html#gga7cc6513a715010fe507a269fde186d52a705e67ab9c9c3cf43a821b42f87acbe7", null ]
+    ] ],
+    [ "PermissionOverwritesType", "d1/d87/a00689.html#gab0706e58604685b3231829069ebd95ae", [
+      [ "Role", "d1/d87/a00689.html#ggab0706e58604685b3231829069ebd95aeabbbabdbe1b262f75d99d62880b953be1", null ],
+      [ "User", "d1/d87/a00689.html#ggab0706e58604685b3231829069ebd95aea8f9bfe9d1345237cb3b2b205864da075", null ]
+    ] ],
+    [ "PremiumTier", "d1/d87/a00689.html#ga4f1bac847fbb936c1188ea55e8281e5f", [
+      [ "None", "d1/d87/a00689.html#gga4f1bac847fbb936c1188ea55e8281e5fa6adf97f83acf6453d4a6a4b1070f3754", null ],
+      [ "Tier_1", "d1/d87/a00689.html#gga4f1bac847fbb936c1188ea55e8281e5faff400b9548ad4e3c0fdd67951400c058", null ],
+      [ "Tier_2", "d1/d87/a00689.html#gga4f1bac847fbb936c1188ea55e8281e5faad096762236ed0ffd907fdeff6a0cd33", null ],
+      [ "Tier_3", "d1/d87/a00689.html#gga4f1bac847fbb936c1188ea55e8281e5fa6de260e8112f599174b10135bd12ec64", null ]
+    ] ],
+    [ "PremiumType", "d1/d87/a00689.html#ga20b0597c0eb18775ccf99082c4c425d1", [
+      [ "None", "d1/d87/a00689.html#gga20b0597c0eb18775ccf99082c4c425d1a6adf97f83acf6453d4a6a4b1070f3754", null ],
+      [ "Nitro_Classic", "d1/d87/a00689.html#gga20b0597c0eb18775ccf99082c4c425d1a046e84b0b8cc43bcf88dacd54914fa9f", null ],
+      [ "Nitro", "d1/d87/a00689.html#gga20b0597c0eb18775ccf99082c4c425d1ae3f89d86f9f0d7cadc270dbfb54fc423", null ]
+    ] ],
+    [ "SongType", "d1/d87/a00689.html#aeb7ddb29538e8a25c838de45a6fdb03c", [
+      [ "YouTube", "d1/d87/a00689.html#aeb7ddb29538e8a25c838de45a6fdb03ca8dd1bae8da2e2408210d0656fbe6b7d1", null ],
+      [ "SoundCloud", "d1/d87/a00689.html#aeb7ddb29538e8a25c838de45a6fdb03ca88b9926431274e9059dc41641f1b7874", null ]
+    ] ],
+    [ "StageInstancePrivacyLevel", "d1/d87/a00689.html#ga2d811bf63fc62a193d2cd7a7a8eca1ff", [
+      [ "Public", "d1/d87/a00689.html#gga2d811bf63fc62a193d2cd7a7a8eca1ffa3d067bedfe2f4677470dd6ccf64d05ed", null ],
+      [ "Guild_Only", "d1/d87/a00689.html#gga2d811bf63fc62a193d2cd7a7a8eca1ffacbdc236efc81089d5c3004ca4692391d", null ]
+    ] ],
+    [ "StickerFormatType", "d1/d87/a00689.html#gabd952776f853df67fab00e1562d979ca", [
+      [ "Png", "d1/d87/a00689.html#ggabd952776f853df67fab00e1562d979caaf8fd4f1b5b05c6b1cc6a661141fd4f54", null ],
+      [ "Apng", "d1/d87/a00689.html#ggabd952776f853df67fab00e1562d979caab993f823469a5fb407544d4e3d16a714", null ],
+      [ "Lottie", "d1/d87/a00689.html#ggabd952776f853df67fab00e1562d979caa336ebd54a7345692565a71937b033ff9", null ]
+    ] ],
+    [ "StickerItemType", "d1/d87/a00689.html#ga6b35095215e55f364180b2890a653a54", [
+      [ "Png", "d1/d87/a00689.html#gga6b35095215e55f364180b2890a653a54af8fd4f1b5b05c6b1cc6a661141fd4f54", null ],
+      [ "Apng", "d1/d87/a00689.html#gga6b35095215e55f364180b2890a653a54ab993f823469a5fb407544d4e3d16a714", null ],
+      [ "Lottie", "d1/d87/a00689.html#gga6b35095215e55f364180b2890a653a54a336ebd54a7345692565a71937b033ff9", null ]
+    ] ],
+    [ "StickerType", "d1/d87/a00689.html#gad9e8ad5aee2f4ab0b5a4c518a8d622eb", [
+      [ "Standard", "d1/d87/a00689.html#ggad9e8ad5aee2f4ab0b5a4c518a8d622ebaeb6d8ae6f20283755b339c0dc273988b", null ],
+      [ "Guild", "d1/d87/a00689.html#ggad9e8ad5aee2f4ab0b5a4c518a8d622eba3352be9c843db7e6d2cb865da8f1fbf0", null ]
+    ] ],
+    [ "SystemChannelFlags", "d1/d87/a00689.html#ga736f75efc352392eb96fe15b0a1747c1", [
+      [ "Suppress_Join_Notifications", "d1/d87/a00689.html#gga736f75efc352392eb96fe15b0a1747c1a385cc0e8b49d01cde28ede983515acea", null ],
+      [ "Suppress_Premium_Subscriptions", "d1/d87/a00689.html#gga736f75efc352392eb96fe15b0a1747c1a48ab3b2446e9713349ac1a3135e76525", null ],
+      [ "Suppress_Guild_Reminder_Notifications", "d1/d87/a00689.html#gga736f75efc352392eb96fe15b0a1747c1a25fee8580e8d75671a82bf7b06bfeac8", null ],
+      [ "Suppress_Join_Notification_Replies", "d1/d87/a00689.html#gga736f75efc352392eb96fe15b0a1747c1a0fc64bfea2e40680088cccad4bf4fd11", null ]
+    ] ],
+    [ "TextInputStyle", "d1/d87/a00689.html#ga24a639fa950fb1c20605b41b9adfaa2c", [
+      [ "Short", "d1/d87/a00689.html#gga24a639fa950fb1c20605b41b9adfaa2ca30bb747c98bccdd11b3f89e644c4d0ad", null ],
+      [ "Paragraph", "d1/d87/a00689.html#gga24a639fa950fb1c20605b41b9adfaa2cafeaf0a320c3d678ad30dd179b7d21584", null ]
+    ] ],
+    [ "ThreadAutoArchiveDuration", "d1/d87/a00689.html#ga48e59e19ef217692b12a3fecf522789c", [
+      [ "Shortest", "d1/d87/a00689.html#gga48e59e19ef217692b12a3fecf522789cace42b65744e60ed9b32e7d4f750a66a5", null ],
+      [ "Short", "d1/d87/a00689.html#gga48e59e19ef217692b12a3fecf522789ca30bb747c98bccdd11b3f89e644c4d0ad", null ],
+      [ "Long", "d1/d87/a00689.html#gga48e59e19ef217692b12a3fecf522789ca8394f0347c184cf156ac5924dccb773b", null ],
+      [ "Longest", "d1/d87/a00689.html#gga48e59e19ef217692b12a3fecf522789ca57376768531de0fb2ed2e71e67a91d3d", null ]
+    ] ],
+    [ "ThreadType", "d1/d87/a00689.html#gaaeecc19310ebee08dd8a008fbe20db4d", [
+      [ "Guild_News_Thread", "d1/d87/a00689.html#ggaaeecc19310ebee08dd8a008fbe20db4da06383cce0bb3865d8fb23383629adcec", null ],
+      [ "Guild_Public_Thread", "d1/d87/a00689.html#ggaaeecc19310ebee08dd8a008fbe20db4da1438d08c98f1c5fae9687148fd1bdbb4", null ],
+      [ "Guild_Private_Thread", "d1/d87/a00689.html#ggaaeecc19310ebee08dd8a008fbe20db4da1b9f0c214b7415530f877c6cb0d3e933", null ]
+    ] ],
+    [ "TimeoutDurations", "d1/d87/a00689.html#gabf2b1ab64cdccd4c7e631eaf34e7d749", [
+      [ "None", "d1/d87/a00689.html#ggabf2b1ab64cdccd4c7e631eaf34e7d749a6adf97f83acf6453d4a6a4b1070f3754", null ],
+      [ "Minute", "d1/d87/a00689.html#ggabf2b1ab64cdccd4c7e631eaf34e7d749a62902641c38f3a4a8eb3212454360e24", null ],
+      [ "Five_Minutes", "d1/d87/a00689.html#ggabf2b1ab64cdccd4c7e631eaf34e7d749a9d68a8455d4b76adb8fcadfabffa3d5a", null ],
+      [ "Ten_Minutes", "d1/d87/a00689.html#ggabf2b1ab64cdccd4c7e631eaf34e7d749a86094e65a170b43e58bd03104eb2df89", null ],
+      [ "Hour", "d1/d87/a00689.html#ggabf2b1ab64cdccd4c7e631eaf34e7d749ab55e509c697e4cca0e1d160a7806698f", null ],
+      [ "Day", "d1/d87/a00689.html#ggabf2b1ab64cdccd4c7e631eaf34e7d749a03727ac48595a24daed975559c944a44", null ],
+      [ "Week", "d1/d87/a00689.html#ggabf2b1ab64cdccd4c7e631eaf34e7d749ad2ce009594dcc60befa6a4e6cbeb71fc", null ]
+    ] ],
+    [ "TriggerType", "d1/d87/a00689.html#ga44d3f8351eb0531260b0a92e1ceb4956", [
+      [ "Keyword", "d1/d87/a00689.html#gga44d3f8351eb0531260b0a92e1ceb4956a220f3d3750583b9db48568a0b5b9a5f1", null ],
+      [ "Harmful_Link", "d1/d87/a00689.html#gga44d3f8351eb0531260b0a92e1ceb4956a180cb8bb90ad0b9746e400a51273f504", null ],
+      [ "Spam", "d1/d87/a00689.html#gga44d3f8351eb0531260b0a92e1ceb4956ae9dfd31cc505d51fc26975250750deab", null ],
+      [ "Keyword_Preset", "d1/d87/a00689.html#gga44d3f8351eb0531260b0a92e1ceb4956ad642af5d6e7b111302de50dfb87b8933", null ]
+    ] ],
+    [ "UserFlags", "d1/d87/a00689.html#ga77e977be11fabdf18190c418b8ecf47e", [
+      [ "Staff", "d1/d87/a00689.html#gga77e977be11fabdf18190c418b8ecf47ea8f7f93630c366dc55aec88eb8e9640d0", null ],
+      [ "Partner", "d1/d87/a00689.html#gga77e977be11fabdf18190c418b8ecf47ea6f041af43be87a195bd3f075922f344a", null ],
+      [ "Hypesquad", "d1/d87/a00689.html#gga77e977be11fabdf18190c418b8ecf47ea5fa91d8bae24c13bbb3a74bdce29aa6c", null ],
+      [ "Bug_Hunter_Level_1", "d1/d87/a00689.html#gga77e977be11fabdf18190c418b8ecf47ea116f5fe94bbe7cff4112ef4ff125e830", null ],
+      [ "Hypesquad_Online_House_1", "d1/d87/a00689.html#gga77e977be11fabdf18190c418b8ecf47ea9bbd4e739e8b77eb2b01bf366aa9eb7b", null ],
+      [ "Hypesquad_Online_House_2", "d1/d87/a00689.html#gga77e977be11fabdf18190c418b8ecf47ea9d0210b6d5eb92d4cf441ec50bc6e6f2", null ],
+      [ "Hypesquad_Online_House_3", "d1/d87/a00689.html#gga77e977be11fabdf18190c418b8ecf47eadeb8a6ad9bf4c210bb57d25af3fb503d", null ],
+      [ "Premium_Early_Suppoerter", "d1/d87/a00689.html#gga77e977be11fabdf18190c418b8ecf47ea5e6d8bfd136e3d93730043da75928146", null ],
+      [ "Team_Pseudo_User", "d1/d87/a00689.html#gga77e977be11fabdf18190c418b8ecf47eaa57caa7990c3bf3897e65bc148b56ec1", null ],
+      [ "Bug_Hunter_Level_2", "d1/d87/a00689.html#gga77e977be11fabdf18190c418b8ecf47ea4939c3dc6252469331b76cd5b5b03cb5", null ],
+      [ "Verified_Bot", "d1/d87/a00689.html#gga77e977be11fabdf18190c418b8ecf47eadaf67ed37040a524b392b73f2dd515e2", null ],
+      [ "Verified_Developer", "d1/d87/a00689.html#gga77e977be11fabdf18190c418b8ecf47ea71ecd29535af2b28de35a66befef7b63", null ],
+      [ "Certified_Moderator", "d1/d87/a00689.html#gga77e977be11fabdf18190c418b8ecf47eab1a8088597e371112e0fd59ea52442be", null ],
+      [ "Bot_Http_Interactions", "d1/d87/a00689.html#gga77e977be11fabdf18190c418b8ecf47ea0a1b83640fd04c6090488f4cd8ef9dd2", null ],
+      [ "Bot", "d1/d87/a00689.html#gga77e977be11fabdf18190c418b8ecf47ea1448e86d90e0feb307c2894c24e87767", null ],
+      [ "MFAEnabled", "d1/d87/a00689.html#gga77e977be11fabdf18190c418b8ecf47eab2269d5a2b59a5bb6e3446762ae528ca", null ],
+      [ "System", "d1/d87/a00689.html#gga77e977be11fabdf18190c418b8ecf47eaa45da96d0bf6575970f2d27af22be28a", null ],
+      [ "Verified", "d1/d87/a00689.html#gga77e977be11fabdf18190c418b8ecf47ea3f68e67dc6c397aaa9d1c24c356f754f", null ]
+    ] ],
+    [ "VerificationLevel", "d1/d87/a00689.html#ga2e8030ba5c8a6dcc6b24c051962ef1a7", [
+      [ "None", "d1/d87/a00689.html#gga2e8030ba5c8a6dcc6b24c051962ef1a7a6adf97f83acf6453d4a6a4b1070f3754", null ],
+      [ "Low", "d1/d87/a00689.html#gga2e8030ba5c8a6dcc6b24c051962ef1a7a28d0edd045e05cf5af64e35ae0c4c6ef", null ],
+      [ "Medium", "d1/d87/a00689.html#gga2e8030ba5c8a6dcc6b24c051962ef1a7a87f8a6ab85c9ced3702b4ea641ad4bb5", null ],
+      [ "High", "d1/d87/a00689.html#gga2e8030ba5c8a6dcc6b24c051962ef1a7a655d20c1ca69519ca647684edbb2db35", null ],
+      [ "Very_High", "d1/d87/a00689.html#gga2e8030ba5c8a6dcc6b24c051962ef1a7ae411c3237ad9a9550f204f1abcdb2cf9", null ]
+    ] ],
+    [ "WebHookType", "d1/d87/a00689.html#gaa14bdcbaa0bcbe349cccdd4f52f80611", [
+      [ "Incoming", "d1/d87/a00689.html#ggaa14bdcbaa0bcbe349cccdd4f52f80611a589ab34e870b80c8c7d035805452df19", null ],
+      [ "Channel_Follower", "d1/d87/a00689.html#ggaa14bdcbaa0bcbe349cccdd4f52f80611a80e870b1f1fa34a678793609e89272ef", null ],
+      [ "Application", "d1/d87/a00689.html#ggaa14bdcbaa0bcbe349cccdd4f52f80611ae498749f3c42246d50b15c81c101d988", null ]
+    ] ],
+    [ "WidgetStyleOptions", "d1/d87/a00689.html#ga91580f718416635d54374c2b956c9826", [
+      [ "Shield", "d1/d87/a00689.html#gga91580f718416635d54374c2b956c9826a970da5f1f2e32aeb9e488dd017160ab4", null ],
+      [ "Banner1", "d1/d87/a00689.html#gga91580f718416635d54374c2b956c9826a9713d3e30be4096f6520df83b1c91147", null ],
+      [ "Banner2", "d1/d87/a00689.html#gga91580f718416635d54374c2b956c9826ad0504f5853ddaa517a1ecc0bb45d81c0", null ],
+      [ "Banner3", "d1/d87/a00689.html#gga91580f718416635d54374c2b956c9826ae491b0d3b97385f2557b959b40bc79cf", null ],
+      [ "Banner4", "d1/d87/a00689.html#gga91580f718416635d54374c2b956c9826a1e3c05e514226408276104213a104c30", null ]
+    ] ]
 ];
