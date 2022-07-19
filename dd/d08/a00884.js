@@ -1,6 +1,6 @@
 var a00884 =
 [
-    [ "ApplicationCommands", "d3/dac/a01777.html", [
+    [ "DiscordCoreAPI::ApplicationCommands", "d3/dac/a01777.html", [
       [ "bulkOverwriteGlobalApplicationCommandsAsync", "d3/dac/a01777.html#ae0ac20f309bdeb3a188f312d19f22f66", null ],
       [ "bulkOverwriteGuildApplicationCommandsAsync", "d3/dac/a01777.html#a476fe588c539f2be447b3b9299f75bef", null ],
       [ "createGlobalApplicationCommandAsync", "d3/dac/a01777.html#a2e8f9f3ef861ffc072a042520f66afbf", null ],
@@ -17,14 +17,14 @@ var a00884 =
       [ "getGuildApplicationCommandPermissionsAsync", "d3/dac/a01777.html#a26a0d7ac16906632764ecd003e5253bc", null ],
       [ "getGuildApplicationCommandsAsync", "d3/dac/a01777.html#a038ea064d3458d653c1d82b22adf3469", null ]
     ] ],
-    [ "AutoModerationRules", "d7/d9c/a01885.html", [
+    [ "DiscordCoreAPI::AutoModerationRules", "d7/d9c/a01885.html", [
       [ "createAutoModerationRuleAsync", "d7/d9c/a01885.html#adcb0fa3546c3d69e2ef4a35d259a82b8", null ],
       [ "deleteAutoModerationRuleAsync", "d7/d9c/a01885.html#a37a7731296c84ff214a5a7b5a39eb33d", null ],
       [ "getAutoModerationRuleAsync", "d7/d9c/a01885.html#affbd5c9c96a9a72f4688b5ee0d9fc147", null ],
       [ "listAutoModerationRulesForGuildAsync", "d7/d9c/a01885.html#aee4c5b9b32aae54757b8785feebe51ac", null ],
       [ "modifyAutoModerationRuleAsync", "d7/d9c/a01885.html#ab7a4fbe20919f1c9f3d1173d89fc946a", null ]
     ] ],
-    [ "Channels", "d9/d97/a01953.html", [
+    [ "DiscordCoreAPI::Channels", "d9/d97/a01953.html", [
       [ "createChannelInviteAsync", "d9/d97/a01953.html#ad53f53d8cd3df6c153ca55a3ba16cdb9", null ],
       [ "createDMChannelAsync", "d9/d97/a01953.html#a2568da4022758588bc3bceabce222176", null ],
       [ "createGuildChannelAsync", "d9/d97/a01953.html#ad648b51e2ee272a242b5908f59793810", null ],
@@ -41,7 +41,7 @@ var a00884 =
       [ "modifyGuildChannelPositionsAsync", "d9/d97/a01953.html#a39d7cd4a8b2ec68b22a63f8c5593b466", null ],
       [ "triggerTypingIndicatorAsync", "d9/d97/a01953.html#aa2f5824c478b0b846f1786589ea9d790", null ]
     ] ],
-    [ "DiscordCoreClient", "dc/d67/a01989.html", [
+    [ "DiscordCoreAPI::DiscordCoreClient", "dc/d67/a01989.html", [
       [ "DiscordCoreClient", "dc/d67/a01989.html#a4c93ae396a2b001dbcec2c7e6f5fae3d", null ],
       [ "getBotUser", "dc/d67/a01989.html#a497b6ef5b6407f58be5c6c6e85389fea", null ],
       [ "getCommandController", "dc/d67/a01989.html#a3b38ae015bff5fcca39cfca718f98227", null ],
@@ -49,7 +49,7 @@ var a00884 =
       [ "registerFunction", "dc/d67/a01989.html#ab60851535bdb429ce7adf823acff1fa2", null ],
       [ "runBot", "dc/d67/a01989.html#a78a2649f034ff89e98f56a32092debfb", null ]
     ] ],
-    [ "GuildMembers", "d6/def/a03033.html", [
+    [ "DiscordCoreAPI::GuildMembers", "d6/def/a03033.html", [
       [ "addGuildMemberAsync", "d6/def/a03033.html#ad4821e7d933f2c3888e36c8ccacdcc9d", null ],
       [ "getCachedGuildMemberAsync", "d6/def/a03033.html#a8985a29afb27c8e010bcf581528e5559", null ],
       [ "getGuildMemberAsync", "d6/def/a03033.html#a997c281bf11d3d686116c2f6dc35bf5b", null ],
@@ -60,7 +60,7 @@ var a00884 =
       [ "searchGuildMembersAsync", "d6/def/a03033.html#a00b43621204ad484c198a5b0079a5bf5", null ],
       [ "timeoutGuildMemberAsync", "d6/def/a03033.html#a88420174e234c67b17f7760adb8beda9", null ]
     ] ],
-    [ "Guilds", "d4/d69/a02989.html", [
+    [ "DiscordCoreAPI::Guilds", "d4/d69/a02989.html", [
       [ "beginGuildPruneAsync", "d4/d69/a02989.html#aa2d51bc7f3963bc3296e0e8d5d7567b8", null ],
       [ "createGuildAsync", "d4/d69/a02989.html#af91a3c525c4433765db105375f0b2732", null ],
       [ "createGuildBanAsync", "d4/d69/a02989.html#afce7ce5b805a63355cf0923eb3a94830", null ],
@@ -98,7 +98,7 @@ var a00884 =
       [ "removeGuildBanAsync", "d4/d69/a02989.html#a2cc3591c19ec26f361b7a098cbacc0c8", null ],
       [ "syncGuildTemplateAsync", "d4/d69/a02989.html#a1d4ac75c234991c6de6cf59aa48436c8", null ]
     ] ],
-    [ "GuildScheduledEvents", "d4/d44/a03065.html", [
+    [ "DiscordCoreAPI::GuildScheduledEvents", "d4/d44/a03065.html", [
       [ "createGuildScheduledEventAsync", "d4/d44/a03065.html#acc050e5ec32df19e89bc830d81309d22", null ],
       [ "deleteGuildScheduledEventAsync", "d4/d44/a03065.html#ac19b7f8d04c89fd3039af6a63c74cc7f", null ],
       [ "getGuildScheduledEventAsync", "d4/d44/a03065.html#a881a89676af1ca29ea1e30615e8f6d8f", null ],
@@ -106,11 +106,11 @@ var a00884 =
       [ "getGuildScheduledEventUsersAsync", "d4/d44/a03065.html#a90fd12d61cf3ec715f60ee803e513c10", null ],
       [ "modifyGuildScheduledEventAsync", "d4/d44/a03065.html#a765031f7e7b71f9df5f5f879c9ba78dc", null ]
     ] ],
-    [ "InputEvents", "df/d92/a03097.html", [
+    [ "DiscordCoreAPI::InputEvents", "df/d92/a03097.html", [
       [ "deleteInputEventResponseAsync", "df/d92/a03097.html#a721365d0ef437397ea553634f88b8ecf", null ],
       [ "respondToInputEventAsync", "df/d92/a03097.html#a91f7a025c00ec5b858a260ebcda49a3c", null ]
     ] ],
-    [ "Interactions", "db/d44/a03153.html", [
+    [ "DiscordCoreAPI::Interactions", "db/d44/a03153.html", [
       [ "createFollowUpMessageAsync", "db/d44/a03153.html#a16dc393d99f60c329062ef044e293668", null ],
       [ "createInteractionResponseAsync", "db/d44/a03153.html#a96fa0622732afc279a659ecfcee4c6ae", null ],
       [ "deleteFollowUpMessageAsync", "db/d44/a03153.html#a4f96f93f629527358ad27c06bd469f9b", null ],
@@ -120,7 +120,7 @@ var a00884 =
       [ "getFollowUpMessageAsync", "db/d44/a03153.html#a4ef30660bd193930a52b04c04ca1b361", null ],
       [ "getInteractionResponseAsync", "db/d44/a03153.html#acc9ea91a4e4ecd6c2e7970f684dfc3b6", null ]
     ] ],
-    [ "Messages", "dc/dc7/a03241.html", [
+    [ "DiscordCoreAPI::Messages", "dc/dc7/a03241.html", [
       [ "createMessageAsync", "dc/dc7/a03241.html#a64d985c14562deb99044d9eab00d0379", null ],
       [ "crosspostMessageAsync", "dc/dc7/a03241.html#ac85138fd763e3e08d36fe62162f68140", null ],
       [ "deleteMessageAsync", "dc/dc7/a03241.html#a9843730873822b1da5e548cc53907943", null ],
@@ -132,7 +132,7 @@ var a00884 =
       [ "pinMessageAsync", "dc/dc7/a03241.html#ac7c1fbd9e4497c5065bc677d1ba3b057", null ],
       [ "unpinMessageAsync", "dc/dc7/a03241.html#ae6218ef539d4c35f740b52d9fa117070", null ]
     ] ],
-    [ "Reactions", "da/d0a/a03297.html", [
+    [ "DiscordCoreAPI::Reactions", "da/d0a/a03297.html", [
       [ "createGuildEmojiAsync", "da/d0a/a03297.html#a93b206a8364fb192a0f31d64a4fcb808", null ],
       [ "createReactionAsync", "da/d0a/a03297.html#a37bcfef2edf8755fbb3679ff329fb9db", null ],
       [ "deleteAllReactionsAsync", "da/d0a/a03297.html#a76dd197c8439e252e45ffbc3d0ccacf2", null ],
@@ -145,7 +145,7 @@ var a00884 =
       [ "getReactionsAsync", "da/d0a/a03297.html#a1ce4d89305a9c66f7383dcd155182a49", null ],
       [ "modifyGuildEmojiAsync", "da/d0a/a03297.html#abbd45263fa54325fa562a90f9bf09415", null ]
     ] ],
-    [ "Roles", "d6/df3/a03349.html", [
+    [ "DiscordCoreAPI::Roles", "d6/df3/a03349.html", [
       [ "addGuildMemberRoleAsync", "d6/df3/a03349.html#a86593bf90dd5403f05984dc712321d25", null ],
       [ "createGuildRoleAsync", "d6/df3/a03349.html#afdfd3fb636d652e1819007f162d18fc6", null ],
       [ "getCachedRoleAsync", "d6/df3/a03349.html#a7cdfc6e07d7950d25399ea9e88852d1b", null ],
@@ -157,13 +157,13 @@ var a00884 =
       [ "removeGuildMemberRoleAsync", "d6/df3/a03349.html#a0b41fe375a1f1deb56a972884b33782d", null ],
       [ "removeGuildRoleAsync", "d6/df3/a03349.html#afac2427df8e9af161a741340e51cdc85", null ]
     ] ],
-    [ "StageInstances", "d0/d19/a03433.html", [
+    [ "DiscordCoreAPI::StageInstances", "d0/d19/a03433.html", [
       [ "createStageInstanceAsync", "d0/d19/a03433.html#aa4ba46b360f8715672601543bd11bf7f", null ],
       [ "deleteStageInstanceAsync", "d0/d19/a03433.html#aaffccd20e15a5005c628eaf5fd24f30e", null ],
       [ "getStageInstanceAsync", "d0/d19/a03433.html#a26cd124cec9c5547f35208c2a2d21e16", null ],
       [ "modifyStageInstanceAsync", "d0/d19/a03433.html#a8e994f6f5e049f31b398897f2cbd9da6", null ]
     ] ],
-    [ "Stickers", "da/da5/a03465.html", [
+    [ "DiscordCoreAPI::Stickers", "da/da5/a03465.html", [
       [ "createGuildStickerAsync", "da/da5/a03465.html#aaa0cd3527695c14978aa65dbbabcdc18", null ],
       [ "deleteGuildStickerAsync", "da/da5/a03465.html#aee89d4a62c280fcfb2f76b4b8e5a8545", null ],
       [ "getGuildStickersAsync", "da/da5/a03465.html#a675b23a029eb81186f48f4399d9543c5", null ],
@@ -171,7 +171,7 @@ var a00884 =
       [ "getStickerAsync", "da/da5/a03465.html#a38466742178dbe6d223afdf5e7298bcf", null ],
       [ "modifyGuildStickerAsync", "da/da5/a03465.html#a35d9b84cb021bfadf355ef52c8d730af", null ]
     ] ],
-    [ "Threads", "d0/d33/a03529.html", [
+    [ "DiscordCoreAPI::Threads", "d0/d33/a03529.html", [
       [ "addThreadMemberAsync", "d0/d33/a03529.html#a8a21f838d60723b058ef8da7b42a7e9e", null ],
       [ "getActiveGuildThreadsAsync", "d0/d33/a03529.html#a80eee596b5aae97451f08fb19e085e39", null ],
       [ "getActiveThreadsAsync", "d0/d33/a03529.html#a1584dcebbb864acb1d81e3a19af12111", null ],
@@ -187,7 +187,7 @@ var a00884 =
       [ "startThreadWithMessageAsync", "d0/d33/a03529.html#a2e50a6854ed8eb277cd55eab8e587a33", null ],
       [ "startThreadWithoutMessageAsync", "d0/d33/a03529.html#a4bf88758ae5c6a9ca970106ee3a939fe", null ]
     ] ],
-    [ "Users", "d1/d3c/a03589.html", [
+    [ "DiscordCoreAPI::Users", "d1/d3c/a03589.html", [
       [ "addRecipientToGroupDMAsync", "d1/d3c/a03589.html#a6460eb43e547eaf8d66330f5dd821ff0", null ],
       [ "getCachedUserAsync", "d1/d3c/a03589.html#a01ba31f6c4c93a6716eb56afffe4a608", null ],
       [ "getCurrentUserApplicationInfoAsync", "d1/d3c/a03589.html#a14736cb0de3edc3e688da6952f953a6a", null ],
@@ -200,7 +200,7 @@ var a00884 =
       [ "modifyUserVoiceStateAsync", "d1/d3c/a03589.html#a9bc23f2edc1f745617828066f7bf4503", null ],
       [ "removeRecipientFromGroupDMAsync", "d1/d3c/a03589.html#ad6f6ccecbcdbdb889b73dcc85b0d60b0", null ]
     ] ],
-    [ "WebHooks", "dd/df6/a03713.html", [
+    [ "DiscordCoreAPI::WebHooks", "dd/df6/a03713.html", [
       [ "createWebHookAsync", "dd/df6/a03713.html#ac460613237e4e459dcb10c35ed83334a", null ],
       [ "deleteWebHookAsync", "dd/df6/a03713.html#ab0efbc341f9ad7ccf1ca9b0de7692539", null ],
       [ "deleteWebHookMessageAsync", "dd/df6/a03713.html#a45291460fa463240a93e01a933e09753", null ],
