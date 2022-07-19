@@ -629,7 +629,7 @@ $(document).ready(function(){initNavTree('dd/db2/a00866_source.html','../../'); 
 <div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span>                    <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span>                }</div>
 <div class="line"><a id="l00524" name="l00524"></a><span class="lineno">  524</span>                <span class="keywordflow">case</span> HttpsState::Collecting_Contents: {</div>
-<div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span>                    <span class="keywordflow">if</span> (<span class="keyword">static_cast&lt;</span>int64_t<span class="keyword">&gt;</span>(theConnection.inputBufferReal.size()) &gt;= theData.contentSize &amp;&amp; !theConnection.parseChunk(theData, theConnection.inputBufferReal) ||</div>
+<div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span>                    <span class="keywordflow">if</span> ((<span class="keyword">static_cast&lt;</span>int64_t<span class="keyword">&gt;</span>(theConnection.inputBufferReal.size()) &gt;= theData.contentSize &amp;&amp; !theConnection.parseChunk(theData, theConnection.inputBufferReal)) ||</div>
 <div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span>                        stopWatch.hasTimePassed() || (theData.responseCode == -5 &amp;&amp; theData.contentSize == -5)) {</div>
 <div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span>                        doWeBreak = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00528" name="l00528"></a><span class="lineno">  528</span>                        <span class="keywordflow">break</span>;</div>
@@ -639,10 +639,11 @@ $(document).ready(function(){initNavTree('dd/db2/a00866_source.html','../../'); 
 <div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span>            <span class="keywordflow">if</span> (doWeBreak) {</div>
 <div class="line"><a id="l00533" name="l00533"></a><span class="lineno">  533</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00534" name="l00534"></a><span class="lineno">  534</span>            }</div>
-<div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span>        }</div>
-<div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span>        <span class="keywordflow">return</span> theConnection.finalizeReturnValues(theData, rateLimitData);</div>
-<div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span>    }</div>
-<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>}</div>
+<div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span>            std::this_thread::sleep_for(1ms);</div>
+<div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span>        }</div>
+<div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span>        <span class="keywordflow">return</span> theConnection.finalizeReturnValues(theData, rateLimitData);</div>
+<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>    }</div>
+<div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>}</div>
 <div class="ttc" id="aa00686_html"><div class="ttname"><a href="../../df/d9e/a00686.html">Https.hpp</a></div></div>
 <div class="ttc" id="aa00707_html"><div class="ttname"><a href="../../d1/d56/a00707.html">DiscordCoreClient.hpp</a></div></div>
 <div class="ttc" id="aa00761_html"><div class="ttname"><a href="../../d3/d4f/a00761.html">ThreadPool.hpp</a></div></div>

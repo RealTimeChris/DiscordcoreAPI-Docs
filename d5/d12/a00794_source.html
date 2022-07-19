@@ -753,181 +753,184 @@ $(document).ready(function(){initNavTree('d5/d12/a00794_source.html','../../'); 
 <div class="line"><a id="l00646" name="l00646"></a><span class="lineno">  646</span>                        *value.interactionData = *selectMenuInteractionData;</div>
 <div class="line"><a id="l00647" name="l00647"></a><span class="lineno">  647</span>                    }</div>
 <div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span>                }</div>
-<div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span>            }</div>
-<div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span>        }</div>
-<div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>        SelectMenuCollector::selectMenuInteractionBufferMap.erase(this-&gt;bufferMapKey);</div>
-<div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span>    }</div>
-<div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span> </div>
-<div class="line"><a id="l00654" name="l00654"></a><span class="lineno"><a class="line" href="../../dc/d10/a03169.html#ac243db78f0fe0ce88c8c428110d77c37">  654</a></span>    <a class="code hl_class" href="../../dc/d10/a03169.html">ButtonCollector::ButtonCollector</a>(<a class="code hl_class" href="../../d9/d95/a02781.html">InputEventData</a>&amp; dataPackage) {</div>
-<div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span>        this-&gt;channelId = dataPackage.<a class="code hl_function" href="../../d9/d95/a02781.html#a97c397fe274250bfff73cf674810a8f5">getChannelId</a>();</div>
-<div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span>        this-&gt;messageId = dataPackage.<a class="code hl_function" href="../../d9/d95/a02781.html#af7be2b81b312794ea5398591d1a7e305">getMessageId</a>();</div>
-<div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span>        *this-&gt;interactionData = dataPackage.<a class="code hl_function" href="../../d9/d95/a02781.html#a520bbb225cdbd19ef871d3a00189acff">getInteractionData</a>();</div>
-<div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span>        this-&gt;bufferMapKey = std::to_string(this-&gt;channelId) + std::to_string(this-&gt;messageId);</div>
-<div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span>        ButtonCollector::buttonInteractionBufferMap[this-&gt;bufferMapKey] = &amp;this-&gt;buttonIncomingInteractionBuffer;</div>
-<div class="line"><a id="l00660" name="l00660"></a><span class="lineno">  660</span>    }</div>
-<div class="line"><a id="l00661" name="l00661"></a><span class="lineno">  661</span> </div>
-<div class="line"><a id="l00662" name="l00662"></a><span class="lineno"><a class="line" href="../../dc/d10/a03169.html#a0eecf8f131b659cf758266ce6472f4a9">  662</a></span>    <a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine&lt;std::vector&lt;ButtonResponseData&gt;</a>&gt; <a class="code hl_function" href="../../dc/d10/a03169.html#a0eecf8f131b659cf758266ce6472f4a9">ButtonCollector::collectButtonData</a>(<span class="keywordtype">bool</span> getButtonDataForAllNew, int32_t maxWaitTimeInMsNew, int32_t maxNumberOfPressesNew,</div>
-<div class="line"><a id="l00663" name="l00663"></a><span class="lineno">  663</span>        uint64_t targetUser) {</div>
-<div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span>        <span class="keyword">co_await</span> NewThreadAwaitable&lt;std::vector&lt;ButtonResponseData&gt;&gt;();</div>
-<div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span>        <span class="keywordflow">if</span> (targetUser == 0 &amp;&amp; !getButtonDataForAllNew) {</div>
-<div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span>            <span class="keywordflow">throw</span> std::runtime_error{ <span class="stringliteral">&quot;ButtonCollector::collectButtonData(), You&#39;ve failed to &quot;</span></div>
-<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span>                                      <span class="stringliteral">&quot;properly set the collectButtonData() parameters!\n\n&quot;</span> };</div>
-<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>        }</div>
-<div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span>        <span class="keywordflow">if</span> (targetUser != 0) {</div>
-<div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span>            this-&gt;userId = targetUser;</div>
-<div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span>        }</div>
-<div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span>        this-&gt;maxCollectedButtonCount = maxNumberOfPressesNew;</div>
-<div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span>        this-&gt;getButtonDataForAll = getButtonDataForAllNew;</div>
-<div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span>        this-&gt;maxTimeInMs = maxWaitTimeInMsNew;</div>
-<div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span>        this-&gt;run();</div>
-<div class="line"><a id="l00676" name="l00676"></a><span class="lineno">  676</span>        <span class="keyword">co_return</span> this-&gt;responseVector;</div>
-<div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span>    }</div>
-<div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span> </div>
-<div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span>    ButtonCollector::~ButtonCollector() {</div>
-<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span>        <span class="keywordflow">if</span> (ButtonCollector::buttonInteractionBufferMap.contains(this-&gt;bufferMapKey)) {</div>
-<div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span>            ButtonCollector::buttonInteractionBufferMap.erase(this-&gt;bufferMapKey);</div>
-<div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span>        }</div>
-<div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span>    }</div>
-<div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span> </div>
-<div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span>    <span class="keywordtype">void</span> ButtonCollector::run() {</div>
-<div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span>        StopWatch theStopWatch{ std::chrono::milliseconds{ this-&gt;maxTimeInMs } };</div>
-<div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span>        <span class="keywordflow">while</span> (!this-&gt;doWeQuit &amp;&amp; !theStopWatch.hasTimePassed()) {</div>
-<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span>            <span class="keywordflow">if</span> (this-&gt;getButtonDataForAll == <span class="keyword">false</span>) {</div>
-<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span>                <span class="keyword">auto</span> buttonInteractionData = std::make_unique&lt;InteractionData&gt;();</div>
-<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span>                <span class="keywordflow">if</span> (waitForTimeToPass(this-&gt;buttonIncomingInteractionBuffer, *buttonInteractionData.get(), this-&gt;maxTimeInMs)) {</div>
-<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span>                    this-&gt;buttonId = <span class="stringliteral">&quot;empty&quot;</span>;</div>
-<div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span>                    <span class="keyword">auto</span> response = std::make_unique&lt;ButtonResponseData&gt;();</div>
-<div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span>                    response-&gt;buttonId = this-&gt;buttonId;</div>
-<div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span>                    response-&gt;channelId = this-&gt;channelId;</div>
-<div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span>                    response-&gt;messageId = this-&gt;messageId;</div>
-<div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span>                    response-&gt;userId = buttonInteractionData-&gt;user.id;</div>
-<div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span>                    *response-&gt;interactionData = *this-&gt;interactionData;</div>
-<div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span>                    this-&gt;responseVector.push_back(*response);</div>
-<div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span>                }</div>
-<div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span>                <span class="keywordflow">if</span> (buttonInteractionData-&gt;user.id != this-&gt;userId) {</div>
-<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span>                    <span class="keyword">auto</span> createResponseData = std::make_unique&lt;CreateInteractionResponseData&gt;(*buttonInteractionData);</div>
-<div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span>                    <span class="keyword">auto</span> embedData = std::make_unique&lt;EmbedData&gt;();</div>
-<div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span>                    embedData-&gt;setColor(<span class="stringliteral">&quot;FEFEFE&quot;</span>);</div>
-<div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span>                    embedData-&gt;setTitle(<span class="stringliteral">&quot;__**Permission Issue:**__&quot;</span>);</div>
-<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span>                    embedData-&gt;setTimeStamp(<a class="code hl_function" href="../../dd/d94/a00888.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
-<div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span>                    embedData-&gt;setDescription(<span class="stringliteral">&quot;Sorry, but that button can only be pressed by &lt;@&quot;</span> + std::to_string(this-&gt;userId) + <span class="stringliteral">&quot;&gt;!&quot;</span>);</div>
-<div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span>                    createResponseData-&gt;data.data.embeds.push_back(*embedData);</div>
-<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span>                    createResponseData-&gt;data.data.flags = 64;</div>
-<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span>                    createResponseData-&gt;data.type = <a class="code hl_enumvalue" href="../../dd/d94/a00888.html#ggaf9e947457ef4ec645c7d8e157b74534cabd2a1c7dcd30de42328da736f2f3f6e8">InteractionCallbackType::Channel_Message_With_Source</a>;</div>
-<div class="line"><a id="l00711" name="l00711"></a><span class="lineno">  711</span>                    <a class="code hl_function" href="../../db/d44/a03153.html#a96fa0622732afc279a659ecfcee4c6ae">Interactions::createInteractionResponseAsync</a>(*createResponseData).get();</div>
-<div class="line"><a id="l00712" name="l00712"></a><span class="lineno">  712</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00713" name="l00713"></a><span class="lineno">  713</span>                    *this-&gt;interactionData = *buttonInteractionData;</div>
-<div class="line"><a id="l00714" name="l00714"></a><span class="lineno">  714</span>                    this-&gt;buttonId = buttonInteractionData-&gt;data.componentData.customId;</div>
-<div class="line"><a id="l00715" name="l00715"></a><span class="lineno">  715</span>                    <span class="keyword">auto</span> response = std::make_unique&lt;ButtonResponseData&gt;();</div>
-<div class="line"><a id="l00716" name="l00716"></a><span class="lineno">  716</span>                    response-&gt;buttonId = this-&gt;buttonId;</div>
-<div class="line"><a id="l00717" name="l00717"></a><span class="lineno">  717</span>                    response-&gt;channelId = this-&gt;channelId;</div>
-<div class="line"><a id="l00718" name="l00718"></a><span class="lineno">  718</span>                    response-&gt;messageId = this-&gt;messageId;</div>
-<div class="line"><a id="l00719" name="l00719"></a><span class="lineno">  719</span>                    response-&gt;userId = buttonInteractionData-&gt;user.id;</div>
-<div class="line"><a id="l00720" name="l00720"></a><span class="lineno">  720</span>                    *response-&gt;interactionData = *buttonInteractionData;</div>
-<div class="line"><a id="l00721" name="l00721"></a><span class="lineno">  721</span>                    this-&gt;responseVector.push_back(*response);</div>
-<div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span>                    this-&gt;currentCollectedButtonCount++;</div>
-<div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span>                    theStopWatch.resetTimer();</div>
-<div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span>                    <span class="keywordflow">if</span> (this-&gt;maxCollectedButtonCount &gt; 1 &amp;&amp; this-&gt;currentCollectedButtonCount &lt; this-&gt;maxCollectedButtonCount) {</div>
-<div class="line"><a id="l00725" name="l00725"></a><span class="lineno">  725</span>                        <span class="keyword">auto</span> createResponseData = std::make_unique&lt;CreateInteractionResponseData&gt;(*buttonInteractionData);</div>
-<div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span>                        createResponseData-&gt;data.type = <a class="code hl_enumvalue" href="../../dd/d94/a00888.html#ggaf9e947457ef4ec645c7d8e157b74534cabee74b6d5c8bd9bdf99062eaaaae8c38">InteractionCallbackType::Deferred_Update_Message</a>;</div>
-<div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span>                        <a class="code hl_function" href="../../db/d44/a03153.html#a96fa0622732afc279a659ecfcee4c6ae">Interactions::createInteractionResponseAsync</a>(*createResponseData).get();</div>
-<div class="line"><a id="l00728" name="l00728"></a><span class="lineno">  728</span>                    }</div>
-<div class="line"><a id="l00729" name="l00729"></a><span class="lineno">  729</span>                    <span class="keywordflow">if</span> (this-&gt;currentCollectedButtonCount &gt;= this-&gt;maxCollectedButtonCount) {</div>
-<div class="line"><a id="l00730" name="l00730"></a><span class="lineno">  730</span>                        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; value: this-&gt;responseVector) {</div>
-<div class="line"><a id="l00731" name="l00731"></a><span class="lineno">  731</span>                            *value.interactionData = *buttonInteractionData;</div>
-<div class="line"><a id="l00732" name="l00732"></a><span class="lineno">  732</span>                        }</div>
-<div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span>                        doWeQuit = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span>                    }</div>
-<div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span>                }</div>
-<div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span>                <span class="keyword">auto</span> buttonInteractionData = std::make_unique&lt;InteractionData&gt;();</div>
-<div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>                <span class="keywordflow">if</span> (waitForTimeToPass(this-&gt;buttonIncomingInteractionBuffer, *buttonInteractionData.get(), this-&gt;maxTimeInMs)) {</div>
-<div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span>                    this-&gt;buttonId = <span class="stringliteral">&quot;empty&quot;</span>;</div>
-<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span>                    <span class="keyword">auto</span> response = std::make_unique&lt;ButtonResponseData&gt;();</div>
-<div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span>                    response-&gt;buttonId = this-&gt;buttonId;</div>
-<div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span>                    response-&gt;channelId = this-&gt;channelId;</div>
-<div class="line"><a id="l00743" name="l00743"></a><span class="lineno">  743</span>                    response-&gt;messageId = this-&gt;messageId;</div>
-<div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span>                    response-&gt;userId = buttonInteractionData-&gt;user.id;</div>
-<div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span>                    *response-&gt;interactionData = *buttonInteractionData;</div>
-<div class="line"><a id="l00746" name="l00746"></a><span class="lineno">  746</span>                    this-&gt;responseVector.push_back(*response);</div>
-<div class="line"><a id="l00747" name="l00747"></a><span class="lineno">  747</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span>                }</div>
-<div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span>                *this-&gt;interactionData = *buttonInteractionData;</div>
-<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>                this-&gt;buttonId = buttonInteractionData-&gt;data.componentData.customId;</div>
-<div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span>                <span class="keyword">auto</span> response = std::make_unique&lt;ButtonResponseData&gt;();</div>
-<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span>                response-&gt;buttonId = this-&gt;buttonId;</div>
-<div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>                response-&gt;channelId = this-&gt;channelId;</div>
-<div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span>                response-&gt;messageId = this-&gt;messageId;</div>
-<div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span>                response-&gt;userId = buttonInteractionData-&gt;user.id;</div>
-<div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span>                *response-&gt;interactionData = *buttonInteractionData;</div>
-<div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span>                this-&gt;responseVector.push_back(*response);</div>
-<div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span>                this-&gt;currentCollectedButtonCount++;</div>
-<div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span>                theStopWatch.resetTimer();</div>
-<div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span>                <span class="keywordflow">if</span> (this-&gt;maxCollectedButtonCount &gt; 1 &amp;&amp; this-&gt;currentCollectedButtonCount &lt; this-&gt;maxCollectedButtonCount) {</div>
-<div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span>                    <span class="keyword">auto</span> createResponseData = std::make_unique&lt;CreateInteractionResponseData&gt;(*buttonInteractionData);</div>
-<div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span>                    createResponseData-&gt;data.type = <a class="code hl_enumvalue" href="../../dd/d94/a00888.html#ggaf9e947457ef4ec645c7d8e157b74534cabee74b6d5c8bd9bdf99062eaaaae8c38">InteractionCallbackType::Deferred_Update_Message</a>;</div>
-<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span>                    <a class="code hl_function" href="../../db/d44/a03153.html#a96fa0622732afc279a659ecfcee4c6ae">Interactions::createInteractionResponseAsync</a>(*createResponseData).get();</div>
-<div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span>                }</div>
-<div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span>                <span class="keywordflow">if</span> (this-&gt;currentCollectedButtonCount &gt;= this-&gt;maxCollectedButtonCount) {</div>
-<div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span>                    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; value: this-&gt;responseVector) {</div>
-<div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span>                        *value.interactionData = *buttonInteractionData;</div>
-<div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span>                    }</div>
-<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span>                    this-&gt;doWeQuit = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span>                }</div>
-<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>            }</div>
-<div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span>        }</div>
-<div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span>        ButtonCollector::buttonInteractionBufferMap.erase(this-&gt;bufferMapKey);</div>
-<div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span>    }</div>
-<div class="line"><a id="l00775" name="l00775"></a><span class="lineno">  775</span> </div>
-<div class="line"><a id="l00776" name="l00776"></a><span class="lineno"><a class="line" href="../../d7/d90/a03177.html#a7eeb5804fc42207c363474e79cbd7fa4">  776</a></span>    <a class="code hl_class" href="../../d7/d90/a03177.html">ModalCollector::ModalCollector</a>(<a class="code hl_class" href="../../d9/d95/a02781.html">InputEventData</a>&amp; dataPackage) {</div>
-<div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span>        this-&gt;channelId = dataPackage.<a class="code hl_function" href="../../d9/d95/a02781.html#a97c397fe274250bfff73cf674810a8f5">getChannelId</a>();</div>
-<div class="line"><a id="l00778" name="l00778"></a><span class="lineno">  778</span>        ModalCollector::modalInteractionBufferMap[std::to_string(this-&gt;channelId)] = &amp;this-&gt;modalIncomingInteractionBuffer;</div>
-<div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span>    }</div>
-<div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span> </div>
-<div class="line"><a id="l00781" name="l00781"></a><span class="lineno"><a class="line" href="../../d7/d90/a03177.html#a05a7c10af76eb9305b03dadee0b98a2b">  781</a></span>    <a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine&lt;ModalResponseData&gt;</a> <a class="code hl_function" href="../../d7/d90/a03177.html#a05a7c10af76eb9305b03dadee0b98a2b">ModalCollector::collectModalData</a>(int32_t maxWaitTimeInMsNew) {</div>
-<div class="line"><a id="l00782" name="l00782"></a><span class="lineno">  782</span>        <span class="keyword">co_await</span> NewThreadAwaitable&lt;ModalResponseData&gt;();</div>
-<div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span>        this-&gt;maxTimeInMs = maxWaitTimeInMsNew;</div>
-<div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span>        this-&gt;run();</div>
-<div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span>        <span class="keyword">co_return</span> this-&gt;responseData;</div>
-<div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span>    }</div>
-<div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span> </div>
-<div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span>    ModalCollector::~ModalCollector() {</div>
-<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span>        <span class="keywordflow">if</span> (ModalCollector::modalInteractionBufferMap.contains(std::to_string(this-&gt;channelId))) {</div>
-<div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span>            ModalCollector::modalInteractionBufferMap.erase(std::to_string(this-&gt;channelId));</div>
-<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>        }</div>
-<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>    }</div>
-<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span> </div>
-<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span>    <span class="keywordtype">void</span> ModalCollector::run() {</div>
-<div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span>        <span class="keywordflow">while</span> (!this-&gt;doWeQuit) {</div>
-<div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span>            <span class="keyword">auto</span> buttonInteractionData = std::make_unique&lt;InteractionData&gt;();</div>
-<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span>            <span class="keywordflow">if</span> (waitForTimeToPass(this-&gt;modalIncomingInteractionBuffer, *buttonInteractionData.get(), this-&gt;maxTimeInMs)) {</div>
-<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span>                *this-&gt;responseData.<a class="code hl_variable" href="../../d3/dcf/a03173.html#a36289ae240169fb14753612df0c4cbf8">interactionData</a> = *buttonInteractionData;</div>
-<div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span>                this-&gt;responseData.<a class="code hl_variable" href="../../d3/dcf/a03173.html#a087a3f896f4d56dc476ac2c0a793e675">channelId</a> = buttonInteractionData-&gt;channelId;</div>
-<div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span>                this-&gt;responseData.<a class="code hl_variable" href="../../d3/dcf/a03173.html#aff4bc3d89034f02535454b288a162ba4">customId</a> = buttonInteractionData-&gt;data.modalData.customId;</div>
-<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span>                this-&gt;responseData.<a class="code hl_variable" href="../../d3/dcf/a03173.html#ab0f2381d4b26b5af6389398e0610c5cc">customIdSmall</a> = buttonInteractionData-&gt;data.modalData.customIdSmall;</div>
-<div class="line"><a id="l00802" name="l00802"></a><span class="lineno">  802</span>                this-&gt;responseData.<a class="code hl_variable" href="../../d3/dcf/a03173.html#a3f50958e7f8fc6e22af420bb13d12806">userId</a> = buttonInteractionData-&gt;user.id;</div>
-<div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span>                this-&gt;responseData.value = buttonInteractionData-&gt;data.modalData.value;</div>
-<div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span>                *this-&gt;responseData.<a class="code hl_variable" href="../../d3/dcf/a03173.html#a36289ae240169fb14753612df0c4cbf8">interactionData</a> = *buttonInteractionData;</div>
-<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span>                this-&gt;responseData.<a class="code hl_variable" href="../../d3/dcf/a03173.html#a087a3f896f4d56dc476ac2c0a793e675">channelId</a> = buttonInteractionData-&gt;channelId;</div>
-<div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span>                this-&gt;responseData.<a class="code hl_variable" href="../../d3/dcf/a03173.html#aff4bc3d89034f02535454b288a162ba4">customId</a> = buttonInteractionData-&gt;data.modalData.customId;</div>
-<div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span>                this-&gt;responseData.<a class="code hl_variable" href="../../d3/dcf/a03173.html#ab0f2381d4b26b5af6389398e0610c5cc">customIdSmall</a> = buttonInteractionData-&gt;data.modalData.customIdSmall;</div>
-<div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span>                this-&gt;responseData.<a class="code hl_variable" href="../../d3/dcf/a03173.html#a3f50958e7f8fc6e22af420bb13d12806">userId</a> = buttonInteractionData-&gt;user.id;</div>
-<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>                this-&gt;responseData.value = buttonInteractionData-&gt;data.modalData.value;</div>
-<div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span>            }</div>
-<div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span>        }</div>
-<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span> </div>
-<div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span>        ModalCollector::modalInteractionBufferMap.erase(std::to_string(this-&gt;channelId));</div>
-<div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span>    }</div>
+<div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span>                std::this_thread::sleep_for(1ms);</div>
+<div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span>            }</div>
+<div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>        }</div>
+<div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span>        SelectMenuCollector::selectMenuInteractionBufferMap.erase(this-&gt;bufferMapKey);</div>
+<div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span>    }</div>
+<div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span> </div>
+<div class="line"><a id="l00655" name="l00655"></a><span class="lineno"><a class="line" href="../../dc/d10/a03169.html#ac243db78f0fe0ce88c8c428110d77c37">  655</a></span>    <a class="code hl_class" href="../../dc/d10/a03169.html">ButtonCollector::ButtonCollector</a>(<a class="code hl_class" href="../../d9/d95/a02781.html">InputEventData</a>&amp; dataPackage) {</div>
+<div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span>        this-&gt;channelId = dataPackage.<a class="code hl_function" href="../../d9/d95/a02781.html#a97c397fe274250bfff73cf674810a8f5">getChannelId</a>();</div>
+<div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span>        this-&gt;messageId = dataPackage.<a class="code hl_function" href="../../d9/d95/a02781.html#af7be2b81b312794ea5398591d1a7e305">getMessageId</a>();</div>
+<div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span>        *this-&gt;interactionData = dataPackage.<a class="code hl_function" href="../../d9/d95/a02781.html#a520bbb225cdbd19ef871d3a00189acff">getInteractionData</a>();</div>
+<div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span>        this-&gt;bufferMapKey = std::to_string(this-&gt;channelId) + std::to_string(this-&gt;messageId);</div>
+<div class="line"><a id="l00660" name="l00660"></a><span class="lineno">  660</span>        ButtonCollector::buttonInteractionBufferMap[this-&gt;bufferMapKey] = &amp;this-&gt;buttonIncomingInteractionBuffer;</div>
+<div class="line"><a id="l00661" name="l00661"></a><span class="lineno">  661</span>    }</div>
+<div class="line"><a id="l00662" name="l00662"></a><span class="lineno">  662</span> </div>
+<div class="line"><a id="l00663" name="l00663"></a><span class="lineno"><a class="line" href="../../dc/d10/a03169.html#a0eecf8f131b659cf758266ce6472f4a9">  663</a></span>    <a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine&lt;std::vector&lt;ButtonResponseData&gt;</a>&gt; <a class="code hl_function" href="../../dc/d10/a03169.html#a0eecf8f131b659cf758266ce6472f4a9">ButtonCollector::collectButtonData</a>(<span class="keywordtype">bool</span> getButtonDataForAllNew, int32_t maxWaitTimeInMsNew, int32_t maxNumberOfPressesNew,</div>
+<div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span>        uint64_t targetUser) {</div>
+<div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span>        <span class="keyword">co_await</span> NewThreadAwaitable&lt;std::vector&lt;ButtonResponseData&gt;&gt;();</div>
+<div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span>        <span class="keywordflow">if</span> (targetUser == 0 &amp;&amp; !getButtonDataForAllNew) {</div>
+<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span>            <span class="keywordflow">throw</span> std::runtime_error{ <span class="stringliteral">&quot;ButtonCollector::collectButtonData(), You&#39;ve failed to &quot;</span></div>
+<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>                                      <span class="stringliteral">&quot;properly set the collectButtonData() parameters!\n\n&quot;</span> };</div>
+<div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span>        }</div>
+<div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span>        <span class="keywordflow">if</span> (targetUser != 0) {</div>
+<div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span>            this-&gt;userId = targetUser;</div>
+<div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span>        }</div>
+<div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span>        this-&gt;maxCollectedButtonCount = maxNumberOfPressesNew;</div>
+<div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span>        this-&gt;getButtonDataForAll = getButtonDataForAllNew;</div>
+<div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span>        this-&gt;maxTimeInMs = maxWaitTimeInMsNew;</div>
+<div class="line"><a id="l00676" name="l00676"></a><span class="lineno">  676</span>        this-&gt;run();</div>
+<div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span>        <span class="keyword">co_return</span> this-&gt;responseVector;</div>
+<div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span>    }</div>
+<div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span> </div>
+<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span>    ButtonCollector::~ButtonCollector() {</div>
+<div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span>        <span class="keywordflow">if</span> (ButtonCollector::buttonInteractionBufferMap.contains(this-&gt;bufferMapKey)) {</div>
+<div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span>            ButtonCollector::buttonInteractionBufferMap.erase(this-&gt;bufferMapKey);</div>
+<div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span>        }</div>
+<div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span>    }</div>
+<div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span> </div>
+<div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span>    <span class="keywordtype">void</span> ButtonCollector::run() {</div>
+<div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span>        StopWatch theStopWatch{ std::chrono::milliseconds{ this-&gt;maxTimeInMs } };</div>
+<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span>        <span class="keywordflow">while</span> (!this-&gt;doWeQuit &amp;&amp; !theStopWatch.hasTimePassed()) {</div>
+<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span>            <span class="keywordflow">if</span> (this-&gt;getButtonDataForAll == <span class="keyword">false</span>) {</div>
+<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span>                <span class="keyword">auto</span> buttonInteractionData = std::make_unique&lt;InteractionData&gt;();</div>
+<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span>                <span class="keywordflow">if</span> (waitForTimeToPass(this-&gt;buttonIncomingInteractionBuffer, *buttonInteractionData.get(), this-&gt;maxTimeInMs)) {</div>
+<div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span>                    this-&gt;buttonId = <span class="stringliteral">&quot;empty&quot;</span>;</div>
+<div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span>                    <span class="keyword">auto</span> response = std::make_unique&lt;ButtonResponseData&gt;();</div>
+<div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span>                    response-&gt;buttonId = this-&gt;buttonId;</div>
+<div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span>                    response-&gt;channelId = this-&gt;channelId;</div>
+<div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span>                    response-&gt;messageId = this-&gt;messageId;</div>
+<div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span>                    response-&gt;userId = buttonInteractionData-&gt;user.id;</div>
+<div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span>                    *response-&gt;interactionData = *this-&gt;interactionData;</div>
+<div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span>                    this-&gt;responseVector.push_back(*response);</div>
+<div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span>                }</div>
+<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span>                <span class="keywordflow">if</span> (buttonInteractionData-&gt;user.id != this-&gt;userId) {</div>
+<div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span>                    <span class="keyword">auto</span> createResponseData = std::make_unique&lt;CreateInteractionResponseData&gt;(*buttonInteractionData);</div>
+<div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span>                    <span class="keyword">auto</span> embedData = std::make_unique&lt;EmbedData&gt;();</div>
+<div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span>                    embedData-&gt;setColor(<span class="stringliteral">&quot;FEFEFE&quot;</span>);</div>
+<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span>                    embedData-&gt;setTitle(<span class="stringliteral">&quot;__**Permission Issue:**__&quot;</span>);</div>
+<div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span>                    embedData-&gt;setTimeStamp(<a class="code hl_function" href="../../dd/d94/a00888.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
+<div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span>                    embedData-&gt;setDescription(<span class="stringliteral">&quot;Sorry, but that button can only be pressed by &lt;@&quot;</span> + std::to_string(this-&gt;userId) + <span class="stringliteral">&quot;&gt;!&quot;</span>);</div>
+<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span>                    createResponseData-&gt;data.data.embeds.push_back(*embedData);</div>
+<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span>                    createResponseData-&gt;data.data.flags = 64;</div>
+<div class="line"><a id="l00711" name="l00711"></a><span class="lineno">  711</span>                    createResponseData-&gt;data.type = <a class="code hl_enumvalue" href="../../dd/d94/a00888.html#ggaf9e947457ef4ec645c7d8e157b74534cabd2a1c7dcd30de42328da736f2f3f6e8">InteractionCallbackType::Channel_Message_With_Source</a>;</div>
+<div class="line"><a id="l00712" name="l00712"></a><span class="lineno">  712</span>                    <a class="code hl_function" href="../../db/d44/a03153.html#a96fa0622732afc279a659ecfcee4c6ae">Interactions::createInteractionResponseAsync</a>(*createResponseData).get();</div>
+<div class="line"><a id="l00713" name="l00713"></a><span class="lineno">  713</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00714" name="l00714"></a><span class="lineno">  714</span>                    *this-&gt;interactionData = *buttonInteractionData;</div>
+<div class="line"><a id="l00715" name="l00715"></a><span class="lineno">  715</span>                    this-&gt;buttonId = buttonInteractionData-&gt;data.componentData.customId;</div>
+<div class="line"><a id="l00716" name="l00716"></a><span class="lineno">  716</span>                    <span class="keyword">auto</span> response = std::make_unique&lt;ButtonResponseData&gt;();</div>
+<div class="line"><a id="l00717" name="l00717"></a><span class="lineno">  717</span>                    response-&gt;buttonId = this-&gt;buttonId;</div>
+<div class="line"><a id="l00718" name="l00718"></a><span class="lineno">  718</span>                    response-&gt;channelId = this-&gt;channelId;</div>
+<div class="line"><a id="l00719" name="l00719"></a><span class="lineno">  719</span>                    response-&gt;messageId = this-&gt;messageId;</div>
+<div class="line"><a id="l00720" name="l00720"></a><span class="lineno">  720</span>                    response-&gt;userId = buttonInteractionData-&gt;user.id;</div>
+<div class="line"><a id="l00721" name="l00721"></a><span class="lineno">  721</span>                    *response-&gt;interactionData = *buttonInteractionData;</div>
+<div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span>                    this-&gt;responseVector.push_back(*response);</div>
+<div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span>                    this-&gt;currentCollectedButtonCount++;</div>
+<div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span>                    theStopWatch.resetTimer();</div>
+<div class="line"><a id="l00725" name="l00725"></a><span class="lineno">  725</span>                    <span class="keywordflow">if</span> (this-&gt;maxCollectedButtonCount &gt; 1 &amp;&amp; this-&gt;currentCollectedButtonCount &lt; this-&gt;maxCollectedButtonCount) {</div>
+<div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span>                        <span class="keyword">auto</span> createResponseData = std::make_unique&lt;CreateInteractionResponseData&gt;(*buttonInteractionData);</div>
+<div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span>                        createResponseData-&gt;data.type = <a class="code hl_enumvalue" href="../../dd/d94/a00888.html#ggaf9e947457ef4ec645c7d8e157b74534cabee74b6d5c8bd9bdf99062eaaaae8c38">InteractionCallbackType::Deferred_Update_Message</a>;</div>
+<div class="line"><a id="l00728" name="l00728"></a><span class="lineno">  728</span>                        <a class="code hl_function" href="../../db/d44/a03153.html#a96fa0622732afc279a659ecfcee4c6ae">Interactions::createInteractionResponseAsync</a>(*createResponseData).get();</div>
+<div class="line"><a id="l00729" name="l00729"></a><span class="lineno">  729</span>                    }</div>
+<div class="line"><a id="l00730" name="l00730"></a><span class="lineno">  730</span>                    <span class="keywordflow">if</span> (this-&gt;currentCollectedButtonCount &gt;= this-&gt;maxCollectedButtonCount) {</div>
+<div class="line"><a id="l00731" name="l00731"></a><span class="lineno">  731</span>                        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; value: this-&gt;responseVector) {</div>
+<div class="line"><a id="l00732" name="l00732"></a><span class="lineno">  732</span>                            *value.interactionData = *buttonInteractionData;</div>
+<div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span>                        }</div>
+<div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span>                        doWeQuit = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span>                    }</div>
+<div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span>                }</div>
+<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>                <span class="keyword">auto</span> buttonInteractionData = std::make_unique&lt;InteractionData&gt;();</div>
+<div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span>                <span class="keywordflow">if</span> (waitForTimeToPass(this-&gt;buttonIncomingInteractionBuffer, *buttonInteractionData.get(), this-&gt;maxTimeInMs)) {</div>
+<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span>                    this-&gt;buttonId = <span class="stringliteral">&quot;empty&quot;</span>;</div>
+<div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span>                    <span class="keyword">auto</span> response = std::make_unique&lt;ButtonResponseData&gt;();</div>
+<div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span>                    response-&gt;buttonId = this-&gt;buttonId;</div>
+<div class="line"><a id="l00743" name="l00743"></a><span class="lineno">  743</span>                    response-&gt;channelId = this-&gt;channelId;</div>
+<div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span>                    response-&gt;messageId = this-&gt;messageId;</div>
+<div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span>                    response-&gt;userId = buttonInteractionData-&gt;user.id;</div>
+<div class="line"><a id="l00746" name="l00746"></a><span class="lineno">  746</span>                    *response-&gt;interactionData = *buttonInteractionData;</div>
+<div class="line"><a id="l00747" name="l00747"></a><span class="lineno">  747</span>                    this-&gt;responseVector.push_back(*response);</div>
+<div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span>                }</div>
+<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>                *this-&gt;interactionData = *buttonInteractionData;</div>
+<div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span>                this-&gt;buttonId = buttonInteractionData-&gt;data.componentData.customId;</div>
+<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span>                <span class="keyword">auto</span> response = std::make_unique&lt;ButtonResponseData&gt;();</div>
+<div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>                response-&gt;buttonId = this-&gt;buttonId;</div>
+<div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span>                response-&gt;channelId = this-&gt;channelId;</div>
+<div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span>                response-&gt;messageId = this-&gt;messageId;</div>
+<div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span>                response-&gt;userId = buttonInteractionData-&gt;user.id;</div>
+<div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span>                *response-&gt;interactionData = *buttonInteractionData;</div>
+<div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span>                this-&gt;responseVector.push_back(*response);</div>
+<div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span>                this-&gt;currentCollectedButtonCount++;</div>
+<div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span>                theStopWatch.resetTimer();</div>
+<div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span>                <span class="keywordflow">if</span> (this-&gt;maxCollectedButtonCount &gt; 1 &amp;&amp; this-&gt;currentCollectedButtonCount &lt; this-&gt;maxCollectedButtonCount) {</div>
+<div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span>                    <span class="keyword">auto</span> createResponseData = std::make_unique&lt;CreateInteractionResponseData&gt;(*buttonInteractionData);</div>
+<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span>                    createResponseData-&gt;data.type = <a class="code hl_enumvalue" href="../../dd/d94/a00888.html#ggaf9e947457ef4ec645c7d8e157b74534cabee74b6d5c8bd9bdf99062eaaaae8c38">InteractionCallbackType::Deferred_Update_Message</a>;</div>
+<div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span>                    <a class="code hl_function" href="../../db/d44/a03153.html#a96fa0622732afc279a659ecfcee4c6ae">Interactions::createInteractionResponseAsync</a>(*createResponseData).get();</div>
+<div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span>                }</div>
+<div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span>                <span class="keywordflow">if</span> (this-&gt;currentCollectedButtonCount &gt;= this-&gt;maxCollectedButtonCount) {</div>
+<div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span>                    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; value: this-&gt;responseVector) {</div>
+<div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span>                        *value.interactionData = *buttonInteractionData;</div>
+<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span>                    }</div>
+<div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span>                    this-&gt;doWeQuit = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>                }</div>
+<div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span>            }</div>
+<div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span>            std::this_thread::sleep_for(1ms);</div>
+<div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span>        }</div>
+<div class="line"><a id="l00775" name="l00775"></a><span class="lineno">  775</span>        ButtonCollector::buttonInteractionBufferMap.erase(this-&gt;bufferMapKey);</div>
+<div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span>    }</div>
+<div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span> </div>
+<div class="line"><a id="l00778" name="l00778"></a><span class="lineno"><a class="line" href="../../d7/d90/a03177.html#a7eeb5804fc42207c363474e79cbd7fa4">  778</a></span>    <a class="code hl_class" href="../../d7/d90/a03177.html">ModalCollector::ModalCollector</a>(<a class="code hl_class" href="../../d9/d95/a02781.html">InputEventData</a>&amp; dataPackage) {</div>
+<div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span>        this-&gt;channelId = dataPackage.<a class="code hl_function" href="../../d9/d95/a02781.html#a97c397fe274250bfff73cf674810a8f5">getChannelId</a>();</div>
+<div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span>        ModalCollector::modalInteractionBufferMap[std::to_string(this-&gt;channelId)] = &amp;this-&gt;modalIncomingInteractionBuffer;</div>
+<div class="line"><a id="l00781" name="l00781"></a><span class="lineno">  781</span>    }</div>
+<div class="line"><a id="l00782" name="l00782"></a><span class="lineno">  782</span> </div>
+<div class="line"><a id="l00783" name="l00783"></a><span class="lineno"><a class="line" href="../../d7/d90/a03177.html#a05a7c10af76eb9305b03dadee0b98a2b">  783</a></span>    <a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine&lt;ModalResponseData&gt;</a> <a class="code hl_function" href="../../d7/d90/a03177.html#a05a7c10af76eb9305b03dadee0b98a2b">ModalCollector::collectModalData</a>(int32_t maxWaitTimeInMsNew) {</div>
+<div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span>        <span class="keyword">co_await</span> NewThreadAwaitable&lt;ModalResponseData&gt;();</div>
+<div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span>        this-&gt;maxTimeInMs = maxWaitTimeInMsNew;</div>
+<div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span>        this-&gt;run();</div>
+<div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span>        <span class="keyword">co_return</span> this-&gt;responseData;</div>
+<div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span>    }</div>
+<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span> </div>
+<div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span>    ModalCollector::~ModalCollector() {</div>
+<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>        <span class="keywordflow">if</span> (ModalCollector::modalInteractionBufferMap.contains(std::to_string(this-&gt;channelId))) {</div>
+<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>            ModalCollector::modalInteractionBufferMap.erase(std::to_string(this-&gt;channelId));</div>
+<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>        }</div>
+<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span>    }</div>
+<div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span> </div>
+<div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span>    <span class="keywordtype">void</span> ModalCollector::run() {</div>
+<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span>        <span class="keywordflow">while</span> (!this-&gt;doWeQuit) {</div>
+<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span>            <span class="keyword">auto</span> buttonInteractionData = std::make_unique&lt;InteractionData&gt;();</div>
+<div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span>            <span class="keywordflow">if</span> (waitForTimeToPass(this-&gt;modalIncomingInteractionBuffer, *buttonInteractionData.get(), this-&gt;maxTimeInMs)) {</div>
+<div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span>                *this-&gt;responseData.<a class="code hl_variable" href="../../d3/dcf/a03173.html#a36289ae240169fb14753612df0c4cbf8">interactionData</a> = *buttonInteractionData;</div>
+<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span>                this-&gt;responseData.<a class="code hl_variable" href="../../d3/dcf/a03173.html#a087a3f896f4d56dc476ac2c0a793e675">channelId</a> = buttonInteractionData-&gt;channelId;</div>
+<div class="line"><a id="l00802" name="l00802"></a><span class="lineno">  802</span>                this-&gt;responseData.<a class="code hl_variable" href="../../d3/dcf/a03173.html#aff4bc3d89034f02535454b288a162ba4">customId</a> = buttonInteractionData-&gt;data.modalData.customId;</div>
+<div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span>                this-&gt;responseData.<a class="code hl_variable" href="../../d3/dcf/a03173.html#ab0f2381d4b26b5af6389398e0610c5cc">customIdSmall</a> = buttonInteractionData-&gt;data.modalData.customIdSmall;</div>
+<div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span>                this-&gt;responseData.<a class="code hl_variable" href="../../d3/dcf/a03173.html#a3f50958e7f8fc6e22af420bb13d12806">userId</a> = buttonInteractionData-&gt;user.id;</div>
+<div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span>                this-&gt;responseData.value = buttonInteractionData-&gt;data.modalData.value;</div>
+<div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span>                *this-&gt;responseData.<a class="code hl_variable" href="../../d3/dcf/a03173.html#a36289ae240169fb14753612df0c4cbf8">interactionData</a> = *buttonInteractionData;</div>
+<div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span>                this-&gt;responseData.<a class="code hl_variable" href="../../d3/dcf/a03173.html#a087a3f896f4d56dc476ac2c0a793e675">channelId</a> = buttonInteractionData-&gt;channelId;</div>
+<div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span>                this-&gt;responseData.<a class="code hl_variable" href="../../d3/dcf/a03173.html#aff4bc3d89034f02535454b288a162ba4">customId</a> = buttonInteractionData-&gt;data.modalData.customId;</div>
+<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>                this-&gt;responseData.<a class="code hl_variable" href="../../d3/dcf/a03173.html#ab0f2381d4b26b5af6389398e0610c5cc">customIdSmall</a> = buttonInteractionData-&gt;data.modalData.customIdSmall;</div>
+<div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span>                this-&gt;responseData.<a class="code hl_variable" href="../../d3/dcf/a03173.html#a3f50958e7f8fc6e22af420bb13d12806">userId</a> = buttonInteractionData-&gt;user.id;</div>
+<div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span>                this-&gt;responseData.value = buttonInteractionData-&gt;data.modalData.value;</div>
+<div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span>            }</div>
+<div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span>            std::this_thread::sleep_for(1ms);</div>
+<div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span>        }</div>
 <div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span> </div>
-<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>    std::unordered_map&lt;std::string, UnboundedMessageBlock&lt;InteractionData&gt;*&gt; SelectMenuCollector::selectMenuInteractionBufferMap{};</div>
-<div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span>    std::unordered_map&lt;std::string, UnboundedMessageBlock&lt;InteractionData&gt;*&gt; ButtonCollector::buttonInteractionBufferMap{};</div>
-<div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span>    std::unordered_map&lt;std::string, UnboundedMessageBlock&lt;InteractionData&gt;*&gt; ModalCollector::modalInteractionBufferMap{};</div>
-<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>    DiscordCoreInternal::HttpsClient* Interactions::httpsClient{ <span class="keyword">nullptr</span> };</div>
-<div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span>};</div>
+<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>        ModalCollector::modalInteractionBufferMap.erase(std::to_string(this-&gt;channelId));</div>
+<div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span>    }</div>
+<div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span> </div>
+<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>    std::unordered_map&lt;std::string, UnboundedMessageBlock&lt;InteractionData&gt;*&gt; SelectMenuCollector::selectMenuInteractionBufferMap{};</div>
+<div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span>    std::unordered_map&lt;std::string, UnboundedMessageBlock&lt;InteractionData&gt;*&gt; ButtonCollector::buttonInteractionBufferMap{};</div>
+<div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span>    std::unordered_map&lt;std::string, UnboundedMessageBlock&lt;InteractionData&gt;*&gt; ModalCollector::modalInteractionBufferMap{};</div>
+<div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span>    DiscordCoreInternal::HttpsClient* Interactions::httpsClient{ <span class="keyword">nullptr</span> };</div>
+<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span>};</div>
 <div class="ttc" id="aa00686_html"><div class="ttname"><a href="../../df/d9e/a00686.html">Https.hpp</a></div></div>
 <div class="ttc" id="aa00758_html"><div class="ttname"><a href="../../d2/d4a/a00758.html">EventEntities.hpp</a></div></div>
 <div class="ttc" id="aa00761_html"><div class="ttname"><a href="../../d3/d4f/a00761.html">ThreadPool.hpp</a></div></div>
@@ -982,14 +985,14 @@ $(document).ready(function(){initNavTree('d5/d12/a00794_source.html','../../'); 
 <div class="ttc" id="aa03161_html"><div class="ttname"><a href="../../d0/d04/a03161.html">DiscordCoreAPI::SelectMenuCollector</a></div><div class="ttdoc">SelectMenuCollector, for collecting select-menu input from one or more Users.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d95/a00779_source.html#l00407">InteractionEntities.hpp:407</a></div></div>
 <div class="ttc" id="aa03161_html_abee59f39b9769d6ecc1837faac700db7"><div class="ttname"><a href="../../d0/d04/a03161.html#abee59f39b9769d6ecc1837faac700db7">DiscordCoreAPI::SelectMenuCollector::collectSelectMenuData</a></div><div class="ttdeci">CoRoutine&lt; std::vector&lt; SelectMenuResponseData &gt; &gt; collectSelectMenuData(bool getSelectMenuDataForAllNew, int32_t maxWaitTimeInMsNew, int32_t maxCollectedSelectMenuCountNew, Snowflake targetUserId=0)</div><div class="ttdoc">Used to collect the select-menu inputs from one or more users.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d12/a00794_source.html#l00535">InteractionEntities.cpp:535</a></div></div>
 <div class="ttc" id="aa03169_html"><div class="ttname"><a href="../../dc/d10/a03169.html">DiscordCoreAPI::ButtonCollector</a></div><div class="ttdoc">ButtonCollector, for collecting button input from one or more Users.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d95/a00779_source.html#l00496">InteractionEntities.hpp:496</a></div></div>
-<div class="ttc" id="aa03169_html_a0eecf8f131b659cf758266ce6472f4a9"><div class="ttname"><a href="../../dc/d10/a03169.html#a0eecf8f131b659cf758266ce6472f4a9">DiscordCoreAPI::ButtonCollector::collectButtonData</a></div><div class="ttdeci">CoRoutine&lt; std::vector&lt; ButtonResponseData &gt; &gt; collectButtonData(bool getButtonDataForAllNew, int32_t maxWaitTimeInMsNew, int32_t maxNumberOfPressesNew, Snowflake targetUserId=0)</div><div class="ttdoc">Used to collect the button inputs from one or more users.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d12/a00794_source.html#l00662">InteractionEntities.cpp:662</a></div></div>
+<div class="ttc" id="aa03169_html_a0eecf8f131b659cf758266ce6472f4a9"><div class="ttname"><a href="../../dc/d10/a03169.html#a0eecf8f131b659cf758266ce6472f4a9">DiscordCoreAPI::ButtonCollector::collectButtonData</a></div><div class="ttdeci">CoRoutine&lt; std::vector&lt; ButtonResponseData &gt; &gt; collectButtonData(bool getButtonDataForAllNew, int32_t maxWaitTimeInMsNew, int32_t maxNumberOfPressesNew, Snowflake targetUserId=0)</div><div class="ttdoc">Used to collect the button inputs from one or more users.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d12/a00794_source.html#l00663">InteractionEntities.cpp:663</a></div></div>
 <div class="ttc" id="aa03173_html_a087a3f896f4d56dc476ac2c0a793e675"><div class="ttname"><a href="../../d3/dcf/a03173.html#a087a3f896f4d56dc476ac2c0a793e675">DiscordCoreAPI::ModalResponseData::channelId</a></div><div class="ttdeci">Snowflake channelId</div><div class="ttdoc">The Channel id where it took place.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d95/a00779_source.html#l00579">InteractionEntities.hpp:579</a></div></div>
 <div class="ttc" id="aa03173_html_a36289ae240169fb14753612df0c4cbf8"><div class="ttname"><a href="../../d3/dcf/a03173.html#a36289ae240169fb14753612df0c4cbf8">DiscordCoreAPI::ModalResponseData::interactionData</a></div><div class="ttdeci">std::unique_ptr&lt; InteractionData &gt; interactionData</div><div class="ttdoc">Interaction data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d95/a00779_source.html#l00576">InteractionEntities.hpp:576</a></div></div>
 <div class="ttc" id="aa03173_html_a3f50958e7f8fc6e22af420bb13d12806"><div class="ttname"><a href="../../d3/dcf/a03173.html#a3f50958e7f8fc6e22af420bb13d12806">DiscordCoreAPI::ModalResponseData::userId</a></div><div class="ttdeci">Snowflake userId</div><div class="ttdoc">The input value of the modal component.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d95/a00779_source.html#l00581">InteractionEntities.hpp:581</a></div></div>
 <div class="ttc" id="aa03173_html_ab0f2381d4b26b5af6389398e0610c5cc"><div class="ttname"><a href="../../d3/dcf/a03173.html#ab0f2381d4b26b5af6389398e0610c5cc">DiscordCoreAPI::ModalResponseData::customIdSmall</a></div><div class="ttdeci">std::string customIdSmall</div><div class="ttdoc">The customId of the particular input.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d95/a00779_source.html#l00577">InteractionEntities.hpp:577</a></div></div>
 <div class="ttc" id="aa03173_html_aff4bc3d89034f02535454b288a162ba4"><div class="ttname"><a href="../../d3/dcf/a03173.html#aff4bc3d89034f02535454b288a162ba4">DiscordCoreAPI::ModalResponseData::customId</a></div><div class="ttdeci">std::string customId</div><div class="ttdoc">The customId of the modal component.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d95/a00779_source.html#l00578">InteractionEntities.hpp:578</a></div></div>
 <div class="ttc" id="aa03177_html"><div class="ttname"><a href="../../d7/d90/a03177.html">DiscordCoreAPI::ModalCollector</a></div><div class="ttdoc">ModalCollector, for collecting modal text input from one or more Users.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d95/a00779_source.html#l00585">InteractionEntities.hpp:585</a></div></div>
-<div class="ttc" id="aa03177_html_a05a7c10af76eb9305b03dadee0b98a2b"><div class="ttname"><a href="../../d7/d90/a03177.html#a05a7c10af76eb9305b03dadee0b98a2b">DiscordCoreAPI::ModalCollector::collectModalData</a></div><div class="ttdeci">CoRoutine&lt; ModalResponseData &gt; collectModalData(int32_t maxWaitTimeInMsNew)</div><div class="ttdoc">Used to collect the button inputs from one or more users.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d12/a00794_source.html#l00781">InteractionEntities.cpp:781</a></div></div>
+<div class="ttc" id="aa03177_html_a05a7c10af76eb9305b03dadee0b98a2b"><div class="ttname"><a href="../../d7/d90/a03177.html#a05a7c10af76eb9305b03dadee0b98a2b">DiscordCoreAPI::ModalCollector::collectModalData</a></div><div class="ttdeci">CoRoutine&lt; ModalResponseData &gt; collectModalData(int32_t maxWaitTimeInMsNew)</div><div class="ttdoc">Used to collect the button inputs from one or more users.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d12/a00794_source.html#l00783">InteractionEntities.cpp:783</a></div></div>
 <div class="ttc" id="aa03225_html"><div class="ttname"><a href="../../d5/da4/a03225.html">DiscordCoreAPI::Message</a></div><div class="ttdoc">A single Message.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbb/a00698_source.html#l00148">MessageEntities.hpp:148</a></div></div>
 <div class="ttc" id="aa03657_html_a0d12cebeb4b9f99be23032be70c37bbf"><div class="ttname"><a href="../../d1/d01/a03657.html#a0d12cebeb4b9f99be23032be70c37bbf">DiscordCoreAPI::ExecuteWebHookData::files</a></div><div class="ttdeci">std::vector&lt; File &gt; files</div><div class="ttdoc">File contents the contents of the file being sent.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d04/a00713_source.html#l00124">WebHookEntities.hpp:124</a></div></div>
 <div class="ttc" id="aa03657_html_a25ea6e38825adc10c7ce298a7a376c50"><div class="ttname"><a href="../../d1/d01/a03657.html#a25ea6e38825adc10c7ce298a7a376c50">DiscordCoreAPI::ExecuteWebHookData::allowedMentions</a></div><div class="ttdeci">AllowedMentionsData allowedMentions</div><div class="ttdoc">Allowed mention object.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d04/a00713_source.html#l00121">WebHookEntities.hpp:121</a></div></div>
