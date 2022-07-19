@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['get_0',['get',['../d5/d92/a01977.html#a904d030f3edbf8efac15b2cebba3e37a',1,'DiscordCoreAPI::CoRoutine&lt; void &gt;::get()'],['../db/d49/a01969.html#a4677e19e0a190bf91b35c2345533ed6b',1,'DiscordCoreAPI::CoRoutine::get()']]],
+  ['get_0',['get',['../db/d49/a01969.html#a4677e19e0a190bf91b35c2345533ed6b',1,'DiscordCoreAPI::CoRoutine::get()'],['../d5/d92/a01977.html#a904d030f3edbf8efac15b2cebba3e37a',1,'DiscordCoreAPI::CoRoutine&lt; void &gt;::get()']]],
   ['getactiveguildthreadsasync_1',['getActiveGuildThreadsAsync',['../d0/d33/a03529.html#a80eee596b5aae97451f08fb19e085e39',1,'DiscordCoreAPI::Threads']]],
   ['getactivethreadsasync_2',['getActiveThreadsAsync',['../d0/d33/a03529.html#a1584dcebbb864acb1d81e3a19af12111',1,'DiscordCoreAPI::Threads']]],
   ['getallguildsasync_3',['getAllGuildsAsync',['../d4/d69/a02989.html#acc5069ff3b0d81b7260b0c48e929392d',1,'DiscordCoreAPI::Guilds']]],
