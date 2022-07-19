@@ -1,5 +1,5 @@
 <map id="DiscordCoreAPI::StickerData" name="DiscordCoreAPI::StickerData">
-<area shape="rect" id="node1" title="Data representing a single Sticker." alt="" coords="11,79,217,104"/>
-<area shape="rect" id="node3" href="$d1/d15/a03457.html" title="A single Sticker." alt="" coords="27,152,201,177"/>
-<area shape="rect" id="node2" href="$df/d4d/a02285.html" title="Base class for all Discord entities." alt="" coords="5,5,223,31"/>
+<area shape="rect" id="node1" title="Data representing a single Sticker." alt="" coords="11,80,217,107"/>
+<area shape="rect" id="node3" href="$d1/d15/a03457.html" title="A single Sticker." alt="" coords="27,155,201,181"/>
+<area shape="rect" id="node2" href="$df/d4d/a02285.html" title="Base class for all Discord entities." alt="" coords="5,5,223,32"/>
 </map>
