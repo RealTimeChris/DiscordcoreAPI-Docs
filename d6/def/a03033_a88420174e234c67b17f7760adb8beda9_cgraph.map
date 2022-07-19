@@ -1,7 +1,5 @@
 <map id="DiscordCoreAPI::GuildMembers::timeoutGuildMemberAsync" name="DiscordCoreAPI::GuildMembers::timeoutGuildMemberAsync">
-<area shape="rect" id="node1" title="Times&#45;out a chosen GuildMember from a chosen Guild." alt="" coords="5,69,231,109"/>
-<area shape="rect" id="node2" href="$d6/def/a03033.html#a8985a29afb27c8e010bcf581528e5559" title="Collects a GuildMember from the library&#39;s cache." alt="" coords="279,5,505,45"/>
-<area shape="rect" id="node4" href="$d8/d33/a03629.html#a06a5cb025dd8627b04a15a96e889f967" title="Collects a timestamp that is a chosen number of minutes ahead of the current time." alt="" coords="281,69,503,109"/>
-<area shape="rect" id="node5" href="$d6/def/a03033.html#afd28019271de633d1f03239f56e56bcc" title="Modifies a GuildMember&#39;s properties." alt="" coords="279,133,505,173"/>
-<area shape="rect" id="node3" href="$d6/def/a03033.html#a997c281bf11d3d686116c2f6dc35bf5b" title="Collects a GuildMember from the Discord servers." alt="" coords="553,5,779,45"/>
+<area shape="rect" id="node1" title="Times&#45;out a chosen GuildMember from a chosen Guild." alt="" coords="5,5,231,47"/>
+<area shape="rect" id="node2" href="$d6/def/a03033.html#a8985a29afb27c8e010bcf581528e5559" title="Collects a GuildMember from the library&#39;s cache." alt="" coords="279,5,505,47"/>
+<area shape="rect" id="node3" href="$d6/def/a03033.html#a997c281bf11d3d686116c2f6dc35bf5b" title="Collects a GuildMember from the Discord servers." alt="" coords="553,5,779,47"/>
 </map>

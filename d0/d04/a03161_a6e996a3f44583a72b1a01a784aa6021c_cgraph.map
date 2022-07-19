@@ -1,6 +1,6 @@
 <map id="DiscordCoreAPI::SelectMenuCollector::SelectMenuCollector" name="DiscordCoreAPI::SelectMenuCollector::SelectMenuCollector">
-<area shape="rect" id="node1" title="Constructor." alt="" coords="5,69,228,109"/>
-<area shape="rect" id="node2" href="$d9/d95/a02781.html#a97c397fe274250bfff73cf674810a8f5" title="Returns the Channel id of this input&#45;event." alt="" coords="276,5,476,45"/>
-<area shape="rect" id="node3" href="$d9/d95/a02781.html#a520bbb225cdbd19ef871d3a00189acff" title="Returns the InteractionData, if applicable, of this input&#45;event." alt="" coords="276,69,476,109"/>
-<area shape="rect" id="node4" href="$d9/d95/a02781.html#af7be2b81b312794ea5398591d1a7e305" title="Returns the Message id, if applicable, of this input&#45;event." alt="" coords="276,133,476,173"/>
+<area shape="rect" id="node1" title="Constructor." alt="" coords="5,71,228,112"/>
+<area shape="rect" id="node2" href="$d9/d95/a02781.html#a97c397fe274250bfff73cf674810a8f5" title="Returns the Channel id of this input&#45;event." alt="" coords="276,5,476,47"/>
+<area shape="rect" id="node3" href="$d9/d95/a02781.html#a520bbb225cdbd19ef871d3a00189acff" title="Returns the InteractionData, if applicable, of this input&#45;event." alt="" coords="276,71,476,112"/>
+<area shape="rect" id="node4" href="$d9/d95/a02781.html#af7be2b81b312794ea5398591d1a7e305" title="Returns the Message id, if applicable, of this input&#45;event." alt="" coords="276,136,476,177"/>
 </map>

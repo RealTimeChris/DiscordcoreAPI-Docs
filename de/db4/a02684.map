@@ -1,5 +1,5 @@
 <map id="DiscordCoreAPI::ApplicationCommandData" name="DiscordCoreAPI::ApplicationCommandData">
-<area shape="rect" id="node1" title="Data structure representing an ApplicationCommand." alt="" coords="13,79,215,119"/>
-<area shape="rect" id="node3" href="$d5/d36/a01773.html" title="A single ApplicationCommand." alt="" coords="13,167,215,207"/>
-<area shape="rect" id="node2" href="$df/d4d/a02285.html" title="Base class for all Discord entities." alt="" coords="5,5,223,31"/>
+<area shape="rect" id="node1" title="Data structure representing an ApplicationCommand." alt="" coords="13,80,215,121"/>
+<area shape="rect" id="node3" href="$d5/d36/a01773.html" title="A single ApplicationCommand." alt="" coords="13,169,215,211"/>
+<area shape="rect" id="node2" href="$df/d4d/a02285.html" title="Base class for all Discord entities." alt="" coords="5,5,223,32"/>
 </map>

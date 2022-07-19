@@ -1,4 +1,4 @@
 <map id="DiscordCoreAPI::Messages::deleteMessageAsync" name="DiscordCoreAPI::Messages::deleteMessageAsync">
-<area shape="rect" id="node1" title="Deletes a Message." alt="" coords="5,5,200,45"/>
-<area shape="rect" id="node2" href="$d8/d33/a03629.html#a97e7849b93d0e7f6086d30cfead2cb64" title="Deduces whether or not a chosen period of time has passed, for a chosen timestamp." alt="" coords="248,5,453,45"/>
+<area shape="rect" id="node1" title="Deletes a Message." alt="" coords="5,5,200,47"/>
+<area shape="rect" id="node2" href="$d8/d33/a03629.html#a97e7849b93d0e7f6086d30cfead2cb64" title="Deduces whether or not a chosen period of time has passed, for a chosen timestamp." alt="" coords="248,5,453,47"/>
 </map>
