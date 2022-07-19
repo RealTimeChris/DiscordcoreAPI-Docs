@@ -102,34 +102,76 @@ $(document).ready(function(){initNavTree('d5/de8/a00749.html','../../'); initRes
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">AudioDecoder.hpp File Reference</div></div>
+  <div class="summary">
+<a href="#nested-classes">Classes and Structures</a> &#124;
+<a href="#namespaces">Namespaces</a>  </div>
+  <div class="headertitle"><div class="title">GuildMemberEntities.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="../../d3/d2c/a00764_source.html">discordcoreapi/EventEntities.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="../../d1/d87/a00689_source.html">discordcoreapi/FoundationEntities.hpp</a>&gt;</code><br />
-<code>#include &lt;libavformat/avformat.h&gt;</code><br />
-<code>#include &lt;libswresample/swresample.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="../../db/d7c/a00722_source.html">discordcoreapi/FoundationEntities.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../dd/db2/a00737_source.html">discordcoreapi/UserEntities.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../df/d9e/a00686_source.html">discordcoreapi/Https.hpp</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for AudioDecoder.hpp:</div>
+Include dependency graph for GuildMemberEntities.hpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/db0/a00750.svg" width="2483" height="344"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/db0/a00750.svg" width="2688" height="872"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/df2/a00751.svg" width="2320" height="696"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/df2/a00751.svg" width="1982" height="476"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
 <p><a href="../../d5/de8/a00749_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes and Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da4/a03005.html">DiscordCoreAPI::AddGuildMemberData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For adding a new <a class="el" href="../../dd/de7/a03025.html" title="A single GuildMember.">GuildMember</a> to a chosen <a class="el" href="../../dc/dc5/a02977.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>.  <a href="../../de/da4/a03005.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d58/a02993.html">DiscordCoreAPI::GetGuildMemberData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For getting a <a class="el" href="../../dd/de7/a03025.html" title="A single GuildMember.">GuildMember</a>, from the library's cache or Discord server.  <a href="../../d6/d58/a02993.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/de7/a03025.html">DiscordCoreAPI::GuildMember</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A single <a class="el" href="../../dd/de7/a03025.html" title="A single GuildMember.">GuildMember</a>.  <a href="../../dd/de7/a03025.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/def/a03033.html">DiscordCoreAPI::GuildMembers</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An interface class for the <a class="el" href="../../dd/de7/a03025.html" title="A single GuildMember.">GuildMember</a> related Discord endpoints.  <a href="../../d6/def/a03033.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/daa/a02997.html">DiscordCoreAPI::ListGuildMembersData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For listing the <a class="el" href="../../d6/def/a03033.html" title="An interface class for the GuildMember related Discord endpoints.">GuildMembers</a> of a chosen <a class="el" href="../../dc/dc5/a02977.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>.  <a href="../../d2/daa/a02997.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dc5/a03009.html">DiscordCoreAPI::ModifyCurrentGuildMemberData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For modifying the Current <a class="el" href="../../dd/de7/a03025.html" title="A single GuildMember.">GuildMember</a>'s values.  <a href="../../db/dc5/a03009.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db3/a03013.html">DiscordCoreAPI::ModifyGuildMemberData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For modifying a <a class="el" href="../../dd/de7/a03025.html" title="A single GuildMember.">GuildMember</a>'s values.  <a href="../../d1/db3/a03013.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dfd/a03017.html">DiscordCoreAPI::RemoveGuildMemberData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For removing a <a class="el" href="../../dd/de7/a03025.html" title="A single GuildMember.">GuildMember</a> from a chosen <a class="el" href="../../dc/dc5/a02977.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>.  <a href="../../dd/dfd/a03017.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/db8/a03001.html">DiscordCoreAPI::SearchGuildMembersData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For searching for one or more <a class="el" href="../../d6/def/a03033.html" title="An interface class for the GuildMember related Discord endpoints.">GuildMembers</a> within a chosen <a class="el" href="../../dc/dc5/a02977.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>.  <a href="../../d0/db8/a03001.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d76/a03021.html">DiscordCoreAPI::TimeoutGuildMemberData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For timing out a <a class="el" href="../../dd/de7/a03025.html" title="A single GuildMember.">GuildMember</a>.  <a href="../../d2/d76/a03021.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:d7/d46/a00890"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></td></tr>
+<tr class="memdesc:d7/d46/a00890"><td class="mdescLeft">&#160;</td><td class="mdescRight">The main namespace for this library. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_856524284ebe840938865dc061f982fb.html">Include</a></li><li class="navelem"><a class="el" href="../../dir_9b16bdde4f6a21e020962bfdb0aa5092.html">discordcoreapi</a></li><li class="navelem"><a class="el" href="../../d5/de8/a00749.html">AudioDecoder.hpp</a></li>
+    <li class="navelem"><a class="el" href="../../dir_856524284ebe840938865dc061f982fb.html">Include</a></li><li class="navelem"><a class="el" href="../../dir_9b16bdde4f6a21e020962bfdb0aa5092.html">discordcoreapi</a></li><li class="navelem"><a class="el" href="../../d5/de8/a00749.html">GuildMemberEntities.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
