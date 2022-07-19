@@ -1,19 +1,24 @@
-<map id="StageInstanceEntities.hpp" name="StageInstanceEntities.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="909,5,1100,31"/>
-<area shape="rect" id="node2" href="$df/d0e/a00800.html" title=" " alt="" coords="707,79,897,104"/>
-<area shape="rect" id="node3" href="$d6/dc0/a00734.html" title=" " alt="" coords="921,79,1088,104"/>
-<area shape="rect" id="node17" href="$d5/d69/a00878.html" title=" " alt="" coords="1112,79,1303,104"/>
-<area shape="rect" id="node4" href="$d9/daf/a00830.html" title=" " alt="" coords="5,152,244,177"/>
-<area shape="rect" id="node5" href="$d4/d45/a00791.html" title=" " alt="" coords="268,152,435,177"/>
-<area shape="rect" id="node6" href="$d7/d49/a00863.html" title=" " alt="" coords="459,152,601,177"/>
-<area shape="rect" id="node7" href="$d3/d60/a00818.html" title=" " alt="" coords="625,152,757,177"/>
-<area shape="rect" id="node8" href="$d8/d2d/a00815.html" title=" " alt="" coords="781,152,865,177"/>
-<area shape="rect" id="node9" href="$d4/d9b/a00680.html" title=" " alt="" coords="889,152,976,177"/>
-<area shape="rect" id="node11" href="$dd/d7e/a00809.html" title=" " alt="" coords="1000,152,1156,177"/>
-<area shape="rect" id="node12" href="$d2/d5e/a00860.html" title=" " alt="" coords="1180,152,1283,177"/>
-<area shape="rect" id="node13" href="$df/d4c/a00851.html" title=" " alt="" coords="1307,152,1454,177"/>
-<area shape="rect" id="node14" href="$da/d96/a00782.html" title=" " alt="" coords="1478,152,1635,177"/>
-<area shape="rect" id="node15" href="$d5/d72/a00803.html" title=" " alt="" coords="1660,152,1829,177"/>
-<area shape="rect" id="node16" href="$d6/d8b/a00821.html" title=" " alt="" coords="1854,152,1977,177"/>
-<area shape="rect" id="node10" href="$d0/d82/a00857.html" title=" " alt="" coords="883,225,982,251"/>
+<map id="RoleEntities.hpp" name="RoleEntities.hpp">
+<area shape="rect" id="node1" title=" " alt="" coords="1458,5,1586,31"/>
+<area shape="rect" id="node2" href="$d8/db7/a00812.html" title=" " alt="" coords="1037,152,1226,177"/>
+<area shape="rect" id="node3" href="$db/d7c/a00722.html" title=" " alt="" coords="916,225,1083,251"/>
+<area shape="rect" id="node7" href="$d7/d49/a00863.html" title=" " alt="" coords="1844,299,1976,324"/>
+<area shape="rect" id="node17" href="$d9/dd4/a00776.html" title=" " alt="" coords="819,152,961,177"/>
+<area shape="rect" id="node18" href="$d5/d72/a00803.html" title=" " alt="" coords="1562,152,1733,177"/>
+<area shape="rect" id="node19" href="$dd/dd8/a00719.html" title=" " alt="" coords="1289,79,1422,104"/>
+<area shape="rect" id="node21" href="$d5/d69/a00878.html" title=" " alt="" coords="1757,152,1857,177"/>
+<area shape="rect" id="node22" href="$dc/d17/a00872.html" title=" " alt="" coords="1933,79,2060,104"/>
+<area shape="rect" id="node4" href="$d3/db2/a00869.html" title=" " alt="" coords="865,299,1104,324"/>
+<area shape="rect" id="node5" href="$d8/d1c/a00824.html" title=" " alt="" coords="1128,299,1295,324"/>
+<area shape="rect" id="node6" href="$dd/d7e/a00809.html" title=" " alt="" coords="5,299,148,324"/>
+<area shape="rect" id="node8" href="$d3/d00/a00785.html" title=" " alt="" coords="1319,299,1403,324"/>
+<area shape="rect" id="node9" href="$d2/d4a/a00758.html" title=" " alt="" coords="1427,299,1513,324"/>
+<area shape="rect" id="node11" href="$d4/d45/a00791.html" title=" " alt="" coords="1537,299,1693,324"/>
+<area shape="rect" id="node12" href="$df/d0c/a00788.html" title=" " alt="" coords="1717,299,1820,324"/>
+<area shape="rect" id="node13" href="$d7/dcf/a00845.html" title=" " alt="" coords="366,299,513,324"/>
+<area shape="rect" id="node14" href="$d2/d5e/a00860.html" title=" " alt="" coords="537,299,694,324"/>
+<area shape="rect" id="node15" href="$d0/d11/a00842.html" title=" " alt="" coords="172,299,341,324"/>
+<area shape="rect" id="node16" href="$dc/d1b/a00827.html" title=" " alt="" coords="718,299,841,324"/>
+<area shape="rect" id="node10" href="$d1/d93/a00875.html" title=" " alt="" coords="1421,372,1519,397"/>
+<area shape="rect" id="node20" href="$df/d4c/a00851.html" title=" " alt="" coords="1351,152,1538,177"/>
 </map>
