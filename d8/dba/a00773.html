@@ -105,50 +105,51 @@ $(document).ready(function(){initNavTree('d8/dba/a00773.html','../../'); initRes
   <div class="summary">
 <a href="#nested-classes">Classes and Structures</a> &#124;
 <a href="#namespaces">Namespaces</a>  </div>
-  <div class="headertitle"><div class="title">AutoModerationEntities.hpp File Reference</div></div>
+  <div class="headertitle"><div class="title">GuildScheduledEventEntities.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="../../db/d7c/a00722_source.html">discordcoreapi/FoundationEntities.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="../../d3/d2c/a00764_source.html">discordcoreapi/CoRoutine.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="../../df/d9e/a00686_source.html">discordcoreapi/Https.hpp</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="../../d1/d87/a00689_source.html">discordcoreapi/FoundationEntities.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../db/d77/a00683_source.html">discordcoreapi/CoRoutine.hpp</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for AutoModerationEntities.hpp:</div>
+Include dependency graph for GuildScheduledEventEntities.hpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d3/dee/a00774.svg" width="3138" height="638"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d3/dee/a00774.svg" width="3138" height="638"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dc/d5d/a00775.svg" width="2058" height="330"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dc/d5d/a00775.svg" width="1983" height="256"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 </div>
 <p><a href="../../d8/dba/a00773_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes and Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dd3/a01873.html">DiscordCoreAPI::AutoModerationActionExecutionEventData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For when an auto-moderation-rule is executed.  <a href="../../de/dd3/a01873.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d23/a03041.html">DiscordCoreAPI::CreateGuildScheduledEventData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For creating a <a class="el" href="../../d6/deb/a03061.html" title="A single GuildScheduledEvent responseData structure.">GuildScheduledEvent</a>.  <a href="../../dc/d23/a03041.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d6b/a01853.html">DiscordCoreAPI::AutoModerationRule</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an auto-moderation-rule.  <a href="../../db/d6b/a01853.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dfe/a03053.html">DiscordCoreAPI::DeleteGuildScheduledEventData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For deleting a single <a class="el" href="../../dc/dc5/a02977.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> Scheduled Event.  <a href="../../d6/dfe/a03053.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d9c/a01885.html">DiscordCoreAPI::AutoModerationRules</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An interface class for the <a class="el" href="../../db/d6b/a01853.html" title="Represents an auto-moderation-rule.">AutoModerationRule</a> related Discord endpoints.  <a href="../../d7/d9c/a01885.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/df6/a03045.html">DiscordCoreAPI::GetGuildScheduledEventData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For collecting a single <a class="el" href="../../dc/dc5/a02977.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> scheduled event.  <a href="../../d1/df6/a03045.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3a/a01869.html">DiscordCoreAPI::CreateAutoModerationRuleData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For creating an auto-moderation-rule.  <a href="../../d8/d3a/a01869.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/ddb/a03037.html">DiscordCoreAPI::GetGuildScheduledEventsData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For collecting a list of a <a class="el" href="../../dc/dc5/a02977.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>'s scheduled events.  <a href="../../db/ddb/a03037.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d9f/a01881.html">DiscordCoreAPI::DeleteAutoModerationRuleData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For deleting an auto-moderation-rule.  <a href="../../de/d9f/a01881.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/df1/a03057.html">DiscordCoreAPI::GetGuildScheduledEventUsersData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For collecting a list of <a class="el" href="../../dc/dc5/a02977.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> Scheduled Event <a class="el" href="../../d1/d3c/a03589.html" title="An interface class for the User related Discord endpoints.">Users</a>.  <a href="../../d2/df1/a03057.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/da8/a01865.html">DiscordCoreAPI::GetAutoModerationRuleData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For collecting an auto-moderation-rule for a particular <a class="el" href="../../db/d6b/a01853.html" title="Represents an auto-moderation-rule.">AutoModerationRule</a>.  <a href="../../d5/da8/a01865.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/deb/a03061.html">DiscordCoreAPI::GuildScheduledEvent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A single <a class="el" href="../../d6/deb/a03061.html" title="A single GuildScheduledEvent responseData structure.">GuildScheduledEvent</a> responseData structure.  <a href="../../d6/deb/a03061.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d56/a01861.html">DiscordCoreAPI::ListAutoModerationRulesForGuildData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For listing all of the auto-moderation-rules for a particular <a class="el" href="../../dc/dc5/a02977.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>.  <a href="../../d6/d56/a01861.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d44/a03065.html">DiscordCoreAPI::GuildScheduledEvents</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An interface class for the <a class="el" href="../../d6/deb/a03061.html" title="A single GuildScheduledEvent responseData structure.">GuildScheduledEvent</a> related Discord endpoints.  <a href="../../d4/d44/a03065.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d63/a01877.html">DiscordCoreAPI::ModifyAutoModerationRuleData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For modifying an auto-moderation-rule.  <a href="../../d9/d63/a01877.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d8c/a03049.html">DiscordCoreAPI::ModifyGuildScheduledEventData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For modifying a single <a class="el" href="../../dc/dc5/a02977.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> Scheduled Event.  <a href="../../d7/d8c/a03049.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
@@ -163,7 +164,7 @@ Namespaces</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_856524284ebe840938865dc061f982fb.html">Include</a></li><li class="navelem"><a class="el" href="../../dir_9b16bdde4f6a21e020962bfdb0aa5092.html">discordcoreapi</a></li><li class="navelem"><a class="el" href="../../d8/dba/a00773.html">AutoModerationEntities.hpp</a></li>
+    <li class="navelem"><a class="el" href="../../dir_856524284ebe840938865dc061f982fb.html">Include</a></li><li class="navelem"><a class="el" href="../../dir_9b16bdde4f6a21e020962bfdb0aa5092.html">discordcoreapi</a></li><li class="navelem"><a class="el" href="../../d8/dba/a00773.html">GuildScheduledEventEntities.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
