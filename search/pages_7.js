@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['help_3712',['Help',['../d3/d06/a05356.html',1,'MusicBotGuide']]],
-  ['helper_20functions_3713',['Helper Functions',['../df/d8b/a05357.html',1,'MusicBotGuide']]]
+  ['help_0',['Help',['../dc/d98/a07149.html',1,'MusicBotGuide']]],
+  ['helper_20functions_1',['Helper Functions',['../df/ddd/a07150.html',1,'MusicBotGuide']]]
 ];
