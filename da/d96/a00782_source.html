@@ -258,7 +258,7 @@ $(document).ready(function(){initNavTree('da/d96/a00782_source.html','../../'); 
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                    }</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                }</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            }</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            waitForThread(1000us);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            std::this_thread::sleep_for(1000us);</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        }</div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        std::unique_lock theLock{ this-&gt;theMutex };</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        this-&gt;workerThreads.erase(theIndex);</div>
@@ -336,7 +336,7 @@ $(document).ready(function(){initNavTree('da/d96/a00782_source.html','../../'); 
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>                    }</div>
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                }</div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>            }</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>            waitForThread(1000us);</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>            std::this_thread::sleep_for(1000us);</div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        }</div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        std::unique_lock theLock{ this-&gt;theMutex };</div>
 <div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        this-&gt;workerThreads.erase(theIndex);</div>
