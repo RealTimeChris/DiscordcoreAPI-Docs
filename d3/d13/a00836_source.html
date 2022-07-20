@@ -205,7 +205,7 @@ $(document).ready(function(){initNavTree('d3/d13/a00836_source.html','../../'); 
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                this-&gt;baseSocketAgent-&gt;sslShards[theIndex]-&gt;stringifyJsonData(payload, theString, DiscordCoreInternal::WebSocketOpCode::Op_Text);</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            }</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            this-&gt;baseSocketAgent-&gt;sendMessage(theString, <span class="keyword">static_cast&lt;</span>DiscordCoreInternal::WebSocketSSLShard*<span class="keyword">&gt;</span>(this-&gt;baseSocketAgent-&gt;sslShards[theIndex].get()), <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            this-&gt;baseSocketAgent-&gt;sslShards[theIndex]-&gt;sendMessage(theString, <span class="keyword">true</span>);</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        }</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    }</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
@@ -224,7 +224,7 @@ $(document).ready(function(){initNavTree('d3/d13/a00836_source.html','../../'); 
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                this-&gt;baseSocketAgent-&gt;sslShards[theIndex]-&gt;stringifyJsonData(payload, theString, DiscordCoreInternal::WebSocketOpCode::Op_Text);</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            }</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            this-&gt;baseSocketAgent-&gt;sendMessage(theString, <span class="keyword">static_cast&lt;</span>DiscordCoreInternal::WebSocketSSLShard*<span class="keyword">&gt;</span>(this-&gt;baseSocketAgent-&gt;sslShards[theIndex].get()), <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            this-&gt;baseSocketAgent-&gt;sslShards[theIndex]-&gt;sendMessage(theString, <span class="keyword">true</span>);</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        }</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    }</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
