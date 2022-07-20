@@ -313,7 +313,7 @@ $(document).ready(function(){initNavTree('dc/d6e/a00833_source.html','../../'); 
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>                    }</div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>                    std::this_thread::sleep_for(1ms);</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>                    didWeWrite = this-&gt;writeData(dataToSend, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>                    didWeWrite = this-&gt;writeData(dataToSend, priority);</div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>                } <span class="keywordflow">while</span> (!didWeWrite);</div>
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>                <span class="keywordflow">if</span> (!didWeWrite) {</div>
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>                    this-&gt;onClosed();</div>
@@ -356,7 +356,7 @@ $(document).ready(function(){initNavTree('dc/d6e/a00833_source.html','../../'); 
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>                std::string theString02{};</div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>                this-&gt;stringifyJsonData(newData02, theString02, this-&gt;dataOpCode);</div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>                this-&gt;areWeCollectingData = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>                <span class="keywordflow">if</span> (!this-&gt;sendMessage(theString, <span class="keyword">true</span>)) {</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>                <span class="keywordflow">if</span> (!this-&gt;sendMessage(theString02, <span class="keyword">true</span>)) {</div>
 <div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>                    <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>                }</div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>                DiscordCoreAPI::StopWatch&lt;std::chrono::milliseconds&gt; theStopWatch{ 5500ms };</div>
