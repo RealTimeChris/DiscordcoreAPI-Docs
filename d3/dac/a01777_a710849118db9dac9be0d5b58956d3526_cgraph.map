@@ -1,0 +1,4 @@
+<map id="DiscordCoreAPI::ApplicationCommands::editGuildApplicationCommandPermissionsAsync" name="DiscordCoreAPI::ApplicationCommands::editGuildApplicationCommandPermissionsAsync">
+<area shape="rect" id="node1" title="Edit Guild ApplicationCommand permissions for a server on this bot." alt="" coords="5,5,308,60"/>
+<area shape="rect" id="node2" href="$d3/dac/a01777.html#a038ea064d3458d653c1d82b22adf3469" title="Get all of the Guild ApplicationCommands for a single Guild for this bot." alt="" coords="356,13,701,53"/>
+</map>
