@@ -1,7 +1,0 @@
-<map id="DiscordCoreAPI::ApplicationCommands::getGuildApplicationCommandsAsync" name="DiscordCoreAPI::ApplicationCommands::getGuildApplicationCommandsAsync">
-<area shape="rect" id="node1" title="Get all of the Guild ApplicationCommands for a single Guild for this bot." alt="" coords="396,121,741,161"/>
-<area shape="rect" id="node2" href="$d3/dac/a01777.html#a57a77d37e82afeae87fda8e0aac1e3b5" title="Delete a single Guild ApplicationCommand for a single server for this bot." alt="" coords="51,5,303,60"/>
-<area shape="rect" id="node3" href="$d3/dac/a01777.html#ab3ace9a43a0046c39ffc4cc84b213503" title="Edit a single Guild ApplicationCommand for a single server for this bot." alt="" coords="5,85,348,125"/>
-<area shape="rect" id="node4" href="$d3/dac/a01777.html#a710849118db9dac9be0d5b58956d3526" title="Edit Guild ApplicationCommand permissions for a server on this bot." alt="" coords="25,149,328,204"/>
-<area shape="rect" id="node5" href="$d3/dac/a01777.html#af139166b2e586ce72a06dfda1ffcfc56" title="Get ApplicationCommand permissions for a single command on this bot." alt="" coords="44,228,309,283"/>
-</map>
