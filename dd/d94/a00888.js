@@ -47,11 +47,11 @@ var a00888 =
       [ "roleId", "d1/d24/a03301.html#aea6102860d19f668b5c49cd4a2d0b234", null ],
       [ "userId", "d1/d24/a03301.html#adb2477b8b1c42bb511765034f98d07ae", null ]
     ] ],
-    [ "DiscordCoreAPI::AddRecipientToGroupDMData", "db/d72/a03549.html", [
-      [ "channelId", "db/d72/a03549.html#ac6ddd889cb0789d4305bc28760ebb105", null ],
-      [ "nick", "db/d72/a03549.html#afc544c93105f3c1656687754499a63f5", null ],
-      [ "token", "db/d72/a03549.html#a97f14e68107744341457a3352f163441", null ],
-      [ "userId", "db/d72/a03549.html#addd392dca24331a8aa99b2ba3513a9ff", null ]
+    [ "DiscordCoreAPI::AddRecipientToGroupDMData", "dd/d25/a03545.html", [
+      [ "channelId", "dd/d25/a03545.html#ac6ddd889cb0789d4305bc28760ebb105", null ],
+      [ "nick", "dd/d25/a03545.html#afc544c93105f3c1656687754499a63f5", null ],
+      [ "token", "dd/d25/a03545.html#a97f14e68107744341457a3352f163441", null ],
+      [ "userId", "dd/d25/a03545.html#addd392dca24331a8aa99b2ba3513a9ff", null ]
     ] ],
     [ "DiscordCoreAPI::AddThreadMemberData", "d0/dc1/a03485.html", [
       [ "channelId", "d0/dc1/a03485.html#a51cae3cd294e9fd9df1a043fee01cfa3", null ],
@@ -226,9 +226,9 @@ var a00888 =
       [ "guildId", "d7/d68/a02885.html#aeca4171b879a8c66b1121e83fcc246d0", null ],
       [ "reason", "d7/d68/a02885.html#a16b59712fff676c530e7e0e74de397c6", null ]
     ] ],
-    [ "DiscordCoreAPI::BotUser", "da/d3e/a03581.html", [
-      [ "updatePresence", "da/d3e/a03581.html#a7fcf4f403abeeea2520599c156fae253", null ],
-      [ "updateVoiceStatus", "da/d3e/a03581.html#a153ffd093382c85633829194c195360a", null ]
+    [ "DiscordCoreAPI::BotUser", "da/df8/a03577.html", [
+      [ "updatePresence", "da/df8/a03577.html#a7fcf4f403abeeea2520599c156fae253", null ],
+      [ "updateVoiceStatus", "da/df8/a03577.html#a153ffd093382c85633829194c195360a", null ]
     ] ],
     [ "DiscordCoreAPI::BulkOverwriteGlobalApplicationCommandsData", "d2/d70/a01729.html", [
       [ "applicationId", "d2/d70/a01729.html#a77ffbbca0877973010fd0d0a13cab54b", null ],
@@ -464,10 +464,10 @@ var a00888 =
       [ "emojiName", "d2/daf/a03245.html#a42f749268ee40b5b0ab045988c57c1c5", null ],
       [ "messageId", "d2/daf/a03245.html#a97c542f96e3b256f5eb326e574ec34f8", null ]
     ] ],
-    [ "DiscordCoreAPI::CreateWebHookData", "dc/d0b/a03653.html", [
-      [ "avatar", "dc/d0b/a03653.html#abd2a5b440d3eb2a1daa5fd7cb3d0742b", null ],
-      [ "channelId", "dc/d0b/a03653.html#aa9cfb9ecc35232101605bce70c000f03", null ],
-      [ "name", "dc/d0b/a03653.html#aed2bbdbf37159b013291bbe766d89df6", null ]
+    [ "DiscordCoreAPI::CreateWebHookData", "da/d7d/a03649.html", [
+      [ "avatar", "da/d7d/a03649.html#abd2a5b440d3eb2a1daa5fd7cb3d0742b", null ],
+      [ "channelId", "da/d7d/a03649.html#aa9cfb9ecc35232101605bce70c000f03", null ],
+      [ "name", "da/d7d/a03649.html#aed2bbdbf37159b013291bbe766d89df6", null ]
     ] ],
     [ "DiscordCoreAPI::CrosspostMessageData", "dd/d61/a03197.html", [
       [ "channelId", "dd/d61/a03197.html#aec30919c478c1bbe12edaba531e7d396", null ],
@@ -562,18 +562,18 @@ var a00888 =
       [ "messageId", "d9/d56/a03253.html#aca1e7da6d0b70d58141154d2ae4617ad", null ],
       [ "userId", "d9/d56/a03253.html#a963f49be15aa03ee198077fca4bd62bf", null ]
     ] ],
-    [ "DiscordCoreAPI::DeleteWebHookData", "d3/d4a/a03689.html", [
-      [ "webHookId", "d3/d4a/a03689.html#a9645423fa395815035a5b1432fd5317a", null ]
+    [ "DiscordCoreAPI::DeleteWebHookData", "da/da8/a03685.html", [
+      [ "webHookId", "da/da8/a03685.html#a9645423fa395815035a5b1432fd5317a", null ]
     ] ],
-    [ "DiscordCoreAPI::DeleteWebHookMessageData", "d4/df9/a03701.html", [
-      [ "messageId", "d4/df9/a03701.html#a124c8caab662a3c690277c6233802cdd", null ],
-      [ "threadId", "d4/df9/a03701.html#acd10c19c414f784aefc45ef05ac49760", null ],
-      [ "webHookId", "d4/df9/a03701.html#a7b8dccf10c3ca9a6a7ee3581ff6da218", null ],
-      [ "webhookToken", "d4/df9/a03701.html#a1e6bc5dac9239b9aa40fb3b9aceb2f32", null ]
+    [ "DiscordCoreAPI::DeleteWebHookMessageData", "d0/d0f/a03697.html", [
+      [ "messageId", "d0/d0f/a03697.html#a124c8caab662a3c690277c6233802cdd", null ],
+      [ "threadId", "d0/d0f/a03697.html#acd10c19c414f784aefc45ef05ac49760", null ],
+      [ "webHookId", "d0/d0f/a03697.html#a7b8dccf10c3ca9a6a7ee3581ff6da218", null ],
+      [ "webhookToken", "d0/d0f/a03697.html#a1e6bc5dac9239b9aa40fb3b9aceb2f32", null ]
     ] ],
-    [ "DiscordCoreAPI::DeleteWebHookWithTokenData", "d1/ddd/a03693.html", [
-      [ "webHookId", "d1/ddd/a03693.html#a2cbf4cb0c1114b9f3e14d84cc7ea5ba2", null ],
-      [ "webhookToken", "d1/ddd/a03693.html#ad3af1981280a273c3ef3c7e59b521185", null ]
+    [ "DiscordCoreAPI::DeleteWebHookWithTokenData", "d3/d4a/a03689.html", [
+      [ "webHookId", "d3/d4a/a03689.html#a2cbf4cb0c1114b9f3e14d84cc7ea5ba2", null ],
+      [ "webhookToken", "d3/d4a/a03689.html#ad3af1981280a273c3ef3c7e59b521185", null ]
     ] ],
     [ "DiscordCoreAPI::DiscordEntity", "df/d4d/a02285.html", [
       [ "getCreatedAtTimestamp", "df/d4d/a02285.html#a880fa695445dc41f6d371d2a6ef1e8c0", null ],
@@ -618,10 +618,10 @@ var a00888 =
     ] ],
     [ "DiscordCoreAPI::EditInteractionResponseData", "d5/dcb/a03121.html", null ],
     [ "DiscordCoreAPI::EditMessageData", "d6/df4/a03201.html", null ],
-    [ "DiscordCoreAPI::EditWebHookData", "d9/dce/a03661.html", [
-      [ "messageId", "d9/dce/a03661.html#ac69fe784741dd4c26c966978fd1a8c1f", null ],
-      [ "threadId", "d9/dce/a03661.html#a2818e5b53f3f8c47573cf560de523652", null ],
-      [ "wait", "d9/dce/a03661.html#a0ea78ea8c64ddad7f17ddefb76d4dcdf", null ]
+    [ "DiscordCoreAPI::EditWebHookData", "d1/d01/a03657.html", [
+      [ "messageId", "d1/d01/a03657.html#ac69fe784741dd4c26c966978fd1a8c1f", null ],
+      [ "threadId", "d1/d01/a03657.html#a2818e5b53f3f8c47573cf560de523652", null ],
+      [ "wait", "d1/d01/a03657.html#a0ea78ea8c64ddad7f17ddefb76d4dcdf", null ]
     ] ],
     [ "DiscordCoreAPI::EmbedAuthorData", "d2/d0a/a02321.html", [
       [ "iconUrl", "d2/d0a/a02321.html#a0059daa55ecd8d4b62ec4449a6c32b07", null ],
@@ -695,32 +695,32 @@ var a00888 =
       [ "unicodeName", "d5/da5/a02413.html#af02bf1f14e5145a2c10387c7e79f546c", null ],
       [ "user", "d5/da5/a02413.html#a0cf3f0fdd02103f8500191d0484e624f", null ]
     ] ],
-    [ "DiscordCoreAPI::ExecuteWebHookData", "d1/d01/a03657.html", [
-      [ "addAllowedMentions", "d1/d01/a03657.html#a76456f2a832f066262b14bb592ed9102", null ],
-      [ "addButton", "d1/d01/a03657.html#aff1e2ddc385cc987cde1194aa657596c", null ],
-      [ "addComponentRow", "d1/d01/a03657.html#a8fc0bcdbbc83e970ef3d836ac6c6374f", null ],
-      [ "addContent", "d1/d01/a03657.html#a619a707d0e53029c7bc5817f5bc93938", null ],
-      [ "addFile", "d1/d01/a03657.html#a73a06a5e015c539112147e1efff47ded", null ],
-      [ "addMessageEmbed", "d1/d01/a03657.html#a97401d94bb2c18e60ccbfebbfb4fc56f", null ],
-      [ "addModal", "d1/d01/a03657.html#a7ac7a853ac087bdae6c4261d3432a503", null ],
-      [ "addSelectMenu", "d1/d01/a03657.html#a993aac8856cad5ab12be0a17fb91fea1", null ],
-      [ "setTTSStatus", "d1/d01/a03657.html#a3e2fb96f922284144a456ab6cdf2f63d", null ],
-      [ "allowedMentions", "d1/d01/a03657.html#a25ea6e38825adc10c7ce298a7a376c50", null ],
-      [ "attachments", "d1/d01/a03657.html#a8d90a67a23dba11dee55eb70996f5dee", null ],
-      [ "avatarUrl", "d1/d01/a03657.html#a8689e3f3f5ff1eee1bf85e9f35f3d35e", null ],
-      [ "components", "d1/d01/a03657.html#ac934f3e6f7bcbbb4dabb0341c31ee055", null ],
-      [ "content", "d1/d01/a03657.html#ab694e10cb32d4738a82b083209f930c5", null ],
-      [ "customId", "d1/d01/a03657.html#ae6ba968ae8970c09fda12fd526db60a9", null ],
-      [ "embeds", "d1/d01/a03657.html#a8ca8c0334aad719a3a818437269b6ec6", null ],
-      [ "files", "d1/d01/a03657.html#a0d12cebeb4b9f99be23032be70c37bbf", null ],
-      [ "flags", "d1/d01/a03657.html#a7f6bbf96f72237b64db78517619d0b59", null ],
-      [ "threadId", "d1/d01/a03657.html#a2ce6dde4650ad9fac037e8ece7ae4483", null ],
-      [ "title", "d1/d01/a03657.html#a43967b9e12393919f2771ca70821935d", null ],
-      [ "tts", "d1/d01/a03657.html#a38e1a126c7064d854a088a9a2b9026e1", null ],
-      [ "userName", "d1/d01/a03657.html#ae12d5bd38e101bbddeefdf89d7f055a7", null ],
-      [ "wait", "d1/d01/a03657.html#a55c9c408603d2298039e6b8ce03770b0", null ],
-      [ "webHookId", "d1/d01/a03657.html#af14d4b86af2ffa31c375bc3b8f7fd23f", null ],
-      [ "webhookToken", "d1/d01/a03657.html#aad42aa02ec6bc66bc87ceaecf1519e97", null ]
+    [ "DiscordCoreAPI::ExecuteWebHookData", "dc/d0b/a03653.html", [
+      [ "addAllowedMentions", "dc/d0b/a03653.html#a76456f2a832f066262b14bb592ed9102", null ],
+      [ "addButton", "dc/d0b/a03653.html#aff1e2ddc385cc987cde1194aa657596c", null ],
+      [ "addComponentRow", "dc/d0b/a03653.html#a8fc0bcdbbc83e970ef3d836ac6c6374f", null ],
+      [ "addContent", "dc/d0b/a03653.html#a619a707d0e53029c7bc5817f5bc93938", null ],
+      [ "addFile", "dc/d0b/a03653.html#a73a06a5e015c539112147e1efff47ded", null ],
+      [ "addMessageEmbed", "dc/d0b/a03653.html#a97401d94bb2c18e60ccbfebbfb4fc56f", null ],
+      [ "addModal", "dc/d0b/a03653.html#a7ac7a853ac087bdae6c4261d3432a503", null ],
+      [ "addSelectMenu", "dc/d0b/a03653.html#a993aac8856cad5ab12be0a17fb91fea1", null ],
+      [ "setTTSStatus", "dc/d0b/a03653.html#a3e2fb96f922284144a456ab6cdf2f63d", null ],
+      [ "allowedMentions", "dc/d0b/a03653.html#a25ea6e38825adc10c7ce298a7a376c50", null ],
+      [ "attachments", "dc/d0b/a03653.html#a8d90a67a23dba11dee55eb70996f5dee", null ],
+      [ "avatarUrl", "dc/d0b/a03653.html#a8689e3f3f5ff1eee1bf85e9f35f3d35e", null ],
+      [ "components", "dc/d0b/a03653.html#ac934f3e6f7bcbbb4dabb0341c31ee055", null ],
+      [ "content", "dc/d0b/a03653.html#ab694e10cb32d4738a82b083209f930c5", null ],
+      [ "customId", "dc/d0b/a03653.html#ae6ba968ae8970c09fda12fd526db60a9", null ],
+      [ "embeds", "dc/d0b/a03653.html#a8ca8c0334aad719a3a818437269b6ec6", null ],
+      [ "files", "dc/d0b/a03653.html#a0d12cebeb4b9f99be23032be70c37bbf", null ],
+      [ "flags", "dc/d0b/a03653.html#a7f6bbf96f72237b64db78517619d0b59", null ],
+      [ "threadId", "dc/d0b/a03653.html#a2ce6dde4650ad9fac037e8ece7ae4483", null ],
+      [ "title", "dc/d0b/a03653.html#a43967b9e12393919f2771ca70821935d", null ],
+      [ "tts", "dc/d0b/a03653.html#a38e1a126c7064d854a088a9a2b9026e1", null ],
+      [ "userName", "dc/d0b/a03653.html#ae12d5bd38e101bbddeefdf89d7f055a7", null ],
+      [ "wait", "dc/d0b/a03653.html#a55c9c408603d2298039e6b8ce03770b0", null ],
+      [ "webHookId", "dc/d0b/a03653.html#af14d4b86af2ffa31c375bc3b8f7fd23f", null ],
+      [ "webhookToken", "dc/d0b/a03653.html#aad42aa02ec6bc66bc87ceaecf1519e97", null ]
     ] ],
     [ "DiscordCoreAPI::File", "d7/d52/a02337.html", [
       [ "data", "d7/d52/a02337.html#a56429b30779df0e8363f240dd6837927", null ],
@@ -761,8 +761,8 @@ var a00888 =
       [ "channelId", "d9/d9b/a01889.html#a57b82224462313501dfe92cbfe8f59d9", null ]
     ] ],
     [ "DiscordCoreAPI::GetChannelInvitesData", "d5/d99/a01901.html", null ],
-    [ "DiscordCoreAPI::GetChannelWebHooksData", "d1/df9/a03665.html", [
-      [ "channelId", "d1/df9/a03665.html#a4bd569a84f7144e0f6521c7c87cc0d1c", null ]
+    [ "DiscordCoreAPI::GetChannelWebHooksData", "d9/dce/a03661.html", [
+      [ "channelId", "d9/dce/a03661.html#a4bd569a84f7144e0f6521c7c87cc0d1c", null ]
     ] ],
     [ "DiscordCoreAPI::GetCurrentUserGuildsData", "db/d6c/a02969.html", [
       [ "after", "db/d6c/a02969.html#ae42a507972a54a0227def24c5c85b055", null ],
@@ -883,8 +883,8 @@ var a00888 =
     [ "DiscordCoreAPI::GetGuildVoiceRegionsData", "df/d7d/a02889.html", [
       [ "guildId", "df/d7d/a02889.html#adbaf368d762c82430393fee8af0706fc", null ]
     ] ],
-    [ "DiscordCoreAPI::GetGuildWebHooksData", "d1/d83/a03669.html", [
-      [ "guildId", "d1/d83/a03669.html#a2138f34efe5bed2b871a0c4e8a82d488", null ]
+    [ "DiscordCoreAPI::GetGuildWebHooksData", "d1/df9/a03665.html", [
+      [ "guildId", "d1/df9/a03665.html#a2138f34efe5bed2b871a0c4e8a82d488", null ]
     ] ],
     [ "DiscordCoreAPI::GetGuildWelcomeScreenData", "d8/de8/a02925.html", [
       [ "guildId", "d8/de8/a02925.html#a1209bd8c62c410877e8b7ed987194eb5", null ]
@@ -966,21 +966,21 @@ var a00888 =
     [ "DiscordCoreAPI::GetThreadMembersData", "d8/dbb/a03501.html", [
       [ "channelId", "d8/dbb/a03501.html#ae8d30bbe8d44dc29545ba0d18f5f9b81", null ]
     ] ],
-    [ "DiscordCoreAPI::GetUserData", "de/d5d/a03565.html", [
-      [ "userId", "de/d5d/a03565.html#a6526bebb486498dde524407b2baf5719", null ]
+    [ "DiscordCoreAPI::GetUserData", "df/df7/a03561.html", [
+      [ "userId", "df/df7/a03561.html#a6526bebb486498dde524407b2baf5719", null ]
     ] ],
-    [ "DiscordCoreAPI::GetWebHookData", "d9/da3/a03673.html", [
-      [ "webHookId", "d9/da3/a03673.html#ac814438c83dabb92aba4eef76052d240", null ]
+    [ "DiscordCoreAPI::GetWebHookData", "d1/d83/a03669.html", [
+      [ "webHookId", "d1/d83/a03669.html#ac814438c83dabb92aba4eef76052d240", null ]
     ] ],
-    [ "DiscordCoreAPI::GetWebHookMessageData", "d0/d0f/a03697.html", [
-      [ "messageId", "d0/d0f/a03697.html#a54b560e56436bbebc8b9322328ca7e00", null ],
-      [ "threadId", "d0/d0f/a03697.html#aa41ba409eeab56148a3beee275cb97ed", null ],
-      [ "webHookId", "d0/d0f/a03697.html#ae5718686e867b1adc44f949712337c11", null ],
-      [ "webhookToken", "d0/d0f/a03697.html#afa6b74ac456a3aead40eaecb4db0c412", null ]
+    [ "DiscordCoreAPI::GetWebHookMessageData", "d1/ddd/a03693.html", [
+      [ "messageId", "d1/ddd/a03693.html#a54b560e56436bbebc8b9322328ca7e00", null ],
+      [ "threadId", "d1/ddd/a03693.html#aa41ba409eeab56148a3beee275cb97ed", null ],
+      [ "webHookId", "d1/ddd/a03693.html#ae5718686e867b1adc44f949712337c11", null ],
+      [ "webhookToken", "d1/ddd/a03693.html#afa6b74ac456a3aead40eaecb4db0c412", null ]
     ] ],
-    [ "DiscordCoreAPI::GetWebHookWithTokenData", "d4/d78/a03677.html", [
-      [ "webHookId", "d4/d78/a03677.html#abadf6fe2ea15f6933d0791e0a64730ed", null ],
-      [ "webhookToken", "d4/d78/a03677.html#a6fa76b18b26473618ac6c1b574f8b345", null ]
+    [ "DiscordCoreAPI::GetWebHookWithTokenData", "d9/da3/a03673.html", [
+      [ "webHookId", "d9/da3/a03673.html#abadf6fe2ea15f6933d0791e0a64730ed", null ],
+      [ "webhookToken", "d9/da3/a03673.html#a6fa76b18b26473618ac6c1b574f8b345", null ]
     ] ],
     [ "DiscordCoreAPI::Guild", "dc/dc5/a02977.html", [
       [ "afkChannelId", "dc/dc5/a02977.html#a8062f66337dbc83ce686554b2ff637b4", null ],
@@ -1297,15 +1297,15 @@ var a00888 =
       [ "nick", "db/dc5/a03009.html#ac90bd35f368e45b4f2a4bcd8dfe575d9", null ],
       [ "reason", "db/dc5/a03009.html#a840f12ae446d296fe8f2f42fc96d2240", null ]
     ] ],
-    [ "DiscordCoreAPI::ModifyCurrentUserData", "dd/d87/a03569.html", [
-      [ "avatar", "dd/d87/a03569.html#a84c81d4d262df043045673f7d9297660", null ],
-      [ "userName", "dd/d87/a03569.html#a008d962925d265f7458952dc8dcd5c75", null ]
+    [ "DiscordCoreAPI::ModifyCurrentUserData", "de/d5d/a03565.html", [
+      [ "avatar", "de/d5d/a03565.html#a84c81d4d262df043045673f7d9297660", null ],
+      [ "userName", "de/d5d/a03565.html#a008d962925d265f7458952dc8dcd5c75", null ]
     ] ],
-    [ "DiscordCoreAPI::ModifyCurrentUserVoiceStateData", "d0/d20/a03557.html", [
-      [ "channelId", "d0/d20/a03557.html#a2f2074ac5b91f863865413439eff47ca", null ],
-      [ "guildId", "d0/d20/a03557.html#a4b397b5eb2f6198fdb19d0481c96f79c", null ],
-      [ "requestToSpeakTimestamp", "d0/d20/a03557.html#a0dbe3943e32cc7263316e54c54a70111", null ],
-      [ "suppress", "d0/d20/a03557.html#ae0e5c3ef1f543c9d6bd637246896bbb0", null ]
+    [ "DiscordCoreAPI::ModifyCurrentUserVoiceStateData", "d1/da6/a03553.html", [
+      [ "channelId", "d1/da6/a03553.html#a2f2074ac5b91f863865413439eff47ca", null ],
+      [ "guildId", "d1/da6/a03553.html#a4b397b5eb2f6198fdb19d0481c96f79c", null ],
+      [ "requestToSpeakTimestamp", "d1/da6/a03553.html#a0dbe3943e32cc7263316e54c54a70111", null ],
+      [ "suppress", "d1/da6/a03553.html#ae0e5c3ef1f543c9d6bd637246896bbb0", null ]
     ] ],
     [ "DiscordCoreAPI::ModifyGuildChannelPositionData", "dc/dc8/a01929.html", [
       [ "id", "dc/dc8/a01929.html#a6d0eda8cc30c83339632de85bf38ae97", null ],
@@ -1415,24 +1415,24 @@ var a00888 =
       [ "reason", "dc/d86/a02909.html#abffb9f628bebe82a328f52cf4348b752", null ],
       [ "widgetData", "dc/d86/a02909.html#a72a313ca8e0ec92c5ae6f0410c22c4e3", null ]
     ] ],
-    [ "DiscordCoreAPI::ModifyUserVoiceStateData", "df/df7/a03561.html", [
-      [ "channelId", "df/df7/a03561.html#af9944274b005ef2632e3f54280ffcfab", null ],
-      [ "guildId", "df/df7/a03561.html#ad91dde0ef34ab77cce3dbcd72f0a38b6", null ],
-      [ "suppress", "df/df7/a03561.html#a49ffb874f378b11f3b585b0bb7a908e5", null ],
-      [ "userId", "df/df7/a03561.html#a496748887004d87f9cf522c8ff5ca3ed", null ]
+    [ "DiscordCoreAPI::ModifyUserVoiceStateData", "d0/d20/a03557.html", [
+      [ "channelId", "d0/d20/a03557.html#af9944274b005ef2632e3f54280ffcfab", null ],
+      [ "guildId", "d0/d20/a03557.html#ad91dde0ef34ab77cce3dbcd72f0a38b6", null ],
+      [ "suppress", "d0/d20/a03557.html#a49ffb874f378b11f3b585b0bb7a908e5", null ],
+      [ "userId", "d0/d20/a03557.html#a496748887004d87f9cf522c8ff5ca3ed", null ]
     ] ],
-    [ "DiscordCoreAPI::ModifyWebHookData", "d7/d40/a03681.html", [
-      [ "avatar", "d7/d40/a03681.html#a8775145690af90e44049bfd1ffb73aac", null ],
-      [ "channelId", "d7/d40/a03681.html#a73b18f2e3581a5efaebd44e75d250424", null ],
-      [ "name", "d7/d40/a03681.html#a882b8b47ff5ce4c9c7f728fb160a93d0", null ],
-      [ "webHookId", "d7/d40/a03681.html#ab70337999faf11b6fda15dbf40b1b80a", null ]
+    [ "DiscordCoreAPI::ModifyWebHookData", "d4/d78/a03677.html", [
+      [ "avatar", "d4/d78/a03677.html#a8775145690af90e44049bfd1ffb73aac", null ],
+      [ "channelId", "d4/d78/a03677.html#a73b18f2e3581a5efaebd44e75d250424", null ],
+      [ "name", "d4/d78/a03677.html#a882b8b47ff5ce4c9c7f728fb160a93d0", null ],
+      [ "webHookId", "d4/d78/a03677.html#ab70337999faf11b6fda15dbf40b1b80a", null ]
     ] ],
-    [ "DiscordCoreAPI::ModifyWebHookWithTokenData", "da/da8/a03685.html", [
-      [ "avatar", "da/da8/a03685.html#aace657aedabedad17074494704189b70", null ],
-      [ "channelId", "da/da8/a03685.html#a89ae35e90cf2f89c09df914d88b25519", null ],
-      [ "name", "da/da8/a03685.html#a6de9cb1a6fb4f22da3a96c928d85b5b6", null ],
-      [ "webHookId", "da/da8/a03685.html#aa20135d317cd00060b5c7cf34a87432d", null ],
-      [ "webhookToken", "da/da8/a03685.html#a3a33cd82e6143774333823b2610eb10a", null ]
+    [ "DiscordCoreAPI::ModifyWebHookWithTokenData", "d7/d40/a03681.html", [
+      [ "avatar", "d7/d40/a03681.html#aace657aedabedad17074494704189b70", null ],
+      [ "channelId", "d7/d40/a03681.html#a89ae35e90cf2f89c09df914d88b25519", null ],
+      [ "name", "d7/d40/a03681.html#a6de9cb1a6fb4f22da3a96c928d85b5b6", null ],
+      [ "webHookId", "d7/d40/a03681.html#aa20135d317cd00060b5c7cf34a87432d", null ],
+      [ "webhookToken", "d7/d40/a03681.html#a3a33cd82e6143774333823b2610eb10a", null ]
     ] ],
     [ "DiscordCoreAPI::OptionalAuditEntryInfoData", "d1/d73/a02497.html", [
       [ "applicationId", "d1/d73/a02497.html#acf7c8a318d0db536469b053aef86ffa2", null ],
@@ -1453,15 +1453,15 @@ var a00888 =
     [ "DiscordCoreAPI::PartyData", "dc/de1/a02513.html", [
       [ "size", "dc/de1/a02513.html#ab25ccdfb52ac9ea1144d41523d0a12c0", null ]
     ] ],
-    [ "DiscordCoreAPI::Permissions", "dc/d58/a03633.html", [
-      [ "addPermissions", "dc/d58/a03633.html#aef8b69d286b5fd9b28921605dcf20b7c", null ],
-      [ "checkForPermission", "dc/d58/a03633.html#acafd47a5d3ea3c04adccd925bc090a2d", null ],
-      [ "displayPermissions", "dc/d58/a03633.html#a64185e34c88630e694b240154add7ec0", null ],
-      [ "getAllPermissions", "dc/d58/a03633.html#ab2f019fc4f2aaea927b5e483b97db88a", null ],
-      [ "getCurrentChannelPermissions", "dc/d58/a03633.html#a4024f5e7e266f4b0b0506db2ead8e4d7", null ],
-      [ "getCurrentGuildPermissions", "dc/d58/a03633.html#ae45954e6ed86e0abe47c04b9fdc33f42", null ],
-      [ "getCurrentPermissionString", "dc/d58/a03633.html#a52dd5ec05173b1efa95885cc040b57bf", null ],
-      [ "removePermissions", "dc/d58/a03633.html#a37134ae653214396070613834d9bd4f1", null ]
+    [ "DiscordCoreAPI::Permissions", "d8/d33/a03629.html", [
+      [ "addPermissions", "d8/d33/a03629.html#aef8b69d286b5fd9b28921605dcf20b7c", null ],
+      [ "checkForPermission", "d8/d33/a03629.html#acafd47a5d3ea3c04adccd925bc090a2d", null ],
+      [ "displayPermissions", "d8/d33/a03629.html#a64185e34c88630e694b240154add7ec0", null ],
+      [ "getAllPermissions", "d8/d33/a03629.html#ab2f019fc4f2aaea927b5e483b97db88a", null ],
+      [ "getCurrentChannelPermissions", "d8/d33/a03629.html#a4024f5e7e266f4b0b0506db2ead8e4d7", null ],
+      [ "getCurrentGuildPermissions", "d8/d33/a03629.html#ae45954e6ed86e0abe47c04b9fdc33f42", null ],
+      [ "getCurrentPermissionString", "d8/d33/a03629.html#a52dd5ec05173b1efa95885cc040b57bf", null ],
+      [ "removePermissions", "d8/d33/a03629.html#a37134ae653214396070613834d9bd4f1", null ]
     ] ],
     [ "DiscordCoreAPI::PinMessageData", "d1/df1/a03217.html", [
       [ "channelId", "d1/df1/a03217.html#a51c1f1c4f16e7041cf8a1fcda261e854", null ],
@@ -1508,18 +1508,18 @@ var a00888 =
       [ "reason", "d8/d5d/a03329.html#aefde5164cbf5b3063b8018e49b27464f", null ],
       [ "roleId", "d8/d5d/a03329.html#a217b17d540fd721dc99b97ac6996ecc0", null ]
     ] ],
-    [ "DiscordCoreAPI::RemoveRecipientFromGroupDMData", "d1/da6/a03553.html", [
-      [ "channelId", "d1/da6/a03553.html#a2972a1fd2122a7a4fef75cf201163131", null ],
-      [ "userId", "d1/da6/a03553.html#af011a01575db9f2f100ff22af40a3c07", null ]
+    [ "DiscordCoreAPI::RemoveRecipientFromGroupDMData", "db/d72/a03549.html", [
+      [ "channelId", "db/d72/a03549.html#a2972a1fd2122a7a4fef75cf201163131", null ],
+      [ "userId", "db/d72/a03549.html#af011a01575db9f2f100ff22af40a3c07", null ]
     ] ],
     [ "DiscordCoreAPI::RemoveThreadMemberData", "d6/d04/a03493.html", [
       [ "channelId", "d6/d04/a03493.html#a6163229b9a1496ba463bce64793fddaa", null ],
       [ "userId", "d6/d04/a03493.html#a700d7289330255c8973b63640f3a422d", null ]
     ] ],
-    [ "DiscordCoreAPI::RepeatedFunctionData", "d6/d8c/a03601.html", [
-      [ "function", "d6/d8c/a03601.html#ab3113ed967aef68dc02622fcc8d1a8a1", null ],
-      [ "intervalInMs", "d6/d8c/a03601.html#ad6cd7f6c69dd885d3fc19ee1478835b0", null ],
-      [ "repeated", "d6/d8c/a03601.html#ad5779846654b535a8a63abe4be753e13", null ]
+    [ "DiscordCoreAPI::RepeatedFunctionData", "de/d3a/a03597.html", [
+      [ "function", "de/d3a/a03597.html#ab3113ed967aef68dc02622fcc8d1a8a1", null ],
+      [ "intervalInMs", "de/d3a/a03597.html#ad6cd7f6c69dd885d3fc19ee1478835b0", null ],
+      [ "repeated", "de/d3a/a03597.html#ad5779846654b535a8a63abe4be753e13", null ]
     ] ],
     [ "DiscordCoreAPI::ResolvedData", "df/d50/a02725.html", [
       [ "attachments", "df/d50/a02725.html#ad0a2ec34f2e41cf3d2b44fe0998b313d", null ],
@@ -1589,10 +1589,10 @@ var a00888 =
       [ "resetAfter", "dd/d4a/a02761.html#aa1de686591d08d011811c7ab151de66d", null ],
       [ "total", "dd/d4a/a02761.html#a41587a1ea672930c31554ae1fbc9e902", null ]
     ] ],
-    [ "DiscordCoreAPI::ShardingOptions", "d9/d0f/a03605.html", [
-      [ "numberOfShardsForThisProcess", "d9/d0f/a03605.html#ab793f231bd27a906e5e69e384082a884", null ],
-      [ "startingShard", "d9/d0f/a03605.html#af08286df09d610c2df2a1dd6bc4d8fb0", null ],
-      [ "totalNumberOfShards", "d9/d0f/a03605.html#ae44c80e287a2702d8ce164e90ddceb3c", null ]
+    [ "DiscordCoreAPI::ShardingOptions", "d6/d8c/a03601.html", [
+      [ "numberOfShardsForThisProcess", "d6/d8c/a03601.html#ab793f231bd27a906e5e69e384082a884", null ],
+      [ "startingShard", "d6/d8c/a03601.html#af08286df09d610c2df2a1dd6bc4d8fb0", null ],
+      [ "totalNumberOfShards", "d6/d8c/a03601.html#ae44c80e287a2702d8ce164e90ddceb3c", null ]
     ] ],
     [ "DiscordCoreAPI::StageInstanceData", "dd/d68/a02553.html", [
       [ "channelId", "dd/d68/a02553.html#affe58dc268b416ebb4ba995765d32a01", null ],
@@ -1709,13 +1709,13 @@ var a00888 =
     ] ],
     [ "DiscordCoreAPI::TriggerTypingIndicatorData", "d2/d54/a01917.html", null ],
     [ "DiscordCoreAPI::TypingStartData", "d2/de3/a02637.html", null ],
-    [ "DiscordCoreAPI::UnboundedMessageBlock< ObjectType >", "d3/d63/a03637.html", [
-      [ "clearContents", "d3/d63/a03637.html#a1096795a528f8831115b7b5184f591a6", null ],
-      [ "send", "d3/d63/a03637.html#a154a9ebfea506914823497700ec353cd", null ],
-      [ "send", "d3/d63/a03637.html#ae2c1b708bd06fc88280c70946e94ce19", null ],
-      [ "send", "d3/d63/a03637.html#ae9e72ad08e2c87db91c9eb269483f8c2", null ],
-      [ "send", "d3/d63/a03637.html#af0080e5f3795ea25b51b1cc89048217e", null ],
-      [ "tryReceive", "d3/d63/a03637.html#a5845dd8c3af6c44112754d450ebabdbf", null ]
+    [ "DiscordCoreAPI::UnboundedMessageBlock< ObjectType >", "dc/d58/a03633.html", [
+      [ "clearContents", "dc/d58/a03633.html#a1096795a528f8831115b7b5184f591a6", null ],
+      [ "send", "dc/d58/a03633.html#a154a9ebfea506914823497700ec353cd", null ],
+      [ "send", "dc/d58/a03633.html#ae2c1b708bd06fc88280c70946e94ce19", null ],
+      [ "send", "dc/d58/a03633.html#ae9e72ad08e2c87db91c9eb269483f8c2", null ],
+      [ "send", "dc/d58/a03633.html#af0080e5f3795ea25b51b1cc89048217e", null ],
+      [ "tryReceive", "dc/d58/a03633.html#a5845dd8c3af6c44112754d450ebabdbf", null ]
     ] ],
     [ "DiscordCoreAPI::UnpinMessageData", "d1/da3/a03221.html", [
       [ "channelId", "d1/da3/a03221.html#abd4cdc12e041a6b7e8b138915cc27a7a", null ],
@@ -1729,12 +1729,12 @@ var a00888 =
       [ "selfDeaf", "d3/d27/a02453.html#af23731285ed5120fbd05ae4b503d2cf1", null ],
       [ "selfMute", "d3/d27/a02453.html#a513af22285b248b90ca51f9dff2f82cc", null ]
     ] ],
-    [ "DiscordCoreAPI::User", "de/d29/a03573.html", [
-      [ "accentColor", "de/d29/a03573.html#a8e64ef1bc60dbb0cd93de9733ac1b9f8", null ],
-      [ "banner", "de/d29/a03573.html#a5ebda776fc3dfd10e923117bcd13820c", null ],
-      [ "email", "de/d29/a03573.html#a4a3c30806e2797dcbfd04584a2fca659", null ],
-      [ "locale", "de/d29/a03573.html#a56fd6aed59c14412d56cc265ffb21644", null ],
-      [ "premiumType", "de/d29/a03573.html#af05a76dd8fb484b3c46129ce469b30d0", null ]
+    [ "DiscordCoreAPI::User", "dd/d87/a03569.html", [
+      [ "accentColor", "dd/d87/a03569.html#a8e64ef1bc60dbb0cd93de9733ac1b9f8", null ],
+      [ "banner", "dd/d87/a03569.html#a5ebda776fc3dfd10e923117bcd13820c", null ],
+      [ "email", "dd/d87/a03569.html#a4a3c30806e2797dcbfd04584a2fca659", null ],
+      [ "locale", "dd/d87/a03569.html#a56fd6aed59c14412d56cc265ffb21644", null ],
+      [ "premiumType", "dd/d87/a03569.html#af05a76dd8fb484b3c46129ce469b30d0", null ]
     ] ],
     [ "DiscordCoreAPI::UserCommandInteractionData", "d9/dfe/a02649.html", [
       [ "targetId", "d9/dfe/a02649.html#a107f1cfcb0538649779008be3a83fc06", null ]
@@ -1767,7 +1767,7 @@ var a00888 =
       [ "suppress", "d5/db0/a02361.html#a878b1db49183d3c4aee837ee7ce43ce1", null ],
       [ "userId", "d5/db0/a02361.html#a1af895eb508f191cf1bc6dad7bfd06be", null ]
     ] ],
-    [ "DiscordCoreAPI::WebHook", "d2/d47/a03705.html", null ],
+    [ "DiscordCoreAPI::WebHook", "d4/df9/a03701.html", null ],
     [ "DiscordCoreAPI::WebHookData", "dd/d20/a02605.html", [
       [ "applicationId", "dd/d20/a02605.html#a5488bab118eebf323520feb4076058b8", null ],
       [ "avatar", "dd/d20/a02605.html#a98c499cf15ce297fd3083ba86a6e37e8", null ],

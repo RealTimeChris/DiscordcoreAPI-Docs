@@ -102,11 +102,12 @@ $(document).ready(function(){initNavTree('d8/da7/a07191.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Editing a Follow-Up Message </div></div>
+  <div class="headertitle"><div class="title">Removing a Role from a Guild Member </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Interaction_Stuff_Editing_a_Follow_Up_Message"></a></p><ul>
-<li>Execute the, <code><a class="el" href="../../df/d92/a03097.html#a91f7a025c00ec5b858a260ebcda49a3c" title="Responds to one of a number of types of &quot;InputEvents&quot;.">DiscordCoreAPI::InputEvents::respondToInputEventAsync()</a></code> function, while passing in a data structure of type <code><a class="el" href="../../da/d7d/a02785.html" title="Data for responding to an input-event.">DiscordCoreAPI::RespondToInputEventData</a></code> with a type set to <code><a class="el" href="../../dd/d94/a00888.html#gga6a10916bec24a00f6d6a41d8d880c1faabce5d25133b98891f605c9479da99d50" title="Follow-up Message edit.">DiscordCoreAPI::InputEventResponseType::Edit_Follow_Up_Message</a></code>, with a return value of type <code>auto</code> or <code>std::unique_ptr&lt;<a class="el" href="../../d9/d95/a02781.html" title="Data representing an input-event, which is any Message or Interaction that is coming into the bot as ...">DiscordCoreAPI::InputEventData</a>&gt;</code>.</li>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Role_Stuff_Removing_a_Role_From_a_Guild_Member"></a></p><ul>
+<li>Execute the, <code><a class="el" href="../../d6/df3/a03349.html#a0b41fe375a1f1deb56a972884b33782d" title="Removes a given Role from a chosen GuildMember.">DiscordCoreAPI::Roles::removeGuildMemberRoleAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../d3/d34/a03305.html" title="For removing a Role from a GuildMember.">DiscordCoreAPI::RemoveGuildMemberRoleData</a></code>, with a return value of type <code>void</code>.</li>
+<li>Call the function with <code>.get()</code> added to the end in order to wait for the results now.</li>
 </ul>
 <div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
 <div class="line"><span class="comment">/// https://github.com/RealTimeChris/DiscordCoreAPI</span></div>
@@ -115,7 +116,7 @@ $(document).ready(function(){initNavTree('d8/da7/a07191.html','../../'); initRes
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d5/de8/a00749.html">Index.hpp</a>&gt;</span></div>
 <div class="line"> </div>
-<div class="line">                                          <span class="keyword">namespace </span><a class="code hl_namespace" href="../../d7/d46/a00890.html">DiscordCoreAPI</a> {</div>
+<div class="line"><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d7/d46/a00890.html">DiscordCoreAPI</a> {</div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">class </span>Test : <span class="keyword">public</span> <a class="code hl_struct" href="../../dc/dfd/a02837.html">DiscordCoreAPI::BaseFunction</a> {</div>
 <div class="line">      <span class="keyword">public</span>:</div>
@@ -136,28 +137,39 @@ $(document).ready(function(){initNavTree('d8/da7/a07191.html','../../'); initRes
 <div class="line"> </div>
 <div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../d0/d2b/a02833.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
 <div class="line">            <span class="keywordflow">try</span> {</div>
-<div class="line">                <a class="code hl_class" href="../../da/d7d/a02785.html">DiscordCoreAPI::RespondToInputEventData</a> dataPackage {args.eventData};</div>
-<div class="line">                dataPackage.type = DiscordCoreAPI::InputEventResponseType::FollowUpMessageEdit;</div>
-<div class="line">                dataPackage.addContent(<span class="stringliteral">&quot;THIS IS A TEST RESPONSE MESSAGE!&quot;</span>);</div>
-<div class="line">                <span class="keyword">auto</span> responseData = <a class="code hl_function" href="../../df/d92/a03097.html#a91f7a025c00ec5b858a260ebcda49a3c">DiscordCoreAPI::InputEvents::respondToInputEventAsync</a>(dataPackage);</div>
+<div class="line">                <a class="code hl_struct" href="../../d3/d34/a03305.html">DiscordCoreAPI::RemoveGuildMemberRoleData</a> dataPackage01;</div>
+<div class="line">                dataPackage01.<a class="code hl_variable" href="../../d3/d34/a03305.html#a706792daf69fe0dd6a74357c88e38bb0">guildId</a> = args.eventData.<a class="code hl_function" href="../../d9/d95/a02781.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
+<div class="line">                dataPackage01.<a class="code hl_variable" href="../../d3/d34/a03305.html#a28761055f269567a6a9db2b5a0bd7f83">userId</a> = args.eventData.<a class="code hl_function" href="../../d9/d95/a02781.html#a70865601071ddd3f49a50b280a0d4894">getAuthorId</a>();</div>
+<div class="line">                dataPackage01.<a class="code hl_variable" href="../../d3/d34/a03305.html#a31dc2d11a5800fac8d3b19800de457be">reason</a> = <span class="stringliteral">&quot;TESTING PURPOSES!&quot;</span>;</div>
+<div class="line">                dataPackage01.<a class="code hl_variable" href="../../d3/d34/a03305.html#aa91ca8ec5e79637aeeed3624cc7921a9">roleId</a> = <span class="stringliteral">&quot;866124519303020554&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">                <a class="code hl_function" href="../../d6/df3/a03349.html#a0b41fe375a1f1deb56a972884b33782d">DiscordCoreAPI::Roles::removeGuildMemberRoleAsync</a>(dataPackage01).<a class="code hl_function" href="../../d5/d92/a01977.html#a904d030f3edbf8efac15b2cebba3e37a">get</a>();</div>
+<div class="line"> </div>
 <div class="line"> </div>
 <div class="line">            } <span class="keywordflow">catch</span> (...) {</div>
-<div class="line">                rethrowException(<span class="stringliteral">&quot;Test::execute() Error: &quot;</span>);</div>
+<div class="line">                rethrowException(<span class="stringliteral">&quot;Test::execute()&quot;</span>);</div>
 <div class="line">            }</div>
 <div class="line">        }</div>
 <div class="line">    };</div>
 <div class="line">}</div>
 <div class="ttc" id="aa00749_html"><div class="ttname"><a href="../../d5/de8/a00749.html">Index.hpp</a></div></div>
 <div class="ttc" id="aa00890_html"><div class="ttname"><a href="../../d7/d46/a00890.html">DiscordCoreAPI</a></div><div class="ttdoc">The main namespace for this library.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00025">ApplicationCommandEntities.hpp:25</a></div></div>
+<div class="ttc" id="aa01977_html_a904d030f3edbf8efac15b2cebba3e37a"><div class="ttname"><a href="../../d5/d92/a01977.html#a904d030f3edbf8efac15b2cebba3e37a">DiscordCoreAPI::CoRoutine&lt; void &gt;::get</a></div><div class="ttdeci">void get()</div><div class="ttdoc">Gets the resulting value of the CoRoutine.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4a/a00758_source.html#l00312">CoRoutine.hpp:312</a></div></div>
 <div class="ttc" id="aa02329_html"><div class="ttname"><a href="../../d0/d71/a02329.html">DiscordCoreAPI::EmbedData</a></div><div class="ttdoc">Embed data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l00600">FoundationEntities.hpp:600</a></div></div>
 <div class="ttc" id="aa02329_html_a20ca60ec3235f44a223f3d3b687c0c9e"><div class="ttname"><a href="../../d0/d71/a02329.html#a20ca60ec3235f44a223f3d3b687c0c9e">DiscordCoreAPI::EmbedData::setTitle</a></div><div class="ttdeci">EmbedData &amp; setTitle(const std::string &amp;titleNew)</div><div class="ttdoc">Sets the title of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00381">FoundationEntities.cpp:381</a></div></div>
 <div class="ttc" id="aa02329_html_a9d4066a4861408bc00eccb22a12db7f9"><div class="ttname"><a href="../../d0/d71/a02329.html#a9d4066a4861408bc00eccb22a12db7f9">DiscordCoreAPI::EmbedData::setDescription</a></div><div class="ttdeci">EmbedData &amp; setDescription(const std::string &amp;descriptionNew)</div><div class="ttdoc">Sets the description (the main contents) of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00366">FoundationEntities.cpp:366</a></div></div>
 <div class="ttc" id="aa02329_html_ab417d83fddf9df80eca98e9ec6e888aa"><div class="ttname"><a href="../../d0/d71/a02329.html#ab417d83fddf9df80eca98e9ec6e888aa">DiscordCoreAPI::EmbedData::setColor</a></div><div class="ttdeci">EmbedData &amp; setColor(const std::string &amp;hexColorValueNew)</div><div class="ttdoc">Sets the color of the embed, by applying a hex-color value.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00371">FoundationEntities.cpp:371</a></div></div>
 <div class="ttc" id="aa02329_html_ae356e6dc3c93658b7228b56da3187896"><div class="ttname"><a href="../../d0/d71/a02329.html#ae356e6dc3c93658b7228b56da3187896">DiscordCoreAPI::EmbedData::setTimeStamp</a></div><div class="ttdeci">EmbedData &amp; setTimeStamp(const std::string &amp;timeStamp)</div><div class="ttdoc">Sets the timestamp on the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00352">FoundationEntities.cpp:352</a></div></div>
-<div class="ttc" id="aa02785_html"><div class="ttname"><a href="../../da/d7d/a02785.html">DiscordCoreAPI::RespondToInputEventData</a></div><div class="ttdoc">Data for responding to an input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03418">FoundationEntities.hpp:3418</a></div></div>
+<div class="ttc" id="aa02781_html_a565fe2447237030a716f64b2599996dd"><div class="ttname"><a href="../../d9/d95/a02781.html#a565fe2447237030a716f64b2599996dd">DiscordCoreAPI::InputEventData::getGuildId</a></div><div class="ttdeci">Snowflake getGuildId()</div><div class="ttdoc">Returns the Guild id, of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01630">FoundationEntities.cpp:1630</a></div></div>
+<div class="ttc" id="aa02781_html_a70865601071ddd3f49a50b280a0d4894"><div class="ttname"><a href="../../d9/d95/a02781.html#a70865601071ddd3f49a50b280a0d4894">DiscordCoreAPI::InputEventData::getAuthorId</a></div><div class="ttdeci">Snowflake getAuthorId()</div><div class="ttdoc">Returns the User id of the last requester of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01610">FoundationEntities.cpp:1610</a></div></div>
 <div class="ttc" id="aa02833_html"><div class="ttname"><a href="../../d0/d2b/a02833.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03795">FoundationEntities.hpp:3795</a></div></div>
 <div class="ttc" id="aa02837_html"><div class="ttname"><a href="../../dc/dfd/a02837.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03806">FoundationEntities.hpp:3806</a></div></div>
-<div class="ttc" id="aa03097_html_a91f7a025c00ec5b858a260ebcda49a3c"><div class="ttname"><a href="../../df/d92/a03097.html#a91f7a025c00ec5b858a260ebcda49a3c">DiscordCoreAPI::InputEvents::respondToInputEventAsync</a></div><div class="ttdeci">static CoRoutine&lt; InputEventData &gt; respondToInputEventAsync(RespondToInputEventData dataPackage)</div><div class="ttdoc">Responds to one of a number of types of &quot;InputEvents&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d60/a00818_source.html#l00026">InputEvents.cpp:26</a></div></div>
+<div class="ttc" id="aa03305_html"><div class="ttname"><a href="../../d3/d34/a03305.html">DiscordCoreAPI::RemoveGuildMemberRoleData</a></div><div class="ttdoc">For removing a Role from a GuildMember.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d2c/a00764_source.html#l00042">RoleEntities.hpp:42</a></div></div>
+<div class="ttc" id="aa03305_html_a28761055f269567a6a9db2b5a0bd7f83"><div class="ttname"><a href="../../d3/d34/a03305.html#a28761055f269567a6a9db2b5a0bd7f83">DiscordCoreAPI::RemoveGuildMemberRoleData::userId</a></div><div class="ttdeci">Snowflake userId</div><div class="ttdoc">The id of the User from whom to remove the Role.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d2c/a00764_source.html#l00044">RoleEntities.hpp:44</a></div></div>
+<div class="ttc" id="aa03305_html_a31dc2d11a5800fac8d3b19800de457be"><div class="ttname"><a href="../../d3/d34/a03305.html#a31dc2d11a5800fac8d3b19800de457be">DiscordCoreAPI::RemoveGuildMemberRoleData::reason</a></div><div class="ttdeci">std::string reason</div><div class="ttdoc">Reason for removing the GuildMember's Role.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d2c/a00764_source.html#l00046">RoleEntities.hpp:46</a></div></div>
+<div class="ttc" id="aa03305_html_a706792daf69fe0dd6a74357c88e38bb0"><div class="ttname"><a href="../../d3/d34/a03305.html#a706792daf69fe0dd6a74357c88e38bb0">DiscordCoreAPI::RemoveGuildMemberRoleData::guildId</a></div><div class="ttdeci">Snowflake guildId</div><div class="ttdoc">The id of the Guild within which to remove the Role.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d2c/a00764_source.html#l00043">RoleEntities.hpp:43</a></div></div>
+<div class="ttc" id="aa03305_html_aa91ca8ec5e79637aeeed3624cc7921a9"><div class="ttname"><a href="../../d3/d34/a03305.html#aa91ca8ec5e79637aeeed3624cc7921a9">DiscordCoreAPI::RemoveGuildMemberRoleData::roleId</a></div><div class="ttdeci">Snowflake roleId</div><div class="ttdoc">The id of the Role to be removed.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d2c/a00764_source.html#l00045">RoleEntities.hpp:45</a></div></div>
+<div class="ttc" id="aa03349_html_a0b41fe375a1f1deb56a972884b33782d"><div class="ttname"><a href="../../d6/df3/a03349.html#a0b41fe375a1f1deb56a972884b33782d">DiscordCoreAPI::Roles::removeGuildMemberRoleAsync</a></div><div class="ttdeci">static CoRoutine&lt; void &gt; removeGuildMemberRoleAsync(RemoveGuildMemberRoleData dataPackage)</div><div class="ttdoc">Removes a given Role from a chosen GuildMember.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d6e/a00833_source.html#l00150">RoleEntities.cpp:150</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -165,7 +177,7 @@ $(document).ready(function(){initNavTree('d8/da7/a07191.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d0/dac/a07043.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../dd/d67/a07058.html">Interaction Stuff</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dd/dfa/a07011.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../db/dc1/a07029.html">Role Stuff</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

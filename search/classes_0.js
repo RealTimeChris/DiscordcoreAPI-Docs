@@ -8,7 +8,7 @@ var searchData=
   ['activitydata_5',['ActivityData',['../dc/db6/a02533.html',1,'DiscordCoreAPI']]],
   ['addguildmemberdata_6',['AddGuildMemberData',['../de/da4/a03005.html',1,'DiscordCoreAPI']]],
   ['addguildmemberroledata_7',['AddGuildMemberRoleData',['../d1/d24/a03301.html',1,'DiscordCoreAPI']]],
-  ['addrecipienttogroupdmdata_8',['AddRecipientToGroupDMData',['../db/d72/a03549.html',1,'DiscordCoreAPI']]],
+  ['addrecipienttogroupdmdata_8',['AddRecipientToGroupDMData',['../dd/d25/a03545.html',1,'DiscordCoreAPI']]],
   ['addthreadmemberdata_9',['AddThreadMemberData',['../d0/dc1/a03485.html',1,'DiscordCoreAPI']]],
   ['allowedmentionsdata_10',['AllowedMentionsData',['../d3/d32/a02665.html',1,'DiscordCoreAPI']]],
   ['applicationcommand_11',['ApplicationCommand',['../d5/d36/a01773.html',1,'DiscordCoreAPI']]],

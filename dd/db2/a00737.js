@@ -1,9 +1,9 @@
 var a00737 =
 [
-    [ "DiscordCoreAPI::CacheOptions", "d6/de0/a03613.html", "d6/de0/a03613" ],
-    [ "DiscordCoreAPI::DiscordCoreClientConfig", "d4/d35/a03617.html", "d4/d35/a03617" ],
-    [ "DiscordCoreAPI::LoggingOptions", "d8/d13/a03609.html", "d8/d13/a03609" ],
-    [ "DiscordCoreInternal::UpdatePresenceData", "d1/d3c/a03589.html", "d1/d3c/a03589" ],
+    [ "DiscordCoreAPI::CacheOptions", "d8/d13/a03609.html", "d8/d13/a03609" ],
+    [ "DiscordCoreAPI::DiscordCoreClientConfig", "d6/de0/a03613.html", "d6/de0/a03613" ],
+    [ "DiscordCoreAPI::LoggingOptions", "d9/d0f/a03605.html", "d9/d0f/a03605" ],
+    [ "DiscordCoreInternal::UpdatePresenceData", "d0/d92/a03585.html", "d0/d92/a03585" ],
     [ "GatewayIntents", "dd/db2/a00737.html#ga4703fe910d1719c0a0bef34e9b7500e3", [
       [ "Guilds", "dd/db2/a00737.html#gga4703fe910d1719c0a0bef34e9b7500e3ac5514110f8f4e8873da17c6c2b7b2b8e", null ],
       [ "Guild_Members", "dd/db2/a00737.html#gga4703fe910d1719c0a0bef34e9b7500e3af317825fad018118ad319336c01c130d", null ],

@@ -102,11 +102,11 @@ $(document).ready(function(){initNavTree('da/dba/a07076.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Editing a Guild Application Command </div></div>
+  <div class="headertitle"><div class="title">Beginning a Guild Prune </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Application_Command_Stuff_Editing_a_Guild_Application_Command"></a></p><ul>
-<li>Execute the <code><a class="el" href="../../d3/dac/a01777.html#ab3ace9a43a0046c39ffc4cc84b213503" title="Edit a single Guild ApplicationCommand for a single server for this bot.">DiscordCoreAPI::ApplicationCommands::editGuildApplicationCommandAsync()</a></code> function, while passing in a data structure of type <code><a class="el" href="../../d0/d78/a01745.html" title="For editing a single Guild ApplicationCommand.">DiscordCoreAPI::EditGuildApplicationCommandData</a></code>, with a return value of type <code>auto</code> or <code><a class="el" href="../../d5/d36/a01773.html" title="A single ApplicationCommand.">DiscordCoreAPI::ApplicationCommand</a></code>.</li>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Guild_Stuff_Beginning_a_Guild_Prune"></a></p><ul>
+<li>Execute the,<code><a class="el" href="../../d4/d69/a02989.html#aa2d51bc7f3963bc3296e0e8d5d7567b8" title="For performing a pruning of the GuildMembers of the Guild, based on days of inactivity.">DiscordCoreAPI::Guilds::beginGuildPruneAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../d7/d68/a02885.html" title="For pruning a number of GuildMembers from the Guild.">DiscordCoreAPI::BeginGuildPruneData</a></code>, with a return value of type <code>auto</code> or <code><a class="el" href="../../d1/d94/a02505.html" title="Guild prune count data.">DiscordCoreAPI::GuildPruneCountData</a></code>.</li>
 <li>Call the function with <code>.get()</code> added to the end in order to wait for the results now.</li>
 </ul>
 <div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
@@ -114,7 +114,7 @@ $(document).ready(function(){initNavTree('da/dba/a07076.html','../../'); initRes
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="preprocessor">#pragma once</span></div>
 <div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d5/de8/a00749.html">Index.hpp</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d5/de8/a00749.html">Index.hpp</a>&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d7/d46/a00890.html">DiscordCoreAPI</a> {</div>
 <div class="line"> </div>
@@ -136,29 +136,27 @@ $(document).ready(function(){initNavTree('da/dba/a07076.html','../../'); initRes
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../d0/d2b/a02833.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
-<div class="line">            <a class="code hl_function" href="../../df/d92/a03097.html#a721365d0ef437397ea553634f88b8ecf">DiscordCoreAPI::InputEvents::deleteInputEventResponseAsync</a>(args.eventData);</div>
+<div class="line">            <span class="keywordflow">try</span> {</div>
+<div class="line">                <a class="code hl_struct" href="../../d7/d68/a02885.html">DiscordCoreAPI::BeginGuildPruneData</a> dataPackage01;</div>
+<div class="line">                dataPackage01.days = 30;</div>
+<div class="line">                dataPackage01.includeRoles.push_back(<span class="stringliteral">&quot;860075141818744853&quot;</span>);</div>
+<div class="line">                dataPackage01.<a class="code hl_variable" href="../../d7/d68/a02885.html#aeca4171b879a8c66b1121e83fcc246d0">guildId</a> = args.eventData.<a class="code hl_function" href="../../d9/d95/a02781.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
+<div class="line">                dataPackage01.<a class="code hl_variable" href="../../d7/d68/a02885.html#a8039df619784ec084ac8d902b828d15f">computePruneCount</a> = <span class="keyword">true</span>;</div>
+<div class="line">                dataPackage01.<a class="code hl_variable" href="../../d7/d68/a02885.html#a16b59712fff676c530e7e0e74de397c6">reason</a> = <span class="stringliteral">&quot;TEST PRUNING!&quot;</span>;</div>
 <div class="line"> </div>
-<div class="line">            <span class="keyword">auto</span> returnVector = <a class="code hl_function" href="../../d3/dac/a01777.html#a038ea064d3458d653c1d82b22adf3469">DiscordCoreAPI::ApplicationCommands::getGuildApplicationCommandsAsync</a>({.guildId = args.eventData.<a class="code hl_function" href="../../d9/d95/a02781.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>()}).get();</div>
+<div class="line">                <span class="keyword">auto</span> responseData = <a class="code hl_function" href="../../d4/d69/a02989.html#aa2d51bc7f3963bc3296e0e8d5d7567b8">DiscordCoreAPI::Guilds::beginGuildPruneAsync</a>(dataPackage01).get;</div>
 <div class="line"> </div>
-<div class="line">            <a class="code hl_struct" href="../../d0/d78/a01745.html">DiscordCoreAPI::EditGuildApplicationCommandData</a> dataPackage;</div>
-<div class="line">            dataPackage.<a class="code hl_variable" href="../../d0/d78/a01745.html#ad4d723f67e75a62b44bdd35ec3ceb6ef">guildId</a> = args.eventData.<a class="code hl_function" href="../../d9/d95/a02781.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
-<div class="line">            dataPackage.<a class="code hl_variable" href="../../d0/d78/a01745.html#a4406684e5a5a2719096e7f30f526b2ac">name</a> = returnVector.at(0).name;</div>
-<div class="line">            dataPackage.<a class="code hl_variable" href="../../d0/d78/a01745.html#a0b73a647d293bf84717b5aeb12f3fc29">description</a> = <span class="stringliteral">&quot;a test description&quot;</span>;</div>
+<div class="line">                cout &lt;&lt; responseData.count &lt;&lt; endl;</div>
 <div class="line"> </div>
-<div class="line">            <span class="keyword">auto</span> returnValue = <a class="code hl_function" href="../../d3/dac/a01777.html#ab3ace9a43a0046c39ffc4cc84b213503">DiscordCoreAPI::ApplicationCommands::editGuildApplicationCommandAsync</a>(dataPackage).get();</div>
 <div class="line"> </div>
-<div class="line">            cout &lt;&lt; returnValue.description &lt;&lt; endl;</div>
+<div class="line">            } <span class="keywordflow">catch</span> (...) {</div>
+<div class="line">                rethrowException(<span class="stringliteral">&quot;Test::execute()&quot;</span>);</div>
+<div class="line">            }</div>
 <div class="line">        }</div>
 <div class="line">    };</div>
 <div class="line">}</div>
 <div class="ttc" id="aa00749_html"><div class="ttname"><a href="../../d5/de8/a00749.html">Index.hpp</a></div></div>
 <div class="ttc" id="aa00890_html"><div class="ttname"><a href="../../d7/d46/a00890.html">DiscordCoreAPI</a></div><div class="ttdoc">The main namespace for this library.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00025">ApplicationCommandEntities.hpp:25</a></div></div>
-<div class="ttc" id="aa01745_html"><div class="ttname"><a href="../../d0/d78/a01745.html">DiscordCoreAPI::EditGuildApplicationCommandData</a></div><div class="ttdoc">For editing a single Guild ApplicationCommand.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00116">ApplicationCommandEntities.hpp:116</a></div></div>
-<div class="ttc" id="aa01745_html_a0b73a647d293bf84717b5aeb12f3fc29"><div class="ttname"><a href="../../d0/d78/a01745.html#a0b73a647d293bf84717b5aeb12f3fc29">DiscordCoreAPI::EditGuildApplicationCommandData::description</a></div><div class="ttdeci">std::string description</div><div class="ttdoc">A description of the command.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00122">ApplicationCommandEntities.hpp:122</a></div></div>
-<div class="ttc" id="aa01745_html_a4406684e5a5a2719096e7f30f526b2ac"><div class="ttname"><a href="../../d0/d78/a01745.html#a4406684e5a5a2719096e7f30f526b2ac">DiscordCoreAPI::EditGuildApplicationCommandData::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">A name for the new command.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00125">ApplicationCommandEntities.hpp:125</a></div></div>
-<div class="ttc" id="aa01745_html_ad4d723f67e75a62b44bdd35ec3ceb6ef"><div class="ttname"><a href="../../d0/d78/a01745.html#ad4d723f67e75a62b44bdd35ec3ceb6ef">DiscordCoreAPI::EditGuildApplicationCommandData::guildId</a></div><div class="ttdeci">Snowflake guildId</div><div class="ttdoc">The id of the Guild which you would like to add the new command to.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00124">ApplicationCommandEntities.hpp:124</a></div></div>
-<div class="ttc" id="aa01777_html_a038ea064d3458d653c1d82b22adf3469"><div class="ttname"><a href="../../d3/dac/a01777.html#a038ea064d3458d653c1d82b22adf3469">DiscordCoreAPI::ApplicationCommands::getGuildApplicationCommandsAsync</a></div><div class="ttdeci">static CoRoutine&lt; std::vector&lt; ApplicationCommand &gt; &gt; getGuildApplicationCommandsAsync(GetGuildApplicationCommandsData dataPackage)</div><div class="ttdoc">Get all of the Guild ApplicationCommands for a single Guild for this bot.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d82/a00857_source.html#l00231">ApplicationCommandEntities.cpp:231</a></div></div>
-<div class="ttc" id="aa01777_html_ab3ace9a43a0046c39ffc4cc84b213503"><div class="ttname"><a href="../../d3/dac/a01777.html#ab3ace9a43a0046c39ffc4cc84b213503">DiscordCoreAPI::ApplicationCommands::editGuildApplicationCommandAsync</a></div><div class="ttdeci">static CoRoutine&lt; ApplicationCommand &gt; editGuildApplicationCommandAsync(EditGuildApplicationCommandData dataPackage)</div><div class="ttdoc">Edit a single Guild ApplicationCommand for a single server for this bot.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d82/a00857_source.html#l00264">ApplicationCommandEntities.cpp:264</a></div></div>
 <div class="ttc" id="aa02329_html"><div class="ttname"><a href="../../d0/d71/a02329.html">DiscordCoreAPI::EmbedData</a></div><div class="ttdoc">Embed data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l00600">FoundationEntities.hpp:600</a></div></div>
 <div class="ttc" id="aa02329_html_a20ca60ec3235f44a223f3d3b687c0c9e"><div class="ttname"><a href="../../d0/d71/a02329.html#a20ca60ec3235f44a223f3d3b687c0c9e">DiscordCoreAPI::EmbedData::setTitle</a></div><div class="ttdeci">EmbedData &amp; setTitle(const std::string &amp;titleNew)</div><div class="ttdoc">Sets the title of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00381">FoundationEntities.cpp:381</a></div></div>
 <div class="ttc" id="aa02329_html_a9d4066a4861408bc00eccb22a12db7f9"><div class="ttname"><a href="../../d0/d71/a02329.html#a9d4066a4861408bc00eccb22a12db7f9">DiscordCoreAPI::EmbedData::setDescription</a></div><div class="ttdeci">EmbedData &amp; setDescription(const std::string &amp;descriptionNew)</div><div class="ttdoc">Sets the description (the main contents) of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00366">FoundationEntities.cpp:366</a></div></div>
@@ -167,7 +165,11 @@ $(document).ready(function(){initNavTree('da/dba/a07076.html','../../'); initRes
 <div class="ttc" id="aa02781_html_a565fe2447237030a716f64b2599996dd"><div class="ttname"><a href="../../d9/d95/a02781.html#a565fe2447237030a716f64b2599996dd">DiscordCoreAPI::InputEventData::getGuildId</a></div><div class="ttdeci">Snowflake getGuildId()</div><div class="ttdoc">Returns the Guild id, of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01630">FoundationEntities.cpp:1630</a></div></div>
 <div class="ttc" id="aa02833_html"><div class="ttname"><a href="../../d0/d2b/a02833.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03795">FoundationEntities.hpp:3795</a></div></div>
 <div class="ttc" id="aa02837_html"><div class="ttname"><a href="../../dc/dfd/a02837.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03806">FoundationEntities.hpp:3806</a></div></div>
-<div class="ttc" id="aa03097_html_a721365d0ef437397ea553634f88b8ecf"><div class="ttname"><a href="../../df/d92/a03097.html#a721365d0ef437397ea553634f88b8ecf">DiscordCoreAPI::InputEvents::deleteInputEventResponseAsync</a></div><div class="ttdeci">static CoRoutine&lt; void &gt; deleteInputEventResponseAsync(InputEventData &amp;dataPackage, int32_t timeDelayNew=0)</div><div class="ttdoc">Deletes a previously sent &quot;input-event-response&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d60/a00818_source.html#l00103">InputEvents.cpp:103</a></div></div>
+<div class="ttc" id="aa02885_html"><div class="ttname"><a href="../../d7/d68/a02885.html">DiscordCoreAPI::BeginGuildPruneData</a></div><div class="ttdoc">For pruning a number of GuildMembers from the Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00115">GuildEntities.hpp:115</a></div></div>
+<div class="ttc" id="aa02885_html_a16b59712fff676c530e7e0e74de397c6"><div class="ttname"><a href="../../d7/d68/a02885.html#a16b59712fff676c530e7e0e74de397c6">DiscordCoreAPI::BeginGuildPruneData::reason</a></div><div class="ttdeci">std::string reason</div><div class="ttdoc">Whether 'pruned' is returned, discouraged for large guilds.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00118">GuildEntities.hpp:118</a></div></div>
+<div class="ttc" id="aa02885_html_a8039df619784ec084ac8d902b828d15f"><div class="ttname"><a href="../../d7/d68/a02885.html#a8039df619784ec084ac8d902b828d15f">DiscordCoreAPI::BeginGuildPruneData::computePruneCount</a></div><div class="ttdeci">bool computePruneCount</div><div class="ttdoc">Roles to be included in the prune.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00117">GuildEntities.hpp:117</a></div></div>
+<div class="ttc" id="aa02885_html_aeca4171b879a8c66b1121e83fcc246d0"><div class="ttname"><a href="../../d7/d68/a02885.html#aeca4171b879a8c66b1121e83fcc246d0">DiscordCoreAPI::BeginGuildPruneData::guildId</a></div><div class="ttdeci">Snowflake guildId</div><div class="ttdoc">Guild within which to perform the prune.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00119">GuildEntities.hpp:119</a></div></div>
+<div class="ttc" id="aa02989_html_aa2d51bc7f3963bc3296e0e8d5d7567b8"><div class="ttname"><a href="../../d4/d69/a02989.html#aa2d51bc7f3963bc3296e0e8d5d7567b8">DiscordCoreAPI::Guilds::beginGuildPruneAsync</a></div><div class="ttdeci">static CoRoutine&lt; GuildPruneCountData &gt; beginGuildPruneAsync(BeginGuildPruneData dataPackage)</div><div class="ttdoc">For performing a pruning of the GuildMembers of the Guild, based on days of inactivity.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d93/a00875_source.html#l00539">GuildEntities.cpp:539</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -175,7 +177,7 @@ $(document).ready(function(){initNavTree('da/dba/a07076.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d0/dac/a07043.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d4/d15/a07052.html">Application-Command Stuff</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dd/dfa/a07011.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d9/d00/a07022.html">Guild Stuff</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

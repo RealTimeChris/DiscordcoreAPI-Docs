@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="df/df7/a03561.html" target="_top" xlink:title="For modifying a User&#39;s voice state.">
+<g id="a_node1"><a xlink:href="d0/d20/a03557.html" target="_top" xlink:title="For modifying a User&#39;s voice state.">
 <polygon fill="none" stroke="black" points="153,-30 0,-30 0,0 153,0 153,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::ModifyUser</text>
 <text text-anchor="middle" x="76.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">VoiceStateData</text>

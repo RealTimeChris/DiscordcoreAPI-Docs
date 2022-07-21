@@ -20,7 +20,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="../../d2/d47/a03705.html" target="_top" xlink:title="A single WebHook.">
+<g id="a_node3"><a xlink:href="../../d4/df9/a03701.html" target="_top" xlink:title="A single WebHook.">
 <polygon fill="none" stroke="black" points="155.5,-19 11.5,-19 11.5,0 155.5,0 155.5,-19"/>
 <text text-anchor="middle" x="83.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::WebHook</text>
 </a>

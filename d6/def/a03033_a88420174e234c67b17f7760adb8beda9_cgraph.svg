@@ -37,7 +37,7 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="../../d8/d33/a03629.html#a06a5cb025dd8627b04a15a96e889f967" target="_top" xlink:title="Collects a timestamp that is a chosen number of minutes ahead of the current time.">
+<g id="a_node4"><a xlink:href="../../dc/d7d/a03625.html#a06a5cb025dd8627b04a15a96e889f967" target="_top" xlink:title="Collects a timestamp that is a chosen number of minutes ahead of the current time.">
 <polygon fill="none" stroke="black" points="373,-78 207,-78 207,-48 373,-48 373,-78"/>
 <text text-anchor="start" x="215" y="-66" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::TimeStamp</text>
 <text text-anchor="middle" x="290" y="-55" font-family="Helvetica,sans-Serif" font-size="10.00">::getFutureISO8601TimeStamp</text>

@@ -128,73 +128,77 @@ $(document).ready(function(){initNavTree('d5/d72/a00803_source.html','../../'); 
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d7/d46/a00890.html">DiscordCoreAPI</a> {</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    CommandController::CommandController(DiscordCoreClient* discordCoreClientNew) {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        this-&gt;discordCoreClient = discordCoreClientNew;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">namespace </span>Globals {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        std::map&lt;std::vector&lt;std::string&gt;, std::unique_ptr&lt;BaseFunction&gt;&gt; functions{};</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    }</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../d2/d6f/a01957.html#ad48b8d33d2096be99c577efd43052974">   28</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d6f/a01957.html#ad48b8d33d2096be99c577efd43052974">CommandController::registerFunction</a>(<span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; functionNames, std::unique_ptr&lt;BaseFunction&gt; baseFunction) {</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        this-&gt;functions[functionNames] = std::move(baseFunction);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    CommandController::CommandController(DiscordCoreClient* discordCoreClientNew) {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        this-&gt;discordCoreClient = discordCoreClientNew;</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="../../d2/d6f/a01957.html#aa7720ae5acda948e7435c4ca377fdd8f">   32</a></span>    std::map&lt;std::vector&lt;std::string&gt;, std::unique_ptr&lt;BaseFunction&gt;&gt;&amp; <a class="code hl_function" href="../../d2/d6f/a01957.html#aa7720ae5acda948e7435c4ca377fdd8f">CommandController::getFunctions</a>() {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordflow">return</span> this-&gt;functions;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    };</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="../../d2/d6f/a01957.html#ad48b8d33d2096be99c577efd43052974">   32</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d6f/a01957.html#ad48b8d33d2096be99c577efd43052974">CommandController::registerFunction</a>(<span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; functionNames, std::unique_ptr&lt;BaseFunction&gt; baseFunction) {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        Globals::functions[functionNames] = std::move(baseFunction);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">void</span> CommandController::checkForAndRunCommand(<a class="code hl_class" href="../../db/d4f/a02829.html">CommandData</a> commandData) {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordflow">try</span> {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            std::function&lt;void()&gt; theFunction = [=, <span class="keyword">this</span>]() <span class="keyword">mutable</span> {</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                std::unique_ptr&lt;BaseFunction&gt; functionPointer{ this-&gt;getCommand(convertToLowerCase(commandData.commandName)) };</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                <span class="keywordflow">if</span> (functionPointer == <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                    <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                }</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                BaseFunctionArguments theArgs{ commandData, this-&gt;discordCoreClient };</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                functionPointer-&gt;execute(theArgs);</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            };</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            this-&gt;commandThreadPool.submitTask(theFunction);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        } <span class="keywordflow">catch</span> (...) {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <a class="code hl_function" href="../../dd/d94/a00888.html#ga805bf7170903087e933a7b81c8e39f15">reportException</a>(<span class="stringliteral">&quot;CommandController::checkForAndRunCommand()&quot;</span>);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        }</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    std::unique_ptr&lt;BaseFunction&gt; CommandController::getCommand(<span class="keyword">const</span> std::string&amp; commandName) {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        std::string functionName{};</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordtype">bool</span> isItFound{ <span class="keyword">false</span> };</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">if</span> (commandName.size() &gt; 0) {</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> <span class="keyword">const</span>&amp; [keyFirst, value]: this-&gt;functions) {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; key: keyFirst) {</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                    <span class="keywordflow">if</span> (key.find(convertToLowerCase(commandName)) != std::string::npos) {</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                        isItFound = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                        functionName = convertToLowerCase(commandName.substr(0, key.length()));</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                    }</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                }</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            }</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        }</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordflow">if</span> (isItFound) {</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            std::unique_ptr&lt;BaseFunction&gt; newValue = this-&gt;createFunction(functionName);</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <span class="keywordflow">return</span> newValue;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        }</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    }</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    std::unique_ptr&lt;BaseFunction&gt; CommandController::createFunction(<span class="keyword">const</span> std::string&amp; functionName) {</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; [key01, value01]: this-&gt;functions) {</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; value02: key01) {</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                <span class="keywordflow">if</span> (functionName == value02) {</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                    <span class="keywordflow">return</span> this-&gt;functions[key01]-&gt;create();</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                }</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            }</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        }</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    }</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>}</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../d2/d6f/a01957.html#aa7720ae5acda948e7435c4ca377fdd8f">   36</a></span>    std::map&lt;std::vector&lt;std::string&gt;, std::unique_ptr&lt;BaseFunction&gt;&gt;&amp; <a class="code hl_function" href="../../d2/d6f/a01957.html#aa7720ae5acda948e7435c4ca377fdd8f">CommandController::getFunctions</a>() {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordflow">return</span> Globals::functions;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    };</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine&lt;void&gt;</a> CommandController::checkForAndRunCommand(<a class="code hl_class" href="../../db/d4f/a02829.html">CommandData</a> commandData) {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keyword">co_await</span> NewThreadAwaitable&lt;void&gt;();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            std::unique_ptr&lt;BaseFunction&gt; functionPointer{ this-&gt;getCommand(convertToLowerCase(commandData.commandName)) };</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="keywordflow">if</span> (functionPointer == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                <span class="keyword">co_return</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            BaseFunctionArguments theArgs{ commandData, this-&gt;discordCoreClient };</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            functionPointer-&gt;execute(theArgs);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <span class="keyword">co_return</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        } <span class="keywordflow">catch</span> (...) {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <a class="code hl_function" href="../../dd/d94/a00888.html#ga805bf7170903087e933a7b81c8e39f15">reportException</a>(<span class="stringliteral">&quot;CommandController::checkForAndRunCommand()&quot;</span>);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keyword">co_return</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    std::unique_ptr&lt;BaseFunction&gt; CommandController::getCommand(<span class="keyword">const</span> std::string&amp; commandName) {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        std::string functionName{};</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordtype">bool</span> isItFound{ <span class="keyword">false</span> };</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">if</span> (commandName.size() &gt; 0) {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> <span class="keyword">const</span>&amp; [keyFirst, value]: Globals::functions) {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; key: keyFirst) {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                    <span class="keywordflow">if</span> (key.find(convertToLowerCase(commandName)) != std::string::npos) {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                        isItFound = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                        functionName = convertToLowerCase(commandName.substr(0, key.length()));</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                    }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keywordflow">if</span> (isItFound) {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            std::unique_ptr&lt;BaseFunction&gt; newValue = this-&gt;createFunction(functionName);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <span class="keywordflow">return</span> newValue;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    std::unique_ptr&lt;BaseFunction&gt; CommandController::createFunction(<span class="keyword">const</span> std::string&amp; functionName) {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; [key01, value01]: Globals::functions) {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; value02: key01) {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                <span class="keywordflow">if</span> (functionName == value02) {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                    <span class="keywordflow">return</span> Globals::functions[key01]-&gt;create();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            }</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        }</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>}</div>
 <div class="ttc" id="aa00710_html"><div class="ttname"><a href="../../d4/deb/a00710.html">CommandController.hpp</a></div></div>
 <div class="ttc" id="aa00888_html_ga805bf7170903087e933a7b81c8e39f15"><div class="ttname"><a href="../../dd/d94/a00888.html#ga805bf7170903087e933a7b81c8e39f15">DiscordCoreAPI::reportException</a></div><div class="ttdeci">DiscordCoreAPI_Dll void reportException(const std::string &amp;currentFunctionName, std::source_location theLocation=std::source_location::current())</div><div class="ttdoc">Prints the current file, line, and column from which the function is being called - typically from wi...</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db7/a00812_source.html#l00907">Utilities.cpp:907</a></div></div>
 <div class="ttc" id="aa00890_html"><div class="ttname"><a href="../../d7/d46/a00890.html">DiscordCoreAPI</a></div><div class="ttdoc">The main namespace for this library.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00025">ApplicationCommandEntities.hpp:25</a></div></div>
-<div class="ttc" id="aa01957_html_aa7720ae5acda948e7435c4ca377fdd8f"><div class="ttname"><a href="../../d2/d6f/a01957.html#aa7720ae5acda948e7435c4ca377fdd8f">DiscordCoreAPI::CommandController::getFunctions</a></div><div class="ttdeci">std::map&lt; std::vector&lt; std::string &gt;, std::unique_ptr&lt; BaseFunction &gt; &gt; &amp; getFunctions()</div><div class="ttdoc">For returning the contained map of functions.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d72/a00803_source.html#l00032">CommandController.cpp:32</a></div></div>
-<div class="ttc" id="aa01957_html_ad48b8d33d2096be99c577efd43052974"><div class="ttname"><a href="../../d2/d6f/a01957.html#ad48b8d33d2096be99c577efd43052974">DiscordCoreAPI::CommandController::registerFunction</a></div><div class="ttdeci">void registerFunction(const std::vector&lt; std::string &gt; &amp;functionNames, std::unique_ptr&lt; BaseFunction &gt; baseFunction)</div><div class="ttdoc">Registers a function to be called.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d72/a00803_source.html#l00028">CommandController.cpp:28</a></div></div>
+<div class="ttc" id="aa01957_html_aa7720ae5acda948e7435c4ca377fdd8f"><div class="ttname"><a href="../../d2/d6f/a01957.html#aa7720ae5acda948e7435c4ca377fdd8f">DiscordCoreAPI::CommandController::getFunctions</a></div><div class="ttdeci">std::map&lt; std::vector&lt; std::string &gt;, std::unique_ptr&lt; BaseFunction &gt; &gt; &amp; getFunctions()</div><div class="ttdoc">For returning the contained map of functions.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d72/a00803_source.html#l00036">CommandController.cpp:36</a></div></div>
+<div class="ttc" id="aa01957_html_ad48b8d33d2096be99c577efd43052974"><div class="ttname"><a href="../../d2/d6f/a01957.html#ad48b8d33d2096be99c577efd43052974">DiscordCoreAPI::CommandController::registerFunction</a></div><div class="ttdeci">void registerFunction(const std::vector&lt; std::string &gt; &amp;functionNames, std::unique_ptr&lt; BaseFunction &gt; baseFunction)</div><div class="ttdoc">Registers a function to be called.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d72/a00803_source.html#l00032">CommandController.cpp:32</a></div></div>
+<div class="ttc" id="aa01969_html"><div class="ttname"><a href="../../db/d49/a01969.html">DiscordCoreAPI::CoRoutine</a></div><div class="ttdoc">A CoRoutine - representing a potentially asynchronous operation/function.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4a/a00758_source.html#l00052">CoRoutine.hpp:52</a></div></div>
 <div class="ttc" id="aa02829_html"><div class="ttname"><a href="../../db/d4f/a02829.html">DiscordCoreAPI::CommandData</a></div><div class="ttdoc">Command data, for functions executed by the CommandController.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03772">FoundationEntities.hpp:3772</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

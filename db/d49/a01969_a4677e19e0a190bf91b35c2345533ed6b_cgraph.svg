@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../d3/d63/a03637.html#a5845dd8c3af6c44112754d450ebabdbf" target="_top" xlink:title="Tries to receive an object of type ObjectType to be placed into a reference.">
+<g id="a_node2"><a xlink:href="../../dc/d58/a03633.html#a5845dd8c3af6c44112754d450ebabdbf" target="_top" xlink:title="Tries to receive an object of type ObjectType to be placed into a reference.">
 <polygon fill="none" stroke="black" points="359,-30 206,-30 206,0 359,0 359,-30"/>
 <text text-anchor="start" x="214" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::Unbounded</text>
 <text text-anchor="middle" x="282.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">MessageBlock::tryReceive</text>

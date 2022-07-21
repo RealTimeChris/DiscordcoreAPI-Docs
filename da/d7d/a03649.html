@@ -103,57 +103,34 @@ $(document).ready(function(){initNavTree('da/d7d/a03649.html','../../'); initRes
 
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d2/db1/a03646.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::VoiceConnection Class Reference<div class="ingroups"><a class="el" href="../../db/d18/a00885.html">Voice Connection</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::CreateWebHookData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="../../da/d7d/a03649.html" title="VoiceConnection class - represents the connection to a given voice Channel.">VoiceConnection</a> class - represents the connection to a given voice <a class="el" href="../../da/d76/a01941.html" title="A Channel object.">Channel</a>.  
+<p>For creating a new <a class="el" href="../../d4/df9/a03701.html" title="A single WebHook.">WebHook</a>.  
  <a href="../../da/d7d/a03649.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="../../d4/d9b/a00680_source.html">VoiceConnection.hpp</a>&gt;</code></p>
-
-<p>Inherits DiscordCoreInternal::WebSocketSSLShard, and DiscordCoreInternal::DatagramSocketClient.</p>
+<p><code>#include &lt;<a class="el" href="../../d4/dfa/a00746_source.html">WebHookEntities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:ae790f8b154a461a5878a224f371eb546"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d7d/a03649.html#ae790f8b154a461a5878a224f371eb546">getChannelId</a> () noexcept</td></tr>
-<tr class="memdesc:ae790f8b154a461a5878a224f371eb546"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collects the currently connected-to voice <a class="el" href="../../da/d76/a01941.html" title="A Channel object.">Channel</a>'s id.  <a href="../../da/d7d/a03649.html#ae790f8b154a461a5878a224f371eb546">More...</a><br /></td></tr>
-<tr class="separator:ae790f8b154a461a5878a224f371eb546"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Data Members</h2></td></tr>
+<tr class="memitem:abd2a5b440d3eb2a1daa5fd7cb3d0742b"><td class="memItemLeft" align="right" valign="top"><a id="abd2a5b440d3eb2a1daa5fd7cb3d0742b" name="abd2a5b440d3eb2a1daa5fd7cb3d0742b"></a>
+std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>avatar</b> {}</td></tr>
+<tr class="memdesc:abd2a5b440d3eb2a1daa5fd7cb3d0742b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Image for the default webhook avatar. <br /></td></tr>
+<tr class="separator:abd2a5b440d3eb2a1daa5fd7cb3d0742b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9cfb9ecc35232101605bce70c000f03"><td class="memItemLeft" align="right" valign="top"><a id="aa9cfb9ecc35232101605bce70c000f03" name="aa9cfb9ecc35232101605bce70c000f03"></a>
+<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>channelId</b> {}</td></tr>
+<tr class="memdesc:aa9cfb9ecc35232101605bce70c000f03"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../da/d76/a01941.html" title="A Channel object.">Channel</a> within which to create the <a class="el" href="../../d4/df9/a03701.html" title="A single WebHook.">WebHook</a>. <br /></td></tr>
+<tr class="separator:aa9cfb9ecc35232101605bce70c000f03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed2bbdbf37159b013291bbe766d89df6"><td class="memItemLeft" align="right" valign="top"><a id="aed2bbdbf37159b013291bbe766d89df6" name="aed2bbdbf37159b013291bbe766d89df6"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> {}</td></tr>
+<tr class="memdesc:aed2bbdbf37159b013291bbe766d89df6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the webhook(1 - 80 characters). <br /></td></tr>
+<tr class="separator:aed2bbdbf37159b013291bbe766d89df6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae790f8b154a461a5878a224f371eb546" name="ae790f8b154a461a5878a224f371eb546"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae790f8b154a461a5878a224f371eb546">&#9670;&nbsp;</a></span>getChannelId()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> DiscordCoreAPI::VoiceConnection::getChannelId </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >Collects the currently connected-to voice <a class="el" href="../../da/d76/a01941.html" title="A Channel object.">Channel</a>'s id.</p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef" title="For ids of DiscordEntities.">DiscordCoreAPI::Snowflake</a> A Snowflake containing the <a class="el" href="../../da/d76/a01941.html" title="A Channel object.">Channel</a>'s id. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../dc/d17/a00872_source.html#l00084">84</a> of file <a class="el" href="../../dc/d17/a00872_source.html">VoiceConnection.cpp</a>.</p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="../../d4/d9b/a00680_source.html">VoiceConnection.hpp</a></li>
-<li><a class="el" href="../../dc/d17/a00872_source.html">VoiceConnection.cpp</a></li>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="../../d4/dfa/a00746_source.html">WebHookEntities.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -161,7 +138,7 @@ Public Member Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../da/d7d/a03649.html">VoiceConnection</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../da/d7d/a03649.html">CreateWebHookData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

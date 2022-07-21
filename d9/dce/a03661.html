@@ -105,78 +105,24 @@ $(document).ready(function(){initNavTree('d9/dce/a03661.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d9/d68/a03658.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::EditWebHookData Class Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::GetChannelWebHooksData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For editing a <a class="el" href="../../d2/d47/a03705.html" title="A single WebHook.">WebHook</a> <a class="el" href="../../d5/da4/a03225.html" title="A single Message.">Message</a>.  
+<p>For collecting a list of <a class="el" href="../../d2/d14/a03709.html" title="An interface class for the WebHook related Discord endpoints.">WebHooks</a> from a chosen <a class="el" href="../../da/d76/a01941.html" title="A Channel object.">Channel</a>.  
  <a href="../../d9/dce/a03661.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/dfa/a00746_source.html">WebHookEntities.hpp</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for DiscordCoreAPI::EditWebHookData:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/d99/a03660.svg" width="259" height="124"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:ac69fe784741dd4c26c966978fd1a8c1f"><td class="memItemLeft" align="right" valign="top"><a id="ac69fe784741dd4c26c966978fd1a8c1f" name="ac69fe784741dd4c26c966978fd1a8c1f"></a>
-<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>messageId</b> {}</td></tr>
-<tr class="memdesc:ac69fe784741dd4c26c966978fd1a8c1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../d5/da4/a03225.html" title="A single Message.">Message</a> Id to collect. <br /></td></tr>
-<tr class="separator:ac69fe784741dd4c26c966978fd1a8c1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2818e5b53f3f8c47573cf560de523652"><td class="memItemLeft" align="right" valign="top"><a id="a2818e5b53f3f8c47573cf560de523652" name="a2818e5b53f3f8c47573cf560de523652"></a>
-<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>threadId</b> {}</td></tr>
-<tr class="memdesc:a2818e5b53f3f8c47573cf560de523652"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a message to the specified thread within a webhook's <a class="el" href="../../da/d76/a01941.html" title="A Channel object.">Channel</a>. The thread will automatically be unarchived. <br /></td></tr>
-<tr class="separator:a2818e5b53f3f8c47573cf560de523652"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ea78ea8c64ddad7f17ddefb76d4dcdf"><td class="memItemLeft" align="right" valign="top"><a id="a0ea78ea8c64ddad7f17ddefb76d4dcdf" name="a0ea78ea8c64ddad7f17ddefb76d4dcdf"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>wait</b> { false }</td></tr>
-<tr class="memdesc:a0ea78ea8c64ddad7f17ddefb76d4dcdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waits for server confirmation of message send before response, and returns the created message body. <br /></td></tr>
-<tr class="separator:a0ea78ea8c64ddad7f17ddefb76d4dcdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_attribs_a03657"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_a03657')"><img src="../../closed.png" alt="-"/>&#160;Public Data Members inherited from <a class="el" href="../../d1/d01/a03657.html">DiscordCoreAPI::ExecuteWebHookData</a></td></tr>
-<tr class="memitem:a2ce6dde4650ad9fac037e8ece7ae4483 inherit pub_attribs_a03657"><td class="memItemLeft" align="right" valign="top"><a id="a2ce6dde4650ad9fac037e8ece7ae4483" name="a2ce6dde4650ad9fac037e8ece7ae4483"></a>
-<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>threadId</b> {}</td></tr>
-<tr class="memdesc:a2ce6dde4650ad9fac037e8ece7ae4483 inherit pub_attribs_a03657"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a message to the specified thread within a webhook's <a class="el" href="../../da/d76/a01941.html" title="A Channel object.">Channel</a>. The thread will automatically be unarchived. <br /></td></tr>
-<tr class="separator:a2ce6dde4650ad9fac037e8ece7ae4483 inherit pub_attribs_a03657"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55c9c408603d2298039e6b8ce03770b0 inherit pub_attribs_a03657"><td class="memItemLeft" align="right" valign="top"><a id="a55c9c408603d2298039e6b8ce03770b0" name="a55c9c408603d2298039e6b8ce03770b0"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>wait</b> { false }</td></tr>
-<tr class="memdesc:a55c9c408603d2298039e6b8ce03770b0 inherit pub_attribs_a03657"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waits for server confirmation of message send before response, and returns the created message body. <br /></td></tr>
-<tr class="separator:a55c9c408603d2298039e6b8ce03770b0 inherit pub_attribs_a03657"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_methods_a03657"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a03657')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d1/d01/a03657.html">DiscordCoreAPI::ExecuteWebHookData</a></td></tr>
-<tr class="memitem:a76456f2a832f066262b14bb592ed9102 inherit pub_methods_a03657"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d01/a03657.html">ExecuteWebHookData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d01/a03657.html#a76456f2a832f066262b14bb592ed9102">addAllowedMentions</a> (<a class="el" href="../../d3/d32/a02665.html">AllowedMentionsData</a> dataPackage)</td></tr>
-<tr class="memdesc:a76456f2a832f066262b14bb592ed9102 inherit pub_methods_a03657"><td class="mdescLeft">&#160;</td><td class="mdescRight">For setting the allowable mentions in a response.  <a href="../../d1/d01/a03657.html#a76456f2a832f066262b14bb592ed9102">More...</a><br /></td></tr>
-<tr class="separator:a76456f2a832f066262b14bb592ed9102 inherit pub_methods_a03657"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff1e2ddc385cc987cde1194aa657596c inherit pub_methods_a03657"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d01/a03657.html">ExecuteWebHookData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d01/a03657.html#aff1e2ddc385cc987cde1194aa657596c">addButton</a> (bool disabled, const std::string &amp;customIdNew, const std::string &amp;buttonLabel, <a class="el" href="../../dd/d94/a00888.html#gae05b1bfe988b0c2989b7bed279c9c95c">ButtonStyle</a> buttonStyle, const std::string &amp;emojiName=&quot;&quot;, <a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> emojiId=0, const std::string &amp;url=&quot;&quot;)</td></tr>
-<tr class="memdesc:aff1e2ddc385cc987cde1194aa657596c inherit pub_methods_a03657"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a button to the response <a class="el" href="../../d5/da4/a03225.html" title="A single Message.">Message</a>.  <a href="../../d1/d01/a03657.html#aff1e2ddc385cc987cde1194aa657596c">More...</a><br /></td></tr>
-<tr class="separator:aff1e2ddc385cc987cde1194aa657596c inherit pub_methods_a03657"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8fc0bcdbbc83e970ef3d836ac6c6374f inherit pub_methods_a03657"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d01/a03657.html">ExecuteWebHookData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d01/a03657.html#a8fc0bcdbbc83e970ef3d836ac6c6374f">addComponentRow</a> (<a class="el" href="../../d0/da6/a02677.html">ActionRowData</a> dataPackage)</td></tr>
-<tr class="memdesc:a8fc0bcdbbc83e970ef3d836ac6c6374f inherit pub_methods_a03657"><td class="mdescLeft">&#160;</td><td class="mdescRight">For setting the components in a response.  <a href="../../d1/d01/a03657.html#a8fc0bcdbbc83e970ef3d836ac6c6374f">More...</a><br /></td></tr>
-<tr class="separator:a8fc0bcdbbc83e970ef3d836ac6c6374f inherit pub_methods_a03657"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a619a707d0e53029c7bc5817f5bc93938 inherit pub_methods_a03657"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d01/a03657.html">ExecuteWebHookData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d01/a03657.html#a619a707d0e53029c7bc5817f5bc93938">addContent</a> (const std::string &amp;dataPackage)</td></tr>
-<tr class="memdesc:a619a707d0e53029c7bc5817f5bc93938 inherit pub_methods_a03657"><td class="mdescLeft">&#160;</td><td class="mdescRight">For setting the content in a response.  <a href="../../d1/d01/a03657.html#a619a707d0e53029c7bc5817f5bc93938">More...</a><br /></td></tr>
-<tr class="separator:a619a707d0e53029c7bc5817f5bc93938 inherit pub_methods_a03657"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73a06a5e015c539112147e1efff47ded inherit pub_methods_a03657"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d01/a03657.html">ExecuteWebHookData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d01/a03657.html#a73a06a5e015c539112147e1efff47ded">addFile</a> (<a class="el" href="../../d7/d52/a02337.html">File</a> theFile)</td></tr>
-<tr class="memdesc:a73a06a5e015c539112147e1efff47ded inherit pub_methods_a03657"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a file to the current collection of files for this message response.  <a href="../../d1/d01/a03657.html#a73a06a5e015c539112147e1efff47ded">More...</a><br /></td></tr>
-<tr class="separator:a73a06a5e015c539112147e1efff47ded inherit pub_methods_a03657"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97401d94bb2c18e60ccbfebbfb4fc56f inherit pub_methods_a03657"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d01/a03657.html">ExecuteWebHookData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d01/a03657.html#a97401d94bb2c18e60ccbfebbfb4fc56f">addMessageEmbed</a> (<a class="el" href="../../d0/d71/a02329.html">EmbedData</a> dataPackage)</td></tr>
-<tr class="memdesc:a97401d94bb2c18e60ccbfebbfb4fc56f inherit pub_methods_a03657"><td class="mdescLeft">&#160;</td><td class="mdescRight">For setting the embeds in a response.  <a href="../../d1/d01/a03657.html#a97401d94bb2c18e60ccbfebbfb4fc56f">More...</a><br /></td></tr>
-<tr class="separator:a97401d94bb2c18e60ccbfebbfb4fc56f inherit pub_methods_a03657"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ac7a853ac087bdae6c4261d3432a503 inherit pub_methods_a03657"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d01/a03657.html">ExecuteWebHookData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d01/a03657.html#a7ac7a853ac087bdae6c4261d3432a503">addModal</a> (const std::string &amp;topTitleNew, const std::string &amp;topCustomIdNew, const std::string &amp;titleNew, const std::string &amp;customIdNew, bool required, int32_t minLength, int32_t maxLength, <a class="el" href="../../dd/d94/a00888.html#ga24a639fa950fb1c20605b41b9adfaa2c">TextInputStyle</a> inputStyle, const std::string &amp;label=&quot;&quot;, const std::string &amp;placeholder=&quot;&quot;)</td></tr>
-<tr class="memdesc:a7ac7a853ac087bdae6c4261d3432a503 inherit pub_methods_a03657"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a modal to the response <a class="el" href="../../d5/da4/a03225.html" title="A single Message.">Message</a>.  <a href="../../d1/d01/a03657.html#a7ac7a853ac087bdae6c4261d3432a503">More...</a><br /></td></tr>
-<tr class="separator:a7ac7a853ac087bdae6c4261d3432a503 inherit pub_methods_a03657"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a993aac8856cad5ab12be0a17fb91fea1 inherit pub_methods_a03657"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d01/a03657.html">ExecuteWebHookData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d01/a03657.html#a993aac8856cad5ab12be0a17fb91fea1">addSelectMenu</a> (bool disabled, const std::string &amp;customIdNew, std::vector&lt; <a class="el" href="../../d6/dbb/a02669.html">SelectOptionData</a> &gt; options, const std::string &amp;placeholder, int32_t maxValues, int32_t minValues)</td></tr>
-<tr class="memdesc:a993aac8856cad5ab12be0a17fb91fea1 inherit pub_methods_a03657"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a select-menu to the response <a class="el" href="../../d5/da4/a03225.html" title="A single Message.">Message</a>.  <a href="../../d1/d01/a03657.html#a993aac8856cad5ab12be0a17fb91fea1">More...</a><br /></td></tr>
-<tr class="separator:a993aac8856cad5ab12be0a17fb91fea1 inherit pub_methods_a03657"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e2fb96f922284144a456ab6cdf2f63d inherit pub_methods_a03657"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d01/a03657.html">ExecuteWebHookData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d01/a03657.html#a3e2fb96f922284144a456ab6cdf2f63d">setTTSStatus</a> (bool enabledTTs)</td></tr>
-<tr class="memdesc:a3e2fb96f922284144a456ab6cdf2f63d inherit pub_methods_a03657"><td class="mdescLeft">&#160;</td><td class="mdescRight">For setting the tts status of a response.  <a href="../../d1/d01/a03657.html#a3e2fb96f922284144a456ab6cdf2f63d">More...</a><br /></td></tr>
-<tr class="separator:a3e2fb96f922284144a456ab6cdf2f63d inherit pub_methods_a03657"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bd569a84f7144e0f6521c7c87cc0d1c"><td class="memItemLeft" align="right" valign="top"><a id="a4bd569a84f7144e0f6521c7c87cc0d1c" name="a4bd569a84f7144e0f6521c7c87cc0d1c"></a>
+<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>channelId</b> {}</td></tr>
+<tr class="memdesc:a4bd569a84f7144e0f6521c7c87cc0d1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../da/d76/a01941.html" title="A Channel object.">Channel</a> from which to collect the <a class="el" href="../../d2/d14/a03709.html" title="An interface class for the WebHook related Discord endpoints.">WebHooks</a>. <br /></td></tr>
+<tr class="separator:a4bd569a84f7144e0f6521c7c87cc0d1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d4/dfa/a00746_source.html">WebHookEntities.hpp</a></li>
-<li><a class="el" href="../../d0/dad/a00806_source.html">WebHookEntities.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -184,7 +130,7 @@ Additional Inherited Members</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/dce/a03661.html">EditWebHookData</a></li>
+    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/dce/a03661.html">GetChannelWebHooksData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

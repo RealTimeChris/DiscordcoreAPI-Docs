@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d4/d35/a03617.html" target="_top" xlink:title="Configuration data for the library&#39;s main class, DiscordCoreClient.">
+<g id="a_node1"><a xlink:href="d6/de0/a03613.html" target="_top" xlink:title="Configuration data for the library&#39;s main class, DiscordCoreClient.">
 <polygon fill="none" stroke="black" points="157,-30 0,-30 0,0 157,0 157,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::DiscordCore</text>
 <text text-anchor="middle" x="78.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">ClientConfig</text>

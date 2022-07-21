@@ -102,12 +102,12 @@ $(document).ready(function(){initNavTree('d9/d41/a07174.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Getting a List of Guild Scheduled Events </div></div>
+  <div class="headertitle"><div class="title">Creating a Reaction </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Guild_Scheduled_Event_Stuff_Getting_a_List_of_Guild_Scheduled_Events"></a></p><ul>
-<li>Execute the, from the <code><a class="el" href="../../d4/d44/a03065.html#a13ad59288c8018bb02c4d54629d0bba9" title="Gets a list of a given Guild&#39;s scheduled events.">DiscordCoreAPI::GuildScheduledEvents::getGuildScheduledEventsAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../db/ddb/a03037.html" title="For collecting a list of a Guild&#39;s scheduled events.">DiscordCoreAPI::GetGuildScheduledEventsData</a></code>, with a return value of type <code>auto</code> or <code>std::vector&lt;<a class="el" href="../../d6/deb/a03061.html" title="A single GuildScheduledEvent responseData structure.">DiscordCoreAPI::GuildScheduledEvent</a>&gt;</code>.</li>
-<li>Call the function with <code>.get()</code> added to the end in order to wait for the results now.</li>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Reaction_Stuff_Creating_a_Reaction"></a></p><ul>
+<li>Execute the, <code><a class="el" href="../../da/d0a/a03297.html#a37bcfef2edf8755fbb3679ff329fb9db" title="Creates a Reaction on a Message.">DiscordCoreAPI::Reactions::createReactionAsync()</a></code> function, while passing in a data structure of type <code><a class="el" href="../../d2/daf/a03245.html" title="For creating a single Reaction.">DiscordCoreAPI::CreateReactionData</a></code>, with a return value of type <code>auto</code>, or, <code><a class="el" href="../../d0/d9d/a03289.html" title="A single Reaction.">DiscordCoreAPI::Reaction</a></code>.</li>
+<li>Call the function with <code>.get()</code> added to the end in order to wait for its return value now.</li>
 </ul>
 <div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
 <div class="line"><span class="comment">/// https://github.com/RealTimeChris/DiscordCoreAPI</span></div>
@@ -123,7 +123,7 @@ $(document).ready(function(){initNavTree('d9/d41/a07174.html','../../'); initRes
 <div class="line">        Test() {</div>
 <div class="line">            this-&gt;commandName = <span class="stringliteral">&quot;test&quot;</span>;</div>
 <div class="line">            this-&gt;helpDescription = <span class="stringliteral">&quot;Testing purposes!&quot;</span>;</div>
-<div class="line">            <a class="code hl_class" href="../../d0/d71/a02329.html">DiscordCoreAPI::EmbedData</a> msgEmbed;</div>
+<div class="line">            <a class="code hl_class" href="../../d0/d71/a02329.html">DiscordCoreAPI::EmbedData</a> msgEmbed { };</div>
 <div class="line">            msgEmbed.<a class="code hl_function" href="../../d0/d71/a02329.html#a9d4066a4861408bc00eccb22a12db7f9">setDescription</a>(<span class="stringliteral">&quot;------\nSimply enter !test or /test!\n------&quot;</span>);</div>
 <div class="line">            msgEmbed.<a class="code hl_function" href="../../d0/d71/a02329.html#a20ca60ec3235f44a223f3d3b687c0c9e">setTitle</a>(<span class="stringliteral">&quot;__**Test Usage:**__&quot;</span>);</div>
 <div class="line">            msgEmbed.<a class="code hl_function" href="../../d0/d71/a02329.html#ae356e6dc3c93658b7228b56da3187896">setTimeStamp</a>(getTimeAndDate());</div>
@@ -131,21 +131,18 @@ $(document).ready(function(){initNavTree('d9/d41/a07174.html','../../'); initRes
 <div class="line">            this-&gt;helpEmbed = msgEmbed;</div>
 <div class="line">        }</div>
 <div class="line"> </div>
-<div class="line">        unique_ptr&lt;DiscordCoreAPI::BaseFunction&gt; create() {</div>
+<div class="line">        std::unique_ptr&lt;DiscordCoreAPI::BaseFunction&gt; create() {</div>
 <div class="line">            <span class="keywordflow">return</span> std::make_unique&lt;Test&gt;();</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../d0/d2b/a02833.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
 <div class="line">            <span class="keywordflow">try</span> {</div>
-<div class="line">                <a class="code hl_struct" href="../../db/ddb/a03037.html">DiscordCoreAPI::GetGuildScheduledEventsData</a> dataPackage;</div>
-<div class="line">                dataPackage.<a class="code hl_variable" href="../../db/ddb/a03037.html#a359ca7d7616314ab0204e501edf59851">guildId</a> = args.eventData.<a class="code hl_function" href="../../d9/d95/a02781.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
-<div class="line">                dataPackage.<a class="code hl_variable" href="../../db/ddb/a03037.html#a2ef97d1da504598508bd1d2238f4d888">withUserCount</a> = <span class="keyword">true</span>;</div>
+<div class="line">                <a class="code hl_struct" href="../../d2/daf/a03245.html">DiscordCoreAPI::CreateReactionData</a> dataPackage;</div>
+<div class="line">                dataPackage.<a class="code hl_variable" href="../../d2/daf/a03245.html#adb3808adba06adaf02bcc666c83c85cb">channelId</a> = args.eventData.<a class="code hl_function" href="../../d9/d95/a02781.html#a97c397fe274250bfff73cf674810a8f5">getChannelId</a>();</div>
+<div class="line">                dataPackage.<a class="code hl_variable" href="../../d2/daf/a03245.html#a97c542f96e3b256f5eb326e574ec34f8">messageId</a> = args.eventData.<a class="code hl_function" href="../../d9/d95/a02781.html#af7be2b81b312794ea5398591d1a7e305">getMessageId</a>();</div>
+<div class="line">                dataPackage.<a class="code hl_variable" href="../../d2/daf/a03245.html#a42f749268ee40b5b0ab045988c57c1c5">emojiName</a> = <span class="stringliteral">&quot;😆&quot;</span>;</div>
 <div class="line"> </div>
-<div class="line">                <span class="keyword">auto</span> responseData = <a class="code hl_function" href="../../d4/d44/a03065.html#a13ad59288c8018bb02c4d54629d0bba9">DiscordCoreAPI::GuildScheduledEvents::getGuildScheduledEventsAsync</a>(dataPackage).get();</div>
-<div class="line"> </div>
-<div class="line">                <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; value: responseData) {</div>
-<div class="line">                    cout &lt;&lt; <span class="stringliteral">&quot;THE NAME: &quot;</span> &lt;&lt; value.name &lt;&lt; endl;</div>
-<div class="line">                }</div>
+<div class="line">                <a class="code hl_class" href="../../d0/d9d/a03289.html">DiscordCoreAPI::Reaction</a> responseMessages = <a class="code hl_function" href="../../da/d0a/a03297.html#a37bcfef2edf8755fbb3679ff329fb9db">DiscordCoreAPI::Reactions::createReactionAsync</a>(dataPackage).get();</div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line">            } <span class="keywordflow">catch</span> (...) {</div>
@@ -161,13 +158,16 @@ $(document).ready(function(){initNavTree('d9/d41/a07174.html','../../'); initRes
 <div class="ttc" id="aa02329_html_a9d4066a4861408bc00eccb22a12db7f9"><div class="ttname"><a href="../../d0/d71/a02329.html#a9d4066a4861408bc00eccb22a12db7f9">DiscordCoreAPI::EmbedData::setDescription</a></div><div class="ttdeci">EmbedData &amp; setDescription(const std::string &amp;descriptionNew)</div><div class="ttdoc">Sets the description (the main contents) of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00366">FoundationEntities.cpp:366</a></div></div>
 <div class="ttc" id="aa02329_html_ab417d83fddf9df80eca98e9ec6e888aa"><div class="ttname"><a href="../../d0/d71/a02329.html#ab417d83fddf9df80eca98e9ec6e888aa">DiscordCoreAPI::EmbedData::setColor</a></div><div class="ttdeci">EmbedData &amp; setColor(const std::string &amp;hexColorValueNew)</div><div class="ttdoc">Sets the color of the embed, by applying a hex-color value.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00371">FoundationEntities.cpp:371</a></div></div>
 <div class="ttc" id="aa02329_html_ae356e6dc3c93658b7228b56da3187896"><div class="ttname"><a href="../../d0/d71/a02329.html#ae356e6dc3c93658b7228b56da3187896">DiscordCoreAPI::EmbedData::setTimeStamp</a></div><div class="ttdeci">EmbedData &amp; setTimeStamp(const std::string &amp;timeStamp)</div><div class="ttdoc">Sets the timestamp on the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00352">FoundationEntities.cpp:352</a></div></div>
-<div class="ttc" id="aa02781_html_a565fe2447237030a716f64b2599996dd"><div class="ttname"><a href="../../d9/d95/a02781.html#a565fe2447237030a716f64b2599996dd">DiscordCoreAPI::InputEventData::getGuildId</a></div><div class="ttdeci">Snowflake getGuildId()</div><div class="ttdoc">Returns the Guild id, of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01630">FoundationEntities.cpp:1630</a></div></div>
+<div class="ttc" id="aa02781_html_a97c397fe274250bfff73cf674810a8f5"><div class="ttname"><a href="../../d9/d95/a02781.html#a97c397fe274250bfff73cf674810a8f5">DiscordCoreAPI::InputEventData::getChannelId</a></div><div class="ttdeci">Snowflake getChannelId()</div><div class="ttdoc">Returns the Channel id of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01622">FoundationEntities.cpp:1622</a></div></div>
+<div class="ttc" id="aa02781_html_af7be2b81b312794ea5398591d1a7e305"><div class="ttname"><a href="../../d9/d95/a02781.html#af7be2b81b312794ea5398591d1a7e305">DiscordCoreAPI::InputEventData::getMessageId</a></div><div class="ttdeci">Snowflake getMessageId()</div><div class="ttdoc">Returns the Message id, if applicable, of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01634">FoundationEntities.cpp:1634</a></div></div>
 <div class="ttc" id="aa02833_html"><div class="ttname"><a href="../../d0/d2b/a02833.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03795">FoundationEntities.hpp:3795</a></div></div>
 <div class="ttc" id="aa02837_html"><div class="ttname"><a href="../../dc/dfd/a02837.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03806">FoundationEntities.hpp:3806</a></div></div>
-<div class="ttc" id="aa03037_html"><div class="ttname"><a href="../../db/ddb/a03037.html">DiscordCoreAPI::GetGuildScheduledEventsData</a></div><div class="ttdoc">For collecting a list of a Guild's scheduled events.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/df7/a00731_source.html#l00032">GuildScheduledEventEntities.hpp:32</a></div></div>
-<div class="ttc" id="aa03037_html_a2ef97d1da504598508bd1d2238f4d888"><div class="ttname"><a href="../../db/ddb/a03037.html#a2ef97d1da504598508bd1d2238f4d888">DiscordCoreAPI::GetGuildScheduledEventsData::withUserCount</a></div><div class="ttdeci">bool withUserCount</div><div class="ttdoc">Do we collect the user counts?</div><div class="ttdef"><b>Definition:</b> <a href="../../df/df7/a00731_source.html#l00033">GuildScheduledEventEntities.hpp:33</a></div></div>
-<div class="ttc" id="aa03037_html_a359ca7d7616314ab0204e501edf59851"><div class="ttname"><a href="../../db/ddb/a03037.html#a359ca7d7616314ab0204e501edf59851">DiscordCoreAPI::GetGuildScheduledEventsData::guildId</a></div><div class="ttdeci">Snowflake guildId</div><div class="ttdoc">Guild from which we would like to collect the events.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/df7/a00731_source.html#l00034">GuildScheduledEventEntities.hpp:34</a></div></div>
-<div class="ttc" id="aa03065_html_a13ad59288c8018bb02c4d54629d0bba9"><div class="ttname"><a href="../../d4/d44/a03065.html#a13ad59288c8018bb02c4d54629d0bba9">DiscordCoreAPI::GuildScheduledEvents::getGuildScheduledEventsAsync</a></div><div class="ttdeci">static CoRoutine&lt; std::vector&lt; GuildScheduledEvent &gt; &gt; getGuildScheduledEventsAsync(GetGuildScheduledEventsData dataPackage)</div><div class="ttdoc">Gets a list of a given Guild's scheduled events.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d0c/a00788_source.html#l00072">GuildScheduledEventEntities.cpp:72</a></div></div>
+<div class="ttc" id="aa03245_html"><div class="ttname"><a href="../../d2/daf/a03245.html">DiscordCoreAPI::CreateReactionData</a></div><div class="ttdoc">For creating a single Reaction.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d77/a00683_source.html#l00032">ReactionEntities.hpp:32</a></div></div>
+<div class="ttc" id="aa03245_html_a42f749268ee40b5b0ab045988c57c1c5"><div class="ttname"><a href="../../d2/daf/a03245.html#a42f749268ee40b5b0ab045988c57c1c5">DiscordCoreAPI::CreateReactionData::emojiName</a></div><div class="ttdeci">std::string emojiName</div><div class="ttdoc">The emoji name of the Reaction to add.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d77/a00683_source.html#l00035">ReactionEntities.hpp:35</a></div></div>
+<div class="ttc" id="aa03245_html_a97c542f96e3b256f5eb326e574ec34f8"><div class="ttname"><a href="../../d2/daf/a03245.html#a97c542f96e3b256f5eb326e574ec34f8">DiscordCoreAPI::CreateReactionData::messageId</a></div><div class="ttdeci">Snowflake messageId</div><div class="ttdoc">The Message on which to add the Reaction.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d77/a00683_source.html#l00034">ReactionEntities.hpp:34</a></div></div>
+<div class="ttc" id="aa03245_html_adb3808adba06adaf02bcc666c83c85cb"><div class="ttname"><a href="../../d2/daf/a03245.html#adb3808adba06adaf02bcc666c83c85cb">DiscordCoreAPI::CreateReactionData::channelId</a></div><div class="ttdeci">Snowflake channelId</div><div class="ttdoc">The Channel for which to add the Reaction.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d77/a00683_source.html#l00033">ReactionEntities.hpp:33</a></div></div>
+<div class="ttc" id="aa03289_html"><div class="ttname"><a href="../../d0/d9d/a03289.html">DiscordCoreAPI::Reaction</a></div><div class="ttdoc">A single Reaction.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d77/a00683_source.html#l00132">ReactionEntities.hpp:132</a></div></div>
+<div class="ttc" id="aa03297_html_a37bcfef2edf8755fbb3679ff329fb9db"><div class="ttname"><a href="../../da/d0a/a03297.html#a37bcfef2edf8755fbb3679ff329fb9db">DiscordCoreAPI::Reactions::createReactionAsync</a></div><div class="ttdeci">static CoRoutine&lt; Reaction &gt; createReactionAsync(CreateReactionData dataPackage)</div><div class="ttdoc">Creates a Reaction on a Message.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d00/a00785_source.html#l00076">ReactionEntities.cpp:76</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -175,7 +175,7 @@ $(document).ready(function(){initNavTree('d9/d41/a07174.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d0/dac/a07043.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d7/de7/a07056.html">Guild Scheduled Event Stuff</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dd/dfa/a07011.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../dd/df5/a07028.html">Reaction Stuff</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

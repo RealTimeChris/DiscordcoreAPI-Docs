@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d6/de0/a03613.html" target="_top" xlink:title="For selecting the caching style of the library.">
+<g id="a_node1"><a xlink:href="d8/d13/a03609.html" target="_top" xlink:title="For selecting the caching style of the library.">
 <polygon fill="none" stroke="black" points="165,-19 0,-19 0,0 165,0 165,-19"/>
 <text text-anchor="middle" x="82.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::CacheOptions</text>
 </a>

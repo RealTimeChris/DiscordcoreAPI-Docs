@@ -22,9 +22,9 @@ var searchData=
   ['deletereactionsbyemojiasync_19',['deleteReactionsByEmojiAsync',['../da/d0a/a03297.html#a5cf90c1ce55efecbf4c9c5bffac2c361',1,'DiscordCoreAPI::Reactions']]],
   ['deletestageinstanceasync_20',['deleteStageInstanceAsync',['../d0/d19/a03433.html#aaffccd20e15a5005c628eaf5fd24f30e',1,'DiscordCoreAPI::StageInstances']]],
   ['deleteuserreactionasync_21',['deleteUserReactionAsync',['../da/d0a/a03297.html#aae02c2b807862f9125b71b80e8c26f67',1,'DiscordCoreAPI::Reactions']]],
-  ['deletewebhookasync_22',['deleteWebHookAsync',['../dd/df6/a03713.html#ab0efbc341f9ad7ccf1ca9b0de7692539',1,'DiscordCoreAPI::WebHooks']]],
-  ['deletewebhookmessageasync_23',['deleteWebHookMessageAsync',['../dd/df6/a03713.html#a45291460fa463240a93e01a933e09753',1,'DiscordCoreAPI::WebHooks']]],
-  ['deletewebhookwithtokenasync_24',['deleteWebHookWithTokenAsync',['../dd/df6/a03713.html#ad9bccf094d0e0f730a8183645b2c9de2',1,'DiscordCoreAPI::WebHooks']]],
+  ['deletewebhookasync_22',['deleteWebHookAsync',['../d2/d14/a03709.html#ab0efbc341f9ad7ccf1ca9b0de7692539',1,'DiscordCoreAPI::WebHooks']]],
+  ['deletewebhookmessageasync_23',['deleteWebHookMessageAsync',['../d2/d14/a03709.html#a45291460fa463240a93e01a933e09753',1,'DiscordCoreAPI::WebHooks']]],
+  ['deletewebhookwithtokenasync_24',['deleteWebHookWithTokenAsync',['../d2/d14/a03709.html#ad9bccf094d0e0f730a8183645b2c9de2',1,'DiscordCoreAPI::WebHooks']]],
   ['discordcoreclient_25',['DiscordCoreClient',['../dc/d67/a01989.html#a4c93ae396a2b001dbcec2c7e6f5fae3d',1,'DiscordCoreAPI::DiscordCoreClient']]],
-  ['displaypermissions_26',['displayPermissions',['../dc/d58/a03633.html#a64185e34c88630e694b240154add7ec0',1,'DiscordCoreAPI::Permissions']]]
+  ['displaypermissions_26',['displayPermissions',['../d8/d33/a03629.html#a64185e34c88630e694b240154add7ec0',1,'DiscordCoreAPI::Permissions']]]
 ];

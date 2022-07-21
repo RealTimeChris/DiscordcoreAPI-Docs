@@ -102,21 +102,19 @@ $(document).ready(function(){initNavTree('d2/dd5/a07117.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Getting a Guild Preview </div></div>
+  <div class="headertitle"><div class="title">Collecting Modal Input </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Guild_Stuff_Getting_a_Guild_Preview"></a></p><ul>
-<li>Execute the, <code><a class="el" href="../../d4/d69/a02989.html#ada9465a849f859746ddea3a4a3240d27" title="Acquires the preview Data of a chosen Guild.">DiscordCoreAPI::Guilds::getGuildPreviewAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../dd/dc1/a02857.html" title="For acquiring a Guild preview of a chosen Guild.">DiscordCoreAPI::GetGuildPreviewData</a></code>, with a return value of type <code>auto</code> or <code><a class="el" href="../../d1/d67/a02561.html" title="Data representing a single Guild preview.">DiscordCoreAPI::GuildPreviewData</a></code>.</li>
-<li>Call the function with <code>.get()</code> added to the end in order to wait for the results now.</li>
-</ul>
-<div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Modal_Stuff_Collecting_Modal_Input"></a></p><ul>
+<li>After creating a modal-text-input, create an object of the <code><a class="el" href="../../d7/d90/a03177.html" title="ModalCollector, for collecting modal text input from one or more Users.">DiscordCoreAPI::ModalCollector</a></code> class, passing into its constructor the <code><a class="el" href="../../d9/d95/a02781.html" title="Data representing an input-event, which is any Message or Interaction that is coming into the bot as ...">DiscordCoreAPI::InputEventData</a></code> that resulted from the call to <code><a class="el" href="../../df/d92/a03097.html#a91f7a025c00ec5b858a260ebcda49a3c" title="Responds to one of a number of types of &quot;InputEvents&quot;.">DiscordCoreAPI::InputEvents::respondToInputEventAsync</a></code>, when the modal was created.- Call the <code><a class="el" href="../../d7/d90/a03177.html#a05a7c10af76eb9305b03dadee0b98a2b" title="Used to collect the button inputs from one or more users.">DiscordCoreAPI::ModalCollector::collectModalData</a></code> function, from the instance of ModalCollector.</li>
+<li>Collect a result of type <code><a class="el" href="../../d3/dcf/a03173.html" title="Button response data.">DiscordCoreAPI::ModalResponseData</a></code> and deal with the modal response as you see fit! <div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
 <div class="line"><span class="comment">/// https://github.com/RealTimeChris/DiscordCoreAPI</span></div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="preprocessor">#pragma once</span></div>
 <div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d5/de8/a00749.html">Index.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d5/de8/a00749.html">Index.hpp</a>&quot;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d7/d46/a00890.html">DiscordCoreAPI</a> {</div>
+<div class="line">    <span class="keyword">namespace </span><a class="code hl_namespace" href="../../d7/d46/a00890.html">DiscordCoreAPI</a> {</div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">class </span>Test : <span class="keyword">public</span> <a class="code hl_struct" href="../../dc/dfd/a02837.html">DiscordCoreAPI::BaseFunction</a> {</div>
 <div class="line">      <span class="keyword">public</span>:</div>
@@ -137,41 +135,53 @@ $(document).ready(function(){initNavTree('d2/dd5/a07117.html','../../'); initRes
 <div class="line"> </div>
 <div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../d0/d2b/a02833.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
 <div class="line">            <span class="keywordflow">try</span> {</div>
-<div class="line">                <a class="code hl_struct" href="../../dd/dc1/a02857.html">DiscordCoreAPI::GetGuildPreviewData</a> dataPackage00;</div>
-<div class="line">                dataPackage00.<a class="code hl_variable" href="../../dd/dc1/a02857.html#ae6145937379afffa1a90a607406df8d2">guildId</a> = args.eventData.<a class="code hl_function" href="../../d9/d95/a02781.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
-<div class="line"> </div>
-<div class="line">                <span class="keyword">auto</span> guild = <a class="code hl_function" href="../../d4/d69/a02989.html#ada9465a849f859746ddea3a4a3240d27">DiscordCoreAPI::Guilds::getGuildPreviewAsync</a>(dataPackage00).get();</div>
-<div class="line"> </div>
-<div class="line">                cout &lt;&lt; <span class="stringliteral">&quot;THE NAME: &quot;</span> &lt;&lt; guild.name &lt;&lt; endl;</div>
+<div class="line">                <a class="code hl_class" href="../../da/d7d/a02785.html">DiscordCoreAPI::RespondToInputEventData</a> dataPackage {args.eventData};</div>
+<div class="line">                dataPackage.addModal(<span class="stringliteral">&quot;Test Modal&quot;</span>, <span class="stringliteral">&quot;test_modal&quot;</span>, <span class="stringliteral">&quot;Test Modal Small&quot;</span>, <span class="stringliteral">&quot;test_modal&quot;</span>, <span class="keyword">true</span>, 1, 46, TextInputStyle::Paragraph, <span class="stringliteral">&quot;TEST MODAL&quot;</span>,</div>
+<div class="line">                                     <span class="stringliteral">&quot;TestModal&quot;</span>);</div>
+<div class="line">                dataPackage.type = <a class="code hl_enumvalue" href="../../dd/d94/a00888.html#gga6a10916bec24a00f6d6a41d8d880c1faa6dc9f1599186d5895491f67863f9edd7">DiscordCoreAPI::InputEventResponseType::Interaction_Response</a>;</div>
+<div class="line">                <span class="keyword">auto</span> newEvent = InputEvents::respondToInputEventAsync(dataPackage).get();</div>
+<div class="line">                <a class="code hl_class" href="../../d7/d90/a03177.html">DiscordCoreAPI::ModalCollector</a> modalCollector {newEvent};</div>
+<div class="line">                <span class="keyword">auto</span> modalReturnData = modalCollector.<a class="code hl_function" href="../../d7/d90/a03177.html#a05a7c10af76eb9305b03dadee0b98a2b">collectModalData</a>(120000).get();</div>
+<div class="line">                <a class="code hl_class" href="../../da/d7d/a02785.html">DiscordCoreAPI::RespondToInputEventData</a> dataPackage03 {modalReturnData};</div>
+<div class="line">                dataPackage03.<a class="code hl_function" href="../../da/d7d/a02785.html#a4ad50267f07d255748ed7bb61d26d05d">addContent</a>(modalReturnData.value);</div>
+<div class="line">                dataPackage03.<a class="code hl_variable" href="../../da/d7d/a02785.html#a29ee6d7227da31df590020181b701348">type</a> = <a class="code hl_enumvalue" href="../../dd/d94/a00888.html#gga6a10916bec24a00f6d6a41d8d880c1faa6dc9f1599186d5895491f67863f9edd7">DiscordCoreAPI::InputEventResponseType::Interaction_Response</a>;</div>
+<div class="line">                <a class="code hl_function" href="../../df/d92/a03097.html#a91f7a025c00ec5b858a260ebcda49a3c">DiscordCoreAPI::InputEvents::respondToInputEventAsync</a>(dataPackage03);</div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line">            } <span class="keywordflow">catch</span> (...) {</div>
-<div class="line">                rethrowException(<span class="stringliteral">&quot;Test::execute()&quot;</span>);</div>
+<div class="line">                <a class="code hl_function" href="../../dd/d94/a00888.html#ga805bf7170903087e933a7b81c8e39f15">reportException</a>(<span class="stringliteral">&quot;Test::execute()&quot;</span>);</div>
 <div class="line">            }</div>
 <div class="line">        }</div>
+<div class="line">        <span class="keyword">virtual</span> ~Test() = <span class="keywordflow">default</span>;</div>
 <div class="line">    };</div>
 <div class="line">}</div>
 <div class="ttc" id="aa00749_html"><div class="ttname"><a href="../../d5/de8/a00749.html">Index.hpp</a></div></div>
+<div class="ttc" id="aa00888_html_ga805bf7170903087e933a7b81c8e39f15"><div class="ttname"><a href="../../dd/d94/a00888.html#ga805bf7170903087e933a7b81c8e39f15">DiscordCoreAPI::reportException</a></div><div class="ttdeci">DiscordCoreAPI_Dll void reportException(const std::string &amp;currentFunctionName, std::source_location theLocation=std::source_location::current())</div><div class="ttdoc">Prints the current file, line, and column from which the function is being called - typically from wi...</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db7/a00812_source.html#l00907">Utilities.cpp:907</a></div></div>
+<div class="ttc" id="aa00888_html_gga6a10916bec24a00f6d6a41d8d880c1faa6dc9f1599186d5895491f67863f9edd7"><div class="ttname"><a href="../../dd/d94/a00888.html#gga6a10916bec24a00f6d6a41d8d880c1faa6dc9f1599186d5895491f67863f9edd7">DiscordCoreAPI::InputEventResponseType::Interaction_Response</a></div><div class="ttdeci">@ Interaction_Response</div><div class="ttdoc">Interaction response.</div></div>
 <div class="ttc" id="aa00890_html"><div class="ttname"><a href="../../d7/d46/a00890.html">DiscordCoreAPI</a></div><div class="ttdoc">The main namespace for this library.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00025">ApplicationCommandEntities.hpp:25</a></div></div>
 <div class="ttc" id="aa02329_html"><div class="ttname"><a href="../../d0/d71/a02329.html">DiscordCoreAPI::EmbedData</a></div><div class="ttdoc">Embed data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l00600">FoundationEntities.hpp:600</a></div></div>
 <div class="ttc" id="aa02329_html_a20ca60ec3235f44a223f3d3b687c0c9e"><div class="ttname"><a href="../../d0/d71/a02329.html#a20ca60ec3235f44a223f3d3b687c0c9e">DiscordCoreAPI::EmbedData::setTitle</a></div><div class="ttdeci">EmbedData &amp; setTitle(const std::string &amp;titleNew)</div><div class="ttdoc">Sets the title of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00381">FoundationEntities.cpp:381</a></div></div>
 <div class="ttc" id="aa02329_html_a9d4066a4861408bc00eccb22a12db7f9"><div class="ttname"><a href="../../d0/d71/a02329.html#a9d4066a4861408bc00eccb22a12db7f9">DiscordCoreAPI::EmbedData::setDescription</a></div><div class="ttdeci">EmbedData &amp; setDescription(const std::string &amp;descriptionNew)</div><div class="ttdoc">Sets the description (the main contents) of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00366">FoundationEntities.cpp:366</a></div></div>
 <div class="ttc" id="aa02329_html_ab417d83fddf9df80eca98e9ec6e888aa"><div class="ttname"><a href="../../d0/d71/a02329.html#ab417d83fddf9df80eca98e9ec6e888aa">DiscordCoreAPI::EmbedData::setColor</a></div><div class="ttdeci">EmbedData &amp; setColor(const std::string &amp;hexColorValueNew)</div><div class="ttdoc">Sets the color of the embed, by applying a hex-color value.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00371">FoundationEntities.cpp:371</a></div></div>
 <div class="ttc" id="aa02329_html_ae356e6dc3c93658b7228b56da3187896"><div class="ttname"><a href="../../d0/d71/a02329.html#ae356e6dc3c93658b7228b56da3187896">DiscordCoreAPI::EmbedData::setTimeStamp</a></div><div class="ttdeci">EmbedData &amp; setTimeStamp(const std::string &amp;timeStamp)</div><div class="ttdoc">Sets the timestamp on the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00352">FoundationEntities.cpp:352</a></div></div>
-<div class="ttc" id="aa02781_html_a565fe2447237030a716f64b2599996dd"><div class="ttname"><a href="../../d9/d95/a02781.html#a565fe2447237030a716f64b2599996dd">DiscordCoreAPI::InputEventData::getGuildId</a></div><div class="ttdeci">Snowflake getGuildId()</div><div class="ttdoc">Returns the Guild id, of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01630">FoundationEntities.cpp:1630</a></div></div>
+<div class="ttc" id="aa02785_html"><div class="ttname"><a href="../../da/d7d/a02785.html">DiscordCoreAPI::RespondToInputEventData</a></div><div class="ttdoc">Data for responding to an input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03418">FoundationEntities.hpp:3418</a></div></div>
+<div class="ttc" id="aa02785_html_a29ee6d7227da31df590020181b701348"><div class="ttname"><a href="../../da/d7d/a02785.html#a29ee6d7227da31df590020181b701348">DiscordCoreAPI::RespondToInputEventData::type</a></div><div class="ttdeci">InputEventResponseType type</div><div class="ttdoc">The type of response to make.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03536">FoundationEntities.hpp:3536</a></div></div>
+<div class="ttc" id="aa02785_html_a4ad50267f07d255748ed7bb61d26d05d"><div class="ttname"><a href="../../da/d7d/a02785.html#a4ad50267f07d255748ed7bb61d26d05d">DiscordCoreAPI::RespondToInputEventData::addContent</a></div><div class="ttdeci">RespondToInputEventData &amp; addContent(const std::string &amp;dataPackage)</div><div class="ttdoc">For setting the Message content in a response.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01778">FoundationEntities.cpp:1778</a></div></div>
 <div class="ttc" id="aa02833_html"><div class="ttname"><a href="../../d0/d2b/a02833.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03795">FoundationEntities.hpp:3795</a></div></div>
 <div class="ttc" id="aa02837_html"><div class="ttname"><a href="../../dc/dfd/a02837.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03806">FoundationEntities.hpp:3806</a></div></div>
-<div class="ttc" id="aa02857_html"><div class="ttname"><a href="../../dd/dc1/a02857.html">DiscordCoreAPI::GetGuildPreviewData</a></div><div class="ttdoc">For acquiring a Guild preview of a chosen Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00067">GuildEntities.hpp:67</a></div></div>
-<div class="ttc" id="aa02857_html_ae6145937379afffa1a90a607406df8d2"><div class="ttname"><a href="../../dd/dc1/a02857.html#ae6145937379afffa1a90a607406df8d2">DiscordCoreAPI::GetGuildPreviewData::guildId</a></div><div class="ttdeci">Snowflake guildId</div><div class="ttdoc">The id of the Guild's preview to acquire.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00068">GuildEntities.hpp:68</a></div></div>
-<div class="ttc" id="aa02989_html_ada9465a849f859746ddea3a4a3240d27"><div class="ttname"><a href="../../d4/d69/a02989.html#ada9465a849f859746ddea3a4a3240d27">DiscordCoreAPI::Guilds::getGuildPreviewAsync</a></div><div class="ttdeci">static CoRoutine&lt; GuildPreviewData &gt; getGuildPreviewAsync(GetGuildPreviewData dataPackage)</div><div class="ttdoc">Acquires the preview Data of a chosen Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d93/a00875_source.html#l00417">GuildEntities.cpp:417</a></div></div>
-</div><!-- fragment --> </div></div><!-- contents -->
+<div class="ttc" id="aa03097_html_a91f7a025c00ec5b858a260ebcda49a3c"><div class="ttname"><a href="../../df/d92/a03097.html#a91f7a025c00ec5b858a260ebcda49a3c">DiscordCoreAPI::InputEvents::respondToInputEventAsync</a></div><div class="ttdeci">static CoRoutine&lt; InputEventData &gt; respondToInputEventAsync(RespondToInputEventData dataPackage)</div><div class="ttdoc">Responds to one of a number of types of &quot;InputEvents&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d60/a00818_source.html#l00026">InputEvents.cpp:26</a></div></div>
+<div class="ttc" id="aa03177_html"><div class="ttname"><a href="../../d7/d90/a03177.html">DiscordCoreAPI::ModalCollector</a></div><div class="ttdoc">ModalCollector, for collecting modal text input from one or more Users.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d95/a00779_source.html#l00585">InteractionEntities.hpp:585</a></div></div>
+<div class="ttc" id="aa03177_html_a05a7c10af76eb9305b03dadee0b98a2b"><div class="ttname"><a href="../../d7/d90/a03177.html#a05a7c10af76eb9305b03dadee0b98a2b">DiscordCoreAPI::ModalCollector::collectModalData</a></div><div class="ttdeci">CoRoutine&lt; ModalResponseData &gt; collectModalData(int32_t maxWaitTimeInMsNew)</div><div class="ttdoc">Used to collect the button inputs from one or more users.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2d/a00815_source.html#l00783">InteractionEntities.cpp:783</a></div></div>
+</div><!-- fragment --> </li>
+</ul>
+</div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d0/dac/a07043.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d5/d78/a07054.html">Guild Stuff</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dd/dfa/a07011.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../dd/deb/a07018.html">Modal Stuff</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

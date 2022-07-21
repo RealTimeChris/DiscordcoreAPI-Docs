@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="dc/d58/a03633.html" target="_top" xlink:title="Permissions class, for representing and manipulating Permission values.">
+<g id="a_node1"><a xlink:href="d8/d33/a03629.html" target="_top" xlink:title="Permissions class, for representing and manipulating Permission values.">
 <polygon fill="none" stroke="black" points="157,-19 0,-19 0,0 157,0 157,-19"/>
 <text text-anchor="middle" x="78.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::Permissions</text>
 </a>

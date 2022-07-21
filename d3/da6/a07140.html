@@ -102,11 +102,11 @@ $(document).ready(function(){initNavTree('d3/da6/a07140.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Removing a Guild Ban </div></div>
+  <div class="headertitle"><div class="title">Deleting a Guild Scheduled Event </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Guild_Stuff_Removing_a_Guild_Ban"></a></p><ul>
-<li>Execute the, <code><a class="el" href="../../d4/d69/a02989.html#a2cc3591c19ec26f361b7a098cbacc0c8" title="Removes a previously created ban.">DiscordCoreAPI::Guilds::removeGuildBanAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../d1/dc2/a02877.html" title="For removing a previous created Ban.">DiscordCoreAPI::RemoveGuildBanData</a></code>, with a return value of type <code>void</code>.</li>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Guild_Scheduled_Event_Stuff_Deleting_a_Guild_Scheduled_Event"></a></p><ul>
+<li>Execute the, from the <code><a class="el" href="../../d4/d44/a03065.html#ac19b7f8d04c89fd3039af6a63c74cc7f" title="Deletes a single GuildScheduledEvent.">DiscordCoreAPI::GuildScheduledEvents::deleteGuildScheduledEventAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../d6/dfe/a03053.html" title="For deleting a single Guild Scheduled Event.">DiscordCoreAPI::DeleteGuildScheduledEventData</a></code>, with a return value of type <code>void</code>.</li>
 <li>Call the function with <code>.get()</code> added to the end in order to wait for the results now.</li>
 </ul>
 <div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
@@ -131,18 +131,22 @@ $(document).ready(function(){initNavTree('d3/da6/a07140.html','../../'); initRes
 <div class="line">            this-&gt;helpEmbed = msgEmbed;</div>
 <div class="line">        }</div>
 <div class="line"> </div>
-<div class="line">        std::unique_ptr&lt;DiscordCoreAPI::BaseFunction&gt; create() {</div>
+<div class="line">        unique_ptr&lt;DiscordCoreAPI::BaseFunction&gt; create() {</div>
 <div class="line">            <span class="keywordflow">return</span> std::make_unique&lt;Test&gt;();</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../d0/d2b/a02833.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
 <div class="line">            <span class="keywordflow">try</span> {</div>
-<div class="line">                <a class="code hl_struct" href="../../d1/dc2/a02877.html">DiscordCoreAPI::RemoveGuildBanData</a> dataPackage01;</div>
-<div class="line">                dataPackage01.<a class="code hl_variable" href="../../d1/dc2/a02877.html#a5d92cad392ec597218056f703c9aad1d">guildId</a> = args.eventData.<a class="code hl_function" href="../../d9/d95/a02781.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
-<div class="line">                dataPackage01.<a class="code hl_variable" href="../../d1/dc2/a02877.html#ace91b0e0f494dd7a4505b61f3673fa02">userId</a> = <span class="stringliteral">&quot;869276807394902066&quot;</span>;</div>
-<div class="line">                dataPackage01.<a class="code hl_variable" href="../../d1/dc2/a02877.html#aa5ae0cce136fe703153f683c0b13259f">reason</a> = <span class="stringliteral">&quot;TESTING PURPOSES!&quot;</span>;</div>
+<div class="line">                <a class="code hl_struct" href="../../db/ddb/a03037.html">DiscordCoreAPI::GetGuildScheduledEventsData</a> dataPackage01;</div>
+<div class="line">                dataPackage01.<a class="code hl_variable" href="../../db/ddb/a03037.html#a359ca7d7616314ab0204e501edf59851">guildId</a> = args.eventData.<a class="code hl_function" href="../../d9/d95/a02781.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
+<div class="line">                dataPackage01.<a class="code hl_variable" href="../../db/ddb/a03037.html#a2ef97d1da504598508bd1d2238f4d888">withUserCount</a> = <span class="keyword">true</span>;</div>
+<div class="line">                <span class="keyword">auto</span> responseData01 = <a class="code hl_function" href="../../d4/d44/a03065.html#a13ad59288c8018bb02c4d54629d0bba9">DiscordCoreAPI::GuildScheduledEvents::getGuildScheduledEventsAsync</a>(dataPackage01).get();</div>
 <div class="line"> </div>
-<div class="line">                <a class="code hl_function" href="../../d4/d69/a02989.html#a2cc3591c19ec26f361b7a098cbacc0c8">DiscordCoreAPI::Guilds::removeGuildBanAsync</a>(dataPackage01).<a class="code hl_function" href="../../d5/d92/a01977.html#a904d030f3edbf8efac15b2cebba3e37a">get</a>();</div>
+<div class="line">                <a class="code hl_struct" href="../../d6/dfe/a03053.html">DiscordCoreAPI::DeleteGuildScheduledEventData</a> dataPackage;</div>
+<div class="line">                dataPackage.<a class="code hl_variable" href="../../d6/dfe/a03053.html#a533a82be7560feeb26c9cc96f3dd73c8">guildId</a> = args.eventData.<a class="code hl_function" href="../../d9/d95/a02781.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
+<div class="line">                dataPackage.<a class="code hl_variable" href="../../d6/dfe/a03053.html#ad0e8e9ff2d04d0d1482d71f206283f76">guildScheduledEventId</a> = responseData01[0].id;</div>
+<div class="line"> </div>
+<div class="line">                <a class="code hl_function" href="../../d4/d44/a03065.html#ac19b7f8d04c89fd3039af6a63c74cc7f">DiscordCoreAPI::GuildScheduledEvents::deleteGuildScheduledEventAsync</a>(dataPackage).<a class="code hl_function" href="../../d5/d92/a01977.html#a904d030f3edbf8efac15b2cebba3e37a">get</a>();</div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line">            } <span class="keywordflow">catch</span> (...) {</div>
@@ -162,11 +166,14 @@ $(document).ready(function(){initNavTree('d3/da6/a07140.html','../../'); initRes
 <div class="ttc" id="aa02781_html_a565fe2447237030a716f64b2599996dd"><div class="ttname"><a href="../../d9/d95/a02781.html#a565fe2447237030a716f64b2599996dd">DiscordCoreAPI::InputEventData::getGuildId</a></div><div class="ttdeci">Snowflake getGuildId()</div><div class="ttdoc">Returns the Guild id, of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01630">FoundationEntities.cpp:1630</a></div></div>
 <div class="ttc" id="aa02833_html"><div class="ttname"><a href="../../d0/d2b/a02833.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03795">FoundationEntities.hpp:3795</a></div></div>
 <div class="ttc" id="aa02837_html"><div class="ttname"><a href="../../dc/dfd/a02837.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03806">FoundationEntities.hpp:3806</a></div></div>
-<div class="ttc" id="aa02877_html"><div class="ttname"><a href="../../d1/dc2/a02877.html">DiscordCoreAPI::RemoveGuildBanData</a></div><div class="ttdoc">For removing a previous created Ban.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00101">GuildEntities.hpp:101</a></div></div>
-<div class="ttc" id="aa02877_html_a5d92cad392ec597218056f703c9aad1d"><div class="ttname"><a href="../../d1/dc2/a02877.html#a5d92cad392ec597218056f703c9aad1d">DiscordCoreAPI::RemoveGuildBanData::guildId</a></div><div class="ttdeci">Snowflake guildId</div><div class="ttdoc">The Guild from which to remove the Ban.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00102">GuildEntities.hpp:102</a></div></div>
-<div class="ttc" id="aa02877_html_aa5ae0cce136fe703153f683c0b13259f"><div class="ttname"><a href="../../d1/dc2/a02877.html#aa5ae0cce136fe703153f683c0b13259f">DiscordCoreAPI::RemoveGuildBanData::reason</a></div><div class="ttdeci">std::string reason</div><div class="ttdoc">The reason for removing this Ban.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00104">GuildEntities.hpp:104</a></div></div>
-<div class="ttc" id="aa02877_html_ace91b0e0f494dd7a4505b61f3673fa02"><div class="ttname"><a href="../../d1/dc2/a02877.html#ace91b0e0f494dd7a4505b61f3673fa02">DiscordCoreAPI::RemoveGuildBanData::userId</a></div><div class="ttdeci">Snowflake userId</div><div class="ttdoc">The user Id of the user who's ban to remove.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00103">GuildEntities.hpp:103</a></div></div>
-<div class="ttc" id="aa02989_html_a2cc3591c19ec26f361b7a098cbacc0c8"><div class="ttname"><a href="../../d4/d69/a02989.html#a2cc3591c19ec26f361b7a098cbacc0c8">DiscordCoreAPI::Guilds::removeGuildBanAsync</a></div><div class="ttdeci">static CoRoutine&lt; void &gt; removeGuildBanAsync(RemoveGuildBanData dataPackage)</div><div class="ttdoc">Removes a previously created ban.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d93/a00875_source.html#l00498">GuildEntities.cpp:498</a></div></div>
+<div class="ttc" id="aa03037_html"><div class="ttname"><a href="../../db/ddb/a03037.html">DiscordCoreAPI::GetGuildScheduledEventsData</a></div><div class="ttdoc">For collecting a list of a Guild's scheduled events.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/df7/a00731_source.html#l00032">GuildScheduledEventEntities.hpp:32</a></div></div>
+<div class="ttc" id="aa03037_html_a2ef97d1da504598508bd1d2238f4d888"><div class="ttname"><a href="../../db/ddb/a03037.html#a2ef97d1da504598508bd1d2238f4d888">DiscordCoreAPI::GetGuildScheduledEventsData::withUserCount</a></div><div class="ttdeci">bool withUserCount</div><div class="ttdoc">Do we collect the user counts?</div><div class="ttdef"><b>Definition:</b> <a href="../../df/df7/a00731_source.html#l00033">GuildScheduledEventEntities.hpp:33</a></div></div>
+<div class="ttc" id="aa03037_html_a359ca7d7616314ab0204e501edf59851"><div class="ttname"><a href="../../db/ddb/a03037.html#a359ca7d7616314ab0204e501edf59851">DiscordCoreAPI::GetGuildScheduledEventsData::guildId</a></div><div class="ttdeci">Snowflake guildId</div><div class="ttdoc">Guild from which we would like to collect the events.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/df7/a00731_source.html#l00034">GuildScheduledEventEntities.hpp:34</a></div></div>
+<div class="ttc" id="aa03053_html"><div class="ttname"><a href="../../d6/dfe/a03053.html">DiscordCoreAPI::DeleteGuildScheduledEventData</a></div><div class="ttdoc">For deleting a single Guild Scheduled Event.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/df7/a00731_source.html#l00077">GuildScheduledEventEntities.hpp:77</a></div></div>
+<div class="ttc" id="aa03053_html_a533a82be7560feeb26c9cc96f3dd73c8"><div class="ttname"><a href="../../d6/dfe/a03053.html#a533a82be7560feeb26c9cc96f3dd73c8">DiscordCoreAPI::DeleteGuildScheduledEventData::guildId</a></div><div class="ttdeci">Snowflake guildId</div><div class="ttdoc">The Guild within which to modify the event.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/df7/a00731_source.html#l00079">GuildScheduledEventEntities.hpp:79</a></div></div>
+<div class="ttc" id="aa03053_html_ad0e8e9ff2d04d0d1482d71f206283f76"><div class="ttname"><a href="../../d6/dfe/a03053.html#ad0e8e9ff2d04d0d1482d71f206283f76">DiscordCoreAPI::DeleteGuildScheduledEventData::guildScheduledEventId</a></div><div class="ttdeci">Snowflake guildScheduledEventId</div><div class="ttdoc">The id of the event to modify.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/df7/a00731_source.html#l00078">GuildScheduledEventEntities.hpp:78</a></div></div>
+<div class="ttc" id="aa03065_html_a13ad59288c8018bb02c4d54629d0bba9"><div class="ttname"><a href="../../d4/d44/a03065.html#a13ad59288c8018bb02c4d54629d0bba9">DiscordCoreAPI::GuildScheduledEvents::getGuildScheduledEventsAsync</a></div><div class="ttdeci">static CoRoutine&lt; std::vector&lt; GuildScheduledEvent &gt; &gt; getGuildScheduledEventsAsync(GetGuildScheduledEventsData dataPackage)</div><div class="ttdoc">Gets a list of a given Guild's scheduled events.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d0c/a00788_source.html#l00072">GuildScheduledEventEntities.cpp:72</a></div></div>
+<div class="ttc" id="aa03065_html_ac19b7f8d04c89fd3039af6a63c74cc7f"><div class="ttname"><a href="../../d4/d44/a03065.html#ac19b7f8d04c89fd3039af6a63c74cc7f">DiscordCoreAPI::GuildScheduledEvents::deleteGuildScheduledEventAsync</a></div><div class="ttdeci">static CoRoutine&lt; void &gt; deleteGuildScheduledEventAsync(DeleteGuildScheduledEventData dataPackage)</div><div class="ttdoc">Deletes a single GuildScheduledEvent.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d0c/a00788_source.html#l00114">GuildScheduledEventEntities.cpp:114</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -174,7 +181,7 @@ $(document).ready(function(){initNavTree('d3/da6/a07140.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d0/dac/a07043.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d5/d78/a07054.html">Guild Stuff</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dd/dfa/a07011.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d3/d61/a07024.html">Guild Scheduled Event Stuff</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

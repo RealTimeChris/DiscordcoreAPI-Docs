@@ -102,11 +102,11 @@ $(document).ready(function(){initNavTree('d8/d6e/a07237.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Getting a Thread Member </div></div>
+  <div class="headertitle"><div class="title">Modifying a WebHook </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Thread_Stuff_Getting_a_Thread_Member"></a></p><ul>
-<li>Execute the, <code><a class="el" href="../../d0/d33/a03529.html#a13cac409393167803e907fafc3750058" title="Collects a ThreadMember if they exist.">DiscordCoreAPI::Threads::getThreadMemberAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../dc/d8f/a03497.html" title="For collecting a ThreadMember responseData structure for a given ThreadMember.">DiscordCoreAPI::GetThreadMemberData</a></code>, with a return value of type <code>auto</code> or <code><a class="el" href="../../dc/d0a/a02345.html" title="Data for a single member of a Thread.">DiscordCoreAPI::ThreadMemberData</a></code>.</li>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_WebHook_Stuff_Modifying_a_WebHook"></a></p><ul>
+<li>Execute the, <code><a class="el" href="../../d2/d14/a03709.html#a21ee542887a63d9021f7d16f49d7ca38" title="Modifies a single WebHook.">DiscordCoreAPI::WebHooks::modifyWebHookAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../d4/d78/a03677.html" title="For modifying a WebHook.">DiscordCoreAPI::ModifyWebHookData</a></code>, with a return value of type <code>auto</code> or <code><a class="el" href="../../d4/df9/a03701.html" title="A single WebHook.">DiscordCoreAPI::WebHook</a></code>.</li>
 <li>Call the function with <code>.get()</code> added to the end in order to wait for the results now.</li>
 </ul>
 <div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
@@ -137,17 +137,24 @@ $(document).ready(function(){initNavTree('d8/d6e/a07237.html','../../'); initRes
 <div class="line"> </div>
 <div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../d0/d2b/a02833.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
 <div class="line">            <span class="keywordflow">try</span> {</div>
-<div class="line">                <a class="code hl_struct" href="../../dc/d8f/a03497.html">DiscordCoreAPI::GetThreadMemberData</a> dataPackage;</div>
-<div class="line">                dataPackage.<a class="code hl_variable" href="../../dc/d8f/a03497.html#aff1f2dee59835e7e9abe6e41d076ae46">channelId</a> = <span class="stringliteral">&quot;909435143561809953&quot;</span>;</div>
-<div class="line">                dataPackage.<a class="code hl_variable" href="../../dc/d8f/a03497.html#ad1b4db241ca344e9d9af1a3b6198d2d9">userId</a> = args.eventData.<a class="code hl_function" href="../../d9/d95/a02781.html#a70865601071ddd3f49a50b280a0d4894">getAuthorId</a>();</div>
+<div class="line">                <a class="code hl_struct" href="../../d1/df9/a03665.html">DiscordCoreAPI::GetGuildWebHooksData</a> dataPackage;</div>
+<div class="line">                dataPackage.<a class="code hl_variable" href="../../d1/df9/a03665.html#a2138f34efe5bed2b871a0c4e8a82d488">guildId</a> = args.eventData.<a class="code hl_function" href="../../d9/d95/a02781.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
 <div class="line"> </div>
-<div class="line">                <span class="keyword">auto</span> newThreadMember = <a class="code hl_function" href="../../d0/d33/a03529.html#a13cac409393167803e907fafc3750058">DiscordCoreAPI::Threads::getThreadMemberAsync</a>(dataPackage).get();</div>
+<div class="line">                <span class="keyword">auto</span> newWebHooks = <a class="code hl_function" href="../../d2/d14/a03709.html#a157a654e748b04fc7112071ee43ec787">DiscordCoreAPI::WebHooks::getGuildWebHooksAsync</a>(dataPackage).get();</div>
+<div class="line"> </div>
+<div class="line">                <a class="code hl_struct" href="../../d4/d78/a03677.html">DiscordCoreAPI::ModifyWebHookData</a> dataPackage01;</div>
+<div class="line">                dataPackage01.<a class="code hl_variable" href="../../d4/d78/a03677.html#ab70337999faf11b6fda15dbf40b1b80a">webHookId</a> = newWebHooks[0].id;</div>
+<div class="line">                dataPackage01.<a class="code hl_variable" href="../../d4/d78/a03677.html#a882b8b47ff5ce4c9c7f728fb160a93d0">name</a> = <span class="stringliteral">&quot;NEW TEST NAME&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">                <span class="keyword">auto</span> newWebHook = <a class="code hl_function" href="../../d2/d14/a03709.html#a21ee542887a63d9021f7d16f49d7ca38">DiscordCoreAPI::WebHooks::modifyWebHookAsync</a>(dataPackage01).get();</div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line">            } <span class="keywordflow">catch</span> (...) {</div>
 <div class="line">                rethrowException(<span class="stringliteral">&quot;Test::execute()&quot;</span>);</div>
 <div class="line">            }</div>
 <div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">virtual</span> ~Test() = <span class="keywordflow">default</span>;</div>
 <div class="line">    };</div>
 <div class="line">}</div>
 <div class="ttc" id="aa00749_html"><div class="ttname"><a href="../../d5/de8/a00749.html">Index.hpp</a></div></div>
@@ -157,13 +164,16 @@ $(document).ready(function(){initNavTree('d8/d6e/a07237.html','../../'); initRes
 <div class="ttc" id="aa02329_html_a9d4066a4861408bc00eccb22a12db7f9"><div class="ttname"><a href="../../d0/d71/a02329.html#a9d4066a4861408bc00eccb22a12db7f9">DiscordCoreAPI::EmbedData::setDescription</a></div><div class="ttdeci">EmbedData &amp; setDescription(const std::string &amp;descriptionNew)</div><div class="ttdoc">Sets the description (the main contents) of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00366">FoundationEntities.cpp:366</a></div></div>
 <div class="ttc" id="aa02329_html_ab417d83fddf9df80eca98e9ec6e888aa"><div class="ttname"><a href="../../d0/d71/a02329.html#ab417d83fddf9df80eca98e9ec6e888aa">DiscordCoreAPI::EmbedData::setColor</a></div><div class="ttdeci">EmbedData &amp; setColor(const std::string &amp;hexColorValueNew)</div><div class="ttdoc">Sets the color of the embed, by applying a hex-color value.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00371">FoundationEntities.cpp:371</a></div></div>
 <div class="ttc" id="aa02329_html_ae356e6dc3c93658b7228b56da3187896"><div class="ttname"><a href="../../d0/d71/a02329.html#ae356e6dc3c93658b7228b56da3187896">DiscordCoreAPI::EmbedData::setTimeStamp</a></div><div class="ttdeci">EmbedData &amp; setTimeStamp(const std::string &amp;timeStamp)</div><div class="ttdoc">Sets the timestamp on the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00352">FoundationEntities.cpp:352</a></div></div>
-<div class="ttc" id="aa02781_html_a70865601071ddd3f49a50b280a0d4894"><div class="ttname"><a href="../../d9/d95/a02781.html#a70865601071ddd3f49a50b280a0d4894">DiscordCoreAPI::InputEventData::getAuthorId</a></div><div class="ttdeci">Snowflake getAuthorId()</div><div class="ttdoc">Returns the User id of the last requester of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01610">FoundationEntities.cpp:1610</a></div></div>
+<div class="ttc" id="aa02781_html_a565fe2447237030a716f64b2599996dd"><div class="ttname"><a href="../../d9/d95/a02781.html#a565fe2447237030a716f64b2599996dd">DiscordCoreAPI::InputEventData::getGuildId</a></div><div class="ttdeci">Snowflake getGuildId()</div><div class="ttdoc">Returns the Guild id, of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01630">FoundationEntities.cpp:1630</a></div></div>
 <div class="ttc" id="aa02833_html"><div class="ttname"><a href="../../d0/d2b/a02833.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03795">FoundationEntities.hpp:3795</a></div></div>
 <div class="ttc" id="aa02837_html"><div class="ttname"><a href="../../dc/dfd/a02837.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03806">FoundationEntities.hpp:3806</a></div></div>
-<div class="ttc" id="aa03497_html"><div class="ttname"><a href="../../dc/d8f/a03497.html">DiscordCoreAPI::GetThreadMemberData</a></div><div class="ttdoc">For collecting a ThreadMember responseData structure for a given ThreadMember.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dc0/a00734_source.html#l00093">ThreadEntities.hpp:93</a></div></div>
-<div class="ttc" id="aa03497_html_ad1b4db241ca344e9d9af1a3b6198d2d9"><div class="ttname"><a href="../../dc/d8f/a03497.html#ad1b4db241ca344e9d9af1a3b6198d2d9">DiscordCoreAPI::GetThreadMemberData::userId</a></div><div class="ttdeci">Snowflake userId</div><div class="ttdoc">The id of the User to collect from the Thread.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dc0/a00734_source.html#l00095">ThreadEntities.hpp:95</a></div></div>
-<div class="ttc" id="aa03497_html_aff1f2dee59835e7e9abe6e41d076ae46"><div class="ttname"><a href="../../dc/d8f/a03497.html#aff1f2dee59835e7e9abe6e41d076ae46">DiscordCoreAPI::GetThreadMemberData::channelId</a></div><div class="ttdeci">Snowflake channelId</div><div class="ttdoc">The id of the Thread to collect them from.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dc0/a00734_source.html#l00094">ThreadEntities.hpp:94</a></div></div>
-<div class="ttc" id="aa03529_html_a13cac409393167803e907fafc3750058"><div class="ttname"><a href="../../d0/d33/a03529.html#a13cac409393167803e907fafc3750058">DiscordCoreAPI::Threads::getThreadMemberAsync</a></div><div class="ttdeci">static CoRoutine&lt; ThreadMemberData &gt; getThreadMemberAsync(GetThreadMemberData dataPackage)</div><div class="ttdoc">Collects a ThreadMember if they exist.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2f/a00854_source.html#l00156">ThreadEntities.cpp:156</a></div></div>
+<div class="ttc" id="aa03665_html"><div class="ttname"><a href="../../d1/df9/a03665.html">DiscordCoreAPI::GetGuildWebHooksData</a></div><div class="ttdoc">For collecting a list of WebHooks from a chosen Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dfa/a00746_source.html#l00162">WebHookEntities.hpp:162</a></div></div>
+<div class="ttc" id="aa03665_html_a2138f34efe5bed2b871a0c4e8a82d488"><div class="ttname"><a href="../../d1/df9/a03665.html#a2138f34efe5bed2b871a0c4e8a82d488">DiscordCoreAPI::GetGuildWebHooksData::guildId</a></div><div class="ttdeci">Snowflake guildId</div><div class="ttdoc">The Guild from which to collect the WebHooks.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dfa/a00746_source.html#l00163">WebHookEntities.hpp:163</a></div></div>
+<div class="ttc" id="aa03677_html"><div class="ttname"><a href="../../d4/d78/a03677.html">DiscordCoreAPI::ModifyWebHookData</a></div><div class="ttdoc">For modifying a WebHook.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dfa/a00746_source.html#l00178">WebHookEntities.hpp:178</a></div></div>
+<div class="ttc" id="aa03677_html_a882b8b47ff5ce4c9c7f728fb160a93d0"><div class="ttname"><a href="../../d4/d78/a03677.html#a882b8b47ff5ce4c9c7f728fb160a93d0">DiscordCoreAPI::ModifyWebHookData::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">The default name of the webhook.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dfa/a00746_source.html#l00182">WebHookEntities.hpp:182</a></div></div>
+<div class="ttc" id="aa03677_html_ab70337999faf11b6fda15dbf40b1b80a"><div class="ttname"><a href="../../d4/d78/a03677.html#ab70337999faf11b6fda15dbf40b1b80a">DiscordCoreAPI::ModifyWebHookData::webHookId</a></div><div class="ttdeci">Snowflake webHookId</div><div class="ttdoc">The WebHook to be modified.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dfa/a00746_source.html#l00181">WebHookEntities.hpp:181</a></div></div>
+<div class="ttc" id="aa03709_html_a157a654e748b04fc7112071ee43ec787"><div class="ttname"><a href="../../d2/d14/a03709.html#a157a654e748b04fc7112071ee43ec787">DiscordCoreAPI::WebHooks::getGuildWebHooksAsync</a></div><div class="ttdeci">static CoRoutine&lt; std::vector&lt; WebHook &gt; &gt; getGuildWebHooksAsync(GetGuildWebHooksData dataPackage)</div><div class="ttdoc">Collects a list of WebHooks from a chosen Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dad/a00806_source.html#l00255">WebHookEntities.cpp:255</a></div></div>
+<div class="ttc" id="aa03709_html_a21ee542887a63d9021f7d16f49d7ca38"><div class="ttname"><a href="../../d2/d14/a03709.html#a21ee542887a63d9021f7d16f49d7ca38">DiscordCoreAPI::WebHooks::modifyWebHookAsync</a></div><div class="ttdeci">static CoRoutine&lt; WebHook &gt; modifyWebHookAsync(ModifyWebHookData dataPackage)</div><div class="ttdoc">Modifies a single WebHook.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dad/a00806_source.html#l00282">WebHookEntities.cpp:282</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -171,7 +181,7 @@ $(document).ready(function(){initNavTree('d8/d6e/a07237.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d0/dac/a07043.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../df/d34/a07064.html">Thread Stuff</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dd/dfa/a07011.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../de/d75/a07034.html">Webhook Stuff</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
