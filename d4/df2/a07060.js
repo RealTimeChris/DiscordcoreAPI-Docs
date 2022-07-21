@@ -1,16 +1,14 @@
 var a07060 =
 [
-    [ "Starting a Thread with a Message", "db/d5a/a07241.html", null ],
-    [ "Starting a Thread without a Message", "d3/d34/a07242.html", null ],
-    [ "Starting a Thread in a Forum Channel", "df/d3a/a07240.html", null ],
-    [ "Joining a Thread", "d8/d6e/a07237.html", null ],
-    [ "Adding a User to a Thread", "d2/da4/a07230.html", null ],
-    [ "Removing a User from a Thread", "d3/da3/a07239.html", null ],
-    [ "Getting a Thread Member", "df/dff/a07233.html", null ],
-    [ "Getting a List of Thread Members", "df/d74/a07232.html", null ],
-    [ "Getting a List of Active Threads", "d7/dbb/a07231.html", null ],
-    [ "Getting Public Archived Threads", "dd/df9/a07236.html", null ],
-    [ "Getting Private Archived Threads", "db/d34/a07235.html", null ],
-    [ "Getting Joined Private Archived Threads", "d4/d8c/a07234.html", null ],
-    [ "Listing Active Threads", "d1/ddc/a07238.html", null ]
+    [ "Creating a Reaction", "d6/dc7/a07206.html", null ],
+    [ "Deleting Own Reaction", "d7/dc6/a07210.html", null ],
+    [ "Deleting User Reaction", "d2/d2a/a07211.html", null ],
+    [ "Getting Reactions", "de/dfd/a07214.html", null ],
+    [ "Deleting All Reactions", "dc/d78/a07209.html", null ],
+    [ "Deleting All Reactions for Emoji", "d2/d8e/a07208.html", null ],
+    [ "Getting A list of Guild Emoji", "da/dae/a07213.html", null ],
+    [ "Getting a Guild Emoji", "df/d79/a07212.html", null ],
+    [ "Creating a Guild Emoji", "d6/dfb/a07205.html", null ],
+    [ "Modifying a Guild Emoji", "d2/d9e/a07215.html", null ],
+    [ "Deleting a Guild Emoji", "da/d80/a07207.html", null ]
 ];

@@ -1,13 +1,11 @@
 var a07061 =
 [
-    [ "Adding a Recipient to a Group DM", "dc/d10/a07243.html", null ],
-    [ "Removing a Recipient from a Group DM", "dc/d4a/a07252.html", null ],
-    [ "Modifying Current User's Voice State", "df/d87/a07250.html", null ],
-    [ "Modifying a User's Voice State", "d2/d43/a07249.html", null ],
-    [ "Getting the Current User", "d8/d2e/a07247.html", null ],
-    [ "Getting a User", "d5/d4a/a07244.html", null ],
-    [ "Modifying the Current User", "d0/daa/a07251.html", null ],
-    [ "Getting User Connections", "de/d9b/a07248.html", null ],
-    [ "Getting Current User Application Info", "d0/d1f/a07245.html", null ],
-    [ "Getting Current User Authorization Info", "d7/d22/a07246.html", null ]
+    [ "Adding a Role to a Guild Member", "dc/df3/a07216.html", null ],
+    [ "Removing a Role from a Guild Member", "de/dbb/a07223.html", null ],
+    [ "Getting Guild Roles", "db/db6/a07219.html", null ],
+    [ "Getting a Role", "d2/d40/a07218.html", null ],
+    [ "Creating a Guild Role", "db/d73/a07217.html", null ],
+    [ "Modifying Guild Role Positions", "de/d7c/a07221.html", null ],
+    [ "Modifying a Guild Role", "d2/d73/a07220.html", null ],
+    [ "Removing a Guild Role", "d5/d05/a07222.html", null ]
 ];
