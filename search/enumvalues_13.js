@@ -1,8 +1,8 @@
 var searchData=
 [
   ['unavailable_0',['Unavailable',['../dd/d94/a00888.html#gga134047ca54524ec347c753ff80349a06a453e6aa38d87b28ccae545967c53004f',1,'DiscordCoreAPI']]],
-  ['unknown_5ferror_1',['Unknown_Error',['../d1/d87/a00689.html#a3416d66a838a63dc0df704fce23b6971a9f0b40369d46968daca4c442ca8dbe1c',1,'DiscordCoreInternal']]],
-  ['unknown_5fopcode_2',['Unknown_Opcode',['../d1/d87/a00689.html#a3416d66a838a63dc0df704fce23b6971a8ffdc93e8c17c90879fc9b340f1cf604',1,'DiscordCoreInternal']]],
+  ['unknown_5ferror_1',['Unknown_Error',['../dd/db2/a00737.html#a3416d66a838a63dc0df704fce23b6971a9f0b40369d46968daca4c442ca8dbe1c',1,'DiscordCoreInternal']]],
+  ['unknown_5fopcode_2',['Unknown_Opcode',['../dd/db2/a00737.html#a3416d66a838a63dc0df704fce23b6971a8ffdc93e8c17c90879fc9b340f1cf604',1,'DiscordCoreInternal']]],
   ['unset_3',['Unset',['../db/d18/a00885.html#ggacf6f4590968be95774b156cf050c996cac9f88e098f6fe4e4e112eeb05ccb9671',1,'DiscordCoreAPI::Unset()'],['../dd/d94/a00888.html#gga6a10916bec24a00f6d6a41d8d880c1faac9f88e098f6fe4e4e112eeb05ccb9671',1,'DiscordCoreAPI::Unset()']]],
   ['update_5fmessage_4',['Update_Message',['../dd/d94/a00888.html#ggaf9e947457ef4ec645c7d8e157b74534cafff540a6fb7caea5823184374b558d9f',1,'DiscordCoreAPI']]],
   ['urgent_5',['Urgent',['../dd/d94/a00888.html#gga59de4f3c2326235571e5b4c135f574eda2708565083321423b1a3244979bade9b',1,'DiscordCoreAPI']]],
