@@ -1,9 +1,10 @@
 var a07031 =
 [
-    [ "Getting a Sticker", "d7/d4d/a07199.html", null ],
-    [ "Getting Nitro Sticker Packs", "d1/d5a/a07200.html", null ],
-    [ "Getting a List of Guild Stickers", "d7/d4b/a07198.html", null ],
-    [ "Creating a Guild Sticker", "d3/ddf/a07196.html", null ],
-    [ "Modifying a Guild Sticker", "d8/d9c/a07201.html", null ],
-    [ "Deleting a Guild Sticker", "d8/dc3/a07197.html", null ]
+    [ "Getting a Guild Member", "d1/d77/a07154.html", null ],
+    [ "Listing Guild Members", "d3/db9/a07155.html", null ],
+    [ "Searching Guild Members", "d8/ddd/a07159.html", null ],
+    [ "Adding a Guild Member", "dd/d09/a07153.html", null ],
+    [ "Modifying a Guild Member", "d0/d0b/a07156.html", null ],
+    [ "Modifying the Current Guild Member", "d9/dd2/a07157.html", null ],
+    [ "Removing a Guild Member", "d1/d40/a07158.html", null ]
 ];

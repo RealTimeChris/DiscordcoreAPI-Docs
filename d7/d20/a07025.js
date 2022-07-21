@@ -1,6 +1,5 @@
 var a07025 =
 [
-    [ "Creating an Interaction Response", "df/d04/a07152.html", null ],
-    [ "Editing an Interaction Response", "d1/d77/a07154.html", null ],
-    [ "Deleting an Interaction Response", "dd/d09/a07153.html", null ]
+    [ "Instantiating/Creating a Select-Menu", "d2/d6f/a07145.html", null ],
+    [ "Collecting Select-Menu Input", "db/d15/a07144.html", null ]
 ];

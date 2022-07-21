@@ -102,11 +102,11 @@ $(document).ready(function(){initNavTree('d3/d34/a07242.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Listing Active Threads </div></div>
+  <div class="headertitle"><div class="title">Getting Channel WebHooks </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Thread_Stuff_Listing_Active_Threads"></a></p><ul>
-<li>Execute the, <code><a class="el" href="../../d0/d33/a03529.html#a1584dcebbb864acb1d81e3a19af12111" title="Collects a list of Threads from a given Channel.">DiscordCoreAPI::Threads::getActiveThreadsAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../d6/dcb/a03505.html" title="For collecting the list of active Threads.">DiscordCoreAPI::GetActiveThreadsData</a></code>, with a return value of type <code>auto</code> or <code><a class="el" href="../../d7/de7/a02373.html" title="Data representing an active Thread.">DiscordCoreAPI::ActiveThreadsData</a></code>.</li>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_WebHook_Stuff_Getting_Channel_WebHooks"></a></p><ul>
+<li>Execute the, <code><a class="el" href="../../d2/d14/a03709.html#a98e309d1201f50a6a090f6739ce7a3eb" title="Collects a list of WebHooks from a chosen Channel.">DiscordCoreAPI::WebHooks::getChannelWebHooksAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../d9/dce/a03661.html" title="For collecting a list of WebHooks from a chosen Channel.">DiscordCoreAPI::GetChannelWebHooksData</a></code>, with a return value of type <code>auto</code> or <code>vector&lt;<a class="el" href="../../d4/df9/a03701.html" title="A single WebHook.">DiscordCoreAPI::WebHook</a>&gt;</code>.</li>
 <li>Call the function with <code>.get()</code> added to the end in order to wait for the results now.</li>
 </ul>
 <div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
@@ -137,12 +137,12 @@ $(document).ready(function(){initNavTree('d3/d34/a07242.html','../../'); initRes
 <div class="line"> </div>
 <div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../d0/d2b/a02833.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
 <div class="line">            <span class="keywordflow">try</span> {</div>
-<div class="line">                <a class="code hl_struct" href="../../d6/dcb/a03505.html">DiscordCoreAPI::GetActiveThreadsData</a> dataPackage;</div>
-<div class="line">                dataPackage.guildId = args.eventData.<a class="code hl_function" href="../../d9/d95/a02781.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
+<div class="line">                <a class="code hl_struct" href="../../d9/dce/a03661.html">DiscordCoreAPI::GetChannelWebHooksData</a> dataPackage;</div>
+<div class="line">                dataPackage.<a class="code hl_variable" href="../../d9/dce/a03661.html#a4bd569a84f7144e0f6521c7c87cc0d1c">channelId</a> = args.eventData.<a class="code hl_function" href="../../d9/d95/a02781.html#a97c397fe274250bfff73cf674810a8f5">getChannelId</a>();</div>
 <div class="line"> </div>
-<div class="line">                <span class="keyword">auto</span> threadsVector = <a class="code hl_function" href="../../d0/d33/a03529.html#a1584dcebbb864acb1d81e3a19af12111">DiscordCoreAPI::Threads::getActiveThreadsAsync</a>(dataPackage).get();</div>
+<div class="line">                <span class="keyword">auto</span> newWebHooks = <a class="code hl_function" href="../../d2/d14/a03709.html#a98e309d1201f50a6a090f6739ce7a3eb">DiscordCoreAPI::WebHooks::getChannelWebHooksAsync</a>(dataPackage).get();</div>
 <div class="line"> </div>
-<div class="line">                <span class="keywordflow">for</span> (<span class="keyword">auto</span> value: threadsVector.threads) {</div>
+<div class="line">                <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; value: newWebHooks) {</div>
 <div class="line">                    cout &lt;&lt; <span class="stringliteral">&quot;THE NAME: &quot;</span> &lt;&lt; value.name &lt;&lt; endl;</div>
 <div class="line">                }</div>
 <div class="line"> </div>
@@ -151,6 +151,8 @@ $(document).ready(function(){initNavTree('d3/d34/a07242.html','../../'); initRes
 <div class="line">                rethrowException(<span class="stringliteral">&quot;Test::execute()&quot;</span>);</div>
 <div class="line">            }</div>
 <div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">virtual</span> ~Test() = <span class="keywordflow">default</span>;</div>
 <div class="line">    };</div>
 <div class="line">}</div>
 <div class="ttc" id="aa00749_html"><div class="ttname"><a href="../../d5/de8/a00749.html">Index.hpp</a></div></div>
@@ -160,11 +162,12 @@ $(document).ready(function(){initNavTree('d3/d34/a07242.html','../../'); initRes
 <div class="ttc" id="aa02329_html_a9d4066a4861408bc00eccb22a12db7f9"><div class="ttname"><a href="../../d0/d71/a02329.html#a9d4066a4861408bc00eccb22a12db7f9">DiscordCoreAPI::EmbedData::setDescription</a></div><div class="ttdeci">EmbedData &amp; setDescription(const std::string &amp;descriptionNew)</div><div class="ttdoc">Sets the description (the main contents) of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00366">FoundationEntities.cpp:366</a></div></div>
 <div class="ttc" id="aa02329_html_ab417d83fddf9df80eca98e9ec6e888aa"><div class="ttname"><a href="../../d0/d71/a02329.html#ab417d83fddf9df80eca98e9ec6e888aa">DiscordCoreAPI::EmbedData::setColor</a></div><div class="ttdeci">EmbedData &amp; setColor(const std::string &amp;hexColorValueNew)</div><div class="ttdoc">Sets the color of the embed, by applying a hex-color value.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00371">FoundationEntities.cpp:371</a></div></div>
 <div class="ttc" id="aa02329_html_ae356e6dc3c93658b7228b56da3187896"><div class="ttname"><a href="../../d0/d71/a02329.html#ae356e6dc3c93658b7228b56da3187896">DiscordCoreAPI::EmbedData::setTimeStamp</a></div><div class="ttdeci">EmbedData &amp; setTimeStamp(const std::string &amp;timeStamp)</div><div class="ttdoc">Sets the timestamp on the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00352">FoundationEntities.cpp:352</a></div></div>
-<div class="ttc" id="aa02781_html_a565fe2447237030a716f64b2599996dd"><div class="ttname"><a href="../../d9/d95/a02781.html#a565fe2447237030a716f64b2599996dd">DiscordCoreAPI::InputEventData::getGuildId</a></div><div class="ttdeci">Snowflake getGuildId()</div><div class="ttdoc">Returns the Guild id, of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01630">FoundationEntities.cpp:1630</a></div></div>
+<div class="ttc" id="aa02781_html_a97c397fe274250bfff73cf674810a8f5"><div class="ttname"><a href="../../d9/d95/a02781.html#a97c397fe274250bfff73cf674810a8f5">DiscordCoreAPI::InputEventData::getChannelId</a></div><div class="ttdeci">Snowflake getChannelId()</div><div class="ttdoc">Returns the Channel id of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01622">FoundationEntities.cpp:1622</a></div></div>
 <div class="ttc" id="aa02833_html"><div class="ttname"><a href="../../d0/d2b/a02833.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03795">FoundationEntities.hpp:3795</a></div></div>
 <div class="ttc" id="aa02837_html"><div class="ttname"><a href="../../dc/dfd/a02837.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03806">FoundationEntities.hpp:3806</a></div></div>
-<div class="ttc" id="aa03505_html"><div class="ttname"><a href="../../d6/dcb/a03505.html">DiscordCoreAPI::GetActiveThreadsData</a></div><div class="ttdoc">For collecting the list of active Threads.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dc0/a00734_source.html#l00104">ThreadEntities.hpp:104</a></div></div>
-<div class="ttc" id="aa03529_html_a1584dcebbb864acb1d81e3a19af12111"><div class="ttname"><a href="../../d0/d33/a03529.html#a1584dcebbb864acb1d81e3a19af12111">DiscordCoreAPI::Threads::getActiveThreadsAsync</a></div><div class="ttdeci">static CoRoutine&lt; ActiveThreadsData &gt; getActiveThreadsAsync(GetActiveThreadsData dataPackage)</div><div class="ttdoc">Collects a list of Threads from a given Channel.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2f/a00854_source.html#l00174">ThreadEntities.cpp:174</a></div></div>
+<div class="ttc" id="aa03661_html"><div class="ttname"><a href="../../d9/dce/a03661.html">DiscordCoreAPI::GetChannelWebHooksData</a></div><div class="ttdoc">For collecting a list of WebHooks from a chosen Channel.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dfa/a00746_source.html#l00157">WebHookEntities.hpp:157</a></div></div>
+<div class="ttc" id="aa03661_html_a4bd569a84f7144e0f6521c7c87cc0d1c"><div class="ttname"><a href="../../d9/dce/a03661.html#a4bd569a84f7144e0f6521c7c87cc0d1c">DiscordCoreAPI::GetChannelWebHooksData::channelId</a></div><div class="ttdeci">Snowflake channelId</div><div class="ttdoc">The Channel from which to collect the WebHooks.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dfa/a00746_source.html#l00158">WebHookEntities.hpp:158</a></div></div>
+<div class="ttc" id="aa03709_html_a98e309d1201f50a6a090f6739ce7a3eb"><div class="ttname"><a href="../../d2/d14/a03709.html#a98e309d1201f50a6a090f6739ce7a3eb">DiscordCoreAPI::WebHooks::getChannelWebHooksAsync</a></div><div class="ttdeci">static CoRoutine&lt; std::vector&lt; WebHook &gt; &gt; getChannelWebHooksAsync(GetChannelWebHooksData dataPackage)</div><div class="ttdoc">Collects a list of WebHooks from a chosen Channel.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dad/a00806_source.html#l00246">WebHookEntities.cpp:246</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -172,7 +175,7 @@ $(document).ready(function(){initNavTree('d3/d34/a07242.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d0/dac/a07043.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../df/d34/a07064.html">Thread Stuff</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d5/d14/a07019.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d1/d43/a07042.html">Webhook Stuff</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

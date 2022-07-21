@@ -1,26 +1,8 @@
 var a07043 =
 [
-    [ "Login/Setup", "dc/df5/a07045.html", "dc/df5/a07045" ],
-    [ "General Usage", "de/d0a/a07046.html", "de/d0a/a07046" ],
-    [ "Autocomplete Stuff", "da/d09/a07047.html", "da/d09/a07047" ],
-    [ "Button Stuff", "d3/da4/a07048.html", "d3/da4/a07048" ],
-    [ "Select-Menu Stuff", "d9/d49/a07049.html", "d9/d49/a07049" ],
-    [ "Modal Stuff", "d8/de3/a07050.html", "d8/de3/a07050" ],
-    [ "Voice Connection Stuff", "de/dd7/a07051.html", "de/dd7/a07051" ],
-    [ "Application-Command Stuff", "d4/d15/a07052.html", "d4/d15/a07052" ],
-    [ "Channel Stuff", "d9/d0e/a07053.html", "d9/d0e/a07053" ],
-    [ "Guild Stuff", "d5/d78/a07054.html", "d5/d78/a07054" ],
-    [ "Auto-Moderation-Rule Stuff", "d1/d3b/a07067.html", "d1/d3b/a07067" ],
-    [ "Guild-Member Stuff", "d8/dcd/a07055.html", "d8/dcd/a07055" ],
-    [ "Guild Scheduled Event Stuff", "d7/de7/a07056.html", "d7/de7/a07056" ],
-    [ "Input Event Stuff", "dc/d3d/a07057.html", "dc/d3d/a07057" ],
-    [ "Interaction Stuff", "dd/d67/a07058.html", "dd/d67/a07058" ],
-    [ "Message Stuff", "db/d67/a07059.html", "db/d67/a07059" ],
-    [ "Reaction Stuff", "d4/df2/a07060.html", "d4/df2/a07060" ],
-    [ "Role Stuff", "dc/db3/a07061.html", "dc/db3/a07061" ],
-    [ "Stage-Instance Stuff", "d6/d0e/a07062.html", "d6/d0e/a07062" ],
-    [ "Sticker Stuff", "d1/d84/a07063.html", "d1/d84/a07063" ],
-    [ "Thread Stuff", "df/d34/a07064.html", "df/d34/a07064" ],
-    [ "User Stuff", "de/d2e/a07065.html", "de/d2e/a07065" ],
-    [ "Webhook Stuff", "dd/d41/a07066.html", "dd/d41/a07066" ]
+    [ "Listing Auto-Moderation-Rules", "de/d2e/a07065.html", null ],
+    [ "Getting an Auto-Moderation-Rule", "df/d34/a07064.html", null ],
+    [ "Creating an Auto-Moderation-Rule", "d6/d0e/a07062.html", null ],
+    [ "Modifying an Auto-Moderation-Rule", "dd/d41/a07066.html", null ],
+    [ "Deleting an Auto-Moderation-Rule", "d1/d84/a07063.html", null ]
 ];

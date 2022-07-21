@@ -475,7 +475,7 @@ $(document).ready(function(){initNavTree('d5/d12/a00794_source.html','../../'); 
 <div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>        }</div>
 <div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>        <span class="keywordflow">if</span> (timeRemaining &gt; 0) {</div>
 <div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>            <span class="keywordflow">if</span> (this-&gt;configManager-&gt;doWePrintHttpsSuccessMessages()) {</div>
-<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>                std::cout &lt;&lt; DiscordCoreAPI::shiftToBrightBlue() &lt;&lt; <span class="stringliteral">&quot;We&#39;re waiting on rate-limit: &quot;</span> &lt;&lt; timeRemaining &lt;&lt; DiscordCoreAPI::reset() &lt;&lt; std::endl &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>                cout &lt;&lt; DiscordCoreAPI::shiftToBrightBlue() &lt;&lt; <span class="stringliteral">&quot;We&#39;re waiting on rate-limit: &quot;</span> &lt;&lt; timeRemaining &lt;&lt; DiscordCoreAPI::reset() &lt;&lt; endl &lt;&lt; endl;</div>
 <div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>            }</div>
 <div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>            int64_t targetTime = currentTime + timeRemaining;</div>
 <div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>            <span class="keywordflow">while</span> (targetTime &gt; currentTime) {</div>
@@ -503,9 +503,9 @@ $(document).ready(function(){initNavTree('d5/d12/a00794_source.html','../../'); 
 <div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>        }</div>
 <div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>        <span class="keywordflow">if</span> (returnData.responseCode == 204 || returnData.responseCode == 201 || returnData.responseCode == 200) {</div>
 <div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>            <span class="keywordflow">if</span> (this-&gt;configManager-&gt;doWePrintHttpsSuccessMessages()) {</div>
-<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>                std::cout &lt;&lt; DiscordCoreAPI::shiftToBrightGreen() &lt;&lt; workload.callStack + <span class="stringliteral">&quot; Success: &quot;</span> &lt;&lt; returnData.responseCode &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; returnData.responseMessage</div>
-<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>                          &lt;&lt; DiscordCoreAPI::reset() &lt;&lt; std::endl</div>
-<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>                          &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>                cout &lt;&lt; DiscordCoreAPI::shiftToBrightGreen() &lt;&lt; workload.callStack + <span class="stringliteral">&quot; Success: &quot;</span> &lt;&lt; returnData.responseCode &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; returnData.responseMessage</div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>                          &lt;&lt; DiscordCoreAPI::reset() &lt;&lt; endl</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>                          &lt;&lt; endl;</div>
 <div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>            }</div>
 <div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>        } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>            <span class="keywordflow">if</span> (returnData.responseCode == 429) {</div>
@@ -514,10 +514,10 @@ $(document).ready(function(){initNavTree('d5/d12/a00794_source.html','../../'); 
 <div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>                rateLimitData.sampledTimeInMs.store(</div>
 <div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>                    <span class="keyword">static_cast&lt;</span>int64_t<span class="keyword">&gt;</span>(std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(std::chrono::system_clock::now().time_since_epoch()).count()));</div>
 <div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>                <span class="keywordflow">if</span> (this-&gt;configManager-&gt;doWePrintHttpsErrorMessages()) {</div>
-<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>                    std::cout &lt;&lt; DiscordCoreAPI::shiftToBrightRed() &lt;&lt; workload.callStack + <span class="stringliteral">&quot;::httpRequest(), We&#39;ve hit rate limit! Time Remaining: &quot;</span></div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>                    cout &lt;&lt; DiscordCoreAPI::shiftToBrightRed() &lt;&lt; workload.callStack + <span class="stringliteral">&quot;::httpRequest(), We&#39;ve hit rate limit! Time Remaining: &quot;</span></div>
 <div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>                              &lt;&lt; std::to_string(this-&gt;connectionManager.getRateLimitValues()[this-&gt;connectionManager.getRateLimitValueBuckets()[workload.workloadType]]-&gt;msRemain)</div>
-<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>                              &lt;&lt; DiscordCoreAPI::reset() &lt;&lt; std::endl</div>
-<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>                              &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>                              &lt;&lt; DiscordCoreAPI::reset() &lt;&lt; endl</div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>                              &lt;&lt; endl;</div>
 <div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>                }</div>
 <div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>                returnData = this-&gt;executeByRateLimitData(workload, rateLimitData);</div>
 <div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>            }</div>

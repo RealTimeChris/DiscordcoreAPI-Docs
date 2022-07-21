@@ -1,16 +1,11 @@
 var a07034 =
 [
-    [ "Creating a WebHook", "d7/d4a/a07225.html", null ],
-    [ "Getting Channel WebHooks", "d4/d8c/a07234.html", null ],
-    [ "Getting Guild WebHooks", "db/d34/a07235.html", null ],
-    [ "Getting a WebHook", "df/dff/a07233.html", null ],
-    [ "Getting a WebHook with Token", "df/d74/a07232.html", null ],
-    [ "Modifying a WebHook", "d8/d6e/a07237.html", null ],
-    [ "Modifying a WebHook with Token", "dd/df9/a07236.html", null ],
-    [ "Deleting a WebHook", "df/da9/a07228.html", null ],
-    [ "Deleting a WebHook with Token", "d7/d46/a07227.html", null ],
-    [ "Executing a WebHook", "d2/da4/a07230.html", null ],
-    [ "Getting a WebHook Message", "d7/dbb/a07231.html", null ],
-    [ "Editing a WebHook Message", "dd/d22/a07229.html", null ],
-    [ "Deleting a WebHook Message", "d8/dd4/a07226.html", null ]
+    [ "Creating an Interaction Response", "d1/de9/a07164.html", null ],
+    [ "Getting an Interaction Response", "d0/d0f/a07170.html", null ],
+    [ "Editing an Interaction Response", "dd/dbc/a07168.html", null ],
+    [ "Deleting an Interaction Response", "d2/d5c/a07166.html", null ],
+    [ "Creating a Follow-Up Message", "d1/d45/a07163.html", null ],
+    [ "Getting a Follow-Up Message", "da/d8f/a07169.html", null ],
+    [ "Editing a Follow-Up Message", "d8/d6f/a07167.html", null ],
+    [ "Deleting a Follow-Up Message", "da/d52/a07165.html", null ]
 ];
