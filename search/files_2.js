@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['dataparsingfunctions_2ecpp_0',['DataParsingFunctions.cpp',['../d6/d2f/a00854.html',1,'']]],
-  ['discordcoreclient_2ecpp_1',['DiscordCoreClient.cpp',['../d8/db7/a00812.html',1,'']]],
-  ['discordcoreclient_2ehpp_2',['DiscordCoreClient.hpp',['../d1/d56/a00707.html',1,'']]],
-  ['dllmain_2ecpp_3',['DllMain.cpp',['../d7/d49/a00863.html',1,'']]]
+  ['dataparsingfunctions_2ecpp_0',['DataParsingFunctions.cpp',['../d3/db2/a00869.html',1,'']]],
+  ['discordcoreclient_2ecpp_1',['DiscordCoreClient.cpp',['../df/de8/a00839.html',1,'']]],
+  ['discordcoreclient_2ehpp_2',['DiscordCoreClient.hpp',['../d9/dd4/a00776.html',1,'']]],
+  ['dllmain_2ecpp_3',['DllMain.cpp',['../da/d96/a00782.html',1,'']]]
 ];
