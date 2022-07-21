@@ -105,21 +105,21 @@ $(document).ready(function(){initNavTree('dc/de4/a00677.html','../../'); initRes
   <div class="summary">
 <a href="#nested-classes">Classes and Structures</a> &#124;
 <a href="#namespaces">Namespaces</a>  </div>
-  <div class="headertitle"><div class="title">ReactionEntities.hpp File Reference</div></div>
+  <div class="headertitle"><div class="title">ApplicationCommandEntities.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="../../db/d7c/a00722_source.html">discordcoreapi/FoundationEntities.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="../../dd/db2/a00737_source.html">discordcoreapi/UserEntities.hpp</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="../../d4/d6a/a00704_source.html">discordcoreapi/FoundationEntities.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../db/d7c/a00722_source.html">discordcoreapi/Https.hpp</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for ReactionEntities.hpp:</div>
+Include dependency graph for ApplicationCommandEntities.hpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d31/a00678.svg" width="3280" height="872"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d31/a00678.svg" width="3087" height="491"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d2/d85/a00679.svg" width="1982" height="330"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d2/d85/a00679.svg" width="1983" height="330"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -127,44 +127,59 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes and Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d46/a03277.html">DiscordCoreAPI::CreateGuildEmojiData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For creating a new <a class="el" href="../../dc/dc5/a02977.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> Emoji.  <a href="../../d4/d46/a03277.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d36/a01773.html">DiscordCoreAPI::ApplicationCommand</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A single <a class="el" href="../../d5/d36/a01773.html" title="A single ApplicationCommand.">ApplicationCommand</a>.  <a href="../../d5/d36/a01773.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/daf/a03245.html">DiscordCoreAPI::CreateReactionData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For creating a single <a class="el" href="../../d0/d9d/a03289.html" title="A single Reaction.">Reaction</a>.  <a href="../../d2/daf/a03245.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dac/a01777.html">DiscordCoreAPI::ApplicationCommands</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An interface class for the <a class="el" href="../../d5/d36/a01773.html" title="A single ApplicationCommand.">ApplicationCommand</a> related Discord endpoints.  <a href="../../d3/dac/a01777.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df1/a03261.html">DiscordCoreAPI::DeleteAllReactionsData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For deleting all of the <a class="el" href="../../da/d0a/a03297.html" title="An interface class for the Reaction related Discord endpoints.">Reactions</a> on a particular <a class="el" href="../../d5/da4/a03225.html" title="A single Message.">Message</a>.  <a href="../../dc/df1/a03261.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d6d/a01769.html">DiscordCoreAPI::BatchEditGuildApplicationCommandPermissionsData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For batch editing the permissions of a collection of <a class="el" href="../../dc/dc5/a02977.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> <a class="el" href="../../d3/dac/a01777.html" title="An interface class for the ApplicationCommand related Discord endpoints.">ApplicationCommands</a>.  <a href="../../d7/d6d/a01769.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dfa/a03285.html">DiscordCoreAPI::DeleteGuildEmojiData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For deleting a <a class="el" href="../../dc/dc5/a02977.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> Emoji.  <a href="../../d2/dfa/a03285.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d70/a01729.html">DiscordCoreAPI::BulkOverwriteGlobalApplicationCommandsData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For bulk-overwriting a collection of global <a class="el" href="../../d3/dac/a01777.html" title="An interface class for the ApplicationCommand related Discord endpoints.">ApplicationCommands</a>.  <a href="../../d2/d70/a01729.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d24/a03249.html">DiscordCoreAPI::DeleteOwnReactionData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For deleting one's own <a class="el" href="../../d0/d9d/a03289.html" title="A single Reaction.">Reaction</a>.  <a href="../../d6/d24/a03249.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d72/a01753.html">DiscordCoreAPI::BulkOverwriteGuildApplicationCommandsData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For bulk-overwriting a collection of <a class="el" href="../../dc/dc5/a02977.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> <a class="el" href="../../d3/dac/a01777.html" title="An interface class for the ApplicationCommand related Discord endpoints.">ApplicationCommands</a>.  <a href="../../d6/d72/a01753.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d81/a03265.html">DiscordCoreAPI::DeleteReactionsByEmojiData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For deleting all of the <a class="el" href="../../da/d0a/a03297.html" title="An interface class for the Reaction related Discord endpoints.">Reactions</a> of a particular Emoji.  <a href="../../d8/d81/a03265.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/ddb/a01717.html">DiscordCoreAPI::CreateGlobalApplicationCommandData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For creating a single global <a class="el" href="../../d5/d36/a01773.html" title="A single ApplicationCommand.">ApplicationCommand</a>.  <a href="../../dd/ddb/a01717.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d56/a03253.html">DiscordCoreAPI::DeleteUserReactionData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For deleting a reaction, by <a class="el" href="../../dd/d87/a03569.html" title="A single User.">User</a>.  <a href="../../d9/d56/a03253.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2e/a01737.html">DiscordCoreAPI::CreateGuildApplicationCommandData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For creating a single <a class="el" href="../../dc/dc5/a02977.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> <a class="el" href="../../d5/d36/a01773.html" title="A single ApplicationCommand.">ApplicationCommand</a>.  <a href="../../df/d2e/a01737.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d33/a03269.html">DiscordCoreAPI::GetEmojiListData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For collecting a list of Emoji from a <a class="el" href="../../dc/dc5/a02977.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>.  <a href="../../d9/d33/a03269.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d5e/a01725.html">DiscordCoreAPI::DeleteGlobalApplicationCommandData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For deleting a single global <a class="el" href="../../d5/d36/a01773.html" title="A single ApplicationCommand.">ApplicationCommand</a>.  <a href="../../d3/d5e/a01725.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da0/a03273.html">DiscordCoreAPI::GetGuildEmojiData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For collecting a single <a class="el" href="../../dc/dc5/a02977.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> Emoji.  <a href="../../d3/da0/a03273.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d77/a01749.html">DiscordCoreAPI::DeleteGuildApplicationCommandData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For deleting a single <a class="el" href="../../dc/dc5/a02977.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> <a class="el" href="../../d5/d36/a01773.html" title="A single ApplicationCommand.">ApplicationCommand</a>.  <a href="../../d5/d77/a01749.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d62/a03257.html">DiscordCoreAPI::GetReactionsData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For getting all of the <a class="el" href="../../da/d0a/a03297.html" title="An interface class for the Reaction related Discord endpoints.">Reactions</a>.  <a href="../../df/d62/a03257.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d66/a01721.html">DiscordCoreAPI::EditGlobalApplicationCommandData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For editing a single global <a class="el" href="../../d5/d36/a01773.html" title="A single ApplicationCommand.">ApplicationCommand</a>.  <a href="../../db/d66/a01721.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d84/a03281.html">DiscordCoreAPI::ModifyGuildEmojiData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For modifying a <a class="el" href="../../dc/dc5/a02977.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> Emoji.  <a href="../../d0/d84/a03281.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d78/a01745.html">DiscordCoreAPI::EditGuildApplicationCommandData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For editing a single <a class="el" href="../../dc/dc5/a02977.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> <a class="el" href="../../d5/d36/a01773.html" title="A single ApplicationCommand.">ApplicationCommand</a>.  <a href="../../d0/d78/a01745.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d9d/a03289.html">DiscordCoreAPI::Reaction</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A single <a class="el" href="../../d0/d9d/a03289.html" title="A single Reaction.">Reaction</a>.  <a href="../../d0/d9d/a03289.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d7b/a01765.html">DiscordCoreAPI::EditGuildApplicationCommandPermissionsData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For editing the permissions of a single <a class="el" href="../../dc/dc5/a02977.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> <a class="el" href="../../d5/d36/a01773.html" title="A single ApplicationCommand.">ApplicationCommand</a>.  <a href="../../df/d7b/a01765.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d0a/a03297.html">DiscordCoreAPI::Reactions</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An interface class for the <a class="el" href="../../d0/d9d/a03289.html" title="A single Reaction.">Reaction</a> related Discord endpoints.  <a href="../../da/d0a/a03297.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/db8/a01761.html">DiscordCoreAPI::GetApplicationCommandPermissionsData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For acquiring the permissions of a single <a class="el" href="../../dc/dc5/a02977.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> <a class="el" href="../../d5/d36/a01773.html" title="A single ApplicationCommand.">ApplicationCommand</a>.  <a href="../../db/db8/a01761.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d0c/a01713.html">DiscordCoreAPI::GetGlobalApplicationCommandData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For collecting a single global <a class="el" href="../../d5/d36/a01773.html" title="A single ApplicationCommand.">ApplicationCommand</a>.  <a href="../../d2/d0c/a01713.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da7/a01709.html">DiscordCoreAPI::GetGlobalApplicationCommandsData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For getting all of the Global Application Commands.  <a href="../../d1/da7/a01709.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d4e/a01741.html">DiscordCoreAPI::GetGuildApplicationCommandData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For acquiring a single <a class="el" href="../../dc/dc5/a02977.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> <a class="el" href="../../d5/d36/a01773.html" title="A single ApplicationCommand.">ApplicationCommand</a>.  <a href="../../d0/d4e/a01741.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dc0/a01757.html">DiscordCoreAPI::GetGuildApplicationCommandPermissionsData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For acquiring the permissions of a collection of <a class="el" href="../../dc/dc5/a02977.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> <a class="el" href="../../d3/dac/a01777.html" title="An interface class for the ApplicationCommand related Discord endpoints.">ApplicationCommands</a>.  <a href="../../db/dc0/a01757.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d9c/a01733.html">DiscordCoreAPI::GetGuildApplicationCommandsData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For acquiring all of the <a class="el" href="../../dc/dc5/a02977.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> <a class="el" href="../../d3/dac/a01777.html" title="An interface class for the ApplicationCommand related Discord endpoints.">ApplicationCommands</a> of a single <a class="el" href="../../dc/dc5/a02977.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>.  <a href="../../d8/d9c/a01733.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
@@ -179,7 +194,7 @@ Namespaces</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_856524284ebe840938865dc061f982fb.html">Include</a></li><li class="navelem"><a class="el" href="../../dir_9b16bdde4f6a21e020962bfdb0aa5092.html">discordcoreapi</a></li><li class="navelem"><a class="el" href="../../dc/de4/a00677.html">ReactionEntities.hpp</a></li>
+    <li class="navelem"><a class="el" href="../../dir_856524284ebe840938865dc061f982fb.html">Include</a></li><li class="navelem"><a class="el" href="../../dir_9b16bdde4f6a21e020962bfdb0aa5092.html">discordcoreapi</a></li><li class="navelem"><a class="el" href="../../dc/de4/a00677.html">ApplicationCommandEntities.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
