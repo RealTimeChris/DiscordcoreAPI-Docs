@@ -13,8 +13,8 @@ var searchData=
   ['unicodeemoji_10',['unicodeEmoji',['../d7/d1a/a02381.html#a9fa7e97354734ab21e9b71c85d3fbb80',1,'DiscordCoreAPI::RoleData::unicodeEmoji()'],['../d8/dde/a03313.html#a8aeba51267533e438a927261d10cd82b',1,'DiscordCoreAPI::CreateGuildRoleData::unicodeEmoji()'],['../d8/d12/a03325.html#a2f65ced44b0e49d020007b9dbb1f923e',1,'DiscordCoreAPI::ModifyGuildRoleData::unicodeEmoji()']]],
   ['unicodename_11',['unicodeName',['../d5/da5/a02413.html#af02bf1f14e5145a2c10387c7e79f546c',1,'DiscordCoreAPI::EmojiData']]],
   ['unique_12',['unique',['../d9/d65/a01905.html#a29fa5668e319bb25ec0c21acf7b4192a',1,'DiscordCoreAPI::CreateChannelInviteData']]],
-  ['unknown_5ferror_13',['Unknown_Error',['../dd/db2/a00737.html#a3416d66a838a63dc0df704fce23b6971a9f0b40369d46968daca4c442ca8dbe1c',1,'DiscordCoreInternal']]],
-  ['unknown_5fopcode_14',['Unknown_Opcode',['../dd/db2/a00737.html#a3416d66a838a63dc0df704fce23b6971a8ffdc93e8c17c90879fc9b340f1cf604',1,'DiscordCoreInternal']]],
+  ['unknown_5ferror_13',['Unknown_Error',['../d1/d87/a00689.html#a3416d66a838a63dc0df704fce23b6971a9f0b40369d46968daca4c442ca8dbe1c',1,'DiscordCoreInternal']]],
+  ['unknown_5fopcode_14',['Unknown_Opcode',['../d1/d87/a00689.html#a3416d66a838a63dc0df704fce23b6971a8ffdc93e8c17c90879fc9b340f1cf604',1,'DiscordCoreInternal']]],
   ['unpinmessageasync_15',['unpinMessageAsync',['../dc/dc7/a03241.html#ae6218ef539d4c35f740b52d9fa117070',1,'DiscordCoreAPI::Messages']]],
   ['unpinmessagedata_16',['UnpinMessageData',['../d1/da3/a03221.html',1,'DiscordCoreAPI']]],
   ['unpinning_20a_20message_17',['Unpinning a Message',['../d5/d4d/a07180.html',1,'messagestuff']]],
@@ -47,8 +47,8 @@ var searchData=
   ['usercommandinteractiondata_44',['UserCommandInteractionData',['../d9/dfe/a02649.html',1,'DiscordCoreAPI']]],
   ['usercount_45',['userCount',['../da/d03/a02577.html#a63343fe360c770567a5c72bb6e0bb703',1,'DiscordCoreAPI::GuildScheduledEventData']]],
   ['userdata_46',['UserData',['../dd/dc5/a02293.html',1,'DiscordCoreAPI']]],
-  ['userentities_2ecpp_47',['UserEntities.cpp',['../d0/d11/a00842.html',1,'']]],
-  ['userentities_2ehpp_48',['UserEntities.hpp',['../d1/d87/a00689.html',1,'']]],
+  ['userentities_2ecpp_47',['UserEntities.cpp',['../d3/d13/a00836.html',1,'']]],
+  ['userentities_2ehpp_48',['UserEntities.hpp',['../dd/db2/a00737.html',1,'']]],
   ['userflags_49',['UserFlags',['../dd/d94/a00888.html#ga77e977be11fabdf18190c418b8ecf47e',1,'DiscordCoreAPI']]],
   ['userid_50',['userId',['../d3/d34/a03305.html#a28761055f269567a6a9db2b5a0bd7f83',1,'DiscordCoreAPI::RemoveGuildMemberRoleData::userId()'],['../dc/d8f/a03497.html#ad1b4db241ca344e9d9af1a3b6198d2d9',1,'DiscordCoreAPI::GetThreadMemberData::userId()'],['../d1/d24/a03301.html#adb2477b8b1c42bb511765034f98d07ae',1,'DiscordCoreAPI::AddGuildMemberRoleData::userId()'],['../d9/d56/a03253.html#a963f49be15aa03ee198077fca4bd62bf',1,'DiscordCoreAPI::DeleteUserReactionData::userId()'],['../d3/dcf/a03173.html#a3f50958e7f8fc6e22af420bb13d12806',1,'DiscordCoreAPI::ModalResponseData::userId()'],['../d5/d1d/a03165.html#aa6c422e91ecea3301c4addf38df801c2',1,'DiscordCoreAPI::ButtonResponseData::userId()'],['../d5/d27/a03157.html#a6f0a57e6e3dda8b4b7fb6f923385016d',1,'DiscordCoreAPI::SelectMenuResponseData::userId()'],['../de/da4/a03005.html#a885b24557769a06eb217a4031486222b',1,'DiscordCoreAPI::AddGuildMemberData::userId()'],['../d1/dc2/a02877.html#ace91b0e0f494dd7a4505b61f3673fa02',1,'DiscordCoreAPI::RemoveGuildBanData::userId()'],['../d4/d69/a02869.html#a598b47c18b52e461bd31b5b6ab2bd7fa',1,'DiscordCoreAPI::GetGuildBanData::userId()'],['../dd/d4f/a02845.html#a3f3a75f60878f4000710a36e8a9d416f',1,'DiscordCoreAPI::GetGuildAuditLogsData::userId()'],['../d6/d28/a02509.html#a3a34fb7c767e2f8b486daea06700dee3',1,'DiscordCoreAPI::AuditLogEntryData::userId()'],['../d9/d9d/a02425.html#aeab7a43a8fa1236c938ae9eda5aac1e0',1,'DiscordCoreAPI::ReactionData::userId()'],['../d5/db0/a02361.html#a1af895eb508f191cf1bc6dad7bfd06be',1,'DiscordCoreAPI::VoiceStateData::userId()'],['../dc/d0a/a02345.html#a75cae90131960909f48d8c179150554f',1,'DiscordCoreAPI::ThreadMemberData::userId()'],['../d9/d17/a01937.html#ac17e0f4b4168af75ba7733f4f8a71e01',1,'DiscordCoreAPI::CreateDMChannelData::userId()'],['../de/dd3/a01873.html#a5e8cda4552baafee243315dddf331b3f',1,'DiscordCoreAPI::AutoModerationActionExecutionEventData::userId()'],['../d0/dc1/a03485.html#a313d6cdad6f9529e8d15dce8c82a9508',1,'DiscordCoreAPI::AddThreadMemberData::userId()'],['../d6/d04/a03493.html#a700d7289330255c8973b63640f3a422d',1,'DiscordCoreAPI::RemoveThreadMemberData::userId()'],['../dd/d25/a03545.html#addd392dca24331a8aa99b2ba3513a9ff',1,'DiscordCoreAPI::AddRecipientToGroupDMData::userId()'],['../db/d72/a03549.html#af011a01575db9f2f100ff22af40a3c07',1,'DiscordCoreAPI::RemoveRecipientFromGroupDMData::userId()'],['../d0/d20/a03557.html#a496748887004d87f9cf522c8ff5ca3ed',1,'DiscordCoreAPI::ModifyUserVoiceStateData::userId()'],['../df/df7/a03561.html#a6526bebb486498dde524407b2baf5719',1,'DiscordCoreAPI::GetUserData::userId()']]],
   ['userinteractiondata_51',['userInteractionData',['../d9/d93/a02753.html#a74d9722210bf92e30bd8f7f429cc126a',1,'DiscordCoreAPI::InteractionDataData']]],
@@ -61,6 +61,6 @@ var searchData=
   ['uses_58',['uses',['../de/d48/a02589.html#afd3c243cf0cdd5b4ff4b0e7d7a7f179d',1,'DiscordCoreAPI::InviteData']]],
   ['using_20a_20message_20collector_59',['Using a Message Collector',['../dd/d7b/a07121.html',1,'generalusage']]],
   ['utilities_60',['Utilities',['../d7/d92/a00887.html',1,'']]],
-  ['utilities_2ecpp_61',['Utilities.cpp',['../d8/db7/a00812.html',1,'']]],
-  ['utilities_2ehpp_62',['Utilities.hpp',['../dd/db2/a00737.html',1,'']]]
+  ['utilities_2ecpp_61',['Utilities.cpp',['../dc/d1b/a00827.html',1,'']]],
+  ['utilities_2ehpp_62',['Utilities.hpp',['../d1/d87/a00689.html',1,'']]]
 ];

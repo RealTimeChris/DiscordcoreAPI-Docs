@@ -104,22 +104,26 @@ $(document).ready(function(){initNavTree('d0/db6/a00692.html','../../'); initRes
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes and Structures</a> &#124;
-<a href="#namespaces">Namespaces</a>  </div>
-  <div class="headertitle"><div class="title">StickerEntities.hpp File Reference</div></div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#enum-members">Enumerations</a>  </div>
+  <div class="headertitle"><div class="title">VoiceConnection.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="../../d4/d6a/a00704_source.html">discordcoreapi/FoundationEntities.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="../../d2/d4a/a00758_source.html">discordcoreapi/CoRoutine.hpp</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="../../db/d7c/a00722_source.html">discordcoreapi/FoundationEntities.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../db/d77/a00683_source.html">discordcoreapi/AudioEncoder.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d3/d2c/a00764_source.html">discordcoreapi/CoRoutine.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../df/d3b/a00728_source.html">discordcoreapi/WebSocketEntities.hpp</a>&gt;</code><br />
+<code>#include &lt;sodium.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for StickerEntities.hpp:</div>
+Include dependency graph for VoiceConnection.hpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d3/dd2/a00693.svg" width="3138" height="638"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d3/dd2/a00693.svg" width="3206" height="799"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d3a/a00694.svg" width="1983" height="256"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d3a/a00694.svg" width="1982" height="403"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -127,26 +131,8 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes and Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d11/a03445.html">DiscordCoreAPI::CreateGuildStickerData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For creating a single <a class="el" href="../../d1/d15/a03457.html" title="A single Sticker.">Sticker</a>.  <a href="../../d9/d11/a03445.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d32/a03453.html">DiscordCoreAPI::DeleteGuildStickerData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For deleting a single <a class="el" href="../../d1/d15/a03457.html" title="A single Sticker.">Sticker</a>.  <a href="../../d4/d32/a03453.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dc4/a03441.html">DiscordCoreAPI::GetGuildStickersData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For collecting a list of <a class="el" href="../../da/da5/a03465.html" title="An interface class for the Sticker related Discord endpoints.">Stickers</a> from a chosen <a class="el" href="../../dc/dc5/a02977.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>.  <a href="../../de/dc4/a03441.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d56/a03437.html">DiscordCoreAPI::GetStickerData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For getting a <a class="el" href="../../d1/d15/a03457.html" title="A single Sticker.">Sticker</a> object for the given sticker ID.  <a href="../../d5/d56/a03437.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dc5/a03449.html">DiscordCoreAPI::ModifyGuildStickerData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For modifying a single <a class="el" href="../../d1/d15/a03457.html" title="A single Sticker.">Sticker</a>.  <a href="../../d7/dc5/a03449.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d15/a03457.html">DiscordCoreAPI::Sticker</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A single <a class="el" href="../../d1/d15/a03457.html" title="A single Sticker.">Sticker</a>.  <a href="../../d1/d15/a03457.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/da5/a03465.html">DiscordCoreAPI::Stickers</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An interface class for the <a class="el" href="../../d1/d15/a03457.html" title="A single Sticker.">Sticker</a> related Discord endpoints.  <a href="../../da/da5/a03465.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d6b/a03645.html">DiscordCoreAPI::VoiceConnection</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../db/d6b/a03645.html" title="VoiceConnection class - represents the connection to a given voice Channel.">VoiceConnection</a> class - represents the connection to a given voice <a class="el" href="../../da/d76/a01941.html" title="A Channel object.">Channel</a>.  <a href="../../db/d6b/a03645.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
@@ -154,6 +140,34 @@ Namespaces</h2></td></tr>
 <tr class="memitem:d7/d46/a00890"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></td></tr>
 <tr class="memdesc:d7/d46/a00890"><td class="mdescLeft">&#160;</td><td class="mdescRight">The main namespace for this library. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a7db510a888c180dab0d18c694308c066"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d46/a00890.html#a7db510a888c180dab0d18c694308c066">DiscordCoreAPI::VoiceActiveState</a> : int8_t { <br />
+&#160;&#160;<a class="el" href="../../d7/d46/a00890.html#a7db510a888c180dab0d18c694308c066ae321c53b354930ba96f0243e652df458">DiscordCoreAPI::Connecting</a> = -1
+, <a class="el" href="../../d7/d46/a00890.html#a7db510a888c180dab0d18c694308c066ac9dbb2b7c84159b632d71e512eba8428">DiscordCoreAPI::Playing</a> = 1
+, <a class="el" href="../../d7/d46/a00890.html#a7db510a888c180dab0d18c694308c066ac23e2b09ebe6bf4cb5e2a9abe85c0be2">DiscordCoreAPI::Stopped</a> = 2
+, <a class="el" href="../../d7/d46/a00890.html#a7db510a888c180dab0d18c694308c066ae99180abf47a8b3a856e0bcb2656990a">DiscordCoreAPI::Paused</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="../../d7/d46/a00890.html#a7db510a888c180dab0d18c694308c066a0657d962b72e6f1f37dda8dad3684cb8">DiscordCoreAPI::Exiting</a> = 4
+<br />
+ }</td></tr>
+<tr class="memdesc:a7db510a888c180dab0d18c694308c066"><td class="mdescLeft">&#160;</td><td class="mdescRight">For the various active states of the VoiceConnection class.  <a href="../../d7/d46/a00890.html#a7db510a888c180dab0d18c694308c066">More...</a><br /></td></tr>
+<tr class="separator:a7db510a888c180dab0d18c694308c066"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe15cb95a487dea355bdfba55724535d"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d46/a00890.html#afe15cb95a487dea355bdfba55724535d">DiscordCoreAPI::VoiceConnectionState</a> : int8_t { <br />
+&#160;&#160;<a class="el" href="../../d7/d46/a00890.html#afe15cb95a487dea355bdfba55724535da348170ab8d5fadb2ac2d40bc3dca0a2a">DiscordCoreAPI::Collecting_Init_Data</a> = 0
+, <a class="el" href="../../d7/d46/a00890.html#afe15cb95a487dea355bdfba55724535da9ecd4ab0f7c51493146ec71cae31ae03">DiscordCoreAPI::Initializing_WebSocket</a> = 1
+, <a class="el" href="../../d7/d46/a00890.html#afe15cb95a487dea355bdfba55724535da90f04d33ff20d8c558d7fc2d785a715b">DiscordCoreAPI::Collecting_Hello</a> = 2
+, <a class="el" href="../../d7/d46/a00890.html#afe15cb95a487dea355bdfba55724535da7e98b13b3e8895e0d9b06562f1fbf3bd">DiscordCoreAPI::Sending_Identify</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="../../d7/d46/a00890.html#afe15cb95a487dea355bdfba55724535da360572087d671fb700b40bd555050f69">DiscordCoreAPI::Collecting_Ready</a> = 4
+, <a class="el" href="../../d7/d46/a00890.html#afe15cb95a487dea355bdfba55724535daa4c704063d3894a34897f424fbb6e1ba">DiscordCoreAPI::Initializing_DatagramSocket</a> = 5
+, <a class="el" href="../../d7/d46/a00890.html#afe15cb95a487dea355bdfba55724535dafe47ea48e4a9d0424e3354d4a5e10bfe">DiscordCoreAPI::Sending_Select_Protocol</a> = 7
+, <a class="el" href="../../d7/d46/a00890.html#afe15cb95a487dea355bdfba55724535dada02982bc0569abf1fba40d83e4332d8">DiscordCoreAPI::Collecting_Session_Description</a> = 8
+<br />
+ }</td></tr>
+<tr class="memdesc:afe15cb95a487dea355bdfba55724535d"><td class="mdescLeft">&#160;</td><td class="mdescRight">For the various connection states of the VoiceConnection class.  <a href="../../d7/d46/a00890.html#afe15cb95a487dea355bdfba55724535d">More...</a><br /></td></tr>
+<tr class="separator:afe15cb95a487dea355bdfba55724535d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -161,7 +175,7 @@ Namespaces</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_856524284ebe840938865dc061f982fb.html">Include</a></li><li class="navelem"><a class="el" href="../../dir_9b16bdde4f6a21e020962bfdb0aa5092.html">discordcoreapi</a></li><li class="navelem"><a class="el" href="../../d0/db6/a00692.html">StickerEntities.hpp</a></li>
+    <li class="navelem"><a class="el" href="../../dir_856524284ebe840938865dc061f982fb.html">Include</a></li><li class="navelem"><a class="el" href="../../dir_9b16bdde4f6a21e020962bfdb0aa5092.html">discordcoreapi</a></li><li class="navelem"><a class="el" href="../../d0/db6/a00692.html">VoiceConnection.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
