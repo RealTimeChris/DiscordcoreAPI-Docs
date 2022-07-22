@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('d4/deb/a00710_source.html','../../'); 
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">StickerEntities.hpp</div></div>
+  <div class="headertitle"><div class="title">CommandController.hpp</div></div>
 </div><!--header-->
 <div class="contents">
 <a href="../../d4/deb/a00710.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
@@ -119,157 +119,57 @@ $(document).ready(function(){initNavTree('d4/deb/a00710_source.html','../../'); 
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">    You should have received a copy of the GNU General Public License along with DiscordCoreAPI.</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">    If not, see &lt;https://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">*/</span><span class="comment"></span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">/// StickerEntities.hpp - Header for the sticker related classes and structs.</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">/// May 13, 2021</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">/// CommandController.hpp - Wrangler header for the command controller.</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">/// May 20, 2021</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">/// https://discordcoreapi.com</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">/// \file StickerEntities.hpp</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">/// \file CommandController.hpp</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;<a class="code" href="../../db/d7c/a00722.html">discordcoreapi/FoundationEntities.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;<a class="code" href="../../d3/d2c/a00764.html">discordcoreapi/CoRoutine.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;<a class="code" href="../../d4/d6a/a00704.html">discordcoreapi/FoundationEntities.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;<a class="code" href="../../d2/d4a/a00758.html">discordcoreapi/CoRoutine.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d7/d46/a00890.html">DiscordCoreAPI</a> {</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment"></span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">    /**</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">     * \addtogroup foundation_entities</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">     * @{</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">     */</span><span class="comment"></span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">    /// For getting a Sticker object for the given sticker ID. \brief For getting a Sticker object for the given sticker ID.</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="../../d5/d56/a03437.html">   32</a></span><span class="comment"></span>    <span class="keyword">struct </span>DiscordCoreAPI_Dll <a class="code hl_struct" href="../../d5/d56/a03437.html">GetStickerData</a> {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../d5/d56/a03437.html#a8f3e6c6bc4eb03872e8a652b7d00859c">   33</a></span>        <a class="code hl_typedef" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> stickerId{};<span class="comment">///&lt; The chosen Sticker&#39;s Id.</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    };</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment"></span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">    /// For collecting a list of Stickers from a chosen Guild. \brief For collecting a list of Stickers from a chosen Guild.</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../de/dc4/a03441.html">   37</a></span><span class="comment"></span>    <span class="keyword">struct </span>DiscordCoreAPI_Dll <a class="code hl_struct" href="../../de/dc4/a03441.html">GetGuildStickersData</a> {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="../../de/dc4/a03441.html#a680f542db50d56db9406a631541cde4d">   38</a></span>        <a class="code hl_typedef" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> guildId{};<span class="comment">///&lt; The chosen Guild from which you would like to collect the Stickers from.</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    };</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment"></span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">    /// For creating a single Sticker. \brief For creating a single Sticker.</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../d9/d11/a03445.html">   42</a></span><span class="comment"></span>    <span class="keyword">struct </span>DiscordCoreAPI_Dll <a class="code hl_struct" href="../../d9/d11/a03445.html">CreateGuildStickerData</a> {</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="../../d9/d11/a03445.html#a57ee31151e22ae51a94279e742181cb7">   43</a></span>        std::vector&lt;uint8_t&gt; file{};<span class="comment">///&lt; The sticker file to upload, must be a Png, Apng, or Lottie JSON file, max 500 KB.</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../d9/d11/a03445.html#afca7c0976f222a035bcb2f0402907a70">   44</a></span>        std::string description{};<span class="comment">///&lt; Description of the Sticker.</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="../../d9/d11/a03445.html#aa4eb06acb4869751097a93d85d31128a">   45</a></span>        <a class="code hl_typedef" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> guildId{};<span class="comment">///&lt; The Guild within which to create the Sticker.</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="../../d9/d11/a03445.html#acb984fb0a5e541d4f78579b5151113ba">   46</a></span>        std::string reason{};<span class="comment">///&lt; The reason for creating the Sticker.</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="../../d9/d11/a03445.html#ae9e9b6b3a9004f9774d35ed96490e43f">   47</a></span>        std::string name{};<span class="comment">///&lt; Name of the Sticker.</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="../../d9/d11/a03445.html#ad71413612e63919fca0ccc19935c8daf">   48</a></span>        std::string tags{};<span class="comment">///&lt; Autocomplete / suggestion tags for the sticker(max 200 characters).</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">    /// A class for handling commands from user input. \brief A class for handling commands from user input.</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../d2/d6f/a01957.html">   28</a></span><span class="comment"></span>    <span class="keyword">class </span>DiscordCoreAPI_Dll <a class="code hl_class" href="../../d2/d6f/a01957.html">CommandController</a> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>      <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <a class="code hl_class" href="../../d2/d6f/a01957.html">CommandController</a>(<a class="code hl_class" href="../../dc/d67/a01989.html">DiscordCoreClient</a>*);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment"></span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">        /// Registers a function to be called. \brief Registers a function to be called.</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">        /// \param functionNames A vector of strings to be accepted as function names.</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">        /// \param baseFunction A unique_ptr to the function to be called.</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment"></span>        <span class="keywordtype">void</span> registerFunction(<span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; functionNames, std::unique_ptr&lt;BaseFunction&gt; baseFunction);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment"></span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">        /// For returning the contained map of functions. \brief For returning the contained map of functions.</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">        /// \returns A map containing the function names as well as unique_ptrs to the functions.</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment"></span>        std::map&lt;std::vector&lt;std::string&gt;, std::unique_ptr&lt;BaseFunction&gt;&gt;&amp; getFunctions();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine&lt;void&gt;</a> checkForAndRunCommand(<span class="keyword">const</span> <a class="code hl_class" href="../../db/d4f/a02829.html">CommandData</a> commandData);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <a class="code hl_class" href="../../dc/d67/a01989.html">DiscordCoreClient</a>* discordCoreClient{ <span class="keyword">nullptr</span> };</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        std::unique_ptr&lt;BaseFunction&gt; createFunction(<span class="keyword">const</span> std::string&amp; functionName);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        std::unique_ptr&lt;BaseFunction&gt; getCommand(<span class="keyword">const</span> std::string&amp; commandName);</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    };</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment"></span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">    /// For modifying a single Sticker. \brief For modifying a single Sticker.</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="../../d7/dc5/a03449.html">   52</a></span><span class="comment"></span>    <span class="keyword">struct </span>DiscordCoreAPI_Dll <a class="code hl_struct" href="../../d7/dc5/a03449.html">ModifyGuildStickerData</a> {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="../../d7/dc5/a03449.html#aa0b756d5a9a5bbe1c06ae2cd5306affe">   53</a></span>        std::string description{};<span class="comment">///&lt; Description of the Sticker.</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="../../d7/dc5/a03449.html#a25c94567aec91a3a6ebb40bd365c5629">   54</a></span>        <a class="code hl_typedef" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> stickerId{};<span class="comment">///&lt; The Sticker you wish to modify.</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="../../d7/dc5/a03449.html#abae4aa0f72d38faba63fbec430a82268">   55</a></span>        <a class="code hl_typedef" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> guildId{};<span class="comment">///&lt; The Guild within which to modify the Sticker.</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="../../d7/dc5/a03449.html#ae993c211ea36ba0a959689b28140652d">   56</a></span>        std::string reason{};<span class="comment">///&lt; The reason for modifying the Sticker.</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="../../d7/dc5/a03449.html#adf04d6b5ae34d43c1dff01f9aea83010">   57</a></span>        std::string name{};<span class="comment">///&lt; Name of the Sticker.</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="../../d7/dc5/a03449.html#aa89fd10644fc457c6e578e5c748ef2a4">   58</a></span>        std::string tags{};<span class="comment">///&lt; Autocomplete / suggestion tags for the sticker(max 200 characters).</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    };</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment"></span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">    /// For deleting a single Sticker. \brief For deleting a single Sticker.</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="../../d4/d32/a03453.html">   62</a></span><span class="comment"></span>    <span class="keyword">struct </span>DiscordCoreAPI_Dll <a class="code hl_struct" href="../../d4/d32/a03453.html">DeleteGuildStickerData</a> {</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="../../d4/d32/a03453.html#ad8bf8d944f3f7b085d6ffdbd418c8136">   63</a></span>        <a class="code hl_typedef" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> stickerId{};<span class="comment">///&lt; The Sticker you wish to delete.</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="../../d4/d32/a03453.html#a34b9b99ba9abf1531b1166320b1cb541">   64</a></span>        <a class="code hl_typedef" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> guildId{};<span class="comment">///&lt; The Guild within which to delete the Sticker.</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="../../d4/d32/a03453.html#a7da4c1d57ce5dd88646a81fba46e5add">   65</a></span>        std::string reason{};<span class="comment">///&lt; The reason for deleting the Sticker.</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    };</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment"></span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">    /// A single Sticker. \brief A single Sticker.</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="../../d1/d15/a03457.html">   69</a></span><span class="comment"></span>    <span class="keyword">class </span>DiscordCoreAPI_Dll <a class="code hl_class" href="../../d1/d15/a03457.html">Sticker</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../dd/d98/a02557.html">StickerData</a>, <span class="keyword">public</span> DataParser&lt;Sticker&gt; {</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>      <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <a class="code hl_class" href="../../d1/d15/a03457.html">Sticker</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <a class="code hl_class" href="../../d1/d15/a03457.html">Sticker</a>&amp; operator=(<span class="keyword">const</span> nlohmann::json&amp; jsonObjectData);</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <a class="code hl_class" href="../../d1/d15/a03457.html">Sticker</a>(<span class="keyword">const</span> nlohmann::json&amp; jsonObjectData);</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keyword">virtual</span> <a class="code hl_class" href="../../d1/d15/a03457.html">~Sticker</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>      <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordtype">void</span> parseObject(<span class="keyword">const</span> nlohmann::json&amp; jsonObjectData, <a class="code hl_class" href="../../d1/d15/a03457.html">Sticker</a>* pDataStructure);</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    };</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keyword">class </span>DiscordCoreAPI_Dll StickerVector : <span class="keyword">public</span> DataParser&lt;StickerVector&gt; {</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>      <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        StickerVector() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keyword">operator</span> std::vector&lt;Sticker&gt;();</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        StickerVector&amp; operator=(<span class="keyword">const</span> nlohmann::json&amp; jsonObjectData);</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        StickerVector(<span class="keyword">const</span> nlohmann::json&amp; jsonObjectData);</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keyword">virtual</span> ~StickerVector() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>      <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        std::vector&lt;Sticker&gt; theStickers{};</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="keywordtype">void</span> parseObject(<span class="keyword">const</span> nlohmann::json&amp; jsonObjectData, StickerVector* pDataStructure);</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    };</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment"></span> </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="comment">    /**@}*/</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="comment"></span> </div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="comment">    /**</span></div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="comment">     * \addtogroup main_endpoints</span></div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="comment">     * @{</span></div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="comment">     */</span><span class="comment"></span></div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="comment">    /// An interface class for the Sticker related Discord endpoints. \brief An interface class for the Sticker related Discord endpoints.</span></div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="../../da/da5/a03465.html">  108</a></span><span class="comment"></span>    <span class="keyword">class </span>DiscordCoreAPI_Dll <a class="code hl_class" href="../../da/da5/a03465.html">Stickers</a> {</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>      <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> initialize(DiscordCoreInternal::HttpsClient*);</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="comment"></span> </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="comment">        /// Gets a single Sticker item. \brief Gets a single Sticker item.</span></div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="comment">        /// \param dataPackage A GetStickerData structure.</span></div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="comment">        /// \returns A CoRoutine containing a Sticker.</span></div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="comment"></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine&lt;Sticker&gt;</a> getStickerAsync(<a class="code hl_struct" href="../../d5/d56/a03437.html">GetStickerData</a> dataPackage);</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="comment"></span> </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="comment">        /// Gets a list of nitro-available Sticker packs. \brief Gets a list of nitro-available Sticker packs</span></div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="comment">        /// \returns A CoRoutine containing a StickerPackDataVector.</span></div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="comment"></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine&lt;std::vector&lt;StickerPackData&gt;</a>&gt; getNitroStickerPacksAsync();</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="comment"></span> </div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="comment">        /// Gets a list of Stickers from a Guild. \brief Gets a list of Stickers from a Guild.</span></div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="comment">        /// \param dataPackage A GetGuildStickersData structure.</span></div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="comment">        /// \returns A CoRoutine containing a StickerVector.</span></div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="comment"></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine&lt;std::vector&lt;Sticker&gt;</a>&gt; getGuildStickersAsync(<a class="code hl_struct" href="../../de/dc4/a03441.html">GetGuildStickersData</a> dataPackage);</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="comment"></span> </div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="comment">        /// Creates a new Sticker within a chosen Guild. \brief Creates a new Sticker within a chosen Guild.</span></div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="comment">        /// \param dataPackage A CreateGuildStickerData structure.</span></div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="comment">        /// \returns A CoRoutine containing a Sticker.</span></div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="comment"></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine&lt;Sticker&gt;</a> createGuildStickerAsync(<a class="code hl_struct" href="../../d9/d11/a03445.html">CreateGuildStickerData</a> dataPackage);</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="comment"></span> </div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="comment">        /// Modifies a Sticker within a chosen Guild. \brief Modifies a Sticker within a chosen Guild.</span></div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="comment">        /// \param dataPackage A ModifyGuildStickerData structure.</span></div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="comment">        /// \returns A CoRoutine containing a Sticker.</span></div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="comment"></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine&lt;Sticker&gt;</a> modifyGuildStickerAsync(<a class="code hl_struct" href="../../d7/dc5/a03449.html">ModifyGuildStickerData</a> dataPackage);</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="comment"></span> </div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="comment">        /// Deletes a Sticker within a chosen Guild. \brief Deletes a Sticker within a chosen Guild.</span></div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="comment">        /// \param dataPackage A DeleteGuildStickerData structure.</span></div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="comment">        /// \returns A CoRoutine containing void.</span></div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="comment"></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../db/d49/a01969.html">CoRoutine&lt;void&gt;</a> deleteGuildStickerAsync(<a class="code hl_struct" href="../../d4/d32/a03453.html">DeleteGuildStickerData</a> dataPackage);</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>      <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        <span class="keyword">static</span> DiscordCoreInternal::HttpsClient* httpsClient;</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    };<span class="comment"></span></div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="comment">    /**@}*/</span></div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>};<span class="comment">// namespace DiscordCoreAPI</span></div>
-<div class="ttc" id="aa00722_html"><div class="ttname"><a href="../../db/d7c/a00722.html">FoundationEntities.hpp</a></div></div>
-<div class="ttc" id="aa00764_html"><div class="ttname"><a href="../../d3/d2c/a00764.html">CoRoutine.hpp</a></div></div>
-<div class="ttc" id="aa00888_html_gabeb353982ff7e75352fc30c8543641ef"><div class="ttname"><a href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">DiscordCoreAPI::Snowflake</a></div><div class="ttdeci">uint64_t Snowflake</div><div class="ttdoc">For ids of DiscordEntities.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d7c/a00722_source.html#l00326">FoundationEntities.hpp:326</a></div></div>
-<div class="ttc" id="aa00890_html"><div class="ttname"><a href="../../d7/d46/a00890.html">DiscordCoreAPI</a></div><div class="ttdoc">The main namespace for this library.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db9/a00725_source.html#l00025">ApplicationCommandEntities.hpp:25</a></div></div>
-<div class="ttc" id="aa01969_html"><div class="ttname"><a href="../../db/d49/a01969.html">DiscordCoreAPI::CoRoutine</a></div><div class="ttdoc">A CoRoutine - representing a potentially asynchronous operation/function.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d2c/a00764_source.html#l00052">CoRoutine.hpp:52</a></div></div>
-<div class="ttc" id="aa02557_html"><div class="ttname"><a href="../../dd/d98/a02557.html">DiscordCoreAPI::StickerData</a></div><div class="ttdoc">Data representing a single Sticker.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d7c/a00722_source.html#l01987">FoundationEntities.hpp:1987</a></div></div>
-<div class="ttc" id="aa03437_html"><div class="ttname"><a href="../../d5/d56/a03437.html">DiscordCoreAPI::GetStickerData</a></div><div class="ttdoc">For getting a Sticker object for the given sticker ID.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l00032">StickerEntities.hpp:32</a></div></div>
-<div class="ttc" id="aa03441_html"><div class="ttname"><a href="../../de/dc4/a03441.html">DiscordCoreAPI::GetGuildStickersData</a></div><div class="ttdoc">For collecting a list of Stickers from a chosen Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l00037">StickerEntities.hpp:37</a></div></div>
-<div class="ttc" id="aa03445_html"><div class="ttname"><a href="../../d9/d11/a03445.html">DiscordCoreAPI::CreateGuildStickerData</a></div><div class="ttdoc">For creating a single Sticker.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l00042">StickerEntities.hpp:42</a></div></div>
-<div class="ttc" id="aa03449_html"><div class="ttname"><a href="../../d7/dc5/a03449.html">DiscordCoreAPI::ModifyGuildStickerData</a></div><div class="ttdoc">For modifying a single Sticker.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l00052">StickerEntities.hpp:52</a></div></div>
-<div class="ttc" id="aa03453_html"><div class="ttname"><a href="../../d4/d32/a03453.html">DiscordCoreAPI::DeleteGuildStickerData</a></div><div class="ttdoc">For deleting a single Sticker.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l00062">StickerEntities.hpp:62</a></div></div>
-<div class="ttc" id="aa03457_html"><div class="ttname"><a href="../../d1/d15/a03457.html">DiscordCoreAPI::Sticker</a></div><div class="ttdoc">A single Sticker.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l00069">StickerEntities.hpp:69</a></div></div>
-<div class="ttc" id="aa03465_html"><div class="ttname"><a href="../../da/da5/a03465.html">DiscordCoreAPI::Stickers</a></div><div class="ttdoc">An interface class for the Sticker related Discord endpoints.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l00108">StickerEntities.hpp:108</a></div></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>};<span class="comment">// namespace DiscordCoreAPI</span></div>
+<div class="ttc" id="aa00704_html"><div class="ttname"><a href="../../d4/d6a/a00704.html">FoundationEntities.hpp</a></div></div>
+<div class="ttc" id="aa00758_html"><div class="ttname"><a href="../../d2/d4a/a00758.html">CoRoutine.hpp</a></div></div>
+<div class="ttc" id="aa00890_html"><div class="ttname"><a href="../../d7/d46/a00890.html">DiscordCoreAPI</a></div><div class="ttdoc">The main namespace for this library.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00025">ApplicationCommandEntities.hpp:25</a></div></div>
+<div class="ttc" id="aa01957_html"><div class="ttname"><a href="../../d2/d6f/a01957.html">DiscordCoreAPI::CommandController</a></div><div class="ttdoc">A class for handling commands from user input.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l00028">CommandController.hpp:28</a></div></div>
+<div class="ttc" id="aa01969_html"><div class="ttname"><a href="../../db/d49/a01969.html">DiscordCoreAPI::CoRoutine</a></div><div class="ttdoc">A CoRoutine - representing a potentially asynchronous operation/function.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4a/a00758_source.html#l00052">CoRoutine.hpp:52</a></div></div>
+<div class="ttc" id="aa01989_html"><div class="ttname"><a href="../../dc/d67/a01989.html">DiscordCoreAPI::DiscordCoreClient</a></div><div class="ttdoc">DiscordCoreClient - The main class for this library.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd4/a00776_source.html#l00075">DiscordCoreClient.hpp:75</a></div></div>
+<div class="ttc" id="aa02829_html"><div class="ttname"><a href="../../db/d4f/a02829.html">DiscordCoreAPI::CommandData</a></div><div class="ttdoc">Command data, for functions executed by the CommandController.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03772">FoundationEntities.hpp:3772</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_856524284ebe840938865dc061f982fb.html">Include</a></li><li class="navelem"><a class="el" href="../../dir_9b16bdde4f6a21e020962bfdb0aa5092.html">discordcoreapi</a></li><li class="navelem"><a class="el" href="../../d4/deb/a00710.html">StickerEntities.hpp</a></li>
+    <li class="navelem"><a class="el" href="../../dir_856524284ebe840938865dc061f982fb.html">Include</a></li><li class="navelem"><a class="el" href="../../dir_9b16bdde4f6a21e020962bfdb0aa5092.html">discordcoreapi</a></li><li class="navelem"><a class="el" href="../../d4/deb/a00710.html">CommandController.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
