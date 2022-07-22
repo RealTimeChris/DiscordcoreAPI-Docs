@@ -27,7 +27,7 @@ var searchData=
   ['visibility_24',['visibility',['../da/d20/a02740.html#ac3d571163fcbf7b456157c22c73500f4',1,'DiscordCoreAPI::ConnectionData']]],
   ['voice_25',['Voice',['../de/dfc/a00891.html#gga3be930a37ea8f73fdab875716ac40643ad7a3fdf1351b72249a47454751549deb',1,'DiscordCoreAPI']]],
   ['voice_20connection_26',['Voice Connection',['../dd/d94/a00888.html',1,'']]],
-  ['voice_20connection_20stuff_27',['Voice Connection Stuff',['../d9/d92/a07030.html',1,'Examples']]],
+  ['voice_20connection_20stuff_27',['Voice Connection Stuff',['../d8/d33/a07038.html',1,'Examples']]],
   ['voiceactivestate_28',['VoiceActiveState',['../dc/d2c/a00893.html#a7db510a888c180dab0d18c694308c066',1,'DiscordCoreAPI']]],
   ['voiceconnection_29',['VoiceConnection',['../d6/d62/a03648.html',1,'DiscordCoreAPI']]],
   ['voiceconnection_2ecpp_30',['VoiceConnection.cpp',['../d1/d93/a00875.html',1,'']]],

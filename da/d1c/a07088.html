@@ -102,11 +102,11 @@ $(document).ready(function(){initNavTree('da/d1c/a07088.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Creating a Guild Ban </div></div>
+  <div class="headertitle"><div class="title">Getting a Direct-Message Channel </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Guild_Stuff_Creating_a_Guild_Ban"></a></p><ul>
-<li>Execute the, <code><a class="el" href="../../d6/d5d/a02992.html#afce7ce5b805a63355cf0923eb3a94830" title="Bans a GuildMember.">DiscordCoreAPI::Guilds::createGuildBanAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../d7/d65/a02876.html" title="For banning a current GuildMember.">DiscordCoreAPI::CreateGuildBanData</a></code>, with a return value of type <code>void</code>.</li>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Channel_Stuff_Getting_a_Direct_Message_Channel"></a></p><ul>
+<li>Execute the <code><a class="el" href="../../d0/d59/a01956.html#a2568da4022758588bc3bceabce222176" title="Collect a direct-Message Channel between the bot and the User.">DiscordCoreAPI::Channels::createDMChannelAsync()</a></code> (which collects it from the Discord servers)function, while passing to it a data structure of type <code><a class="el" href="../../d5/dba/a01940.html" title="For collecting a direct-messaging Channel.">DiscordCoreAPI::CreateDMChannelData</a></code>, or simply <code>{ .userId = TARGETUSERIDHERE}</code>, with a return value of <code>auto</code> or <code><a class="el" href="../../dc/d2c/a00893.html" title="The main namespace for this library.">DiscordCoreAPI</a>:Channel</code>.</li>
 <li>Call the function with <code>.get()</code> added to the end in order to wait for the results now.</li>
 </ul>
 <div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
@@ -114,7 +114,7 @@ $(document).ready(function(){initNavTree('da/d1c/a07088.html','../../'); initRes
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="preprocessor">#pragma once</span></div>
 <div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d5/de8/a00749.html">Index.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d5/de8/a00749.html">Index.hpp</a>&quot;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a> {</div>
 <div class="line"> </div>
@@ -135,40 +135,19 @@ $(document).ready(function(){initNavTree('da/d1c/a07088.html','../../'); initRes
 <div class="line">            <span class="keywordflow">return</span> std::make_unique&lt;Test&gt;();</div>
 <div class="line">        }</div>
 <div class="line"> </div>
-<div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
-<div class="line">            <span class="keywordflow">try</span> {</div>
-<div class="line">                <a class="code hl_struct" href="../../d7/d65/a02876.html">DiscordCoreAPI::CreateGuildBanData</a> dataPackage01;</div>
-<div class="line">                dataPackage01.<a class="code hl_variable" href="../../d7/d65/a02876.html#abf40e829b9881299ad98dfe12abb09a2">guildId</a> = args.eventData.<a class="code hl_function" href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
-<div class="line">                dataPackage01.<a class="code hl_variable" href="../../d7/d65/a02876.html#a5e7474d0eb4a5838430c76cb8b577cb5">guildMemberId</a> = <span class="stringliteral">&quot;851629399514415106&quot;</span>;</div>
-<div class="line">                dataPackage01.<a class="code hl_variable" href="../../d7/d65/a02876.html#a8fee573e2a08687003f02471a669ac99">deleteMessageDays</a> = 3;</div>
-<div class="line">                dataPackage01.<a class="code hl_variable" href="../../d7/d65/a02876.html#a3b267135fd7454b60d9800ac854b61aa">reason</a> = <span class="stringliteral">&quot;TESTING PURPOSES!&quot;</span>;</div>
-<div class="line"> </div>
-<div class="line">                <a class="code hl_function" href="../../d6/d5d/a02992.html#afce7ce5b805a63355cf0923eb3a94830">DiscordCoreAPI::Guilds::createGuildBanAsync</a>(dataPackage01).<a class="code hl_function" href="../../d5/d70/a01980.html#a904d030f3edbf8efac15b2cebba3e37a">get</a>();</div>
-<div class="line"> </div>
-<div class="line"> </div>
-<div class="line">            } <span class="keywordflow">catch</span> (...) {</div>
-<div class="line">                rethrowException(<span class="stringliteral">&quot;Test::execute()&quot;</span>);</div>
-<div class="line">            }</div>
+<div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(std::unique_pt&lt;DiscordCoreAPI::BarseFunctionArguments&gt; args) {</div>
+<div class="line">            Channel channel = Channels::createDMChannelAsync({.userId = args.eventData.getAuthorId()}).get();</div>
 <div class="line">        }</div>
 <div class="line">    };</div>
 <div class="line">}</div>
 <div class="ttc" id="aa00749_html"><div class="ttname"><a href="../../d5/de8/a00749.html">Index.hpp</a></div></div>
 <div class="ttc" id="aa00893_html"><div class="ttname"><a href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></div><div class="ttdoc">The main namespace for this library.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00025">ApplicationCommandEntities.hpp:25</a></div></div>
-<div class="ttc" id="aa01980_html_a904d030f3edbf8efac15b2cebba3e37a"><div class="ttname"><a href="../../d5/d70/a01980.html#a904d030f3edbf8efac15b2cebba3e37a">DiscordCoreAPI::CoRoutine&lt; void &gt;::get</a></div><div class="ttdeci">void get()</div><div class="ttdoc">Gets the resulting value of the CoRoutine.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4a/a00758_source.html#l00307">CoRoutine.hpp:307</a></div></div>
 <div class="ttc" id="aa02332_html"><div class="ttname"><a href="../../d1/d03/a02332.html">DiscordCoreAPI::EmbedData</a></div><div class="ttdoc">Embed data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l00600">FoundationEntities.hpp:600</a></div></div>
 <div class="ttc" id="aa02332_html_a20ca60ec3235f44a223f3d3b687c0c9e"><div class="ttname"><a href="../../d1/d03/a02332.html#a20ca60ec3235f44a223f3d3b687c0c9e">DiscordCoreAPI::EmbedData::setTitle</a></div><div class="ttdeci">EmbedData &amp; setTitle(const std::string &amp;titleNew)</div><div class="ttdoc">Sets the title of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00394">FoundationEntities.cpp:394</a></div></div>
 <div class="ttc" id="aa02332_html_a9d4066a4861408bc00eccb22a12db7f9"><div class="ttname"><a href="../../d1/d03/a02332.html#a9d4066a4861408bc00eccb22a12db7f9">DiscordCoreAPI::EmbedData::setDescription</a></div><div class="ttdeci">EmbedData &amp; setDescription(const std::string &amp;descriptionNew)</div><div class="ttdoc">Sets the description (the main contents) of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00379">FoundationEntities.cpp:379</a></div></div>
 <div class="ttc" id="aa02332_html_ab417d83fddf9df80eca98e9ec6e888aa"><div class="ttname"><a href="../../d1/d03/a02332.html#ab417d83fddf9df80eca98e9ec6e888aa">DiscordCoreAPI::EmbedData::setColor</a></div><div class="ttdeci">EmbedData &amp; setColor(const std::string &amp;hexColorValueNew)</div><div class="ttdoc">Sets the color of the embed, by applying a hex-color value.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00384">FoundationEntities.cpp:384</a></div></div>
 <div class="ttc" id="aa02332_html_ae356e6dc3c93658b7228b56da3187896"><div class="ttname"><a href="../../d1/d03/a02332.html#ae356e6dc3c93658b7228b56da3187896">DiscordCoreAPI::EmbedData::setTimeStamp</a></div><div class="ttdeci">EmbedData &amp; setTimeStamp(const std::string &amp;timeStamp)</div><div class="ttdoc">Sets the timestamp on the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00365">FoundationEntities.cpp:365</a></div></div>
-<div class="ttc" id="aa02784_html_a565fe2447237030a716f64b2599996dd"><div class="ttname"><a href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">DiscordCoreAPI::InputEventData::getGuildId</a></div><div class="ttdeci">Snowflake getGuildId()</div><div class="ttdoc">Returns the Guild id, of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01643">FoundationEntities.cpp:1643</a></div></div>
-<div class="ttc" id="aa02836_html"><div class="ttname"><a href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03795">FoundationEntities.hpp:3795</a></div></div>
 <div class="ttc" id="aa02840_html"><div class="ttname"><a href="../../d9/d4d/a02840.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03806">FoundationEntities.hpp:3806</a></div></div>
-<div class="ttc" id="aa02876_html"><div class="ttname"><a href="../../d7/d65/a02876.html">DiscordCoreAPI::CreateGuildBanData</a></div><div class="ttdoc">For banning a current GuildMember.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00091">GuildEntities.hpp:91</a></div></div>
-<div class="ttc" id="aa02876_html_a3b267135fd7454b60d9800ac854b61aa"><div class="ttname"><a href="../../d7/d65/a02876.html#a3b267135fd7454b60d9800ac854b61aa">DiscordCoreAPI::CreateGuildBanData::reason</a></div><div class="ttdeci">std::string reason</div><div class="ttdoc">The reason for the ban.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00095">GuildEntities.hpp:95</a></div></div>
-<div class="ttc" id="aa02876_html_a5e7474d0eb4a5838430c76cb8b577cb5"><div class="ttname"><a href="../../d7/d65/a02876.html#a5e7474d0eb4a5838430c76cb8b577cb5">DiscordCoreAPI::CreateGuildBanData::guildMemberId</a></div><div class="ttdeci">Snowflake guildMemberId</div><div class="ttdoc">The id of the member to be banned.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00093">GuildEntities.hpp:93</a></div></div>
-<div class="ttc" id="aa02876_html_a8fee573e2a08687003f02471a669ac99"><div class="ttname"><a href="../../d7/d65/a02876.html#a8fee573e2a08687003f02471a669ac99">DiscordCoreAPI::CreateGuildBanData::deleteMessageDays</a></div><div class="ttdeci">int32_t deleteMessageDays</div><div class="ttdoc">The number of days of their Messages to delete.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00092">GuildEntities.hpp:92</a></div></div>
-<div class="ttc" id="aa02876_html_abf40e829b9881299ad98dfe12abb09a2"><div class="ttname"><a href="../../d7/d65/a02876.html#abf40e829b9881299ad98dfe12abb09a2">DiscordCoreAPI::CreateGuildBanData::guildId</a></div><div class="ttdeci">Snowflake guildId</div><div class="ttdoc">The id of the Guild from which to ban the member.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00094">GuildEntities.hpp:94</a></div></div>
-<div class="ttc" id="aa02992_html_afce7ce5b805a63355cf0923eb3a94830"><div class="ttname"><a href="../../d6/d5d/a02992.html#afce7ce5b805a63355cf0923eb3a94830">DiscordCoreAPI::Guilds::createGuildBanAsync</a></div><div class="ttdeci">static CoRoutine&lt; void &gt; createGuildBanAsync(CreateGuildBanData dataPackage)</div><div class="ttdoc">Bans a GuildMember.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d69/a00878_source.html#l00484">GuildEntities.cpp:484</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -176,7 +155,7 @@ $(document).ready(function(){initNavTree('da/d1c/a07088.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d00/a07022.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../de/d18/a07033.html">Guild Stuff</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d92/a07030.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../dc/d14/a07040.html">Channel Stuff</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

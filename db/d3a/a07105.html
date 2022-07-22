@@ -102,11 +102,11 @@ $(document).ready(function(){initNavTree('db/d3a/a07105.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Getting an Invite </div></div>
+  <div class="headertitle"><div class="title">Getting a Guild Prune Count </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Guild_Stuff_Getting_an_Invite"></a></p><ul>
-<li>Execute the, <code><a class="el" href="../../d6/d5d/a02992.html#a99440af89f671b6835876f46e448d14e" title="Gets an invite from the Discord servers.">DiscordCoreAPI::Guilds::getInviteAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../db/db9/a02964.html" title="For geting a single invite&#39;s responseData from a Guild.">DiscordCoreAPI::GetInviteData</a></code>, with a return value of type <code>auto</code> or <code><a class="el" href="../../d1/df5/a02592.html" title="Invite data.">DiscordCoreAPI::InviteData</a></code>.</li>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Guild_Stuff_Getting_a_Guild_Prune_Count"></a></p><ul>
+<li>Select, from the <code><a class="el" href="../../d6/d5d/a02992.html#a356adf8df3b7583ea5c0e30ae544aaa3" title="For collecting the Guild prune count.">DiscordCoreAPI::Guilds::getGuildPruneCountAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../d8/d93/a02884.html" title="For collecting the Guild prune count.">DiscordCoreAPI::GetGuildPruneCountData</a></code>, with a return value of type <code>auto</code> or <code><a class="el" href="../../d9/de2/a02508.html" title="Guild prune count data.">DiscordCoreAPI::GuildPruneCountData</a></code>.</li>
 <li>Call the function with <code>.get()</code> added to the end in order to wait for the results now.</li>
 </ul>
 <div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
@@ -137,19 +137,14 @@ $(document).ready(function(){initNavTree('db/d3a/a07105.html','../../'); initRes
 <div class="line"> </div>
 <div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
 <div class="line">            <span class="keywordflow">try</span> {</div>
-<div class="line">                <a class="code hl_struct" href="../../de/dd8/a02896.html">DiscordCoreAPI::GetGuildInvitesData</a> dataPackage;</div>
-<div class="line">                dataPackage.<a class="code hl_variable" href="../../de/dd8/a02896.html#acb752de0114e91e281d99a0a42a465ab">guildId</a> = args.eventData.<a class="code hl_function" href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
+<div class="line">                <a class="code hl_struct" href="../../d8/d93/a02884.html">DiscordCoreAPI::GetGuildPruneCountData</a> dataPackage01;</div>
+<div class="line">                dataPackage01.<a class="code hl_variable" href="../../d8/d93/a02884.html#a153eb98f7cd22264755f7f7a17b05ac3">days</a> = 28;</div>
+<div class="line">                dataPackage01.roles.push_back(<span class="stringliteral">&quot;860075141818744853&quot;</span>);</div>
+<div class="line">                dataPackage01.<a class="code hl_variable" href="../../d8/d93/a02884.html#a123c5d64d16d39950b4f964818a3d040">guildId</a> = args.eventData.<a class="code hl_function" href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
 <div class="line"> </div>
-<div class="line">                <span class="keyword">auto</span> responseVector = <a class="code hl_function" href="../../d6/d5d/a02992.html#a3fe881640cb55c4ac74faa8bb8933981">DiscordCoreAPI::Guilds::getGuildInvitesAsync</a>(dataPackage).get();</div>
+<div class="line">                <span class="keyword">auto</span> responseData = <a class="code hl_function" href="../../d6/d5d/a02992.html#a356adf8df3b7583ea5c0e30ae544aaa3">DiscordCoreAPI::Guilds::getGuildPruneCountAsync</a>(dataPackage01).get();</div>
 <div class="line"> </div>
-<div class="line">                <a class="code hl_struct" href="../../db/db9/a02964.html">DiscordCoreAPI::GetInviteData</a> dataPackage01;</div>
-<div class="line">                dataPackage01.<a class="code hl_variable" href="../../db/db9/a02964.html#ad9d0126a6b046bc69e5e3e0db42f3a90">withExpiration</a> = <span class="keyword">true</span>;</div>
-<div class="line">                dataPackage01.<a class="code hl_variable" href="../../db/db9/a02964.html#adf02fbaf117503a1f331bfc7e3f0d4dd">withCount</a> = <span class="keyword">true</span>;</div>
-<div class="line">                dataPackage01.<a class="code hl_variable" href="../../db/db9/a02964.html#ac3b48c6cad06fb83598edecd810eefc0">inviteId</a> = responseVector[0].code;</div>
-<div class="line"> </div>
-<div class="line">                <span class="keyword">auto</span> responseData = <a class="code hl_function" href="../../d6/d5d/a02992.html#a99440af89f671b6835876f46e448d14e">DiscordCoreAPI::Guilds::getInviteAsync</a>(dataPackage01).get();</div>
-<div class="line"> </div>
-<div class="line">                cout &lt;&lt; <span class="stringliteral">&quot;THE CODE: &quot;</span> &lt;&lt; responseData.code &lt;&lt; endl;</div>
+<div class="line">                cout &lt;&lt; responseData.count &lt;&lt; endl;</div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line">            } <span class="keywordflow">catch</span> (...) {</div>
@@ -168,14 +163,10 @@ $(document).ready(function(){initNavTree('db/d3a/a07105.html','../../'); initRes
 <div class="ttc" id="aa02784_html_a565fe2447237030a716f64b2599996dd"><div class="ttname"><a href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">DiscordCoreAPI::InputEventData::getGuildId</a></div><div class="ttdeci">Snowflake getGuildId()</div><div class="ttdoc">Returns the Guild id, of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01643">FoundationEntities.cpp:1643</a></div></div>
 <div class="ttc" id="aa02836_html"><div class="ttname"><a href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03795">FoundationEntities.hpp:3795</a></div></div>
 <div class="ttc" id="aa02840_html"><div class="ttname"><a href="../../d9/d4d/a02840.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03806">FoundationEntities.hpp:3806</a></div></div>
-<div class="ttc" id="aa02896_html"><div class="ttname"><a href="../../de/dd8/a02896.html">DiscordCoreAPI::GetGuildInvitesData</a></div><div class="ttdoc">For geting all of the current invites from a Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00131">GuildEntities.hpp:131</a></div></div>
-<div class="ttc" id="aa02896_html_acb752de0114e91e281d99a0a42a465ab"><div class="ttname"><a href="../../de/dd8/a02896.html#acb752de0114e91e281d99a0a42a465ab">DiscordCoreAPI::GetGuildInvitesData::guildId</a></div><div class="ttdeci">Snowflake guildId</div><div class="ttdoc">The id of the Guild you wish to acquire.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00132">GuildEntities.hpp:132</a></div></div>
-<div class="ttc" id="aa02964_html"><div class="ttname"><a href="../../db/db9/a02964.html">DiscordCoreAPI::GetInviteData</a></div><div class="ttdoc">For geting a single invite's responseData from a Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00236">GuildEntities.hpp:236</a></div></div>
-<div class="ttc" id="aa02964_html_ac3b48c6cad06fb83598edecd810eefc0"><div class="ttname"><a href="../../db/db9/a02964.html#ac3b48c6cad06fb83598edecd810eefc0">DiscordCoreAPI::GetInviteData::inviteId</a></div><div class="ttdeci">Snowflake inviteId</div><div class="ttdoc">The id of the invite you wish to acquire.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00240">GuildEntities.hpp:240</a></div></div>
-<div class="ttc" id="aa02964_html_ad9d0126a6b046bc69e5e3e0db42f3a90"><div class="ttname"><a href="../../db/db9/a02964.html#ad9d0126a6b046bc69e5e3e0db42f3a90">DiscordCoreAPI::GetInviteData::withExpiration</a></div><div class="ttdeci">bool withExpiration</div><div class="ttdoc">Collect expiration time/date?</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00238">GuildEntities.hpp:238</a></div></div>
-<div class="ttc" id="aa02964_html_adf02fbaf117503a1f331bfc7e3f0d4dd"><div class="ttname"><a href="../../db/db9/a02964.html#adf02fbaf117503a1f331bfc7e3f0d4dd">DiscordCoreAPI::GetInviteData::withCount</a></div><div class="ttdeci">bool withCount</div><div class="ttdoc">Collect usage etc counts?</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00239">GuildEntities.hpp:239</a></div></div>
-<div class="ttc" id="aa02992_html_a3fe881640cb55c4ac74faa8bb8933981"><div class="ttname"><a href="../../d6/d5d/a02992.html#a3fe881640cb55c4ac74faa8bb8933981">DiscordCoreAPI::Guilds::getGuildInvitesAsync</a></div><div class="ttdeci">static CoRoutine&lt; std::vector&lt; InviteData &gt; &gt; getGuildInvitesAsync(GetGuildInvitesData dataPackage)</div><div class="ttdoc">Gets multiple invites from the Discord servers.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d69/a00878_source.html#l00560">GuildEntities.cpp:560</a></div></div>
-<div class="ttc" id="aa02992_html_a99440af89f671b6835876f46e448d14e"><div class="ttname"><a href="../../d6/d5d/a02992.html#a99440af89f671b6835876f46e448d14e">DiscordCoreAPI::Guilds::getInviteAsync</a></div><div class="ttdeci">static CoRoutine&lt; InviteData &gt; getInviteAsync(GetInviteData dataPackage)</div><div class="ttdoc">Gets an invite from the Discord servers.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d69/a00878_source.html#l00755">GuildEntities.cpp:755</a></div></div>
+<div class="ttc" id="aa02884_html"><div class="ttname"><a href="../../d8/d93/a02884.html">DiscordCoreAPI::GetGuildPruneCountData</a></div><div class="ttdoc">For collecting the Guild prune count.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00108">GuildEntities.hpp:108</a></div></div>
+<div class="ttc" id="aa02884_html_a123c5d64d16d39950b4f964818a3d040"><div class="ttname"><a href="../../d8/d93/a02884.html#a123c5d64d16d39950b4f964818a3d040">DiscordCoreAPI::GetGuildPruneCountData::guildId</a></div><div class="ttdeci">Snowflake guildId</div><div class="ttdoc">The Guild to be pruned.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00110">GuildEntities.hpp:110</a></div></div>
+<div class="ttc" id="aa02884_html_a153eb98f7cd22264755f7f7a17b05ac3"><div class="ttname"><a href="../../d8/d93/a02884.html#a153eb98f7cd22264755f7f7a17b05ac3">DiscordCoreAPI::GetGuildPruneCountData::days</a></div><div class="ttdeci">int32_t days</div><div class="ttdoc">The number of days beyond which to prune the user's for inactivity.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00111">GuildEntities.hpp:111</a></div></div>
+<div class="ttc" id="aa02992_html_a356adf8df3b7583ea5c0e30ae544aaa3"><div class="ttname"><a href="../../d6/d5d/a02992.html#a356adf8df3b7583ea5c0e30ae544aaa3">DiscordCoreAPI::Guilds::getGuildPruneCountAsync</a></div><div class="ttdeci">static CoRoutine&lt; GuildPruneCountData &gt; getGuildPruneCountAsync(GetGuildPruneCountData dataPackage)</div><div class="ttdoc">For collecting the Guild prune count.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d69/a00878_source.html#l00509">GuildEntities.cpp:509</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -183,7 +174,7 @@ $(document).ready(function(){initNavTree('db/d3a/a07105.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d00/a07022.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../de/d18/a07033.html">Guild Stuff</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d92/a07030.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d7/dfb/a07041.html">Guild Stuff</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

@@ -1,19 +1,13 @@
 var a07052 =
 [
-    [ "Getting Global Application Commands", "d3/d86/a07078.html", null ],
-    [ "Creating a Global Application Command", "da/d3a/a07071.html", null ],
-    [ "Getting a Global Application Command", "dc/ddc/a07081.html", null ],
-    [ "Editing a Global Application Command", "dd/d15/a07075.html", null ],
-    [ "Deleting a Global Application Command", "d4/db7/a07073.html", null ],
-    [ "Bulk Overwriting Global Application Commands", "d2/d4d/a07069.html", null ],
-    [ "Getting Guild Application Commands", "d5/d58/a07080.html", null ],
-    [ "Creating a Guild Application Command", "df/d27/a07072.html", null ],
-    [ "Getting a Guild Application Command", "d9/d5b/a07079.html", null ],
-    [ "Editing a Guild Application Command", "da/dba/a07076.html", null ],
-    [ "Deleting a Guild Application Command", "d5/d31/a07074.html", null ],
-    [ "Bulk Overwriting Guild Application Commands", "d5/db4/a07070.html", null ],
-    [ "Getting Guild Application Command Permissions", "dd/d63/a07083.html", null ],
-    [ "Getting a Single Guild Application Command's Permissions", "d4/db3/a07082.html", null ],
-    [ "Editing a Guild Application Command's Permissions", "d9/d8e/a07077.html", null ],
-    [ "Batch Editing Guild Application Command's Permissions", "d8/d4c/a07068.html", null ]
+    [ "Adding a Recipient to a Group DM", "d4/d8c/a07234.html", null ],
+    [ "Removing a Recipient from a Group DM", "dc/d10/a07243.html", null ],
+    [ "Modifying Current User's Voice State", "db/d5a/a07241.html", null ],
+    [ "Modifying a User's Voice State", "df/d3a/a07240.html", null ],
+    [ "Getting the Current User", "d1/ddc/a07238.html", null ],
+    [ "Getting a User", "db/d34/a07235.html", null ],
+    [ "Modifying the Current User", "d3/d34/a07242.html", null ],
+    [ "Getting User Connections", "d3/da3/a07239.html", null ],
+    [ "Getting Current User Application Info", "dd/df9/a07236.html", null ],
+    [ "Getting Current User Authorization Info", "d8/d6e/a07237.html", null ]
 ];

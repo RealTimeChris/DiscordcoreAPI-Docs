@@ -102,11 +102,11 @@ $(document).ready(function(){initNavTree('d2/d43/a07249.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Getting Current User Application Info </div></div>
+  <div class="headertitle"><div class="title">Executing a WebHook </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_User_Stuff_Getting_Current_User_Application_Info"></a></p><ul>
-<li>Execute the, <code><a class="el" href="../../d0/d92/a03585.html#a14736cb0de3edc3e688da6952f953a6a" title="Collects the Application responseData associated with the current Bot.">DiscordCoreAPI::Users::getCurrentUserApplicationInfoAsync()</a></code> function, with a return value of type <code>auto</code> or <code><a class="el" href="../../d4/d73/a02465.html" title="Application data.">DiscordCoreAPI::ApplicationData</a></code>.</li>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_WebHook_Stuff_Executing_a_WebHook"></a></p><ul>
+<li>Execute the, <code><a class="el" href="../../d8/d23/a03712.html#a37afff04c87916e743e29657b6bb8b77" title="Executes a single WebHook.">DiscordCoreAPI::WebHooks::executeWebHookAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../d7/df2/a03656.html" title="For executing a WebHook.">DiscordCoreAPI::ExecuteWebHookData</a></code>, with a return value of type <code>void</code>.</li>
 <li>Call the function with <code>.get()</code> added to the end in order to wait for the results now.</li>
 </ul>
 <div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
@@ -116,18 +116,18 @@ $(document).ready(function(){initNavTree('d2/d43/a07249.html','../../'); initRes
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d5/de8/a00749.html">Index.hpp</a>&gt;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d7/d46/a00890.html">DiscordCoreAPI</a> {</div>
+<div class="line"><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a> {</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">class </span>Test : <span class="keyword">public</span> <a class="code hl_struct" href="../../dc/dfd/a02837.html">DiscordCoreAPI::BaseFunction</a> {</div>
+<div class="line">    <span class="keyword">class </span>Test : <span class="keyword">public</span> <a class="code hl_struct" href="../../d9/d4d/a02840.html">DiscordCoreAPI::BaseFunction</a> {</div>
 <div class="line">      <span class="keyword">public</span>:</div>
 <div class="line">        Test() {</div>
 <div class="line">            this-&gt;commandName = <span class="stringliteral">&quot;test&quot;</span>;</div>
 <div class="line">            this-&gt;helpDescription = <span class="stringliteral">&quot;Testing purposes!&quot;</span>;</div>
-<div class="line">            <a class="code hl_class" href="../../d0/d71/a02329.html">DiscordCoreAPI::EmbedData</a> msgEmbed { };</div>
-<div class="line">            msgEmbed.<a class="code hl_function" href="../../d0/d71/a02329.html#a9d4066a4861408bc00eccb22a12db7f9">setDescription</a>(<span class="stringliteral">&quot;------\nSimply enter !test or /test!\n------&quot;</span>);</div>
-<div class="line">            msgEmbed.<a class="code hl_function" href="../../d0/d71/a02329.html#a20ca60ec3235f44a223f3d3b687c0c9e">setTitle</a>(<span class="stringliteral">&quot;__**Test Usage:**__&quot;</span>);</div>
-<div class="line">            msgEmbed.<a class="code hl_function" href="../../d0/d71/a02329.html#ae356e6dc3c93658b7228b56da3187896">setTimeStamp</a>(getTimeAndDate());</div>
-<div class="line">            msgEmbed.<a class="code hl_function" href="../../d0/d71/a02329.html#ab417d83fddf9df80eca98e9ec6e888aa">setColor</a>(<span class="stringliteral">&quot;FeFeFe&quot;</span>);</div>
+<div class="line">            <a class="code hl_class" href="../../d1/d03/a02332.html">DiscordCoreAPI::EmbedData</a> msgEmbed { };</div>
+<div class="line">            msgEmbed.<a class="code hl_function" href="../../d1/d03/a02332.html#a9d4066a4861408bc00eccb22a12db7f9">setDescription</a>(<span class="stringliteral">&quot;------\nSimply enter !test or /test!\n------&quot;</span>);</div>
+<div class="line">            msgEmbed.<a class="code hl_function" href="../../d1/d03/a02332.html#a20ca60ec3235f44a223f3d3b687c0c9e">setTitle</a>(<span class="stringliteral">&quot;__**Test Usage:**__&quot;</span>);</div>
+<div class="line">            msgEmbed.<a class="code hl_function" href="../../d1/d03/a02332.html#ae356e6dc3c93658b7228b56da3187896">setTimeStamp</a>(getTimeAndDate());</div>
+<div class="line">            msgEmbed.<a class="code hl_function" href="../../d1/d03/a02332.html#ab417d83fddf9df80eca98e9ec6e888aa">setColor</a>(<span class="stringliteral">&quot;FeFeFe&quot;</span>);</div>
 <div class="line">            this-&gt;helpEmbed = msgEmbed;</div>
 <div class="line">        }</div>
 <div class="line"> </div>
@@ -135,11 +135,17 @@ $(document).ready(function(){initNavTree('d2/d43/a07249.html','../../'); initRes
 <div class="line">            <span class="keywordflow">return</span> std::make_unique&lt;Test&gt;();</div>
 <div class="line">        }</div>
 <div class="line"> </div>
-<div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../d0/d2b/a02833.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
+<div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
 <div class="line">            <span class="keywordflow">try</span> {</div>
-<div class="line">                <span class="keyword">auto</span> responseData = <a class="code hl_function" href="../../d0/d92/a03585.html#a14736cb0de3edc3e688da6952f953a6a">DiscordCoreAPI::Users::getCurrentUserApplicationInfoAsync</a>().get();</div>
+<div class="line">                <a class="code hl_struct" href="../../d9/d9a/a03668.html">DiscordCoreAPI::GetGuildWebHooksData</a> dataPackage;</div>
+<div class="line">                dataPackage.<a class="code hl_variable" href="../../d9/d9a/a03668.html#a2138f34efe5bed2b871a0c4e8a82d488">guildId</a> = args.eventData.<a class="code hl_function" href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
 <div class="line"> </div>
-<div class="line">                cout &lt;&lt; <span class="stringliteral">&quot;THE NAME: &quot;</span> &lt;&lt; responseData.name &lt;&lt; endl;</div>
+<div class="line">                <span class="keyword">auto</span> newWebHooks = <a class="code hl_function" href="../../d8/d23/a03712.html#a157a654e748b04fc7112071ee43ec787">DiscordCoreAPI::WebHooks::getGuildWebHooksAsync</a>(dataPackage).get();</div>
+<div class="line"> </div>
+<div class="line">                <a class="code hl_class" href="../../d7/df2/a03656.html">DiscordCoreAPI::ExecuteWebHookData</a> dataPackage01 {newWebHooks[0]};</div>
+<div class="line">                dataPackage01.<a class="code hl_function" href="../../d7/df2/a03656.html#a619a707d0e53029c7bc5817f5bc93938">addContent</a>(<span class="stringliteral">&quot;TEST CONTENT&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">                <a class="code hl_function" href="../../d8/d23/a03712.html#a37afff04c87916e743e29657b6bb8b77">DiscordCoreAPI::WebHooks::executeWebHookAsync</a>(dataPackage01).get();</div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line">            } <span class="keywordflow">catch</span> (...) {</div>
@@ -151,15 +157,21 @@ $(document).ready(function(){initNavTree('d2/d43/a07249.html','../../'); initRes
 <div class="line">    };</div>
 <div class="line">}</div>
 <div class="ttc" id="aa00749_html"><div class="ttname"><a href="../../d5/de8/a00749.html">Index.hpp</a></div></div>
-<div class="ttc" id="aa00890_html"><div class="ttname"><a href="../../d7/d46/a00890.html">DiscordCoreAPI</a></div><div class="ttdoc">The main namespace for this library.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00025">ApplicationCommandEntities.hpp:25</a></div></div>
-<div class="ttc" id="aa02329_html"><div class="ttname"><a href="../../d0/d71/a02329.html">DiscordCoreAPI::EmbedData</a></div><div class="ttdoc">Embed data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l00600">FoundationEntities.hpp:600</a></div></div>
-<div class="ttc" id="aa02329_html_a20ca60ec3235f44a223f3d3b687c0c9e"><div class="ttname"><a href="../../d0/d71/a02329.html#a20ca60ec3235f44a223f3d3b687c0c9e">DiscordCoreAPI::EmbedData::setTitle</a></div><div class="ttdeci">EmbedData &amp; setTitle(const std::string &amp;titleNew)</div><div class="ttdoc">Sets the title of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00381">FoundationEntities.cpp:381</a></div></div>
-<div class="ttc" id="aa02329_html_a9d4066a4861408bc00eccb22a12db7f9"><div class="ttname"><a href="../../d0/d71/a02329.html#a9d4066a4861408bc00eccb22a12db7f9">DiscordCoreAPI::EmbedData::setDescription</a></div><div class="ttdeci">EmbedData &amp; setDescription(const std::string &amp;descriptionNew)</div><div class="ttdoc">Sets the description (the main contents) of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00366">FoundationEntities.cpp:366</a></div></div>
-<div class="ttc" id="aa02329_html_ab417d83fddf9df80eca98e9ec6e888aa"><div class="ttname"><a href="../../d0/d71/a02329.html#ab417d83fddf9df80eca98e9ec6e888aa">DiscordCoreAPI::EmbedData::setColor</a></div><div class="ttdeci">EmbedData &amp; setColor(const std::string &amp;hexColorValueNew)</div><div class="ttdoc">Sets the color of the embed, by applying a hex-color value.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00371">FoundationEntities.cpp:371</a></div></div>
-<div class="ttc" id="aa02329_html_ae356e6dc3c93658b7228b56da3187896"><div class="ttname"><a href="../../d0/d71/a02329.html#ae356e6dc3c93658b7228b56da3187896">DiscordCoreAPI::EmbedData::setTimeStamp</a></div><div class="ttdeci">EmbedData &amp; setTimeStamp(const std::string &amp;timeStamp)</div><div class="ttdoc">Sets the timestamp on the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00352">FoundationEntities.cpp:352</a></div></div>
-<div class="ttc" id="aa02833_html"><div class="ttname"><a href="../../d0/d2b/a02833.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03795">FoundationEntities.hpp:3795</a></div></div>
-<div class="ttc" id="aa02837_html"><div class="ttname"><a href="../../dc/dfd/a02837.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03806">FoundationEntities.hpp:3806</a></div></div>
-<div class="ttc" id="aa03585_html_a14736cb0de3edc3e688da6952f953a6a"><div class="ttname"><a href="../../d0/d92/a03585.html#a14736cb0de3edc3e688da6952f953a6a">DiscordCoreAPI::Users::getCurrentUserApplicationInfoAsync</a></div><div class="ttdeci">static CoRoutine&lt; ApplicationData &gt; getCurrentUserApplicationInfoAsync()</div><div class="ttdoc">Collects the Application responseData associated with the current Bot.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d11/a00842_source.html#l00229">UserEntities.cpp:229</a></div></div>
+<div class="ttc" id="aa00893_html"><div class="ttname"><a href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></div><div class="ttdoc">The main namespace for this library.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00025">ApplicationCommandEntities.hpp:25</a></div></div>
+<div class="ttc" id="aa02332_html"><div class="ttname"><a href="../../d1/d03/a02332.html">DiscordCoreAPI::EmbedData</a></div><div class="ttdoc">Embed data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l00600">FoundationEntities.hpp:600</a></div></div>
+<div class="ttc" id="aa02332_html_a20ca60ec3235f44a223f3d3b687c0c9e"><div class="ttname"><a href="../../d1/d03/a02332.html#a20ca60ec3235f44a223f3d3b687c0c9e">DiscordCoreAPI::EmbedData::setTitle</a></div><div class="ttdeci">EmbedData &amp; setTitle(const std::string &amp;titleNew)</div><div class="ttdoc">Sets the title of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00394">FoundationEntities.cpp:394</a></div></div>
+<div class="ttc" id="aa02332_html_a9d4066a4861408bc00eccb22a12db7f9"><div class="ttname"><a href="../../d1/d03/a02332.html#a9d4066a4861408bc00eccb22a12db7f9">DiscordCoreAPI::EmbedData::setDescription</a></div><div class="ttdeci">EmbedData &amp; setDescription(const std::string &amp;descriptionNew)</div><div class="ttdoc">Sets the description (the main contents) of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00379">FoundationEntities.cpp:379</a></div></div>
+<div class="ttc" id="aa02332_html_ab417d83fddf9df80eca98e9ec6e888aa"><div class="ttname"><a href="../../d1/d03/a02332.html#ab417d83fddf9df80eca98e9ec6e888aa">DiscordCoreAPI::EmbedData::setColor</a></div><div class="ttdeci">EmbedData &amp; setColor(const std::string &amp;hexColorValueNew)</div><div class="ttdoc">Sets the color of the embed, by applying a hex-color value.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00384">FoundationEntities.cpp:384</a></div></div>
+<div class="ttc" id="aa02332_html_ae356e6dc3c93658b7228b56da3187896"><div class="ttname"><a href="../../d1/d03/a02332.html#ae356e6dc3c93658b7228b56da3187896">DiscordCoreAPI::EmbedData::setTimeStamp</a></div><div class="ttdeci">EmbedData &amp; setTimeStamp(const std::string &amp;timeStamp)</div><div class="ttdoc">Sets the timestamp on the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00365">FoundationEntities.cpp:365</a></div></div>
+<div class="ttc" id="aa02784_html_a565fe2447237030a716f64b2599996dd"><div class="ttname"><a href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">DiscordCoreAPI::InputEventData::getGuildId</a></div><div class="ttdeci">Snowflake getGuildId()</div><div class="ttdoc">Returns the Guild id, of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01643">FoundationEntities.cpp:1643</a></div></div>
+<div class="ttc" id="aa02836_html"><div class="ttname"><a href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03795">FoundationEntities.hpp:3795</a></div></div>
+<div class="ttc" id="aa02840_html"><div class="ttname"><a href="../../d9/d4d/a02840.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03806">FoundationEntities.hpp:3806</a></div></div>
+<div class="ttc" id="aa03656_html"><div class="ttname"><a href="../../d7/df2/a03656.html">DiscordCoreAPI::ExecuteWebHookData</a></div><div class="ttdoc">For executing a WebHook.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dfa/a00746_source.html#l00040">WebHookEntities.hpp:40</a></div></div>
+<div class="ttc" id="aa03656_html_a619a707d0e53029c7bc5817f5bc93938"><div class="ttname"><a href="../../d7/df2/a03656.html#a619a707d0e53029c7bc5817f5bc93938">DiscordCoreAPI::ExecuteWebHookData::addContent</a></div><div class="ttdeci">ExecuteWebHookData &amp; addContent(const std::string &amp;dataPackage)</div><div class="ttdoc">For setting the content in a response.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7e/a00809_source.html#l00165">WebHookEntities.cpp:165</a></div></div>
+<div class="ttc" id="aa03668_html"><div class="ttname"><a href="../../d9/d9a/a03668.html">DiscordCoreAPI::GetGuildWebHooksData</a></div><div class="ttdoc">For collecting a list of WebHooks from a chosen Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dfa/a00746_source.html#l00162">WebHookEntities.hpp:162</a></div></div>
+<div class="ttc" id="aa03668_html_a2138f34efe5bed2b871a0c4e8a82d488"><div class="ttname"><a href="../../d9/d9a/a03668.html#a2138f34efe5bed2b871a0c4e8a82d488">DiscordCoreAPI::GetGuildWebHooksData::guildId</a></div><div class="ttdeci">Snowflake guildId</div><div class="ttdoc">The Guild from which to collect the WebHooks.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dfa/a00746_source.html#l00163">WebHookEntities.hpp:163</a></div></div>
+<div class="ttc" id="aa03712_html_a157a654e748b04fc7112071ee43ec787"><div class="ttname"><a href="../../d8/d23/a03712.html#a157a654e748b04fc7112071ee43ec787">DiscordCoreAPI::WebHooks::getGuildWebHooksAsync</a></div><div class="ttdeci">static CoRoutine&lt; std::vector&lt; WebHook &gt; &gt; getGuildWebHooksAsync(GetGuildWebHooksData dataPackage)</div><div class="ttdoc">Collects a list of WebHooks from a chosen Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7e/a00809_source.html#l00255">WebHookEntities.cpp:255</a></div></div>
+<div class="ttc" id="aa03712_html_a37afff04c87916e743e29657b6bb8b77"><div class="ttname"><a href="../../d8/d23/a03712.html#a37afff04c87916e743e29657b6bb8b77">DiscordCoreAPI::WebHooks::executeWebHookAsync</a></div><div class="ttdeci">static CoRoutine&lt; Message &gt; executeWebHookAsync(ExecuteWebHookData dataPackage)</div><div class="ttdoc">Executes a single WebHook.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7e/a00809_source.html#l00340">WebHookEntities.cpp:340</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -167,7 +179,7 @@ $(document).ready(function(){initNavTree('d2/d43/a07249.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d0/dac/a07043.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../de/d2e/a07065.html">User Stuff</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d92/a07030.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d9/d0e/a07053.html">Webhook Stuff</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

@@ -102,73 +102,35 @@ $(document).ready(function(){initNavTree('d3/d1d/a07143.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Queue </div></div>
+  <div class="headertitle"><div class="title">Loop Song </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Music_Bot_Queue"></a> </p><div class="fragment"><div class="line"><span class="preprocessor">#pragma once</span></div>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Music_Bot_LoopSong"></a> </p><div class="fragment"><div class="line"><span class="preprocessor">#pragma once</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d5/de8/a00749.html">Index.hpp</a>&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;HelperFunctions.hpp&quot;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a> {</div>
-<div class="line"> </div>
-<div class="line">    std::vector&lt;EmbedData&gt; updateMessageEmbeds(std::vector&lt;Song&gt; playlist, DiscordGuild discordGuild, InputEventData interaction,InputEventData originalEvent, int32_t currentPageIndex ){</div>
-<div class="line">        std::vector&lt;std::vector&lt;EmbedFieldData&gt;&gt; msgEmbedFields;</div>
-<div class="line">        msgEmbedFields.push_back(std::vector&lt;EmbedFieldData&gt;());</div>
-<div class="line">        int32_t msgEmbedFieldsPage{ 0 };</div>
-<div class="line">       <span class="keywordflow">for</span> (int32_t y = 0; y &lt; playlist.size(); y++) {</div>
-<div class="line">           <span class="keywordflow">if</span> (y % 25 == 0 &amp;&amp; y &gt; 0) {</div>
-<div class="line">               msgEmbedFieldsPage++;</div>
-<div class="line">               msgEmbedFields.push_back(std::vector&lt;EmbedFieldData&gt;());</div>
-<div class="line">           }</div>
-<div class="line">           EmbedFieldData msgEmbedField = { .value = <span class="stringliteral">&quot;__**Title:**__ [&quot;</span> + playlist.at(y).songTitle + <span class="stringliteral">&quot;](&quot;</span> + playlist.at(y).viewUrl + <span class="stringliteral">&quot;)\n__**Added By:**__ &lt;@!&quot;</span> + playlist.at(y).addedByUserId + <span class="stringliteral">&quot;&gt; (&quot;</span> + playlist.at(y).addedByUserName + <span class="stringliteral">&quot;)&quot;</span>, .name = <span class="stringliteral">&quot;__**&quot;</span> + std::to_string(y + 1) + <span class="stringliteral">&quot; of &quot;</span> + std::to_string(playlist.size()) + <span class="stringliteral">&quot;**__&quot;</span>,.Inline = <span class="keyword">false</span> };</div>
-<div class="line">           msgEmbedFields[msgEmbedFieldsPage].push_back(msgEmbedField);</div>
-<div class="line">       }</div>
-<div class="line">       msgEmbedFieldsPage = 0;</div>
-<div class="line">       std::vector&lt;EmbedData&gt; newMsgEmbeds;</div>
-<div class="line">       <span class="keywordflow">for</span> (int32_t y = 0; y &lt; msgEmbedFields.size(); y++) {</div>
-<div class="line">           EmbedData msgEmbed;</div>
-<div class="line">           msgEmbed.setAuthor(originalEvent.getUserName(), originalEvent.getAvatarUrl());</div>
-<div class="line">           msgEmbed.setColor(discordGuild.data.borderColor);</div>
-<div class="line">           msgEmbed.setTimeStamp(<a class="code hl_function" href="../../de/dfc/a00891.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
-<div class="line">           msgEmbed.setTitle(<span class="stringliteral">&quot;__**Playlist, Page &quot;</span> + std::to_string(y + 1) + <span class="stringliteral">&quot; of &quot;</span> + std::to_string(msgEmbedFields.size()) + <span class="stringliteral">&quot;**__&quot;</span>);</div>
-<div class="line">           msgEmbed.setFooter(<span class="stringliteral">&quot;React with ✅ to edit the contents of the current page. React with ❌ to exit!&quot;</span>);</div>
-<div class="line">           msgEmbed.setDescription(<span class="stringliteral">&quot;__**React with ✅ to edit the contents of the current page. React with ❌ to exit!**__&quot;</span>).fields = msgEmbedFields[y];</div>
-<div class="line">           newMsgEmbeds.push_back(msgEmbed);</div>
-<div class="line">       }</div>
-<div class="line">       RespondToInputEventData dataPackage(originalEvent);</div>
-<div class="line">       dataPackage.setResponseType(<a class="code hl_enumvalue" href="../../de/dfc/a00891.html#gga6a10916bec24a00f6d6a41d8d880c1faa9f17700c2588d7159c91eb8c24be09f0">InputEventResponseType::Edit_Interaction_Response</a>);</div>
-<div class="line">       dataPackage.addMessageEmbed(newMsgEmbeds[currentPageIndex]);</div>
-<div class="line">       dataPackage.addContent(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line">       dataPackage.addButton(<span class="keyword">false</span>, <span class="stringliteral">&quot;check&quot;</span>, <span class="stringliteral">&quot;Edit&quot;</span>, <a class="code hl_enumvalue" href="../../de/dfc/a00891.html#ggae05b1bfe988b0c2989b7bed279c9c95ca505a83f220c02df2f85c3810cd9ceb38">ButtonStyle::Success</a>, <span class="stringliteral">&quot;✅&quot;</span>);</div>
-<div class="line">       dataPackage.addButton(<span class="keyword">false</span>, <span class="stringliteral">&quot;back&quot;</span>, <span class="stringliteral">&quot;Back&quot;</span>, <a class="code hl_enumvalue" href="../../de/dfc/a00891.html#ggae05b1bfe988b0c2989b7bed279c9c95ca505a83f220c02df2f85c3810cd9ceb38">ButtonStyle::Success</a>, <span class="stringliteral">&quot;◀️&quot;</span>);</div>
-<div class="line">       dataPackage.addButton(<span class="keyword">false</span>, <span class="stringliteral">&quot;next&quot;</span>, <span class="stringliteral">&quot;Next&quot;</span>, <a class="code hl_enumvalue" href="../../de/dfc/a00891.html#ggae05b1bfe988b0c2989b7bed279c9c95ca505a83f220c02df2f85c3810cd9ceb38">ButtonStyle::Success</a>, <span class="stringliteral">&quot;▶️&quot;</span>);</div>
-<div class="line">       dataPackage.addButton(<span class="keyword">false</span>, <span class="stringliteral">&quot;exit&quot;</span>, <span class="stringliteral">&quot;Exit&quot;</span>, <a class="code hl_enumvalue" href="../../de/dfc/a00891.html#ggae05b1bfe988b0c2989b7bed279c9c95ca505a83f220c02df2f85c3810cd9ceb38">ButtonStyle::Success</a>, <span class="stringliteral">&quot;❌&quot;</span>);</div>
-<div class="line">       <a class="code hl_function" href="../../d5/d3a/a03100.html#a91f7a025c00ec5b858a260ebcda49a3c">InputEvents::respondToInputEventAsync</a>(dataPackage);</div>
-<div class="line">       <span class="keywordflow">return</span> newMsgEmbeds;</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    <span class="keyword">class </span>TheQueue :<span class="keyword">public</span> <a class="code hl_struct" href="../../d9/d4d/a02840.html">DiscordCoreAPI::BaseFunction</a> {</div>
-<div class="line">    <span class="keyword">public</span>:</div>
-<div class="line"> </div>
-<div class="line">        TheQueue() {</div>
-<div class="line">            this-&gt;commandName = <span class="stringliteral">&quot;queue&quot;</span>;</div>
-<div class="line">            this-&gt;helpDescription = <span class="stringliteral">&quot;View and edit the song queue.&quot;</span>;</div>
+<div class="line">    <span class="keyword">namespace </span><a class="code hl_namespace" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a> {</div>
+<div class="line">    <span class="keyword">class </span>LoopSong : <span class="keyword">public</span> <a class="code hl_struct" href="../../d9/d4d/a02840.html">DiscordCoreAPI::BaseFunction</a> {</div>
+<div class="line">      <span class="keyword">public</span>:</div>
+<div class="line">        LoopSong() {</div>
+<div class="line">            this-&gt;commandName = <span class="stringliteral">&quot;LoopSong&quot;</span>;</div>
+<div class="line">            this-&gt;helpDescription = <span class="stringliteral">&quot;Enables or disables looping of the current song.&quot;</span>;</div>
 <div class="line">            EmbedData msgEmbed;</div>
-<div class="line">            msgEmbed.setDescription(<span class="stringliteral">&quot;------\nSimply enter /queue, and follow the instructions!\n------&quot;</span>);</div>
-<div class="line">            msgEmbed.setTitle(<span class="stringliteral">&quot;__**Queue Usage:**__&quot;</span>);</div>
-<div class="line">            msgEmbed.setTimeStamp(<a class="code hl_function" href="../../de/dfc/a00891.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
+<div class="line">            msgEmbed.setDescription(<span class="stringliteral">&quot;------\nSimply enter /loopsong!\n------&quot;</span>);</div>
+<div class="line">            msgEmbed.setTitle(<span class="stringliteral">&quot;__**Loop-Song Usage:**__&quot;</span>);</div>
+<div class="line">            msgEmbed.setTimeStamp(getTimeAndDate());</div>
 <div class="line">            msgEmbed.setColor(<span class="stringliteral">&quot;FeFeFe&quot;</span>);</div>
 <div class="line">            this-&gt;helpEmbed = msgEmbed;</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        std::unique_ptr&lt;DiscordCoreAPI::BaseFunction&gt; create() {</div>
-<div class="line">            <span class="keywordflow">return</span> std::make_unique&lt;TheQueue&gt;();</div>
+<div class="line">            <span class="keywordflow">return</span> std::make_unique&lt;LoopSong&gt;();</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
 <div class="line">            <span class="keywordflow">try</span> {</div>
-<div class="line">                <a class="code hl_enumvalue" href="../../de/dfc/a00891.html#gga1545487c64a71c2b5c36cde9f2bed49da781dc97dc62331eec3ea9ec4373a3ca8">Channel</a> channel = Channels::getCachedChannelAsync({ args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a97c397fe274250bfff73cf674810a8f5">getChannelId</a>() }).get();</div>
+<div class="line">                Channel channel = Channels::getCachedChannelAsync({.channelId = args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a97c397fe274250bfff73cf674810a8f5">getChannelId</a>()}).get();</div>
 <div class="line"> </div>
 <div class="line">                <span class="keywordtype">bool</span> areWeInADm = areWeInADM(*args.eventData, channel);</div>
 <div class="line"> </div>
@@ -178,16 +140,18 @@ $(document).ready(function(){initNavTree('d3/d1d/a07143.html','../../'); initRes
 <div class="line"> </div>
 <div class="line">                InputEvents::deleteInputEventResponseAsync(std::make_unique&lt;InputEventData&gt;(*args.eventData)).get();</div>
 <div class="line"> </div>
-<div class="line">                <a class="code hl_enumvalue" href="../../de/dfc/a00891.html#ggad9e8ad5aee2f4ab0b5a4c518a8d622eba3352be9c843db7e6d2cb865da8f1fbf0">Guild</a> guild = Guilds::getCachedGuildAsync({ args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>() }).get();</div>
+<div class="line">                Guild guild = Guilds::getCachedGuildAsync({.guildId = args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>()}).get();</div>
+<div class="line"> </div>
 <div class="line">                DiscordGuild discordGuild(guild);</div>
 <div class="line"> </div>
-<div class="line">                <span class="keywordtype">bool</span> checkIfAllowedInChannel = checkIfAllowedPlayingInChannel(*args.eventData, discordGuild);</div>
+<div class="line">                <span class="keywordtype">bool</span> areWeAllowed = checkIfAllowedPlayingInChannel(*args.eventData, discordGuild);</div>
 <div class="line"> </div>
-<div class="line">                <span class="keywordflow">if</span> (!checkIfAllowedInChannel) {</div>
+<div class="line">                <span class="keywordflow">if</span> (!areWeAllowed) {</div>
 <div class="line">                    <span class="keywordflow">return</span>;</div>
 <div class="line">                }</div>
 <div class="line"> </div>
-<div class="line">                GuildMember guildMember = GuildMembers::getCachedGuildMemberAsync({ .guildMemberId = args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a70865601071ddd3f49a50b280a0d4894">getAuthorId</a>(),.guildId = args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>() }).get();</div>
+<div class="line">                GuildMember guildMember =</div>
+<div class="line">                    GuildMembers::getCachedGuildMemberAsync({.guildMemberId = args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a70865601071ddd3f49a50b280a0d4894">getAuthorId</a>(), .guildId = args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>()}).get();</div>
 <div class="line"> </div>
 <div class="line">                <span class="keywordtype">bool</span> doWeHaveControl = checkIfWeHaveControl(*args.eventData, discordGuild, guildMember);</div>
 <div class="line"> </div>
@@ -195,301 +159,38 @@ $(document).ready(function(){initNavTree('d3/d1d/a07143.html','../../'); initRes
 <div class="line">                    <span class="keywordflow">return</span>;</div>
 <div class="line">                }</div>
 <div class="line"> </div>
-<div class="line">                std::unique_ptr&lt;InputEventData&gt; newEvent{ std::make_unique&lt;InputEventData&gt;(*args.eventData) };</div>
-<div class="line"> </div>
-<div class="line">                loadPlaylist(discordGuild);</div>
-<div class="line"> </div>
-<div class="line">                <span class="keywordflow">if</span> (SongAPI::getPlaylist(guild.id).songQueue.size() == 0) {</div>
-<div class="line">                    EmbedData msgEmbed;</div>
-<div class="line">                    msgEmbed.setAuthor(args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a3ebc65bb67fbd74518199db64e40559c">getUserName</a>(), args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a2dd12454f3ecd05f4cfbd22b027268bd">getAvatarUrl</a>());</div>
-<div class="line">                    msgEmbed.setColor(discordGuild.data.borderColor);</div>
-<div class="line">                    msgEmbed.setTimeStamp(<a class="code hl_function" href="../../de/dfc/a00891.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
-<div class="line">                    msgEmbed.setTitle(<span class="stringliteral">&quot;__**Empty Playlist:**__&quot;</span>);</div>
-<div class="line">                    msgEmbed.setDescription(<span class="stringliteral">&quot;------\n__**Sorry, but there is nothing here to display!**__\n------&quot;</span>);</div>
-<div class="line">                    RespondToInputEventData dataPackage(*args.eventData);</div>
-<div class="line">                    dataPackage.setResponseType(InputEventResponseType::Ephemeral_Interaction_Response);</div>
-<div class="line">                    dataPackage.addMessageEmbed(msgEmbed);</div>
-<div class="line">                    newEvent = InputEvents::respondToInputEventAsync(dataPackage);</div>
-<div class="line">                    <span class="keywordflow">return</span>;</div>
+<div class="line">                <span class="keywordflow">if</span> (SongAPI::isLoopSongEnabled(guild.id)) {</div>
+<div class="line">                    SongAPI::setLoopSongStatus(<span class="keyword">false</span>, guild.id);</div>
+<div class="line">                } <span class="keywordflow">else</span> {</div>
+<div class="line">                    SongAPI::setLoopSongStatus(<span class="keyword">true</span>, guild.id);</div>
 <div class="line">                }</div>
-<div class="line"> </div>
-<div class="line">                int32_t currentPageIndex = 0;</div>
+<div class="line">                EmbedData msgEmbed;</div>
+<div class="line">                msgEmbed.setAuthor(args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a3ebc65bb67fbd74518199db64e40559c">getUserName</a>(), args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a2dd12454f3ecd05f4cfbd22b027268bd">getAvatarUrl</a>());</div>
+<div class="line">                msgEmbed.setColor(discordGuild.data.borderColor);</div>
+<div class="line">                <span class="keywordflow">if</span> (SongAPI::isLoopSongEnabled(guild.id)) {</div>
+<div class="line">                    msgEmbed.setDescription(<span class="stringliteral">&quot;\n------\n__**Looping-Song has been enabled!**__\n------\n&quot;</span>);</div>
+<div class="line">                } <span class="keywordflow">else</span> {</div>
+<div class="line">                    msgEmbed.setDescription(<span class="stringliteral">&quot;\n------\n__**Looping-Song has been disabled!**__\n------\n&quot;</span>);</div>
+<div class="line">                }</div>
+<div class="line">                savePlaylist(discordGuild);</div>
+<div class="line">                msgEmbed.setTimeStamp(<a class="code hl_function" href="../../de/dfc/a00891.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
+<div class="line">                msgEmbed.setTitle(<span class="stringliteral">&quot;__**Looping-Song Change:**__&quot;</span>);</div>
 <div class="line">                RespondToInputEventData dataPackage(*args.eventData);</div>
-<div class="line">                dataPackage.setResponseType(InputEventResponseType::Deferred_Response);</div>
-<div class="line">                newEvent = InputEvents::respondToInputEventAsync(dataPackage);</div>
+<div class="line">                dataPackage.setResponseType(InputEventResponseType::Ephemeral_Interaction_Response);</div>
+<div class="line">                dataPackage.addMessageEmbed(msgEmbed);</div>
+<div class="line">                <span class="keyword">auto</span> newEvent = InputEvents::respondToInputEventAsync(dataPackage);</div>
 <div class="line"> </div>
-<div class="line">                std::vector&lt;std::vector&lt;EmbedFieldData&gt;&gt; msgEmbedFields;</div>
-<div class="line">                msgEmbedFields.push_back(std::vector&lt;EmbedFieldData&gt;());</div>
-<div class="line">                int32_t msgEmbedFieldsPage{ 0 };</div>
-<div class="line">                <span class="keywordflow">for</span> (int32_t y = 0; y &lt; SongAPI::getPlaylist(guild.id).songQueue.size(); y++) {</div>
-<div class="line">                    <span class="keywordflow">if</span> (y % 25 == 0 &amp;&amp; y &gt; 0) {</div>
-<div class="line">                        <span class="keywordflow">if</span> (y &gt; 0) {</div>
-<div class="line">                            msgEmbedFieldsPage++;</div>
-<div class="line">                        }</div>
-<div class="line">                        msgEmbedFields.push_back(std::vector&lt;EmbedFieldData&gt;());</div>
-<div class="line">                    }</div>
-<div class="line">                    EmbedFieldData msgEmbedField = { .value = <span class="stringliteral">&quot;__**Title:**__ [&quot;</span> + SongAPI::getPlaylist(guild.id).songQueue.at(y).songTitle + <span class="stringliteral">&quot;](&quot;</span> + SongAPI::getPlaylist(guild.id).songQueue.at(y).viewUrl + <span class="stringliteral">&quot;)\n__**Added By:**__ &lt;@!&quot;</span> +</div>
-<div class="line">                        SongAPI::getPlaylist(guild.id).songQueue.at(y).addedByUserId + <span class="stringliteral">&quot;&gt; (&quot;</span> + SongAPI::getPlaylist(guild.id).songQueue.at(y).addedByUserName + <span class="stringliteral">&quot;)&quot;</span>,.name = <span class="stringliteral">&quot;__**&quot;</span> + std::to_string(y + 1) + <span class="stringliteral">&quot; of &quot;</span> + std::to_string(SongAPI::getPlaylist(guild.id).songQueue.size()) + <span class="stringliteral">&quot;**__&quot;</span>,.Inline = <span class="keyword">false</span> };</div>
-<div class="line">                    msgEmbedFields[msgEmbedFieldsPage].push_back(msgEmbedField);</div>
-<div class="line">                }</div>
-<div class="line">                std::vector&lt;EmbedData&gt; msgEmbeds;</div>
-<div class="line">                msgEmbedFieldsPage = 0;</div>
-<div class="line">                <span class="keywordflow">for</span> (int32_t y = 0; y &lt; msgEmbedFields.size(); y++) {</div>
-<div class="line">                    EmbedData msgEmbed;</div>
-<div class="line">                    msgEmbed.setAuthor(args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a3ebc65bb67fbd74518199db64e40559c">getUserName</a>(), args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a2dd12454f3ecd05f4cfbd22b027268bd">getAvatarUrl</a>()).setColor(discordGuild.data.borderColor).setTimeStamp(<a class="code hl_function" href="../../de/dfc/a00891.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>()).setTitle(<span class="stringliteral">&quot;__**Playlist, Page &quot;</span> + std::to_string(y + 1) + <span class="stringliteral">&quot; of &quot;</span> + std::to_string(msgEmbedFields.size()) + <span class="stringliteral">&quot;**__&quot;</span>).</div>
-<div class="line">                        setFooter(<span class="stringliteral">&quot;React with ✅ to edit the contents of the current page. React with ❌ to exit!&quot;</span>).setDescription(<span class="stringliteral">&quot;__**React with ✅ to edit the contents of the current page. React with ❌ to exit!**__&quot;</span>).fields = msgEmbedFields[y];</div>
-<div class="line">                    msgEmbeds.push_back(msgEmbed);</div>
-<div class="line">                }</div>
-<div class="line">                RespondToInputEventData dataPackage02(*newEvent);</div>
-<div class="line">                dataPackage02.setResponseType(InputEventResponseType::Edit_Interaction_Response);</div>
-<div class="line">                dataPackage02.addMessageEmbed(msgEmbeds[currentPageIndex]);</div>
-<div class="line">                dataPackage02.addContent(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line">                dataPackage02.addButton(<span class="keyword">false</span>, <span class="stringliteral">&quot;check&quot;</span>, <span class="stringliteral">&quot;Edit&quot;</span>, ButtonStyle::Success, <span class="stringliteral">&quot;✅&quot;</span>);</div>
-<div class="line">                dataPackage02.addButton(<span class="keyword">false</span>, <span class="stringliteral">&quot;back&quot;</span>, <span class="stringliteral">&quot;Back&quot;</span>, ButtonStyle::Success, <span class="stringliteral">&quot;◀️&quot;</span>);</div>
-<div class="line">                dataPackage02.addButton(<span class="keyword">false</span>, <span class="stringliteral">&quot;next&quot;</span>, <span class="stringliteral">&quot;Next&quot;</span>, ButtonStyle::Success, <span class="stringliteral">&quot;▶️&quot;</span>);</div>
-<div class="line">                dataPackage02.addButton(<span class="keyword">false</span>, <span class="stringliteral">&quot;exit&quot;</span>, <span class="stringliteral">&quot;Exit&quot;</span>, ButtonStyle::Success, <span class="stringliteral">&quot;❌&quot;</span>);</div>
-<div class="line">                newEvent = InputEvents::respondToInputEventAsync(dataPackage02);</div>
-<div class="line">                <span class="keywordflow">for</span> (int32_t y = 0; y &lt; 1; y) {</div>
-<div class="line">                    ButtonCollector button(*newEvent);</div>
-<div class="line">                    <span class="keyword">auto</span> buttonCollectedData = button.collectButtonData(<span class="keyword">false</span>, 120000, 1, args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a70865601071ddd3f49a50b280a0d4894">getAuthorId</a>()).get();</div>
-<div class="line">                    std::string userID = args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a70865601071ddd3f49a50b280a0d4894">getAuthorId</a>();</div>
-<div class="line">                    <span class="keywordflow">if</span> (buttonCollectedData.size() == 0 || buttonCollectedData.at(0).buttonId == <span class="stringliteral">&quot;exit&quot;</span> || buttonCollectedData.at(0).buttonId == <span class="stringliteral">&quot;empty&quot;</span>) {</div>
-<div class="line">                        RespondToInputEventData dataPackage(*newEvent);</div>
-<div class="line">                        dataPackage.setResponseType(InputEventResponseType::Edit_Interaction_Response);</div>
-<div class="line">                        dataPackage.addMessageEmbed(msgEmbeds[currentPageIndex]);</div>
-<div class="line">                        dataPackage.addContent(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line">                        InputEvents::respondToInputEventAsync(dataPackage);</div>
-<div class="line">                        <span class="keywordflow">break</span>;</div>
-<div class="line">                    }</div>
-<div class="line">                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (buttonCollectedData.at(0).buttonId == <span class="stringliteral">&quot;next&quot;</span> &amp;&amp; (currentPageIndex == (msgEmbeds.size()-1))) {</div>
-<div class="line">                        currentPageIndex = 0;</div>
-<div class="line">                        RespondToInputEventData dataPackage(buttonCollectedData.at(0).interactionData);</div>
-<div class="line">                        dataPackage.setResponseType(InputEventResponseType::Edit_Interaction_Response);</div>
-<div class="line">                        dataPackage.addMessageEmbed(msgEmbeds[currentPageIndex]);</div>
-<div class="line">                        dataPackage.addContent(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line">                        dataPackage.addButton(<span class="keyword">false</span>, <span class="stringliteral">&quot;check&quot;</span>, <span class="stringliteral">&quot;Edit&quot;</span>, ButtonStyle::Success, <span class="stringliteral">&quot;✅&quot;</span>);</div>
-<div class="line">                        dataPackage.addButton(<span class="keyword">false</span>, <span class="stringliteral">&quot;back&quot;</span>, <span class="stringliteral">&quot;Back&quot;</span>, ButtonStyle::Success, <span class="stringliteral">&quot;◀️&quot;</span>);</div>
-<div class="line">                        dataPackage.addButton(<span class="keyword">false</span>, <span class="stringliteral">&quot;next&quot;</span>, <span class="stringliteral">&quot;Next&quot;</span>, ButtonStyle::Success, <span class="stringliteral">&quot;▶️&quot;</span>);</div>
-<div class="line">                        dataPackage.addButton(<span class="keyword">false</span>, <span class="stringliteral">&quot;exit&quot;</span>, <span class="stringliteral">&quot;Exit&quot;</span>, ButtonStyle::Success, <span class="stringliteral">&quot;❌&quot;</span>);</div>
-<div class="line">                        InputEvents::respondToInputEventAsync(dataPackage);</div>
-<div class="line">                        <span class="keywordflow">continue</span>;</div>
-<div class="line">                    }</div>
-<div class="line">                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (buttonCollectedData.at(0).buttonId == <span class="stringliteral">&quot;next&quot;</span> &amp;&amp; (currentPageIndex &lt; msgEmbeds.size())) {</div>
-<div class="line">                        currentPageIndex++;</div>
-<div class="line">                        RespondToInputEventData dataPackage(buttonCollectedData.at(0).interactionData);</div>
-<div class="line">                        dataPackage.setResponseType(InputEventResponseType::Edit_Interaction_Response);</div>
-<div class="line">                        dataPackage.addMessageEmbed(msgEmbeds[currentPageIndex]);</div>
-<div class="line">                        dataPackage.addContent(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line">                        dataPackage.addButton(<span class="keyword">false</span>, <span class="stringliteral">&quot;check&quot;</span>, <span class="stringliteral">&quot;Edit&quot;</span>, ButtonStyle::Success, <span class="stringliteral">&quot;✅&quot;</span>);</div>
-<div class="line">                        dataPackage.addButton(<span class="keyword">false</span>, <span class="stringliteral">&quot;back&quot;</span>, <span class="stringliteral">&quot;Back&quot;</span>, ButtonStyle::Success, <span class="stringliteral">&quot;◀️&quot;</span>);</div>
-<div class="line">                        dataPackage.addButton(<span class="keyword">false</span>, <span class="stringliteral">&quot;next&quot;</span>, <span class="stringliteral">&quot;Next&quot;</span>, ButtonStyle::Success, <span class="stringliteral">&quot;▶️&quot;</span>);</div>
-<div class="line">                        dataPackage.addButton(<span class="keyword">false</span>, <span class="stringliteral">&quot;exit&quot;</span>, <span class="stringliteral">&quot;Exit&quot;</span>, ButtonStyle::Success, <span class="stringliteral">&quot;❌&quot;</span>);</div>
-<div class="line">                        InputEvents::respondToInputEventAsync(dataPackage);</div>
-<div class="line">                        <span class="keywordflow">continue</span>;</div>
-<div class="line">                    }</div>
-<div class="line">                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (buttonCollectedData.at(0).buttonId == <span class="stringliteral">&quot;back&quot;</span> &amp;&amp; (currentPageIndex &gt; 0)) {</div>
-<div class="line">                        currentPageIndex--;</div>
-<div class="line">                        RespondToInputEventData dataPackage(buttonCollectedData.at(0).interactionData);</div>
-<div class="line">                        dataPackage.setResponseType(InputEventResponseType::Edit_Interaction_Response);</div>
-<div class="line">                        dataPackage.addMessageEmbed(msgEmbeds[currentPageIndex]);</div>
-<div class="line">                        dataPackage.addContent(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line">                        dataPackage.addButton(<span class="keyword">false</span>, <span class="stringliteral">&quot;check&quot;</span>, <span class="stringliteral">&quot;Edit&quot;</span>, ButtonStyle::Success, <span class="stringliteral">&quot;✅&quot;</span>);</div>
-<div class="line">                        dataPackage.addButton(<span class="keyword">false</span>, <span class="stringliteral">&quot;back&quot;</span>, <span class="stringliteral">&quot;Back&quot;</span>, ButtonStyle::Success, <span class="stringliteral">&quot;◀️&quot;</span>);</div>
-<div class="line">                        dataPackage.addButton(<span class="keyword">false</span>, <span class="stringliteral">&quot;next&quot;</span>, <span class="stringliteral">&quot;Next&quot;</span>, ButtonStyle::Success, <span class="stringliteral">&quot;▶️&quot;</span>);</div>
-<div class="line">                        dataPackage.addButton(<span class="keyword">false</span>, <span class="stringliteral">&quot;exit&quot;</span>, <span class="stringliteral">&quot;Exit&quot;</span>, ButtonStyle::Success, <span class="stringliteral">&quot;❌&quot;</span>);</div>
-<div class="line">                        InputEvents::respondToInputEventAsync(dataPackage);</div>
-<div class="line">                        <span class="keywordflow">continue</span>;</div>
-<div class="line">                    }</div>
-<div class="line">                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (buttonCollectedData.at(0).buttonId == <span class="stringliteral">&quot;back&quot;</span> &amp;&amp; (currentPageIndex == 0)) {</div>
-<div class="line">                        currentPageIndex = (int32_t)msgEmbeds.size()-1;</div>
-<div class="line">                        RespondToInputEventData dataPackage(buttonCollectedData.at(0).interactionData);</div>
-<div class="line">                        dataPackage.setResponseType(InputEventResponseType::Edit_Interaction_Response);</div>
-<div class="line">                        dataPackage.addMessageEmbed(msgEmbeds[currentPageIndex]);</div>
-<div class="line">                        dataPackage.addContent(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line">                        dataPackage.addButton(<span class="keyword">false</span>, <span class="stringliteral">&quot;check&quot;</span>, <span class="stringliteral">&quot;Edit&quot;</span>, ButtonStyle::Success, <span class="stringliteral">&quot;✅&quot;</span>);</div>
-<div class="line">                        dataPackage.addButton(<span class="keyword">false</span>, <span class="stringliteral">&quot;back&quot;</span>, <span class="stringliteral">&quot;Back&quot;</span>, ButtonStyle::Success, <span class="stringliteral">&quot;◀️&quot;</span>);</div>
-<div class="line">                        dataPackage.addButton(<span class="keyword">false</span>, <span class="stringliteral">&quot;next&quot;</span>, <span class="stringliteral">&quot;Next&quot;</span>, ButtonStyle::Success, <span class="stringliteral">&quot;▶️&quot;</span>);</div>
-<div class="line">                        dataPackage.addButton(<span class="keyword">false</span>, <span class="stringliteral">&quot;exit&quot;</span>, <span class="stringliteral">&quot;Exit&quot;</span>, ButtonStyle::Success, <span class="stringliteral">&quot;❌&quot;</span>);</div>
-<div class="line">                        InputEvents::respondToInputEventAsync(dataPackage);</div>
-<div class="line">                        <span class="keywordflow">continue</span>;</div>
-<div class="line">                    }</div>
-<div class="line">                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (buttonCollectedData.at(0).buttonId == <span class="stringliteral">&quot;check&quot;</span>) {</div>
-<div class="line">                        <span class="keywordtype">bool</span> doWeQuit{ <span class="keyword">false</span> };</div>
-<div class="line">                        msgEmbeds[currentPageIndex].setDescription(<span class="stringliteral">&quot;__Type &#39;remove &lt;trackNumber&gt;&#39; to remove a track.\nType &#39;swap &lt;sourceTrackNumber&gt; &lt;destinationTrackNumber&gt;&#39; to swap tracks.\nType &#39;shuffle&#39; to shuffle the playlist.\nType &#39;exit&#39; to exit.__\n&quot;</span>);</div>
-<div class="line">                        msgEmbeds[currentPageIndex].setFooter(<span class="stringliteral">&quot;Type &#39;remove &lt;trackNumber&gt;&#39; to remove a track.\nType &#39;swap &lt;sourceTrackNumber&gt; &lt;destinationTrackNumber&gt;&#39; to swap tracks.\nType &#39;shuffle&#39; to shuffle the playlist.\nType &#39;exit&#39; to exit.&quot;</span>);</div>
-<div class="line">                        <span class="keywordflow">while</span> (!doWeQuit) {</div>
-<div class="line">                            RespondToInputEventData dataPackage(buttonCollectedData.at(0).interactionData);</div>
-<div class="line">                            dataPackage.setResponseType(InputEventResponseType::Edit_Interaction_Response);</div>
-<div class="line">                            dataPackage.addMessageEmbed(msgEmbeds[currentPageIndex]);</div>
-<div class="line">                            dataPackage.addContent(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line">                            InputEvents::respondToInputEventAsync(dataPackage);</div>
-<div class="line"> </div>
-<div class="line">                            std::function&lt;bool(Message)&gt; messageFilter= [=](<a class="code hl_enumvalue" href="../../de/dfc/a00891.html#gga0c1e88669ddc5cba35fdf5d84af435b8a4c2a8fe7eaf24721cc7a9f0175115bd4">Message</a> message)-&gt; <span class="keywordtype">bool</span> {</div>
-<div class="line">                                <span class="keywordflow">if</span> (userID == message.author.id) {</div>
-<div class="line">                                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line">                                }</div>
-<div class="line">                                <span class="keywordflow">else</span> {</div>
-<div class="line">                                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line">                                }</div>
-<div class="line">                            };</div>
-<div class="line"> </div>
-<div class="line">                            MessageCollector messageCollector;</div>
-<div class="line">                            <span class="keyword">auto</span> returnedMessages = messageCollector.collectMessages(1, 120000, userID, messageFilter);</div>
-<div class="line">                            <span class="keywordflow">if</span> (returnedMessages.get().messages.size() == 0) {</div>
-<div class="line">                                msgEmbeds.erase(msgEmbeds.begin() + currentPageIndex, msgEmbeds.begin() + currentPageIndex + 1);</div>
-<div class="line">                                msgEmbeds = updateMessageEmbeds(SongAPI::getPlaylist(guild.id).songQueue, discordGuild, *newEvent, *args.eventData, currentPageIndex);</div>
-<div class="line">                                doWeQuit = <span class="keyword">true</span>;</div>
-<div class="line">                                <span class="keywordflow">break</span>;</div>
-<div class="line">                            }</div>
-<div class="line">                            std::vector&lt;std::string&gt; args2;</div>
-<div class="line">                            std::string newString = convertToLowerCase(returnedMessages.get().messages.at(0).content);</div>
-<div class="line">                            std::regex wordRegex(<span class="stringliteral">&quot;[a-z]{1,12}&quot;</span>);</div>
-<div class="line">                            std::smatch wordRegexMatch;</div>
-<div class="line">                            regex_search(newString, wordRegexMatch, wordRegex, std::regex_constants::match_flag_type::match_any | std::regex_constants::match_flag_type::match_not_null | std::regex_constants::match_flag_type::match_prev_avail);</div>
-<div class="line">                            args2.push_back(wordRegexMatch.str());</div>
-<div class="line">                            std::regex_iterator&lt;const char*&gt;::regex_type rx(<span class="stringliteral">&quot;\\d{1,4}&quot;</span>);</div>
-<div class="line">                            std::regex_iterator&lt;const char*&gt; next(newString.c_str(), newString.c_str() + strlen(newString.c_str()), rx);</div>
-<div class="line">                            std::regex_iterator&lt;const char*&gt; end;</div>
-<div class="line"> </div>
-<div class="line">                            <span class="keywordflow">for</span> (; next != end; ++next) {</div>
-<div class="line">                                args2.push_back(next-&gt;str());</div>
-<div class="line">                            }</div>
-<div class="line">                            std::regex digitRegex(<span class="stringliteral">&quot;\\d{1,3}&quot;</span>);</div>
-<div class="line">                            <span class="keywordflow">if</span> (args2.size() == 0 || convertToLowerCase(args2[0]) == <span class="stringliteral">&quot;exit&quot;</span>) {</div>
-<div class="line">                                Messages::deleteMessageAsync({ .messageData = returnedMessages.get().messages[0],.reason = <span class="stringliteral">&quot;Deleting the message!&quot;</span> }).get();</div>
-<div class="line">                                msgEmbeds.erase(msgEmbeds.begin() + currentPageIndex, msgEmbeds.begin() + currentPageIndex + 1);</div>
-<div class="line">                                msgEmbeds = updateMessageEmbeds(SongAPI::getPlaylist(guild.id).songQueue, discordGuild, *newEvent, *args.eventData, currentPageIndex);</div>
-<div class="line">                                doWeQuit = <span class="keyword">true</span>;</div>
-<div class="line">                                <span class="keywordflow">break</span>;</div>
-<div class="line">                            }</div>
-<div class="line">                            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (convertToLowerCase(args2[0]) != <span class="stringliteral">&quot;remove&quot;</span> &amp;&amp; convertToLowerCase(args2[0]) != <span class="stringliteral">&quot;swap&quot;</span> &amp;&amp; convertToLowerCase(args2[0]) != <span class="stringliteral">&quot;exit&quot;</span> &amp;&amp; convertToLowerCase(args2[0]) != <span class="stringliteral">&quot;shuffle&quot;</span>) {</div>
-<div class="line">                                msgEmbeds[currentPageIndex].setDescription(<span class="stringliteral">&quot;__**PLEASE ENTER A PROPER INPUT!**__\n__Type &#39;remove &lt;trackNumber&gt;&#39; to remove a track.\nType &#39;swap &lt;sourceTrackNumber&gt; &lt;destinationTrackNumber&gt;&#39; to swap tracks.\nType &#39;shuffle&#39; to shuffle the playlist.\nType exit to exit.__\n&quot;</span>);</div>
-<div class="line">                                msgEmbeds[currentPageIndex].setFooter(<span class="stringliteral">&quot;PLEASE ENTER A PROPER INPUT!\nType &#39;remove &lt;trackNumber&gt;&#39; to remove a track.\nType &#39;swap &lt;sourceTrackNumber&gt; &lt;destinationTrackNumber&gt;&#39; to swap tracks.\nType &#39;shuffle&#39; to shuffle the playlist.\nType &#39;exit&#39; to exit.&quot;</span>);</div>
-<div class="line">                                Messages::deleteMessageAsync({ .messageData = returnedMessages.get().messages[0],.reason = <span class="stringliteral">&quot;Deleting the message!&quot;</span> }).get();</div>
-<div class="line">                                RespondToInputEventData dataPackage03(*newEvent);</div>
-<div class="line">                                dataPackage03.setResponseType(InputEventResponseType::Edit_Interaction_Response);</div>
-<div class="line">                                dataPackage03.addMessageEmbed(msgEmbeds[currentPageIndex]);</div>
-<div class="line">                                dataPackage03.addContent(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line">                                InputEvents::respondToInputEventAsync(dataPackage03);</div>
-<div class="line">                                <span class="keywordflow">continue</span>;</div>
-<div class="line">                            }</div>
-<div class="line">                            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (convertToLowerCase(args2[0]) == <span class="stringliteral">&quot;remove&quot;</span>) {</div>
-<div class="line">                                <span class="keywordflow">if</span> (args2.size() &lt; 2 || !regex_search(args2[1].c_str(), digitRegex)) {</div>
-<div class="line">                                    msgEmbeds[currentPageIndex].setDescription(<span class="stringliteral">&quot;__**PLEASE ENTER A PROPER INPUT!**__\n__Type &#39;remove &lt;trackNumber&gt;&#39; to remove a track.\nType &#39;swap &lt;sourceTrackNumber&gt; &lt;destinationTrackNumber&gt;&#39; to swap tracks.\nType &#39;shuffle&#39; to shuffle the playlist.\nType exit to exit.__\n&quot;</span>);</div>
-<div class="line">                                    msgEmbeds[currentPageIndex].setFooter(<span class="stringliteral">&quot;PLEASE ENTER A PROPER INPUT!\nType &#39;remove &lt;trackNumber&gt;&#39; to remove a track.\nType &#39;swap &lt;sourceTrackNumber&gt; &lt;destinationTrackNumber&gt;&#39; to swap tracks.\nType &#39;shuffle&#39; to shuffle the playlist.\nType &#39;exit&#39; to exit.&quot;</span>);</div>
-<div class="line">                                    Messages::deleteMessageAsync({ .messageData = returnedMessages.get().messages[0],.reason = <span class="stringliteral">&quot;Deleting the message!&quot;</span> }).get();</div>
-<div class="line">                                    RespondToInputEventData dataPackage02(*newEvent);</div>
-<div class="line">                                    dataPackage02.setResponseType(InputEventResponseType::Edit_Interaction_Response);</div>
-<div class="line">                                    dataPackage02.addMessageEmbed(msgEmbeds[currentPageIndex]);</div>
-<div class="line">                                    dataPackage02.addContent(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line">                                    InputEvents::respondToInputEventAsync(dataPackage02);</div>
-<div class="line">                                    <span class="keywordflow">continue</span>;</div>
-<div class="line">                                }</div>
-<div class="line">                                <span class="keywordflow">if</span> ((stoll(args2[1])-1) &lt; 0 || (<span class="keywordtype">size_t</span>)(stoll(args2[1])-1) &gt;= SongAPI::getPlaylist(guild.id).songQueue.size() || args2.size() &lt; 1) {</div>
-<div class="line">                                    msgEmbeds[currentPageIndex].setDescription(<span class="stringliteral">&quot;__**PLEASE ENTER A PROPER INPUT!**__\n__Type &#39;remove &lt;trackNumber&gt;&#39; to remove a track.\nType &#39;swap &lt;sourceTrackNumber&gt; &lt;destinationTrackNumber&gt;&#39; to swap tracks.\nType &#39;shuffle&#39; to shuffle the playlist.\nType exit to exit.__\n&quot;</span>);</div>
-<div class="line">                                    msgEmbeds[currentPageIndex].setFooter(<span class="stringliteral">&quot;PLEASE ENTER A PROPER INPUT!\nType &#39;remove &lt;trackNumber&gt;&#39; to remove a track.\nType &#39;swap &lt;sourceTrackNumber&gt; &lt;destinationTrackNumber&gt;&#39; to swap tracks.\nType &#39;shuffle&#39; to shuffle the playlist.\nType &#39;exit&#39; to exit.&quot;</span>);</div>
-<div class="line">                                    Messages::deleteMessageAsync({ .messageData = returnedMessages.get().messages[0],.reason = <span class="stringliteral">&quot;Deleting the message!&quot;</span> }).get();</div>
-<div class="line">                                    RespondToInputEventData dataPackage02(*newEvent);</div>
-<div class="line">                                    dataPackage02.setResponseType(InputEventResponseType::Edit_Interaction_Response);</div>
-<div class="line">                                    dataPackage02.addMessageEmbed(msgEmbeds[currentPageIndex]);</div>
-<div class="line">                                    dataPackage02.addContent(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line">                                    InputEvents::respondToInputEventAsync(dataPackage02);</div>
-<div class="line">                                    <span class="keywordflow">continue</span>;</div>
-<div class="line">                                }</div>
-<div class="line">                                int32_t removeIndex = (int32_t)stoll(args2[1]);</div>
-<div class="line"> </div>
-<div class="line">                                <span class="keyword">auto</span> playlist = SongAPI::getPlaylist(guild.id);</div>
-<div class="line">                                playlist.songQueue.erase(playlist.songQueue.begin() + removeIndex-1, playlist.songQueue.begin() + removeIndex);</div>
-<div class="line">                                SongAPI::setPlaylist(playlist, guild.id);</div>
-<div class="line">                                Messages::deleteMessageAsync({ .messageData = returnedMessages.get().messages[0],.reason = <span class="stringliteral">&quot;Deleting the message!&quot;</span> }).get();</div>
-<div class="line">                                msgEmbeds.erase(msgEmbeds.begin() + currentPageIndex, msgEmbeds.begin() + currentPageIndex + 1);</div>
-<div class="line">                                msgEmbeds = updateMessageEmbeds(SongAPI::getPlaylist(guild.id).songQueue, discordGuild, *newEvent, *args.eventData, currentPageIndex);</div>
-<div class="line">                                doWeQuit = <span class="keyword">true</span>;</div>
-<div class="line">                                savePlaylist(discordGuild);</div>
-<div class="line">                                <span class="keywordflow">break</span>;</div>
-<div class="line">                            }</div>
-<div class="line">                            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (convertToLowerCase(args2[0]) == <span class="stringliteral">&quot;swap&quot;</span>) {</div>
-<div class="line">                                <span class="keywordflow">if</span> (args2.size() &lt; 3 || !regex_search(args2[1].c_str(), digitRegex) || !regex_search(args2[2].c_str(), digitRegex)) {</div>
-<div class="line">                                    msgEmbeds[currentPageIndex].setDescription(<span class="stringliteral">&quot;__**PLEASE ENTER A PROPER INPUT!**__\n__Type &#39;remove &lt;trackNumber&gt;&#39; to remove a track.\nType &#39;swap &lt;sourceTrackNumber&gt; &lt;destinationTrackNumber&gt;&#39; to swap tracks.\nType &#39;shuffle&#39; to shuffle the playlist.\nType exit to exit.__\n&quot;</span>);</div>
-<div class="line">                                    msgEmbeds[currentPageIndex].setFooter(<span class="stringliteral">&quot;PLEASE ENTER A PROPER INPUT!\nType &#39;remove &lt;trackNumber&gt;&#39; to remove a track.\nType &#39;swap &lt;sourceTrackNumber&gt; &lt;destinationTrackNumber&gt;&#39; to swap tracks.\nType &#39;shuffle&#39; to shuffle the playlist.\nType &#39;exit&#39; to exit.&quot;</span>);</div>
-<div class="line">                                    Messages::deleteMessageAsync({ .messageData = returnedMessages.get().messages[0],.reason = <span class="stringliteral">&quot;Deleting the message!&quot;</span> }).get();</div>
-<div class="line">                                    RespondToInputEventData dataPackage02(*newEvent);</div>
-<div class="line">                                    dataPackage02.setResponseType(InputEventResponseType::Edit_Interaction_Response);</div>
-<div class="line">                                    dataPackage02.addMessageEmbed(msgEmbeds[currentPageIndex]);</div>
-<div class="line">                                    dataPackage02.addContent(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line">                                    InputEvents::respondToInputEventAsync(dataPackage02);</div>
-<div class="line">                                    <span class="keywordflow">continue</span>;</div>
-<div class="line">                                }</div>
-<div class="line">                                <span class="keywordflow">if</span> (args2.size() &lt; 2 || ((stoll(args2[1])-1) &lt; 0 || (<span class="keywordtype">size_t</span>)(stoll(args2[1])-1) &gt;= SongAPI::getPlaylist(guild.id).songQueue.size() || (stoll(args2[2])-1) &lt; 0 || (<span class="keywordtype">size_t</span>)(stoll(args2[2])-1) &gt;= SongAPI::getPlaylist(guild.id).songQueue.size() || args2.size() &lt; 2)) {</div>
-<div class="line">                                    msgEmbeds[currentPageIndex].setDescription(<span class="stringliteral">&quot;__**PLEASE ENTER A PROPER INPUT!**__\n__Type &#39;remove &lt;trackNumber&gt;&#39; to remove a track.\nType &#39;swap &lt;sourceTrackNumber&gt; &lt;destinationTrackNumber&gt;&#39; to swap tracks.\nType &#39;shuffle&#39; to shuffle the playlist.\nType exit to exit.__\n&quot;</span>);</div>
-<div class="line">                                    msgEmbeds[currentPageIndex].setFooter(<span class="stringliteral">&quot;PLEASE ENTER A PROPER INPUT!\nType &#39;remove &lt;trackNumber&gt;&#39; to remove a track.\nType &#39;swap &lt;sourceTrackNumber&gt; &lt;destinationTrackNumber&gt;&#39; to swap tracks.\nType &#39;shuffle&#39; to shuffle the playlist.\nType &#39;exit&#39; to exit.&quot;</span>);</div>
-<div class="line">                                    Messages::deleteMessageAsync({ .messageData = returnedMessages.get().messages[0],.reason = <span class="stringliteral">&quot;Deleting the message!&quot;</span> }).get();</div>
-<div class="line">                                    RespondToInputEventData dataPackage02(*newEvent);</div>
-<div class="line">                                    dataPackage02.setResponseType(InputEventResponseType::Edit_Interaction_Response);</div>
-<div class="line">                                    dataPackage02.addMessageEmbed(msgEmbeds[currentPageIndex]);</div>
-<div class="line">                                    dataPackage02.addContent(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line">                                    InputEvents::respondToInputEventAsync(dataPackage02);</div>
-<div class="line">                                    <span class="keywordflow">continue</span>;</div>
-<div class="line">                                }</div>
-<div class="line"> </div>
-<div class="line">                                int32_t sourceIndex = (int32_t)stoll(args2[1])-1;</div>
-<div class="line">                                int32_t destinationIndex = (int32_t)stoll(args2[2])-1;</div>
-<div class="line">                                SongAPI::modifyQueue(sourceIndex, destinationIndex, guild.id);</div>
-<div class="line">                                Messages::deleteMessageAsync({ .messageData = returnedMessages.get().messages[0],.reason = <span class="stringliteral">&quot;Deleting the message!&quot;</span> }).get();</div>
-<div class="line">                                msgEmbeds.erase(msgEmbeds.begin() + currentPageIndex, msgEmbeds.begin() + currentPageIndex + 1);</div>
-<div class="line">                                msgEmbeds = updateMessageEmbeds(SongAPI::getPlaylist(guild.id).songQueue, discordGuild, *newEvent, *newEvent, currentPageIndex);</div>
-<div class="line">                                doWeQuit = <span class="keyword">true</span>;</div>
-<div class="line">                                savePlaylist(discordGuild);</div>
-<div class="line">                                <span class="keywordflow">break</span>;</div>
-<div class="line">                            }</div>
-<div class="line">                            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (convertToLowerCase(args2[0]) == <span class="stringliteral">&quot;shuffle&quot;</span>) {</div>
-<div class="line">                                <span class="keyword">auto</span> oldSongArray = SongAPI::getPlaylist(guild.id);</div>
-<div class="line">                                std::vector&lt;Song&gt; newVector;</div>
-<div class="line">                                <span class="keywordflow">while</span> (oldSongArray.songQueue.size() &gt; 0) {</div>
-<div class="line">                                    std::mt19937_64 randomEngine{ <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(std::chrono::system_clock::now().time_since_epoch()).count()) };</div>
-<div class="line">                                    int32_t randomIndex = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>((<span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(randomEngine())/<span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(randomEngine.max()) * <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(oldSongArray.songQueue.size())));</div>
-<div class="line">                                    newVector.push_back(oldSongArray.songQueue.at(randomIndex));</div>
-<div class="line">                                    oldSongArray.songQueue.erase(oldSongArray.songQueue.begin() + randomIndex, oldSongArray.songQueue.begin() + randomIndex + 1);</div>
-<div class="line">                                }</div>
-<div class="line">                                oldSongArray.songQueue = newVector;</div>
-<div class="line">                                SongAPI::setPlaylist(oldSongArray, guild.id);</div>
-<div class="line">                                Messages::deleteMessageAsync({ .messageData = returnedMessages.get().messages[0],.reason = <span class="stringliteral">&quot;Deleting the message!&quot;</span> }).get();</div>
-<div class="line">                                msgEmbeds.erase(msgEmbeds.begin() + currentPageIndex, msgEmbeds.begin() + currentPageIndex + 1);</div>
-<div class="line">                                msgEmbeds = updateMessageEmbeds(SongAPI::getPlaylist(guild.id).songQueue, discordGuild, *newEvent, *newEvent, currentPageIndex);</div>
-<div class="line">                                doWeQuit = <span class="keyword">true</span>;</div>
-<div class="line">                                savePlaylist(discordGuild);</div>
-<div class="line">                                <span class="keywordflow">break</span>;</div>
-<div class="line">                            }</div>
-<div class="line"> </div>
-<div class="line">                        }</div>
-<div class="line">                        <span class="keywordflow">if</span> (doWeQuit) {</div>
-<div class="line">                            savePlaylist(discordGuild);</div>
-<div class="line">                            <span class="keywordflow">continue</span>;</div>
-<div class="line">                        }</div>
-<div class="line"> </div>
-<div class="line">                    };</div>
-<div class="line">                    <span class="keywordflow">return</span>;</div>
-<div class="line">                }</div>
+<div class="line">                <span class="keywordflow">return</span>;</div>
+<div class="line">            } <span class="keywordflow">catch</span> (...) {</div>
+<div class="line">                <a class="code hl_function" href="../../de/dfc/a00891.html#ga805bf7170903087e933a7b81c8e39f15">reportException</a>(<span class="stringliteral">&quot;LoopSong::execute Error: &quot;</span>);</div>
 <div class="line">            }</div>
-<div class="line">            <span class="keywordflow">catch</span>(...){</div>
-<div class="line">                <a class="code hl_function" href="../../de/dfc/a00891.html#ga805bf7170903087e933a7b81c8e39f15">reportException</a>(<span class="stringliteral">&quot;Queue::execute Error: &quot;</span>);</div>
-<div class="line">            </div>
-<div class="line">            </div>
-<div class="line">            };</div>
-<div class="line">        };</div>
-<div class="line">        <span class="keyword">virtual</span> ~TheQueue() ;</div>
-<div class="line"> </div>
+<div class="line">        }</div>
+<div class="line">        <span class="keyword">virtual</span> ~LoopSong();</div>
 <div class="line">    };</div>
-<div class="line"> </div>
-<div class="line">};</div>
+<div class="line">}</div>
 <div class="ttc" id="aa00749_html"><div class="ttname"><a href="../../d5/de8/a00749.html">Index.hpp</a></div></div>
 <div class="ttc" id="aa00891_html_ga63ce723358a8b7a00c14e055f2a26998"><div class="ttname"><a href="../../de/dfc/a00891.html#ga63ce723358a8b7a00c14e055f2a26998">DiscordCoreAPI::getTimeAndDate</a></div><div class="ttdeci">DiscordCoreAPI_Dll std::string getTimeAndDate()</div><div class="ttdoc">Acquires a timestamp with the current time and date - suitable for use in message-embeds.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2d/a00815_source.html#l01122">Utilities.cpp:1122</a></div></div>
 <div class="ttc" id="aa00891_html_ga805bf7170903087e933a7b81c8e39f15"><div class="ttname"><a href="../../de/dfc/a00891.html#ga805bf7170903087e933a7b81c8e39f15">DiscordCoreAPI::reportException</a></div><div class="ttdeci">DiscordCoreAPI_Dll void reportException(const std::string &amp;currentFunctionName, std::source_location theLocation=std::source_location::current())</div><div class="ttdoc">Prints the current file, line, and column from which the function is being called - typically from wi...</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2d/a00815_source.html#l00907">Utilities.cpp:907</a></div></div>
-<div class="ttc" id="aa00891_html_gga0c1e88669ddc5cba35fdf5d84af435b8a4c2a8fe7eaf24721cc7a9f0175115bd4"><div class="ttname"><a href="../../de/dfc/a00891.html#gga0c1e88669ddc5cba35fdf5d84af435b8a4c2a8fe7eaf24721cc7a9f0175115bd4">DiscordCoreAPI::ApplicationCommandType::Message</a></div><div class="ttdeci">@ Message</div><div class="ttdoc">Message.</div></div>
-<div class="ttc" id="aa00891_html_gga1545487c64a71c2b5c36cde9f2bed49da781dc97dc62331eec3ea9ec4373a3ca8"><div class="ttname"><a href="../../de/dfc/a00891.html#gga1545487c64a71c2b5c36cde9f2bed49da781dc97dc62331eec3ea9ec4373a3ca8">DiscordCoreAPI::ApplicationCommandOptionType::Channel</a></div><div class="ttdeci">@ Channel</div><div class="ttdoc">Channel.</div></div>
-<div class="ttc" id="aa00891_html_gga6a10916bec24a00f6d6a41d8d880c1faa9f17700c2588d7159c91eb8c24be09f0"><div class="ttname"><a href="../../de/dfc/a00891.html#gga6a10916bec24a00f6d6a41d8d880c1faa9f17700c2588d7159c91eb8c24be09f0">DiscordCoreAPI::InputEventResponseType::Edit_Interaction_Response</a></div><div class="ttdeci">@ Edit_Interaction_Response</div><div class="ttdoc">Interaction response edit.</div></div>
-<div class="ttc" id="aa00891_html_ggad9e8ad5aee2f4ab0b5a4c518a8d622eba3352be9c843db7e6d2cb865da8f1fbf0"><div class="ttname"><a href="../../de/dfc/a00891.html#ggad9e8ad5aee2f4ab0b5a4c518a8d622eba3352be9c843db7e6d2cb865da8f1fbf0">DiscordCoreAPI::StickerType::Guild</a></div><div class="ttdeci">@ Guild</div><div class="ttdoc">Guild.</div></div>
-<div class="ttc" id="aa00891_html_ggae05b1bfe988b0c2989b7bed279c9c95ca505a83f220c02df2f85c3810cd9ceb38"><div class="ttname"><a href="../../de/dfc/a00891.html#ggae05b1bfe988b0c2989b7bed279c9c95ca505a83f220c02df2f85c3810cd9ceb38">DiscordCoreAPI::ButtonStyle::Success</a></div><div class="ttdeci">@ Success</div><div class="ttdoc">Success.</div></div>
 <div class="ttc" id="aa00893_html"><div class="ttname"><a href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></div><div class="ttdoc">The main namespace for this library.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00025">ApplicationCommandEntities.hpp:25</a></div></div>
 <div class="ttc" id="aa02784_html_a2dd12454f3ecd05f4cfbd22b027268bd"><div class="ttname"><a href="../../d0/d5a/a02784.html#a2dd12454f3ecd05f4cfbd22b027268bd">DiscordCoreAPI::InputEventData::getAvatarUrl</a></div><div class="ttdeci">std::string getAvatarUrl()</div><div class="ttdoc">Gets the avatar Url of the last User to trigger this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01611">FoundationEntities.cpp:1611</a></div></div>
 <div class="ttc" id="aa02784_html_a3ebc65bb67fbd74518199db64e40559c"><div class="ttname"><a href="../../d0/d5a/a02784.html#a3ebc65bb67fbd74518199db64e40559c">DiscordCoreAPI::InputEventData::getUserName</a></div><div class="ttdeci">std::string getUserName()</div><div class="ttdoc">Returns the userName of the last User to trigger this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01607">FoundationEntities.cpp:1607</a></div></div>
@@ -498,7 +199,6 @@ $(document).ready(function(){initNavTree('d3/d1d/a07143.html','../../'); initRes
 <div class="ttc" id="aa02784_html_a97c397fe274250bfff73cf674810a8f5"><div class="ttname"><a href="../../d0/d5a/a02784.html#a97c397fe274250bfff73cf674810a8f5">DiscordCoreAPI::InputEventData::getChannelId</a></div><div class="ttdeci">Snowflake getChannelId()</div><div class="ttdoc">Returns the Channel id of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01635">FoundationEntities.cpp:1635</a></div></div>
 <div class="ttc" id="aa02836_html"><div class="ttname"><a href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03795">FoundationEntities.hpp:3795</a></div></div>
 <div class="ttc" id="aa02840_html"><div class="ttname"><a href="../../d9/d4d/a02840.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03806">FoundationEntities.hpp:3806</a></div></div>
-<div class="ttc" id="aa03100_html_a91f7a025c00ec5b858a260ebcda49a3c"><div class="ttname"><a href="../../d5/d3a/a03100.html#a91f7a025c00ec5b858a260ebcda49a3c">DiscordCoreAPI::InputEvents::respondToInputEventAsync</a></div><div class="ttdeci">static CoRoutine&lt; InputEventData &gt; respondToInputEventAsync(RespondToInputEventData dataPackage)</div><div class="ttdoc">Responds to one of a number of types of &quot;InputEvents&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d8b/a00821_source.html#l00026">InputEvents.cpp:26</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -506,7 +206,7 @@ $(document).ready(function(){initNavTree('d3/d1d/a07143.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d2/d83/a07023.html">Guides</a></li><li class="navelem"><a class="el" href="../../d3/df9/a07137.html">Music-Bot Guide</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d1/d4b/a07031.html">Guides</a></li><li class="navelem"><a class="el" href="../../d2/d6f/a07145.html">Music-Bot Guide</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

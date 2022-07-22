@@ -102,11 +102,11 @@ $(document).ready(function(){initNavTree('d2/d2a/a07211.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Getting Nitro Sticker Packs </div></div>
+  <div class="headertitle"><div class="title">Creating a Stage Instance </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Sticker_Stuff_Getting_Nitro_Sticker_Packs"></a></p><ul>
-<li>Execute the, <code><a class="el" href="../../db/db5/a03468.html#a4cff15150c58e1cb8cb148da37425ba5" title="Gets a list of nitro-available Sticker packs.">DiscordCoreAPI::Stickers::getNitroStickerPacksAsync()</a></code> function, with a return value of type <code>auto</code> or <code>vector&lt;<a class="el" href="../../d7/d1c/a02732.html" title="Represents a Sticker pack.">DiscordCoreAPI::StickerPackData</a>&gt;</code>.</li>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Stage_Instance_Stuff_Creating_a_Stage_Instance"></a></p><ul>
+<li>Execute the, <code><a class="el" href="../../d4/d87/a03436.html#aa4ba46b360f8715672601543bd11bf7f" title="Creates a StageInstance.">DiscordCoreAPI::StageInstances::createStageInstanceAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../df/df7/a03416.html" title="For creating a StageInstance.">DiscordCoreAPI::CreateStageInstanceData</a></code>, with a return value of type <code>auto</code> or <code><a class="el" href="../../de/df8/a03432.html" title="A single StageInstance.">DiscordCoreAPI::StageInstance</a></code>.</li>
 <li>Call the function with <code>.get()</code> added to the end in order to wait for the results now.</li>
 </ul>
 <div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
@@ -137,19 +137,21 @@ $(document).ready(function(){initNavTree('d2/d2a/a07211.html','../../'); initRes
 <div class="line"> </div>
 <div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
 <div class="line">            <span class="keywordflow">try</span> {</div>
-<div class="line">                <span class="keyword">auto</span> responseData = <a class="code hl_function" href="../../db/db5/a03468.html#a4cff15150c58e1cb8cb148da37425ba5">DiscordCoreAPI::Stickers::getNitroStickerPacksAsync</a>().get();</div>
+<div class="line">                <a class="code hl_struct" href="../../df/df7/a03416.html">DiscordCoreAPI::CreateStageInstanceData</a> dataPackage;</div>
+<div class="line">                dataPackage.<a class="code hl_variable" href="../../df/df7/a03416.html#a02cf08fc37569685a9ae82ec5a414562">privacyLevel</a> = StageInstancePrivacyLevel::GUILD_ONLY;</div>
+<div class="line">                dataPackage.<a class="code hl_variable" href="../../df/df7/a03416.html#af3ffa8c5efa1f9b8b6232dc4b93644f5">channelId</a> = <span class="stringliteral">&quot;914726178022101052&quot;</span>;</div>
+<div class="line">                dataPackage.<a class="code hl_variable" href="../../df/df7/a03416.html#a567fdeac886b4a715102b9da63f21648">reason</a> = <span class="stringliteral">&quot;TESTING PURPOSES!&quot;</span>;</div>
+<div class="line">                dataPackage.<a class="code hl_variable" href="../../df/df7/a03416.html#adf8699043c6080d687c7d40fcc01cfb0">topic</a> = <span class="stringliteral">&quot;TESTING!&quot;</span>;</div>
 <div class="line"> </div>
-<div class="line">                <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; value: responseData) {</div>
-<div class="line">                    cout &lt;&lt; <span class="stringliteral">&quot;THE NAME: &quot;</span> &lt;&lt; value.name &lt;&lt; endl;</div>
-<div class="line">                }</div>
+<div class="line">                <span class="keyword">auto</span> responseData = <a class="code hl_function" href="../../d4/d87/a03436.html#aa4ba46b360f8715672601543bd11bf7f">DiscordCoreAPI::StageInstances::createStageInstanceAsync</a>(dataPackage).get();</div>
+<div class="line"> </div>
+<div class="line">                cout &lt;&lt; <span class="stringliteral">&quot;THE NAME: &quot;</span> &lt;&lt; responseData.topic &lt;&lt; endl;</div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line">            } <span class="keywordflow">catch</span> (...) {</div>
 <div class="line">                rethrowException(<span class="stringliteral">&quot;Test::execute()&quot;</span>);</div>
 <div class="line">            }</div>
 <div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">        <span class="keyword">virtual</span> ~Test() = <span class="keywordflow">default</span>;</div>
 <div class="line">    };</div>
 <div class="line">}</div>
 <div class="ttc" id="aa00749_html"><div class="ttname"><a href="../../d5/de8/a00749.html">Index.hpp</a></div></div>
@@ -161,7 +163,12 @@ $(document).ready(function(){initNavTree('d2/d2a/a07211.html','../../'); initRes
 <div class="ttc" id="aa02332_html_ae356e6dc3c93658b7228b56da3187896"><div class="ttname"><a href="../../d1/d03/a02332.html#ae356e6dc3c93658b7228b56da3187896">DiscordCoreAPI::EmbedData::setTimeStamp</a></div><div class="ttdeci">EmbedData &amp; setTimeStamp(const std::string &amp;timeStamp)</div><div class="ttdoc">Sets the timestamp on the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00365">FoundationEntities.cpp:365</a></div></div>
 <div class="ttc" id="aa02836_html"><div class="ttname"><a href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03795">FoundationEntities.hpp:3795</a></div></div>
 <div class="ttc" id="aa02840_html"><div class="ttname"><a href="../../d9/d4d/a02840.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03806">FoundationEntities.hpp:3806</a></div></div>
-<div class="ttc" id="aa03468_html_a4cff15150c58e1cb8cb148da37425ba5"><div class="ttname"><a href="../../db/db5/a03468.html#a4cff15150c58e1cb8cb148da37425ba5">DiscordCoreAPI::Stickers::getNitroStickerPacksAsync</a></div><div class="ttdeci">static CoRoutine&lt; std::vector&lt; StickerPackData &gt; &gt; getNitroStickerPacksAsync()</div><div class="ttdoc">Gets a list of nitro-available Sticker packs.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d0e/a00800_source.html#l00060">StickerEntities.cpp:60</a></div></div>
+<div class="ttc" id="aa03416_html"><div class="ttname"><a href="../../df/df7/a03416.html">DiscordCoreAPI::CreateStageInstanceData</a></div><div class="ttdoc">For creating a StageInstance.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d04/a00713_source.html#l00028">StageInstanceEntities.hpp:28</a></div></div>
+<div class="ttc" id="aa03416_html_a02cf08fc37569685a9ae82ec5a414562"><div class="ttname"><a href="../../df/df7/a03416.html#a02cf08fc37569685a9ae82ec5a414562">DiscordCoreAPI::CreateStageInstanceData::privacyLevel</a></div><div class="ttdeci">StageInstancePrivacyLevel privacyLevel</div><div class="ttdoc">The privacy level of the Stage instance(default Guild_Only).</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d04/a00713_source.html#l00029">StageInstanceEntities.hpp:29</a></div></div>
+<div class="ttc" id="aa03416_html_a567fdeac886b4a715102b9da63f21648"><div class="ttname"><a href="../../df/df7/a03416.html#a567fdeac886b4a715102b9da63f21648">DiscordCoreAPI::CreateStageInstanceData::reason</a></div><div class="ttdeci">std::string reason</div><div class="ttdoc">The reason for starting it.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d04/a00713_source.html#l00031">StageInstanceEntities.hpp:31</a></div></div>
+<div class="ttc" id="aa03416_html_adf8699043c6080d687c7d40fcc01cfb0"><div class="ttname"><a href="../../df/df7/a03416.html#adf8699043c6080d687c7d40fcc01cfb0">DiscordCoreAPI::CreateStageInstanceData::topic</a></div><div class="ttdeci">std::string topic</div><div class="ttdoc">The topic of the Stage instance(1 - 120 characters).</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d04/a00713_source.html#l00032">StageInstanceEntities.hpp:32</a></div></div>
+<div class="ttc" id="aa03416_html_af3ffa8c5efa1f9b8b6232dc4b93644f5"><div class="ttname"><a href="../../df/df7/a03416.html#af3ffa8c5efa1f9b8b6232dc4b93644f5">DiscordCoreAPI::CreateStageInstanceData::channelId</a></div><div class="ttdeci">Snowflake channelId</div><div class="ttdoc">The id of the Stage Channel.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d04/a00713_source.html#l00030">StageInstanceEntities.hpp:30</a></div></div>
+<div class="ttc" id="aa03436_html_aa4ba46b360f8715672601543bd11bf7f"><div class="ttname"><a href="../../d4/d87/a03436.html#aa4ba46b360f8715672601543bd11bf7f">DiscordCoreAPI::StageInstances::createStageInstanceAsync</a></div><div class="ttdeci">static CoRoutine&lt; StageInstance &gt; createStageInstanceAsync(CreateStageInstanceData dataPackage)</div><div class="ttdoc">Creates a StageInstance.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/db2/a00866_source.html#l00038">StageInstanceEntities.cpp:38</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -169,7 +176,7 @@ $(document).ready(function(){initNavTree('d2/d2a/a07211.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d00/a07022.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d1/d43/a07042.html">Sticker Stuff</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d92/a07030.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d9/d49/a07049.html">Stage-Instance Stuff</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

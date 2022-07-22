@@ -1,14 +1,19 @@
 var a07039 =
 [
-    [ "Creating a Reaction", "d7/da0/a07185.html", null ],
-    [ "Deleting Own Reaction", "db/d5b/a07189.html", null ],
-    [ "Deleting User Reaction", "d3/d41/a07190.html", null ],
-    [ "Getting Reactions", "d1/d69/a07193.html", null ],
-    [ "Deleting All Reactions", "d5/dae/a07188.html", null ],
-    [ "Deleting All Reactions for Emoji", "d9/df4/a07187.html", null ],
-    [ "Getting A list of Guild Emoji", "dd/db7/a07192.html", null ],
-    [ "Getting a Guild Emoji", "d8/da7/a07191.html", null ],
-    [ "Creating a Guild Emoji", "dc/dc2/a07184.html", null ],
-    [ "Modifying a Guild Emoji", "d9/d53/a07194.html", null ],
-    [ "Deleting a Guild Emoji", "d5/d2e/a07186.html", null ]
+    [ "Getting Global Application Commands", "de/d2e/a07065.html", null ],
+    [ "Creating a Global Application Command", "dd/d67/a07058.html", null ],
+    [ "Getting a Global Application Command", "d8/d4c/a07068.html", null ],
+    [ "Editing a Global Application Command", "d6/d0e/a07062.html", null ],
+    [ "Deleting a Global Application Command", "d4/df2/a07060.html", null ],
+    [ "Bulk Overwriting Global Application Commands", "d7/de7/a07056.html", null ],
+    [ "Getting Guild Application Commands", "d1/d3b/a07067.html", null ],
+    [ "Creating a Guild Application Command", "db/d67/a07059.html", null ],
+    [ "Getting a Guild Application Command", "dd/d41/a07066.html", null ],
+    [ "Editing a Guild Application Command", "d1/d84/a07063.html", null ],
+    [ "Deleting a Guild Application Command", "dc/db3/a07061.html", null ],
+    [ "Bulk Overwriting Guild Application Commands", "dc/d3d/a07057.html", null ],
+    [ "Getting Guild Application Command Permissions", "d5/db4/a07070.html", null ],
+    [ "Getting a Single Guild Application Command's Permissions", "d2/d4d/a07069.html", null ],
+    [ "Editing a Guild Application Command's Permissions", "df/d34/a07064.html", null ],
+    [ "Batch Editing Guild Application Command's Permissions", "d8/dcd/a07055.html", null ]
 ];

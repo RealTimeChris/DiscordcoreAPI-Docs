@@ -102,11 +102,11 @@ $(document).ready(function(){initNavTree('da/dea/a07108.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Getting Guild Bans </div></div>
+  <div class="headertitle"><div class="title">Getting a Guild Welcome Screen </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Guild_Stuff_Getting_Guild_Bans"></a></p><ul>
-<li>Execute the, <code><a class="el" href="../../d6/d5d/a02992.html#a9f60210563104cf486f7c0241c91c5c2" title="Collects a list of Bans from a chosen Guild.">DiscordCoreAPI::Guilds::getGuildBansAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../d9/df0/a02868.html" title="For getting a list of Guild bans.">DiscordCoreAPI::GetGuildBansData</a></code>, with a return value of type <code>auto</code> or <code>vector&lt;<a class="el" href="../../d4/da8/a02444.html" title="Ban data.">DiscordCoreAPI::BanData</a>&gt;</code>.</li>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Guild_Stuff_Getting_a_Guild_Welcome_Screen"></a></p><ul>
+<li>Execute the, <code><a class="el" href="../../d6/d5d/a02992.html#a2bbf156c74d3edbe626a353cabe58fa9" title="Gets the Guild welcome screen for a particular server.">DiscordCoreAPI::Guilds::getGuildWelcomeScreenAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../da/dad/a02928.html" title="For collecting a Guild&#39;s welcome screen.">DiscordCoreAPI::GetGuildWelcomeScreenData</a></code>, with a return value of type <code>auto</code> or <code><a class="el" href="../../da/dc4/a02548.html" title="Welcome screen data.">DiscordCoreAPI::WelcomeScreenData</a></code>.</li>
 <li>Call the function with <code>.get()</code> added to the end in order to wait for the results now.</li>
 </ul>
 <div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
@@ -137,15 +137,12 @@ $(document).ready(function(){initNavTree('da/dea/a07108.html','../../'); initRes
 <div class="line"> </div>
 <div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
 <div class="line">            <span class="keywordflow">try</span> {</div>
-<div class="line">                <a class="code hl_struct" href="../../d9/df0/a02868.html">DiscordCoreAPI::GetGuildBansData</a> dataPackage01;</div>
-<div class="line">                dataPackage01.<a class="code hl_variable" href="../../d9/df0/a02868.html#a89233f4bb00787d1db1d9df9bb70a86e">guildId</a> = args.eventData.<a class="code hl_function" href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
+<div class="line">                <a class="code hl_struct" href="../../da/dad/a02928.html">DiscordCoreAPI::GetGuildWelcomeScreenData</a> dataPackage01;</div>
+<div class="line">                dataPackage01.<a class="code hl_variable" href="../../da/dad/a02928.html#a1209bd8c62c410877e8b7ed987194eb5">guildId</a> = args.eventData.<a class="code hl_function" href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
 <div class="line"> </div>
-<div class="line">                <span class="keyword">auto</span> guildBans = <a class="code hl_function" href="../../d6/d5d/a02992.html#a9f60210563104cf486f7c0241c91c5c2">DiscordCoreAPI::Guilds::getGuildBansAsync</a>(dataPackage01).get();</div>
+<div class="line">                <span class="keyword">auto</span> responseData = <a class="code hl_function" href="../../d6/d5d/a02992.html#a2bbf156c74d3edbe626a353cabe58fa9">DiscordCoreAPI::Guilds::getGuildWelcomeScreenAsync</a>(dataPackage01).get();</div>
 <div class="line"> </div>
-<div class="line">                <span class="keywordflow">for</span> (<span class="keyword">auto</span> value: guildBans) {</div>
-<div class="line">                    cout &lt;&lt; <span class="stringliteral">&quot;THE BAN NAME: &quot;</span> &lt;&lt; value.user.userName &lt;&lt; endl;</div>
-<div class="line">                }</div>
-<div class="line"> </div>
+<div class="line">                cout &lt;&lt; boolalpha &lt;&lt; responseData.welcomeChannels.at(0).channelId &lt;&lt; endl;</div>
 <div class="line"> </div>
 <div class="line">            } <span class="keywordflow">catch</span> (...) {</div>
 <div class="line">                rethrowException(<span class="stringliteral">&quot;Test::execute()&quot;</span>);</div>
@@ -163,9 +160,9 @@ $(document).ready(function(){initNavTree('da/dea/a07108.html','../../'); initRes
 <div class="ttc" id="aa02784_html_a565fe2447237030a716f64b2599996dd"><div class="ttname"><a href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">DiscordCoreAPI::InputEventData::getGuildId</a></div><div class="ttdeci">Snowflake getGuildId()</div><div class="ttdoc">Returns the Guild id, of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01643">FoundationEntities.cpp:1643</a></div></div>
 <div class="ttc" id="aa02836_html"><div class="ttname"><a href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03795">FoundationEntities.hpp:3795</a></div></div>
 <div class="ttc" id="aa02840_html"><div class="ttname"><a href="../../d9/d4d/a02840.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03806">FoundationEntities.hpp:3806</a></div></div>
-<div class="ttc" id="aa02868_html"><div class="ttname"><a href="../../d9/df0/a02868.html">DiscordCoreAPI::GetGuildBansData</a></div><div class="ttdoc">For getting a list of Guild bans.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00077">GuildEntities.hpp:77</a></div></div>
-<div class="ttc" id="aa02868_html_a89233f4bb00787d1db1d9df9bb70a86e"><div class="ttname"><a href="../../d9/df0/a02868.html#a89233f4bb00787d1db1d9df9bb70a86e">DiscordCoreAPI::GetGuildBansData::guildId</a></div><div class="ttdeci">Snowflake guildId</div><div class="ttdoc">The Guild from which to collect the list of bans.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00078">GuildEntities.hpp:78</a></div></div>
-<div class="ttc" id="aa02992_html_a9f60210563104cf486f7c0241c91c5c2"><div class="ttname"><a href="../../d6/d5d/a02992.html#a9f60210563104cf486f7c0241c91c5c2">DiscordCoreAPI::Guilds::getGuildBansAsync</a></div><div class="ttdeci">static CoRoutine&lt; std::vector&lt; BanData &gt; &gt; getGuildBansAsync(GetGuildBansData dataPackage)</div><div class="ttdoc">Collects a list of Bans from a chosen Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d69/a00878_source.html#l00450">GuildEntities.cpp:450</a></div></div>
+<div class="ttc" id="aa02928_html"><div class="ttname"><a href="../../da/dad/a02928.html">DiscordCoreAPI::GetGuildWelcomeScreenData</a></div><div class="ttdoc">For collecting a Guild's welcome screen.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00176">GuildEntities.hpp:176</a></div></div>
+<div class="ttc" id="aa02928_html_a1209bd8c62c410877e8b7ed987194eb5"><div class="ttname"><a href="../../da/dad/a02928.html#a1209bd8c62c410877e8b7ed987194eb5">DiscordCoreAPI::GetGuildWelcomeScreenData::guildId</a></div><div class="ttdeci">Snowflake guildId</div><div class="ttdoc">The Guild for which to collect the widget image from.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00177">GuildEntities.hpp:177</a></div></div>
+<div class="ttc" id="aa02992_html_a2bbf156c74d3edbe626a353cabe58fa9"><div class="ttname"><a href="../../d6/d5d/a02992.html#a2bbf156c74d3edbe626a353cabe58fa9">DiscordCoreAPI::Guilds::getGuildWelcomeScreenAsync</a></div><div class="ttdeci">static CoRoutine&lt; WelcomeScreenData &gt; getGuildWelcomeScreenAsync(GetGuildWelcomeScreenData dataPackage)</div><div class="ttdoc">Gets the Guild welcome screen for a particular server.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d69/a00878_source.html#l00662">GuildEntities.cpp:662</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -173,7 +170,7 @@ $(document).ready(function(){initNavTree('da/dea/a07108.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d00/a07022.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../de/d18/a07033.html">Guild Stuff</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d92/a07030.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d7/dfb/a07041.html">Guild Stuff</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

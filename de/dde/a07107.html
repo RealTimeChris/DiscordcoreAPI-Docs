@@ -102,11 +102,11 @@ $(document).ready(function(){initNavTree('de/dde/a07107.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Getting Current User's Guilds </div></div>
+  <div class="headertitle"><div class="title">Getting a Guild Vanity Invite </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Guild_Stuff_Getting_Current_User_s_Guilds"></a></p><ul>
-<li>Execute the, <code><a class="el" href="../../d6/d5d/a02992.html#af499390e5b063c56b2d9a5b0a2b21d13" title="Collects a list of Guilds that the Bot is in.">DiscordCoreAPI::Guilds::getCurrentUserGuildsAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../d0/daf/a02972.html" title="For collecting a list of Guild&#39;s that the Bot is in.">DiscordCoreAPI::GetCurrentUserGuildsData</a></code>, with a return value of type <code>auto</code> or <code>vector&lt;<a class="el" href="../../d6/db9/a02980.html" title="A discord Guild. Used to connect to/disconnect from voice.">DiscordCoreAPI::Guild</a>&gt;</code>.</li>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Guild_Stuff_Getting_a_Guild_Vanity_Invite"></a></p><ul>
+<li>Execute the, <code><a class="el" href="../../d6/d5d/a02992.html#a5aaf20b371d866854e3d80648d5a50ae" title="Gets the vanity invite responseData from a particular server.">DiscordCoreAPI::Guilds::getGuildVanityInviteAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../d1/d77/a02920.html" title="For geting the vanity invite responseData of a Guild.">DiscordCoreAPI::GetGuildVanityInviteData</a></code>, with a return value of type <code>auto</code> or <code><a class="el" href="../../d1/df5/a02592.html" title="Invite data.">DiscordCoreAPI::InviteData</a></code>.</li>
 <li>Call the function with <code>.get()</code> added to the end in order to wait for the results now.</li>
 </ul>
 <div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
@@ -137,22 +137,17 @@ $(document).ready(function(){initNavTree('de/dde/a07107.html','../../'); initRes
 <div class="line"> </div>
 <div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
 <div class="line">            <span class="keywordflow">try</span> {</div>
-<div class="line">                <a class="code hl_struct" href="../../d0/daf/a02972.html">DiscordCoreAPI::GetCurrentUserGuildsData</a> dataPackage;</div>
-<div class="line">                dataPackage.<a class="code hl_variable" href="../../d0/daf/a02972.html#a96754c6d0a421023fcf7d5aa0412f1f4">limit</a> = 2;</div>
+<div class="line">                <a class="code hl_struct" href="../../d1/d77/a02920.html">DiscordCoreAPI::GetGuildVanityInviteData</a> dataPackage01;</div>
+<div class="line">                dataPackage01.<a class="code hl_variable" href="../../d1/d77/a02920.html#a31265fa5c3a7b002e86e4cae5402d9c9">guildId</a> = args.eventData.<a class="code hl_function" href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
 <div class="line"> </div>
-<div class="line">                <span class="keyword">auto</span> currentOutput = <a class="code hl_function" href="../../d6/d5d/a02992.html#af499390e5b063c56b2d9a5b0a2b21d13">DiscordCoreAPI::Guilds::getCurrentUserGuildsAsync</a>(dataPackage).get();</div>
+<div class="line">                <span class="keyword">auto</span> responseData = <a class="code hl_function" href="../../d6/d5d/a02992.html#a5aaf20b371d866854e3d80648d5a50ae">DiscordCoreAPI::Guilds::getGuildVanityInviteAsync</a>(dataPackage01).get();</div>
 <div class="line"> </div>
-<div class="line">                <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; value: currentOutput) {</div>
-<div class="line">                    cout &lt;&lt; <span class="stringliteral">&quot;GUILD NAME: &quot;</span> &lt;&lt; value.name &lt;&lt; endl;</div>
-<div class="line">                }</div>
-<div class="line"> </div>
+<div class="line">                cout &lt;&lt; boolalpha &lt;&lt; responseData.code &lt;&lt; endl;</div>
 <div class="line"> </div>
 <div class="line">            } <span class="keywordflow">catch</span> (...) {</div>
 <div class="line">                rethrowException(<span class="stringliteral">&quot;Test::execute()&quot;</span>);</div>
 <div class="line">            }</div>
 <div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">        <span class="keyword">virtual</span> ~Test() = <span class="keywordflow">default</span>;</div>
 <div class="line">    };</div>
 <div class="line">}</div>
 <div class="ttc" id="aa00749_html"><div class="ttname"><a href="../../d5/de8/a00749.html">Index.hpp</a></div></div>
@@ -162,11 +157,12 @@ $(document).ready(function(){initNavTree('de/dde/a07107.html','../../'); initRes
 <div class="ttc" id="aa02332_html_a9d4066a4861408bc00eccb22a12db7f9"><div class="ttname"><a href="../../d1/d03/a02332.html#a9d4066a4861408bc00eccb22a12db7f9">DiscordCoreAPI::EmbedData::setDescription</a></div><div class="ttdeci">EmbedData &amp; setDescription(const std::string &amp;descriptionNew)</div><div class="ttdoc">Sets the description (the main contents) of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00379">FoundationEntities.cpp:379</a></div></div>
 <div class="ttc" id="aa02332_html_ab417d83fddf9df80eca98e9ec6e888aa"><div class="ttname"><a href="../../d1/d03/a02332.html#ab417d83fddf9df80eca98e9ec6e888aa">DiscordCoreAPI::EmbedData::setColor</a></div><div class="ttdeci">EmbedData &amp; setColor(const std::string &amp;hexColorValueNew)</div><div class="ttdoc">Sets the color of the embed, by applying a hex-color value.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00384">FoundationEntities.cpp:384</a></div></div>
 <div class="ttc" id="aa02332_html_ae356e6dc3c93658b7228b56da3187896"><div class="ttname"><a href="../../d1/d03/a02332.html#ae356e6dc3c93658b7228b56da3187896">DiscordCoreAPI::EmbedData::setTimeStamp</a></div><div class="ttdeci">EmbedData &amp; setTimeStamp(const std::string &amp;timeStamp)</div><div class="ttdoc">Sets the timestamp on the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00365">FoundationEntities.cpp:365</a></div></div>
+<div class="ttc" id="aa02784_html_a565fe2447237030a716f64b2599996dd"><div class="ttname"><a href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">DiscordCoreAPI::InputEventData::getGuildId</a></div><div class="ttdeci">Snowflake getGuildId()</div><div class="ttdoc">Returns the Guild id, of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01643">FoundationEntities.cpp:1643</a></div></div>
 <div class="ttc" id="aa02836_html"><div class="ttname"><a href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03795">FoundationEntities.hpp:3795</a></div></div>
 <div class="ttc" id="aa02840_html"><div class="ttname"><a href="../../d9/d4d/a02840.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03806">FoundationEntities.hpp:3806</a></div></div>
-<div class="ttc" id="aa02972_html"><div class="ttname"><a href="../../d0/daf/a02972.html">DiscordCoreAPI::GetCurrentUserGuildsData</a></div><div class="ttdoc">For collecting a list of Guild's that the Bot is in.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00250">GuildEntities.hpp:250</a></div></div>
-<div class="ttc" id="aa02972_html_a96754c6d0a421023fcf7d5aa0412f1f4"><div class="ttname"><a href="../../d0/daf/a02972.html#a96754c6d0a421023fcf7d5aa0412f1f4">DiscordCoreAPI::GetCurrentUserGuildsData::limit</a></div><div class="ttdeci">uint32_t limit</div><div class="ttdoc">Max number of guilds to return (1 - 200).</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00252">GuildEntities.hpp:252</a></div></div>
-<div class="ttc" id="aa02992_html_af499390e5b063c56b2d9a5b0a2b21d13"><div class="ttname"><a href="../../d6/d5d/a02992.html#af499390e5b063c56b2d9a5b0a2b21d13">DiscordCoreAPI::Guilds::getCurrentUserGuildsAsync</a></div><div class="ttdeci">static CoRoutine&lt; std::vector&lt; Guild &gt; &gt; getCurrentUserGuildsAsync(GetCurrentUserGuildsData dataPackage)</div><div class="ttdoc">Collects a list of Guilds that the Bot is in.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d69/a00878_source.html#l00793">GuildEntities.cpp:793</a></div></div>
+<div class="ttc" id="aa02920_html"><div class="ttname"><a href="../../d1/d77/a02920.html">DiscordCoreAPI::GetGuildVanityInviteData</a></div><div class="ttdoc">For geting the vanity invite responseData of a Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00165">GuildEntities.hpp:165</a></div></div>
+<div class="ttc" id="aa02920_html_a31265fa5c3a7b002e86e4cae5402d9c9"><div class="ttname"><a href="../../d1/d77/a02920.html#a31265fa5c3a7b002e86e4cae5402d9c9">DiscordCoreAPI::GetGuildVanityInviteData::guildId</a></div><div class="ttdeci">Snowflake guildId</div><div class="ttdoc">The id of the Guild to acquire the vanity invite from.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00166">GuildEntities.hpp:166</a></div></div>
+<div class="ttc" id="aa02992_html_a5aaf20b371d866854e3d80648d5a50ae"><div class="ttname"><a href="../../d6/d5d/a02992.html#a5aaf20b371d866854e3d80648d5a50ae">DiscordCoreAPI::Guilds::getGuildVanityInviteAsync</a></div><div class="ttdeci">static CoRoutine&lt; InviteData &gt; getGuildVanityInviteAsync(GetGuildVanityInviteData dataPackage)</div><div class="ttdoc">Gets the vanity invite responseData from a particular server.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d69/a00878_source.html#l00622">GuildEntities.cpp:622</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -174,7 +170,7 @@ $(document).ready(function(){initNavTree('de/dde/a07107.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d00/a07022.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../de/d18/a07033.html">Guild Stuff</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d92/a07030.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d7/dfb/a07041.html">Guild Stuff</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

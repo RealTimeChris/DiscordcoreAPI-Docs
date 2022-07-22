@@ -102,39 +102,71 @@ $(document).ready(function(){initNavTree('df/d83/a07127.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Login/Instantiation </div></div>
+  <div class="headertitle"><div class="title">Removing a Guild Ban </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Login_Setup_Login_Instantiation"></a></p><ul>
-<li><u><b>NOTE FOR SHARDING:</b></u> Make sure to pass in the 5th argument to the <code><a class="el" href="../../d6/d33/a01992.html" title="DiscordCoreClient - The main class for this library.">DiscordCoreAPI::DiscordCoreClient</a></code> constructor which is a structure of type <code><a class="el" href="../../d9/dbd/a03604.html" title="Sharding options for the library.">DiscordCoreAPI::ShardingOptions</a></code>.</li>
-<li>Install the dependencies, and <code>#include &lt;<a class="el" href="../../d5/de8/a00749.html">Index.hpp</a>&gt;</code>.</li>
-<li>Create a string with your bot's token.</li>
-<li>Create an object of type <code><a class="el" href="../../d6/d33/a01992.html" title="DiscordCoreClient - The main class for this library.">DiscordCoreAPI::DiscordCoreClient</a></code>, using your bot token as an argument, as well as a string to act as a "command prefix" for accepting commands via message input.</li>
-<li>Additionally-there are 4 optional arguments to the constructor which offer various potential configuration options, they are as follows: <br  />
- <code>std::vector&lt;<a class="el" href="../../df/d81/a03600.html" title="Function data for repeated functions to be loaded.">DiscordCoreAPI::RepeatedFunctionData</a>&gt;</code> - For adding potentailly recurring functions. <br  />
- <code><a class="el" href="../../d3/dce/a03608.html" title="Logging options for the library.">DiscordCoreAPI::LoggingOptions</a></code> <br  />
- <code><a class="el" href="../../d1/d43/a03612.html" title="For selecting the caching style of the library.">DiscordCoreAPI::CacheOptions</a></code> <br  />
- <code><a class="el" href="../../d9/dbd/a03604.html" title="Sharding options for the library.">DiscordCoreAPI::ShardingOptions</a></code> <br  />
-</li>
-<li>Run the <code><a class="el" href="../../d6/d33/a01992.html#a78a2649f034ff89e98f56a32092debfb" title="Executes the library, and waits for completion.">DiscordCoreAPI::DiscordCoreClient::runBot()</a></code> function.</li>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Guild_Stuff_Removing_a_Guild_Ban"></a></p><ul>
+<li>Execute the, <code><a class="el" href="../../d6/d5d/a02992.html#a2cc3591c19ec26f361b7a098cbacc0c8" title="Removes a previously created ban.">DiscordCoreAPI::Guilds::removeGuildBanAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../d7/d35/a02880.html" title="For removing a previous created Ban.">DiscordCoreAPI::RemoveGuildBanData</a></code>, with a return value of type <code>void</code>.</li>
+<li>Call the function with <code>.get()</code> added to the end in order to wait for the results now.</li>
 </ul>
-<div class="fragment"><div class="line"><span class="comment">/// main.cpp-Main entry point.</span><span class="comment"></span></div>
+<div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
 <div class="line"><span class="comment">/// https://github.com/RealTimeChris/DiscordCoreAPI</span></div>
 <div class="line"><span class="comment"></span> </div>
+<div class="line"><span class="preprocessor">#pragma once</span></div>
+<div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d5/de8/a00749.html">Index.hpp</a>&gt;</span></div>
 <div class="line"> </div>
-<div class="line">int32_t main()</div>
-<div class="line">{</div>
-<div class="line">    std::string botToken {<span class="stringliteral">&quot;YOUR_BOT_TOKEN_HERE&quot;</span>};</div>
-<div class="line">    std::unique_ptr&lt;DiscordCoreAPI::DiscordCoreClient&gt; thePtr = std::make_unique&lt;DiscordCoreAPI::DiscordCoreClient&gt;(</div>
-<div class="line">        botToken, <span class="stringliteral">&quot;!&quot;</span>, functionVector,</div>
-<div class="line">        <a class="code hl_struct" href="../../d1/d43/a03612.html">DiscordCoreAPI::CacheOptions</a> {.<a class="code hl_variable" href="../../d1/d43/a03612.html#a4cb85b3ee028d76c1724ef07969c6f11">cacheGuildMembers</a> = <span class="keyword">true</span>, .cacheChannels = <span class="keyword">true</span>, .cacheGuilds = <span class="keyword">true</span>, .cacheRoles = <span class="keyword">true</span>, .cacheUsers = <span class="keyword">true</span>}, 1);</div>
-<div class="line">    thePtr-&gt;runBot();</div>
-<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a> {</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">class </span>Test : <span class="keyword">public</span> <a class="code hl_struct" href="../../d9/d4d/a02840.html">DiscordCoreAPI::BaseFunction</a> {</div>
+<div class="line">      <span class="keyword">public</span>:</div>
+<div class="line">        Test() {</div>
+<div class="line">            this-&gt;commandName = <span class="stringliteral">&quot;test&quot;</span>;</div>
+<div class="line">            this-&gt;helpDescription = <span class="stringliteral">&quot;Testing purposes!&quot;</span>;</div>
+<div class="line">            <a class="code hl_class" href="../../d1/d03/a02332.html">DiscordCoreAPI::EmbedData</a> msgEmbed;</div>
+<div class="line">            msgEmbed.<a class="code hl_function" href="../../d1/d03/a02332.html#a9d4066a4861408bc00eccb22a12db7f9">setDescription</a>(<span class="stringliteral">&quot;------\nSimply enter !test or /test!\n------&quot;</span>);</div>
+<div class="line">            msgEmbed.<a class="code hl_function" href="../../d1/d03/a02332.html#a20ca60ec3235f44a223f3d3b687c0c9e">setTitle</a>(<span class="stringliteral">&quot;__**Test Usage:**__&quot;</span>);</div>
+<div class="line">            msgEmbed.<a class="code hl_function" href="../../d1/d03/a02332.html#ae356e6dc3c93658b7228b56da3187896">setTimeStamp</a>(getTimeAndDate());</div>
+<div class="line">            msgEmbed.<a class="code hl_function" href="../../d1/d03/a02332.html#ab417d83fddf9df80eca98e9ec6e888aa">setColor</a>(<span class="stringliteral">&quot;FeFeFe&quot;</span>);</div>
+<div class="line">            this-&gt;helpEmbed = msgEmbed;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        std::unique_ptr&lt;DiscordCoreAPI::BaseFunction&gt; create() {</div>
+<div class="line">            <span class="keywordflow">return</span> std::make_unique&lt;Test&gt;();</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
+<div class="line">            <span class="keywordflow">try</span> {</div>
+<div class="line">                <a class="code hl_struct" href="../../d7/d35/a02880.html">DiscordCoreAPI::RemoveGuildBanData</a> dataPackage01;</div>
+<div class="line">                dataPackage01.<a class="code hl_variable" href="../../d7/d35/a02880.html#a5d92cad392ec597218056f703c9aad1d">guildId</a> = args.eventData.<a class="code hl_function" href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
+<div class="line">                dataPackage01.<a class="code hl_variable" href="../../d7/d35/a02880.html#ace91b0e0f494dd7a4505b61f3673fa02">userId</a> = <span class="stringliteral">&quot;869276807394902066&quot;</span>;</div>
+<div class="line">                dataPackage01.<a class="code hl_variable" href="../../d7/d35/a02880.html#aa5ae0cce136fe703153f683c0b13259f">reason</a> = <span class="stringliteral">&quot;TESTING PURPOSES!&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">                <a class="code hl_function" href="../../d6/d5d/a02992.html#a2cc3591c19ec26f361b7a098cbacc0c8">DiscordCoreAPI::Guilds::removeGuildBanAsync</a>(dataPackage01).<a class="code hl_function" href="../../d5/d70/a01980.html#a904d030f3edbf8efac15b2cebba3e37a">get</a>();</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">            } <span class="keywordflow">catch</span> (...) {</div>
+<div class="line">                rethrowException(<span class="stringliteral">&quot;Test::execute()&quot;</span>);</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line">    };</div>
 <div class="line">}</div>
 <div class="ttc" id="aa00749_html"><div class="ttname"><a href="../../d5/de8/a00749.html">Index.hpp</a></div></div>
-<div class="ttc" id="aa03612_html"><div class="ttname"><a href="../../d1/d43/a03612.html">DiscordCoreAPI::CacheOptions</a></div><div class="ttdoc">For selecting the caching style of the library.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/db2/a00737_source.html#l00290">Utilities.hpp:290</a></div></div>
-<div class="ttc" id="aa03612_html_a4cb85b3ee028d76c1724ef07969c6f11"><div class="ttname"><a href="../../d1/d43/a03612.html#a4cb85b3ee028d76c1724ef07969c6f11">DiscordCoreAPI::CacheOptions::cacheGuildMembers</a></div><div class="ttdeci">bool cacheGuildMembers</div><div class="ttdoc">Do we cache GuildMembers?</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/db2/a00737_source.html#l00291">Utilities.hpp:291</a></div></div>
+<div class="ttc" id="aa00893_html"><div class="ttname"><a href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></div><div class="ttdoc">The main namespace for this library.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00025">ApplicationCommandEntities.hpp:25</a></div></div>
+<div class="ttc" id="aa01980_html_a904d030f3edbf8efac15b2cebba3e37a"><div class="ttname"><a href="../../d5/d70/a01980.html#a904d030f3edbf8efac15b2cebba3e37a">DiscordCoreAPI::CoRoutine&lt; void &gt;::get</a></div><div class="ttdeci">void get()</div><div class="ttdoc">Gets the resulting value of the CoRoutine.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4a/a00758_source.html#l00319">CoRoutine.hpp:319</a></div></div>
+<div class="ttc" id="aa02332_html"><div class="ttname"><a href="../../d1/d03/a02332.html">DiscordCoreAPI::EmbedData</a></div><div class="ttdoc">Embed data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l00600">FoundationEntities.hpp:600</a></div></div>
+<div class="ttc" id="aa02332_html_a20ca60ec3235f44a223f3d3b687c0c9e"><div class="ttname"><a href="../../d1/d03/a02332.html#a20ca60ec3235f44a223f3d3b687c0c9e">DiscordCoreAPI::EmbedData::setTitle</a></div><div class="ttdeci">EmbedData &amp; setTitle(const std::string &amp;titleNew)</div><div class="ttdoc">Sets the title of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00394">FoundationEntities.cpp:394</a></div></div>
+<div class="ttc" id="aa02332_html_a9d4066a4861408bc00eccb22a12db7f9"><div class="ttname"><a href="../../d1/d03/a02332.html#a9d4066a4861408bc00eccb22a12db7f9">DiscordCoreAPI::EmbedData::setDescription</a></div><div class="ttdeci">EmbedData &amp; setDescription(const std::string &amp;descriptionNew)</div><div class="ttdoc">Sets the description (the main contents) of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00379">FoundationEntities.cpp:379</a></div></div>
+<div class="ttc" id="aa02332_html_ab417d83fddf9df80eca98e9ec6e888aa"><div class="ttname"><a href="../../d1/d03/a02332.html#ab417d83fddf9df80eca98e9ec6e888aa">DiscordCoreAPI::EmbedData::setColor</a></div><div class="ttdeci">EmbedData &amp; setColor(const std::string &amp;hexColorValueNew)</div><div class="ttdoc">Sets the color of the embed, by applying a hex-color value.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00384">FoundationEntities.cpp:384</a></div></div>
+<div class="ttc" id="aa02332_html_ae356e6dc3c93658b7228b56da3187896"><div class="ttname"><a href="../../d1/d03/a02332.html#ae356e6dc3c93658b7228b56da3187896">DiscordCoreAPI::EmbedData::setTimeStamp</a></div><div class="ttdeci">EmbedData &amp; setTimeStamp(const std::string &amp;timeStamp)</div><div class="ttdoc">Sets the timestamp on the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00365">FoundationEntities.cpp:365</a></div></div>
+<div class="ttc" id="aa02784_html_a565fe2447237030a716f64b2599996dd"><div class="ttname"><a href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">DiscordCoreAPI::InputEventData::getGuildId</a></div><div class="ttdeci">Snowflake getGuildId()</div><div class="ttdoc">Returns the Guild id, of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01643">FoundationEntities.cpp:1643</a></div></div>
+<div class="ttc" id="aa02836_html"><div class="ttname"><a href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03795">FoundationEntities.hpp:3795</a></div></div>
+<div class="ttc" id="aa02840_html"><div class="ttname"><a href="../../d9/d4d/a02840.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03806">FoundationEntities.hpp:3806</a></div></div>
+<div class="ttc" id="aa02880_html"><div class="ttname"><a href="../../d7/d35/a02880.html">DiscordCoreAPI::RemoveGuildBanData</a></div><div class="ttdoc">For removing a previous created Ban.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00101">GuildEntities.hpp:101</a></div></div>
+<div class="ttc" id="aa02880_html_a5d92cad392ec597218056f703c9aad1d"><div class="ttname"><a href="../../d7/d35/a02880.html#a5d92cad392ec597218056f703c9aad1d">DiscordCoreAPI::RemoveGuildBanData::guildId</a></div><div class="ttdeci">Snowflake guildId</div><div class="ttdoc">The Guild from which to remove the Ban.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00102">GuildEntities.hpp:102</a></div></div>
+<div class="ttc" id="aa02880_html_aa5ae0cce136fe703153f683c0b13259f"><div class="ttname"><a href="../../d7/d35/a02880.html#aa5ae0cce136fe703153f683c0b13259f">DiscordCoreAPI::RemoveGuildBanData::reason</a></div><div class="ttdeci">std::string reason</div><div class="ttdoc">The reason for removing this Ban.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00104">GuildEntities.hpp:104</a></div></div>
+<div class="ttc" id="aa02880_html_ace91b0e0f494dd7a4505b61f3673fa02"><div class="ttname"><a href="../../d7/d35/a02880.html#ace91b0e0f494dd7a4505b61f3673fa02">DiscordCoreAPI::RemoveGuildBanData::userId</a></div><div class="ttdeci">Snowflake userId</div><div class="ttdoc">The user Id of the user who's ban to remove.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00103">GuildEntities.hpp:103</a></div></div>
+<div class="ttc" id="aa02992_html_a2cc3591c19ec26f361b7a098cbacc0c8"><div class="ttname"><a href="../../d6/d5d/a02992.html#a2cc3591c19ec26f361b7a098cbacc0c8">DiscordCoreAPI::Guilds::removeGuildBanAsync</a></div><div class="ttdeci">static CoRoutine&lt; void &gt; removeGuildBanAsync(RemoveGuildBanData dataPackage)</div><div class="ttdoc">Removes a previously created ban.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d69/a00878_source.html#l00497">GuildEntities.cpp:497</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -142,7 +174,7 @@ $(document).ready(function(){initNavTree('df/d83/a07127.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d00/a07022.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d3/d61/a07024.html">Login/Setup</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d92/a07030.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d7/dfb/a07041.html">Guild Stuff</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
