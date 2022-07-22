@@ -102,208 +102,368 @@ $(document).ready(function(){initNavTree('dc/d39/a07141.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Set Music Channel </div></div>
+  <div class="headertitle"><div class="title">PlayQ </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Music_Bot_SetMusicChannel"></a> </p><div class="fragment"><div class="line"><span class="preprocessor">#pragma once</span></div>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Music_Bot_PlayQ"></a> </p><div class="fragment"><div class="line"><span class="preprocessor">#pragma once</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d5/de8/a00749.html">Index.hpp</a>&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;HelperFunctions.hpp&quot;</span></div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">namespace </span><a class="code hl_namespace" href="../../d7/d46/a00890.html">DiscordCoreAPI</a> {</div>
-<div class="line">    <span class="keyword">class </span>SetMusicChannel : <span class="keyword">public</span> <a class="code hl_struct" href="../../dc/dfd/a02837.html">DiscordCoreAPI::BaseFunction</a> {</div>
+<div class="line">    <span class="keyword">namespace </span><a class="code hl_namespace" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a> {</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">class </span>PlayQ : <span class="keyword">public</span> <a class="code hl_struct" href="../../d9/d4d/a02840.html">DiscordCoreAPI::BaseFunction</a> {</div>
 <div class="line">      <span class="keyword">public</span>:</div>
-<div class="line">        SetMusicChannel() {</div>
-<div class="line">            this-&gt;commandName = <span class="stringliteral">&quot;setmusicchannel&quot;</span>;</div>
-<div class="line">            this-&gt;helpDescription = <span class="stringliteral">&quot;Sets the channels from which you can issue music commands!&quot;</span>;</div>
+<div class="line">        PlayQ() {</div>
+<div class="line">            this-&gt;commandName = <span class="stringliteral">&quot;playq&quot;</span>;</div>
+<div class="line">            this-&gt;helpDescription = <span class="stringliteral">&quot;Plays a specific song from the current queue.&quot;</span>;</div>
 <div class="line">            EmbedData msgEmbed;</div>
-<div class="line">            msgEmbed.setDescription(</div>
-<div class="line">                <span class="stringliteral">&quot;------\nSimply enter /setmusichannel add in order to add the current channel.\nAlternatively enter /setmusicchannel remove to remove the &quot;</span></div>
-<div class="line">                <span class="stringliteral">&quot;current channel.\nAlso, enter /setmusicchannel view or purge to view or purge the currently enabled channels.\n------&quot;</span>);</div>
-<div class="line">            msgEmbed.setTitle(<span class="stringliteral">&quot;__**Set Music Channel Usage:**__&quot;</span>);</div>
+<div class="line">            msgEmbed.setDescription(<span class="stringliteral">&quot;------\nSimply enter /playq SONGNUMBER.\n------&quot;</span>);</div>
+<div class="line">            msgEmbed.setTitle(<span class="stringliteral">&quot;__**PlayQ Usage:**__&quot;</span>);</div>
 <div class="line">            msgEmbed.setTimeStamp(getTimeAndDate());</div>
 <div class="line">            msgEmbed.setColor(<span class="stringliteral">&quot;FeFeFe&quot;</span>);</div>
 <div class="line">            this-&gt;helpEmbed = msgEmbed;</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        std::unique_ptr&lt;DiscordCoreAPI::BaseFunction&gt; create() {</div>
-<div class="line">            <span class="keywordflow">return</span> std::make_unique&lt;SetMusicChannel&gt;();</div>
+<div class="line">            <span class="keywordflow">return</span> std::make_unique&lt;PlayQ&gt;();</div>
 <div class="line">        }</div>
 <div class="line"> </div>
-<div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../d0/d2b/a02833.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
+<div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
 <div class="line">            <span class="keywordflow">try</span> {</div>
-<div class="line">                Channel channel = Channels::getCachedChannelAsync({args.eventData-&gt;<a class="code hl_function" href="../../d9/d95/a02781.html#a97c397fe274250bfff73cf674810a8f5">getChannelId</a>()}).get();</div>
+<div class="line">                Channel channel = Channels::getCachedChannelAsync({args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a97c397fe274250bfff73cf674810a8f5">getChannelId</a>()}).get();</div>
 <div class="line"> </div>
 <div class="line">                <span class="keywordtype">bool</span> areWeInADm = areWeInADM(*args.eventData, channel);</div>
 <div class="line"> </div>
-<div class="line">                <span class="keywordflow">if</span> (areWeInADm == <span class="keyword">true</span>) {</div>
+<div class="line">                <span class="keywordflow">if</span> (areWeInADm) {</div>
 <div class="line">                    <span class="keywordflow">return</span>;</div>
 <div class="line">                }</div>
 <div class="line"> </div>
 <div class="line">                InputEvents::deleteInputEventResponseAsync(std::make_unique&lt;InputEventData&gt;(*args.eventData)).get();</div>
-<div class="line">                Guild guild = Guilds::getCachedGuildAsync({args.eventData-&gt;<a class="code hl_function" href="../../d9/d95/a02781.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>()}).get();</div>
+<div class="line"> </div>
+<div class="line">                Guild guild = Guilds::getCachedGuildAsync({args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>()}).get();</div>
 <div class="line">                DiscordGuild discordGuild(guild);</div>
+<div class="line"> </div>
+<div class="line">                <span class="keywordtype">bool</span> areWeAllowed = checkIfAllowedPlayingInChannel(*args.eventData, discordGuild);</div>
+<div class="line"> </div>
+<div class="line">                <span class="keywordflow">if</span> (!areWeAllowed) {</div>
+<div class="line">                    <span class="keywordflow">return</span>;</div>
+<div class="line">                }</div>
+<div class="line"> </div>
 <div class="line">                GuildMember guildMember =</div>
-<div class="line">                    GuildMembers::getCachedGuildMemberAsync({.guildMemberId = args.eventData-&gt;<a class="code hl_function" href="../../d9/d95/a02781.html#a70865601071ddd3f49a50b280a0d4894">getAuthorId</a>(), .guildId = args.eventData-&gt;<a class="code hl_function" href="../../d9/d95/a02781.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>()}).get();</div>
-<div class="line">                <span class="keywordtype">bool</span> doWeHaveAdminPermission = doWeHaveAdminPermissions(*args, *args.eventData, discordGuild, channel, guildMember);</div>
+<div class="line">                    GuildMembers::getCachedGuildMemberAsync({.guildMemberId = args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a70865601071ddd3f49a50b280a0d4894">getAuthorId</a>(), .guildId = args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>()}).get();</div>
 <div class="line"> </div>
-<div class="line">                <span class="keywordflow">if</span> (doWeHaveAdminPermission == <span class="keyword">false</span>) {</div>
+<div class="line">                <span class="keywordtype">bool</span> doWeHaveControl = checkIfWeHaveControl(*args.eventData, discordGuild, guildMember);</div>
+<div class="line"> </div>
+<div class="line">                <span class="keywordflow">if</span> (!doWeHaveControl) {</div>
 <div class="line">                    <span class="keywordflow">return</span>;</div>
 <div class="line">                }</div>
 <div class="line"> </div>
-<div class="line">                <span class="keywordflow">if</span> (args.commandData.subCommandName == <span class="stringliteral">&quot;add&quot;</span>) {</div>
-<div class="line">                    std::string channelID = channel.id;</div>
-<div class="line">                    <span class="keywordflow">for</span> (uint32_t x = 0; x &lt; discordGuild.data.musicChannelIds.size(); x++) {</div>
-<div class="line">                        <span class="keywordflow">if</span> (channelID == discordGuild.data.musicChannelIds[x]) {</div>
-<div class="line">                            std::string msgString = <span class="stringliteral">&quot;------\n**That channel is already on the list of enabled channels!**\n------&quot;</span>;</div>
-<div class="line">                            EmbedData messageEmbed;</div>
-<div class="line">                            messageEmbed.setAuthor(args.eventData-&gt;<a class="code hl_function" href="../../d9/d95/a02781.html#a3ebc65bb67fbd74518199db64e40559c">getUserName</a>(), args.eventData-&gt;<a class="code hl_function" href="../../d9/d95/a02781.html#a2dd12454f3ecd05f4cfbd22b027268bd">getAvatarUrl</a>());</div>
-<div class="line">                            messageEmbed.setColor(discordGuild.data.borderColor);</div>
-<div class="line">                            messageEmbed.setTimeStamp(<a class="code hl_function" href="../../dd/d94/a00888.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
-<div class="line">                            messageEmbed.setDescription(msgString);</div>
-<div class="line">                            messageEmbed.setTitle(<span class="stringliteral">&quot;__**Already Listed:**__&quot;</span>);</div>
-<div class="line">                            RespondToInputEventData dataPackage(*args.eventData);</div>
-<div class="line">                            dataPackage.setResponseType(InputEventResponseType::Ephemeral_Interaction_Response);</div>
-<div class="line">                            dataPackage.addMessageEmbed(messageEmbed);</div>
-<div class="line">                            <span class="keyword">auto</span> newEvent = InputEvents::respondToInputEventAsync(dataPackage);</div>
-<div class="line">                            InputEvents::deleteInputEventResponseAsync(std::move(newEvent), 20000);</div>
-<div class="line">                            <span class="keywordflow">return</span>;</div>
-<div class="line">                        }</div>
-<div class="line">                    }</div>
+<div class="line">                std::unique_ptr&lt;InputEventData&gt; newEvent = std::make_unique&lt;InputEventData&gt;(*args.eventData);</div>
 <div class="line"> </div>
-<div class="line">                    discordGuild.data.musicChannelIds.push_back(channelID);</div>
-<div class="line">                    discordGuild.writeDataToDB();</div>
-<div class="line">                    EmbedData messageEmbed;</div>
-<div class="line">                    messageEmbed.setAuthor(args.eventData-&gt;<a class="code hl_function" href="../../d9/d95/a02781.html#a3ebc65bb67fbd74518199db64e40559c">getUserName</a>(), args.eventData-&gt;<a class="code hl_function" href="../../d9/d95/a02781.html#a2dd12454f3ecd05f4cfbd22b027268bd">getAvatarUrl</a>());</div>
-<div class="line">                    messageEmbed.setColor(discordGuild.data.borderColor);</div>
-<div class="line">                    messageEmbed.setTimeStamp(<a class="code hl_function" href="../../dd/d94/a00888.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
-<div class="line">                    messageEmbed.setDescription(<span class="stringliteral">&quot;------\n**You&#39;ve succesfully added &lt;#&quot;</span> + channelID + <span class="stringliteral">&quot;&gt; to your list of accepted music channels!**\n------&quot;</span>);</div>
-<div class="line">                    messageEmbed.setTitle(<span class="stringliteral">&quot;__**Music Channel Added:**__&quot;</span>);</div>
+<div class="line">                int64_t currentTime = std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(std::chrono::system_clock::now().time_since_epoch()).count();</div>
+<div class="line">                int64_t previousPlayedTime {0};</div>
+<div class="line">                <span class="keywordflow">if</span> (Play::timeOfLastPlay.contains(args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>())) {</div>
+<div class="line">                    previousPlayedTime = Play::timeOfLastPlay.at(args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>());</div>
+<div class="line">                }</div>
+<div class="line"> </div>
+<div class="line">                <span class="keywordflow">if</span> (currentTime-previousPlayedTime &lt; 5000) {</div>
+<div class="line">                    EmbedData newEmbed;</div>
+<div class="line">                    newEmbed.setAuthor(args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a3ebc65bb67fbd74518199db64e40559c">getUserName</a>(), args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a2dd12454f3ecd05f4cfbd22b027268bd">getAvatarUrl</a>());</div>
+<div class="line">                    newEmbed.setDescription(<span class="stringliteral">&quot;------\n__**Sorry, but please wait a total of 5 seconds in between plays!**__\n------&quot;</span>);</div>
+<div class="line">                    newEmbed.setTimeStamp(<a class="code hl_function" href="../../de/dfc/a00891.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
+<div class="line">                    newEmbed.setTitle(<span class="stringliteral">&quot;__**Timing Issue:**__&quot;</span>);</div>
+<div class="line">                    newEmbed.setColor(discordGuild.data.borderColor);</div>
 <div class="line">                    RespondToInputEventData dataPackage(*args.eventData);</div>
-<div class="line">                    dataPackage.setResponseType(InputEventResponseType::Interaction_Response);</div>
-<div class="line">                    dataPackage.addMessageEmbed(messageEmbed);</div>
-<div class="line">                    <span class="keyword">auto</span> newEvent = InputEvents::respondToInputEventAsync(dataPackage);</div>
+<div class="line">                    dataPackage.setResponseType(InputEventResponseType::Ephemeral_Interaction_Response);</div>
+<div class="line">                    dataPackage.addMessageEmbed(newEmbed);</div>
+<div class="line">                    newEvent = InputEvents::respondToInputEventAsync(dataPackage);</div>
 <div class="line">                    <span class="keywordflow">return</span>;</div>
 <div class="line">                }</div>
-<div class="line">                <span class="keywordflow">if</span> (args.commandData.subCommandName == <span class="stringliteral">&quot;remove&quot;</span>) {</div>
-<div class="line">                    std::string channelID;</div>
-<div class="line">                    channelID = channel.id;</div>
 <div class="line"> </div>
-<div class="line">                    std::string msgString;</div>
-<div class="line">                    <span class="keywordtype">bool</span> isItPresent = <span class="keyword">false</span>;</div>
-<div class="line">                    <span class="keywordflow">for</span> (uint32_t x = 0; x &lt; discordGuild.data.musicChannelIds.size(); x++) {</div>
-<div class="line">                        <span class="keywordflow">if</span> (channelID == discordGuild.data.musicChannelIds[x]) {</div>
-<div class="line">                            isItPresent = <span class="keyword">true</span>;</div>
-<div class="line">                            discordGuild.data.musicChannelIds.erase(discordGuild.data.musicChannelIds.begin() + x);</div>
-<div class="line">                            discordGuild.writeDataToDB();</div>
-<div class="line">                            msgString +=</div>
-<div class="line">                                <span class="stringliteral">&quot;------\n**You&#39;ve succesfully removed the channel &lt;#&quot;</span> + channelID + <span class="stringliteral">&quot;&gt; from the list of enabled music channels!**\n------&quot;</span>;</div>
+<div class="line">                previousPlayedTime = std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(std::chrono::system_clock::now().time_since_epoch()).count();</div>
+<div class="line">                Play::timeOfLastPlay[args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>()] = previousPlayedTime;</div>
+<div class="line"> </div>
+<div class="line">                VoiceConnection* voiceConnection = guild.connectToVoice(guildMember.voiceData.channelId, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line">                loadPlaylist(discordGuild);</div>
+<div class="line">                <span class="keywordflow">if</span> (voiceConnection == <span class="keyword">nullptr</span>) {</div>
+<div class="line">                    EmbedData newEmbed;</div>
+<div class="line">                    newEmbed.setAuthor(args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a3ebc65bb67fbd74518199db64e40559c">getUserName</a>(), args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a2dd12454f3ecd05f4cfbd22b027268bd">getAvatarUrl</a>());</div>
+<div class="line">                    newEmbed.setDescription(<span class="stringliteral">&quot;------\n__**Sorry, but there is no voice connection that is currently held by me!**__\n------&quot;</span>);</div>
+<div class="line">                    newEmbed.setTimeStamp(<a class="code hl_function" href="../../de/dfc/a00891.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
+<div class="line">                    newEmbed.setTitle(<span class="stringliteral">&quot;__**Connection Issue:**__&quot;</span>);</div>
+<div class="line">                    newEmbed.setColor(discordGuild.data.borderColor);</div>
+<div class="line">                    RespondToInputEventData dataPackage(*args.eventData);</div>
+<div class="line">                    dataPackage.setResponseType(InputEventResponseType::Ephemeral_Interaction_Response);</div>
+<div class="line">                    dataPackage.addMessageEmbed(newEmbed);</div>
+<div class="line">                    newEvent = InputEvents::respondToInputEventAsync(dataPackage);</div>
+<div class="line">                    <span class="keywordflow">return</span>;</div>
+<div class="line">                }</div>
+<div class="line"> </div>
+<div class="line">                <span class="keywordflow">if</span> (guildMember.voiceData.channelId == 0 || guildMember.voiceData.channelId != voiceConnection-&gt;getChannelId()) {</div>
+<div class="line">                    EmbedData newEmbed;</div>
+<div class="line">                    newEmbed.setAuthor(args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a3ebc65bb67fbd74518199db64e40559c">getUserName</a>(), args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a2dd12454f3ecd05f4cfbd22b027268bd">getAvatarUrl</a>());</div>
+<div class="line">                    newEmbed.setDescription(<span class="stringliteral">&quot;------\n__**Sorry, but you need to be in a correct voice channel to issue those commands!**__\n------&quot;</span>);</div>
+<div class="line">                    newEmbed.setTimeStamp(<a class="code hl_function" href="../../de/dfc/a00891.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
+<div class="line">                    newEmbed.setTitle(<span class="stringliteral">&quot;__**Playing Issue:**__&quot;</span>);</div>
+<div class="line">                    newEmbed.setColor(discordGuild.data.borderColor);</div>
+<div class="line">                    RespondToInputEventData dataPackage(*args.eventData);</div>
+<div class="line">                    dataPackage.setResponseType(InputEventResponseType::Ephemeral_Interaction_Response);</div>
+<div class="line">                    dataPackage.addMessageEmbed(newEmbed);</div>
+<div class="line">                    newEvent = InputEvents::respondToInputEventAsync(dataPackage);</div>
+<div class="line">                    <span class="keywordflow">return</span>;</div>
+<div class="line">                }</div>
+<div class="line">                int32_t trackNumber;</div>
+<div class="line">                <span class="keywordflow">try</span> {</div>
+<div class="line">                    trackNumber = stoi(args.commandData.optionsArgs[0]);</div>
+<div class="line">                } <span class="keywordflow">catch</span> (...) {</div>
+<div class="line">                    EmbedData newEmbed;</div>
+<div class="line">                    newEmbed.setAuthor(args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a3ebc65bb67fbd74518199db64e40559c">getUserName</a>(), args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a2dd12454f3ecd05f4cfbd22b027268bd">getAvatarUrl</a>());</div>
+<div class="line">                    newEmbed.setDescription(<span class="stringliteral">&quot;------\n__**Sorry, but please enter a valid number for the track number!**__\n------&quot;</span>);</div>
+<div class="line">                    newEmbed.setTimeStamp(<a class="code hl_function" href="../../de/dfc/a00891.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
+<div class="line">                    newEmbed.setTitle(<span class="stringliteral">&quot;__**Playing Issue:**__&quot;</span>);</div>
+<div class="line">                    newEmbed.setColor(discordGuild.data.borderColor);</div>
+<div class="line">                    RespondToInputEventData dataPackage(*args.eventData);</div>
+<div class="line">                    dataPackage.setResponseType(InputEventResponseType::Ephemeral_Interaction_Response);</div>
+<div class="line">                    dataPackage.addMessageEmbed(newEmbed);</div>
+<div class="line">                    newEvent = InputEvents::respondToInputEventAsync(dataPackage);</div>
+<div class="line">                    <span class="keywordflow">return</span>;</div>
+<div class="line">                }</div>
+<div class="line">                <span class="keywordflow">if</span> (trackNumber &lt; 1) {</div>
+<div class="line">                    EmbedData newEmbed;</div>
+<div class="line">                    newEmbed.setAuthor(args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a3ebc65bb67fbd74518199db64e40559c">getUserName</a>(), args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a2dd12454f3ecd05f4cfbd22b027268bd">getAvatarUrl</a>());</div>
+<div class="line">                    newEmbed.setDescription(<span class="stringliteral">&quot;------\n__**Sorry, but please enter a valid number for the track number!**__\n------&quot;</span>);</div>
+<div class="line">                    newEmbed.setTimeStamp(<a class="code hl_function" href="../../de/dfc/a00891.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
+<div class="line">                    newEmbed.setTitle(<span class="stringliteral">&quot;__**Playing Issue:**__&quot;</span>);</div>
+<div class="line">                    newEmbed.setColor(discordGuild.data.borderColor);</div>
+<div class="line">                    RespondToInputEventData dataPackage(*args.eventData);</div>
+<div class="line">                    dataPackage.setResponseType(InputEventResponseType::Ephemeral_Interaction_Response);</div>
+<div class="line">                    dataPackage.addMessageEmbed(newEmbed);</div>
+<div class="line">                    newEvent = InputEvents::respondToInputEventAsync(dataPackage);</div>
+<div class="line">                    <span class="keywordflow">return</span>;</div>
+<div class="line">                }</div>
+<div class="line"> </div>
+<div class="line">                <span class="keywordflow">if</span> (!SongAPI::isThereAnySongs(guild.id)) {</div>
+<div class="line">                    EmbedData newEmbed;</div>
+<div class="line">                    newEmbed.setAuthor(args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a3ebc65bb67fbd74518199db64e40559c">getUserName</a>(), args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a2dd12454f3ecd05f4cfbd22b027268bd">getAvatarUrl</a>());</div>
+<div class="line">                    newEmbed.setDescription(<span class="stringliteral">&quot;------\n__**Sorry, but there&#39;s nothing to play!**__\n------&quot;</span>);</div>
+<div class="line">                    newEmbed.setTimeStamp(<a class="code hl_function" href="../../de/dfc/a00891.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
+<div class="line">                    newEmbed.setTitle(<span class="stringliteral">&quot;__**Playing Issue:**__&quot;</span>);</div>
+<div class="line">                    newEmbed.setColor(discordGuild.data.borderColor);</div>
+<div class="line">                    RespondToInputEventData dataPackage(*args.eventData);</div>
+<div class="line">                    dataPackage.setResponseType(InputEventResponseType::Ephemeral_Interaction_Response);</div>
+<div class="line">                    dataPackage.addMessageEmbed(newEmbed);</div>
+<div class="line">                    newEvent = InputEvents::respondToInputEventAsync(dataPackage);</div>
+<div class="line">                    <span class="keywordflow">return</span>;</div>
+<div class="line">                }</div>
+<div class="line"> </div>
+<div class="line">                <span class="keywordflow">if</span> (trackNumber &gt; SongAPI::getPlaylist(guild.id).songQueue.size()) {</div>
+<div class="line">                    EmbedData newEmbed;</div>
+<div class="line">                    newEmbed.setAuthor(args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a3ebc65bb67fbd74518199db64e40559c">getUserName</a>(), args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a2dd12454f3ecd05f4cfbd22b027268bd">getAvatarUrl</a>());</div>
+<div class="line">                    newEmbed.setDescription(<span class="stringliteral">&quot;------\n__**Sorry, but that number is out of the range of the current track list!**__\n------&quot;</span>);</div>
+<div class="line">                    newEmbed.setTimeStamp(<a class="code hl_function" href="../../de/dfc/a00891.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
+<div class="line">                    newEmbed.setTitle(<span class="stringliteral">&quot;__**Playing Issue:**__&quot;</span>);</div>
+<div class="line">                    newEmbed.setColor(discordGuild.data.borderColor);</div>
+<div class="line">                    RespondToInputEventData dataPackage(*args.eventData);</div>
+<div class="line">                    dataPackage.setResponseType(InputEventResponseType::Ephemeral_Interaction_Response);</div>
+<div class="line">                    dataPackage.addMessageEmbed(newEmbed);</div>
+<div class="line">                    newEvent = InputEvents::respondToInputEventAsync(dataPackage);</div>
+<div class="line">                    <span class="keywordflow">return</span>;</div>
+<div class="line">                }</div>
+<div class="line"> </div>
+<div class="line">                SongAPI::stop(guild.id);</div>
+<div class="line">                Playlist currentPlaylist = SongAPI::getPlaylist(guild.id);</div>
+<div class="line">                Song currentNew = currentPlaylist.songQueue.at(trackNumber);</div>
+<div class="line">                currentPlaylist.songQueue.erase(currentPlaylist.songQueue.begin() + trackNumber);</div>
+<div class="line">                std::vector&lt;Song&gt; newVector;</div>
+<div class="line">                Playlist newPlaylist;</div>
+<div class="line">                newVector.push_back(currentNew);</div>
+<div class="line">                <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; value: currentPlaylist.songQueue) {</div>
+<div class="line">                    newVector.push_back(value);</div>
+<div class="line">                }</div>
+<div class="line">                newPlaylist.songQueue = newVector;</div>
+<div class="line">                newPlaylist.isLoopAllEnabled = SongAPI::isLoopAllEnabled(guild.id);</div>
+<div class="line">                newPlaylist.isLoopSongEnabled = SongAPI::isLoopSongEnabled(guild.id);</div>
+<div class="line">                SongAPI::setPlaylist(newPlaylist, guild.id);</div>
+<div class="line">                savePlaylist(discordGuild);</div>
+<div class="line">                InputEventData newerEvent = *newEvent;</div>
+<div class="line">                BaseFunctionArguments newArgs = *args;</div>
+<div class="line">                Snowflake channelId = newArgs.eventData-&gt;getChannelId();</div>
+<div class="line">                <span class="keywordflow">if</span> (!SongAPI::areWeCurrentlyPlaying(guild.id)) {</div>
+<div class="line">                    std::function&lt;CoRoutine&lt;void&gt;(SongCompletionEventData)&gt; theTask = [=](SongCompletionEventData eventData) <span class="keyword">noexcept</span> -&gt; CoRoutine&lt;void&gt; {</div>
+<div class="line">                        <span class="keyword">co_await</span> NewThreadAwaitable&lt;void&gt;();</div>
+<div class="line">                        std::unique_ptr&lt;InputEventData&gt; newestEvent = std::make_unique&lt;InputEventData&gt;(newerEvent);</div>
+<div class="line">                        <span class="keywordflow">if</span> (SongAPI::isThereAnySongs(guild.id)) {</div>
+<div class="line">                            EmbedData newEmbed;</div>
+<div class="line">                            <span class="keywordflow">if</span> (!eventData.wasItAFail) {</div>
+<div class="line">                                <span class="keywordflow">if</span> (!SongAPI::sendNextSong(guildMember)) {</div>
+<div class="line">                                    InputEvents::deleteInputEventResponseAsync(std::move(newestEvent));</div>
+<div class="line">                                    SongAPI::play(guildMember.guildId);</div>
+<div class="line">                                    <span class="keyword">co_return</span>;</div>
+<div class="line">                                }</div>
+<div class="line">                                savePlaylist(discordGuild);</div>
+<div class="line">                                newEmbed.setAuthor(eventData.guildMember.user.userName, eventData.guildMember.user.avatar);</div>
+<div class="line">                                newEmbed.setDescription(<span class="stringliteral">&quot;__**Title:**__ [&quot;</span> + SongAPI::getCurrentSong(eventData.guild.id).songTitle + <span class="stringliteral">&quot;](&quot;</span> +</div>
+<div class="line">                                                        SongAPI::getCurrentSong(eventData.guild.id).viewUrl + <span class="stringliteral">&quot;)&quot;</span> + <span class="stringliteral">&quot;\n__**Description:**__ &quot;</span> +</div>
+<div class="line">                                                        SongAPI::getCurrentSong(eventData.guild.id).description + <span class="stringliteral">&quot;\n__**Duration:**__ &quot;</span> +</div>
+<div class="line">                                                        SongAPI::getCurrentSong(eventData.guild.id).duration + <span class="stringliteral">&quot;\n__**Added By:**__ &lt;@!&quot;</span> +</div>
+<div class="line">                                                        SongAPI::getCurrentSong(eventData.guild.id).addedByUserId + <span class="stringliteral">&quot;&gt; (&quot;</span> +</div>
+<div class="line">                                                        SongAPI::getCurrentSong(eventData.guild.id).addedByUserName + <span class="stringliteral">&quot;)&quot;</span>);</div>
+<div class="line">                                newEmbed.setImage(SongAPI::getCurrentSong(eventData.guild.id).thumbnailUrl);</div>
+<div class="line">                                newEmbed.setTimeStamp(<a class="code hl_function" href="../../de/dfc/a00891.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
+<div class="line">                                newEmbed.setTitle(<span class="stringliteral">&quot;__**Now Playing:**__&quot;</span>);</div>
+<div class="line">                                newEmbed.setColor(discordGuild.data.borderColor);</div>
+<div class="line">                                <span class="keywordflow">if</span> (SongAPI::isLoopAllEnabled(eventData.guild.id) &amp;&amp; SongAPI::isLoopSongEnabled(eventData.guild.id)) {</div>
+<div class="line">                                    newEmbed.setFooter(<span class="stringliteral">&quot;✅ Loop-All, ✅ Loop-Song&quot;</span>);</div>
+<div class="line">                                }</div>
+<div class="line">                                <span class="keywordflow">if</span> (!SongAPI::isLoopAllEnabled(eventData.guild.id) &amp;&amp; SongAPI::isLoopSongEnabled(eventData.guild.id)) {</div>
+<div class="line">                                    newEmbed.setFooter(<span class="stringliteral">&quot;❌ Loop-All, ✅ Loop-Song&quot;</span>);</div>
+<div class="line">                                }</div>
+<div class="line">                                <span class="keywordflow">if</span> (SongAPI::isLoopAllEnabled(eventData.guild.id) &amp;&amp; !SongAPI::isLoopSongEnabled(eventData.guild.id)) {</div>
+<div class="line">                                    newEmbed.setFooter(<span class="stringliteral">&quot;✅ Loop-All, ❌ Loop-Song&quot;</span>);</div>
+<div class="line">                                }</div>
+<div class="line">                                <span class="keywordflow">if</span> (!SongAPI::isLoopAllEnabled(eventData.guild.id) &amp;&amp; !SongAPI::isLoopSongEnabled(eventData.guild.id)) {</div>
+<div class="line">                                    newEmbed.setFooter(<span class="stringliteral">&quot;❌ Loop-All, ❌ Loop-Song&quot;</span>);</div>
+<div class="line">                                }</div>
+<div class="line">                                CreateMessageData dataPackage02(channelId);</div>
+<div class="line">                                dataPackage02.addMessageEmbed(newEmbed);</div>
+<div class="line">                                Messages::createMessageAsync(dataPackage02).get();</div>
+<div class="line">                            } <span class="keywordflow">else</span> {</div>
+<div class="line">                                SongAPI::sendNextSong(eventData.guildMember);</div>
+<div class="line">                                savePlaylist(discordGuild);</div>
+<div class="line">                                loadPlaylist(discordGuild);</div>
+<div class="line">                                newEmbed.setAuthor(eventData.guildMember.user.userName, eventData.guildMember.user.avatar);</div>
+<div class="line">                                newEmbed.setDescription(</div>
+<div class="line">                                    <span class="stringliteral">&quot;__**It appears as though there was an error when trying to play the following track!**__\n__**Title:**__ [&quot;</span> +</div>
+<div class="line">                                    eventData.previousSong.songTitle + <span class="stringliteral">&quot;](&quot;</span> + eventData.previousSong.viewUrl + <span class="stringliteral">&quot;)&quot;</span> + <span class="stringliteral">&quot;\n__**Description:**__ &quot;</span> +</div>
+<div class="line">                                    eventData.previousSong.description + <span class="stringliteral">&quot;\n__**Duration:**__ &quot;</span> + eventData.previousSong.duration + <span class="stringliteral">&quot;\n__**Added By:**__ &lt;@!&quot;</span> +</div>
+<div class="line">                                    eventData.previousSong.addedByUserId + <span class="stringliteral">&quot;&gt; (&quot;</span> + eventData.previousSong.addedByUserName + <span class="stringliteral">&quot;)&quot;</span>);</div>
+<div class="line">                                newEmbed.setImage(eventData.previousSong.thumbnailUrl);</div>
+<div class="line">                                newEmbed.setTimeStamp(<a class="code hl_function" href="../../de/dfc/a00891.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
+<div class="line">                                newEmbed.setTitle(<span class="stringliteral">&quot;__**Playing Error:**__&quot;</span>);</div>
+<div class="line">                                newEmbed.setColor(<span class="stringliteral">&quot;fe0000&quot;</span>);</div>
+<div class="line">                                <span class="keywordflow">if</span> (SongAPI::isLoopAllEnabled(eventData.guild.id) &amp;&amp; SongAPI::isLoopSongEnabled(eventData.guild.id)) {</div>
+<div class="line">                                    newEmbed.setFooter(<span class="stringliteral">&quot;✅ Loop-All, ✅ Loop-Song&quot;</span>);</div>
+<div class="line">                                }</div>
+<div class="line">                                <span class="keywordflow">if</span> (!SongAPI::isLoopAllEnabled(eventData.guild.id) &amp;&amp; SongAPI::isLoopSongEnabled(eventData.guild.id)) {</div>
+<div class="line">                                    newEmbed.setFooter(<span class="stringliteral">&quot;❌ Loop-All, ✅ Loop-Song&quot;</span>);</div>
+<div class="line">                                }</div>
+<div class="line">                                <span class="keywordflow">if</span> (SongAPI::isLoopAllEnabled(eventData.guild.id) &amp;&amp; !SongAPI::isLoopSongEnabled(eventData.guild.id)) {</div>
+<div class="line">                                    newEmbed.setFooter(<span class="stringliteral">&quot;✅ Loop-All, ❌ Loop-Song&quot;</span>);</div>
+<div class="line">                                }</div>
+<div class="line">                                <span class="keywordflow">if</span> (!SongAPI::isLoopAllEnabled(eventData.guild.id) &amp;&amp; !SongAPI::isLoopSongEnabled(eventData.guild.id)) {</div>
+<div class="line">                                    newEmbed.setFooter(<span class="stringliteral">&quot;❌ Loop-All, ❌ Loop-Song&quot;</span>);</div>
+<div class="line">                                }</div>
+<div class="line">                                CreateMessageData dataPackage02(channelId);</div>
+<div class="line">                                dataPackage02.addMessageEmbed(newEmbed);</div>
+<div class="line">                                Messages::createMessageAsync(dataPackage02).get();</div>
+<div class="line"> </div>
+<div class="line">                                <span class="keywordflow">if</span> (!SongAPI::areWeCurrentlyPlaying(eventData.guild.id)) {</div>
+<div class="line">                                    newEmbed.setAuthor(eventData.guildMember.user.userName, eventData.guildMember.user.avatar);</div>
+<div class="line">                                    newEmbed.setDescription(<span class="stringliteral">&quot;__**Title:**__ [&quot;</span> + SongAPI::getCurrentSong(eventData.guild.id).songTitle + <span class="stringliteral">&quot;](&quot;</span> +</div>
+<div class="line">                                                            SongAPI::getCurrentSong(eventData.guild.id).viewUrl + <span class="stringliteral">&quot;)&quot;</span> + <span class="stringliteral">&quot;\n__**Description:**__ &quot;</span> +</div>
+<div class="line">                                                            SongAPI::getCurrentSong(eventData.guild.id).description + <span class="stringliteral">&quot;\n__**Duration:**__ &quot;</span> +</div>
+<div class="line">                                                            SongAPI::getCurrentSong(eventData.guild.id).duration + <span class="stringliteral">&quot;\n__**Added By:**__ &lt;@!&quot;</span> +</div>
+<div class="line">                                                            SongAPI::getCurrentSong(eventData.guild.id).addedByUserId + <span class="stringliteral">&quot;&gt; (&quot;</span> +</div>
+<div class="line">                                                            SongAPI::getCurrentSong(eventData.guild.id).addedByUserName + <span class="stringliteral">&quot;)&quot;</span>);</div>
+<div class="line">                                    newEmbed.setImage(SongAPI::getCurrentSong(eventData.guild.id).thumbnailUrl);</div>
+<div class="line">                                    newEmbed.setTimeStamp(<a class="code hl_function" href="../../de/dfc/a00891.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
+<div class="line">                                    newEmbed.setTitle(<span class="stringliteral">&quot;__**Now Playing:**__&quot;</span>);</div>
+<div class="line">                                    newEmbed.setColor(discordGuild.data.borderColor);</div>
+<div class="line">                                    <span class="keywordflow">if</span> (SongAPI::isLoopAllEnabled(eventData.guild.id) &amp;&amp; SongAPI::isLoopSongEnabled(eventData.guild.id)) {</div>
+<div class="line">                                        newEmbed.setFooter(<span class="stringliteral">&quot;✅ Loop-All, ✅ Loop-Song&quot;</span>);</div>
+<div class="line">                                    }</div>
+<div class="line">                                    <span class="keywordflow">if</span> (!SongAPI::isLoopAllEnabled(eventData.guild.id) &amp;&amp; SongAPI::isLoopSongEnabled(eventData.guild.id)) {</div>
+<div class="line">                                        newEmbed.setFooter(<span class="stringliteral">&quot;❌ Loop-All, ✅ Loop-Song&quot;</span>);</div>
+<div class="line">                                    }</div>
+<div class="line">                                    <span class="keywordflow">if</span> (SongAPI::isLoopAllEnabled(eventData.guild.id) &amp;&amp; !SongAPI::isLoopSongEnabled(eventData.guild.id)) {</div>
+<div class="line">                                        newEmbed.setFooter(<span class="stringliteral">&quot;✅ Loop-All, ❌ Loop-Song&quot;</span>);</div>
+<div class="line">                                    }</div>
+<div class="line">                                    <span class="keywordflow">if</span> (!SongAPI::isLoopAllEnabled(eventData.guild.id) &amp;&amp; !SongAPI::isLoopSongEnabled(eventData.guild.id)) {</div>
+<div class="line">                                        newEmbed.setFooter(<span class="stringliteral">&quot;❌ Loop-All, ❌ Loop-Song&quot;</span>);</div>
+<div class="line">                                    }</div>
+<div class="line">                                    CreateMessageData dataPackage02(channelId);</div>
+<div class="line">                                    dataPackage02.addMessageEmbed(newEmbed);</div>
+<div class="line">                                    Messages::createMessageAsync(dataPackage02).get();</div>
+<div class="line">                                }</div>
+<div class="line">                            }</div>
+<div class="line">                            savePlaylist(discordGuild);</div>
+<div class="line">                            SongAPI::play(eventData.guild.id);</div>
+<div class="line">                        } <span class="keywordflow">else</span> {</div>
+<div class="line">                            EmbedData newEmbed;</div>
+<div class="line">                            newEmbed.setAuthor(eventData.guildMember.user.userName, eventData.guildMember.user.avatar);</div>
+<div class="line">                            newEmbed.setDescription(<span class="stringliteral">&quot;------\n__**Sorry, but there&#39;s nothing left to play here!**__\n------&quot;</span>);</div>
+<div class="line">                            newEmbed.setTimeStamp(<a class="code hl_function" href="../../de/dfc/a00891.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
+<div class="line">                            newEmbed.setTitle(<span class="stringliteral">&quot;__**Now Playing:**__&quot;</span>);</div>
+<div class="line">                            newEmbed.setColor(discordGuild.data.borderColor);</div>
+<div class="line">                            <span class="keywordflow">if</span> (SongAPI::isLoopAllEnabled(eventData.guild.id) &amp;&amp; SongAPI::isLoopSongEnabled(eventData.guild.id)) {</div>
+<div class="line">                                newEmbed.setFooter(<span class="stringliteral">&quot;✅ Loop-All, ✅ Loop-Song&quot;</span>);</div>
+<div class="line">                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!SongAPI::isLoopAllEnabled(eventData.guild.id) &amp;&amp; SongAPI::isLoopSongEnabled(eventData.guild.id)) {</div>
+<div class="line">                                newEmbed.setFooter(<span class="stringliteral">&quot;❌ Loop-All, ✅ Loop-Song&quot;</span>);</div>
+<div class="line">                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SongAPI::isLoopAllEnabled(eventData.guild.id) &amp;&amp; !SongAPI::isLoopSongEnabled(eventData.guild.id)) {</div>
+<div class="line">                                newEmbed.setFooter(<span class="stringliteral">&quot;✅ Loop-All, ❌ Loop-Song&quot;</span>);</div>
+<div class="line">                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!SongAPI::isLoopAllEnabled(eventData.guild.id) &amp;&amp; !SongAPI::isLoopSongEnabled(eventData.guild.id)) {</div>
+<div class="line">                                newEmbed.setFooter(<span class="stringliteral">&quot;❌ Loop-All, ❌ Loop-Song&quot;</span>);</div>
+<div class="line">                            }</div>
+<div class="line">                            CreateMessageData dataPackage02(channelId);</div>
+<div class="line">                            dataPackage02.addMessageEmbed(newEmbed);</div>
+<div class="line">                            Messages::createMessageAsync(dataPackage02).get();</div>
 <div class="line">                        }</div>
-<div class="line">                    }</div>
-<div class="line"> </div>
-<div class="line">                    <span class="keywordflow">if</span> (isItPresent == <span class="keyword">false</span>) {</div>
-<div class="line">                        std::string msgString2 = <span class="stringliteral">&quot;------\n**That channel is not present on the list of enabled music channels!**\n------&quot;</span>;</div>
-<div class="line">                        EmbedData messageEmbed;</div>
-<div class="line">                        messageEmbed.setAuthor(args.eventData-&gt;<a class="code hl_function" href="../../d9/d95/a02781.html#a3ebc65bb67fbd74518199db64e40559c">getUserName</a>(), args.eventData-&gt;<a class="code hl_function" href="../../d9/d95/a02781.html#a2dd12454f3ecd05f4cfbd22b027268bd">getAvatarUrl</a>());</div>
-<div class="line">                        messageEmbed.setColor(discordGuild.data.borderColor);</div>
-<div class="line">                        messageEmbed.setTimeStamp(<a class="code hl_function" href="../../dd/d94/a00888.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
-<div class="line">                        messageEmbed.setDescription(msgString2);</div>
-<div class="line">                        messageEmbed.setTitle(<span class="stringliteral">&quot;__**Missing from List:**__&quot;</span>);</div>
-<div class="line">                        RespondToInputEventData dataPackage(*args.eventData);</div>
-<div class="line">                        dataPackage.setResponseType(InputEventResponseType::Ephemeral_Interaction_Response);</div>
-<div class="line">                        dataPackage.addMessageEmbed(messageEmbed);</div>
-<div class="line">                        <span class="keyword">auto</span> newEvent = InputEvents::respondToInputEventAsync(dataPackage);</div>
-<div class="line">                        InputEvents::deleteInputEventResponseAsync(std::move(newEvent), 20000);</div>
+<div class="line">                    };</div>
+<div class="line">                    SongAPI::onSongCompletion(theTask, guild.id);</div>
+<div class="line">                }</div>
+<div class="line">                <span class="keywordflow">if</span> (SongAPI::isThereAnySongs(guild.id)) {</div>
+<div class="line">                    <span class="keywordflow">if</span> (!SongAPI::sendNextSong(guildMember)) {</div>
+<div class="line">                        InputEvents::deleteInputEventResponseAsync(std::move(newEvent));</div>
 <div class="line">                        <span class="keywordflow">return</span>;</div>
 <div class="line">                    }</div>
+<div class="line">                    savePlaylist(discordGuild);</div>
 <div class="line"> </div>
-<div class="line">                    EmbedData messageEmbed;</div>
-<div class="line">                    messageEmbed.setAuthor(args.eventData-&gt;<a class="code hl_function" href="../../d9/d95/a02781.html#a3ebc65bb67fbd74518199db64e40559c">getUserName</a>(), args.eventData-&gt;<a class="code hl_function" href="../../d9/d95/a02781.html#a2dd12454f3ecd05f4cfbd22b027268bd">getAvatarUrl</a>());</div>
-<div class="line">                    messageEmbed.setColor(discordGuild.data.borderColor);</div>
-<div class="line">                    messageEmbed.setTimeStamp(<a class="code hl_function" href="../../dd/d94/a00888.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
-<div class="line">                    messageEmbed.setDescription(msgString);</div>
-<div class="line">                    messageEmbed.setTitle(<span class="stringliteral">&quot;__**Music Channel Removed:**__&quot;</span>);</div>
-<div class="line">                    RespondToInputEventData dataPackage(*args.eventData);</div>
-<div class="line">                    dataPackage.setResponseType(InputEventResponseType::Interaction_Response);</div>
-<div class="line">                    dataPackage.addMessageEmbed(messageEmbed);</div>
-<div class="line">                    <span class="keyword">auto</span> newEvent = InputEvents::respondToInputEventAsync(dataPackage);</div>
-<div class="line">                    <span class="keywordflow">return</span>;</div>
-<div class="line">                }</div>
-<div class="line">                <span class="keywordflow">if</span> (args.commandData.subCommandName == <span class="stringliteral">&quot;purge&quot;</span>) {</div>
-<div class="line">                    std::string msgString;</div>
-<div class="line"> </div>
-<div class="line">                    <span class="keywordflow">if</span> (discordGuild.data.musicChannelIds.size() &gt; 0) {</div>
-<div class="line">                        msgString = <span class="stringliteral">&quot;__You&#39;ve removed the following channels from your list of enabled music channels:__\n------\n&quot;</span>;</div>
-<div class="line"> </div>
-<div class="line">                        <span class="keywordflow">for</span> (uint32_t x = 0; x &lt; discordGuild.data.musicChannelIds.size(); x++) {</div>
-<div class="line">                            std::string currentID = discordGuild.data.musicChannelIds[x];</div>
-<div class="line"> </div>
-<div class="line">                            msgString += <span class="stringliteral">&quot;__**Channel #&quot;</span> + std::to_string(x) + <span class="stringliteral">&quot;**__&lt;#&quot;</span> + currentID + <span class="stringliteral">&quot;&gt; \n&quot;</span>;</div>
-<div class="line">                        }</div>
-<div class="line"> </div>
-<div class="line">                        msgString += <span class="stringliteral">&quot;------\n__**The music commands will now work in ANY CHANNEL!**__&quot;</span>;</div>
-<div class="line"> </div>
-<div class="line">                        discordGuild.data.musicChannelIds = std::vector&lt;std::string&gt;();</div>
-<div class="line">                        discordGuild.writeDataToDB();</div>
-<div class="line">                    } <span class="keywordflow">else</span> {</div>
-<div class="line">                        msgString += <span class="stringliteral">&quot;------\n**Sorry, but there are no channels to remove!**\n------&quot;</span>;</div>
+<div class="line">                    EmbedData newEmbed;</div>
+<div class="line">                    newEmbed.setAuthor(args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a3ebc65bb67fbd74518199db64e40559c">getUserName</a>(), args.eventData-&gt;<a class="code hl_function" href="../../d0/d5a/a02784.html#a2dd12454f3ecd05f4cfbd22b027268bd">getAvatarUrl</a>());</div>
+<div class="line">                    newEmbed.setDescription(<span class="stringliteral">&quot;__**Title:**__ [&quot;</span> + SongAPI::getCurrentSong(guild.id).songTitle + <span class="stringliteral">&quot;](&quot;</span> +</div>
+<div class="line">                                            SongAPI::getCurrentSong(guild.id).viewUrl + <span class="stringliteral">&quot;)&quot;</span> + <span class="stringliteral">&quot;\n__**Description:**__ &quot;</span> +</div>
+<div class="line">                                            SongAPI::getCurrentSong(guild.id).description + <span class="stringliteral">&quot;\n__**Duration:**__ &quot;</span> +</div>
+<div class="line">                                            SongAPI::getCurrentSong(guild.id).duration + <span class="stringliteral">&quot;\n__**Added By:**__ &lt;@!&quot;</span> +</div>
+<div class="line">                                            SongAPI::getCurrentSong(guild.id).addedByUserId + <span class="stringliteral">&quot;&gt; (&quot;</span> + SongAPI::getCurrentSong(guild.id).addedByUserName + <span class="stringliteral">&quot;)&quot;</span>);</div>
+<div class="line">                    newEmbed.setImage(SongAPI::getCurrentSong(guild.id).thumbnailUrl);</div>
+<div class="line">                    newEmbed.setTimeStamp(<a class="code hl_function" href="../../de/dfc/a00891.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
+<div class="line">                    newEmbed.setTitle(<span class="stringliteral">&quot;__**Now Playing:**__&quot;</span>);</div>
+<div class="line">                    newEmbed.setColor(discordGuild.data.borderColor);</div>
+<div class="line">                    <span class="keywordflow">if</span> (SongAPI::isLoopAllEnabled(guild.id) &amp;&amp; SongAPI::isLoopSongEnabled(guild.id)) {</div>
+<div class="line">                        newEmbed.setFooter(<span class="stringliteral">&quot;✅ Loop-All, ✅ Loop-Song&quot;</span>);</div>
+<div class="line">                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!SongAPI::isLoopAllEnabled(guild.id) &amp;&amp; SongAPI::isLoopSongEnabled(guild.id)) {</div>
+<div class="line">                        newEmbed.setFooter(<span class="stringliteral">&quot;❌ Loop-All, ✅ Loop-Song&quot;</span>);</div>
+<div class="line">                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SongAPI::isLoopAllEnabled(guild.id) &amp;&amp; !SongAPI::isLoopSongEnabled(guild.id)) {</div>
+<div class="line">                        newEmbed.setFooter(<span class="stringliteral">&quot;✅ Loop-All, ❌ Loop-Song&quot;</span>);</div>
+<div class="line">                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!SongAPI::isLoopAllEnabled(guild.id) &amp;&amp; !SongAPI::isLoopSongEnabled(guild.id)) {</div>
+<div class="line">                        newEmbed.setFooter(<span class="stringliteral">&quot;❌ Loop-All, ❌ Loop-Song&quot;</span>);</div>
 <div class="line">                    }</div>
-<div class="line"> </div>
-<div class="line">                    EmbedData messageEmbed;</div>
-<div class="line">                    messageEmbed.setAuthor(args.eventData-&gt;<a class="code hl_function" href="../../d9/d95/a02781.html#a3ebc65bb67fbd74518199db64e40559c">getUserName</a>(), args.eventData-&gt;<a class="code hl_function" href="../../d9/d95/a02781.html#a2dd12454f3ecd05f4cfbd22b027268bd">getAvatarUrl</a>());</div>
-<div class="line">                    messageEmbed.setColor(discordGuild.data.borderColor);</div>
-<div class="line">                    messageEmbed.setTimeStamp(<a class="code hl_function" href="../../dd/d94/a00888.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
-<div class="line">                    messageEmbed.setDescription(msgString);</div>
-<div class="line">                    messageEmbed.setTitle(<span class="stringliteral">&quot;__**Music Channels Removed:**__&quot;</span>);</div>
 <div class="line">                    RespondToInputEventData dataPackage(*args.eventData);</div>
 <div class="line">                    dataPackage.setResponseType(InputEventResponseType::Interaction_Response);</div>
-<div class="line">                    dataPackage.addMessageEmbed(messageEmbed);</div>
-<div class="line">                    <span class="keyword">auto</span> newEvent = InputEvents::respondToInputEventAsync(dataPackage);</div>
-<div class="line">                    <span class="keywordflow">return</span>;</div>
+<div class="line">                    dataPackage.addMessageEmbed(newEmbed);</div>
+<div class="line">                    newEvent = InputEvents::respondToInputEventAsync(dataPackage);</div>
+<div class="line">                    SongAPI::play(guild.id);</div>
 <div class="line">                }</div>
-<div class="line">                <span class="keywordflow">if</span> (args.commandData.subCommandName == <span class="stringliteral">&quot;view&quot;</span>) {</div>
-<div class="line">                    std::string msgString = <span class="stringliteral">&quot;__You have the following channels enabled for music commands, on this server:__\n------\n&quot;</span>;</div>
-<div class="line"> </div>
-<div class="line">                    <span class="keywordflow">for</span> (uint32_t x = 0; x &lt; discordGuild.data.musicChannelIds.size(); x++) {</div>
-<div class="line">                        std::string currentID = discordGuild.data.musicChannelIds[x];</div>
-<div class="line"> </div>
-<div class="line">                        msgString += <span class="stringliteral">&quot;__**Channel #&quot;</span> + std::to_string(x) + <span class="stringliteral">&quot;:**__ &lt;#&quot;</span> + currentID + <span class="stringliteral">&quot;&gt; \n&quot;</span>;</div>
-<div class="line">                    }</div>
-<div class="line"> </div>
-<div class="line">                    msgString += <span class="stringliteral">&quot;------\n&quot;</span>;</div>
-<div class="line"> </div>
-<div class="line">                    EmbedData messageEmbed;</div>
-<div class="line">                    messageEmbed.setAuthor(args.eventData-&gt;<a class="code hl_function" href="../../d9/d95/a02781.html#a3ebc65bb67fbd74518199db64e40559c">getUserName</a>(), args.eventData-&gt;<a class="code hl_function" href="../../d9/d95/a02781.html#a2dd12454f3ecd05f4cfbd22b027268bd">getAvatarUrl</a>());</div>
-<div class="line">                    messageEmbed.setColor(discordGuild.data.borderColor);</div>
-<div class="line">                    messageEmbed.setTimeStamp(<a class="code hl_function" href="../../dd/d94/a00888.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
-<div class="line">                    messageEmbed.setDescription(msgString);</div>
-<div class="line">                    messageEmbed.setTitle(<span class="stringliteral">&quot;__**Music Channels Enabled:**__&quot;</span>);</div>
-<div class="line">                    RespondToInputEventData dataPackage(*args.eventData);</div>
-<div class="line">                    dataPackage.setResponseType(InputEventResponseType::Interaction_Response);</div>
-<div class="line">                    dataPackage.addMessageEmbed(messageEmbed);</div>
-<div class="line">                    <span class="keyword">auto</span> newEvent = InputEvents::respondToInputEventAsync(dataPackage);</div>
-<div class="line">                    <span class="keywordflow">return</span>;</div>
-<div class="line">                }</div>
-<div class="line"> </div>
 <div class="line">                <span class="keywordflow">return</span>;</div>
 <div class="line">            } <span class="keywordflow">catch</span> (...) {</div>
-<div class="line">                <a class="code hl_function" href="../../dd/d94/a00888.html#ga805bf7170903087e933a7b81c8e39f15">reportException</a>(<span class="stringliteral">&quot;SetMusicChannel::execute Error: &quot;</span>);</div>
+<div class="line">                <a class="code hl_function" href="../../de/dfc/a00891.html#ga805bf7170903087e933a7b81c8e39f15">reportException</a>(<span class="stringliteral">&quot;PlayQ::execute Error: &quot;</span>);</div>
 <div class="line">            }</div>
-<div class="line">        }</div>
-<div class="line">        <span class="keyword">virtual</span> ~SetMusicChannel();</div>
+<div class="line">        };</div>
+<div class="line">        <span class="keyword">virtual</span> ~PlayQ();</div>
 <div class="line">    };</div>
 <div class="line">}</div>
 <div class="ttc" id="aa00749_html"><div class="ttname"><a href="../../d5/de8/a00749.html">Index.hpp</a></div></div>
-<div class="ttc" id="aa00888_html_ga63ce723358a8b7a00c14e055f2a26998"><div class="ttname"><a href="../../dd/d94/a00888.html#ga63ce723358a8b7a00c14e055f2a26998">DiscordCoreAPI::getTimeAndDate</a></div><div class="ttdeci">DiscordCoreAPI_Dll std::string getTimeAndDate()</div><div class="ttdoc">Acquires a timestamp with the current time and date - suitable for use in message-embeds.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db7/a00812_source.html#l01122">Utilities.cpp:1122</a></div></div>
-<div class="ttc" id="aa00888_html_ga805bf7170903087e933a7b81c8e39f15"><div class="ttname"><a href="../../dd/d94/a00888.html#ga805bf7170903087e933a7b81c8e39f15">DiscordCoreAPI::reportException</a></div><div class="ttdeci">DiscordCoreAPI_Dll void reportException(const std::string &amp;currentFunctionName, std::source_location theLocation=std::source_location::current())</div><div class="ttdoc">Prints the current file, line, and column from which the function is being called - typically from wi...</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db7/a00812_source.html#l00907">Utilities.cpp:907</a></div></div>
-<div class="ttc" id="aa00890_html"><div class="ttname"><a href="../../d7/d46/a00890.html">DiscordCoreAPI</a></div><div class="ttdoc">The main namespace for this library.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00025">ApplicationCommandEntities.hpp:25</a></div></div>
-<div class="ttc" id="aa02781_html_a2dd12454f3ecd05f4cfbd22b027268bd"><div class="ttname"><a href="../../d9/d95/a02781.html#a2dd12454f3ecd05f4cfbd22b027268bd">DiscordCoreAPI::InputEventData::getAvatarUrl</a></div><div class="ttdeci">std::string getAvatarUrl()</div><div class="ttdoc">Gets the avatar Url of the last User to trigger this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01598">FoundationEntities.cpp:1598</a></div></div>
-<div class="ttc" id="aa02781_html_a3ebc65bb67fbd74518199db64e40559c"><div class="ttname"><a href="../../d9/d95/a02781.html#a3ebc65bb67fbd74518199db64e40559c">DiscordCoreAPI::InputEventData::getUserName</a></div><div class="ttdeci">std::string getUserName()</div><div class="ttdoc">Returns the userName of the last User to trigger this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01594">FoundationEntities.cpp:1594</a></div></div>
-<div class="ttc" id="aa02781_html_a565fe2447237030a716f64b2599996dd"><div class="ttname"><a href="../../d9/d95/a02781.html#a565fe2447237030a716f64b2599996dd">DiscordCoreAPI::InputEventData::getGuildId</a></div><div class="ttdeci">Snowflake getGuildId()</div><div class="ttdoc">Returns the Guild id, of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01630">FoundationEntities.cpp:1630</a></div></div>
-<div class="ttc" id="aa02781_html_a70865601071ddd3f49a50b280a0d4894"><div class="ttname"><a href="../../d9/d95/a02781.html#a70865601071ddd3f49a50b280a0d4894">DiscordCoreAPI::InputEventData::getAuthorId</a></div><div class="ttdeci">Snowflake getAuthorId()</div><div class="ttdoc">Returns the User id of the last requester of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01610">FoundationEntities.cpp:1610</a></div></div>
-<div class="ttc" id="aa02781_html_a97c397fe274250bfff73cf674810a8f5"><div class="ttname"><a href="../../d9/d95/a02781.html#a97c397fe274250bfff73cf674810a8f5">DiscordCoreAPI::InputEventData::getChannelId</a></div><div class="ttdeci">Snowflake getChannelId()</div><div class="ttdoc">Returns the Channel id of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01622">FoundationEntities.cpp:1622</a></div></div>
-<div class="ttc" id="aa02833_html"><div class="ttname"><a href="../../d0/d2b/a02833.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03795">FoundationEntities.hpp:3795</a></div></div>
-<div class="ttc" id="aa02837_html"><div class="ttname"><a href="../../dc/dfd/a02837.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03806">FoundationEntities.hpp:3806</a></div></div>
+<div class="ttc" id="aa00891_html_ga63ce723358a8b7a00c14e055f2a26998"><div class="ttname"><a href="../../de/dfc/a00891.html#ga63ce723358a8b7a00c14e055f2a26998">DiscordCoreAPI::getTimeAndDate</a></div><div class="ttdeci">DiscordCoreAPI_Dll std::string getTimeAndDate()</div><div class="ttdoc">Acquires a timestamp with the current time and date - suitable for use in message-embeds.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2d/a00815_source.html#l01122">Utilities.cpp:1122</a></div></div>
+<div class="ttc" id="aa00891_html_ga805bf7170903087e933a7b81c8e39f15"><div class="ttname"><a href="../../de/dfc/a00891.html#ga805bf7170903087e933a7b81c8e39f15">DiscordCoreAPI::reportException</a></div><div class="ttdeci">DiscordCoreAPI_Dll void reportException(const std::string &amp;currentFunctionName, std::source_location theLocation=std::source_location::current())</div><div class="ttdoc">Prints the current file, line, and column from which the function is being called - typically from wi...</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2d/a00815_source.html#l00907">Utilities.cpp:907</a></div></div>
+<div class="ttc" id="aa00893_html"><div class="ttname"><a href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></div><div class="ttdoc">The main namespace for this library.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00025">ApplicationCommandEntities.hpp:25</a></div></div>
+<div class="ttc" id="aa02784_html_a2dd12454f3ecd05f4cfbd22b027268bd"><div class="ttname"><a href="../../d0/d5a/a02784.html#a2dd12454f3ecd05f4cfbd22b027268bd">DiscordCoreAPI::InputEventData::getAvatarUrl</a></div><div class="ttdeci">std::string getAvatarUrl()</div><div class="ttdoc">Gets the avatar Url of the last User to trigger this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01598">FoundationEntities.cpp:1598</a></div></div>
+<div class="ttc" id="aa02784_html_a3ebc65bb67fbd74518199db64e40559c"><div class="ttname"><a href="../../d0/d5a/a02784.html#a3ebc65bb67fbd74518199db64e40559c">DiscordCoreAPI::InputEventData::getUserName</a></div><div class="ttdeci">std::string getUserName()</div><div class="ttdoc">Returns the userName of the last User to trigger this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01594">FoundationEntities.cpp:1594</a></div></div>
+<div class="ttc" id="aa02784_html_a565fe2447237030a716f64b2599996dd"><div class="ttname"><a href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">DiscordCoreAPI::InputEventData::getGuildId</a></div><div class="ttdeci">Snowflake getGuildId()</div><div class="ttdoc">Returns the Guild id, of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01630">FoundationEntities.cpp:1630</a></div></div>
+<div class="ttc" id="aa02784_html_a70865601071ddd3f49a50b280a0d4894"><div class="ttname"><a href="../../d0/d5a/a02784.html#a70865601071ddd3f49a50b280a0d4894">DiscordCoreAPI::InputEventData::getAuthorId</a></div><div class="ttdeci">Snowflake getAuthorId()</div><div class="ttdoc">Returns the User id of the last requester of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01610">FoundationEntities.cpp:1610</a></div></div>
+<div class="ttc" id="aa02784_html_a97c397fe274250bfff73cf674810a8f5"><div class="ttname"><a href="../../d0/d5a/a02784.html#a97c397fe274250bfff73cf674810a8f5">DiscordCoreAPI::InputEventData::getChannelId</a></div><div class="ttdeci">Snowflake getChannelId()</div><div class="ttdoc">Returns the Channel id of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01622">FoundationEntities.cpp:1622</a></div></div>
+<div class="ttc" id="aa02836_html"><div class="ttname"><a href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03795">FoundationEntities.hpp:3795</a></div></div>
+<div class="ttc" id="aa02840_html"><div class="ttname"><a href="../../d9/d4d/a02840.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03806">FoundationEntities.hpp:3806</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -311,7 +471,7 @@ $(document).ready(function(){initNavTree('dc/d39/a07141.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d3/d28/a07020.html">Guides</a></li><li class="navelem"><a class="el" href="../../d7/d57/a07134.html">Music-Bot Guide</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d2/d83/a07023.html">Guides</a></li><li class="navelem"><a class="el" href="../../d3/df9/a07137.html">Music-Bot Guide</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

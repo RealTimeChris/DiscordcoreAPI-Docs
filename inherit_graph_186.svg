@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d4/d9d/a02681.html" target="_top" xlink:title="Interaction ApplicationCommand callback data.">
+<g id="a_node1"><a xlink:href="de/db4/a02684.html" target="_top" xlink:title="Interaction ApplicationCommand callback data.">
 <polygon fill="none" stroke="black" points="150,-30 0,-30 0,0 150,0 150,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::Interaction</text>
 <text text-anchor="middle" x="75" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">CallbackData</text>

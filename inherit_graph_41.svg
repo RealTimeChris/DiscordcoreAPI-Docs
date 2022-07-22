@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d5/d92/a01977.html" target="_top" xlink:title="A CoRoutine &#45; representing a potentially asynchronous operation/function.">
+<g id="a_node1"><a xlink:href="d5/d70/a01980.html" target="_top" xlink:title="A CoRoutine &#45; representing a potentially asynchronous operation/function.">
 <polygon fill="none" stroke="black" points="148,-30 0,-30 0,0 148,0 148,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::CoRoutine</text>
 <text text-anchor="middle" x="74" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; void &gt;</text>

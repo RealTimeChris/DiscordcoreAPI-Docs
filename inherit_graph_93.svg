@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="db/d66/a01721.html" target="_top" xlink:title="For editing a single global ApplicationCommand.">
+<g id="a_node1"><a xlink:href="d3/d4c/a01724.html" target="_top" xlink:title="For editing a single global ApplicationCommand.">
 <polygon fill="none" stroke="black" points="148,-30 0,-30 0,0 148,0 148,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::EditGlobal</text>
 <text text-anchor="middle" x="74" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">ApplicationCommandData</text>

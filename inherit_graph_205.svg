@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="dc/dc7/a03241.html" target="_top" xlink:title="An interface class for the Message related Discord endpoints.">
+<g id="a_node1"><a xlink:href="d1/dfa/a03244.html" target="_top" xlink:title="An interface class for the Message related Discord endpoints.">
 <polygon fill="none" stroke="black" points="146,-19 0,-19 0,0 146,0 146,-19"/>
 <text text-anchor="middle" x="73" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::Messages</text>
 </a>

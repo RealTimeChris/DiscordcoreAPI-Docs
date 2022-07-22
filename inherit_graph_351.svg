@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="de/d8b/a02545.html" target="_top" xlink:title="Welcome screen data.">
+<g id="a_node1"><a xlink:href="da/dc4/a02548.html" target="_top" xlink:title="Welcome screen data.">
 <polygon fill="none" stroke="black" points="199,-19 0,-19 0,0 199,0 199,-19"/>
 <text text-anchor="middle" x="99.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::WelcomeScreenData</text>
 </a>

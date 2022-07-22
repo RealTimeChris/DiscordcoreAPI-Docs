@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="dd/d2e/a01949.html" target="_top" xlink:title="For modifying a Channel&#39;s properties.">
+<g id="a_node1"><a xlink:href="d4/dec/a01952.html" target="_top" xlink:title="For modifying a Channel&#39;s properties.">
 <polygon fill="none" stroke="black" points="194,-19 0,-19 0,0 194,0 194,-19"/>
 <text text-anchor="middle" x="97" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::ModifyChannelData</text>
 </a>

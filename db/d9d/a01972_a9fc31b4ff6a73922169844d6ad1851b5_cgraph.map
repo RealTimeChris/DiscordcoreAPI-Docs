@@ -1,0 +1,4 @@
+<map id="DiscordCoreAPI::CoRoutine::cancel" name="DiscordCoreAPI::CoRoutine::cancel">
+<area shape="rect" id="node1" title="Cancels the currently executing CoRoutine and returns the current result." alt="" coords="5,5,203,45"/>
+<area shape="rect" id="node2" href="$da/d9f/a03636.html#a5845dd8c3af6c44112754d450ebabdbf" title="Tries to receive an object of type ObjectType to be placed into a reference." alt="" coords="251,5,455,45"/>
+</map>

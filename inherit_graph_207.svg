@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d8/d69/a02661.html" target="_top" xlink:title="Modal interaction data, for inputs from text modals.">
+<g id="a_node1"><a xlink:href="d6/d18/a02664.html" target="_top" xlink:title="Modal interaction data, for inputs from text modals.">
 <polygon fill="none" stroke="black" points="203,-19 0,-19 0,0 203,0 203,-19"/>
 <text text-anchor="middle" x="101.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::ModalInteractionData</text>
 </a>

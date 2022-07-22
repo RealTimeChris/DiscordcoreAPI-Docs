@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d7/d90/a03177.html" target="_top" xlink:title="ModalCollector, for collecting modal text input from one or more Users.">
+<g id="a_node1"><a xlink:href="d6/da1/a03180.html" target="_top" xlink:title="ModalCollector, for collecting modal text input from one or more Users.">
 <polygon fill="none" stroke="black" points="171,-19 0,-19 0,0 171,0 171,-19"/>
 <text text-anchor="middle" x="85.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::ModalCollector</text>
 </a>

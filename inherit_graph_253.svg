@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d0/dfd/a02017.html" target="_top" xlink:title="Data that is received as part of an InputEvent creation event.">
+<g id="a_node1"><a xlink:href="dc/d62/a02020.html" target="_top" xlink:title="Data that is received as part of an InputEvent creation event.">
 <polygon fill="none" stroke="black" points="164,-30 0,-30 0,0 164,0 164,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::OnInputEvent</text>
 <text text-anchor="middle" x="82" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">CreationData</text>

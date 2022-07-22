@@ -83,7 +83,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('d9/d63/a01877.html','../../'); initResizable(); });
+$(document).ready(function(){initNavTree('d9/d7d/a01880.html','../../'); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -102,68 +102,27 @@ $(document).ready(function(){initNavTree('d9/d63/a01877.html','../../'); initRes
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#pub-attribs">Public Data Members</a> &#124;
-<a href="../../de/dfb/a01874.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::ModifyAutoModerationRuleData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::ModifyAutoModerationRuleData Member List</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For modifying an auto-moderation-rule.  
- <a href="../../d9/d63/a01877.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="../../dc/dce/a00740_source.html">AutoModerationEntities.hpp</a>&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Public Data Members</h2></td></tr>
-<tr class="memitem:ad485d16447f820002e6f586e5018de04"><td class="memItemLeft" align="right" valign="top"><a id="ad485d16447f820002e6f586e5018de04" name="ad485d16447f820002e6f586e5018de04"></a>
-std::vector&lt; <a class="el" href="../../d1/d29/a02393.html">ActionData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>actions</b> {}</td></tr>
-<tr class="memdesc:ad485d16447f820002e6f586e5018de04"><td class="mdescLeft">&#160;</td><td class="mdescRight">The actions which will execute when the rule is triggered. <br /></td></tr>
-<tr class="separator:ad485d16447f820002e6f586e5018de04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abab297a101c6c8d3e30b8b6167e7fd65"><td class="memItemLeft" align="right" valign="top"><a id="abab297a101c6c8d3e30b8b6167e7fd65" name="abab297a101c6c8d3e30b8b6167e7fd65"></a>
-uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>autoModerationRuleId</b> {}</td></tr>
-<tr class="memdesc:abab297a101c6c8d3e30b8b6167e7fd65"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the auto-moderation-rule you would like to modify. <br /></td></tr>
-<tr class="separator:abab297a101c6c8d3e30b8b6167e7fd65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1903e1f3b655f990a64de97e799640de"><td class="memItemLeft" align="right" valign="top"><a id="a1903e1f3b655f990a64de97e799640de" name="a1903e1f3b655f990a64de97e799640de"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>enabled</b> {}</td></tr>
-<tr class="memdesc:a1903e1f3b655f990a64de97e799640de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the rule is <a class="el" href="../../d9/d63/a01877.html#a1903e1f3b655f990a64de97e799640de" title="Whether the rule is enabled(False by default).">enabled(False by default)</a>. <br /></td></tr>
-<tr class="separator:a1903e1f3b655f990a64de97e799640de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a278d14fec908a800110f37654f75e29b"><td class="memItemLeft" align="right" valign="top"><a id="a278d14fec908a800110f37654f75e29b" name="a278d14fec908a800110f37654f75e29b"></a>
-<a class="el" href="../../dd/d94/a00888.html#ga5dd2e40b084b06961a22cbc0fd491a72">EventType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>eventType</b> {}</td></tr>
-<tr class="memdesc:a278d14fec908a800110f37654f75e29b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The event type. <br /></td></tr>
-<tr class="separator:a278d14fec908a800110f37654f75e29b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb6f6433ee35eee582b3b5a026e29639"><td class="memItemLeft" align="right" valign="top"><a id="abb6f6433ee35eee582b3b5a026e29639" name="abb6f6433ee35eee582b3b5a026e29639"></a>
-std::vector&lt; uint64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>exemptChannels</b> {}</td></tr>
-<tr class="memdesc:abb6f6433ee35eee582b3b5a026e29639"><td class="mdescLeft">&#160;</td><td class="mdescRight">The channel ids that should not be affected by the rule(Maximum of 50). <br /></td></tr>
-<tr class="separator:abb6f6433ee35eee582b3b5a026e29639"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9c70bbba54aee3226adae4ed4713b28"><td class="memItemLeft" align="right" valign="top"><a id="ac9c70bbba54aee3226adae4ed4713b28" name="ac9c70bbba54aee3226adae4ed4713b28"></a>
-std::vector&lt; uint64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>exemptRoles</b> {}</td></tr>
-<tr class="memdesc:ac9c70bbba54aee3226adae4ed4713b28"><td class="mdescLeft">&#160;</td><td class="mdescRight">The role ids that should not be affected by the rule(Maximum of 20). <br /></td></tr>
-<tr class="separator:ac9c70bbba54aee3226adae4ed4713b28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a4c78f5b8d6284bd964fd86c5c115d1"><td class="memItemLeft" align="right" valign="top"><a id="a5a4c78f5b8d6284bd964fd86c5c115d1" name="a5a4c78f5b8d6284bd964fd86c5c115d1"></a>
-<a class="el" href="../../dd/d94/a00888.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildId</b> {}</td></tr>
-<tr class="memdesc:a5a4c78f5b8d6284bd964fd86c5c115d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../db/d6b/a01853.html" title="Represents an auto-moderation-rule.">AutoModerationRule</a> within which to modify the auto-moderation-rule. <br /></td></tr>
-<tr class="separator:a5a4c78f5b8d6284bd964fd86c5c115d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4403dc71d75a71ec41ba63ddd2d974e6"><td class="memItemLeft" align="right" valign="top"><a id="a4403dc71d75a71ec41ba63ddd2d974e6" name="a4403dc71d75a71ec41ba63ddd2d974e6"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> {}</td></tr>
-<tr class="memdesc:a4403dc71d75a71ec41ba63ddd2d974e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The rule name. <br /></td></tr>
-<tr class="separator:a4403dc71d75a71ec41ba63ddd2d974e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a464312a2014fbcdeffa64e8cbf66dd44"><td class="memItemLeft" align="right" valign="top"><a id="a464312a2014fbcdeffa64e8cbf66dd44" name="a464312a2014fbcdeffa64e8cbf66dd44"></a>
-<a class="el" href="../../d3/d53/a02389.html">TriggerMetaData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>triggerMetadata</b> {}</td></tr>
-<tr class="memdesc:a464312a2014fbcdeffa64e8cbf66dd44"><td class="mdescLeft">&#160;</td><td class="mdescRight">The trigger metadata. <br /></td></tr>
-<tr class="separator:a464312a2014fbcdeffa64e8cbf66dd44"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<hr/>The documentation for this struct was generated from the following files:<ul>
-<li><a class="el" href="../../dc/dce/a00740_source.html">AutoModerationEntities.hpp</a></li>
-<li><a class="el" href="../../d7/dcf/a00845_source.html">AutoModerationEntities.cpp</a></li>
-</ul>
-</div><!-- contents -->
+<p>This is the complete list of members for <a class="el" href="../../d9/d7d/a01880.html">DiscordCoreAPI::ModifyAutoModerationRuleData</a>, including all inherited members.</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="../../d9/d7d/a01880.html#ad485d16447f820002e6f586e5018de04">actions</a></td><td class="entry"><a class="el" href="../../d9/d7d/a01880.html">DiscordCoreAPI::ModifyAutoModerationRuleData</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="../../d9/d7d/a01880.html#abab297a101c6c8d3e30b8b6167e7fd65">autoModerationRuleId</a></td><td class="entry"><a class="el" href="../../d9/d7d/a01880.html">DiscordCoreAPI::ModifyAutoModerationRuleData</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d9/d7d/a01880.html#a1903e1f3b655f990a64de97e799640de">enabled</a></td><td class="entry"><a class="el" href="../../d9/d7d/a01880.html">DiscordCoreAPI::ModifyAutoModerationRuleData</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="../../d9/d7d/a01880.html#a278d14fec908a800110f37654f75e29b">eventType</a></td><td class="entry"><a class="el" href="../../d9/d7d/a01880.html">DiscordCoreAPI::ModifyAutoModerationRuleData</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d9/d7d/a01880.html#abb6f6433ee35eee582b3b5a026e29639">exemptChannels</a></td><td class="entry"><a class="el" href="../../d9/d7d/a01880.html">DiscordCoreAPI::ModifyAutoModerationRuleData</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="../../d9/d7d/a01880.html#ac9c70bbba54aee3226adae4ed4713b28">exemptRoles</a></td><td class="entry"><a class="el" href="../../d9/d7d/a01880.html">DiscordCoreAPI::ModifyAutoModerationRuleData</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d9/d7d/a01880.html#a5a4c78f5b8d6284bd964fd86c5c115d1">guildId</a></td><td class="entry"><a class="el" href="../../d9/d7d/a01880.html">DiscordCoreAPI::ModifyAutoModerationRuleData</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="../../d9/d7d/a01880.html#a4403dc71d75a71ec41ba63ddd2d974e6">name</a></td><td class="entry"><a class="el" href="../../d9/d7d/a01880.html">DiscordCoreAPI::ModifyAutoModerationRuleData</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d9/d7d/a01880.html#a464312a2014fbcdeffa64e8cbf66dd44">triggerMetadata</a></td><td class="entry"><a class="el" href="../../d9/d7d/a01880.html">DiscordCoreAPI::ModifyAutoModerationRuleData</a></td><td class="entry"></td></tr>
+</table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d63/a01877.html">ModifyAutoModerationRuleData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d1/d30/a03185.html" target="_top" xlink:title="For getting a Message.">
+<g id="a_node1"><a xlink:href="da/dfb/a03188.html" target="_top" xlink:title="For getting a Message.">
 <polygon fill="none" stroke="black" points="182,-19 0,-19 0,0 182,0 182,-19"/>
 <text text-anchor="middle" x="91" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::GetMessageData</text>
 </a>

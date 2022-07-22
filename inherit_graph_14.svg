@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="dd/d75/a02377.html" target="_top" xlink:title="Data representing an archived Thread.">
+<g id="a_node1"><a xlink:href="d8/d30/a02380.html" target="_top" xlink:title="Data representing an archived Thread.">
 <polygon fill="none" stroke="black" points="140,-30 0,-30 0,0 140,0 140,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::Archived</text>
 <text text-anchor="middle" x="70" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">ThreadsData</text>

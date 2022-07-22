@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d3/dac/a01777.html" target="_top" xlink:title="An interface class for the ApplicationCommand related Discord endpoints.">
+<g id="a_node1"><a xlink:href="d0/dce/a01780.html" target="_top" xlink:title="An interface class for the ApplicationCommand related Discord endpoints.">
 <polygon fill="none" stroke="black" points="152,-30 0,-30 0,0 152,0 152,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::Application</text>
 <text text-anchor="middle" x="76" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">Commands</text>

@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d9/dfe/a02649.html" target="_top" xlink:title="User command Interaction data.">
+<g id="a_node1"><a xlink:href="d2/d5a/a02652.html" target="_top" xlink:title="User command Interaction data.">
 <polygon fill="none" stroke="black" points="170,-30 0,-30 0,0 170,0 170,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::UserCommand</text>
 <text text-anchor="middle" x="85" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">InteractionData</text>

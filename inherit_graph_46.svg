@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d0/d75/a03105.html" target="_top" xlink:title="For creating an ephemeral Interaction response.">
+<g id="a_node1"><a xlink:href="da/dcd/a03108.html" target="_top" xlink:title="For creating an ephemeral Interaction response.">
 <polygon fill="none" stroke="black" points="182,-30 0,-30 0,0 182,0 182,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::CreateEphemeral</text>
 <text text-anchor="middle" x="91" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">InteractionResponseData</text>

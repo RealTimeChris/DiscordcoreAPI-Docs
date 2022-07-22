@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d7/d13/a02873.html" target="_top" xlink:title="For banning a current GuildMember.">
+<g id="a_node1"><a xlink:href="d7/d65/a02876.html" target="_top" xlink:title="For banning a current GuildMember.">
 <polygon fill="none" stroke="black" points="155,-30 0,-30 0,0 155,0 155,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::CreateGuild</text>
 <text text-anchor="middle" x="77.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">BanData</text>

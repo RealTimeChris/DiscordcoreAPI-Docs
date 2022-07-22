@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="da/df1/a02961.html" target="_top" xlink:title="For geting a single invite&#39;s responseData from a Guild.">
+<g id="a_node1"><a xlink:href="db/db9/a02964.html" target="_top" xlink:title="For geting a single invite&#39;s responseData from a Guild.">
 <polygon fill="none" stroke="black" points="166,-19 0,-19 0,0 166,0 166,-19"/>
 <text text-anchor="middle" x="83" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::GetInviteData</text>
 </a>

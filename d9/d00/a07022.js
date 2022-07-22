@@ -1,7 +1,26 @@
 var a07022 =
 [
-    [ "Running a Command", "d8/d75/a07119.html", null ],
-    [ "Running a Function on a Timer", "d8/d20/a07120.html", null ],
-    [ "Listening for a Discord Event", "df/df1/a07118.html", null ],
-    [ "Using a Message Collector", "dd/d7b/a07121.html", null ]
+    [ "Login/Setup", "d3/d61/a07024.html", "d3/d61/a07024" ],
+    [ "General Usage", "d7/d20/a07025.html", "d7/d20/a07025" ],
+    [ "Autocomplete Stuff", "dc/dfc/a07026.html", "dc/dfc/a07026" ],
+    [ "Button Stuff", "d2/d57/a07027.html", "d2/d57/a07027" ],
+    [ "Select-Menu Stuff", "dd/df5/a07028.html", "dd/df5/a07028" ],
+    [ "Modal Stuff", "db/dc1/a07029.html", "db/dc1/a07029" ],
+    [ "Voice Connection Stuff", "d9/d92/a07030.html", "d9/d92/a07030" ],
+    [ "Application-Command Stuff", "d1/d4b/a07031.html", "d1/d4b/a07031" ],
+    [ "Channel Stuff", "d0/d15/a07032.html", "d0/d15/a07032" ],
+    [ "Guild Stuff", "de/d18/a07033.html", "de/d18/a07033" ],
+    [ "Auto-Moderation-Rule Stuff", "de/d0a/a07046.html", "de/d0a/a07046" ],
+    [ "Guild-Member Stuff", "de/d75/a07034.html", "de/d75/a07034" ],
+    [ "Guild Scheduled Event Stuff", "d7/dc6/a07035.html", "d7/dc6/a07035" ],
+    [ "Input Event Stuff", "d9/d42/a07036.html", "d9/d42/a07036" ],
+    [ "Interaction Stuff", "d7/db0/a07037.html", "d7/db0/a07037" ],
+    [ "Message Stuff", "d8/d33/a07038.html", "d8/d33/a07038" ],
+    [ "Reaction Stuff", "d9/d9d/a07039.html", "d9/d9d/a07039" ],
+    [ "Role Stuff", "dc/d14/a07040.html", "dc/d14/a07040" ],
+    [ "Stage-Instance Stuff", "d7/dfb/a07041.html", "d7/dfb/a07041" ],
+    [ "Sticker Stuff", "d1/d43/a07042.html", "d1/d43/a07042" ],
+    [ "Thread Stuff", "d0/dac/a07043.html", "d0/dac/a07043" ],
+    [ "User Stuff", "db/d73/a07044.html", "db/d73/a07044" ],
+    [ "Webhook Stuff", "dc/df5/a07045.html", "dc/df5/a07045" ]
 ];

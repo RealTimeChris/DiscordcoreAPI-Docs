@@ -102,48 +102,72 @@ $(document).ready(function(){initNavTree('dc/d5e/a07123.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Beginner's Notes </div></div>
+  <div class="headertitle"><div class="title">Running a Function on a Timer </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Login_Setup_Beginner_s_Notes"></a></p>
-<ul>
-<li><b><u>IMPORTANT:</u></b> You will need to enable the following settings in your bot's control panel: Enter your "Developer Control Panel" and select a bot, then go to the "Bot" section-in here, enable "Presence Intent", "Server Members Intent", "Message Content Intent" - and hit "Save". <br  />
- <br  />
-</li>
-<li><p class="startli">All of the central class managers are classes that are filled with static methods that are a part of the <code><a class="el" href="../../d7/d46/a00890.html" title="The main namespace for this library.">DiscordCoreAPI</a></code> namespace, they are as Follows: <br  />
- <code><a class="el" href="../../d3/dac/a01777.html" title="An interface class for the ApplicationCommand related Discord endpoints.">DiscordCoreAPI::ApplicationCommands</a></code></p>
-<p class="startli"><code><a class="el" href="../../d7/d9c/a01885.html" title="An interface class for the AutoModerationRule related Discord endpoints.">DiscordCoreAPI::AutoModerationRules</a></code></p>
-<p class="startli"><code><a class="el" href="../../d9/d97/a01953.html" title="An interface class for the Channel related endpoints.">DiscordCoreAPI::Channels</a></code></p>
-<p class="startli"><code><a class="el" href="../../d9/d13/a02237.html" title="Class for handling the assignment of event-handling functions.">DiscordCoreAPI::EventManager</a></code></p>
-<p class="startli"><code><a class="el" href="../../d4/d69/a02989.html" title="An interface class for the Guild related Discord endpoints.">DiscordCoreAPI::Guilds</a></code></p>
-<p class="startli"><code><a class="el" href="../../d6/def/a03033.html" title="An interface class for the GuildMember related Discord endpoints.">DiscordCoreAPI::GuildMembers</a></code></p>
-<p class="startli"><code><a class="el" href="../../d4/d44/a03065.html" title="An interface class for the GuildScheduledEvent related Discord endpoints.">DiscordCoreAPI::GuildScheduledEvents</a></code></p>
-<p class="startli"><code><a class="el" href="../../df/d92/a03097.html" title="For handling User input - Messages or Interactions.">DiscordCoreAPI::InputEvents</a></code></p>
-<p class="startli"><code><a class="el" href="../../db/d44/a03153.html" title="An interface class for the Interaction related Discord endpoints.">DiscordCoreAPI::Interactions</a></code></p>
-<p class="startli"><code><a class="el" href="../../dc/dc7/a03241.html" title="An interface class for the Message related Discord endpoints.">DiscordCoreAPI::Messages</a></code></p>
-<p class="startli"><code><a class="el" href="../../da/d0a/a03297.html" title="An interface class for the Reaction related Discord endpoints.">DiscordCoreAPI::Reactions</a></code></p>
-<p class="startli"><code><a class="el" href="../../d6/df3/a03349.html" title="An interface class for the Role related Discord endpoints.">DiscordCoreAPI::Roles</a></code></p>
-<p class="startli"><code><a class="el" href="../../d0/d19/a03433.html" title="An interface class for the StageInstance related Discord endpoints.">DiscordCoreAPI::StageInstances</a></code></p>
-<p class="startli"><code><a class="el" href="../../da/da5/a03465.html" title="An interface class for the Sticker related Discord endpoints.">DiscordCoreAPI::Stickers</a></code></p>
-<p class="startli"><code><a class="el" href="../../d0/d33/a03529.html" title="An interface class for the Thread related endpoints.">DiscordCoreAPI::Threads</a></code></p>
-<p class="startli"><code><a class="el" href="../../da/d3e/a03581.html" title="An interface class for the User related Discord endpoints.">DiscordCoreAPI::Users</a></code></p>
-<p class="startli"><code><a class="el" href="../../d2/d14/a03709.html" title="An interface class for the WebHook related Discord endpoints.">DiscordCoreAPI::WebHooks</a></code> <br  />
- <br  />
-</p>
-</li>
-<li>Each of the functions in this library takes an argument that is of a type who's name is derived from the function-for example, the data structure that gets passed into <code><a class="el" href="../../d4/d69/a02989.html#a7f53cb376716ebe782cde17a7f0109e6" title="Collects a Guild from the Discord servers.">DiscordCoreAPI::Guilds::getGuildAsync()</a></code> is <code><a class="el" href="../../dc/da3/a02853.html" title="For getting a Guild from the library&#39;s cache or a Discord server.">DiscordCoreAPI::GetGuildData</a></code>. <br  />
- <br  />
-</li>
-<li>Most of the functions in this library are <code>Async</code>, meaning that they return a value of type <code><a class="el" href="../../db/d49/a01969.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">DiscordCoreAPI::CoRoutine</a>&lt;TaskType&gt;</code>, which you call <code>.get()</code> on to retrieve the returned value, and to suspend the current thread in the process of waiting for it. Alternatively, you have the option of leaving the task's completion up to the background thread that is handling it, by not calling <code>.get()</code>. </li>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_General_Usage_Running_a_Function_on_a_Timer"></a></p><ul>
+<li>Create a function who's argument is of type <code><a class="el" href="../../d6/d33/a01992.html" title="DiscordCoreClient - The main class for this library.">DiscordCoreAPI::DiscordCoreClient</a>*</code>, with a return type of <code>void</code>.</li>
+<li>Create a data value of type <code>std::vector&lt;<a class="el" href="../../df/d81/a03600.html" title="Function data for repeated functions to be loaded.">DiscordCoreAPI::RepeatedFunctionData</a>&gt;</code>.</li>
+<li>Create a data value of type <code><a class="el" href="../../df/d81/a03600.html" title="Function data for repeated functions to be loaded.">DiscordCoreAPI::RepeatedFunctionData</a></code>, and fill out its members, and stuff it inside the vector. Be sure to set <code>repeated</code> to true if you would like the function call to be recurring.</li>
+<li>Pass this vector as a second argument to the <code><a class="el" href="../../d6/d33/a01992.html" title="DiscordCoreClient - The main class for this library.">DiscordCoreAPI::DiscordCoreClient</a></code> constructor - now the functions it contains will run on a schedule defined by the <code>intervalInMs</code> member of the data structure.</li>
+<li>Do this with as many functions as you would like!</li>
 </ul>
-</div></div><!-- contents -->
+<div class="fragment"><div class="line"><span class="comment">/// main.cpp-Main entry point.</span><span class="comment"></span></div>
+<div class="line"><span class="comment">/// Jun 17, 2021</span></div>
+<div class="line"><span class="comment">/// https://github.com/RealTimeChris/DiscordCoreAPI</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line"><span class="preprocessor">#include &lt;../Include/Index.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;Commands/CommandsList.hpp&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> onBoot02(DiscordCoreAPI::DiscordCoreClients* thePtr) {</div>
+<div class="line">    std::vector&lt;DiscordCoreAPI::ActivityData&gt; activities;</div>
+<div class="line">    <a class="code hl_struct" href="../../d6/d24/a02536.html">DiscordCoreAPI::ActivityData</a> activity;</div>
+<div class="line">    activity.<a class="code hl_variable" href="../../d6/d24/a02536.html#a1e0949d2f171ea28605b0099e6208c4c">name</a> = <span class="stringliteral">&quot;!help for my commands!&quot;</span>;</div>
+<div class="line">    activity.<a class="code hl_variable" href="../../d6/d24/a02536.html#aa822aa8052afc85a05fc5e74839be4cd">type</a> = <a class="code hl_enumvalue" href="../../de/dfc/a00891.html#gga2274697e9d364c27f24c3dc688c9b88da63d72051e901c069f8aa1b32aa0c43bb">DiscordCoreAPI::ActivityType::Game</a>;</div>
+<div class="line">    activities.push_back(activity);</div>
+<div class="line">    thePtr-&gt;getBotUser().updatePresence({.activities = activities, .status = <span class="stringliteral">&quot;online&quot;</span>, .afk = <span class="keyword">false</span>});</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">int32_t main() {</div>
+<div class="line">    std::string botToken = <span class="stringliteral">&quot;YOUR_BOT_TOKEN_HERE&quot;</span>;</div>
+<div class="line">    std::vector&lt;DiscordCoreAPI::RepeatedFunctionData&gt; functionVector;</div>
+<div class="line">    <a class="code hl_struct" href="../../df/d81/a03600.html">DiscordCoreAPI::RepeatedFunctionData</a> function01;</div>
+<div class="line">    function01.<a class="code hl_variable" href="../../df/d81/a03600.html#ab3113ed967aef68dc02622fcc8d1a8a1">function</a> = onBoot02;</div>
+<div class="line">    function01.<a class="code hl_variable" href="../../df/d81/a03600.html#ad6cd7f6c69dd885d3fc19ee1478835b0">intervalInMs</a> = 500;</div>
+<div class="line">    function01.<a class="code hl_variable" href="../../df/d81/a03600.html#ad5779846654b535a8a63abe4be753e13">repeated</a> = <span class="keyword">false</span>;</div>
+<div class="line">    functionVector.push_back(function01);</div>
+<div class="line">    <a class="code hl_struct" href="../../d1/d43/a03612.html">DiscordCoreAPI::CacheOptions</a> cacheOptions;</div>
+<div class="line">    cacheOptions.<a class="code hl_variable" href="../../d1/d43/a03612.html#a4cb85b3ee028d76c1724ef07969c6f11">cacheGuildMembers</a> = <span class="keyword">true</span>;</div>
+<div class="line">    cacheOptions.<a class="code hl_variable" href="../../d1/d43/a03612.html#a03ce5155f9329e01777eb58df32f09a8">cacheChannels</a> = <span class="keyword">true</span>;</div>
+<div class="line">    cacheOptions.<a class="code hl_variable" href="../../d1/d43/a03612.html#a75daaa749e6fc1776ee6e704e628173e">cacheGuilds</a> = <span class="keyword">true</span>;</div>
+<div class="line">    cacheOptions.<a class="code hl_variable" href="../../d1/d43/a03612.html#a1ca359d47d90cd2e057cdd36baff3d6d">cacheRoles</a> = <span class="keyword">true</span>;</div>
+<div class="line">    cacheOptions.<a class="code hl_variable" href="../../d1/d43/a03612.html#a921da3e80c8b89da1d2b8e9732a4bdca">cacheUsers</a> = <span class="keyword">true</span>;</div>
+<div class="line">    <span class="keyword">auto</span> thePtr = std::make_unique&lt;DiscordCoreAPI::DiscordCoreClient&gt;(botToken, functionVector, cacheOptions);</div>
+<div class="line">    thePtr-&gt;runBot();</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aa00891_html_gga2274697e9d364c27f24c3dc688c9b88da63d72051e901c069f8aa1b32aa0c43bb"><div class="ttname"><a href="../../de/dfc/a00891.html#gga2274697e9d364c27f24c3dc688c9b88da63d72051e901c069f8aa1b32aa0c43bb">DiscordCoreAPI::ActivityType::Game</a></div><div class="ttdeci">@ Game</div><div class="ttdoc">Game.</div></div>
+<div class="ttc" id="aa02536_html"><div class="ttname"><a href="../../d6/d24/a02536.html">DiscordCoreAPI::ActivityData</a></div><div class="ttdoc">Activity data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l01811">FoundationEntities.hpp:1811</a></div></div>
+<div class="ttc" id="aa02536_html_a1e0949d2f171ea28605b0099e6208c4c"><div class="ttname"><a href="../../d6/d24/a02536.html#a1e0949d2f171ea28605b0099e6208c4c">DiscordCoreAPI::ActivityData::name</a></div><div class="ttdeci">StringWrapper name</div><div class="ttdoc">Name of the activity.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l01822">FoundationEntities.hpp:1822</a></div></div>
+<div class="ttc" id="aa02536_html_aa822aa8052afc85a05fc5e74839be4cd"><div class="ttname"><a href="../../d6/d24/a02536.html#aa822aa8052afc85a05fc5e74839be4cd">DiscordCoreAPI::ActivityData::type</a></div><div class="ttdeci">ActivityType type</div><div class="ttdoc">Activity data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l01819">FoundationEntities.hpp:1819</a></div></div>
+<div class="ttc" id="aa03600_html"><div class="ttname"><a href="../../df/d81/a03600.html">DiscordCoreAPI::RepeatedFunctionData</a></div><div class="ttdoc">Function data for repeated functions to be loaded.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/db2/a00737_source.html#l00255">Utilities.hpp:255</a></div></div>
+<div class="ttc" id="aa03600_html_ab3113ed967aef68dc02622fcc8d1a8a1"><div class="ttname"><a href="../../df/d81/a03600.html#ab3113ed967aef68dc02622fcc8d1a8a1">DiscordCoreAPI::RepeatedFunctionData::function</a></div><div class="ttdeci">std::function&lt; void(DiscordCoreClient *)&gt; function</div><div class="ttdoc">The std::function pointer to be loaded.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/db2/a00737_source.html#l00256">Utilities.hpp:256</a></div></div>
+<div class="ttc" id="aa03600_html_ad5779846654b535a8a63abe4be753e13"><div class="ttname"><a href="../../df/d81/a03600.html#ad5779846654b535a8a63abe4be753e13">DiscordCoreAPI::RepeatedFunctionData::repeated</a></div><div class="ttdeci">bool repeated</div><div class="ttdoc">Whether or not the std::function is repeating.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/db2/a00737_source.html#l00258">Utilities.hpp:258</a></div></div>
+<div class="ttc" id="aa03600_html_ad6cd7f6c69dd885d3fc19ee1478835b0"><div class="ttname"><a href="../../df/d81/a03600.html#ad6cd7f6c69dd885d3fc19ee1478835b0">DiscordCoreAPI::RepeatedFunctionData::intervalInMs</a></div><div class="ttdeci">uint32_t intervalInMs</div><div class="ttdoc">The time interval at which to call the std::function.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/db2/a00737_source.html#l00257">Utilities.hpp:257</a></div></div>
+<div class="ttc" id="aa03612_html"><div class="ttname"><a href="../../d1/d43/a03612.html">DiscordCoreAPI::CacheOptions</a></div><div class="ttdoc">For selecting the caching style of the library.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/db2/a00737_source.html#l00290">Utilities.hpp:290</a></div></div>
+<div class="ttc" id="aa03612_html_a03ce5155f9329e01777eb58df32f09a8"><div class="ttname"><a href="../../d1/d43/a03612.html#a03ce5155f9329e01777eb58df32f09a8">DiscordCoreAPI::CacheOptions::cacheChannels</a></div><div class="ttdeci">bool cacheChannels</div><div class="ttdoc">Do we cache Channels?</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/db2/a00737_source.html#l00292">Utilities.hpp:292</a></div></div>
+<div class="ttc" id="aa03612_html_a1ca359d47d90cd2e057cdd36baff3d6d"><div class="ttname"><a href="../../d1/d43/a03612.html#a1ca359d47d90cd2e057cdd36baff3d6d">DiscordCoreAPI::CacheOptions::cacheRoles</a></div><div class="ttdeci">bool cacheRoles</div><div class="ttdoc">Do we cache Roles?</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/db2/a00737_source.html#l00294">Utilities.hpp:294</a></div></div>
+<div class="ttc" id="aa03612_html_a4cb85b3ee028d76c1724ef07969c6f11"><div class="ttname"><a href="../../d1/d43/a03612.html#a4cb85b3ee028d76c1724ef07969c6f11">DiscordCoreAPI::CacheOptions::cacheGuildMembers</a></div><div class="ttdeci">bool cacheGuildMembers</div><div class="ttdoc">Do we cache GuildMembers?</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/db2/a00737_source.html#l00291">Utilities.hpp:291</a></div></div>
+<div class="ttc" id="aa03612_html_a75daaa749e6fc1776ee6e704e628173e"><div class="ttname"><a href="../../d1/d43/a03612.html#a75daaa749e6fc1776ee6e704e628173e">DiscordCoreAPI::CacheOptions::cacheGuilds</a></div><div class="ttdeci">bool cacheGuilds</div><div class="ttdoc">Do we cache Guilds?</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/db2/a00737_source.html#l00293">Utilities.hpp:293</a></div></div>
+<div class="ttc" id="aa03612_html_a921da3e80c8b89da1d2b8e9732a4bdca"><div class="ttname"><a href="../../d1/d43/a03612.html#a921da3e80c8b89da1d2b8e9732a4bdca">DiscordCoreAPI::CacheOptions::cacheUsers</a></div><div class="ttdeci">bool cacheUsers</div><div class="ttdoc">Do we cache Users?</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/db2/a00737_source.html#l00295">Utilities.hpp:295</a></div></div>
+</div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d5/d14/a07019.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d8/d2b/a07021.html">Login/Setup</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d00/a07022.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d7/d20/a07025.html">General Usage</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

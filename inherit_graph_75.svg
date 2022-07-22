@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="dc/d0a/a03125.html" target="_top" xlink:title="For deleting an Interaction response.">
+<g id="a_node1"><a xlink:href="db/d6b/a03128.html" target="_top" xlink:title="For deleting an Interaction response.">
 <polygon fill="none" stroke="black" points="182,-30 0,-30 0,0 182,0 182,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::DeleteInteraction</text>
 <text text-anchor="middle" x="91" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">ResponseData</text>

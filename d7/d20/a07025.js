@@ -1,5 +1,7 @@
 var a07025 =
 [
-    [ "Instantiating/Creating a Select-Menu", "d2/d6f/a07145.html", null ],
-    [ "Collecting Select-Menu Input", "db/d15/a07144.html", null ]
+    [ "Running a Command", "d6/d43/a07122.html", null ],
+    [ "Running a Function on a Timer", "dc/d5e/a07123.html", null ],
+    [ "Listening for a Discord Event", "dd/d7b/a07121.html", null ],
+    [ "Using a Message Collector", "dd/d87/a07124.html", null ]
 ];

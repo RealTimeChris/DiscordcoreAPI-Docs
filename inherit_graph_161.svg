@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="df/d62/a03257.html" target="_top" xlink:title="For getting all of the Reactions.">
+<g id="a_node1"><a xlink:href="d1/dda/a03260.html" target="_top" xlink:title="For getting all of the Reactions.">
 <polygon fill="none" stroke="black" points="186,-19 0,-19 0,0 186,0 186,-19"/>
 <text text-anchor="middle" x="93" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::GetReactionsData</text>
 </a>

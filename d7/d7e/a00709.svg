@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../df/d41/a00881.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="../../dd/d08/a00884.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="1132,-459 1028,-459 1028,-440 1132,-440 1132,-459"/>
 <text text-anchor="middle" x="1080" y="-447" font-family="Helvetica,sans-Serif" font-size="10.00">AudioDecoder.cpp</text>
 </a>
@@ -95,7 +95,7 @@
 <!-- Node8 -->
 <g id="node8" class="node">
 <title>Node8</title>
-<g id="a_node8"><a xlink:href="../../d1/d93/a00875.html" target="_top" xlink:title=" ">
+<g id="a_node8"><a xlink:href="../../d5/d69/a00878.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="1314.5,-74 1215.5,-74 1215.5,-55 1314.5,-55 1314.5,-74"/>
 <text text-anchor="middle" x="1265" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">GuildEntities.cpp</text>
 </a>
@@ -110,7 +110,7 @@
 <!-- Node13 -->
 <g id="node13" class="node">
 <title>Node13</title>
-<g id="a_node13"><a xlink:href="../../dd/d7e/a00809.html" target="_top" xlink:title=" ">
+<g id="a_node13"><a xlink:href="../../d8/db7/a00812.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="1610.5,-74 1533.5,-74 1533.5,-55 1610.5,-55 1610.5,-74"/>
 <text text-anchor="middle" x="1572" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">SongAPI.cpp</text>
 </a>
@@ -125,7 +125,7 @@
 <!-- Node14 -->
 <g id="node14" class="node">
 <title>Node14</title>
-<g id="a_node14"><a xlink:href="../../d2/d5e/a00860.html" target="_top" xlink:title=" ">
+<g id="a_node14"><a xlink:href="../../d7/d49/a00863.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="1443,-74 1333,-74 1333,-55 1443,-55 1443,-74"/>
 <text text-anchor="middle" x="1388" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">SoundCloudAPI.cpp</text>
 </a>
@@ -140,7 +140,7 @@
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="../../d0/d82/a00857.html" target="_top" xlink:title=" ">
+<g id="a_node5"><a xlink:href="../../d2/d5e/a00860.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="1060.5,-74 881.5,-74 881.5,-55 1060.5,-55 1060.5,-74"/>
 <text text-anchor="middle" x="971" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">ApplicationCommandEntities.cpp</text>
 </a>
@@ -155,7 +155,7 @@
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
-<g id="a_node6"><a xlink:href="../../df/de8/a00839.html" target="_top" xlink:title=" ">
+<g id="a_node6"><a xlink:href="../../d0/d11/a00842.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="564.5,-74 439.5,-74 439.5,-55 564.5,-55 564.5,-74"/>
 <text text-anchor="middle" x="502" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreClient.cpp</text>
 </a>
@@ -170,7 +170,7 @@
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
-<g id="a_node7"><a xlink:href="../../d5/d69/a00878.html" target="_top" xlink:title=" ">
+<g id="a_node7"><a xlink:href="../../df/d41/a00881.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="345.5,-74 238.5,-74 238.5,-55 345.5,-55 345.5,-74"/>
 <text text-anchor="middle" x="292" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">EventManager.cpp</text>
 </a>
@@ -221,7 +221,7 @@
 <!-- Node12 -->
 <g id="node12" class="node">
 <title>Node12</title>
-<g id="a_node12"><a xlink:href="../../dd/db2/a00866.html" target="_top" xlink:title=" ">
+<g id="a_node12"><a xlink:href="../../d3/db2/a00869.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="863.5,-74 746.5,-74 746.5,-55 863.5,-55 863.5,-74"/>
 <text text-anchor="middle" x="805" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">MessageEntities.cpp</text>
 </a>
@@ -248,7 +248,7 @@
 <!-- Node15 -->
 <g id="node15" class="node">
 <title>Node15</title>
-<g id="a_node15"><a xlink:href="../../dc/d17/a00872.html" target="_top" xlink:title=" ">
+<g id="a_node15"><a xlink:href="../../d1/d93/a00875.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="1197,-74 1079,-74 1079,-55 1197,-55 1197,-74"/>
 <text text-anchor="middle" x="1138" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">VoiceConnection.cpp</text>
 </a>
@@ -263,7 +263,7 @@
 <!-- Node16 -->
 <g id="node16" class="node">
 <title>Node16</title>
-<g id="a_node16"><a xlink:href="../../dc/d1b/a00827.html" target="_top" xlink:title=" ">
+<g id="a_node16"><a xlink:href="../../d9/daf/a00830.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="145.5,-74 18.5,-74 18.5,-55 145.5,-55 145.5,-74"/>
 <text text-anchor="middle" x="82" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">WebSocketEntities.cpp</text>
 </a>
@@ -320,7 +320,7 @@
 <!-- Node19 -->
 <g id="node19" class="node">
 <title>Node19</title>
-<g id="a_node19"><a xlink:href="../../d6/d8b/a00821.html" target="_top" xlink:title=" ">
+<g id="a_node19"><a xlink:href="../../d8/d1c/a00824.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="1258,-404 1170,-404 1170,-385 1258,-385 1258,-404"/>
 <text text-anchor="middle" x="1214" y="-392" font-family="Helvetica,sans-Serif" font-size="10.00">SSLClients.cpp</text>
 </a>
@@ -383,7 +383,7 @@
 <!-- Node21 -->
 <g id="node21" class="node">
 <title>Node21</title>
-<g id="a_node21"><a xlink:href="../../d3/db2/a00869.html" target="_top" xlink:title=" ">
+<g id="a_node21"><a xlink:href="../../dc/d17/a00872.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="468,-184 326,-184 326,-165 468,-165 468,-184"/>
 <text text-anchor="middle" x="397" y="-172" font-family="Helvetica,sans-Serif" font-size="10.00">DataParsingFunctions.cpp</text>
 </a>
@@ -443,7 +443,7 @@
 <!-- Node28 -->
 <g id="node28" class="node">
 <title>Node28</title>
-<g id="a_node28"><a xlink:href="../../d8/db7/a00812.html" target="_top" xlink:title=" ">
+<g id="a_node28"><a xlink:href="../../d8/d2d/a00815.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="1055.5,-184 980.5,-184 980.5,-165 1055.5,-165 1055.5,-184"/>
 <text text-anchor="middle" x="1018" y="-172" font-family="Helvetica,sans-Serif" font-size="10.00">Utilities.cpp</text>
 </a>
@@ -473,7 +473,7 @@
 <!-- Node33 -->
 <g id="node33" class="node">
 <title>Node33</title>
-<g id="a_node33"><a xlink:href="../../d0/d11/a00842.html" target="_top" xlink:title=" ">
+<g id="a_node33"><a xlink:href="../../d7/dcf/a00845.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="200,-349 104,-349 104,-330 200,-330 200,-349"/>
 <text text-anchor="middle" x="152" y="-337" font-family="Helvetica,sans-Serif" font-size="10.00">UserEntities.cpp</text>
 </a>
@@ -530,7 +530,7 @@
 <!-- Node25 -->
 <g id="node25" class="node">
 <title>Node25</title>
-<g id="a_node25"><a xlink:href="../../d3/d13/a00836.html" target="_top" xlink:title=" ">
+<g id="a_node25"><a xlink:href="../../df/de8/a00839.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="740,-184 600,-184 600,-165 740,-165 740,-184"/>
 <text text-anchor="middle" x="670" y="-172" font-family="Helvetica,sans-Serif" font-size="10.00">GuildMemberEntities.cpp</text>
 </a>
@@ -632,7 +632,7 @@
 <!-- Node29 -->
 <g id="node29" class="node">
 <title>Node29</title>
-<g id="a_node29"><a xlink:href="../../dc/d6e/a00833.html" target="_top" xlink:title=" ">
+<g id="a_node29"><a xlink:href="../../d3/d13/a00836.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="519.5,-239 424.5,-239 424.5,-220 519.5,-220 519.5,-239"/>
 <text text-anchor="middle" x="472" y="-227" font-family="Helvetica,sans-Serif" font-size="10.00">RoleEntities.cpp</text>
 </a>

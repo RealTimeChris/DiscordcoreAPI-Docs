@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d2/d50/a03473.html" target="_top" xlink:title="For starting a Thread, not based on a Message.">
+<g id="a_node1"><a xlink:href="dd/d74/a03476.html" target="_top" xlink:title="For starting a Thread, not based on a Message.">
 <polygon fill="none" stroke="black" points="155,-30 0,-30 0,0 155,0 155,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::StartThread</text>
 <text text-anchor="middle" x="77.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">WithoutMessageData</text>

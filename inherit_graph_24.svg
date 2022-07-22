@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d7/d6d/a01769.html" target="_top" xlink:title="For batch editing the permissions of a collection of Guild ApplicationCommands.">
+<g id="a_node1"><a xlink:href="dd/d20/a01772.html" target="_top" xlink:title="For batch editing the permissions of a collection of Guild ApplicationCommands.">
 <polygon fill="none" stroke="black" points="230,-30 0,-30 0,0 230,0 230,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::BatchEdit</text>
 <text text-anchor="middle" x="115" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">GuildApplicationCommandPermissionsData</text>

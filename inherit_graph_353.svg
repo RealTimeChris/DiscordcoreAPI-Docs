@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d8/d98/a02009.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="d5/d2c/a02012.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="203,-41 0,-41 0,0 203,0 203,-41"/>
 <text text-anchor="start" x="8" y="-29" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreInternal</text>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">::EventDelegate&lt; DiscordCore</text>

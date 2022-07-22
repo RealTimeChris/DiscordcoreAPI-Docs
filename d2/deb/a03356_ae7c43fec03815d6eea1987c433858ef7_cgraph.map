@@ -1,0 +1,4 @@
+<map id="DiscordCoreAPI::SongAPI::skip" name="DiscordCoreAPI::SongAPI::skip">
+<area shape="rect" id="node1" title="Skips to the next Song in the queue, if applicable." alt="" coords="5,5,188,45"/>
+<area shape="rect" id="node2" href="$d2/deb/a03356.html#a36d2861aef00337d8fd20c873d1119da" title="Sets the currently playing Song." alt="" coords="236,5,419,45"/>
+</map>

@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="db/dc0/a01757.html" target="_top" xlink:title="For acquiring the permissions of a collection of Guild ApplicationCommands.">
+<g id="a_node1"><a xlink:href="d0/d9d/a01760.html" target="_top" xlink:title="For acquiring the permissions of a collection of Guild ApplicationCommands.">
 <polygon fill="none" stroke="black" points="204,-30 0,-30 0,0 204,0 204,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::GetGuild</text>
 <text text-anchor="middle" x="102" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">ApplicationCommandPermissionsData</text>

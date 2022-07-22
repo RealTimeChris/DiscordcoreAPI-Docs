@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d3/d53/a02389.html" target="_top" xlink:title="Trigger metadata for auto&#45;moderation&#45;rules.">
+<g id="a_node1"><a xlink:href="d5/df1/a02392.html" target="_top" xlink:title="Trigger metadata for auto&#45;moderation&#45;rules.">
 <polygon fill="none" stroke="black" points="179,-19 0,-19 0,0 179,0 179,-19"/>
 <text text-anchor="middle" x="89.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::TriggerMetaData</text>
 </a>

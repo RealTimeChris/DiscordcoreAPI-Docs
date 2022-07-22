@@ -1,7 +1,8 @@
 var a07046 =
 [
-    [ "Running a Command", "d3/d1d/a07143.html", null ],
-    [ "Running a Function on a Timer", "db/d15/a07144.html", null ],
-    [ "Listening for a Discord Event", "d9/d5f/a07142.html", null ],
-    [ "Using a Message Collector", "d2/d6f/a07145.html", null ]
+    [ "Listing Auto-Moderation-Rules", "d8/d4c/a07068.html", null ],
+    [ "Getting an Auto-Moderation-Rule", "d1/d3b/a07067.html", null ],
+    [ "Creating an Auto-Moderation-Rule", "de/d2e/a07065.html", null ],
+    [ "Modifying an Auto-Moderation-Rule", "d2/d4d/a07069.html", null ],
+    [ "Deleting an Auto-Moderation-Rule", "dd/d41/a07066.html", null ]
 ];

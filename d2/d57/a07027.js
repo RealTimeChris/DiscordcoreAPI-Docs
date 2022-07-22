@@ -1,4 +1,5 @@
 var a07027 =
 [
-    [ "Connecting To/Disconnecting From a Voice Channel", "de/d85/a07146.html", null ]
+    [ "Instantiating/Creating a Button", "da/d3a/a07071.html", null ],
+    [ "Collecting Button Input", "d5/db4/a07070.html", null ]
 ];

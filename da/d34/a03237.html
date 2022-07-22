@@ -83,7 +83,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('da/d34/a03237.html','../../'); initResizable(); });
+$(document).ready(function(){initNavTree('d9/de5/a03240.html','../../'); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -102,81 +102,19 @@ $(document).ready(function(){initNavTree('da/d34/a03237.html','../../'); initRes
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="../../d5/de7/a03234.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::MessageCollector Class Reference<div class="ingroups"><a class="el" href="../../d7/d92/a00887.html">Utilities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::MessageCollector Member List</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="../../da/d34/a03237.html" title="MessageCollector, for collecting Messages from a Channel.">MessageCollector</a>, for collecting <a class="el" href="../../dc/dc7/a03241.html" title="An interface class for the Message related Discord endpoints.">Messages</a> from a <a class="el" href="../../da/d76/a01941.html" title="A Channel object.">Channel</a>.  
- <a href="../../da/d34/a03237.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="../../d5/d5b/a00695_source.html">MessageEntities.hpp</a>&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:aa5712e643f8c09387ca9892a536e379a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d49/a01969.html">CoRoutine</a>&lt; <a class="el" href="../../dd/d07/a03233.html">MessageCollectorReturnData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d34/a03237.html#aa5712e643f8c09387ca9892a536e379a">collectMessages</a> (int32_t quantityToCollect, int32_t msToCollectForNew, <a class="el" href="../../d7/d92/a00887.html#ga86831633c56c590266071aafe18bd657">MessageFilter</a> messageFilter)</td></tr>
-<tr class="memdesc:aa5712e643f8c09387ca9892a536e379a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin waiting for <a class="el" href="../../dc/dc7/a03241.html" title="An interface class for the Message related Discord endpoints.">Messages</a>.  <a href="../../da/d34/a03237.html#aa5712e643f8c09387ca9892a536e379a">More...</a><br /></td></tr>
-<tr class="separator:aa5712e643f8c09387ca9892a536e379a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa5712e643f8c09387ca9892a536e379a" name="aa5712e643f8c09387ca9892a536e379a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5712e643f8c09387ca9892a536e379a">&#9670;&nbsp;</a></span>collectMessages()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../db/d49/a01969.html">CoRoutine</a>&lt; <a class="el" href="../../dd/d07/a03233.html">MessageCollectorReturnData</a> &gt; DiscordCoreAPI::MessageCollector::collectMessages </td>
-          <td>(</td>
-          <td class="paramtype">int32_t&#160;</td>
-          <td class="paramname"><em>quantityToCollect</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int32_t&#160;</td>
-          <td class="paramname"><em>msToCollectForNew</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../d7/d92/a00887.html#ga86831633c56c590266071aafe18bd657">MessageFilter</a>&#160;</td>
-          <td class="paramname"><em>messageFilter</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Begin waiting for <a class="el" href="../../dc/dc7/a03241.html" title="An interface class for the Message related Discord endpoints.">Messages</a>.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">quantityToCollect</td><td>Maximum quantity of <a class="el" href="../../dc/dc7/a03241.html" title="An interface class for the Message related Discord endpoints.">Messages</a> to collect before returning the results. </td></tr>
-    <tr><td class="paramname">msToCollectForNew</td><td>Maximum number of std::chrono::milliseconds to wait for <a class="el" href="../../dc/dc7/a03241.html" title="An interface class for the Message related Discord endpoints.">Messages</a> before returning the results. </td></tr>
-    <tr><td class="paramname">messageFilter</td><td>A filter function to apply to new <a class="el" href="../../dc/dc7/a03241.html" title="An interface class for the Message related Discord endpoints.">Messages</a>, where returning "true" from the function results in a <a class="el" href="../../d5/da4/a03225.html" title="A single Message.">Message</a> being stored. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../dd/d07/a03233.html" title="MessageCollectorReturnData responseData.">MessageCollectorReturnData</a> structure. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../dd/db2/a00866_source.html#l00169">169</a> of file <a class="el" href="../../dd/db2/a00866_source.html">MessageEntities.cpp</a>.</p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="../../d5/d5b/a00695_source.html">MessageEntities.hpp</a></li>
-<li><a class="el" href="../../dd/db2/a00866_source.html">MessageEntities.cpp</a></li>
-</ul>
-</div><!-- contents -->
+<p>This is the complete list of members for <a class="el" href="../../d9/de5/a03240.html">DiscordCoreAPI::MessageCollector</a>, including all inherited members.</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="../../d9/de5/a03240.html#aa5712e643f8c09387ca9892a536e379a">collectMessages</a>(int32_t quantityToCollect, int32_t msToCollectForNew, MessageFilter messageFilter)</td><td class="entry"><a class="el" href="../../d9/de5/a03240.html">DiscordCoreAPI::MessageCollector</a></td><td class="entry"></td></tr>
+</table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d46/a00890.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../da/d34/a03237.html">MessageCollector</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

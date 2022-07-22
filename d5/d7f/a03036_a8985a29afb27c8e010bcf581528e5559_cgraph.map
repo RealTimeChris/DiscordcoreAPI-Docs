@@ -1,0 +1,4 @@
+<map id="DiscordCoreAPI::GuildMembers::getCachedGuildMemberAsync" name="DiscordCoreAPI::GuildMembers::getCachedGuildMemberAsync">
+<area shape="rect" id="node1" title="Collects a GuildMember from the library&#39;s cache." alt="" coords="5,5,232,45"/>
+<area shape="rect" id="node2" href="$d5/d7f/a03036.html#a997c281bf11d3d686116c2f6dc35bf5b" title="Collects a GuildMember from the Discord servers." alt="" coords="280,5,505,45"/>
+</map>

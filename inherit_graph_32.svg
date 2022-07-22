@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d6/da8/a02693.html" target="_top" xlink:title="Data for when some Channel pins are updated.">
+<g id="a_node1"><a xlink:href="d8/da6/a02696.html" target="_top" xlink:title="Data for when some Channel pins are updated.">
 <polygon fill="none" stroke="black" points="158,-30 0,-30 0,0 158,0 158,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::ChannelPins</text>
 <text text-anchor="middle" x="79" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">UpdateEventData</text>

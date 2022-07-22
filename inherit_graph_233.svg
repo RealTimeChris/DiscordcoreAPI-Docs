@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="dd/dfc/a02037.html" target="_top" xlink:title="Data that is received as part of an AutoModerationAction execution event.">
+<g id="a_node1"><a xlink:href="d4/ddd/a02040.html" target="_top" xlink:title="Data that is received as part of an AutoModerationAction execution event.">
 <polygon fill="none" stroke="black" points="189,-30 0,-30 0,0 189,0 189,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::OnAutoModeration</text>
 <text text-anchor="middle" x="94.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">ActionExecutionData</text>

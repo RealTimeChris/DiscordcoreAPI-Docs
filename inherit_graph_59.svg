@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d2/daf/a03245.html" target="_top" xlink:title="For creating a single Reaction.">
+<g id="a_node1"><a xlink:href="d9/d01/a03248.html" target="_top" xlink:title="For creating a single Reaction.">
 <polygon fill="none" stroke="black" points="196,-19 0,-19 0,0 196,0 196,-19"/>
 <text text-anchor="middle" x="98" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::CreateReactionData</text>
 </a>

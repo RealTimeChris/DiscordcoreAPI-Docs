@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="de/d94/a02597.html" target="_top" xlink:title="Represents a Guild Template.">
+<g id="a_node1"><a xlink:href="d1/d88/a02600.html" target="_top" xlink:title="Represents a Guild Template.">
 <polygon fill="none" stroke="black" points="191,-19 0,-19 0,0 191,0 191,-19"/>
 <text text-anchor="middle" x="95.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::GuildTemplateData</text>
 </a>

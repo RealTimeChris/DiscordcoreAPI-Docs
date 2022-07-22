@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d8/d45/a02021.html" target="_top" xlink:title="Data that is received as part of an ApplicationCommandPermissions update event.">
+<g id="a_node1"><a xlink:href="d7/dbe/a02024.html" target="_top" xlink:title="Data that is received as part of an ApplicationCommandPermissions update event.">
 <polygon fill="none" stroke="black" points="185,-30 0,-30 0,0 185,0 185,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::OnApplication</text>
 <text text-anchor="middle" x="92.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">CommandPermissionsUpdateData</text>

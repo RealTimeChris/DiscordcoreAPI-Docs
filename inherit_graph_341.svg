@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d1/da3/a03221.html" target="_top" xlink:title="For unpinning a single Message.">
+<g id="a_node1"><a xlink:href="d7/de1/a03224.html" target="_top" xlink:title="For unpinning a single Message.">
 <polygon fill="none" stroke="black" points="193,-19 0,-19 0,0 193,0 193,-19"/>
 <text text-anchor="middle" x="96.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::UnpinMessageData</text>
 </a>

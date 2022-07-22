@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d9/da3/a03673.html" target="_top" xlink:title="Collects a single WebHook, using the Token and Id.">
+<g id="a_node1"><a xlink:href="d9/d94/a03676.html" target="_top" xlink:title="Collects a single WebHook, using the Token and Id.">
 <polygon fill="none" stroke="black" points="161,-30 0,-30 0,0 161,0 161,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::GetWebHook</text>
 <text text-anchor="middle" x="80.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">WithTokenData</text>

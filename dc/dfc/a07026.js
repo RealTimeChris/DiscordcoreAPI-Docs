@@ -1,5 +1,5 @@
 var a07026 =
 [
-    [ "Instantiating/Creating a Modal-Input", "d8/dc2/a07126.html", null ],
-    [ "Collecting Modal Input", "df/d4a/a07125.html", null ]
+    [ "Instantiating/Creating an Autocomplete", "df/d34/a07064.html", null ],
+    [ "Collecting Autocomplete Input", "d1/d84/a07063.html", null ]
 ];

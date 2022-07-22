@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d1/d67/a02561.html" target="_top" xlink:title="Data representing a single Guild preview.">
+<g id="a_node1"><a xlink:href="db/d44/a02564.html" target="_top" xlink:title="Data representing a single Guild preview.">
 <polygon fill="none" stroke="black" points="185,-19 0,-19 0,0 185,0 185,-19"/>
 <text text-anchor="middle" x="92.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::GuildPreviewData</text>
 </a>

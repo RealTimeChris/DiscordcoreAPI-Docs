@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d9/d56/a03253.html" target="_top" xlink:title="For deleting a reaction, by User.">
+<g id="a_node1"><a xlink:href="d3/d55/a03256.html" target="_top" xlink:title="For deleting a reaction, by User.">
 <polygon fill="none" stroke="black" points="152,-30 0,-30 0,0 152,0 152,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::DeleteUser</text>
 <text text-anchor="middle" x="76" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">ReactionData</text>

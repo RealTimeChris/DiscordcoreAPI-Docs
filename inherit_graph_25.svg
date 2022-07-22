@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d7/d68/a02885.html" target="_top" xlink:title="For pruning a number of GuildMembers from the Guild.">
+<g id="a_node1"><a xlink:href="d4/d04/a02888.html" target="_top" xlink:title="For pruning a number of GuildMembers from the Guild.">
 <polygon fill="none" stroke="black" points="151,-30 0,-30 0,0 151,0 151,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::BeginGuild</text>
 <text text-anchor="middle" x="75.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">PruneData</text>

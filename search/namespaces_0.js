@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['discordcoreapi_0',['DiscordCoreAPI',['../d7/d46/a00890.html',1,'']]]
+  ['discordcoreapi_0',['DiscordCoreAPI',['../dc/d2c/a00893.html',1,'']]]
 ];

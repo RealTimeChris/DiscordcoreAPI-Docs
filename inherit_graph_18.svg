@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="db/d6a/a02613.html" target="_top" xlink:title="Audit log data.">
+<g id="a_node1"><a xlink:href="d6/dca/a02616.html" target="_top" xlink:title="Audit log data.">
 <polygon fill="none" stroke="black" points="164,-19 0,-19 0,0 164,0 164,-19"/>
 <text text-anchor="middle" x="82" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::AuditLogData</text>
 </a>

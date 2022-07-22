@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="da/da5/a03465.html" target="_top" xlink:title="An interface class for the Sticker related Discord endpoints.">
+<g id="a_node1"><a xlink:href="db/db5/a03468.html" target="_top" xlink:title="An interface class for the Sticker related Discord endpoints.">
 <polygon fill="none" stroke="black" points="136,-19 0,-19 0,0 136,0 136,-19"/>
 <text text-anchor="middle" x="68" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::Stickers</text>
 </a>

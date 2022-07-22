@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d3/d32/a02665.html" target="_top" xlink:title="Allowable mentions for a Message.">
+<g id="a_node1"><a xlink:href="d9/d5b/a02668.html" target="_top" xlink:title="Allowable mentions for a Message.">
 <polygon fill="none" stroke="black" points="205,-19 0,-19 0,0 205,0 205,-19"/>
 <text text-anchor="middle" x="102.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::AllowedMentionsData</text>
 </a>

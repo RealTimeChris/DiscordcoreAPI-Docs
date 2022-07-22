@@ -1,13 +1,9 @@
 var a07035 =
 [
-    [ "Getting Channel Messages", "d0/d02/a07177.html", null ],
-    [ "Getting a Message", "d7/de3/a07176.html", null ],
-    [ "Creating a Message", "de/d65/a07172.html", null ],
-    [ "Crossposting a Message", "d9/dd3/a07173.html", null ],
-    [ "Editing a Message", "d5/d75/a07175.html", null ],
-    [ "Deleting a Message", "d9/d41/a07174.html", null ],
-    [ "Bulk Deleting Messages", "d6/da9/a07171.html", null ],
-    [ "Getting Pinned Messages", "d9/ddc/a07178.html", null ],
-    [ "Pinning a Message", "d7/d50/a07179.html", null ],
-    [ "Unpinning a Message", "d5/d4d/a07180.html", null ]
+    [ "Getting a List of Guild Scheduled Events", "dd/d09/a07153.html", null ],
+    [ "Creating a Guild Scheduled Event", "df/ddd/a07150.html", null ],
+    [ "Getting a Guild Scheduled Event", "df/d04/a07152.html", null ],
+    [ "Modifying a Guild Scheduled Event", "d3/db9/a07155.html", null ],
+    [ "Deleting a Guild Scheduled Event", "de/dd6/a07151.html", null ],
+    [ "Getting Guild Scheduled Event Users", "d1/d77/a07154.html", null ]
 ];

@@ -1,11 +1,10 @@
 var a07034 =
 [
-    [ "Creating an Interaction Response", "d1/de9/a07164.html", null ],
-    [ "Getting an Interaction Response", "d0/d0f/a07170.html", null ],
-    [ "Editing an Interaction Response", "dd/dbc/a07168.html", null ],
-    [ "Deleting an Interaction Response", "d2/d5c/a07166.html", null ],
-    [ "Creating a Follow-Up Message", "d1/d45/a07163.html", null ],
-    [ "Getting a Follow-Up Message", "da/d8f/a07169.html", null ],
-    [ "Editing a Follow-Up Message", "d8/d6f/a07167.html", null ],
-    [ "Deleting a Follow-Up Message", "da/d52/a07165.html", null ]
+    [ "Getting a Guild Member", "d9/dd2/a07157.html", null ],
+    [ "Listing Guild Members", "d1/d40/a07158.html", null ],
+    [ "Searching Guild Members", "d9/dc8/a07162.html", null ],
+    [ "Adding a Guild Member", "d0/d0b/a07156.html", null ],
+    [ "Modifying a Guild Member", "d8/ddd/a07159.html", null ],
+    [ "Modifying the Current Guild Member", "d7/d99/a07160.html", null ],
+    [ "Removing a Guild Member", "d0/d3b/a07161.html", null ]
 ];

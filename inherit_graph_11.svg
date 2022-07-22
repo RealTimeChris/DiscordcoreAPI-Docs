@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d8/d70/a02629.html" target="_top" xlink:title="Data structure representing an ApplicationCommand&#39;s option choice.">
+<g id="a_node1"><a xlink:href="dd/dc4/a02632.html" target="_top" xlink:title="Data structure representing an ApplicationCommand&#39;s option choice.">
 <polygon fill="none" stroke="black" points="155,-30 0,-30 0,0 155,0 155,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::Application</text>
 <text text-anchor="middle" x="77.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">CommandOptionChoiceData</text>

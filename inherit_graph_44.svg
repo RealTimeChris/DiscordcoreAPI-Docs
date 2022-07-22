@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d9/d5f/a03109.html" target="_top" xlink:title="For creating a deferred Interaction response.">
+<g id="a_node1"><a xlink:href="de/dd1/a03112.html" target="_top" xlink:title="For creating a deferred Interaction response.">
 <polygon fill="none" stroke="black" points="173,-30 0,-30 0,0 173,0 173,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::CreateDeferred</text>
 <text text-anchor="middle" x="86.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">InteractionResponseData</text>
