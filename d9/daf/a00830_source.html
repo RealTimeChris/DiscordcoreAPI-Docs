@@ -1053,7 +1053,7 @@ $(document).ready(function(){initNavTree('d9/daf/a00830_source.html','../../'); 
 <div class="line"><a id="l00946" name="l00946"></a><span class="lineno">  946</span>    <span class="keywordtype">void</span> WebSocketSSLShard::onClosed() noexcept {</div>
 <div class="line"><a id="l00947" name="l00947"></a><span class="lineno">  947</span>        <span class="keywordflow">if</span> (this-&gt;maxReconnectTries &gt; this-&gt;currentReconnectTries) {</div>
 <div class="line"><a id="l00948" name="l00948"></a><span class="lineno">  948</span>            this-&gt;disconnect(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00949" name="l00949"></a><span class="lineno">  949</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (this-&gt;maxReconnectTries &lt;= this-&gt;currentReconnectTries) {</div>
+<div class="line"><a id="l00949" name="l00949"></a><span class="lineno">  949</span>        } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00950" name="l00950"></a><span class="lineno">  950</span>            <span class="keywordflow">if</span> (this-&gt;doWeQuit) {</div>
 <div class="line"><a id="l00951" name="l00951"></a><span class="lineno">  951</span>                this-&gt;doWeQuit-&gt;store(<span class="keyword">true</span>);</div>
 <div class="line"><a id="l00952" name="l00952"></a><span class="lineno">  952</span>            }</div>
