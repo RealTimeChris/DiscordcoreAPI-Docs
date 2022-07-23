@@ -105,29 +105,29 @@ $(document).ready(function(){initNavTree('d9/dbd/a03604.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d6/d8c/a03601.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::ShardingOptions Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::RepeatedFunctionData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Sharding options for the library.  
+<p>Function data for repeated functions to be loaded.  
  <a href="../../d9/dbd/a03604.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../dd/db2/a00737_source.html">Utilities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:ab793f231bd27a906e5e69e384082a884"><td class="memItemLeft" align="right" valign="top"><a id="ab793f231bd27a906e5e69e384082a884" name="ab793f231bd27a906e5e69e384082a884"></a>
-int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>numberOfShardsForThisProcess</b> { 1 }</td></tr>
-<tr class="memdesc:ab793f231bd27a906e5e69e384082a884"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of shards to launch on the current process. <br /></td></tr>
-<tr class="separator:ab793f231bd27a906e5e69e384082a884"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af08286df09d610c2df2a1dd6bc4d8fb0"><td class="memItemLeft" align="right" valign="top"><a id="af08286df09d610c2df2a1dd6bc4d8fb0" name="af08286df09d610c2df2a1dd6bc4d8fb0"></a>
-int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>startingShard</b> { 0 }</td></tr>
-<tr class="memdesc:af08286df09d610c2df2a1dd6bc4d8fb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The first shard to start on this process. <br /></td></tr>
-<tr class="separator:af08286df09d610c2df2a1dd6bc4d8fb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae44c80e287a2702d8ce164e90ddceb3c"><td class="memItemLeft" align="right" valign="top"><a id="ae44c80e287a2702d8ce164e90ddceb3c" name="ae44c80e287a2702d8ce164e90ddceb3c"></a>
-int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>totalNumberOfShards</b> { 1 }</td></tr>
-<tr class="memdesc:ae44c80e287a2702d8ce164e90ddceb3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The total number of shards that will be launched across all processes. <br /></td></tr>
-<tr class="separator:ae44c80e287a2702d8ce164e90ddceb3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3113ed967aef68dc02622fcc8d1a8a1"><td class="memItemLeft" align="right" valign="top"><a id="ab3113ed967aef68dc02622fcc8d1a8a1" name="ab3113ed967aef68dc02622fcc8d1a8a1"></a>
+std::function&lt; void(<a class="el" href="../../d6/d33/a01992.html">DiscordCoreClient</a> *)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>function</b> { nullptr }</td></tr>
+<tr class="memdesc:ab3113ed967aef68dc02622fcc8d1a8a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The std::function pointer to be loaded. <br /></td></tr>
+<tr class="separator:ab3113ed967aef68dc02622fcc8d1a8a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6cd7f6c69dd885d3fc19ee1478835b0"><td class="memItemLeft" align="right" valign="top"><a id="ad6cd7f6c69dd885d3fc19ee1478835b0" name="ad6cd7f6c69dd885d3fc19ee1478835b0"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>intervalInMs</b> { 0 }</td></tr>
+<tr class="memdesc:ad6cd7f6c69dd885d3fc19ee1478835b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The time interval at which to call the std::function. <br /></td></tr>
+<tr class="separator:ad6cd7f6c69dd885d3fc19ee1478835b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5779846654b535a8a63abe4be753e13"><td class="memItemLeft" align="right" valign="top"><a id="ad5779846654b535a8a63abe4be753e13" name="ad5779846654b535a8a63abe4be753e13"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>repeated</b> { false }</td></tr>
+<tr class="memdesc:ad5779846654b535a8a63abe4be753e13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not the std::function is repeating. <br /></td></tr>
+<tr class="separator:ad5779846654b535a8a63abe4be753e13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../dd/db2/a00737_source.html">Utilities.hpp</a></li>
@@ -138,7 +138,7 @@ int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>totalNumberOfShard
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/dbd/a03604.html">ShardingOptions</a></li>
+    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/dbd/a03604.html">RepeatedFunctionData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

@@ -21,11 +21,11 @@ var searchData=
   ['deletereactionsbyemojidata_18',['DeleteReactionsByEmojiData',['../d4/dcb/a03268.html',1,'DiscordCoreAPI']]],
   ['deletestageinstancedata_19',['DeleteStageInstanceData',['../d5/d6b/a03428.html',1,'DiscordCoreAPI']]],
   ['deleteuserreactiondata_20',['DeleteUserReactionData',['../d3/d55/a03256.html',1,'DiscordCoreAPI']]],
-  ['deletewebhookdata_21',['DeleteWebHookData',['../d3/dfc/a03688.html',1,'DiscordCoreAPI']]],
-  ['deletewebhookmessagedata_22',['DeleteWebHookMessageData',['../d4/d43/a03700.html',1,'DiscordCoreAPI']]],
-  ['deletewebhookwithtokendata_23',['DeleteWebHookWithTokenData',['../d6/d1c/a03692.html',1,'DiscordCoreAPI']]],
+  ['deletewebhookdata_21',['DeleteWebHookData',['../d6/d1c/a03692.html',1,'DiscordCoreAPI']]],
+  ['deletewebhookmessagedata_22',['DeleteWebHookMessageData',['../d7/da2/a03704.html',1,'DiscordCoreAPI']]],
+  ['deletewebhookwithtokendata_23',['DeleteWebHookWithTokenData',['../df/d9f/a03696.html',1,'DiscordCoreAPI']]],
   ['discordcoreclient_24',['DiscordCoreClient',['../d6/d33/a01992.html',1,'DiscordCoreAPI']]],
-  ['discordcoreclientconfig_25',['DiscordCoreClientConfig',['../d9/ddd/a03616.html',1,'DiscordCoreAPI']]],
+  ['discordcoreclientconfig_25',['DiscordCoreClientConfig',['../d0/da2/a03620.html',1,'DiscordCoreAPI']]],
   ['discordentity_26',['DiscordEntity',['../dc/d1a/a02288.html',1,'DiscordCoreAPI']]],
   ['downloadurl_27',['DownloadUrl',['../df/dd0/a02804.html',1,'DiscordCoreAPI']]]
 ];

@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="da/d9f/a03636.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="dc/d8f/a03640.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="214,-30 0,-30 0,0 214,0 214,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::Unbounded</text>
 <text text-anchor="middle" x="107" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">MessageBlock&lt; VoiceConnectionData &gt;</text>

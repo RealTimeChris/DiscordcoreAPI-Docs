@@ -20,6 +20,6 @@ var searchData=
   ['modifyqueue_17',['modifyQueue',['../d2/deb/a03356.html#a3fdd51811a0a006a7d75ec1bd83482d9',1,'DiscordCoreAPI::SongAPI']]],
   ['modifystageinstanceasync_18',['modifyStageInstanceAsync',['../d4/d87/a03436.html#a8e994f6f5e049f31b398897f2cbd9da6',1,'DiscordCoreAPI::StageInstances']]],
   ['modifyuservoicestateasync_19',['modifyUserVoiceStateAsync',['../dd/dda/a03584.html#a9bc23f2edc1f745617828066f7bf4503',1,'DiscordCoreAPI::Users']]],
-  ['modifywebhookasync_20',['modifyWebHookAsync',['../d8/d23/a03712.html#a21ee542887a63d9021f7d16f49d7ca38',1,'DiscordCoreAPI::WebHooks']]],
-  ['modifywebhookwithtokenasync_21',['modifyWebHookWithTokenAsync',['../d8/d23/a03712.html#a429276730e474d55f6a24ddc56aef51a',1,'DiscordCoreAPI::WebHooks']]]
+  ['modifywebhookasync_20',['modifyWebHookAsync',['../d5/d35/a03716.html#a21ee542887a63d9021f7d16f49d7ca38',1,'DiscordCoreAPI::WebHooks']]],
+  ['modifywebhookwithtokenasync_21',['modifyWebHookWithTokenAsync',['../d5/d35/a03716.html#a429276730e474d55f6a24ddc56aef51a',1,'DiscordCoreAPI::WebHooks']]]
 ];

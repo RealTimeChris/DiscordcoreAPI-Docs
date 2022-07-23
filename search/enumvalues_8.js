@@ -10,12 +10,8 @@ var searchData=
   ['integration_5fdelete_7',['Integration_Delete',['../de/dfc/a00891.html#gga1aef35b556dafaf1aa08c1dec6313d44a6ef418174a6c2ad16fe6784540ea7a68',1,'DiscordCoreAPI']]],
   ['integration_5fupdate_8',['Integration_Update',['../de/dfc/a00891.html#gga1aef35b556dafaf1aa08c1dec6313d44af500c30154839302900a68409c484f0d',1,'DiscordCoreAPI']]],
   ['interaction_5fresponse_9',['Interaction_Response',['../de/dfc/a00891.html#gga6a10916bec24a00f6d6a41d8d880c1faa6dc9f1599186d5895491f67863f9edd7',1,'DiscordCoreAPI']]],
-  ['invalid_5fapi_5fversion_10',['Invalid_API_Version',['../dd/db2/a00737.html#a3416d66a838a63dc0df704fce23b6971a15e9637c77410cffdca68175359ce867',1,'DiscordCoreInternal']]],
-  ['invalid_5fintent_11',['Invalid_Intent',['../dd/db2/a00737.html#a3416d66a838a63dc0df704fce23b6971a38bb27c82815e7da6cb8ac77a8450875',1,'DiscordCoreInternal']]],
-  ['invalid_5fseq_12',['Invalid_Seq',['../dd/db2/a00737.html#a3416d66a838a63dc0df704fce23b6971a8206d60d41fe5523e6eaea8097e035b2',1,'DiscordCoreInternal']]],
-  ['invalid_5fshard_13',['Invalid_Shard',['../dd/db2/a00737.html#a3416d66a838a63dc0df704fce23b6971a7659808702883207fc35d87ddefe70c6',1,'DiscordCoreInternal']]],
-  ['invite_5fcreate_14',['Invite_Create',['../de/dfc/a00891.html#gga1aef35b556dafaf1aa08c1dec6313d44a25f7f0d80cb4d148c7cd41f7f755b1da',1,'DiscordCoreAPI']]],
-  ['invite_5fdelete_15',['Invite_Delete',['../de/dfc/a00891.html#gga1aef35b556dafaf1aa08c1dec6313d44afc3287a1a010224e752e942a7f7567eb',1,'DiscordCoreAPI']]],
-  ['invite_5fupdate_16',['Invite_Update',['../de/dfc/a00891.html#gga1aef35b556dafaf1aa08c1dec6313d44a36a6902505966b85ae9940d55dc2bd2c',1,'DiscordCoreAPI']]],
-  ['is_5fcrosspost_17',['Is_Crosspost',['../de/dfc/a00891.html#gga59de4f3c2326235571e5b4c135f574eda4aa29658e4f0222dba73717992e4503c',1,'DiscordCoreAPI']]]
+  ['invite_5fcreate_10',['Invite_Create',['../de/dfc/a00891.html#gga1aef35b556dafaf1aa08c1dec6313d44a25f7f0d80cb4d148c7cd41f7f755b1da',1,'DiscordCoreAPI']]],
+  ['invite_5fdelete_11',['Invite_Delete',['../de/dfc/a00891.html#gga1aef35b556dafaf1aa08c1dec6313d44afc3287a1a010224e752e942a7f7567eb',1,'DiscordCoreAPI']]],
+  ['invite_5fupdate_12',['Invite_Update',['../de/dfc/a00891.html#gga1aef35b556dafaf1aa08c1dec6313d44a36a6902505966b85ae9940d55dc2bd2c',1,'DiscordCoreAPI']]],
+  ['is_5fcrosspost_13',['Is_Crosspost',['../de/dfc/a00891.html#gga59de4f3c2326235571e5b4c135f574eda4aa29658e4f0222dba73717992e4503c',1,'DiscordCoreAPI']]]
 ];

@@ -1,6 +1,7 @@
 var a07057 =
 [
-    [ "Creating an Interaction Response", "dc/dc2/a07184.html", null ],
-    [ "Editing an Interaction Response", "d5/d2e/a07186.html", null ],
-    [ "Deleting an Interaction Response", "d7/da0/a07185.html", null ]
+    [ "Running a Command", "d1/d77/a07154.html", null ],
+    [ "Running a Function on a Timer", "d3/db9/a07155.html", null ],
+    [ "Listening for a Discord Event", "dd/d09/a07153.html", null ],
+    [ "Using a Message Collector", "d0/d0b/a07156.html", null ]
 ];

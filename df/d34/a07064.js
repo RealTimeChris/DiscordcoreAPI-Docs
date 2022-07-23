@@ -1,16 +1,18 @@
 var a07064 =
 [
-    [ "Starting a Thread with a Message", "d0/d1f/a07245.html", null ],
-    [ "Starting a Thread without a Message", "d7/d22/a07246.html", null ],
-    [ "Starting a Thread in a Forum Channel", "d5/d4a/a07244.html", null ],
-    [ "Joining a Thread", "db/d5a/a07241.html", null ],
-    [ "Adding a User to a Thread", "d4/d8c/a07234.html", null ],
-    [ "Removing a User from a Thread", "dc/d10/a07243.html", null ],
-    [ "Getting a Thread Member", "d8/d6e/a07237.html", null ],
-    [ "Getting a List of Thread Members", "dd/df9/a07236.html", null ],
-    [ "Getting a List of Active Threads", "db/d34/a07235.html", null ],
-    [ "Getting Public Archived Threads", "df/d3a/a07240.html", null ],
-    [ "Getting Private Archived Threads", "d3/da3/a07239.html", null ],
-    [ "Getting Joined Private Archived Threads", "d1/ddc/a07238.html", null ],
-    [ "Listing Active Threads", "d3/d34/a07242.html", null ]
+    [ "Getting a Channel", "df/ded/a07111.html", null ],
+    [ "Modifying a Channel", "d9/de8/a07116.html", null ],
+    [ "Deleting/Closing a Channel", "de/dde/a07107.html", null ],
+    [ "Getting a Direct-Message Channel", "d0/d5f/a07112.html", null ],
+    [ "Edit Channel Permission Overwrites", "d2/da1/a07109.html", null ],
+    [ "Getting Channel Invites", "d8/dfa/a07113.html", null ],
+    [ "Creating a Channel Invite", "d0/da5/a07104.html", null ],
+    [ "Deleting Permission Overwrites", "da/dea/a07108.html", null ],
+    [ "Following a News Channel", "da/d25/a07110.html", null ],
+    [ "Triggering the Typing Indicator", "df/df1/a07118.html", null ],
+    [ "Getting Guild Channels", "d4/dff/a07114.html", null ],
+    [ "Creating a Guild Channel", "dc/da2/a07106.html", null ],
+    [ "Modifying Guild Channel Positions", "d2/dd5/a07117.html", null ],
+    [ "Creating a Direct-Message", "db/d3a/a07105.html", null ],
+    [ "Getting Voice Regions", "d6/d82/a07115.html", null ]
 ];

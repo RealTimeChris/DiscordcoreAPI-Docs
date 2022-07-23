@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="df/d81/a03600.html" target="_top" xlink:title="Function data for repeated functions to be loaded.">
+<g id="a_node1"><a xlink:href="d9/dbd/a03604.html" target="_top" xlink:title="Function data for repeated functions to be loaded.">
 <polygon fill="none" stroke="black" points="144,-30 0,-30 0,0 144,0 144,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::Repeated</text>
 <text text-anchor="middle" x="72" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">FunctionData</text>

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['cacheoptions_0',['CacheOptions',['../d1/d43/a03612.html',1,'DiscordCoreAPI']]],
+  ['cacheoptions_0',['CacheOptions',['../d9/ddd/a03616.html',1,'DiscordCoreAPI']]],
   ['channel_1',['Channel',['../db/da1/a01944.html',1,'DiscordCoreAPI']]],
   ['channeldata_2',['ChannelData',['../da/d75/a02372.html',1,'DiscordCoreAPI']]],
   ['channelmentiondata_3',['ChannelMentionData',['../d2/dba/a02692.html',1,'DiscordCoreAPI']]],
@@ -37,6 +37,6 @@ var searchData=
   ['createmessagedata_34',['CreateMessageData',['../d8/d2a/a03192.html',1,'DiscordCoreAPI']]],
   ['createreactiondata_35',['CreateReactionData',['../d9/d01/a03248.html',1,'DiscordCoreAPI']]],
   ['createstageinstancedata_36',['CreateStageInstanceData',['../df/df7/a03416.html',1,'DiscordCoreAPI']]],
-  ['createwebhookdata_37',['CreateWebHookData',['../d6/da5/a03652.html',1,'DiscordCoreAPI']]],
+  ['createwebhookdata_37',['CreateWebHookData',['../d7/df2/a03656.html',1,'DiscordCoreAPI']]],
   ['crosspostmessagedata_38',['CrosspostMessageData',['../de/d3a/a03200.html',1,'DiscordCoreAPI']]]
 ];

@@ -102,12 +102,12 @@ $(document).ready(function(){initNavTree('dc/dc2/a07184.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Crossposting a Message </div></div>
+  <div class="headertitle"><div class="title">Getting a Guild Scheduled Event </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Message_Stuff_Crossposting_a_Message"></a></p><ul>
-<li>Execute the, <code><a class="el" href="../../d1/dfa/a03244.html#ac85138fd763e3e08d36fe62162f68140" title="Crossposts a message from a News Channel to the following Channels.">DiscordCoreAPI::Messages::crosspostMessageAsync()</a></code> function, while passing in a data structure of type <code><a class="el" href="../../de/d3a/a03200.html" title="For crossposting a Message.">DiscordCoreAPI::CrosspostMessageData</a></code>, with a return value of type <code>auto</code>, or, <code><a class="el" href="../../d6/d63/a03228.html" title="A single Message.">DiscordCoreAPI::Message</a></code>.</li>
-<li>Call the function with <code>.get()</code> added to the end in order to wait for its return value now.</li>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Guild_Scheduled_Event_Stuff_Getting_a_Guild_Scheduled_Event"></a></p><ul>
+<li>Execute the, from the <code><a class="el" href="../../da/d5d/a03068.html#a881a89676af1ca29ea1e30615e8f6d8f" title="Collects a single GuildScheduledEvent.">DiscordCoreAPI::GuildScheduledEvents::getGuildScheduledEventAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../dc/d92/a03048.html" title="For collecting a single Guild scheduled event.">DiscordCoreAPI::GetGuildScheduledEventData</a></code>, with a return value of type <code>auto</code> or <code><a class="el" href="../../de/d38/a03064.html" title="A single GuildScheduledEvent responseData structure.">DiscordCoreAPI::GuildScheduledEvent</a></code>.</li>
+<li>Call the function with <code>.get()</code> added to the end in order to wait for the results now.</li>
 </ul>
 <div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
 <div class="line"><span class="comment">/// https://github.com/RealTimeChris/DiscordCoreAPI</span></div>
@@ -123,7 +123,7 @@ $(document).ready(function(){initNavTree('dc/dc2/a07184.html','../../'); initRes
 <div class="line">        Test() {</div>
 <div class="line">            this-&gt;commandName = <span class="stringliteral">&quot;test&quot;</span>;</div>
 <div class="line">            this-&gt;helpDescription = <span class="stringliteral">&quot;Testing purposes!&quot;</span>;</div>
-<div class="line">            <a class="code hl_class" href="../../d1/d03/a02332.html">DiscordCoreAPI::EmbedData</a> msgEmbed { };</div>
+<div class="line">            <a class="code hl_class" href="../../d1/d03/a02332.html">DiscordCoreAPI::EmbedData</a> msgEmbed;</div>
 <div class="line">            msgEmbed.<a class="code hl_function" href="../../d1/d03/a02332.html#a9d4066a4861408bc00eccb22a12db7f9">setDescription</a>(<span class="stringliteral">&quot;------\nSimply enter !test or /test!\n------&quot;</span>);</div>
 <div class="line">            msgEmbed.<a class="code hl_function" href="../../d1/d03/a02332.html#a20ca60ec3235f44a223f3d3b687c0c9e">setTitle</a>(<span class="stringliteral">&quot;__**Test Usage:**__&quot;</span>);</div>
 <div class="line">            msgEmbed.<a class="code hl_function" href="../../d1/d03/a02332.html#ae356e6dc3c93658b7228b56da3187896">setTimeStamp</a>(getTimeAndDate());</div>
@@ -131,17 +131,20 @@ $(document).ready(function(){initNavTree('dc/dc2/a07184.html','../../'); initRes
 <div class="line">            this-&gt;helpEmbed = msgEmbed;</div>
 <div class="line">        }</div>
 <div class="line"> </div>
-<div class="line">        std::unique_ptr&lt;DiscordCoreAPI::BaseFunction&gt; create() {</div>
+<div class="line">        unique_ptr&lt;DiscordCoreAPI::BaseFunction&gt; create() {</div>
 <div class="line">            <span class="keywordflow">return</span> std::make_unique&lt;Test&gt;();</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
 <div class="line">            <span class="keywordflow">try</span> {</div>
-<div class="line">                <a class="code hl_struct" href="../../de/d3a/a03200.html">DiscordCoreAPI::CrosspostMessageData</a> dataPackage;</div>
-<div class="line">                dataPackage.<a class="code hl_variable" href="../../de/d3a/a03200.html#aec30919c478c1bbe12edaba531e7d396">channelId</a> = args.eventData.<a class="code hl_function" href="../../d0/d5a/a02784.html#a97c397fe274250bfff73cf674810a8f5">getChannelId</a>();</div>
-<div class="line">                dataPackage.<a class="code hl_variable" href="../../de/d3a/a03200.html#a91ab102eeecd12047cc107c9d17320a8">messageId</a> = args.eventData.<a class="code hl_function" href="../../d0/d5a/a02784.html#af7be2b81b312794ea5398591d1a7e305">getMessageId</a>();</div>
+<div class="line">                <a class="code hl_struct" href="../../dc/d92/a03048.html">DiscordCoreAPI::GetGuildScheduledEventData</a> dataPackage;</div>
+<div class="line">                dataPackage.<a class="code hl_variable" href="../../dc/d92/a03048.html#a04badd7e956d70397c3fe8ce3a24144e">guildId</a> = args.eventData.<a class="code hl_function" href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
+<div class="line">                dataPackage.<a class="code hl_variable" href="../../dc/d92/a03048.html#a6d80180853daaa356403744e416500cb">withUserCount</a> = <span class="keyword">true</span>;</div>
+<div class="line">                dataPackage.<a class="code hl_variable" href="../../dc/d92/a03048.html#abff000329366f0517a395d3a8c0fe0da">guildScheduledEventId</a> = <span class="stringliteral">&quot;914726482365009931&quot;</span>;</div>
 <div class="line"> </div>
-<div class="line">                <a class="code hl_class" href="../../d6/d63/a03228.html">DiscordCoreAPI::Message</a> responseMessages = <a class="code hl_function" href="../../d1/dfa/a03244.html#ac85138fd763e3e08d36fe62162f68140">DiscordCoreAPI::Messages::crosspostMessageAsync</a>(dataPackage).get();</div>
+<div class="line">                <span class="keyword">auto</span> responseData = <a class="code hl_function" href="../../da/d5d/a03068.html#a881a89676af1ca29ea1e30615e8f6d8f">DiscordCoreAPI::GuildScheduledEvents::getGuildScheduledEventAsync</a>(dataPackage).get();</div>
+<div class="line"> </div>
+<div class="line">                cout &lt;&lt; <span class="stringliteral">&quot;THE NAME: &quot;</span> &lt;&lt; responseData.name &lt;&lt; endl;</div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line">            } <span class="keywordflow">catch</span> (...) {</div>
@@ -157,15 +160,14 @@ $(document).ready(function(){initNavTree('dc/dc2/a07184.html','../../'); initRes
 <div class="ttc" id="aa02332_html_a9d4066a4861408bc00eccb22a12db7f9"><div class="ttname"><a href="../../d1/d03/a02332.html#a9d4066a4861408bc00eccb22a12db7f9">DiscordCoreAPI::EmbedData::setDescription</a></div><div class="ttdeci">EmbedData &amp; setDescription(const std::string &amp;descriptionNew)</div><div class="ttdoc">Sets the description (the main contents) of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00379">FoundationEntities.cpp:379</a></div></div>
 <div class="ttc" id="aa02332_html_ab417d83fddf9df80eca98e9ec6e888aa"><div class="ttname"><a href="../../d1/d03/a02332.html#ab417d83fddf9df80eca98e9ec6e888aa">DiscordCoreAPI::EmbedData::setColor</a></div><div class="ttdeci">EmbedData &amp; setColor(const std::string &amp;hexColorValueNew)</div><div class="ttdoc">Sets the color of the embed, by applying a hex-color value.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00384">FoundationEntities.cpp:384</a></div></div>
 <div class="ttc" id="aa02332_html_ae356e6dc3c93658b7228b56da3187896"><div class="ttname"><a href="../../d1/d03/a02332.html#ae356e6dc3c93658b7228b56da3187896">DiscordCoreAPI::EmbedData::setTimeStamp</a></div><div class="ttdeci">EmbedData &amp; setTimeStamp(const std::string &amp;timeStamp)</div><div class="ttdoc">Sets the timestamp on the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00365">FoundationEntities.cpp:365</a></div></div>
-<div class="ttc" id="aa02784_html_a97c397fe274250bfff73cf674810a8f5"><div class="ttname"><a href="../../d0/d5a/a02784.html#a97c397fe274250bfff73cf674810a8f5">DiscordCoreAPI::InputEventData::getChannelId</a></div><div class="ttdeci">Snowflake getChannelId()</div><div class="ttdoc">Returns the Channel id of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01635">FoundationEntities.cpp:1635</a></div></div>
-<div class="ttc" id="aa02784_html_af7be2b81b312794ea5398591d1a7e305"><div class="ttname"><a href="../../d0/d5a/a02784.html#af7be2b81b312794ea5398591d1a7e305">DiscordCoreAPI::InputEventData::getMessageId</a></div><div class="ttdeci">Snowflake getMessageId()</div><div class="ttdoc">Returns the Message id, if applicable, of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01647">FoundationEntities.cpp:1647</a></div></div>
+<div class="ttc" id="aa02784_html_a565fe2447237030a716f64b2599996dd"><div class="ttname"><a href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">DiscordCoreAPI::InputEventData::getGuildId</a></div><div class="ttdeci">Snowflake getGuildId()</div><div class="ttdoc">Returns the Guild id, of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01643">FoundationEntities.cpp:1643</a></div></div>
 <div class="ttc" id="aa02836_html"><div class="ttname"><a href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03795">FoundationEntities.hpp:3795</a></div></div>
 <div class="ttc" id="aa02840_html"><div class="ttname"><a href="../../d9/d4d/a02840.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03806">FoundationEntities.hpp:3806</a></div></div>
-<div class="ttc" id="aa03200_html"><div class="ttname"><a href="../../de/d3a/a03200.html">DiscordCoreAPI::CrosspostMessageData</a></div><div class="ttdoc">For crossposting a Message.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5b/a00695_source.html#l00083">MessageEntities.hpp:83</a></div></div>
-<div class="ttc" id="aa03200_html_a91ab102eeecd12047cc107c9d17320a8"><div class="ttname"><a href="../../de/d3a/a03200.html#a91ab102eeecd12047cc107c9d17320a8">DiscordCoreAPI::CrosspostMessageData::messageId</a></div><div class="ttdeci">Snowflake messageId</div><div class="ttdoc">Id of the message to be crossposted.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5b/a00695_source.html#l00084">MessageEntities.hpp:84</a></div></div>
-<div class="ttc" id="aa03200_html_aec30919c478c1bbe12edaba531e7d396"><div class="ttname"><a href="../../de/d3a/a03200.html#aec30919c478c1bbe12edaba531e7d396">DiscordCoreAPI::CrosspostMessageData::channelId</a></div><div class="ttdeci">Snowflake channelId</div><div class="ttdoc">Channel within which to crosspost the Message from.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5b/a00695_source.html#l00085">MessageEntities.hpp:85</a></div></div>
-<div class="ttc" id="aa03228_html"><div class="ttname"><a href="../../d6/d63/a03228.html">DiscordCoreAPI::Message</a></div><div class="ttdoc">A single Message.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5b/a00695_source.html#l00148">MessageEntities.hpp:148</a></div></div>
-<div class="ttc" id="aa03244_html_ac85138fd763e3e08d36fe62162f68140"><div class="ttname"><a href="../../d1/dfa/a03244.html#ac85138fd763e3e08d36fe62162f68140">DiscordCoreAPI::Messages::crosspostMessageAsync</a></div><div class="ttdeci">static CoRoutine&lt; Message &gt; crosspostMessageAsync(CrosspostMessageData dataPackage)</div><div class="ttdoc">Crossposts a message from a News Channel to the following Channels.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/a00869_source.html#l00270">MessageEntities.cpp:270</a></div></div>
+<div class="ttc" id="aa03048_html"><div class="ttname"><a href="../../dc/d92/a03048.html">DiscordCoreAPI::GetGuildScheduledEventData</a></div><div class="ttdoc">For collecting a single Guild scheduled event.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/df7/a00731_source.html#l00053">GuildScheduledEventEntities.hpp:53</a></div></div>
+<div class="ttc" id="aa03048_html_a04badd7e956d70397c3fe8ce3a24144e"><div class="ttname"><a href="../../dc/d92/a03048.html#a04badd7e956d70397c3fe8ce3a24144e">DiscordCoreAPI::GetGuildScheduledEventData::guildId</a></div><div class="ttdeci">Snowflake guildId</div><div class="ttdoc">Guild from which we would like to collect the events.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/df7/a00731_source.html#l00056">GuildScheduledEventEntities.hpp:56</a></div></div>
+<div class="ttc" id="aa03048_html_a6d80180853daaa356403744e416500cb"><div class="ttname"><a href="../../dc/d92/a03048.html#a6d80180853daaa356403744e416500cb">DiscordCoreAPI::GetGuildScheduledEventData::withUserCount</a></div><div class="ttdeci">bool withUserCount</div><div class="ttdoc">Do we collect the user counts?</div><div class="ttdef"><b>Definition:</b> <a href="../../df/df7/a00731_source.html#l00055">GuildScheduledEventEntities.hpp:55</a></div></div>
+<div class="ttc" id="aa03048_html_abff000329366f0517a395d3a8c0fe0da"><div class="ttname"><a href="../../dc/d92/a03048.html#abff000329366f0517a395d3a8c0fe0da">DiscordCoreAPI::GetGuildScheduledEventData::guildScheduledEventId</a></div><div class="ttdeci">Snowflake guildScheduledEventId</div><div class="ttdoc">The id of the desired scheduled event.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/df7/a00731_source.html#l00054">GuildScheduledEventEntities.hpp:54</a></div></div>
+<div class="ttc" id="aa03068_html_a881a89676af1ca29ea1e30615e8f6d8f"><div class="ttname"><a href="../../da/d5d/a03068.html#a881a89676af1ca29ea1e30615e8f6d8f">DiscordCoreAPI::GuildScheduledEvents::getGuildScheduledEventAsync</a></div><div class="ttdeci">static CoRoutine&lt; GuildScheduledEvent &gt; getGuildScheduledEventAsync(GetGuildScheduledEventData dataPackage)</div><div class="ttdoc">Collects a single GuildScheduledEvent.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d0c/a00788_source.html#l00091">GuildScheduledEventEntities.cpp:91</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -173,7 +175,7 @@ $(document).ready(function(){initNavTree('dc/dc2/a07184.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d92/a07030.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../de/d0a/a07046.html">Message Stuff</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d5/d78/a07054.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d1/d3b/a07067.html">Guild Scheduled Event Stuff</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

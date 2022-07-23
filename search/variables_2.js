@@ -8,7 +8,7 @@ var searchData=
   ['botid_5',['botId',['../d4/d8c/a02292.html#a607899941057d03f1360a4a83e2c4d6b',1,'DiscordCoreAPI::RoleTagsData']]],
   ['botpublic_6',['botPublic',['../d2/d35/a02468.html#a38b76673713f4e17c88ccbac0a98c32b',1,'DiscordCoreAPI::ApplicationData']]],
   ['botrequirecodegrant_7',['botRequireCodeGrant',['../d2/d35/a02468.html#a84e1aa8658675c13b080673ab1565cef',1,'DiscordCoreAPI::ApplicationData']]],
-  ['bottoken_8',['botToken',['../d9/ddd/a03616.html#a5d6a046c2a1a35c2f45f130a91775e87',1,'DiscordCoreAPI::DiscordCoreClientConfig']]],
+  ['bottoken_8',['botToken',['../d0/da2/a03620.html#a5d6a046c2a1a35c2f45f130a91775e87',1,'DiscordCoreAPI::DiscordCoreClientConfig']]],
   ['buttonid_9',['buttonId',['../d8/d87/a03168.html#a4f4c219d6698d0f00d380edfb0a5cf55',1,'DiscordCoreAPI::ButtonResponseData']]],
   ['buttons_10',['buttons',['../d6/d24/a02536.html#a87d0064f16ff4c1df8a21f77e7c4e8aa',1,'DiscordCoreAPI::ActivityData']]]
 ];

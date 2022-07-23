@@ -57,8 +57,8 @@ var a00888 =
       [ "previousSong", "dd/dfa/a02824.html#a8340e3dbc09571714ab35fe82db33f20", null ],
       [ "wasItAFail", "dd/dfa/a02824.html#ad548cb870648ce735ebd46e1926118f9", null ]
     ] ],
-    [ "DiscordCoreAPI::VoiceConnection", "d6/d62/a03648.html", [
-      [ "getChannelId", "d6/d62/a03648.html#ae790f8b154a461a5878a224f371eb546", null ]
+    [ "DiscordCoreAPI::VoiceConnection", "d6/da5/a03652.html", [
+      [ "getChannelId", "d6/da5/a03652.html#ae790f8b154a461a5878a224f371eb546", null ]
     ] ],
     [ "DiscordCoreAPI::AudioFrameType", "dd/d94/a00888.html#gacf6f4590968be95774b156cf050c996c", [
       [ "DiscordCoreAPI::AudioFrameType::Unset", "dd/d94/a00888.html#ggacf6f4590968be95774b156cf050c996cac9f88e098f6fe4e4e112eeb05ccb9671", null ],

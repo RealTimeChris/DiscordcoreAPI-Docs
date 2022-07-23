@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d7/df2/a03656.html" target="_top" xlink:title="For executing a WebHook.">
+<g id="a_node1"><a xlink:href="d0/d99/a03660.html" target="_top" xlink:title="For executing a WebHook.">
 <polygon fill="none" stroke="black" points="157,-67.5 0,-67.5 0,-37.5 157,-37.5 157,-67.5"/>
 <text text-anchor="start" x="8" y="-55.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::ExecuteWeb</text>
 <text text-anchor="middle" x="78.5" y="-44.5" font-family="Helvetica,sans-Serif" font-size="10.00">HookData</text>
@@ -53,7 +53,7 @@
 <!-- Node3 -->
 <g id="node4" class="node">
 <title>Node3</title>
-<g id="a_node4"><a xlink:href="d0/d99/a03660.html" target="_top" xlink:title="For editing a WebHook Message.">
+<g id="a_node4"><a xlink:href="dc/d4c/a03664.html" target="_top" xlink:title="For editing a WebHook Message.">
 <polygon fill="none" stroke="black" points="379,-19 193,-19 193,0 379,0 379,-19"/>
 <text text-anchor="middle" x="286" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::EditWebHookData</text>
 </a>

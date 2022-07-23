@@ -1,8 +1,9 @@
 var a07067 =
 [
-    [ "Listing Auto-Moderation-Rules", "d2/de6/a07089.html", null ],
-    [ "Getting an Auto-Moderation-Rule", "da/d1c/a07088.html", null ],
-    [ "Creating an Auto-Moderation-Rule", "d3/d45/a07086.html", null ],
-    [ "Modifying an Auto-Moderation-Rule", "dd/dd2/a07090.html", null ],
-    [ "Deleting an Auto-Moderation-Rule", "dc/dfb/a07087.html", null ]
+    [ "Getting a List of Guild Scheduled Events", "d7/da0/a07185.html", null ],
+    [ "Creating a Guild Scheduled Event", "d6/ded/a07182.html", null ],
+    [ "Getting a Guild Scheduled Event", "dc/dc2/a07184.html", null ],
+    [ "Modifying a Guild Scheduled Event", "d9/df4/a07187.html", null ],
+    [ "Deleting a Guild Scheduled Event", "d5/d5e/a07183.html", null ],
+    [ "Getting Guild Scheduled Event Users", "d5/d2e/a07186.html", null ]
 ];

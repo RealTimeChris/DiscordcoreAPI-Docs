@@ -102,11 +102,11 @@ $(document).ready(function(){initNavTree('d3/d34/a07242.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Modifying the Current User </div></div>
+  <div class="headertitle"><div class="title">Getting a Sticker </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_User_Stuff_Modifying_the_Current_User"></a></p><ul>
-<li>Execute the, <code><a class="el" href="../../dd/dda/a03584.html#a068421aad1858062f59d5127cda1f112" title="Modifies the Bot&#39;s User responseData.">DiscordCoreAPI::Users::modifyCurrentUserAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../dc/d29/a03568.html" title="For modifying the Bot&#39;s User responseData.">DiscordCoreAPI::ModifyCurrentUserData</a></code>, with a return value of type <code>auto</code> or <code><a class="el" href="../../d8/db0/a03572.html" title="A single User.">DiscordCoreAPI::User</a></code>.</li>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Sticker_Stuff_Getting_a_Sticker"></a></p><ul>
+<li>Execute the, <code><a class="el" href="../../db/db5/a03468.html#a38466742178dbe6d223afdf5e7298bcf" title="Gets a single Sticker item.">DiscordCoreAPI::Stickers::getStickerAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../df/d89/a03440.html" title="For getting a Sticker object for the given sticker ID.">DiscordCoreAPI::GetStickerData</a></code>, with a return value of type <code>auto</code> or <code><a class="el" href="../../dc/d18/a03460.html" title="A single Sticker.">DiscordCoreAPI::Sticker</a></code>.</li>
 <li>Call the function with <code>.get()</code> added to the end in order to wait for the results now.</li>
 </ul>
 <div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
@@ -131,18 +131,18 @@ $(document).ready(function(){initNavTree('d3/d34/a07242.html','../../'); initRes
 <div class="line">            this-&gt;helpEmbed = msgEmbed;</div>
 <div class="line">        }</div>
 <div class="line"> </div>
-<div class="line">        std::unique_ptr&lt;DiscordCoreAPI::BaseFunction&gt; create() {</div>
+<div class="line">        unique_ptr&lt;DiscordCoreAPI::BaseFunction&gt; create() {</div>
 <div class="line">            <span class="keywordflow">return</span> std::make_unique&lt;Test&gt;();</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
 <div class="line">            <span class="keywordflow">try</span> {</div>
-<div class="line">                <a class="code hl_struct" href="../../dc/d29/a03568.html">DiscordCoreAPI::ModifyCurrentUserData</a> dataPackage;</div>
-<div class="line">                dataPackage.<a class="code hl_variable" href="../../dc/d29/a03568.html#a008d962925d265f7458952dc8dcd5c75">userName</a> = <span class="stringliteral">&quot;MBot_GameHouse&quot;</span>;</div>
+<div class="line">                <a class="code hl_struct" href="../../df/d89/a03440.html">DiscordCoreAPI::GetStickerData</a> dataPackage;</div>
+<div class="line">                dataPackage.<a class="code hl_variable" href="../../df/d89/a03440.html#a8f3e6c6bc4eb03872e8a652b7d00859c">stickerId</a> = <span class="stringliteral">&quot;YOUR_STICKER_ID_HERE&quot;</span>;</div>
 <div class="line"> </div>
-<div class="line">                <span class="keyword">auto</span> currentUser = <a class="code hl_function" href="../../dd/dda/a03584.html#a068421aad1858062f59d5127cda1f112">DiscordCoreAPI::Users::modifyCurrentUserAsync</a>(dataPackage).get();</div>
+<div class="line">                <span class="keyword">auto</span> responseData = <a class="code hl_function" href="../../db/db5/a03468.html#a38466742178dbe6d223afdf5e7298bcf">DiscordCoreAPI::Stickers::getStickerAsync</a>(dataPackage).get();</div>
 <div class="line"> </div>
-<div class="line">                cout &lt;&lt; currentUser.userName &lt;&lt; endl;</div>
+<div class="line">                cout &lt;&lt; <span class="stringliteral">&quot;THE NAME: &quot;</span> &lt;&lt; responseData.name &lt;&lt; endl;</div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line">            } <span class="keywordflow">catch</span> (...) {</div>
@@ -162,9 +162,9 @@ $(document).ready(function(){initNavTree('d3/d34/a07242.html','../../'); initRes
 <div class="ttc" id="aa02332_html_ae356e6dc3c93658b7228b56da3187896"><div class="ttname"><a href="../../d1/d03/a02332.html#ae356e6dc3c93658b7228b56da3187896">DiscordCoreAPI::EmbedData::setTimeStamp</a></div><div class="ttdeci">EmbedData &amp; setTimeStamp(const std::string &amp;timeStamp)</div><div class="ttdoc">Sets the timestamp on the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00365">FoundationEntities.cpp:365</a></div></div>
 <div class="ttc" id="aa02836_html"><div class="ttname"><a href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03795">FoundationEntities.hpp:3795</a></div></div>
 <div class="ttc" id="aa02840_html"><div class="ttname"><a href="../../d9/d4d/a02840.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03806">FoundationEntities.hpp:3806</a></div></div>
-<div class="ttc" id="aa03568_html"><div class="ttname"><a href="../../dc/d29/a03568.html">DiscordCoreAPI::ModifyCurrentUserData</a></div><div class="ttdoc">For modifying the Bot's User responseData.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d87/a00689_source.html#l00070">UserEntities.hpp:70</a></div></div>
-<div class="ttc" id="aa03568_html_a008d962925d265f7458952dc8dcd5c75"><div class="ttname"><a href="../../dc/d29/a03568.html#a008d962925d265f7458952dc8dcd5c75">DiscordCoreAPI::ModifyCurrentUserData::userName</a></div><div class="ttdeci">std::string userName</div><div class="ttdoc">User's userName, if changed may cause the user's discriminator to be randomized.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d87/a00689_source.html#l00072">UserEntities.hpp:72</a></div></div>
-<div class="ttc" id="aa03584_html_a068421aad1858062f59d5127cda1f112"><div class="ttname"><a href="../../dd/dda/a03584.html#a068421aad1858062f59d5127cda1f112">DiscordCoreAPI::Users::modifyCurrentUserAsync</a></div><div class="ttdeci">static CoRoutine&lt; User &gt; modifyCurrentUserAsync(ModifyCurrentUserData dataPackage)</div><div class="ttdoc">Modifies the Bot's User responseData.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dcf/a00845_source.html#l00204">UserEntities.cpp:204</a></div></div>
+<div class="ttc" id="aa03440_html"><div class="ttname"><a href="../../df/d89/a03440.html">DiscordCoreAPI::GetStickerData</a></div><div class="ttdoc">For getting a Sticker object for the given sticker ID.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db6/a00692_source.html#l00032">StickerEntities.hpp:32</a></div></div>
+<div class="ttc" id="aa03440_html_a8f3e6c6bc4eb03872e8a652b7d00859c"><div class="ttname"><a href="../../df/d89/a03440.html#a8f3e6c6bc4eb03872e8a652b7d00859c">DiscordCoreAPI::GetStickerData::stickerId</a></div><div class="ttdeci">Snowflake stickerId</div><div class="ttdoc">The chosen Sticker's Id.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db6/a00692_source.html#l00033">StickerEntities.hpp:33</a></div></div>
+<div class="ttc" id="aa03468_html_a38466742178dbe6d223afdf5e7298bcf"><div class="ttname"><a href="../../db/db5/a03468.html#a38466742178dbe6d223afdf5e7298bcf">DiscordCoreAPI::Stickers::getStickerAsync</a></div><div class="ttdeci">static CoRoutine&lt; Sticker &gt; getStickerAsync(GetStickerData dataPackage)</div><div class="ttdoc">Gets a single Sticker item.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d0e/a00800_source.html#l00051">StickerEntities.cpp:51</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -172,7 +172,7 @@ $(document).ready(function(){initNavTree('d3/d34/a07242.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d92/a07030.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d4/d15/a07052.html">User Stuff</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d5/d78/a07054.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d5/d31/a07074.html">Sticker Stuff</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

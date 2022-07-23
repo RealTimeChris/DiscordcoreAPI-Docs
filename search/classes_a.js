@@ -34,6 +34,6 @@ var searchData=
   ['modifyguildwidgetdata_31',['ModifyGuildWidgetData',['../dd/d3f/a02912.html',1,'DiscordCoreAPI']]],
   ['modifystageinstancedata_32',['ModifyStageInstanceData',['../dc/dc7/a03424.html',1,'DiscordCoreAPI']]],
   ['modifyuservoicestatedata_33',['ModifyUserVoiceStateData',['../d5/dda/a03560.html',1,'DiscordCoreAPI']]],
-  ['modifywebhookdata_34',['ModifyWebHookData',['../df/d98/a03680.html',1,'DiscordCoreAPI']]],
-  ['modifywebhookwithtokendata_35',['ModifyWebHookWithTokenData',['../d1/d24/a03684.html',1,'DiscordCoreAPI']]]
+  ['modifywebhookdata_34',['ModifyWebHookData',['../d1/d24/a03684.html',1,'DiscordCoreAPI']]],
+  ['modifywebhookwithtokendata_35',['ModifyWebHookWithTokenData',['../d3/dfc/a03688.html',1,'DiscordCoreAPI']]]
 ];

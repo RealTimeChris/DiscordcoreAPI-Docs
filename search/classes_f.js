@@ -7,7 +7,7 @@ var searchData=
   ['selectoptiondata_4',['SelectOptionData',['../d0/d9f/a02672.html',1,'DiscordCoreAPI']]],
   ['senddmdata_5',['SendDMData',['../dc/ddd/a03196.html',1,'DiscordCoreAPI']]],
   ['sessionstartdata_6',['SessionStartData',['../df/d25/a02764.html',1,'DiscordCoreAPI']]],
-  ['shardingoptions_7',['ShardingOptions',['../d9/dbd/a03604.html',1,'DiscordCoreAPI']]],
+  ['shardingoptions_7',['ShardingOptions',['../d3/dce/a03608.html',1,'DiscordCoreAPI']]],
   ['song_8',['Song',['../d8/deb/a02820.html',1,'DiscordCoreAPI']]],
   ['songapi_9',['SongAPI',['../d2/deb/a03356.html',1,'DiscordCoreAPI']]],
   ['songcompletioneventdata_10',['SongCompletionEventData',['../dd/dfa/a02824.html',1,'DiscordCoreAPI']]],

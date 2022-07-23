@@ -20,7 +20,7 @@ var searchData=
   ['premiumtier_17',['premiumTier',['../d6/db9/a02980.html#ad88c67546831f1cecaf131d38a5e4b39',1,'DiscordCoreAPI::Guild']]],
   ['premiumtype_18',['premiumType',['../d8/db0/a03572.html#af05a76dd8fb484b3c46129ce469b30d0',1,'DiscordCoreAPI::User']]],
   ['presence_5fcount_19',['presence_count',['../de/d4e/a02484.html#a5c6194ac22e8588c034c98c1d6dd3bc6',1,'DiscordCoreAPI::GetGuildWidgetObjectData']]],
-  ['presencedata_20',['presenceData',['../dd/dce/a02200.html#a0b946256b6a7044532a0095f8dc6e344',1,'DiscordCoreAPI::OnPresenceUpdateData::presenceData()'],['../d9/ddd/a03616.html#a8bdf8fb0a24083a5722e1190f40e55ca',1,'DiscordCoreAPI::DiscordCoreClientConfig::presenceData()']]],
+  ['presencedata_20',['presenceData',['../dd/dce/a02200.html#a0b946256b6a7044532a0095f8dc6e344',1,'DiscordCoreAPI::OnPresenceUpdateData::presenceData()'],['../d0/da2/a03620.html#a8bdf8fb0a24083a5722e1190f40e55ca',1,'DiscordCoreAPI::DiscordCoreClientConfig::presenceData()']]],
   ['presences_21',['presences',['../dc/d81/a02568.html#a1246077e656c338764ec2dd87aa20187',1,'DiscordCoreAPI::GuildData']]],
   ['presets_22',['presets',['../d5/df1/a02392.html#ae0cdc0c74517d175ee1476a43503f11f',1,'DiscordCoreAPI::TriggerMetaData']]],
   ['previoussong_23',['previousSong',['../dd/dfa/a02824.html#a8340e3dbc09571714ab35fe82db33f20',1,'DiscordCoreAPI::SongCompletionEventData']]],

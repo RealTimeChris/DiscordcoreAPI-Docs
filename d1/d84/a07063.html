@@ -102,80 +102,35 @@ $(document).ready(function(){initNavTree('d1/d84/a07063.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Editing a Guild Application Command </div></div>
+  <div class="headertitle"><div class="title">Application-Command Stuff </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Application_Command_Stuff_Editing_a_Guild_Application_Command"></a></p><ul>
-<li>Execute the <code><a class="el" href="../../d0/dce/a01780.html#ab3ace9a43a0046c39ffc4cc84b213503" title="Edit a single Guild ApplicationCommand for a single server for this bot.">DiscordCoreAPI::ApplicationCommands::editGuildApplicationCommandAsync()</a></code> function, while passing in a data structure of type <code><a class="el" href="../../d9/d0d/a01748.html" title="For editing a single Guild ApplicationCommand.">DiscordCoreAPI::EditGuildApplicationCommandData</a></code>, with a return value of type <code>auto</code> or <code><a class="el" href="../../dd/d00/a01776.html" title="A single ApplicationCommand.">DiscordCoreAPI::ApplicationCommand</a></code>.</li>
-<li>Call the function with <code>.get()</code> added to the end in order to wait for the results now.</li>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_010_Application_Command_Stuff"></a></p><ul>
+<li><a class="el" href="../../d2/de6/a07089.html">Getting Global Application Commands</a></li>
+<li><a class="el" href="../../d4/db3/a07082.html">Creating a Global Application Command</a></li>
+<li><a class="el" href="../../d7/df8/a07092.html">Getting a Global Application Command</a></li>
+<li><a class="el" href="../../d3/d45/a07086.html">Editing a Global Application Command</a></li>
+<li><a class="el" href="../../df/d45/a07084.html">Deleting a Global Application Command</a></li>
+<li><a class="el" href="../../d5/d58/a07080.html">Bulk Overwriting Global Application Commands</a></li>
+<li><a class="el" href="../../d6/d8d/a07091.html">Getting Guild Application Commands</a></li>
+<li><a class="el" href="../../dd/d63/a07083.html">Creating a Guild Application Command</a></li>
+<li><a class="el" href="../../dd/dd2/a07090.html">Getting a Guild Application Command</a></li>
+<li><a class="el" href="../../dc/dfb/a07087.html">Editing a Guild Application Command</a></li>
+<li><a class="el" href="../../de/ddd/a07085.html">Deleting a Guild Application Command</a></li>
+<li><a class="el" href="../../dc/ddc/a07081.html">Bulk Overwriting Guild Application Commands</a></li>
+<li><a class="el" href="../../d5/d2f/a07094.html">Getting Guild Application Command Permissions</a></li>
+<li><a class="el" href="../../d9/d3d/a07093.html">Getting a Single Guild Application Command's Permissions</a></li>
+<li><a class="el" href="../../da/d1c/a07088.html">Editing a Guild Application Command's Permissions</a></li>
+<li><a class="el" href="../../d9/d5b/a07079.html">Batch Editing Guild Application Command's Permissions</a> </li>
 </ul>
-<div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
-<div class="line"><span class="comment">/// https://github.com/RealTimeChris/DiscordCoreAPI</span></div>
-<div class="line"><span class="comment"></span> </div>
-<div class="line"><span class="preprocessor">#pragma once</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d5/de8/a00749.html">Index.hpp</a>&quot;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a> {</div>
-<div class="line"> </div>
-<div class="line">    <span class="keyword">class </span>Test : <span class="keyword">public</span> <a class="code hl_struct" href="../../d9/d4d/a02840.html">DiscordCoreAPI::BaseFunction</a> {</div>
-<div class="line">      <span class="keyword">public</span>:</div>
-<div class="line">        Test() {</div>
-<div class="line">            this-&gt;commandName = <span class="stringliteral">&quot;test&quot;</span>;</div>
-<div class="line">            this-&gt;helpDescription = <span class="stringliteral">&quot;Testing purposes!&quot;</span>;</div>
-<div class="line">            <a class="code hl_class" href="../../d1/d03/a02332.html">DiscordCoreAPI::EmbedData</a> msgEmbed;</div>
-<div class="line">            msgEmbed.<a class="code hl_function" href="../../d1/d03/a02332.html#a9d4066a4861408bc00eccb22a12db7f9">setDescription</a>(<span class="stringliteral">&quot;------\nSimply enter !test or /test!\n------&quot;</span>);</div>
-<div class="line">            msgEmbed.<a class="code hl_function" href="../../d1/d03/a02332.html#a20ca60ec3235f44a223f3d3b687c0c9e">setTitle</a>(<span class="stringliteral">&quot;__**Test Usage:**__&quot;</span>);</div>
-<div class="line">            msgEmbed.<a class="code hl_function" href="../../d1/d03/a02332.html#ae356e6dc3c93658b7228b56da3187896">setTimeStamp</a>(getTimeAndDate());</div>
-<div class="line">            msgEmbed.<a class="code hl_function" href="../../d1/d03/a02332.html#ab417d83fddf9df80eca98e9ec6e888aa">setColor</a>(<span class="stringliteral">&quot;FeFeFe&quot;</span>);</div>
-<div class="line">            this-&gt;helpEmbed = msgEmbed;</div>
-<div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">        std::unique_ptr&lt;DiscordCoreAPI::BaseFunction&gt; create() {</div>
-<div class="line">            <span class="keywordflow">return</span> std::make_unique&lt;Test&gt;();</div>
-<div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
-<div class="line">            <a class="code hl_function" href="../../d5/d3a/a03100.html#a721365d0ef437397ea553634f88b8ecf">DiscordCoreAPI::InputEvents::deleteInputEventResponseAsync</a>(args.eventData);</div>
-<div class="line"> </div>
-<div class="line">            <span class="keyword">auto</span> returnVector = <a class="code hl_function" href="../../d0/dce/a01780.html#a038ea064d3458d653c1d82b22adf3469">DiscordCoreAPI::ApplicationCommands::getGuildApplicationCommandsAsync</a>({.guildId = args.eventData.<a class="code hl_function" href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>()}).get();</div>
-<div class="line"> </div>
-<div class="line">            <a class="code hl_struct" href="../../d9/d0d/a01748.html">DiscordCoreAPI::EditGuildApplicationCommandData</a> dataPackage;</div>
-<div class="line">            dataPackage.<a class="code hl_variable" href="../../d9/d0d/a01748.html#ad4d723f67e75a62b44bdd35ec3ceb6ef">guildId</a> = args.eventData.<a class="code hl_function" href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
-<div class="line">            dataPackage.<a class="code hl_variable" href="../../d9/d0d/a01748.html#a4406684e5a5a2719096e7f30f526b2ac">name</a> = returnVector.at(0).name;</div>
-<div class="line">            dataPackage.<a class="code hl_variable" href="../../d9/d0d/a01748.html#a0b73a647d293bf84717b5aeb12f3fc29">description</a> = <span class="stringliteral">&quot;a test description&quot;</span>;</div>
-<div class="line"> </div>
-<div class="line">            <span class="keyword">auto</span> returnValue = <a class="code hl_function" href="../../d0/dce/a01780.html#ab3ace9a43a0046c39ffc4cc84b213503">DiscordCoreAPI::ApplicationCommands::editGuildApplicationCommandAsync</a>(dataPackage).get();</div>
-<div class="line"> </div>
-<div class="line">            cout &lt;&lt; returnValue.description &lt;&lt; endl;</div>
-<div class="line">        }</div>
-<div class="line">    };</div>
-<div class="line">}</div>
-<div class="ttc" id="aa00749_html"><div class="ttname"><a href="../../d5/de8/a00749.html">Index.hpp</a></div></div>
-<div class="ttc" id="aa00893_html"><div class="ttname"><a href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></div><div class="ttdoc">The main namespace for this library.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00025">ApplicationCommandEntities.hpp:25</a></div></div>
-<div class="ttc" id="aa01748_html"><div class="ttname"><a href="../../d9/d0d/a01748.html">DiscordCoreAPI::EditGuildApplicationCommandData</a></div><div class="ttdoc">For editing a single Guild ApplicationCommand.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00116">ApplicationCommandEntities.hpp:116</a></div></div>
-<div class="ttc" id="aa01748_html_a0b73a647d293bf84717b5aeb12f3fc29"><div class="ttname"><a href="../../d9/d0d/a01748.html#a0b73a647d293bf84717b5aeb12f3fc29">DiscordCoreAPI::EditGuildApplicationCommandData::description</a></div><div class="ttdeci">std::string description</div><div class="ttdoc">A description of the command.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00122">ApplicationCommandEntities.hpp:122</a></div></div>
-<div class="ttc" id="aa01748_html_a4406684e5a5a2719096e7f30f526b2ac"><div class="ttname"><a href="../../d9/d0d/a01748.html#a4406684e5a5a2719096e7f30f526b2ac">DiscordCoreAPI::EditGuildApplicationCommandData::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">A name for the new command.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00125">ApplicationCommandEntities.hpp:125</a></div></div>
-<div class="ttc" id="aa01748_html_ad4d723f67e75a62b44bdd35ec3ceb6ef"><div class="ttname"><a href="../../d9/d0d/a01748.html#ad4d723f67e75a62b44bdd35ec3ceb6ef">DiscordCoreAPI::EditGuildApplicationCommandData::guildId</a></div><div class="ttdeci">Snowflake guildId</div><div class="ttdoc">The id of the Guild which you would like to add the new command to.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00124">ApplicationCommandEntities.hpp:124</a></div></div>
-<div class="ttc" id="aa01780_html_a038ea064d3458d653c1d82b22adf3469"><div class="ttname"><a href="../../d0/dce/a01780.html#a038ea064d3458d653c1d82b22adf3469">DiscordCoreAPI::ApplicationCommands::getGuildApplicationCommandsAsync</a></div><div class="ttdeci">static CoRoutine&lt; std::vector&lt; ApplicationCommand &gt; &gt; getGuildApplicationCommandsAsync(GetGuildApplicationCommandsData dataPackage)</div><div class="ttdoc">Get all of the Guild ApplicationCommands for a single Guild for this bot.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5e/a00860_source.html#l00231">ApplicationCommandEntities.cpp:231</a></div></div>
-<div class="ttc" id="aa01780_html_ab3ace9a43a0046c39ffc4cc84b213503"><div class="ttname"><a href="../../d0/dce/a01780.html#ab3ace9a43a0046c39ffc4cc84b213503">DiscordCoreAPI::ApplicationCommands::editGuildApplicationCommandAsync</a></div><div class="ttdeci">static CoRoutine&lt; ApplicationCommand &gt; editGuildApplicationCommandAsync(EditGuildApplicationCommandData dataPackage)</div><div class="ttdoc">Edit a single Guild ApplicationCommand for a single server for this bot.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5e/a00860_source.html#l00264">ApplicationCommandEntities.cpp:264</a></div></div>
-<div class="ttc" id="aa02332_html"><div class="ttname"><a href="../../d1/d03/a02332.html">DiscordCoreAPI::EmbedData</a></div><div class="ttdoc">Embed data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l00600">FoundationEntities.hpp:600</a></div></div>
-<div class="ttc" id="aa02332_html_a20ca60ec3235f44a223f3d3b687c0c9e"><div class="ttname"><a href="../../d1/d03/a02332.html#a20ca60ec3235f44a223f3d3b687c0c9e">DiscordCoreAPI::EmbedData::setTitle</a></div><div class="ttdeci">EmbedData &amp; setTitle(const std::string &amp;titleNew)</div><div class="ttdoc">Sets the title of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00394">FoundationEntities.cpp:394</a></div></div>
-<div class="ttc" id="aa02332_html_a9d4066a4861408bc00eccb22a12db7f9"><div class="ttname"><a href="../../d1/d03/a02332.html#a9d4066a4861408bc00eccb22a12db7f9">DiscordCoreAPI::EmbedData::setDescription</a></div><div class="ttdeci">EmbedData &amp; setDescription(const std::string &amp;descriptionNew)</div><div class="ttdoc">Sets the description (the main contents) of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00379">FoundationEntities.cpp:379</a></div></div>
-<div class="ttc" id="aa02332_html_ab417d83fddf9df80eca98e9ec6e888aa"><div class="ttname"><a href="../../d1/d03/a02332.html#ab417d83fddf9df80eca98e9ec6e888aa">DiscordCoreAPI::EmbedData::setColor</a></div><div class="ttdeci">EmbedData &amp; setColor(const std::string &amp;hexColorValueNew)</div><div class="ttdoc">Sets the color of the embed, by applying a hex-color value.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00384">FoundationEntities.cpp:384</a></div></div>
-<div class="ttc" id="aa02332_html_ae356e6dc3c93658b7228b56da3187896"><div class="ttname"><a href="../../d1/d03/a02332.html#ae356e6dc3c93658b7228b56da3187896">DiscordCoreAPI::EmbedData::setTimeStamp</a></div><div class="ttdeci">EmbedData &amp; setTimeStamp(const std::string &amp;timeStamp)</div><div class="ttdoc">Sets the timestamp on the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00365">FoundationEntities.cpp:365</a></div></div>
-<div class="ttc" id="aa02784_html_a565fe2447237030a716f64b2599996dd"><div class="ttname"><a href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">DiscordCoreAPI::InputEventData::getGuildId</a></div><div class="ttdeci">Snowflake getGuildId()</div><div class="ttdoc">Returns the Guild id, of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01643">FoundationEntities.cpp:1643</a></div></div>
-<div class="ttc" id="aa02836_html"><div class="ttname"><a href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03795">FoundationEntities.hpp:3795</a></div></div>
-<div class="ttc" id="aa02840_html"><div class="ttname"><a href="../../d9/d4d/a02840.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03806">FoundationEntities.hpp:3806</a></div></div>
-<div class="ttc" id="aa03100_html_a721365d0ef437397ea553634f88b8ecf"><div class="ttname"><a href="../../d5/d3a/a03100.html#a721365d0ef437397ea553634f88b8ecf">DiscordCoreAPI::InputEvents::deleteInputEventResponseAsync</a></div><div class="ttdeci">static CoRoutine&lt; void &gt; deleteInputEventResponseAsync(InputEventData &amp;dataPackage, int32_t timeDelayNew=0)</div><div class="ttdoc">Deletes a previously sent &quot;input-event-response&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d8b/a00821_source.html#l00103">InputEvents.cpp:103</a></div></div>
-</div><!-- fragment --> </div></div><!-- contents -->
+</div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d92/a07030.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d9/d9d/a07039.html">Application-Command Stuff</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d5/d78/a07054.html">Docs/Examples</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

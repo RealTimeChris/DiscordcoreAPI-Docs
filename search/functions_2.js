@@ -1,8 +1,8 @@
 var searchData=
 [
   ['cancel_0',['cancel',['../d5/d70/a01980.html#a566ebc1b6eacc88c5c2913908e6a2c8f',1,'DiscordCoreAPI::CoRoutine&lt; void &gt;::cancel()'],['../db/d9d/a01972.html#a9fc31b4ff6a73922169844d6ad1851b5',1,'DiscordCoreAPI::CoRoutine::cancel()']]],
-  ['checkforpermission_1',['checkForPermission',['../d3/d50/a03632.html#acafd47a5d3ea3c04adccd925bc090a2d',1,'DiscordCoreAPI::Permissions']]],
-  ['clearcontents_2',['clearContents',['../da/d9f/a03636.html#a1096795a528f8831115b7b5184f591a6',1,'DiscordCoreAPI::UnboundedMessageBlock']]],
+  ['checkforpermission_1',['checkForPermission',['../da/d9f/a03636.html#acafd47a5d3ea3c04adccd925bc090a2d',1,'DiscordCoreAPI::Permissions']]],
+  ['clearcontents_2',['clearContents',['../dc/d8f/a03640.html#a1096795a528f8831115b7b5184f591a6',1,'DiscordCoreAPI::UnboundedMessageBlock']]],
   ['collectbuttondata_3',['collectButtonData',['../db/dc1/a03172.html#a0eecf8f131b659cf758266ce6472f4a9',1,'DiscordCoreAPI::ButtonCollector']]],
   ['collectmessages_4',['collectMessages',['../d9/de5/a03240.html#aa5712e643f8c09387ca9892a536e379a',1,'DiscordCoreAPI::MessageCollector']]],
   ['collectmodaldata_5',['collectModalData',['../d6/da1/a03180.html#a05a7c10af76eb9305b03dadee0b98a2b',1,'DiscordCoreAPI::ModalCollector']]],
@@ -26,6 +26,6 @@ var searchData=
   ['createmessageasync_23',['createMessageAsync',['../d1/dfa/a03244.html#a64d985c14562deb99044d9eab00d0379',1,'DiscordCoreAPI::Messages']]],
   ['createreactionasync_24',['createReactionAsync',['../d0/d7c/a03300.html#a37bcfef2edf8755fbb3679ff329fb9db',1,'DiscordCoreAPI::Reactions']]],
   ['createstageinstanceasync_25',['createStageInstanceAsync',['../d4/d87/a03436.html#aa4ba46b360f8715672601543bd11bf7f',1,'DiscordCoreAPI::StageInstances']]],
-  ['createwebhookasync_26',['createWebHookAsync',['../d8/d23/a03712.html#ac460613237e4e459dcb10c35ed83334a',1,'DiscordCoreAPI::WebHooks']]],
+  ['createwebhookasync_26',['createWebHookAsync',['../d5/d35/a03716.html#ac460613237e4e459dcb10c35ed83334a',1,'DiscordCoreAPI::WebHooks']]],
   ['crosspostmessageasync_27',['crosspostMessageAsync',['../d1/dfa/a03244.html#ac85138fd763e3e08d36fe62162f68140',1,'DiscordCoreAPI::Messages']]]
 ];

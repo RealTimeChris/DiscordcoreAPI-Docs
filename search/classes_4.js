@@ -7,7 +7,7 @@ var searchData=
   ['editguildapplicationcommandpermissionsdata_4',['EditGuildApplicationCommandPermissionsData',['../de/dda/a01768.html',1,'DiscordCoreAPI']]],
   ['editinteractionresponsedata_5',['EditInteractionResponseData',['../d6/d1e/a03124.html',1,'DiscordCoreAPI']]],
   ['editmessagedata_6',['EditMessageData',['../d6/d75/a03204.html',1,'DiscordCoreAPI']]],
-  ['editwebhookdata_7',['EditWebHookData',['../d0/d99/a03660.html',1,'DiscordCoreAPI']]],
+  ['editwebhookdata_7',['EditWebHookData',['../dc/d4c/a03664.html',1,'DiscordCoreAPI']]],
   ['embedauthordata_8',['EmbedAuthorData',['../dd/d6e/a02324.html',1,'DiscordCoreAPI']]],
   ['embeddata_9',['EmbedData',['../d1/d03/a02332.html',1,'DiscordCoreAPI']]],
   ['embedfielddata_10',['EmbedFieldData',['../db/d83/a02328.html',1,'DiscordCoreAPI']]],
@@ -23,5 +23,5 @@ var searchData=
   ['eventdelegate_3c_20returntype_2c_20argtypes_2e_2e_2e_20_3e_20',['EventDelegate&lt; ReturnType, ArgTypes... &gt;',['../d5/d2c/a02012.html',1,'DiscordCoreInternal']]],
   ['eventdelegatetoken_21',['EventDelegateToken',['../d5/d6e/a02008.html',1,'DiscordCoreInternal']]],
   ['eventmanager_22',['EventManager',['../dc/d35/a02240.html',1,'DiscordCoreAPI']]],
-  ['executewebhookdata_23',['ExecuteWebHookData',['../d7/df2/a03656.html',1,'DiscordCoreAPI']]]
+  ['executewebhookdata_23',['ExecuteWebHookData',['../d0/d99/a03660.html',1,'DiscordCoreAPI']]]
 ];

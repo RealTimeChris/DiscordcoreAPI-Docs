@@ -11,7 +11,7 @@ var searchData=
   ['removeguildroledata_8',['RemoveGuildRoleData',['../d6/d83/a03332.html',1,'DiscordCoreAPI']]],
   ['removerecipientfromgroupdmdata_9',['RemoveRecipientFromGroupDMData',['../d1/d6e/a03552.html',1,'DiscordCoreAPI']]],
   ['removethreadmemberdata_10',['RemoveThreadMemberData',['../d4/d5b/a03496.html',1,'DiscordCoreAPI']]],
-  ['repeatedfunctiondata_11',['RepeatedFunctionData',['../df/d81/a03600.html',1,'DiscordCoreAPI']]],
+  ['repeatedfunctiondata_11',['RepeatedFunctionData',['../d9/dbd/a03604.html',1,'DiscordCoreAPI']]],
   ['resolveddata_12',['ResolvedData',['../db/d59/a02728.html',1,'DiscordCoreAPI']]],
   ['respondtoinputeventdata_13',['RespondToInputEventData',['../dd/dbf/a02788.html',1,'DiscordCoreAPI']]],
   ['role_14',['Role',['../da/dcf/a03344.html',1,'DiscordCoreAPI']]],

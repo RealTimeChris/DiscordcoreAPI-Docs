@@ -102,79 +102,18 @@ $(document).ready(function(){initNavTree('da/d52/a07100.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Deleting a Guild Integration </div></div>
+  <div class="headertitle"><div class="title">Listing Auto-Moderation-Rules </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Guild_Stuff_Deleting_a_Guild_Integration"></a></p><ul>
-<li>Execute the, <code><a class="el" href="../../d6/d5d/a02992.html#afa8ca7feddf01e402031940a2b819189" title="Deletes an integration from a Guild.">DiscordCoreAPI::Guilds::deleteGuildIntegrationAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../d8/d05/a02904.html" title="For deleting a Guild integration.">DiscordCoreAPI::DeleteGuildIntegrationData</a></code>, with a return value of type <code>void</code>.</li>
-<li>Call the function with <code>.get()</code> added to the end in order to wait for the results now.</li>
-</ul>
-<div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
-<div class="line"><span class="comment">/// https://github.com/RealTimeChris/DiscordCoreAPI</span></div>
-<div class="line"><span class="comment"></span> </div>
-<div class="line"><span class="preprocessor">#pragma once</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d5/de8/a00749.html">Index.hpp</a>&gt;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a> {</div>
-<div class="line"> </div>
-<div class="line">    <span class="keyword">class </span>Test : <span class="keyword">public</span> <a class="code hl_struct" href="../../d9/d4d/a02840.html">DiscordCoreAPI::BaseFunction</a> {</div>
-<div class="line">      <span class="keyword">public</span>:</div>
-<div class="line">        Test() {</div>
-<div class="line">            this-&gt;commandName = <span class="stringliteral">&quot;test&quot;</span>;</div>
-<div class="line">            this-&gt;helpDescription = <span class="stringliteral">&quot;Testing purposes!&quot;</span>;</div>
-<div class="line">            <a class="code hl_class" href="../../d1/d03/a02332.html">DiscordCoreAPI::EmbedData</a> msgEmbed;</div>
-<div class="line">            msgEmbed.<a class="code hl_function" href="../../d1/d03/a02332.html#a9d4066a4861408bc00eccb22a12db7f9">setDescription</a>(<span class="stringliteral">&quot;------\nSimply enter !test or /test!\n------&quot;</span>);</div>
-<div class="line">            msgEmbed.<a class="code hl_function" href="../../d1/d03/a02332.html#a20ca60ec3235f44a223f3d3b687c0c9e">setTitle</a>(<span class="stringliteral">&quot;__**Test Usage:**__&quot;</span>);</div>
-<div class="line">            msgEmbed.<a class="code hl_function" href="../../d1/d03/a02332.html#ae356e6dc3c93658b7228b56da3187896">setTimeStamp</a>(getTimeAndDate());</div>
-<div class="line">            msgEmbed.<a class="code hl_function" href="../../d1/d03/a02332.html#ab417d83fddf9df80eca98e9ec6e888aa">setColor</a>(<span class="stringliteral">&quot;FeFeFe&quot;</span>);</div>
-<div class="line">            this-&gt;helpEmbed = msgEmbed;</div>
-<div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">        std::unique_ptr&lt;DiscordCoreAPI::BaseFunction&gt; create() {</div>
-<div class="line">            <span class="keywordflow">return</span> std::make_unique&lt;Test&gt;();</div>
-<div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
-<div class="line">            <span class="keywordflow">try</span> {</div>
-<div class="line">                <a class="code hl_struct" href="../../d8/d05/a02904.html">DiscordCoreAPI::DeleteGuildIntegrationData</a> dataPackage01;</div>
-<div class="line">                dataPackage01.<a class="code hl_variable" href="../../d8/d05/a02904.html#af4b3e6e54d4704cab0e597e737d2f0f0">guildId</a> = args.eventData.<a class="code hl_function" href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
-<div class="line">                dataPackage01.<a class="code hl_variable" href="../../d8/d05/a02904.html#a95286455ff8c30e2248f71f03a9579f2">integrationId</a> = <span class="stringliteral">&quot;INTEGRATION_ID_HERE&quot;</span>;</div>
-<div class="line">                dataPackage01.<a class="code hl_variable" href="../../d8/d05/a02904.html#ad4afc54d0e114b2446f9b67f62d8667d">reason</a> = <span class="stringliteral">&quot;TESTING PURPOSES!&quot;</span>;</div>
-<div class="line"> </div>
-<div class="line">                <a class="code hl_function" href="../../d6/d5d/a02992.html#afa8ca7feddf01e402031940a2b819189">DiscordCoreAPI::Guilds::deleteGuildIntegrationAsync</a>(dataPackage01).<a class="code hl_function" href="../../d5/d70/a01980.html#a904d030f3edbf8efac15b2cebba3e37a">get</a>();</div>
-<div class="line"> </div>
-<div class="line"> </div>
-<div class="line">            } <span class="keywordflow">catch</span> (...) {</div>
-<div class="line">                rethrowException(<span class="stringliteral">&quot;Test::execute()&quot;</span>);</div>
-<div class="line">            }</div>
-<div class="line">        }</div>
-<div class="line">    };</div>
-<div class="line">}</div>
-<div class="ttc" id="aa00749_html"><div class="ttname"><a href="../../d5/de8/a00749.html">Index.hpp</a></div></div>
-<div class="ttc" id="aa00893_html"><div class="ttname"><a href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></div><div class="ttdoc">The main namespace for this library.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00025">ApplicationCommandEntities.hpp:25</a></div></div>
-<div class="ttc" id="aa01980_html_a904d030f3edbf8efac15b2cebba3e37a"><div class="ttname"><a href="../../d5/d70/a01980.html#a904d030f3edbf8efac15b2cebba3e37a">DiscordCoreAPI::CoRoutine&lt; void &gt;::get</a></div><div class="ttdeci">void get()</div><div class="ttdoc">Gets the resulting value of the CoRoutine.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4a/a00758_source.html#l00323">CoRoutine.hpp:323</a></div></div>
-<div class="ttc" id="aa02332_html"><div class="ttname"><a href="../../d1/d03/a02332.html">DiscordCoreAPI::EmbedData</a></div><div class="ttdoc">Embed data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l00600">FoundationEntities.hpp:600</a></div></div>
-<div class="ttc" id="aa02332_html_a20ca60ec3235f44a223f3d3b687c0c9e"><div class="ttname"><a href="../../d1/d03/a02332.html#a20ca60ec3235f44a223f3d3b687c0c9e">DiscordCoreAPI::EmbedData::setTitle</a></div><div class="ttdeci">EmbedData &amp; setTitle(const std::string &amp;titleNew)</div><div class="ttdoc">Sets the title of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00394">FoundationEntities.cpp:394</a></div></div>
-<div class="ttc" id="aa02332_html_a9d4066a4861408bc00eccb22a12db7f9"><div class="ttname"><a href="../../d1/d03/a02332.html#a9d4066a4861408bc00eccb22a12db7f9">DiscordCoreAPI::EmbedData::setDescription</a></div><div class="ttdeci">EmbedData &amp; setDescription(const std::string &amp;descriptionNew)</div><div class="ttdoc">Sets the description (the main contents) of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00379">FoundationEntities.cpp:379</a></div></div>
-<div class="ttc" id="aa02332_html_ab417d83fddf9df80eca98e9ec6e888aa"><div class="ttname"><a href="../../d1/d03/a02332.html#ab417d83fddf9df80eca98e9ec6e888aa">DiscordCoreAPI::EmbedData::setColor</a></div><div class="ttdeci">EmbedData &amp; setColor(const std::string &amp;hexColorValueNew)</div><div class="ttdoc">Sets the color of the embed, by applying a hex-color value.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00384">FoundationEntities.cpp:384</a></div></div>
-<div class="ttc" id="aa02332_html_ae356e6dc3c93658b7228b56da3187896"><div class="ttname"><a href="../../d1/d03/a02332.html#ae356e6dc3c93658b7228b56da3187896">DiscordCoreAPI::EmbedData::setTimeStamp</a></div><div class="ttdeci">EmbedData &amp; setTimeStamp(const std::string &amp;timeStamp)</div><div class="ttdoc">Sets the timestamp on the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00365">FoundationEntities.cpp:365</a></div></div>
-<div class="ttc" id="aa02784_html_a565fe2447237030a716f64b2599996dd"><div class="ttname"><a href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">DiscordCoreAPI::InputEventData::getGuildId</a></div><div class="ttdeci">Snowflake getGuildId()</div><div class="ttdoc">Returns the Guild id, of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01643">FoundationEntities.cpp:1643</a></div></div>
-<div class="ttc" id="aa02836_html"><div class="ttname"><a href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03795">FoundationEntities.hpp:3795</a></div></div>
-<div class="ttc" id="aa02840_html"><div class="ttname"><a href="../../d9/d4d/a02840.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03806">FoundationEntities.hpp:3806</a></div></div>
-<div class="ttc" id="aa02904_html"><div class="ttname"><a href="../../d8/d05/a02904.html">DiscordCoreAPI::DeleteGuildIntegrationData</a></div><div class="ttdoc">For deleting a Guild integration.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00141">GuildEntities.hpp:141</a></div></div>
-<div class="ttc" id="aa02904_html_a95286455ff8c30e2248f71f03a9579f2"><div class="ttname"><a href="../../d8/d05/a02904.html#a95286455ff8c30e2248f71f03a9579f2">DiscordCoreAPI::DeleteGuildIntegrationData::integrationId</a></div><div class="ttdeci">Snowflake integrationId</div><div class="ttdoc">The integration's id which we are going to delete.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00142">GuildEntities.hpp:142</a></div></div>
-<div class="ttc" id="aa02904_html_ad4afc54d0e114b2446f9b67f62d8667d"><div class="ttname"><a href="../../d8/d05/a02904.html#ad4afc54d0e114b2446f9b67f62d8667d">DiscordCoreAPI::DeleteGuildIntegrationData::reason</a></div><div class="ttdeci">std::string reason</div><div class="ttdoc">Reason for deleting the integration.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00143">GuildEntities.hpp:143</a></div></div>
-<div class="ttc" id="aa02904_html_af4b3e6e54d4704cab0e597e737d2f0f0"><div class="ttname"><a href="../../d8/d05/a02904.html#af4b3e6e54d4704cab0e597e737d2f0f0">DiscordCoreAPI::DeleteGuildIntegrationData::guildId</a></div><div class="ttdeci">Snowflake guildId</div><div class="ttdoc">The Guild from which to delete the integration from.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d94/a00716_source.html#l00144">GuildEntities.hpp:144</a></div></div>
-<div class="ttc" id="aa02992_html_afa8ca7feddf01e402031940a2b819189"><div class="ttname"><a href="../../d6/d5d/a02992.html#afa8ca7feddf01e402031940a2b819189">DiscordCoreAPI::Guilds::deleteGuildIntegrationAsync</a></div><div class="ttdeci">static CoRoutine&lt; void &gt; deleteGuildIntegrationAsync(DeleteGuildIntegrationData dataPackage)</div><div class="ttdoc">Deletes an integration from a Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d69/a00878_source.html#l00578">GuildEntities.cpp:578</a></div></div>
-</div><!-- fragment --> </div></div><!-- contents -->
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Auto_Moderation_Rule_Stuff_List_Auto_Moderation_Rules"></a> <a href="https://github.com/RealTimeChris/DiscordCoreAPI/blob/main/Source/AutoModerationEntities.cpp#L53">For now it is here.</a> </p>
+</div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d92/a07030.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d7/dfb/a07041.html">Guild Stuff</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d5/d78/a07054.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d3/d86/a07078.html">Auto-Moderation-Rule Stuff</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

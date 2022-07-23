@@ -9,13 +9,13 @@ var searchData=
   ['locale_6',['locale',['../d3/d55/a02760.html#acc31349b6fb3a7c487d48909c15ed147',1,'DiscordCoreAPI::InteractionData::locale()'],['../d8/db0/a03572.html#a56fd6aed59c14412d56cc265ffb21644',1,'DiscordCoreAPI::User::locale()']]],
   ['locked_7',['locked',['../d6/d71/a02344.html#adeff39689c4f8bd8bc3b73d71ea571ef',1,'DiscordCoreAPI::ThreadMetadataData']]],
   ['lockpermissions_8',['lockPermissions',['../d8/d22/a01932.html#a762eb3049e777960c5b2e88e193e7fba',1,'DiscordCoreAPI::ModifyGuildChannelPositionData']]],
-  ['logffmpegerrormessages_9',['logFFMPEGErrorMessages',['../d3/dce/a03608.html#adbdf07149ca05113d5658114e4d5aee2',1,'DiscordCoreAPI::LoggingOptions']]],
-  ['logffmpegsuccessmessages_10',['logFFMPEGSuccessMessages',['../d3/dce/a03608.html#ab79b5ddc5c8bf5d6101e1748148e8968',1,'DiscordCoreAPI::LoggingOptions']]],
-  ['loggeneralerrormessages_11',['logGeneralErrorMessages',['../d3/dce/a03608.html#a2c8e32ca719f7a02d0a950c5e81f4e86',1,'DiscordCoreAPI::LoggingOptions']]],
-  ['loggeneralsuccessmessages_12',['logGeneralSuccessMessages',['../d3/dce/a03608.html#ab748a5dc3c950f4a29ddb5938502a7a4',1,'DiscordCoreAPI::LoggingOptions']]],
-  ['loghttpserrormessages_13',['logHttpsErrorMessages',['../d3/dce/a03608.html#aa90f4dcfee2986a12868ec08b6a81b86',1,'DiscordCoreAPI::LoggingOptions']]],
-  ['loghttpssuccessmessages_14',['logHttpsSuccessMessages',['../d3/dce/a03608.html#aa781c41c6fc37532bf63f2f8ccc1c203',1,'DiscordCoreAPI::LoggingOptions']]],
-  ['logoptions_15',['logOptions',['../d9/ddd/a03616.html#aa80164422e50651e607603948fe2e9af',1,'DiscordCoreAPI::DiscordCoreClientConfig']]],
-  ['logwebsocketerrormessages_16',['logWebSocketErrorMessages',['../d3/dce/a03608.html#a1ae4294313beb1e81a145394cc2292a1',1,'DiscordCoreAPI::LoggingOptions']]],
-  ['logwebsocketsuccessmessages_17',['logWebSocketSuccessMessages',['../d3/dce/a03608.html#a6b201a80503c27c534994796cdc782f4',1,'DiscordCoreAPI::LoggingOptions']]]
+  ['logffmpegerrormessages_9',['logFFMPEGErrorMessages',['../d1/d43/a03612.html#adbdf07149ca05113d5658114e4d5aee2',1,'DiscordCoreAPI::LoggingOptions']]],
+  ['logffmpegsuccessmessages_10',['logFFMPEGSuccessMessages',['../d1/d43/a03612.html#ab79b5ddc5c8bf5d6101e1748148e8968',1,'DiscordCoreAPI::LoggingOptions']]],
+  ['loggeneralerrormessages_11',['logGeneralErrorMessages',['../d1/d43/a03612.html#a2c8e32ca719f7a02d0a950c5e81f4e86',1,'DiscordCoreAPI::LoggingOptions']]],
+  ['loggeneralsuccessmessages_12',['logGeneralSuccessMessages',['../d1/d43/a03612.html#ab748a5dc3c950f4a29ddb5938502a7a4',1,'DiscordCoreAPI::LoggingOptions']]],
+  ['loghttpserrormessages_13',['logHttpsErrorMessages',['../d1/d43/a03612.html#aa90f4dcfee2986a12868ec08b6a81b86',1,'DiscordCoreAPI::LoggingOptions']]],
+  ['loghttpssuccessmessages_14',['logHttpsSuccessMessages',['../d1/d43/a03612.html#aa781c41c6fc37532bf63f2f8ccc1c203',1,'DiscordCoreAPI::LoggingOptions']]],
+  ['logoptions_15',['logOptions',['../d0/da2/a03620.html#aa80164422e50651e607603948fe2e9af',1,'DiscordCoreAPI::DiscordCoreClientConfig']]],
+  ['logwebsocketerrormessages_16',['logWebSocketErrorMessages',['../d1/d43/a03612.html#a1ae4294313beb1e81a145394cc2292a1',1,'DiscordCoreAPI::LoggingOptions']]],
+  ['logwebsocketsuccessmessages_17',['logWebSocketSuccessMessages',['../d1/d43/a03612.html#a6b201a80503c27c534994796cdc782f4',1,'DiscordCoreAPI::LoggingOptions']]]
 ];

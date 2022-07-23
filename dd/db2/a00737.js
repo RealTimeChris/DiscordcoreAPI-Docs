@@ -1,9 +1,9 @@
 var a00737 =
 [
-    [ "DiscordCoreAPI::CacheOptions", "d1/d43/a03612.html", "d1/d43/a03612" ],
-    [ "DiscordCoreAPI::DiscordCoreClientConfig", "d9/ddd/a03616.html", "d9/ddd/a03616" ],
-    [ "DiscordCoreAPI::LoggingOptions", "d3/dce/a03608.html", "d3/dce/a03608" ],
-    [ "DiscordCoreInternal::UpdatePresenceData", "de/d51/a03588.html", "de/d51/a03588" ],
+    [ "DiscordCoreAPI::CacheOptions", "d9/ddd/a03616.html", "d9/ddd/a03616" ],
+    [ "DiscordCoreAPI::DiscordCoreClientConfig", "d0/da2/a03620.html", "d0/da2/a03620" ],
+    [ "DiscordCoreAPI::LoggingOptions", "d1/d43/a03612.html", "d1/d43/a03612" ],
+    [ "DiscordCoreInternal::UpdatePresenceData", "d8/d1b/a03592.html", "d8/d1b/a03592" ],
     [ "GatewayIntents", "dd/db2/a00737.html#ga4703fe910d1719c0a0bef34e9b7500e3", [
       [ "Guilds", "dd/db2/a00737.html#gga4703fe910d1719c0a0bef34e9b7500e3ac5514110f8f4e8873da17c6c2b7b2b8e", null ],
       [ "Guild_Members", "dd/db2/a00737.html#gga4703fe910d1719c0a0bef34e9b7500e3af317825fad018118ad319336c01c130d", null ],
@@ -92,23 +92,6 @@ var a00737 =
       [ "ShortDate", "dd/db2/a00737.html#gga5f837e6437665f0a390fe2c6271e3a91a7c5b7580e4269fd93b25519beb510f81", null ],
       [ "ShortDateTime", "dd/db2/a00737.html#gga5f837e6437665f0a390fe2c6271e3a91afca721616f2e8ad106360f72d88be853", null ],
       [ "ShortTime", "dd/db2/a00737.html#gga5f837e6437665f0a390fe2c6271e3a91a085a3cce396fbb1bf82dbdab56b11043", null ]
-    ] ],
-    [ "WebSocketCloseCode", "dd/db2/a00737.html#a3416d66a838a63dc0df704fce23b6971", [
-      [ "Normal_Close", "dd/db2/a00737.html#a3416d66a838a63dc0df704fce23b6971adfb230fccaffbdd5bc5cc19a0b6edbc3", null ],
-      [ "Unknown_Error", "dd/db2/a00737.html#a3416d66a838a63dc0df704fce23b6971a9f0b40369d46968daca4c442ca8dbe1c", null ],
-      [ "Unknown_Opcode", "dd/db2/a00737.html#a3416d66a838a63dc0df704fce23b6971a8ffdc93e8c17c90879fc9b340f1cf604", null ],
-      [ "Decode_Error", "dd/db2/a00737.html#a3416d66a838a63dc0df704fce23b6971a4c3d503c93fff6ee9ef8e8299b8a0245", null ],
-      [ "Not_Authenticated", "dd/db2/a00737.html#a3416d66a838a63dc0df704fce23b6971ac37e482dbe3fbef4f37bfab10b11daed", null ],
-      [ "Authentication_Failed", "dd/db2/a00737.html#a3416d66a838a63dc0df704fce23b6971a8611ab976214968bb77f6bd9ca29d2fd", null ],
-      [ "Already_Authenticated", "dd/db2/a00737.html#a3416d66a838a63dc0df704fce23b6971a637a097581305aed5a1c672f80afe9c0", null ],
-      [ "Invalid_Seq", "dd/db2/a00737.html#a3416d66a838a63dc0df704fce23b6971a8206d60d41fe5523e6eaea8097e035b2", null ],
-      [ "Rate_Limited", "dd/db2/a00737.html#a3416d66a838a63dc0df704fce23b6971aa42320bff0ecf00ae4af1cb62310398a", null ],
-      [ "Session_Timed", "dd/db2/a00737.html#a3416d66a838a63dc0df704fce23b6971ab866848ebe746cbe059d6e752d7adf78", null ],
-      [ "Invalid_Shard", "dd/db2/a00737.html#a3416d66a838a63dc0df704fce23b6971a7659808702883207fc35d87ddefe70c6", null ],
-      [ "Sharding_Required", "dd/db2/a00737.html#a3416d66a838a63dc0df704fce23b6971a11b2d79fa7ff7791df0033e03397ee72", null ],
-      [ "Invalid_API_Version", "dd/db2/a00737.html#a3416d66a838a63dc0df704fce23b6971a15e9637c77410cffdca68175359ce867", null ],
-      [ "Invalid_Intent", "dd/db2/a00737.html#a3416d66a838a63dc0df704fce23b6971a38bb27c82815e7da6cb8ac77a8450875", null ],
-      [ "Disallowed_Intent", "dd/db2/a00737.html#a3416d66a838a63dc0df704fce23b6971a93a332e57cb47271f3d4189e9dcc4ef2", null ]
     ] ],
     [ "getTimeAndDate", "dd/db2/a00737.html#ga63ce723358a8b7a00c14e055f2a26998", null ],
     [ "reportException", "dd/db2/a00737.html#ga805bf7170903087e933a7b81c8e39f15", null ]
