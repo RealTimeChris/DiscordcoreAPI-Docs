@@ -63,12 +63,7 @@ var a00890 =
       [ "userId", "d8/d08/a03160.html#a6f0a57e6e3dda8b4b7fb6f923385016d", null ],
       [ "values", "d8/d08/a03160.html#ad2b79c7aeda60afc5c353ca95d574761", null ]
     ] ],
-    [ "DiscordCoreAPI::TimeStamp", "d3/d50/a03632.html", [
-      [ "getDateTimeStamp", "d3/d50/a03632.html#a6d6d1ce8ebf0ba0c6a0890ab64e87381", null ],
-      [ "getFutureISO8601TimeStamp", "d3/d50/a03632.html#a06a5cb025dd8627b04a15a96e889f967", null ],
-      [ "getOriginalTimeStamp", "d3/d50/a03632.html#a1a7847af4e3c4d666eb9cb45b3933edc", null ],
-      [ "hasTimeElapsed", "d3/d50/a03632.html#a97e7849b93d0e7f6086d30cfead2cb64", null ]
-    ] ],
+    [ "DiscordCoreAPI::TimeStamp< TimeType >", "d3/d50/a03632.html", null ],
     [ "DiscordCoreAPI::MessageFilter", "d7/d46/a00890.html#ga86831633c56c590266071aafe18bd657", null ],
     [ "DiscordCoreAPI::CoRoutineStatus", "d7/d46/a00890.html#ga422a91ba942835ea1809a91d1fe1e1d5", [
       [ "DiscordCoreAPI::CoRoutineStatus::Idle", "d7/d46/a00890.html#gga422a91ba942835ea1809a91d1fe1e1d5ae599161956d626eda4cb0a5ffb85271c", null ],

@@ -172,7 +172,7 @@ var a00891 =
     [ "DiscordCoreAPI::AuditLogEntryData", "db/da2/a02512.html", [
       [ "actionType", "db/da2/a02512.html#a69709113545db9a71badaade5be218d2", null ],
       [ "changes", "db/da2/a02512.html#ae671e8bfa20ef1aaf086b1eab162f5f1", null ],
-      [ "createdTimeStamp", "db/da2/a02512.html#a3477d38ffb7d814bb6633234316ca16a", null ],
+      [ "createdTimeStamp", "db/da2/a02512.html#aa11d324b95ddae4a04e21283fd091d1a", null ],
       [ "options", "db/da2/a02512.html#a268ab33b584b40ee9143a3d2e6ac4783", null ],
       [ "reason", "db/da2/a02512.html#ab6aa685fcd8d166ac1cce0707e49d5c0", null ],
       [ "targetId", "db/da2/a02512.html#a2e54a41e95d4eb256a8a5dc9f62ecd5c", null ],
@@ -249,7 +249,7 @@ var a00891 =
       [ "defaultAutoArchiveDuration", "db/da1/a01944.html#aae3679607e9e14142cdb1f8ed143d9a3", null ],
       [ "icon", "db/da1/a01944.html#a92b115382efdcb3ed6bd6603265910e4", null ],
       [ "lastMessageId", "db/da1/a01944.html#ad724c999dbf82f743449a2fb1e132827", null ],
-      [ "lastPinTimestamp", "db/da1/a01944.html#aea077883a666dbbde68551bfcca42d5c", null ],
+      [ "lastPinTimestamp", "db/da1/a01944.html#aedd3b3fa3ceed528beead2e4de22427f", null ],
       [ "member", "db/da1/a01944.html#a429fdf8b314b6f5b316b40c64579e8b1", null ],
       [ "messageCount", "db/da1/a01944.html#a6b6d6bea1a9154525aa0c9bba83cdaa6", null ],
       [ "permissions", "db/da1/a01944.html#a9d69bf1059097e8bb5cbd76d77fd4921", null ],
@@ -280,7 +280,7 @@ var a00891 =
     [ "DiscordCoreAPI::ChannelPinsUpdateEventData", "d8/da6/a02696.html", [
       [ "channelId", "d8/da6/a02696.html#aee1073f4d7c077735b14b8392fc38513", null ],
       [ "guildId", "d8/da6/a02696.html#aacf1007121664126d01e609a22747d00", null ],
-      [ "lastPinTimestamp", "d8/da6/a02696.html#ae8918d1a17470180571b5848ed2c2cb2", null ]
+      [ "lastPinTimestamp", "d8/da6/a02696.html#a187af176c947c7b7813bd7f0a7098ffe", null ]
     ] ],
     [ "DiscordCoreAPI::ClientStatusData", "d4/db0/a02540.html", [
       [ "desktop", "d4/db0/a02540.html#ac0c8c65f79c3a31019b239fbcc0bf3b6", null ],
@@ -532,7 +532,7 @@ var a00891 =
       [ "messageId", "d6/d1a/a03208.html#a3f2315e3ef1233667aa5b7043711d86f", null ],
       [ "reason", "d6/d1a/a03208.html#aca484e348ecd108e85bee8d262115204", null ],
       [ "timeDelay", "d6/d1a/a03208.html#a26e6307fc378c23a2186558f270a51c7", null ],
-      [ "timeStamp", "d6/d1a/a03208.html#abd12fac162538c8c703ba9d0775441d8", null ]
+      [ "timeStamp", "d6/d1a/a03208.html#ae69cc3cd4f3186678998216f19b22839", null ]
     ] ],
     [ "DiscordCoreAPI::DeleteMessagesBulkData", "df/d1e/a03212.html", [
       [ "channelId", "df/d1e/a03212.html#aa2b9c3a8b77384216c59aed69125f332", null ],
@@ -1026,7 +1026,7 @@ var a00891 =
       [ "features", "dc/d81/a02568.html#ad8d566e347ea692a7c046701e90bd68b", null ],
       [ "flags", "dc/d81/a02568.html#aa78f0a58803f2012c5a8c3472284ec87", null ],
       [ "icon", "dc/d81/a02568.html#a97537278ef93760689098df60fec049a", null ],
-      [ "joinedAt", "dc/d81/a02568.html#a6821545cfc4b9c07237e1503fb236ef9", null ],
+      [ "joinedAt", "dc/d81/a02568.html#a0c05df87860ce8f411c1e328aa4f4d83", null ],
       [ "memberCount", "dc/d81/a02568.html#ad06c76300822f24840a993e25af658e9", null ],
       [ "members", "dc/d81/a02568.html#a49d5887b90cea6dc012edda96e6f1bf4", null ],
       [ "name", "dc/d81/a02568.html#a3fc39246d0ce977a2bbccf653af39a12", null ],
@@ -1039,13 +1039,13 @@ var a00891 =
     [ "DiscordCoreAPI::GuildEmojisUpdateEventData", "d9/d4a/a02772.html", null ],
     [ "DiscordCoreAPI::GuildMember", "de/dae/a03028.html", [
       [ "avatar", "de/dae/a03028.html#a17901fa917d193f3cb7fc3dac80bfc5a", null ],
-      [ "communicationDisabledUntil", "de/dae/a03028.html#af7836692a049c0a14ef270467f115f6b", null ],
+      [ "communicationDisabledUntil", "de/dae/a03028.html#a804898a15fa79b6aa5b573907bf0cc30", null ],
       [ "premiumSince", "de/dae/a03028.html#a30a2f725fa57fd25e516b3ac4e735376", null ]
     ] ],
     [ "DiscordCoreAPI::GuildMemberData", "d3/d35/a02360.html", [
       [ "flags", "d3/d35/a02360.html#af28ba751b25176839ff90bc3bef3b1f3", null ],
       [ "guildId", "d3/d35/a02360.html#a9761ad2b466f150e7214e7b9407dbc9c", null ],
-      [ "joinedAt", "d3/d35/a02360.html#a4397c30c2cdfee9ee258a98a51d13792", null ],
+      [ "joinedAt", "d3/d35/a02360.html#a1e44c985092b7a4212589d03f67c0bd0", null ],
       [ "nick", "d3/d35/a02360.html#a461e3b544c33e07b9c020f5ed6453a1c", null ],
       [ "permissions", "d3/d35/a02360.html#a6f321265b1f16e6f57ca9d9e525ade69", null ],
       [ "roles", "d3/d35/a02360.html#a1430bb5f5893791a23f7fed4efc8919b", null ],
@@ -1127,7 +1127,7 @@ var a00891 =
       [ "revoked", "d6/d90/a02492.html#ae603d62ae81d76bb65eef2fb623b6be5", null ],
       [ "roleId", "d6/d90/a02492.html#a2603aae778edf8a9a56260902937f54f", null ],
       [ "subscriberCount", "d6/d90/a02492.html#a11d306bbe270e71b92fb67e40b40ee7c", null ],
-      [ "syncedAt", "d6/d90/a02492.html#a2a56d6e3f8408854d315be5828223bab", null ],
+      [ "syncedAt", "d6/d90/a02492.html#a8d59ea7314c5029f1df3db2e11afed29", null ],
       [ "syncing", "d6/d90/a02492.html#a1d5b95af7954aab1644dbc6154f8436c", null ],
       [ "type", "d6/d90/a02492.html#a81edd55d2c02f087880cdb33889fdce2", null ],
       [ "user", "d6/d90/a02492.html#a036fc3d573dc66a9dc9fa94c4291515e", null ]
@@ -1179,8 +1179,8 @@ var a00891 =
       [ "approximatePresenceCount", "d1/df5/a02592.html#a2b0d57061dc04e95f001fd76266d4a34", null ],
       [ "channel", "d1/df5/a02592.html#ac11f4665538b3cd9a44f6f3395e96efb", null ],
       [ "code", "d1/df5/a02592.html#ac10a36fcd4f40cb3614ec512249d2e30", null ],
-      [ "createdAt", "d1/df5/a02592.html#aa974d4ad606e8fed4700beaf063400a6", null ],
-      [ "expiresAt", "d1/df5/a02592.html#aa3e7bab37160b6266bae07d1c8055a93", null ],
+      [ "createdAt", "d1/df5/a02592.html#a2cf514f5c7a92bc31d8fca84b8e3f4ed", null ],
+      [ "expiresAt", "d1/df5/a02592.html#a0d95aec5f420c6ef29637866568ef686", null ],
       [ "guild", "d1/df5/a02592.html#a77713bf6ea7cf15a0bc8e73c8ac001d5", null ],
       [ "guildId", "d1/df5/a02592.html#aa58a43d15f30c034af5468893b6b885a", null ],
       [ "guildScheduledEvent", "d1/df5/a02592.html#a0bd6811a67cd71317d8ee28ba8643c83", null ],
@@ -1231,7 +1231,7 @@ var a00891 =
       [ "channelId", "d5/d95/a02720.html#a7a89fc8a6ebbb4d9ffc672e4091f10dc", null ],
       [ "components", "d5/d95/a02720.html#aa2038daa3a09d7acbf763af6e44ad45c", null ],
       [ "content", "d5/d95/a02720.html#a792197d110b14ae201d42e1bc397e667", null ],
-      [ "editedTimestamp", "d5/d95/a02720.html#a07087dfbba404179b571bdd895cf0bb0", null ],
+      [ "editedTimestamp", "d5/d95/a02720.html#a186fa7f9b05abc6f3c641c92650a95d9", null ],
       [ "embeds", "d5/d95/a02720.html#abd1a30ef0b843ca21c8213ba20aa3f74", null ],
       [ "flags", "d5/d95/a02720.html#ae6cbbc68d31ea5d12cd6a245ab29fe7b", null ],
       [ "guildId", "d5/d95/a02720.html#a7c9c7ab4c4f43f373aaaa4a6bc111d5d", null ],
@@ -1247,7 +1247,7 @@ var a00891 =
       [ "stickerItems", "d5/d95/a02720.html#a83985a44011bb38f0bf1070cc8a36d38", null ],
       [ "stickers", "d5/d95/a02720.html#ad014440eb943f73c4ea35d19e097ac44", null ],
       [ "thread", "d5/d95/a02720.html#a540c9cb28f94c0874e37c1abf429b905", null ],
-      [ "timestamp", "d5/d95/a02720.html#ae6538ec3ee0a7594fff0a8b7ca96a77a", null ],
+      [ "timestamp", "d5/d95/a02720.html#a661b41a781e339257345b9df56d84e72", null ],
       [ "tts", "d5/d95/a02720.html#ae2208836403c83868c40fc6344acabf2", null ],
       [ "type", "d5/d95/a02720.html#a13a22c20c87c222006b463fdef06edb8", null ],
       [ "webHookId", "d5/d95/a02720.html#a324e54e684bb61ec7f669e17a9113137", null ]
@@ -1348,7 +1348,7 @@ var a00891 =
       [ "roles", "d6/d25/a03284.html#a6c9428f19af04f18efef97d2e23e4f2c", null ]
     ] ],
     [ "DiscordCoreAPI::ModifyGuildMemberData", "d0/d9d/a03016.html", [
-      [ "communicationDisabledUntil", "d0/d9d/a03016.html#a7cd632a694a3a9bc453202e3395e873b", null ],
+      [ "communicationDisabledUntil", "d0/d9d/a03016.html#ad32d0d23c0522a4e2f40e10f37d142db", null ],
       [ "currentChannelId", "d0/d9d/a03016.html#aa11a1bb78c7531c6cc4565678a8f5484", null ],
       [ "deaf", "d0/d9d/a03016.html#a614eec43af8d59f30d49db2995127a25", null ],
       [ "guildId", "d0/d9d/a03016.html#a6fd1b6931b2600ee001e0d64d95a4945", null ],
@@ -1677,7 +1677,7 @@ var a00891 =
     ] ],
     [ "DiscordCoreAPI::ThreadMemberData", "da/db4/a02348.html", [
       [ "flags", "da/db4/a02348.html#a23fd156070168661870581ccf4fd474c", null ],
-      [ "joinTimestamp", "da/db4/a02348.html#a661d399881f7bf46f8e11e2d2ddb7059", null ],
+      [ "joinTimestamp", "da/db4/a02348.html#a362b83690cf9e078719a3fec03ba4a29", null ],
       [ "userId", "da/db4/a02348.html#a75cae90131960909f48d8c179150554f", null ]
     ] ],
     [ "DiscordCoreAPI::ThreadMembersUpdateData", "d4/d9d/a02704.html", [
@@ -1688,7 +1688,7 @@ var a00891 =
     ] ],
     [ "DiscordCoreAPI::ThreadMetadataData", "d6/d71/a02344.html", [
       [ "archived", "d6/d71/a02344.html#a6143bdc2e17f7a5b57acc735b48eccd2", null ],
-      [ "archiveTimestamp", "d6/d71/a02344.html#a1db85536716a9b3506f9c9acbcdfb29b", null ],
+      [ "archiveTimestamp", "d6/d71/a02344.html#afd184cc2be32061aeeb90f789748b976", null ],
       [ "autoArchiveDuration", "d6/d71/a02344.html#a35ebac2350274c67cc8ad3948465bc0a", null ],
       [ "invitable", "d6/d71/a02344.html#a98d9bf857ebf0c3b745867f8fc3eec1a", null ],
       [ "locked", "d6/d71/a02344.html#adeff39689c4f8bd8bc3b73d71ea571ef", null ]
@@ -1758,7 +1758,7 @@ var a00891 =
       [ "guildId", "d1/d8c/a02364.html#a095f20957ac4bc602981b4a6ab7cfd8a", null ],
       [ "member", "d1/d8c/a02364.html#a87fee3f7cc630610ae038e3bc7466500", null ],
       [ "mute", "d1/d8c/a02364.html#a49601382f01d1dd8b2dc9264b68030fc", null ],
-      [ "requestToSpeakTimestamp", "d1/d8c/a02364.html#a07fcd97555da78769ce18a6fc6dbe2ca", null ],
+      [ "requestToSpeakTimestamp", "d1/d8c/a02364.html#a3e673eea4e3536fdf1e54803076cb301", null ],
       [ "selfDeaf", "d1/d8c/a02364.html#a3505e763ae5dc096954716f0e9e9c219", null ],
       [ "selfMute", "d1/d8c/a02364.html#a97a7c0d895203a74e174d26e85f8cbd3", null ],
       [ "selfStream", "d1/d8c/a02364.html#a85ee163c976302aab11153b9ceb61398", null ],

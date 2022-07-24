@@ -102,11 +102,11 @@ $(document).ready(function(){initNavTree('df/d79/a07212.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Getting Channel Messages </div></div>
+  <div class="headertitle"><div class="title">Crossposting a Message </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Message_Stuff_Getting_Channel_Messages"></a></p><ul>
-<li>Execute the, <code><a class="el" href="../../d1/dfa/a03244.html#a2ada29a2229e184e988024a152e15f67" title="Collects a collection of Message from the Discord servers.">DiscordCoreAPI::Messages::getMessagesAsync()</a></code> function, while passing in a data structure of type <code><a class="el" href="../../d0/d08/a03184.html" title="For getting a collection of Messages.">DiscordCoreAPI::GetMessagesData</a></code>, with a return value of type <code>auto</code>, or, <code>vector&lt;<a class="el" href="../../d6/d63/a03228.html" title="A single Message.">DiscordCoreAPI::Message</a>&gt;</code>.</li>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Message_Stuff_Crossposting_a_Message"></a></p><ul>
+<li>Execute the, <code><a class="el" href="../../d1/dfa/a03244.html#ac85138fd763e3e08d36fe62162f68140" title="Crossposts a message from a News Channel to the following Channels.">DiscordCoreAPI::Messages::crosspostMessageAsync()</a></code> function, while passing in a data structure of type <code><a class="el" href="../../de/d3a/a03200.html" title="For crossposting a Message.">DiscordCoreAPI::CrosspostMessageData</a></code>, with a return value of type <code>auto</code>, or, <code><a class="el" href="../../d6/d63/a03228.html" title="A single Message.">DiscordCoreAPI::Message</a></code>.</li>
 <li>Call the function with <code>.get()</code> added to the end in order to wait for its return value now.</li>
 </ul>
 <div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
@@ -137,11 +137,11 @@ $(document).ready(function(){initNavTree('df/d79/a07212.html','../../'); initRes
 <div class="line"> </div>
 <div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
 <div class="line">            <span class="keywordflow">try</span> {</div>
-<div class="line">                <a class="code hl_struct" href="../../d0/d08/a03184.html">DiscordCoreAPI::GetMessagesData</a> dataPackage;</div>
-<div class="line">                dataPackage.<a class="code hl_variable" href="../../d0/d08/a03184.html#a443ac64529d098a7cfd1a4fcf02dbb8e">channelId</a> = args.eventData.<a class="code hl_function" href="../../d0/d5a/a02784.html#a97c397fe274250bfff73cf674810a8f5">getChannelId</a>();</div>
-<div class="line">                dataPackage.<a class="code hl_variable" href="../../d0/d08/a03184.html#ac20a1b00495500db5465171c90c8a4fe">afterThisId</a> = args.eventData.<a class="code hl_function" href="../../d0/d5a/a02784.html#af7be2b81b312794ea5398591d1a7e305">getMessageId</a>();</div>
+<div class="line">                <a class="code hl_struct" href="../../de/d3a/a03200.html">DiscordCoreAPI::CrosspostMessageData</a> dataPackage;</div>
+<div class="line">                dataPackage.<a class="code hl_variable" href="../../de/d3a/a03200.html#aec30919c478c1bbe12edaba531e7d396">channelId</a> = args.eventData.<a class="code hl_function" href="../../d0/d5a/a02784.html#a97c397fe274250bfff73cf674810a8f5">getChannelId</a>();</div>
+<div class="line">                dataPackage.<a class="code hl_variable" href="../../de/d3a/a03200.html#a91ab102eeecd12047cc107c9d17320a8">messageId</a> = args.eventData.<a class="code hl_function" href="../../d0/d5a/a02784.html#af7be2b81b312794ea5398591d1a7e305">getMessageId</a>();</div>
 <div class="line"> </div>
-<div class="line">                <span class="keyword">auto</span> responseMessages = <a class="code hl_function" href="../../d1/dfa/a03244.html#a2ada29a2229e184e988024a152e15f67">DiscordCoreAPI::Messages::getMessagesAsync</a>(dataPackage).get();</div>
+<div class="line">                <a class="code hl_class" href="../../d6/d63/a03228.html">DiscordCoreAPI::Message</a> responseMessages = <a class="code hl_function" href="../../d1/dfa/a03244.html#ac85138fd763e3e08d36fe62162f68140">DiscordCoreAPI::Messages::crosspostMessageAsync</a>(dataPackage).get();</div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line">            } <span class="keywordflow">catch</span> (...) {</div>
@@ -161,10 +161,11 @@ $(document).ready(function(){initNavTree('df/d79/a07212.html','../../'); initRes
 <div class="ttc" id="aa02784_html_af7be2b81b312794ea5398591d1a7e305"><div class="ttname"><a href="../../d0/d5a/a02784.html#af7be2b81b312794ea5398591d1a7e305">DiscordCoreAPI::InputEventData::getMessageId</a></div><div class="ttdeci">Snowflake getMessageId()</div><div class="ttdoc">Returns the Message id, if applicable, of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01647">FoundationEntities.cpp:1647</a></div></div>
 <div class="ttc" id="aa02836_html"><div class="ttname"><a href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03795">FoundationEntities.hpp:3795</a></div></div>
 <div class="ttc" id="aa02840_html"><div class="ttname"><a href="../../d9/d4d/a02840.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03806">FoundationEntities.hpp:3806</a></div></div>
-<div class="ttc" id="aa03184_html"><div class="ttname"><a href="../../d0/d08/a03184.html">DiscordCoreAPI::GetMessagesData</a></div><div class="ttdoc">For getting a collection of Messages.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5b/a00695_source.html#l00033">MessageEntities.hpp:33</a></div></div>
-<div class="ttc" id="aa03184_html_a443ac64529d098a7cfd1a4fcf02dbb8e"><div class="ttname"><a href="../../d0/d08/a03184.html#a443ac64529d098a7cfd1a4fcf02dbb8e">DiscordCoreAPI::GetMessagesData::channelId</a></div><div class="ttdeci">Snowflake channelId</div><div class="ttdoc">Channel from which to collect the Messages.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5b/a00695_source.html#l00037">MessageEntities.hpp:37</a></div></div>
-<div class="ttc" id="aa03184_html_ac20a1b00495500db5465171c90c8a4fe"><div class="ttname"><a href="../../d0/d08/a03184.html#ac20a1b00495500db5465171c90c8a4fe">DiscordCoreAPI::GetMessagesData::afterThisId</a></div><div class="ttdeci">Snowflake afterThisId</div><div class="ttdoc">After this id.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5b/a00695_source.html#l00036">MessageEntities.hpp:36</a></div></div>
-<div class="ttc" id="aa03244_html_a2ada29a2229e184e988024a152e15f67"><div class="ttname"><a href="../../d1/dfa/a03244.html#a2ada29a2229e184e988024a152e15f67">DiscordCoreAPI::Messages::getMessagesAsync</a></div><div class="ttdeci">static CoRoutine&lt; std::vector&lt; Message &gt; &gt; getMessagesAsync(GetMessagesData dataPackage)</div><div class="ttdoc">Collects a collection of Message from the Discord servers.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/a00869_source.html#l00207">MessageEntities.cpp:207</a></div></div>
+<div class="ttc" id="aa03200_html"><div class="ttname"><a href="../../de/d3a/a03200.html">DiscordCoreAPI::CrosspostMessageData</a></div><div class="ttdoc">For crossposting a Message.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5b/a00695_source.html#l00083">MessageEntities.hpp:83</a></div></div>
+<div class="ttc" id="aa03200_html_a91ab102eeecd12047cc107c9d17320a8"><div class="ttname"><a href="../../de/d3a/a03200.html#a91ab102eeecd12047cc107c9d17320a8">DiscordCoreAPI::CrosspostMessageData::messageId</a></div><div class="ttdeci">Snowflake messageId</div><div class="ttdoc">Id of the message to be crossposted.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5b/a00695_source.html#l00084">MessageEntities.hpp:84</a></div></div>
+<div class="ttc" id="aa03200_html_aec30919c478c1bbe12edaba531e7d396"><div class="ttname"><a href="../../de/d3a/a03200.html#aec30919c478c1bbe12edaba531e7d396">DiscordCoreAPI::CrosspostMessageData::channelId</a></div><div class="ttdeci">Snowflake channelId</div><div class="ttdoc">Channel within which to crosspost the Message from.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5b/a00695_source.html#l00085">MessageEntities.hpp:85</a></div></div>
+<div class="ttc" id="aa03228_html"><div class="ttname"><a href="../../d6/d63/a03228.html">DiscordCoreAPI::Message</a></div><div class="ttdoc">A single Message.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5b/a00695_source.html#l00148">MessageEntities.hpp:148</a></div></div>
+<div class="ttc" id="aa03244_html_ac85138fd763e3e08d36fe62162f68140"><div class="ttname"><a href="../../d1/dfa/a03244.html#ac85138fd763e3e08d36fe62162f68140">DiscordCoreAPI::Messages::crosspostMessageAsync</a></div><div class="ttdeci">static CoRoutine&lt; Message &gt; crosspostMessageAsync(CrosspostMessageData dataPackage)</div><div class="ttdoc">Crossposts a message from a News Channel to the following Channels.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/a00869_source.html#l00270">MessageEntities.cpp:270</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -172,7 +173,7 @@ $(document).ready(function(){initNavTree('df/d79/a07212.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d5/d78/a07054.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d5/db4/a07070.html">Message Stuff</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dd/d67/a07058.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d5/d31/a07074.html">Message Stuff</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

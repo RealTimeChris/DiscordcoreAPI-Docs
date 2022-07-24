@@ -102,11 +102,11 @@ $(document).ready(function(){initNavTree('d2/da4/a07230.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Getting Guild Roles </div></div>
+  <div class="headertitle"><div class="title">Modifying a Guild Emoji </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Role_Stuff_Getting_Guild_Roles"></a></p><ul>
-<li>Execute the, <code><a class="el" href="../../d2/d66/a03352.html#a754076febb3e97b056fcbd2801646f5b" title="Collects the Roles that a Guild has.">DiscordCoreAPI::Roles::getGuildRolesAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../dc/de8/a03312.html" title="For getting a chosen Guild&#39;s Roles.">DiscordCoreAPI::GetGuildRolesData</a></code>, with a return value of type <code>auto</code> or <code>vector&lt;<a class="el" href="../../da/dcf/a03344.html" title="A single Role.">DiscordCoreAPI::Role</a>&gt;</code>.</li>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Reaction_Stuff_Modifying_a_Guild_Emoji"></a></p><ul>
+<li>Execute the, <code><a class="el" href="../../d0/d7c/a03300.html#abbd45263fa54325fa562a90f9bf09415" title="Modifies a single Guild Emoji within a chosen Guild.">DiscordCoreAPI::Reactions::modifyGuildEmojiAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../d6/d25/a03284.html" title="For modifying a Guild Emoji.">DiscordCoreAPI::ModifyGuildEmojiData</a></code>, with a return value of type <code>auto</code> or <code><a class="el" href="../../d1/da0/a02416.html" title="Data structure representing a single emoji.">DiscordCoreAPI::EmojiData</a></code>.</li>
 <li>Call the function with <code>.get()</code> added to the end in order to wait for the results now.</li>
 </ul>
 <div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
@@ -131,20 +131,25 @@ $(document).ready(function(){initNavTree('d2/da4/a07230.html','../../'); initRes
 <div class="line">            this-&gt;helpEmbed = msgEmbed;</div>
 <div class="line">        }</div>
 <div class="line"> </div>
-<div class="line">        unique_ptr&lt;DiscordCoreAPI::BaseFunction&gt; create() {</div>
+<div class="line">        std::unique_ptr&lt;DiscordCoreAPI::BaseFunction&gt; create() {</div>
 <div class="line">            <span class="keywordflow">return</span> std::make_unique&lt;Test&gt;();</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
 <div class="line">            <span class="keywordflow">try</span> {</div>
-<div class="line">                <a class="code hl_struct" href="../../dc/de8/a03312.html">DiscordCoreAPI::GetGuildRolesData</a> dataPackage01;</div>
-<div class="line">                dataPackage01.<a class="code hl_variable" href="../../dc/de8/a03312.html#a048010a5755a795568c27327df6d4cc8">guildId</a> = args.eventData.<a class="code hl_function" href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
+<div class="line">                <a class="code hl_struct" href="../../d4/d1c/a03272.html">DiscordCoreAPI::GetEmojiListData</a> dataPackage00 { };</div>
+<div class="line">                dataPackage00.<a class="code hl_variable" href="../../d4/d1c/a03272.html#a23e39f1bd638ef628d1ec5b761b38edc">guildId</a> = args.eventData.<a class="code hl_function" href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
 <div class="line"> </div>
-<div class="line">                <span class="keyword">auto</span> rolesVector = <a class="code hl_function" href="../../d2/d66/a03352.html#a754076febb3e97b056fcbd2801646f5b">DiscordCoreAPI::Roles::getGuildRolesAsync</a>(dataPackage01).get();</div>
+<div class="line">                <span class="keyword">auto</span> emojiList = <a class="code hl_function" href="../../d0/d7c/a03300.html#a28f52b0146fdd2dc6641bcd4c299a7ce">DiscordCoreAPI::Reactions::getEmojiListAsync</a>(dataPackage00).get();</div>
 <div class="line"> </div>
-<div class="line">                <span class="keywordflow">for</span> (<span class="keyword">auto</span> value: rolesVector) {</div>
-<div class="line">                    cout &lt;&lt; <span class="stringliteral">&quot;ROLE NAME: &quot;</span> &lt;&lt; value.name &lt;&lt; endl;</div>
-<div class="line">                }</div>
+<div class="line">                <a class="code hl_struct" href="../../d6/d25/a03284.html">DiscordCoreAPI::ModifyGuildEmojiData</a> dataPackage;</div>
+<div class="line">                dataPackage.<a class="code hl_variable" href="../../d6/d25/a03284.html#ad40f46c763a2c983ae100906d7e622ac">guildId</a> = args.eventData.<a class="code hl_function" href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
+<div class="line">                dataPackage.<a class="code hl_variable" href="../../d6/d25/a03284.html#aab3289bad99454e7d2c1ea4fc7508d4c">emojiId</a> = emojiList[0].id;</div>
+<div class="line">                dataPackage.<a class="code hl_variable" href="../../d6/d25/a03284.html#aeb130ce60e601b32d46dbc8ac8adc64f">reason</a> = <span class="stringliteral">&quot;TESTING PURPOSES&quot;</span>;</div>
+<div class="line">                dataPackage.<a class="code hl_variable" href="../../d6/d25/a03284.html#ab42476e605605ad94cfae4c1ef0cd400">name</a> = <span class="stringliteral">&quot;TESTEMOJI&quot;</span>;</div>
+<div class="line">                <span class="keyword">auto</span> emoji = <a class="code hl_function" href="../../d0/d7c/a03300.html#abbd45263fa54325fa562a90f9bf09415">DiscordCoreAPI::Reactions::modifyGuildEmojiAsync</a>(dataPackage).get();</div>
+<div class="line"> </div>
+<div class="line">                cout &lt;&lt; <span class="stringliteral">&quot;THE NAME: &quot;</span> &lt;&lt; emoji.name &lt;&lt; endl;</div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line">            } <span class="keywordflow">catch</span> (...) {</div>
@@ -163,9 +168,15 @@ $(document).ready(function(){initNavTree('d2/da4/a07230.html','../../'); initRes
 <div class="ttc" id="aa02784_html_a565fe2447237030a716f64b2599996dd"><div class="ttname"><a href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">DiscordCoreAPI::InputEventData::getGuildId</a></div><div class="ttdeci">Snowflake getGuildId()</div><div class="ttdoc">Returns the Guild id, of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01643">FoundationEntities.cpp:1643</a></div></div>
 <div class="ttc" id="aa02836_html"><div class="ttname"><a href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03795">FoundationEntities.hpp:3795</a></div></div>
 <div class="ttc" id="aa02840_html"><div class="ttname"><a href="../../d9/d4d/a02840.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03806">FoundationEntities.hpp:3806</a></div></div>
-<div class="ttc" id="aa03312_html"><div class="ttname"><a href="../../dc/de8/a03312.html">DiscordCoreAPI::GetGuildRolesData</a></div><div class="ttdoc">For getting a chosen Guild's Roles.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d2c/a00764_source.html#l00050">RoleEntities.hpp:50</a></div></div>
-<div class="ttc" id="aa03312_html_a048010a5755a795568c27327df6d4cc8"><div class="ttname"><a href="../../dc/de8/a03312.html#a048010a5755a795568c27327df6d4cc8">DiscordCoreAPI::GetGuildRolesData::guildId</a></div><div class="ttdeci">Snowflake guildId</div><div class="ttdoc">Guild id for which Guild to get the roles from.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d2c/a00764_source.html#l00051">RoleEntities.hpp:51</a></div></div>
-<div class="ttc" id="aa03352_html_a754076febb3e97b056fcbd2801646f5b"><div class="ttname"><a href="../../d2/d66/a03352.html#a754076febb3e97b056fcbd2801646f5b">DiscordCoreAPI::Roles::getGuildRolesAsync</a></div><div class="ttdeci">static CoRoutine&lt; std::vector&lt; Role &gt; &gt; getGuildRolesAsync(GetGuildRolesData dataPackage)</div><div class="ttdoc">Collects the Roles that a Guild has.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d13/a00836_source.html#l00163">RoleEntities.cpp:163</a></div></div>
+<div class="ttc" id="aa03272_html"><div class="ttname"><a href="../../d4/d1c/a03272.html">DiscordCoreAPI::GetEmojiListData</a></div><div class="ttdoc">For collecting a list of Emoji from a Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d77/a00683_source.html#l00080">ReactionEntities.hpp:80</a></div></div>
+<div class="ttc" id="aa03272_html_a23e39f1bd638ef628d1ec5b761b38edc"><div class="ttname"><a href="../../d4/d1c/a03272.html#a23e39f1bd638ef628d1ec5b761b38edc">DiscordCoreAPI::GetEmojiListData::guildId</a></div><div class="ttdeci">Snowflake guildId</div><div class="ttdoc">The id of the chosen Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d77/a00683_source.html#l00081">ReactionEntities.hpp:81</a></div></div>
+<div class="ttc" id="aa03284_html"><div class="ttname"><a href="../../d6/d25/a03284.html">DiscordCoreAPI::ModifyGuildEmojiData</a></div><div class="ttdoc">For modifying a Guild Emoji.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d77/a00683_source.html#l00114">ReactionEntities.hpp:114</a></div></div>
+<div class="ttc" id="aa03284_html_aab3289bad99454e7d2c1ea4fc7508d4c"><div class="ttname"><a href="../../d6/d25/a03284.html#aab3289bad99454e7d2c1ea4fc7508d4c">DiscordCoreAPI::ModifyGuildEmojiData::emojiId</a></div><div class="ttdeci">Snowflake emojiId</div><div class="ttdoc">The id of the Emoji to modify.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d77/a00683_source.html#l00117">ReactionEntities.hpp:117</a></div></div>
+<div class="ttc" id="aa03284_html_ab42476e605605ad94cfae4c1ef0cd400"><div class="ttname"><a href="../../d6/d25/a03284.html#ab42476e605605ad94cfae4c1ef0cd400">DiscordCoreAPI::ModifyGuildEmojiData::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">Name of the Emoji.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d77/a00683_source.html#l00119">ReactionEntities.hpp:119</a></div></div>
+<div class="ttc" id="aa03284_html_ad40f46c763a2c983ae100906d7e622ac"><div class="ttname"><a href="../../d6/d25/a03284.html#ad40f46c763a2c983ae100906d7e622ac">DiscordCoreAPI::ModifyGuildEmojiData::guildId</a></div><div class="ttdeci">Snowflake guildId</div><div class="ttdoc">The Guild within which to modify the Emoji.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d77/a00683_source.html#l00116">ReactionEntities.hpp:116</a></div></div>
+<div class="ttc" id="aa03284_html_aeb130ce60e601b32d46dbc8ac8adc64f"><div class="ttname"><a href="../../d6/d25/a03284.html#aeb130ce60e601b32d46dbc8ac8adc64f">DiscordCoreAPI::ModifyGuildEmojiData::reason</a></div><div class="ttdeci">std::string reason</div><div class="ttdoc">Reason for modifying the Emoji.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d77/a00683_source.html#l00118">ReactionEntities.hpp:118</a></div></div>
+<div class="ttc" id="aa03300_html_a28f52b0146fdd2dc6641bcd4c299a7ce"><div class="ttname"><a href="../../d0/d7c/a03300.html#a28f52b0146fdd2dc6641bcd4c299a7ce">DiscordCoreAPI::Reactions::getEmojiListAsync</a></div><div class="ttdeci">static CoRoutine&lt; EmojiDataVector &gt; getEmojiListAsync(GetEmojiListData dataPackage)</div><div class="ttdoc">Collects a list of Guild Emoji from a chosen Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d00/a00785_source.html#l00167">ReactionEntities.cpp:167</a></div></div>
+<div class="ttc" id="aa03300_html_abbd45263fa54325fa562a90f9bf09415"><div class="ttname"><a href="../../d0/d7c/a03300.html#abbd45263fa54325fa562a90f9bf09415">DiscordCoreAPI::Reactions::modifyGuildEmojiAsync</a></div><div class="ttdeci">static CoRoutine&lt; EmojiData &gt; modifyGuildEmojiAsync(ModifyGuildEmojiData dataPackage)</div><div class="ttdoc">Modifies a single Guild Emoji within a chosen Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d00/a00785_source.html#l00222">ReactionEntities.cpp:222</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -173,7 +184,7 @@ $(document).ready(function(){initNavTree('d2/da4/a07230.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d5/d78/a07054.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../df/d27/a07072.html">Role Stuff</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dd/d67/a07058.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../dd/d15/a07075.html">Reaction Stuff</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

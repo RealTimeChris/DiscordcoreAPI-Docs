@@ -102,11 +102,11 @@ $(document).ready(function(){initNavTree('db/d5a/a07241.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Getting a List of Guild Stickers </div></div>
+  <div class="headertitle"><div class="title">Getting a Stage Instance </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Sticker_Stuff_Getting_a_List_of_Guild_Stickers"></a></p><ul>
-<li>Execute the, <code><a class="el" href="../../db/db5/a03468.html#a675b23a029eb81186f48f4399d9543c5" title="Gets a list of Stickers from a Guild.">DiscordCoreAPI::Stickers::getGuildStickersAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../dd/ddc/a03444.html" title="For collecting a list of Stickers from a chosen Guild.">DiscordCoreAPI::GetGuildStickersData</a></code>, with a return value of type <code>auto</code> or <code>vector&lt;<a class="el" href="../../dc/d18/a03460.html" title="A single Sticker.">DiscordCoreAPI::Sticker</a>&gt;</code>.</li>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Stage_Instance_Stuff_Getting_a_Stage_Instance"></a></p><ul>
+<li>Execute the, <code><a class="el" href="../../d4/d87/a03436.html#a26cd124cec9c5547f35208c2a2d21e16" title="Collects a StageInstance.">DiscordCoreAPI::StageInstances::getStageInstanceAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../d1/d8b/a03420.html" title="For collecting a single StageInstance.">DiscordCoreAPI::GetStageInstanceData</a></code>, with a return value of type <code>auto</code> or <code><a class="el" href="../../de/df8/a03432.html" title="A single StageInstance.">DiscordCoreAPI::StageInstance</a></code>.</li>
 <li>Call the function with <code>.get()</code> added to the end in order to wait for the results now.</li>
 </ul>
 <div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
@@ -131,28 +131,24 @@ $(document).ready(function(){initNavTree('db/d5a/a07241.html','../../'); initRes
 <div class="line">            this-&gt;helpEmbed = msgEmbed;</div>
 <div class="line">        }</div>
 <div class="line"> </div>
-<div class="line">        std::unique_ptr&lt;DiscordCoreAPI::BaseFunction&gt; create() {</div>
+<div class="line">        unique_ptr&lt;DiscordCoreAPI::BaseFunction&gt; create() {</div>
 <div class="line">            <span class="keywordflow">return</span> std::make_unique&lt;Test&gt;();</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
 <div class="line">            <span class="keywordflow">try</span> {</div>
-<div class="line">                <a class="code hl_struct" href="../../dd/ddc/a03444.html">DiscordCoreAPI::GetGuildStickersData</a> dataPackage;</div>
-<div class="line">                dataPackage.<a class="code hl_variable" href="../../dd/ddc/a03444.html#a680f542db50d56db9406a631541cde4d">guildId</a> = args.eventData.<a class="code hl_function" href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
+<div class="line">                <a class="code hl_struct" href="../../d1/d8b/a03420.html">DiscordCoreAPI::GetStageInstanceData</a> dataPackage;</div>
+<div class="line">                dataPackage.<a class="code hl_variable" href="../../d1/d8b/a03420.html#a1768fc5e4e03290ac39d10542733d9aa">channelId</a> = <span class="stringliteral">&quot;914726178022101052&quot;</span>;</div>
 <div class="line"> </div>
-<div class="line">                <span class="keyword">auto</span> responseData = <a class="code hl_function" href="../../db/db5/a03468.html#a675b23a029eb81186f48f4399d9543c5">DiscordCoreAPI::Stickers::getGuildStickersAsync</a>(dataPackage).get();</div>
+<div class="line">                <span class="keyword">auto</span> responseData = <a class="code hl_function" href="../../d4/d87/a03436.html#a26cd124cec9c5547f35208c2a2d21e16">DiscordCoreAPI::StageInstances::getStageInstanceAsync</a>(dataPackage).get();</div>
 <div class="line"> </div>
-<div class="line">                <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; value: responseData) {</div>
-<div class="line">                    cout &lt;&lt; <span class="stringliteral">&quot;THE NAME: &quot;</span> &lt;&lt; value.name &lt;&lt; endl;</div>
-<div class="line">                }</div>
+<div class="line">                cout &lt;&lt; <span class="stringliteral">&quot;THE TOPIC: &quot;</span> &lt;&lt; responseData.topic &lt;&lt; endl;</div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line">            } <span class="keywordflow">catch</span> (...) {</div>
 <div class="line">                rethrowException(<span class="stringliteral">&quot;Test::execute()&quot;</span>);</div>
 <div class="line">            }</div>
 <div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">        <span class="keyword">virtual</span> ~Test() = <span class="keywordflow">default</span>;</div>
 <div class="line">    };</div>
 <div class="line">}</div>
 <div class="ttc" id="aa00749_html"><div class="ttname"><a href="../../d5/de8/a00749.html">Index.hpp</a></div></div>
@@ -162,12 +158,11 @@ $(document).ready(function(){initNavTree('db/d5a/a07241.html','../../'); initRes
 <div class="ttc" id="aa02332_html_a9d4066a4861408bc00eccb22a12db7f9"><div class="ttname"><a href="../../d1/d03/a02332.html#a9d4066a4861408bc00eccb22a12db7f9">DiscordCoreAPI::EmbedData::setDescription</a></div><div class="ttdeci">EmbedData &amp; setDescription(const std::string &amp;descriptionNew)</div><div class="ttdoc">Sets the description (the main contents) of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00379">FoundationEntities.cpp:379</a></div></div>
 <div class="ttc" id="aa02332_html_ab417d83fddf9df80eca98e9ec6e888aa"><div class="ttname"><a href="../../d1/d03/a02332.html#ab417d83fddf9df80eca98e9ec6e888aa">DiscordCoreAPI::EmbedData::setColor</a></div><div class="ttdeci">EmbedData &amp; setColor(const std::string &amp;hexColorValueNew)</div><div class="ttdoc">Sets the color of the embed, by applying a hex-color value.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00384">FoundationEntities.cpp:384</a></div></div>
 <div class="ttc" id="aa02332_html_ae356e6dc3c93658b7228b56da3187896"><div class="ttname"><a href="../../d1/d03/a02332.html#ae356e6dc3c93658b7228b56da3187896">DiscordCoreAPI::EmbedData::setTimeStamp</a></div><div class="ttdeci">EmbedData &amp; setTimeStamp(const std::string &amp;timeStamp)</div><div class="ttdoc">Sets the timestamp on the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00365">FoundationEntities.cpp:365</a></div></div>
-<div class="ttc" id="aa02784_html_a565fe2447237030a716f64b2599996dd"><div class="ttname"><a href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">DiscordCoreAPI::InputEventData::getGuildId</a></div><div class="ttdeci">Snowflake getGuildId()</div><div class="ttdoc">Returns the Guild id, of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01643">FoundationEntities.cpp:1643</a></div></div>
 <div class="ttc" id="aa02836_html"><div class="ttname"><a href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03795">FoundationEntities.hpp:3795</a></div></div>
 <div class="ttc" id="aa02840_html"><div class="ttname"><a href="../../d9/d4d/a02840.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03806">FoundationEntities.hpp:3806</a></div></div>
-<div class="ttc" id="aa03444_html"><div class="ttname"><a href="../../dd/ddc/a03444.html">DiscordCoreAPI::GetGuildStickersData</a></div><div class="ttdoc">For collecting a list of Stickers from a chosen Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db6/a00692_source.html#l00037">StickerEntities.hpp:37</a></div></div>
-<div class="ttc" id="aa03444_html_a680f542db50d56db9406a631541cde4d"><div class="ttname"><a href="../../dd/ddc/a03444.html#a680f542db50d56db9406a631541cde4d">DiscordCoreAPI::GetGuildStickersData::guildId</a></div><div class="ttdeci">Snowflake guildId</div><div class="ttdoc">The chosen Guild from which you would like to collect the Stickers from.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db6/a00692_source.html#l00038">StickerEntities.hpp:38</a></div></div>
-<div class="ttc" id="aa03468_html_a675b23a029eb81186f48f4399d9543c5"><div class="ttname"><a href="../../db/db5/a03468.html#a675b23a029eb81186f48f4399d9543c5">DiscordCoreAPI::Stickers::getGuildStickersAsync</a></div><div class="ttdeci">static CoRoutine&lt; std::vector&lt; Sticker &gt; &gt; getGuildStickersAsync(GetGuildStickersData dataPackage)</div><div class="ttdoc">Gets a list of Stickers from a Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d0e/a00800_source.html#l00069">StickerEntities.cpp:69</a></div></div>
+<div class="ttc" id="aa03420_html"><div class="ttname"><a href="../../d1/d8b/a03420.html">DiscordCoreAPI::GetStageInstanceData</a></div><div class="ttdoc">For collecting a single StageInstance.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d04/a00713_source.html#l00036">StageInstanceEntities.hpp:36</a></div></div>
+<div class="ttc" id="aa03420_html_a1768fc5e4e03290ac39d10542733d9aa"><div class="ttname"><a href="../../d1/d8b/a03420.html#a1768fc5e4e03290ac39d10542733d9aa">DiscordCoreAPI::GetStageInstanceData::channelId</a></div><div class="ttdeci">Snowflake channelId</div><div class="ttdoc">The Channel id from which you would like to collect the StageInstance.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d04/a00713_source.html#l00037">StageInstanceEntities.hpp:37</a></div></div>
+<div class="ttc" id="aa03436_html_a26cd124cec9c5547f35208c2a2d21e16"><div class="ttname"><a href="../../d4/d87/a03436.html#a26cd124cec9c5547f35208c2a2d21e16">DiscordCoreAPI::StageInstances::getStageInstanceAsync</a></div><div class="ttdeci">static CoRoutine&lt; StageInstance &gt; getStageInstanceAsync(GetStageInstanceData dataPackage)</div><div class="ttdoc">Collects a StageInstance.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/db2/a00866_source.html#l00052">StageInstanceEntities.cpp:52</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -175,7 +170,7 @@ $(document).ready(function(){initNavTree('db/d5a/a07241.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d5/d78/a07054.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d5/d31/a07074.html">Sticker Stuff</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dd/d67/a07058.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d9/d8e/a07077.html">Stage-Instance Stuff</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

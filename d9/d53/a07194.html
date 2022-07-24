@@ -102,11 +102,11 @@ $(document).ready(function(){initNavTree('d9/d53/a07194.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Searching Guild Members </div></div>
+  <div class="headertitle"><div class="title">Listing Guild Members </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Guild_Member_Stuff_Searching_Guild_Members"></a></p><ul>
-<li>Execute the, <code><a class="el" href="../../d5/d7f/a03036.html#a00b43621204ad484c198a5b0079a5bf5" title="Searches for a list of GuildMembers of a chosen Guild.">DiscordCoreAPI::GuildMembers::searchGuildMembersAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../da/d96/a03004.html" title="For searching for one or more GuildMembers within a chosen Guild.">DiscordCoreAPI::SearchGuildMembersData</a></code>, with a return value of type <code>auto</code> or <code>vector&lt;<a class="el" href="../../de/dae/a03028.html" title="A single GuildMember.">DiscordCoreAPI::GuildMember</a>&gt;</code>.</li>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Guild_Member_Stuff_Listing_Guild_Members"></a></p><ul>
+<li>Execute the, <code><a class="el" href="../../d5/d7f/a03036.html#a12a2c7ea1b19c2fae7dcbd660b0b3d17" title="Lists all of the GuildMembers of a chosen Guild.">DiscordCoreAPI::GuildMembers::listGuildMembersAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../dd/d6f/a03000.html" title="For listing the GuildMembers of a chosen Guild.">DiscordCoreAPI::ListGuildMembersData</a></code>, with a return value of type <code>auto</code> or <code>std::vector&lt;<a class="el" href="../../de/dae/a03028.html" title="A single GuildMember.">DiscordCoreAPI::GuildMember</a>&gt;</code>.</li>
 <li>Call the function with <code>.get()</code> added to the end in order to wait for the results now.</li>
 </ul>
 <div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
@@ -137,12 +137,11 @@ $(document).ready(function(){initNavTree('d9/d53/a07194.html','../../'); initRes
 <div class="line"> </div>
 <div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
 <div class="line">            <span class="keywordflow">try</span> {</div>
-<div class="line">                <a class="code hl_struct" href="../../da/d96/a03004.html">DiscordCoreAPI::SearchGuildMembersData</a> dataPackage;</div>
-<div class="line">                dataPackage.<a class="code hl_variable" href="../../da/d96/a03004.html#a27ad7a650d95f95c5d3c6e0076ff15ef">guildId</a> = args.eventData.<a class="code hl_function" href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
-<div class="line">                dataPackage.<a class="code hl_variable" href="../../da/d96/a03004.html#aa17090741c15d80bbcc8cd632162e508">limit</a> = 20;</div>
-<div class="line">                dataPackage.<a class="code hl_variable" href="../../da/d96/a03004.html#ad2e5409b798665640e2275cb71c70841">query</a> = <span class="stringliteral">&quot;Real&quot;</span>;</div>
+<div class="line">                <a class="code hl_struct" href="../../dd/d6f/a03000.html">DiscordCoreAPI::ListGuildMembersData</a> dataPackage;</div>
+<div class="line">                dataPackage.<a class="code hl_variable" href="../../dd/d6f/a03000.html#abeebaa77717fb1bf19ab3889c3fe3f50">guildId</a> = args.eventData.<a class="code hl_function" href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
+<div class="line">                dataPackage.<a class="code hl_variable" href="../../dd/d6f/a03000.html#a4ba5daf6f91db54266d91115c1e4b620">limit</a> = 20;</div>
 <div class="line"> </div>
-<div class="line">                <span class="keyword">auto</span> guildMembers = <a class="code hl_function" href="../../d5/d7f/a03036.html#a00b43621204ad484c198a5b0079a5bf5">DiscordCoreAPI::GuildMembers::searchGuildMembersAsync</a>(dataPackage).get();</div>
+<div class="line">                <span class="keyword">auto</span> guildMembers = <a class="code hl_function" href="../../d5/d7f/a03036.html#a12a2c7ea1b19c2fae7dcbd660b0b3d17">DiscordCoreAPI::GuildMembers::listGuildMembersAsync</a>(dataPackage).get();</div>
 <div class="line"> </div>
 <div class="line">                <span class="keywordflow">for</span> (<span class="keyword">auto</span> value: guildMembers) {</div>
 <div class="line">                    cout &lt;&lt; <span class="stringliteral">&quot;THE NAME: &quot;</span> &lt;&lt; value.user.userName &lt;&lt; endl;</div>
@@ -165,11 +164,10 @@ $(document).ready(function(){initNavTree('d9/d53/a07194.html','../../'); initRes
 <div class="ttc" id="aa02784_html_a565fe2447237030a716f64b2599996dd"><div class="ttname"><a href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">DiscordCoreAPI::InputEventData::getGuildId</a></div><div class="ttdeci">Snowflake getGuildId()</div><div class="ttdoc">Returns the Guild id, of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01643">FoundationEntities.cpp:1643</a></div></div>
 <div class="ttc" id="aa02836_html"><div class="ttname"><a href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03795">FoundationEntities.hpp:3795</a></div></div>
 <div class="ttc" id="aa02840_html"><div class="ttname"><a href="../../d9/d4d/a02840.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03806">FoundationEntities.hpp:3806</a></div></div>
-<div class="ttc" id="aa03004_html"><div class="ttname"><a href="../../da/d96/a03004.html">DiscordCoreAPI::SearchGuildMembersData</a></div><div class="ttdoc">For searching for one or more GuildMembers within a chosen Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d5c/a00752_source.html#l00047">GuildMemberEntities.hpp:47</a></div></div>
-<div class="ttc" id="aa03004_html_a27ad7a650d95f95c5d3c6e0076ff15ef"><div class="ttname"><a href="../../da/d96/a03004.html#a27ad7a650d95f95c5d3c6e0076ff15ef">DiscordCoreAPI::SearchGuildMembersData::guildId</a></div><div class="ttdeci">Snowflake guildId</div><div class="ttdoc">Guild within which to search for the GuildMembers.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d5c/a00752_source.html#l00048">GuildMemberEntities.hpp:48</a></div></div>
-<div class="ttc" id="aa03004_html_aa17090741c15d80bbcc8cd632162e508"><div class="ttname"><a href="../../da/d96/a03004.html#aa17090741c15d80bbcc8cd632162e508">DiscordCoreAPI::SearchGuildMembersData::limit</a></div><div class="ttdeci">int32_t limit</div><div class="ttdoc">Max number of members to return (1 - 1000).</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d5c/a00752_source.html#l00050">GuildMemberEntities.hpp:50</a></div></div>
-<div class="ttc" id="aa03004_html_ad2e5409b798665640e2275cb71c70841"><div class="ttname"><a href="../../da/d96/a03004.html#ad2e5409b798665640e2275cb71c70841">DiscordCoreAPI::SearchGuildMembersData::query</a></div><div class="ttdeci">std::string query</div><div class="ttdoc">Query std::string to match userName(s) and nickname(s) against.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d5c/a00752_source.html#l00049">GuildMemberEntities.hpp:49</a></div></div>
-<div class="ttc" id="aa03036_html_a00b43621204ad484c198a5b0079a5bf5"><div class="ttname"><a href="../../d5/d7f/a03036.html#a00b43621204ad484c198a5b0079a5bf5">DiscordCoreAPI::GuildMembers::searchGuildMembersAsync</a></div><div class="ttdeci">static CoRoutine&lt; std::vector&lt; GuildMember &gt; &gt; searchGuildMembersAsync(SearchGuildMembersData dataPackage)</div><div class="ttdoc">Searches for a list of GuildMembers of a chosen Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/de8/a00839_source.html#l00171">GuildMemberEntities.cpp:171</a></div></div>
+<div class="ttc" id="aa03000_html"><div class="ttname"><a href="../../dd/d6f/a03000.html">DiscordCoreAPI::ListGuildMembersData</a></div><div class="ttdoc">For listing the GuildMembers of a chosen Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d5c/a00752_source.html#l00040">GuildMemberEntities.hpp:40</a></div></div>
+<div class="ttc" id="aa03000_html_a4ba5daf6f91db54266d91115c1e4b620"><div class="ttname"><a href="../../dd/d6f/a03000.html#a4ba5daf6f91db54266d91115c1e4b620">DiscordCoreAPI::ListGuildMembersData::limit</a></div><div class="ttdeci">int32_t limit</div><div class="ttdoc">Max number of members to return (1 - 1000).</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d5c/a00752_source.html#l00043">GuildMemberEntities.hpp:43</a></div></div>
+<div class="ttc" id="aa03000_html_abeebaa77717fb1bf19ab3889c3fe3f50"><div class="ttname"><a href="../../dd/d6f/a03000.html#abeebaa77717fb1bf19ab3889c3fe3f50">DiscordCoreAPI::ListGuildMembersData::guildId</a></div><div class="ttdeci">Snowflake guildId</div><div class="ttdoc">Guild from which to list the GuildMembers.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d5c/a00752_source.html#l00041">GuildMemberEntities.hpp:41</a></div></div>
+<div class="ttc" id="aa03036_html_a12a2c7ea1b19c2fae7dcbd660b0b3d17"><div class="ttname"><a href="../../d5/d7f/a03036.html#a12a2c7ea1b19c2fae7dcbd660b0b3d17">DiscordCoreAPI::GuildMembers::listGuildMembersAsync</a></div><div class="ttdeci">static CoRoutine&lt; std::vector&lt; GuildMember &gt; &gt; listGuildMembersAsync(ListGuildMembersData dataPackage)</div><div class="ttdoc">Lists all of the GuildMembers of a chosen Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/de8/a00839_source.html#l00154">GuildMemberEntities.cpp:154</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -177,7 +175,7 @@ $(document).ready(function(){initNavTree('d9/d53/a07194.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d5/d78/a07054.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../dd/d41/a07066.html">Guild-Member Stuff</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dd/d67/a07058.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d5/db4/a07070.html">Guild-Member Stuff</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

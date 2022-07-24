@@ -13,7 +13,7 @@ var searchData=
   ['removedmemberids_10',['removedMemberIds',['../d4/d9d/a02704.html#ae650e7eda82aaa32fa7ecc0a9ec06155',1,'DiscordCoreAPI::ThreadMembersUpdateData']]],
   ['repeated_11',['repeated',['../d9/dbd/a03604.html#ad5779846654b535a8a63abe4be753e13',1,'DiscordCoreAPI::RepeatedFunctionData']]],
   ['replieduser_12',['repliedUser',['../d9/d5b/a02668.html#a6b5bbf6ae635d36358d4a269770ac8d1',1,'DiscordCoreAPI::AllowedMentionsData']]],
-  ['requesttospeaktimestamp_13',['requestToSpeakTimestamp',['../d1/d8c/a02364.html#a07fcd97555da78769ce18a6fc6dbe2ca',1,'DiscordCoreAPI::VoiceStateData::requestToSpeakTimestamp()'],['../d3/df0/a03556.html#a0dbe3943e32cc7263316e54c54a70111',1,'DiscordCoreAPI::ModifyCurrentUserVoiceStateData::requestToSpeakTimestamp()']]],
+  ['requesttospeaktimestamp_13',['requestToSpeakTimestamp',['../d1/d8c/a02364.html#a3e673eea4e3536fdf1e54803076cb301',1,'DiscordCoreAPI::VoiceStateData::requestToSpeakTimestamp()'],['../d3/df0/a03556.html#a0dbe3943e32cc7263316e54c54a70111',1,'DiscordCoreAPI::ModifyCurrentUserVoiceStateData::requestToSpeakTimestamp()']]],
   ['requirecolons_14',['requireColons',['../d1/da0/a02416.html#a14252c59dc0214a3971a3181ee997390',1,'DiscordCoreAPI::EmojiData']]],
   ['required_15',['required',['../dd/d32/a02636.html#ac8b908bc38bc9bf60ef13c2eacc5caf1',1,'DiscordCoreAPI::ApplicationCommandOptionData::required()'],['../df/d97/a02676.html#a14d6331e877af774dff230fb4f3a81a5',1,'DiscordCoreAPI::ComponentData::required()']]],
   ['resetafter_16',['resetAfter',['../df/d25/a02764.html#aa1de686591d08d011811c7ab151de66d',1,'DiscordCoreAPI::SessionStartData']]],

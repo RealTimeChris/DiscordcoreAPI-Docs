@@ -48,8 +48,8 @@ var NAVTREE =
     [ "The CMAKE Package", "index.html#autotoc_md19", null ],
     [ "Build Instructions (Non-Vcpkg) - The Executable", "index.html#autotoc_md20", null ],
     [ "Roadmap", "index.html#autotoc_md21", null ],
-    [ "Docs/Examples", "d5/d78/a07054.html", "d5/d78/a07054" ],
-    [ "Guides", "d8/dcd/a07055.html", "d8/dcd/a07055" ],
+    [ "Docs/Examples", "dd/d67/a07058.html", "dd/d67/a07058" ],
+    [ "Guides", "db/d67/a07059.html", "db/d67/a07059" ],
     [ "Modules", "modules.html", "modules" ],
     [ "Included Files", "files.html", [
       [ "File List", "files.html", "files_dup" ]
@@ -61,16 +61,16 @@ var NAVTREEINDEX =
 [
 "d0/d02/a07177.html",
 "d1/d77/a07154.html",
-"d3/d01/a02316.html#a2c31d703e1f456dcb339179c0c42906a",
-"d4/dad/a02500.html#ac6b06df4967c3423bf5a6998a928066b",
-"d6/d24/a02536.html#ad1e970cc7a141fb5fa0ce812a4eae5ce",
-"d7/d98/a03044.html",
-"d9/d0d/a01748.html#a9e19177434b37d88db15c4c3c99738f5",
-"db/d68/a02028.html",
-"dc/d62/a02020.html#a017d64a7abb9b22f207d95a001f187eb",
-"de/d48/a02552.html#a86286a871e20790e6c77f93ff739c573",
-"de/dfc/a00891.html#gga386b8a65a1195bd1bc61b75a7f308ffaa99bdf91e21dcb91631c438a3ebfd6995",
-"df/d0c/a00788.html"
+"d3/d01/a02316.html",
+"d4/dad/a02500.html#acf7c8a318d0db536469b053aef86ffa2",
+"d6/d25/a03284.html",
+"d7/d98/a03044.html#a6308a0cf228f0adf794bfdb65080328b",
+"d9/d0d/a01748.html#aea230cc99ae0365f2e8522e1958d8f2f",
+"db/d69/a03320.html#ae2fa2e7c5eec51f7c2c02fe0d4852f23",
+"dc/d78/a07209.html",
+"de/d4e/a02484.html#a5c6194ac22e8588c034c98c1d6dd3bc6",
+"de/dfc/a00891.html#gga3be930a37ea8f73fdab875716ac40643a6adf97f83acf6453d4a6a4b1070f3754",
+"df/d0d/a03176.html#a36289ae240169fb14753612df0c4cbf8"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -102,11 +102,11 @@ $(document).ready(function(){initNavTree('df/d74/a07232.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Modifying Guild Role Positions </div></div>
+  <div class="headertitle"><div class="title">Creating a Guild Role </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Role_Stuff_Modifying_Guild_Role_Positions"></a></p><ul>
-<li>Execute the, <code><a class="el" href="../../d2/d66/a03352.html#a27cdc694fbb1843ea5bcd3cbd4a743c1" title="Updates a Role&#39;s positions.">DiscordCoreAPI::Roles::modifyGuildRolePositionsAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../df/d3e/a03324.html" title="For updating the Role positions.">DiscordCoreAPI::ModifyGuildRolePositionsData</a></code>, with a return value of type <code>auto</code> or <code>vector&lt;<a class="el" href="../../da/dcf/a03344.html" title="A single Role.">DiscordCoreAPI::Role</a>&gt;</code>.</li>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Role_Stuff_Creating_a_Guild_Role"></a></p><ul>
+<li>Execute the, <code><a class="el" href="../../d2/d66/a03352.html#afdfd3fb636d652e1819007f162d18fc6" title="Creates a new Role within the given Guild.">DiscordCoreAPI::Roles::createGuildRoleAsync()</a></code> function, while passing in a value of type <code><a class="el" href="../../df/daa/a03316.html" title="For creating a new Role within a chosen Guild.">DiscordCoreAPI::CreateGuildRoleData</a></code>, with a return value of type <code>auto</code> or <code><a class="el" href="../../da/dcf/a03344.html" title="A single Role.">DiscordCoreAPI::Role</a></code>.</li>
 <li>Call the function with <code>.get()</code> added to the end in order to wait for the results now.</li>
 </ul>
 <div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
@@ -137,17 +137,16 @@ $(document).ready(function(){initNavTree('df/d74/a07232.html','../../'); initRes
 <div class="line"> </div>
 <div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
 <div class="line">            <span class="keywordflow">try</span> {</div>
-<div class="line">                <a class="code hl_struct" href="../../df/d3e/a03324.html">DiscordCoreAPI::ModifyGuildRolePositionsData</a> dataPackage01;</div>
-<div class="line">                dataPackage01.<a class="code hl_variable" href="../../df/d3e/a03324.html#a8d71b79053905974a3cbdca710f778cd">newPosition</a> = 12;</div>
-<div class="line">                dataPackage01.<a class="code hl_variable" href="../../df/d3e/a03324.html#afb1530c25d72e9c3eac0f2ad3884287c">roleId</a> = <span class="stringliteral">&quot;886366417316896799&quot;</span>;</div>
-<div class="line">                dataPackage01.<a class="code hl_variable" href="../../df/d3e/a03324.html#a7ba91ed594a6336b6e9c466150869809">reason</a> = <span class="stringliteral">&quot;TESTING!&quot;</span>;</div>
-<div class="line">                dataPackage01.<a class="code hl_variable" href="../../df/d3e/a03324.html#a4689ba8bc37a792c8ca12579cfadfa68">guildId</a> = args.eventData.<a class="code hl_function" href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
+<div class="line">                <a class="code hl_struct" href="../../df/daa/a03316.html">DiscordCoreAPI::CreateGuildRoleData</a> dataPackage01;</div>
+<div class="line">                dataPackage01.<a class="code hl_variable" href="../../df/daa/a03316.html#a1e84d41794e4591550e11a18830bab5b">name</a> = <span class="stringliteral">&quot;TEST ROLE&quot;</span>;</div>
+<div class="line">                dataPackage01.<a class="code hl_variable" href="../../df/daa/a03316.html#ac46f7cf3cf3802e081176ff250099b54">hexColorValue</a> = <span class="stringliteral">&quot;Fefe23&quot;</span>;</div>
+<div class="line">                dataPackage01.<a class="code hl_variable" href="../../df/daa/a03316.html#a4cc80c2d5315cc7e9d9a6c61c8c2fb73">hoist</a> = <span class="keyword">false</span>;</div>
+<div class="line">                dataPackage01.<a class="code hl_variable" href="../../df/daa/a03316.html#ab884babbd0a212f93a31d8d5fe3012f2">reason</a> = <span class="stringliteral">&quot;TESTING!&quot;</span>;</div>
+<div class="line">                dataPackage01.<a class="code hl_variable" href="../../df/daa/a03316.html#a398520632c0269aacb45ec077902bf9a">guildId</a> = args.eventData.<a class="code hl_function" href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">getGuildId</a>();</div>
 <div class="line"> </div>
-<div class="line">                <span class="keyword">auto</span> newRoles = <a class="code hl_function" href="../../d2/d66/a03352.html#a27cdc694fbb1843ea5bcd3cbd4a743c1">DiscordCoreAPI::Roles::modifyGuildRolePositionsAsync</a>(dataPackage01).get();</div>
+<div class="line">                <span class="keyword">auto</span> newRole = <a class="code hl_function" href="../../d2/d66/a03352.html#afdfd3fb636d652e1819007f162d18fc6">DiscordCoreAPI::Roles::createGuildRoleAsync</a>(dataPackage01).get();</div>
 <div class="line"> </div>
-<div class="line">                <span class="keywordflow">for</span> (<span class="keyword">auto</span> value: newRoles) {</div>
-<div class="line">                    cout &lt;&lt; <span class="stringliteral">&quot;ROLE NAME: &quot;</span> &lt;&lt; value.name &lt;&lt; endl;</div>
-<div class="line">                }</div>
+<div class="line">                cout &lt;&lt; <span class="stringliteral">&quot;ROLE NAME: &quot;</span> &lt;&lt; newRole.name &lt;&lt; endl;</div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line">            } <span class="keywordflow">catch</span> (...) {</div>
@@ -166,12 +165,13 @@ $(document).ready(function(){initNavTree('df/d74/a07232.html','../../'); initRes
 <div class="ttc" id="aa02784_html_a565fe2447237030a716f64b2599996dd"><div class="ttname"><a href="../../d0/d5a/a02784.html#a565fe2447237030a716f64b2599996dd">DiscordCoreAPI::InputEventData::getGuildId</a></div><div class="ttdeci">Snowflake getGuildId()</div><div class="ttdoc">Returns the Guild id, of this input-event.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l01643">FoundationEntities.cpp:1643</a></div></div>
 <div class="ttc" id="aa02836_html"><div class="ttname"><a href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03795">FoundationEntities.hpp:3795</a></div></div>
 <div class="ttc" id="aa02840_html"><div class="ttname"><a href="../../d9/d4d/a02840.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l03806">FoundationEntities.hpp:3806</a></div></div>
-<div class="ttc" id="aa03324_html"><div class="ttname"><a href="../../df/d3e/a03324.html">DiscordCoreAPI::ModifyGuildRolePositionsData</a></div><div class="ttdoc">For updating the Role positions.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d2c/a00764_source.html#l00077">RoleEntities.hpp:77</a></div></div>
-<div class="ttc" id="aa03324_html_a4689ba8bc37a792c8ca12579cfadfa68"><div class="ttname"><a href="../../df/d3e/a03324.html#a4689ba8bc37a792c8ca12579cfadfa68">DiscordCoreAPI::ModifyGuildRolePositionsData::guildId</a></div><div class="ttdeci">Snowflake guildId</div><div class="ttdoc">The Guild within which to move the Role.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d2c/a00764_source.html#l00080">RoleEntities.hpp:80</a></div></div>
-<div class="ttc" id="aa03324_html_a7ba91ed594a6336b6e9c466150869809"><div class="ttname"><a href="../../df/d3e/a03324.html#a7ba91ed594a6336b6e9c466150869809">DiscordCoreAPI::ModifyGuildRolePositionsData::reason</a></div><div class="ttdeci">std::string reason</div><div class="ttdoc">Reason for modifying the Role positions.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d2c/a00764_source.html#l00083">RoleEntities.hpp:83</a></div></div>
-<div class="ttc" id="aa03324_html_a8d71b79053905974a3cbdca710f778cd"><div class="ttname"><a href="../../df/d3e/a03324.html#a8d71b79053905974a3cbdca710f778cd">DiscordCoreAPI::ModifyGuildRolePositionsData::newPosition</a></div><div class="ttdeci">int32_t newPosition</div><div class="ttdoc">The new position of the Role.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d2c/a00764_source.html#l00081">RoleEntities.hpp:81</a></div></div>
-<div class="ttc" id="aa03324_html_afb1530c25d72e9c3eac0f2ad3884287c"><div class="ttname"><a href="../../df/d3e/a03324.html#afb1530c25d72e9c3eac0f2ad3884287c">DiscordCoreAPI::ModifyGuildRolePositionsData::roleId</a></div><div class="ttdeci">Snowflake roleId</div><div class="ttdoc">The id of the Role to move.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d2c/a00764_source.html#l00082">RoleEntities.hpp:82</a></div></div>
-<div class="ttc" id="aa03352_html_a27cdc694fbb1843ea5bcd3cbd4a743c1"><div class="ttname"><a href="../../d2/d66/a03352.html#a27cdc694fbb1843ea5bcd3cbd4a743c1">DiscordCoreAPI::Roles::modifyGuildRolePositionsAsync</a></div><div class="ttdeci">static CoRoutine&lt; std::vector&lt; Role &gt; &gt; modifyGuildRolePositionsAsync(ModifyGuildRolePositionsData dataPackage)</div><div class="ttdoc">Updates a Role's positions.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d13/a00836_source.html#l00195">RoleEntities.cpp:195</a></div></div>
+<div class="ttc" id="aa03316_html"><div class="ttname"><a href="../../df/daa/a03316.html">DiscordCoreAPI::CreateGuildRoleData</a></div><div class="ttdoc">For creating a new Role within a chosen Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d2c/a00764_source.html#l00055">RoleEntities.hpp:55</a></div></div>
+<div class="ttc" id="aa03316_html_a1e84d41794e4591550e11a18830bab5b"><div class="ttname"><a href="../../df/daa/a03316.html#a1e84d41794e4591550e11a18830bab5b">DiscordCoreAPI::CreateGuildRoleData::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">The name of the Role.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d2c/a00764_source.html#l00065">RoleEntities.hpp:65</a></div></div>
+<div class="ttc" id="aa03316_html_a398520632c0269aacb45ec077902bf9a"><div class="ttname"><a href="../../df/daa/a03316.html#a398520632c0269aacb45ec077902bf9a">DiscordCoreAPI::CreateGuildRoleData::guildId</a></div><div class="ttdeci">Snowflake guildId</div><div class="ttdoc">Which Guild to make the Role in.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d2c/a00764_source.html#l00062">RoleEntities.hpp:62</a></div></div>
+<div class="ttc" id="aa03316_html_a4cc80c2d5315cc7e9d9a6c61c8c2fb73"><div class="ttname"><a href="../../df/daa/a03316.html#a4cc80c2d5315cc7e9d9a6c61c8c2fb73">DiscordCoreAPI::CreateGuildRoleData::hoist</a></div><div class="ttdeci">bool hoist</div><div class="ttdoc">Is this Role hoisted above the rest of them?</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d2c/a00764_source.html#l00064">RoleEntities.hpp:64</a></div></div>
+<div class="ttc" id="aa03316_html_ab884babbd0a212f93a31d8d5fe3012f2"><div class="ttname"><a href="../../df/daa/a03316.html#ab884babbd0a212f93a31d8d5fe3012f2">DiscordCoreAPI::CreateGuildRoleData::reason</a></div><div class="ttdeci">std::string reason</div><div class="ttdoc">Reason for creating the Role.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d2c/a00764_source.html#l00063">RoleEntities.hpp:63</a></div></div>
+<div class="ttc" id="aa03316_html_ac46f7cf3cf3802e081176ff250099b54"><div class="ttname"><a href="../../df/daa/a03316.html#ac46f7cf3cf3802e081176ff250099b54">DiscordCoreAPI::CreateGuildRoleData::hexColorValue</a></div><div class="ttdeci">std::string hexColorValue</div><div class="ttdoc">Hex color-value between 0 and ffffff.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d2c/a00764_source.html#l00056">RoleEntities.hpp:56</a></div></div>
+<div class="ttc" id="aa03352_html_afdfd3fb636d652e1819007f162d18fc6"><div class="ttname"><a href="../../d2/d66/a03352.html#afdfd3fb636d652e1819007f162d18fc6">DiscordCoreAPI::Roles::createGuildRoleAsync</a></div><div class="ttdeci">static CoRoutine&lt; Role &gt; createGuildRoleAsync(CreateGuildRoleData dataPackage)</div><div class="ttdoc">Creates a new Role within the given Guild.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d13/a00836_source.html#l00175">RoleEntities.cpp:175</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -179,7 +179,7 @@ $(document).ready(function(){initNavTree('df/d74/a07232.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d5/d78/a07054.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../df/d27/a07072.html">Role Stuff</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dd/d67/a07058.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../da/dba/a07076.html">Role Stuff</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

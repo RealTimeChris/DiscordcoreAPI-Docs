@@ -11,11 +11,11 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d5/d2c/a02012.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="d5/d2c/a02012.html" target="_top" xlink:title="Event&#45;delegate, for representing an event&#45;function to be executed.">
 <polygon fill="none" stroke="black" points="164,-41 0,-41 0,0 164,0 164,-41"/>
 <text text-anchor="start" x="8" y="-29" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreInternal</text>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">::EventDelegate&lt; ReturnType,</text>
-<text text-anchor="middle" x="82" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00"> ArgTypes... &gt;</text>
+<text text-anchor="middle" x="82" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00"> ArgTypes &gt;</text>
 </a>
 </g>
 </g>

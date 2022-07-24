@@ -1,4 +1,5 @@
 var a07062 =
 [
-    [ "Connecting To/Disconnecting From a Voice Channel", "d2/d34/a07181.html", null ]
+    [ "Instantiating/Creating an Autocomplete", "da/d52/a07100.html", null ],
+    [ "Collecting Autocomplete Input", "d9/d1d/a07099.html", null ]
 ];

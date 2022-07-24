@@ -102,11 +102,11 @@ $(document).ready(function(){initNavTree('df/d45/a07084.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Deleting a Global Application Command </div></div>
+  <div class="headertitle"><div class="title">Bulk Overwriting Global Application Commands </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Application_Command_Stuff_Deleting_a_Global_Application_Command"></a></p><ul>
-<li>Execute the <code><a class="el" href="../../d0/dce/a01780.html#ab00b1699050fc0f209bd1d23cc28c089" title="Delete a global ApplicationCommand for this bot.">DiscordCoreAPI::ApplicationCommands::deleteGlobalApplicationCommandAsync()</a></code> function, while passing in a data structure of type <code><a class="el" href="../../df/de0/a01728.html" title="For deleting a single global ApplicationCommand.">DiscordCoreAPI::DeleteGlobalApplicationCommandData</a></code>, with no return value.</li>
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Application_Command_Stuff_Bulk_Overwrite_Global_Application_Commands"></a></p><ul>
+<li>Execute the <code><a class="el" href="../../d0/dce/a01780.html#ae0ac20f309bdeb3a188f312d19f22f66" title="Bulk overwrites a collection of global ApplicationCommands.">DiscordCoreAPI::ApplicationCommands::bulkOverwriteGlobalApplicationCommandsAsync()</a></code> function, while passing in a data structure of type <code><a class="el" href="../../de/d25/a01732.html" title="For bulk-overwriting a collection of global ApplicationCommands.">DiscordCoreAPI::BulkOverwriteGlobalApplicationCommandsData</a></code>, with a return value of <code>auto</code> or <code>std::vector&lt;<a class="el" href="../../dd/d00/a01776.html" title="A single ApplicationCommand.">DiscordCoreAPI::ApplicationCommand</a>&gt;</code>.</li>
 <li>Call the function with <code>.get()</code> added to the end in order to wait for the results now.</li>
 </ul>
 <div class="fragment"><div class="line"><span class="comment">/// Test.hpp-Header for the &quot;test&quot; command.</span><span class="comment"></span></div>
@@ -136,16 +136,39 @@ $(document).ready(function(){initNavTree('df/d45/a07084.html','../../'); initRes
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; args) {</div>
-<div class="line">            <a class="code hl_struct" href="../../df/de0/a01728.html">DiscordCoreAPI::DeleteGlobalApplicationCommandData</a> dataPackage;</div>
-<div class="line">            dataPackage.<a class="code hl_variable" href="../../df/de0/a01728.html#ab6a580408aea8162d949b02f23617d79">name</a> = <span class="stringliteral">&quot;testcommandname&quot;</span>;</div>
-<div class="line">            ApplicationCommands::deleteGlobalApplicationCommandAsync(dataPackage).get();</div>
+<div class="line">            vector&lt;DiscordCoreAPI::CreateGlobalApplicationCommandData&gt; newVector;</div>
+<div class="line">            <a class="code hl_struct" href="../../da/d0e/a01720.html">DiscordCoreAPI::CreateGlobalApplicationCommandData</a> createSellDrugsCommandData;</div>
+<div class="line">            createSellDrugsCommandData.<a class="code hl_variable" href="../../da/d0e/a01720.html#aa5ce25d4f1a22d5000658d7cb3f5bc78">description</a> = <span class="stringliteral">&quot;Sell drugs in exchange for some currency!&quot;</span>;</div>
+<div class="line">            createSellDrugsCommandData.<a class="code hl_variable" href="../../da/d0e/a01720.html#a9249b62c6e10592c81166694568167f8">name</a> = <span class="stringliteral">&quot;selldrugs&quot;</span>;</div>
+<div class="line">            createSellDrugsCommandData.<a class="code hl_variable" href="../../da/d0e/a01720.html#aa661f78efe1e5f6ae08bb0815c377ddc">type</a> = <a class="code hl_enumvalue" href="../../de/dfc/a00891.html#gga0c1e88669ddc5cba35fdf5d84af435b8a2be84bc520b8345a62d14e59215b1cca">DiscordCoreAPI::ApplicationCommandType::Chat_Input</a>;</div>
+<div class="line">            newVector.push_back(createSellDrugsCommandData);</div>
+<div class="line"> </div>
+<div class="line">            <a class="code hl_struct" href="../../da/d0e/a01720.html">DiscordCoreAPI::CreateGlobalApplicationCommandData</a> registerSlashCommandsCommandData;</div>
+<div class="line">            registerSlashCommandsCommandData.<a class="code hl_variable" href="../../da/d0e/a01720.html#aa5ce25d4f1a22d5000658d7cb3f5bc78">description</a> = <span class="stringliteral">&quot;Register the programmatically designated slash commands.&quot;</span>;</div>
+<div class="line">            registerSlashCommandsCommandData.<a class="code hl_variable" href="../../da/d0e/a01720.html#a9249b62c6e10592c81166694568167f8">name</a> = <span class="stringliteral">&quot;registerslashcommands&quot;</span>;</div>
+<div class="line">            registerSlashCommandsCommandData.<a class="code hl_variable" href="../../da/d0e/a01720.html#aa661f78efe1e5f6ae08bb0815c377ddc">type</a> = ApplicationCommandType::Chat_Input;</div>
+<div class="line">            newVector.push_back(registerSlashCommandsCommandData);</div>
+<div class="line"> </div>
+<div class="line">            <a class="code hl_struct" href="../../de/d25/a01732.html">DiscordCoreAPI::BulkOverwriteGlobalApplicationCommandsData</a> dataPackage;</div>
+<div class="line">            dataPackage.data = newVector;</div>
+<div class="line"> </div>
+<div class="line">            <span class="keyword">auto</span> returnValue = <a class="code hl_function" href="../../d0/dce/a01780.html#ae0ac20f309bdeb3a188f312d19f22f66">DiscordCoreAPI::ApplicationCommands::bulkOverwriteGlobalApplicationCommandsAsync</a>(dataPackage).get();</div>
+<div class="line"> </div>
+<div class="line">            <span class="keywordflow">for</span> (<span class="keyword">auto</span> value: returnValue) {</div>
+<div class="line">                cout &lt;&lt; <span class="stringliteral">&quot;Command Name: &quot;</span> &lt;&lt; value.name &lt;&lt; endl;</div>
+<div class="line">            }</div>
 <div class="line">        }</div>
 <div class="line">    };</div>
 <div class="line">}</div>
 <div class="ttc" id="aa00749_html"><div class="ttname"><a href="../../d5/de8/a00749.html">Index.hpp</a></div></div>
+<div class="ttc" id="aa00891_html_gga0c1e88669ddc5cba35fdf5d84af435b8a2be84bc520b8345a62d14e59215b1cca"><div class="ttname"><a href="../../de/dfc/a00891.html#gga0c1e88669ddc5cba35fdf5d84af435b8a2be84bc520b8345a62d14e59215b1cca">DiscordCoreAPI::ApplicationCommandType::Chat_Input</a></div><div class="ttdeci">@ Chat_Input</div><div class="ttdoc">Chat input.</div></div>
 <div class="ttc" id="aa00893_html"><div class="ttname"><a href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></div><div class="ttdoc">The main namespace for this library.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00025">ApplicationCommandEntities.hpp:25</a></div></div>
-<div class="ttc" id="aa01728_html"><div class="ttname"><a href="../../df/de0/a01728.html">DiscordCoreAPI::DeleteGlobalApplicationCommandData</a></div><div class="ttdoc">For deleting a single global ApplicationCommand.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00074">ApplicationCommandEntities.hpp:74</a></div></div>
-<div class="ttc" id="aa01728_html_ab6a580408aea8162d949b02f23617d79"><div class="ttname"><a href="../../df/de0/a01728.html#ab6a580408aea8162d949b02f23617d79">DiscordCoreAPI::DeleteGlobalApplicationCommandData::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">The name of the command to delete.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00076">ApplicationCommandEntities.hpp:76</a></div></div>
+<div class="ttc" id="aa01720_html"><div class="ttname"><a href="../../da/d0e/a01720.html">DiscordCoreAPI::CreateGlobalApplicationCommandData</a></div><div class="ttdoc">For creating a single global ApplicationCommand.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00045">ApplicationCommandEntities.hpp:45</a></div></div>
+<div class="ttc" id="aa01720_html_a9249b62c6e10592c81166694568167f8"><div class="ttname"><a href="../../da/d0e/a01720.html#a9249b62c6e10592c81166694568167f8">DiscordCoreAPI::CreateGlobalApplicationCommandData::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">A name for the new command.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00054">ApplicationCommandEntities.hpp:54</a></div></div>
+<div class="ttc" id="aa01720_html_aa5ce25d4f1a22d5000658d7cb3f5bc78"><div class="ttname"><a href="../../da/d0e/a01720.html#aa5ce25d4f1a22d5000658d7cb3f5bc78">DiscordCoreAPI::CreateGlobalApplicationCommandData::description</a></div><div class="ttdeci">std::string description</div><div class="ttdoc">A description of the command.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00052">ApplicationCommandEntities.hpp:52</a></div></div>
+<div class="ttc" id="aa01720_html_aa661f78efe1e5f6ae08bb0815c377ddc"><div class="ttname"><a href="../../da/d0e/a01720.html#aa661f78efe1e5f6ae08bb0815c377ddc">DiscordCoreAPI::CreateGlobalApplicationCommandData::type</a></div><div class="ttdeci">ApplicationCommandType type</div><div class="ttdoc">The type of ApplicationCommand.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00050">ApplicationCommandEntities.hpp:50</a></div></div>
+<div class="ttc" id="aa01732_html"><div class="ttname"><a href="../../de/d25/a01732.html">DiscordCoreAPI::BulkOverwriteGlobalApplicationCommandsData</a></div><div class="ttdoc">For bulk-overwriting a collection of global ApplicationCommands.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00080">ApplicationCommandEntities.hpp:80</a></div></div>
+<div class="ttc" id="aa01780_html_ae0ac20f309bdeb3a188f312d19f22f66"><div class="ttname"><a href="../../d0/dce/a01780.html#ae0ac20f309bdeb3a188f312d19f22f66">DiscordCoreAPI::ApplicationCommands::bulkOverwriteGlobalApplicationCommandsAsync</a></div><div class="ttdeci">static CoRoutine&lt; std::vector&lt; ApplicationCommand &gt; &gt; bulkOverwriteGlobalApplicationCommandsAsync(BulkOverwriteGlobalApplicationCommandsData dataPackage)</div><div class="ttdoc">Bulk overwrites a collection of global ApplicationCommands.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5e/a00860_source.html#l00203">ApplicationCommandEntities.cpp:203</a></div></div>
 <div class="ttc" id="aa02332_html"><div class="ttname"><a href="../../d1/d03/a02332.html">DiscordCoreAPI::EmbedData</a></div><div class="ttdoc">Embed data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/a00704_source.html#l00600">FoundationEntities.hpp:600</a></div></div>
 <div class="ttc" id="aa02332_html_a20ca60ec3235f44a223f3d3b687c0c9e"><div class="ttname"><a href="../../d1/d03/a02332.html#a20ca60ec3235f44a223f3d3b687c0c9e">DiscordCoreAPI::EmbedData::setTitle</a></div><div class="ttdeci">EmbedData &amp; setTitle(const std::string &amp;titleNew)</div><div class="ttdoc">Sets the title of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00394">FoundationEntities.cpp:394</a></div></div>
 <div class="ttc" id="aa02332_html_a9d4066a4861408bc00eccb22a12db7f9"><div class="ttname"><a href="../../d1/d03/a02332.html#a9d4066a4861408bc00eccb22a12db7f9">DiscordCoreAPI::EmbedData::setDescription</a></div><div class="ttdeci">EmbedData &amp; setDescription(const std::string &amp;descriptionNew)</div><div class="ttdoc">Sets the description (the main contents) of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db8/a00797_source.html#l00379">FoundationEntities.cpp:379</a></div></div>
@@ -160,7 +183,7 @@ $(document).ready(function(){initNavTree('df/d45/a07084.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d5/d78/a07054.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d1/d84/a07063.html">Application-Command Stuff</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dd/d67/a07058.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d1/d3b/a07067.html">Application-Command Stuff</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
