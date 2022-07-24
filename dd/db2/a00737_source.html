@@ -626,7 +626,7 @@ $(document).ready(function(){initNavTree('dd/db2/a00737_source.html','../../'); 
 <div class="line"><a id="l00519" name="l00519"></a><span class="lineno">  519</span>            this-&gt;hour = std::stoll(hour);</div>
 <div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span>            this-&gt;minute = std::stoll(minute);</div>
 <div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span>            this-&gt;second = std::stoll(second);</div>
-<div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span>            this-&gt;getTimeSinceEpoch&lt;TimeType&gt;();</div>
+<div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span>            this-&gt;getTimeSinceEpoch();</div>
 <div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span>        }</div>
 <div class="line"><a id="l00524" name="l00524"></a><span class="lineno">  524</span> </div>
 <div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span>        <span class="keywordtype">void</span> convertTimeStampToTimeUnits(<a class="code hl_enumeration" href="../../d7/d46/a00890.html#ga5f837e6437665f0a390fe2c6271e3a91">DiscordCoreAPI::TimeFormat</a> theFormatNew) {</div>
@@ -710,7 +710,7 @@ $(document).ready(function(){initNavTree('dd/db2/a00737_source.html','../../'); 
 <div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>            this-&gt;year = year;</div>
 <div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span>            this-&gt;hour = hour;</div>
 <div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span>            this-&gt;day = day;</div>
-<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span>            this-&gt;getTimeSinceEpoch&lt;TimeType&gt;();</div>
+<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span>            this-&gt;getTimeSinceEpoch();</div>
 <div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span>        };</div>
 <div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span> </div>
 <div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span>        <a class="code hl_class" href="../../d3/d50/a03632.html">TimeStamp</a>(uint64_t timeInTimeUnits, <a class="code hl_enumeration" href="../../d7/d46/a00890.html#ga5f837e6437665f0a390fe2c6271e3a91">DiscordCoreAPI::TimeFormat</a> theFormatNew) {</div>
@@ -854,8 +854,8 @@ $(document).ready(function(){initNavTree('dd/db2/a00737_source.html','../../'); 
 <div class="line"><a id="l00747" name="l00747"></a><span class="lineno">  747</span>                this-&gt;convertTimeStampToTimeUnits(timeFormat);</div>
 <div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span>            }</div>
 <div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span>            uint64_t timeValue = (std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(this-&gt;timeStampInTimeUnits).count()) / 1000;</div>
-<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>            __time64_t rawTime(timeValue);</div>
-<div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span>            tm timeInfo = *_localtime64(&amp;rawTime);</div>
+<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>            time_t rawTime(timeValue);</div>
+<div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span>            tm timeInfo = *localtime(&amp;rawTime);</div>
 <div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span>            std::string timeStamp{};</div>
 <div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>            timeStamp.resize(48);</div>
 <div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span>            <span class="keywordflow">switch</span> (timeFormat) {</div>
@@ -896,7 +896,7 @@ $(document).ready(function(){initNavTree('dd/db2/a00737_source.html','../../'); 
 <div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span>            this-&gt;originalTimeStamp = timeStamp;</div>
 <div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span>        }</div>
 <div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span> </div>
-<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> TimeType&gt; <span class="keywordtype">void</span> getTimeSinceEpoch() {</div>
+<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>        <span class="keywordtype">void</span> getTimeSinceEpoch() {</div>
 <div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>            TimeType theValue{};</div>
 <div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span>            <span class="keywordflow">for</span> (int32_t x = 1970; x &lt; this-&gt;year; x++) {</div>
 <div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span>                theValue += TimeType{ this-&gt;secondsInJan };</div>
