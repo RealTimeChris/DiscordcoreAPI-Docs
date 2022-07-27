@@ -411,7 +411,7 @@ $(document).ready(function(){initNavTree('dc/d6e/a00833_source.html','../../'); 
 <div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>            }</div>
 <div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>        }</div>
 <div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>        <span class="keywordtype">char</span> outBuffer[32] = { 0 };</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>        <span class="keyword">const</span> <span class="keywordtype">char</span>* formatString = sign == 0 ? <span class="stringliteral">&quot;%lu&quot;</span> : <span class="stringliteral">&quot;-%ll&quot;</span>;</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>        <span class="keyword">const</span> <span class="keywordtype">char</span>* formatString = sign == 0 ? <span class="stringliteral">&quot;%llu&quot;</span> : <span class="stringliteral">&quot;-%ll&quot;</span>;</div>
 <div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>        <span class="keyword">const</span> int32_t res = sprintf(outBuffer, formatString, value);</div>
 <div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>        <span class="keywordflow">if</span> (res &lt; 0) {</div>
 <div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>            <span class="keywordflow">throw</span> ErlPackError{ <span class="stringliteral">&quot;ErlPacker::parseBigint() Error: Parse big integer failed.\n\n&quot;</span> };</div>
