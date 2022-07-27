@@ -559,7 +559,7 @@ $(document).ready(function(){initNavTree('dd/db2/a00737_source.html','../../'); 
 <div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span>        <span class="keywordflow">return</span> lhs;</div>
 <div class="line"><a id="l00453" name="l00453"></a><span class="lineno">  453</span>    }</div>
 <div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span> </div>
-<div class="line"><a id="l00455" name="l00455"></a><span class="lineno">  455</span>    <span class="keyword">inline</span> std::basic_string&lt;char&gt; operator+(std::basic_string&lt;<span class="keywordtype">char</span>, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt;&gt;&amp; lhs, StringWrapper rhs) {</div>
+<div class="line"><a id="l00455" name="l00455"></a><span class="lineno">  455</span>    <span class="keyword">inline</span> std::basic_string&lt;char&gt; operator+(std::basic_string&lt;<span class="keywordtype">char</span>, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt;&gt; lhs, StringWrapper rhs) {</div>
 <div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span>        std::stringstream theStream{};</div>
 <div class="line"><a id="l00457" name="l00457"></a><span class="lineno">  457</span>        theStream &lt;&lt; lhs &lt;&lt; rhs;</div>
 <div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span>        <span class="keywordflow">return</span> theStream.str();</div>
