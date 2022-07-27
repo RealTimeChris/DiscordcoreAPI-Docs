@@ -1,24 +1,37 @@
-<map id="VoiceConnection.hpp" name="VoiceConnection.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="1341,5,1500,31"/>
-<area shape="rect" id="node2" href="$d9/dd4/a00776.html" title=" " alt="" coords="753,225,920,251"/>
-<area shape="rect" id="node11" href="$d8/db7/a00812.html" title=" " alt="" coords="5,299,108,324"/>
-<area shape="rect" id="node12" href="$d7/d49/a00863.html" title=" " alt="" coords="1501,299,1647,324"/>
-<area shape="rect" id="node13" href="$d1/d93/a00875.html" title=" " alt="" coords="1671,299,1829,324"/>
-<area shape="rect" id="node15" href="$d4/d45/a00791.html" title=" " alt="" coords="1853,299,1975,324"/>
-<area shape="rect" id="node16" href="$d2/d94/a00716.html" title=" " alt="" coords="814,79,947,104"/>
-<area shape="rect" id="node22" href="$dd/dd8/a00719.html" title=" " alt="" coords="197,152,300,177"/>
-<area shape="rect" id="node3" href="$d2/d5e/a00860.html" title=" " alt="" coords="939,299,1177,324"/>
-<area shape="rect" id="node4" href="$d0/d11/a00842.html" title=" " alt="" coords="1201,299,1368,324"/>
-<area shape="rect" id="node5" href="$df/d41/a00881.html" title=" " alt="" coords="481,299,624,324"/>
-<area shape="rect" id="node6" href="$d5/d69/a00878.html" title=" " alt="" coords="132,299,264,324"/>
-<area shape="rect" id="node7" href="$d5/d12/a00794.html" title=" " alt="" coords="1392,299,1476,324"/>
-<area shape="rect" id="node8" href="$d5/de8/a00749.html" title=" " alt="" coords="648,299,735,324"/>
-<area shape="rect" id="node10" href="$d3/db2/a00869.html" title=" " alt="" coords="759,299,915,324"/>
-<area shape="rect" id="node14" href="$d9/daf/a00830.html" title=" " alt="" coords="288,299,457,324"/>
-<area shape="rect" id="node9" href="$da/d96/a00782.html" title=" " alt="" coords="642,372,741,397"/>
-<area shape="rect" id="node17" href="$dc/d17/a00872.html" title=" " alt="" coords="999,152,1189,177"/>
-<area shape="rect" id="node18" href="$df/d9e/a00686.html" title=" " alt="" coords="445,152,588,177"/>
-<area shape="rect" id="node19" href="$da/db8/a00797.html" title=" " alt="" coords="1213,152,1383,177"/>
-<area shape="rect" id="node20" href="$df/de8/a00839.html" title=" " alt="" coords="613,152,799,177"/>
-<area shape="rect" id="node21" href="$d8/d2d/a00815.html" title=" " alt="" coords="875,152,975,177"/>
+<map id="AudioDecoder.hpp" name="AudioDecoder.hpp">
+<area shape="rect" id="node1" title=" " alt="" coords="1768,5,1896,32"/>
+<area shape="rect" id="node2" href="$d3/d00/a00785.html" title=" " alt="" coords="1312,80,1440,107"/>
+<area shape="rect" id="node3" href="$d4/dfa/a00746.html" title=" " alt="" coords="1843,453,1981,480"/>
+<area shape="rect" id="node18" href="$d9/dd4/a00776.html" title=" " alt="" coords="1465,80,1623,107"/>
+<area shape="rect" id="node35" href="$d3/d95/a00779.html" title=" " alt="" coords="2057,453,2175,480"/>
+<area shape="rect" id="node4" href="$df/dbb/a00698.html" title=" " alt="" coords="829,528,979,555"/>
+<area shape="rect" id="node8" href="$d6/d8b/a00821.html" title=" " alt="" coords="1545,603,1666,629"/>
+<area shape="rect" id="node13" href="$d9/d30/a00848.html" title=" " alt="" coords="1961,603,2060,629"/>
+<area shape="rect" id="node14" href="$df/d4c/a00851.html" title=" " alt="" coords="1691,603,1829,629"/>
+<area shape="rect" id="node5" href="$da/d96/a00782.html" title=" " alt="" coords="1137,603,1351,629"/>
+<area shape="rect" id="node6" href="$d0/dad/a00806.html" title=" " alt="" coords="587,603,738,629"/>
+<area shape="rect" id="node7" href="$d8/d2d/a00815.html" title=" " alt="" coords="326,603,455,629"/>
+<area shape="rect" id="node9" href="$d9/daf/a00830.html" title=" " alt="" coords="762,603,841,629"/>
+<area shape="rect" id="node10" href="$d8/db9/a00725.html" title=" " alt="" coords="865,603,943,629"/>
+<area shape="rect" id="node12" href="$df/de8/a00839.html" title=" " alt="" coords="968,603,1112,629"/>
+<area shape="rect" id="node15" href="$d1/d93/a00875.html" title=" " alt="" coords="1375,603,1521,629"/>
+<area shape="rect" id="node16" href="$df/d41/a00881.html" title=" " alt="" coords="29,603,187,629"/>
+<area shape="rect" id="node17" href="$dd/d08/a00884.html" title=" " alt="" coords="2103,603,2222,629"/>
+<area shape="rect" id="node11" href="$dd/d7e/a00809.html" title=" " alt="" coords="859,677,949,704"/>
+<area shape="rect" id="node19" href="$d6/d2f/a00854.html" title=" " alt="" coords="1488,155,1600,181"/>
+<area shape="rect" id="node20" href="$d3/d2c/a00764.html" title=" " alt="" coords="1213,155,1331,181"/>
+<area shape="rect" id="node34" href="$d0/d7e/a00770.html" title=" " alt="" coords="1643,304,1789,331"/>
+<area shape="rect" id="node21" href="$d5/d72/a00803.html" title=" " alt="" coords="415,453,590,480"/>
+<area shape="rect" id="node22" href="$d1/d56/a00707.html" title=" " alt="" coords="43,453,173,480"/>
+<area shape="rect" id="node23" href="$d3/d60/a00818.html" title=" " alt="" coords="1067,453,1221,480"/>
+<area shape="rect" id="node24" href="$d2/d94/a00716.html" title=" " alt="" coords="788,229,956,256"/>
+<area shape="rect" id="node28" href="$dc/d17/a00872.html" title=" " alt="" coords="1245,453,1336,480"/>
+<area shape="rect" id="node31" href="$dd/db2/a00737.html" title=" " alt="" coords="195,379,338,405"/>
+<area shape="rect" id="node33" href="$d3/db2/a00869.html" title=" " alt="" coords="102,229,221,256"/>
+<area shape="rect" id="node25" href="$d8/d1c/a00824.html" title=" " alt="" coords="773,453,941,480"/>
+<area shape="rect" id="node26" href="$dc/dce/a00740.html" title=" " alt="" coords="661,304,779,331"/>
+<area shape="rect" id="node30" href="$d0/d0a/a00743.html" title=" " alt="" coords="1563,453,1661,480"/>
+<area shape="rect" id="node27" href="$d1/d04/a00713.html" title=" " alt="" coords="910,379,1031,405"/>
+<area shape="rect" id="node29" href="$d7/dcf/a00845.html" title=" " alt="" coords="515,379,632,405"/>
+<area shape="rect" id="node32" href="$d0/d11/a00842.html" title=" " alt="" coords="197,453,339,480"/>
 </map>

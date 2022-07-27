@@ -80,7 +80,7 @@ function getYPos(item)
           storing this instance.  Is needed to be able to set timeouts.
    resultPath - path to use for external files
 */
-function SearchBox(name, resultsPath, extension)
+function SearchBox(name, resultsPath, label, extension)
 {
   if (!name || !resultsPath) {  alert("Missing parameters to SearchBox."); }
   if (!extension || extension == "") { extension = ".html"; }
@@ -96,6 +96,7 @@ function SearchBox(name, resultsPath, extension)
   this.hideTimeout           = 0;
   this.searchIndex           = 0;
   this.searchActive          = false;
+  this.searchLabel           = label;
   this.extension             = extension;
 
   // ----------- DOM Elements
@@ -378,11 +379,19 @@ function SearchBox(name, resultsPath, extension)
        )
     {
       this.DOMSearchBox().className = 'MSearchBoxActive';
-      this.searchActive = true;
+
+      var searchField = this.DOMSearchField();
+
+      if (searchField.value == this.searchLabel) // clear "Search" term upon entry
+      {
+        searchField.value = '';
+        this.searchActive = true;
+      }
     }
     else if (!isActive) // directly remove the panel
     {
       this.DOMSearchBox().className = 'MSearchBoxInactive';
+      this.DOMSearchField().value   = this.searchLabel;
       this.searchActive             = false;
       this.lastSearchValue          = ''
       this.lastResultsPage          = '';
