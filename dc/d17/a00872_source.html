@@ -552,7 +552,7 @@ $(document).ready(function(){initNavTree('dc/d17/a00872_source.html','../../'); 
 <div class="line"><a id="l00445" name="l00445"></a><span class="lineno">  445</span> </div>
 <div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span>        <span class="keywordflow">if</span> (jsonObjectData.contains(<span class="stringliteral">&quot;features&quot;</span>) &amp;&amp; !jsonObjectData[<span class="stringliteral">&quot;features&quot;</span>].is_null()) {</div>
 <div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; value: jsonObjectData[<span class="stringliteral">&quot;features&quot;</span>].get&lt;std::vector&lt;std::string&gt;&gt;()) {</div>
-<div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span>                pDataStructure-&gt;features.push_back(value);</div>
+<div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span>                pDataStructure-&gt;features.push_back(StringWrapper{ value });</div>
 <div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span>            }</div>
 <div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span>        }</div>
 <div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span> </div>
@@ -2322,7 +2322,7 @@ $(document).ready(function(){initNavTree('dc/d17/a00872_source.html','../../'); 
 <div class="line"><a id="l02215" name="l02215"></a><span class="lineno"> 2215</span>        <span class="keywordflow">if</span> (jsonObjectData.contains(<span class="stringliteral">&quot;permissions&quot;</span>) &amp;&amp; !jsonObjectData[<span class="stringliteral">&quot;permissions&quot;</span>].is_null()) {</div>
 <div class="line"><a id="l02216" name="l02216"></a><span class="lineno"> 2216</span>            pDataStructure-&gt;permissions.clear();</div>
 <div class="line"><a id="l02217" name="l02217"></a><span class="lineno"> 2217</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; value: jsonObjectData[<span class="stringliteral">&quot;permissions&quot;</span>]) {</div>
-<div class="line"><a id="l02218" name="l02218"></a><span class="lineno"> 2218</span>                pDataStructure-&gt;permissions.push_back(value.get&lt;std::string&gt;());</div>
+<div class="line"><a id="l02218" name="l02218"></a><span class="lineno"> 2218</span>                pDataStructure-&gt;permissions.push_back(Permissions{ value.get&lt;std::string&gt;() });</div>
 <div class="line"><a id="l02219" name="l02219"></a><span class="lineno"> 2219</span>            }</div>
 <div class="line"><a id="l02220" name="l02220"></a><span class="lineno"> 2220</span>        }</div>
 <div class="line"><a id="l02221" name="l02221"></a><span class="lineno"> 2221</span> </div>
@@ -2970,7 +2970,7 @@ $(document).ready(function(){initNavTree('dc/d17/a00872_source.html','../../'); 
 <div class="line"><a id="l02863" name="l02863"></a><span class="lineno"> 2863</span> </div>
 <div class="line"><a id="l02864" name="l02864"></a><span class="lineno"> 2864</span>        <span class="keywordflow">if</span> (jsonObjectData.contains(<span class="stringliteral">&quot;features&quot;</span>) &amp;&amp; !jsonObjectData[<span class="stringliteral">&quot;features&quot;</span>].is_null()) {</div>
 <div class="line"><a id="l02865" name="l02865"></a><span class="lineno"> 2865</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; value: jsonObjectData[<span class="stringliteral">&quot;features&quot;</span>].get&lt;std::vector&lt;std::string&gt;&gt;()) {</div>
-<div class="line"><a id="l02866" name="l02866"></a><span class="lineno"> 2866</span>                pDataStructure-&gt;features.push_back(value);</div>
+<div class="line"><a id="l02866" name="l02866"></a><span class="lineno"> 2866</span>                pDataStructure-&gt;features.push_back(StringWrapper{ value });</div>
 <div class="line"><a id="l02867" name="l02867"></a><span class="lineno"> 2867</span>            }</div>
 <div class="line"><a id="l02868" name="l02868"></a><span class="lineno"> 2868</span>        }</div>
 <div class="line"><a id="l02869" name="l02869"></a><span class="lineno"> 2869</span> </div>
