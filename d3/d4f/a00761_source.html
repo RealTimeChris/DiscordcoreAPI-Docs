@@ -132,7 +132,7 @@ $(document).ready(function(){initNavTree('d3/d4f/a00761_source.html','../../'); 
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">struct </span>ErlPackError : <span class="keyword">public</span> std::runtime_error {</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>      <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        ErlPackError(<span class="keyword">const</span> std::string&amp; message);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keyword">explicit</span> ErlPackError(<span class="keyword">const</span> std::string&amp; message);</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    };</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">constexpr</span> uint8_t formatVersion{ 131 };</div>
