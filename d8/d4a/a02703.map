@@ -1,4 +1,4 @@
 <map id="DiscordCoreAPI::ThreadMembersUpdateData" name="DiscordCoreAPI::ThreadMembersUpdateData">
-<area shape="rect" id="node1" title="Represents a Thread&#45;members&#45;update." alt="" coords="5,79,241,119"/>
-<area shape="rect" id="node2" href="$dc/d1a/a02288.html" title="Base class for all Discord entities." alt="" coords="15,5,232,31"/>
+<area shape="rect" id="node1" title="Represents a Thread&#45;members&#45;update." alt="" coords="5,80,220,121"/>
+<area shape="rect" id="node2" href="$dc/d1a/a02288.html" title="Base class for all Discord entities." alt="" coords="13,5,213,32"/>
 </map>

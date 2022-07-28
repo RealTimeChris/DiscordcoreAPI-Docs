@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['cancel_0',['cancel',['../d5/d70/a01980.html#a566ebc1b6eacc88c5c2913908e6a2c8f',1,'DiscordCoreAPI::CoRoutine&lt; void &gt;::cancel()'],['../db/d9d/a01972.html#a9fc31b4ff6a73922169844d6ad1851b5',1,'DiscordCoreAPI::CoRoutine::cancel()']]],
+  ['cancel_0',['cancel',['../db/d9d/a01972.html#a9fc31b4ff6a73922169844d6ad1851b5',1,'DiscordCoreAPI::CoRoutine::cancel()'],['../d5/d70/a01980.html#a566ebc1b6eacc88c5c2913908e6a2c8f',1,'DiscordCoreAPI::CoRoutine&lt; void &gt;::cancel()']]],
   ['checkforpermission_1',['checkForPermission',['../da/d9f/a03636.html#acafd47a5d3ea3c04adccd925bc090a2d',1,'DiscordCoreAPI::Permissions']]],
   ['clearcontents_2',['clearContents',['../dc/d8f/a03640.html#a1096795a528f8831115b7b5184f591a6',1,'DiscordCoreAPI::UnboundedMessageBlock']]],
   ['collectbuttondata_3',['collectButtonData',['../db/dc1/a03172.html#a0eecf8f131b659cf758266ce6472f4a9',1,'DiscordCoreAPI::ButtonCollector']]],
