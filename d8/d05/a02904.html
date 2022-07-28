@@ -105,29 +105,25 @@ $(document).ready(function(){initNavTree('d8/d05/a02904.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d1/dfc/a02901.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::DeleteGuildIntegrationData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::SyncGuildTemplateData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For deleting a <a class="el" href="../../d6/db9/a02980.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> integration.  
+<p>For syncing a <a class="el" href="../../d2/d0c/a02932.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> Template.  
  <a href="../../d8/d05/a02904.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d1/d04/a00713_source.html">GuildEntities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:af4b3e6e54d4704cab0e597e737d2f0f0"><td class="memItemLeft" align="right" valign="top"><a id="af4b3e6e54d4704cab0e597e737d2f0f0" name="af4b3e6e54d4704cab0e597e737d2f0f0"></a>
+<tr class="memitem:a219111a375ac368a46fb1a8fdeb5f264"><td class="memItemLeft" align="right" valign="top"><a id="a219111a375ac368a46fb1a8fdeb5f264" name="a219111a375ac368a46fb1a8fdeb5f264"></a>
 <a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildId</b> {}</td></tr>
-<tr class="memdesc:af4b3e6e54d4704cab0e597e737d2f0f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../d6/db9/a02980.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> from which to delete the integration from. <br /></td></tr>
-<tr class="separator:af4b3e6e54d4704cab0e597e737d2f0f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95286455ff8c30e2248f71f03a9579f2"><td class="memItemLeft" align="right" valign="top"><a id="a95286455ff8c30e2248f71f03a9579f2" name="a95286455ff8c30e2248f71f03a9579f2"></a>
-<a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>integrationId</b> {}</td></tr>
-<tr class="memdesc:a95286455ff8c30e2248f71f03a9579f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The integration's id which we are going to delete. <br /></td></tr>
-<tr class="separator:a95286455ff8c30e2248f71f03a9579f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4afc54d0e114b2446f9b67f62d8667d"><td class="memItemLeft" align="right" valign="top"><a id="ad4afc54d0e114b2446f9b67f62d8667d" name="ad4afc54d0e114b2446f9b67f62d8667d"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>reason</b> {}</td></tr>
-<tr class="memdesc:ad4afc54d0e114b2446f9b67f62d8667d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reason for deleting the integration. <br /></td></tr>
-<tr class="separator:ad4afc54d0e114b2446f9b67f62d8667d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:a219111a375ac368a46fb1a8fdeb5f264"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d2/d0c/a02932.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> for which you would like to sync the template of. <br /></td></tr>
+<tr class="separator:a219111a375ac368a46fb1a8fdeb5f264"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a490aa55f4a751f761fcc349589202dba"><td class="memItemLeft" align="right" valign="top"><a id="a490aa55f4a751f761fcc349589202dba" name="a490aa55f4a751f761fcc349589202dba"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>templateCode</b> {}</td></tr>
+<tr class="memdesc:a490aa55f4a751f761fcc349589202dba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template code for which template you would like to sync. <br /></td></tr>
+<tr class="separator:a490aa55f4a751f761fcc349589202dba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d1/d04/a00713_source.html">GuildEntities.hpp</a></li>
@@ -138,7 +134,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>reason</b> {}<
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d8/d05/a02904.html">DeleteGuildIntegrationData</a></li>
+    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d8/d05/a02904.html">SyncGuildTemplateData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

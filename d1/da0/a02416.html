@@ -105,68 +105,31 @@ $(document).ready(function(){initNavTree('d1/da0/a02416.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d5/da5/a02413.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::EmojiData Class Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::InstallParamsData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Data structure representing a single emoji.  
+<p>Install params data, for application data.  
  <a href="../../d1/da0/a02416.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for DiscordCoreAPI::EmojiData:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../de/d6a/a02415.svg" width="211" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
+
+<p>Inherits DiscordCoreAPI::DataParser&lt; ObjectType &gt;.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:a36cfb36e6a9fc7c79cd8353fceceb42f"><td class="memItemLeft" align="right" valign="top"><a id="a36cfb36e6a9fc7c79cd8353fceceb42f" name="a36cfb36e6a9fc7c79cd8353fceceb42f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>animated</b> { false }</td></tr>
-<tr class="memdesc:a36cfb36e6a9fc7c79cd8353fceceb42f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is it animated? <br /></td></tr>
-<tr class="separator:a36cfb36e6a9fc7c79cd8353fceceb42f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d81e0c66d75d7ecb29ccc5f6fa7bc77"><td class="memItemLeft" align="right" valign="top"><a id="a4d81e0c66d75d7ecb29ccc5f6fa7bc77" name="a4d81e0c66d75d7ecb29ccc5f6fa7bc77"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>available</b> { true }</td></tr>
-<tr class="memdesc:a4d81e0c66d75d7ecb29ccc5f6fa7bc77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is it available to be used? <br /></td></tr>
-<tr class="separator:a4d81e0c66d75d7ecb29ccc5f6fa7bc77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ba804cfab50ef07fbf9c56eab4300a3"><td class="memItemLeft" align="right" valign="top"><a id="a8ba804cfab50ef07fbf9c56eab4300a3" name="a8ba804cfab50ef07fbf9c56eab4300a3"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>managed</b> { false }</td></tr>
-<tr class="memdesc:a8ba804cfab50ef07fbf9c56eab4300a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is it managed? <br /></td></tr>
-<tr class="separator:a8ba804cfab50ef07fbf9c56eab4300a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7be1f054577a0232e9418576aa70585"><td class="memItemLeft" align="right" valign="top"><a id="ae7be1f054577a0232e9418576aa70585" name="ae7be1f054577a0232e9418576aa70585"></a>
-StringWrapper&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> {}</td></tr>
-<tr class="memdesc:ae7be1f054577a0232e9418576aa70585"><td class="mdescLeft">&#160;</td><td class="mdescRight">What is its name? <br /></td></tr>
-<tr class="separator:ae7be1f054577a0232e9418576aa70585"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14252c59dc0214a3971a3181ee997390"><td class="memItemLeft" align="right" valign="top"><a id="a14252c59dc0214a3971a3181ee997390" name="a14252c59dc0214a3971a3181ee997390"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>requireColons</b> { false }</td></tr>
-<tr class="memdesc:a14252c59dc0214a3971a3181ee997390"><td class="mdescLeft">&#160;</td><td class="mdescRight">Require colons to render it? <br /></td></tr>
-<tr class="separator:a14252c59dc0214a3971a3181ee997390"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a726a6647f6aee97e356a62e12ca439c3"><td class="memItemLeft" align="right" valign="top"><a id="a726a6647f6aee97e356a62e12ca439c3" name="a726a6647f6aee97e356a62e12ca439c3"></a>
-std::vector&lt; <a class="el" href="../../d2/d11/a02384.html">RoleData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>roles</b> {}</td></tr>
-<tr class="memdesc:a726a6647f6aee97e356a62e12ca439c3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d2/d66/a03352.html" title="An interface class for the Role related Discord endpoints.">Roles</a> that are allowed to use this emoji. <br /></td></tr>
-<tr class="separator:a726a6647f6aee97e356a62e12ca439c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af02bf1f14e5145a2c10387c7e79f546c"><td class="memItemLeft" align="right" valign="top"><a id="af02bf1f14e5145a2c10387c7e79f546c" name="af02bf1f14e5145a2c10387c7e79f546c"></a>
-std::wstring&#160;</td><td class="memItemRight" valign="bottom"><b>unicodeName</b> { L&quot;&quot; }</td></tr>
-<tr class="memdesc:af02bf1f14e5145a2c10387c7e79f546c"><td class="mdescLeft">&#160;</td><td class="mdescRight">What is its unicode name? <br /></td></tr>
-<tr class="separator:af02bf1f14e5145a2c10387c7e79f546c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0cf3f0fdd02103f8500191d0484e624f"><td class="memItemLeft" align="right" valign="top"><a id="a0cf3f0fdd02103f8500191d0484e624f" name="a0cf3f0fdd02103f8500191d0484e624f"></a>
-<a class="el" href="../../d8/d9a/a02296.html">UserData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>user</b> {}</td></tr>
-<tr class="memdesc:a0cf3f0fdd02103f8500191d0484e624f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d8/db0/a03572.html" title="A single User.">User</a> that created this emoji. <br /></td></tr>
-<tr class="separator:a0cf3f0fdd02103f8500191d0484e624f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_attribs_a02288"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_a02288')"><img src="../../closed.png" alt="-"/>&#160;Public Data Members inherited from <a class="el" href="../../dc/d1a/a02288.html">DiscordCoreAPI::DiscordEntity</a></td></tr>
-<tr class="memitem:a903c33f2f50e17293b409cfe33bcd5e9 inherit pub_attribs_a02288"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d1a/a02288.html#a903c33f2f50e17293b409cfe33bcd5e9">id</a> {}</td></tr>
-<tr class="separator:a903c33f2f50e17293b409cfe33bcd5e9 inherit pub_attribs_a02288"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_methods_a02288"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a02288')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../dc/d1a/a02288.html">DiscordCoreAPI::DiscordEntity</a></td></tr>
-<tr class="memitem:a880fa695445dc41f6d371d2a6ef1e8c0 inherit pub_methods_a02288"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d1a/a02288.html#a880fa695445dc41f6d371d2a6ef1e8c0">getCreatedAtTimestamp</a> (<a class="el" href="../../d7/d46/a00890.html#ga5f837e6437665f0a390fe2c6271e3a91">TimeFormat</a> timeFormat)</td></tr>
-<tr class="memdesc:a880fa695445dc41f6d371d2a6ef1e8c0 inherit pub_methods_a02288"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the snowflake-id into a time and date stamp.  <a href="../../dc/d1a/a02288.html#a880fa695445dc41f6d371d2a6ef1e8c0">More...</a><br /></td></tr>
-<tr class="separator:a880fa695445dc41f6d371d2a6ef1e8c0 inherit pub_methods_a02288"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af509ce3bda59d06dbfc1203dc9462e6b"><td class="memItemLeft" align="right" valign="top"><a id="af509ce3bda59d06dbfc1203dc9462e6b" name="af509ce3bda59d06dbfc1203dc9462e6b"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>permissions</b> {}</td></tr>
+<tr class="memdesc:af509ce3bda59d06dbfc1203dc9462e6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The permissions to request for the bot role. <br /></td></tr>
+<tr class="separator:af509ce3bda59d06dbfc1203dc9462e6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a914070e6267de80a9ae8cf9fd1b7cb95"><td class="memItemLeft" align="right" valign="top"><a id="a914070e6267de80a9ae8cf9fd1b7cb95" name="a914070e6267de80a9ae8cf9fd1b7cb95"></a>
+std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>scopes</b> {}</td></tr>
+<tr class="memdesc:a914070e6267de80a9ae8cf9fd1b7cb95"><td class="mdescLeft">&#160;</td><td class="mdescRight">The scopes to add the application to the server with. <br /></td></tr>
+<tr class="separator:a914070e6267de80a9ae8cf9fd1b7cb95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<hr/>The documentation for this struct was generated from the following files:<ul>
 <li><a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a></li>
-<li><a class="el" href="../../d5/d72/a00803_source.html">DataParsingFunctions.cpp</a></li>
+<li><a class="el" href="../../df/d0e/a00800_source.html">DataParsingFunctions.cpp</a></li>
 <li><a class="el" href="../../d3/d60/a00818_source.html">FoundationEntities.cpp</a></li>
 </ul>
 </div><!-- contents -->
@@ -175,7 +138,7 @@ Additional Inherited Members</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d1/da0/a02416.html">EmojiData</a></li>
+    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d1/da0/a02416.html">InstallParamsData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

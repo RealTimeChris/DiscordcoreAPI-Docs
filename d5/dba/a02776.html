@@ -103,21 +103,38 @@ $(document).ready(function(){initNavTree('d5/dba/a02776.html','../../'); initRes
 
 <div class="header">
   <div class="summary">
+<a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../db/de5/a02773.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::GuildStickersUpdateEventData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::SongCompletionEventData Struct Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Voice Connection</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Data representing a <a class="el" href="../../d6/db9/a02980.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> <a class="el" href="../../dc/d18/a03460.html" title="A single Sticker.">Sticker</a> Update event.  
+<p><a class="el" href="../../d9/d4a/a02772.html" title="A song from the various platforms.">Song</a> completion event data.  
  <a href="../../d5/dba/a02776.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a>&gt;</code></p>
-
-<p>Inherits DiscordCoreAPI::DataParser&lt; ObjectType &gt;.</p>
-<hr/>The documentation for this struct was generated from the following files:<ul>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Data Members</h2></td></tr>
+<tr class="memitem:a7561ce617cecc9215a0fc418ed4bb071"><td class="memItemLeft" align="right" valign="top"><a id="a7561ce617cecc9215a0fc418ed4bb071" name="a7561ce617cecc9215a0fc418ed4bb071"></a>
+<a class="el" href="../../dc/dbb/a02520.html">GuildData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guild</b> {}</td></tr>
+<tr class="memdesc:a7561ce617cecc9215a0fc418ed4bb071"><td class="mdescLeft">&#160;</td><td class="mdescRight">The sending <a class="el" href="../../d2/d0c/a02932.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>. <br /></td></tr>
+<tr class="separator:a7561ce617cecc9215a0fc418ed4bb071"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae87a367bbce969153d18c827c65fd816"><td class="memItemLeft" align="right" valign="top"><a id="ae87a367bbce969153d18c827c65fd816" name="ae87a367bbce969153d18c827c65fd816"></a>
+<a class="el" href="../../df/d73/a02312.html">GuildMemberData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildMember</b> {}</td></tr>
+<tr class="memdesc:ae87a367bbce969153d18c827c65fd816"><td class="mdescLeft">&#160;</td><td class="mdescRight">The sending <a class="el" href="../../d6/db9/a02980.html" title="A single GuildMember.">GuildMember</a>. <br /></td></tr>
+<tr class="separator:ae87a367bbce969153d18c827c65fd816"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8340e3dbc09571714ab35fe82db33f20"><td class="memItemLeft" align="right" valign="top"><a id="a8340e3dbc09571714ab35fe82db33f20" name="a8340e3dbc09571714ab35fe82db33f20"></a>
+<a class="el" href="../../d9/d4a/a02772.html">Song</a>&#160;</td><td class="memItemRight" valign="bottom"><b>previousSong</b> {}</td></tr>
+<tr class="memdesc:a8340e3dbc09571714ab35fe82db33f20"><td class="mdescLeft">&#160;</td><td class="mdescRight">The previously played <a class="el" href="../../d9/d4a/a02772.html" title="A song from the various platforms.">Song</a>. <br /></td></tr>
+<tr class="separator:a8340e3dbc09571714ab35fe82db33f20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad548cb870648ce735ebd46e1926118f9"><td class="memItemLeft" align="right" valign="top"><a id="ad548cb870648ce735ebd46e1926118f9" name="ad548cb870648ce735ebd46e1926118f9"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>wasItAFail</b> { false }</td></tr>
+<tr class="memdesc:ad548cb870648ce735ebd46e1926118f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this a replay? (Did a track recently fail to play?) <br /></td></tr>
+<tr class="separator:ad548cb870648ce735ebd46e1926118f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a></li>
-<li><a class="el" href="../../d5/d72/a00803_source.html">DataParsingFunctions.cpp</a></li>
-<li><a class="el" href="../../d3/d60/a00818_source.html">FoundationEntities.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -125,7 +142,7 @@ $(document).ready(function(){initNavTree('d5/dba/a02776.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d5/dba/a02776.html">GuildStickersUpdateEventData</a></li>
+    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d5/dba/a02776.html">SongCompletionEventData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

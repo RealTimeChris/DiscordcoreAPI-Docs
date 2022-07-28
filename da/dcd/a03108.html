@@ -103,17 +103,331 @@ $(document).ready(function(){initNavTree('da/dcd/a03108.html','../../'); initRes
 
 <div class="header">
   <div class="summary">
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="../../d0/d75/a03105.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::CreateEphemeralInteractionResponseData Class Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::Interactions Class Reference<div class="ingroups"><a class="el" href="../../d7/d92/a00887.html">Main Endpoints</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For creating an ephemeral <a class="el" href="../../d0/d9f/a03152.html" title="A single Interaction.">Interaction</a> response.  
+<p>An interface class for the <a class="el" href="../../da/dc0/a03104.html" title="A single Interaction.">Interaction</a> related Discord endpoints.  
  <a href="../../da/dcd/a03108.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../df/df7/a00731_source.html">InteractionEntities.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a16dc393d99f60c329062ef044e293668"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../df/dd0/a01912.html">CoRoutine</a>&lt; <a class="el" href="../../d6/da1/a03180.html">Message</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dcd/a03108.html#a16dc393d99f60c329062ef044e293668">createFollowUpMessageAsync</a> (<a class="el" href="../../dd/d50/a03088.html">CreateFollowUpMessageData</a> dataPackage)</td></tr>
+<tr class="memdesc:a16dc393d99f60c329062ef044e293668"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a follow up <a class="el" href="../../d6/da1/a03180.html" title="A single Message.">Message</a> to an input <a class="el" href="../../da/dc0/a03104.html" title="A single Interaction.">Interaction</a>.  <a href="../../da/dcd/a03108.html#a16dc393d99f60c329062ef044e293668">More...</a><br /></td></tr>
+<tr class="separator:a16dc393d99f60c329062ef044e293668"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96fa0622732afc279a659ecfcee4c6ae"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../df/dd0/a01912.html">CoRoutine</a>&lt; <a class="el" href="../../d6/da1/a03180.html">Message</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dcd/a03108.html#a96fa0622732afc279a659ecfcee4c6ae">createInteractionResponseAsync</a> (<a class="el" href="../../da/d5d/a03068.html">CreateInteractionResponseData</a> dataPackage)</td></tr>
+<tr class="memdesc:a96fa0622732afc279a659ecfcee4c6ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a response to an input <a class="el" href="../../da/dc0/a03104.html" title="A single Interaction.">Interaction</a>.  <a href="../../da/dcd/a03108.html#a96fa0622732afc279a659ecfcee4c6ae">More...</a><br /></td></tr>
+<tr class="separator:a96fa0622732afc279a659ecfcee4c6ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f96f93f629527358ad27c06bd469f9b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../df/dd0/a01912.html">CoRoutine</a>&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dcd/a03108.html#a4f96f93f629527358ad27c06bd469f9b">deleteFollowUpMessageAsync</a> (<a class="el" href="../../d5/d3a/a03100.html">DeleteFollowUpMessageData</a> dataPackage)</td></tr>
+<tr class="memdesc:a4f96f93f629527358ad27c06bd469f9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes a follow up <a class="el" href="../../d6/da1/a03180.html" title="A single Message.">Message</a>.  <a href="../../da/dcd/a03108.html#a4f96f93f629527358ad27c06bd469f9b">More...</a><br /></td></tr>
+<tr class="separator:a4f96f93f629527358ad27c06bd469f9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0674533569a79e2c0debf7ae75c97db"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../df/dd0/a01912.html">CoRoutine</a>&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dcd/a03108.html#ac0674533569a79e2c0debf7ae75c97db">deleteInteractionResponseAsync</a> (<a class="el" href="../../d1/d7a/a03080.html">DeleteInteractionResponseData</a> dataPackage)</td></tr>
+<tr class="memdesc:ac0674533569a79e2c0debf7ae75c97db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes an <a class="el" href="../../da/dc0/a03104.html" title="A single Interaction.">Interaction</a> respnose.  <a href="../../da/dcd/a03108.html#ac0674533569a79e2c0debf7ae75c97db">More...</a><br /></td></tr>
+<tr class="separator:ac0674533569a79e2c0debf7ae75c97db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98b2ece7dabe6acbf047486e9df434c6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../df/dd0/a01912.html">CoRoutine</a>&lt; <a class="el" href="../../d6/da1/a03180.html">Message</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dcd/a03108.html#a98b2ece7dabe6acbf047486e9df434c6">editFollowUpMessageAsync</a> (<a class="el" href="../../de/d98/a03096.html">EditFollowUpMessageData</a> dataPackage)</td></tr>
+<tr class="memdesc:a98b2ece7dabe6acbf047486e9df434c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Edits a follow up <a class="el" href="../../d6/da1/a03180.html" title="A single Message.">Message</a>.  <a href="../../da/dcd/a03108.html#a98b2ece7dabe6acbf047486e9df434c6">More...</a><br /></td></tr>
+<tr class="separator:a98b2ece7dabe6acbf047486e9df434c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3575944824462a6a1f7b7b696895f1ee"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../df/dd0/a01912.html">CoRoutine</a>&lt; <a class="el" href="../../d6/da1/a03180.html">Message</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dcd/a03108.html#a3575944824462a6a1f7b7b696895f1ee">editInteractionResponseAsync</a> (<a class="el" href="../../d5/d83/a03076.html">EditInteractionResponseData</a> dataPackage)</td></tr>
+<tr class="memdesc:a3575944824462a6a1f7b7b696895f1ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Edits an <a class="el" href="../../da/dc0/a03104.html" title="A single Interaction.">Interaction</a> response.  <a href="../../da/dcd/a03108.html#a3575944824462a6a1f7b7b696895f1ee">More...</a><br /></td></tr>
+<tr class="separator:a3575944824462a6a1f7b7b696895f1ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ef30660bd193930a52b04c04ca1b361"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../df/dd0/a01912.html">CoRoutine</a>&lt; <a class="el" href="../../d6/da1/a03180.html">Message</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dcd/a03108.html#a4ef30660bd193930a52b04c04ca1b361">getFollowUpMessageAsync</a> (<a class="el" href="../../d5/d37/a03092.html">GetFollowUpMessageData</a> dataPackage)</td></tr>
+<tr class="memdesc:a4ef30660bd193930a52b04c04ca1b361"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a follow up <a class="el" href="../../d6/da1/a03180.html" title="A single Message.">Message</a> to an input <a class="el" href="../../da/dc0/a03104.html" title="A single Interaction.">Interaction</a>.  <a href="../../da/dcd/a03108.html#a4ef30660bd193930a52b04c04ca1b361">More...</a><br /></td></tr>
+<tr class="separator:a4ef30660bd193930a52b04c04ca1b361"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc9ea91a4e4ecd6c2e7970f684dfc3b6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../df/dd0/a01912.html">CoRoutine</a>&lt; <a class="el" href="../../d6/da1/a03180.html">Message</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dcd/a03108.html#acc9ea91a4e4ecd6c2e7970f684dfc3b6">getInteractionResponseAsync</a> (<a class="el" href="../../dd/d7c/a03072.html">GetInteractionResponseData</a> dataPackage)</td></tr>
+<tr class="memdesc:acc9ea91a4e4ecd6c2e7970f684dfc3b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collects an <a class="el" href="../../da/dc0/a03104.html" title="A single Interaction.">Interaction</a> response.  <a href="../../da/dcd/a03108.html#acc9ea91a4e4ecd6c2e7970f684dfc3b6">More...</a><br /></td></tr>
+<tr class="separator:acc9ea91a4e4ecd6c2e7970f684dfc3b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a16dc393d99f60c329062ef044e293668" name="a16dc393d99f60c329062ef044e293668"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16dc393d99f60c329062ef044e293668">&#9670;&nbsp;</a></span>createFollowUpMessageAsync()</h2>
 
-<p>Inherits DiscordCoreAPI::InteractionResponseBase.</p>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/dd0/a01912.html">CoRoutine</a>&lt; <a class="el" href="../../d6/da1/a03180.html">Message</a> &gt; DiscordCoreAPI::Interactions::createFollowUpMessageAsync </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/d50/a03088.html">CreateFollowUpMessageData</a>&#160;</td>
+          <td class="paramname"><em>dataPackage</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Creates a follow up <a class="el" href="../../d6/da1/a03180.html" title="A single Message.">Message</a> to an input <a class="el" href="../../da/dc0/a03104.html" title="A single Interaction.">Interaction</a>.</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dataPackage</td><td>A <a class="el" href="../../dd/d50/a03088.html" title="For creating a follow up Message.">CreateFollowUpMessageData</a> structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../df/dd0/a01912.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> containing a <a class="el" href="../../df/d97/a02676.html" title="Data structure representing a single Message.">MessageData</a>. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d3/d13/a00836_source.html#l00475">475</a> of file <a class="el" href="../../d3/d13/a00836_source.html">InteractionEntities.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a96fa0622732afc279a659ecfcee4c6ae" name="a96fa0622732afc279a659ecfcee4c6ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96fa0622732afc279a659ecfcee4c6ae">&#9670;&nbsp;</a></span>createInteractionResponseAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/dd0/a01912.html">CoRoutine</a>&lt; <a class="el" href="../../d6/da1/a03180.html">Message</a> &gt; DiscordCoreAPI::Interactions::createInteractionResponseAsync </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/d5d/a03068.html">CreateInteractionResponseData</a>&#160;</td>
+          <td class="paramname"><em>dataPackage</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Creates a response to an input <a class="el" href="../../da/dc0/a03104.html" title="A single Interaction.">Interaction</a>.</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dataPackage</td><td>A <a class="el" href="../../da/d5d/a03068.html" title="For creating an Interaction response.">CreateInteractionResponseData</a> structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../df/dd0/a01912.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> containing a <a class="el" href="../../df/d97/a02676.html" title="Data structure representing a single Message.">MessageData</a>. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d3/d13/a00836_source.html#l00415">415</a> of file <a class="el" href="../../d3/d13/a00836_source.html">InteractionEntities.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4f96f93f629527358ad27c06bd469f9b" name="a4f96f93f629527358ad27c06bd469f9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f96f93f629527358ad27c06bd469f9b">&#9670;&nbsp;</a></span>deleteFollowUpMessageAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/dd0/a01912.html">CoRoutine</a>&lt; void &gt; DiscordCoreAPI::Interactions::deleteFollowUpMessageAsync </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d3a/a03100.html">DeleteFollowUpMessageData</a>&#160;</td>
+          <td class="paramname"><em>dataPackage</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Deletes a follow up <a class="el" href="../../d6/da1/a03180.html" title="A single Message.">Message</a>.</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dataPackage</td><td>A <a class="el" href="../../d5/d3a/a03100.html" title="For deleting a follow up Message.">DeleteFollowUpMessageData</a> structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../df/dd0/a01912.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> containing void. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d3/d13/a00836_source.html#l00516">516</a> of file <a class="el" href="../../d3/d13/a00836_source.html">InteractionEntities.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/dcd/a03108_a4f96f93f629527358ad27c06bd469f9b_icgraph.svg" width="487" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ac0674533569a79e2c0debf7ae75c97db" name="ac0674533569a79e2c0debf7ae75c97db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0674533569a79e2c0debf7ae75c97db">&#9670;&nbsp;</a></span>deleteInteractionResponseAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/dd0/a01912.html">CoRoutine</a>&lt; void &gt; DiscordCoreAPI::Interactions::deleteInteractionResponseAsync </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d7a/a03080.html">DeleteInteractionResponseData</a>&#160;</td>
+          <td class="paramname"><em>dataPackage</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Deletes an <a class="el" href="../../da/dc0/a03104.html" title="A single Interaction.">Interaction</a> respnose.</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dataPackage</td><td>A <a class="el" href="../../d1/d7a/a03080.html" title="For deleting an Interaction response.">DeleteInteractionResponseData</a> structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../df/dd0/a01912.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> containing void. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d3/d13/a00836_source.html#l00464">464</a> of file <a class="el" href="../../d3/d13/a00836_source.html">InteractionEntities.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a98b2ece7dabe6acbf047486e9df434c6" name="a98b2ece7dabe6acbf047486e9df434c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98b2ece7dabe6acbf047486e9df434c6">&#9670;&nbsp;</a></span>editFollowUpMessageAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/dd0/a01912.html">CoRoutine</a>&lt; <a class="el" href="../../d6/da1/a03180.html">Message</a> &gt; DiscordCoreAPI::Interactions::editFollowUpMessageAsync </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../de/d98/a03096.html">EditFollowUpMessageData</a>&#160;</td>
+          <td class="paramname"><em>dataPackage</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Edits a follow up <a class="el" href="../../d6/da1/a03180.html" title="A single Message.">Message</a>.</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dataPackage</td><td>A <a class="el" href="../../de/d98/a03096.html" title="For editing a follow up Message.">EditFollowUpMessageData</a> structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../df/dd0/a01912.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> containing a <a class="el" href="../../df/d97/a02676.html" title="Data structure representing a single Message.">MessageData</a>. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d3/d13/a00836_source.html#l00500">500</a> of file <a class="el" href="../../d3/d13/a00836_source.html">InteractionEntities.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3575944824462a6a1f7b7b696895f1ee" name="a3575944824462a6a1f7b7b696895f1ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3575944824462a6a1f7b7b696895f1ee">&#9670;&nbsp;</a></span>editInteractionResponseAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/dd0/a01912.html">CoRoutine</a>&lt; <a class="el" href="../../d6/da1/a03180.html">Message</a> &gt; DiscordCoreAPI::Interactions::editInteractionResponseAsync </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d83/a03076.html">EditInteractionResponseData</a>&#160;</td>
+          <td class="paramname"><em>dataPackage</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Edits an <a class="el" href="../../da/dc0/a03104.html" title="A single Interaction.">Interaction</a> response.</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dataPackage</td><td>A <a class="el" href="../../d5/d83/a03076.html" title="For editing an Interaction response.">EditInteractionResponseData</a> structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../df/dd0/a01912.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> containing a <a class="el" href="../../df/d97/a02676.html" title="Data structure representing a single Message.">MessageData</a>. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d3/d13/a00836_source.html#l00448">448</a> of file <a class="el" href="../../d3/d13/a00836_source.html">InteractionEntities.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4ef30660bd193930a52b04c04ca1b361" name="a4ef30660bd193930a52b04c04ca1b361"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ef30660bd193930a52b04c04ca1b361">&#9670;&nbsp;</a></span>getFollowUpMessageAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/dd0/a01912.html">CoRoutine</a>&lt; <a class="el" href="../../d6/da1/a03180.html">Message</a> &gt; DiscordCoreAPI::Interactions::getFollowUpMessageAsync </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d37/a03092.html">GetFollowUpMessageData</a>&#160;</td>
+          <td class="paramname"><em>dataPackage</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Creates a follow up <a class="el" href="../../d6/da1/a03180.html" title="A single Message.">Message</a> to an input <a class="el" href="../../da/dc0/a03104.html" title="A single Interaction.">Interaction</a>.</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dataPackage</td><td>A <a class="el" href="../../dd/d50/a03088.html" title="For creating a follow up Message.">CreateFollowUpMessageData</a> structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../df/dd0/a01912.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> containing a <a class="el" href="../../df/d97/a02676.html" title="Data structure representing a single Message.">MessageData</a>. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d3/d13/a00836_source.html#l00490">490</a> of file <a class="el" href="../../d3/d13/a00836_source.html">InteractionEntities.cpp</a>.</p>
+
+</div>
+</div>
+<a id="acc9ea91a4e4ecd6c2e7970f684dfc3b6" name="acc9ea91a4e4ecd6c2e7970f684dfc3b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc9ea91a4e4ecd6c2e7970f684dfc3b6">&#9670;&nbsp;</a></span>getInteractionResponseAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/dd0/a01912.html">CoRoutine</a>&lt; <a class="el" href="../../d6/da1/a03180.html">Message</a> &gt; DiscordCoreAPI::Interactions::getInteractionResponseAsync </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/d7c/a03072.html">GetInteractionResponseData</a>&#160;</td>
+          <td class="paramname"><em>dataPackage</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Collects an <a class="el" href="../../da/dc0/a03104.html" title="A single Interaction.">Interaction</a> response.</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dataPackage</td><td>A <a class="el" href="../../dd/d7c/a03072.html" title="For getting an Interaction response.">GetInteractionResponseData</a> structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../df/dd0/a01912.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> containing an <a class="el" href="../../d0/d1f/a02748.html" title="Interaction response data.">InteractionResponseData</a>. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d3/d13/a00836_source.html#l00439">439</a> of file <a class="el" href="../../d3/d13/a00836_source.html">InteractionEntities.cpp</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="../../df/df7/a00731_source.html">InteractionEntities.hpp</a></li>
 <li><a class="el" href="../../d3/d13/a00836_source.html">InteractionEntities.cpp</a></li>
@@ -124,7 +438,7 @@ $(document).ready(function(){initNavTree('da/dcd/a03108.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../da/dcd/a03108.html">CreateEphemeralInteractionResponseData</a></li>
+    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../da/dcd/a03108.html">Interactions</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

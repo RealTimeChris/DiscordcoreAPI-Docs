@@ -105,72 +105,64 @@ $(document).ready(function(){initNavTree('dd/d32/a02636.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d6/d6a/a02633.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::ApplicationCommandOptionData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::InteractionCallbackData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Data structure representing an <a class="el" href="../../dd/d00/a01776.html" title="A single ApplicationCommand.">ApplicationCommand</a>'s option.  
+<p><a class="el" href="../../da/dc0/a03104.html" title="A single Interaction.">Interaction</a> <a class="el" href="../../dd/d00/a01776.html" title="A single ApplicationCommand.">ApplicationCommand</a> callback data.  
  <a href="../../dd/d32/a02636.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a>&gt;</code></p>
-
-<p>Inherits DiscordCoreAPI::DataParser&lt; ObjectType &gt;.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:a704a86c362d1378372bc0e8246ba6ce1"><td class="memItemLeft" align="right" valign="top"><a id="a704a86c362d1378372bc0e8246ba6ce1" name="a704a86c362d1378372bc0e8246ba6ce1"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>autocomplete</b> { false }</td></tr>
-<tr class="memdesc:a704a86c362d1378372bc0e8246ba6ce1"><td class="mdescLeft">&#160;</td><td class="mdescRight">If autocomplete interactions are enabled for this STRING, INTEGER, or NUMBER type option. <br /></td></tr>
-<tr class="separator:a704a86c362d1378372bc0e8246ba6ce1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d476dbdec32d3f2c472542a78b389c1"><td class="memItemLeft" align="right" valign="top"><a id="a7d476dbdec32d3f2c472542a78b389c1" name="a7d476dbdec32d3f2c472542a78b389c1"></a>
-std::vector&lt; <a class="el" href="../../de/dfc/a00891.html#ga386b8a65a1195bd1bc61b75a7f308ffa">ChannelType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>channelTypes</b> {}</td></tr>
-<tr class="memdesc:a7d476dbdec32d3f2c472542a78b389c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set when the <a class="el" href="../../dd/d00/a01776.html" title="A single ApplicationCommand.">ApplicationCommand</a> option type is set to <a class="el" href="../../db/da1/a01944.html" title="A Channel object.">Channel</a>. <br /></td></tr>
-<tr class="separator:a7d476dbdec32d3f2c472542a78b389c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad402f1e53bb5410bdc4031ff56f409f2"><td class="memItemLeft" align="right" valign="top"><a id="ad402f1e53bb5410bdc4031ff56f409f2" name="ad402f1e53bb5410bdc4031ff56f409f2"></a>
-std::vector&lt; <a class="el" href="../../dd/dc4/a02632.html">ApplicationCommandOptionChoiceData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>choices</b> {}</td></tr>
-<tr class="memdesc:ad402f1e53bb5410bdc4031ff56f409f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">A vector of possible choices for the current <a class="el" href="../../dd/d00/a01776.html" title="A single ApplicationCommand.">ApplicationCommand</a> option. <br /></td></tr>
-<tr class="separator:ad402f1e53bb5410bdc4031ff56f409f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a419935eb28eca422646a452dd9f496d7"><td class="memItemLeft" align="right" valign="top"><a id="a419935eb28eca422646a452dd9f496d7" name="a419935eb28eca422646a452dd9f496d7"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>description</b> {}</td></tr>
-<tr class="memdesc:a419935eb28eca422646a452dd9f496d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">A description of the current <a class="el" href="../../dd/d00/a01776.html" title="A single ApplicationCommand.">ApplicationCommand</a> option. <br /></td></tr>
-<tr class="separator:a419935eb28eca422646a452dd9f496d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff46b819bcb265c94443ee0f7f816060"><td class="memItemLeft" align="right" valign="top"><a id="aff46b819bcb265c94443ee0f7f816060" name="aff46b819bcb265c94443ee0f7f816060"></a>
-std::unordered_map&lt; std::string, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>descriptionLocalizations</b> {}</td></tr>
-<tr class="memdesc:aff46b819bcb265c94443ee0f7f816060"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dictionary for the description localizations field. <br /></td></tr>
-<tr class="separator:aff46b819bcb265c94443ee0f7f816060"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40fdf038dbb012dea855d5205be03291"><td class="memItemLeft" align="right" valign="top"><a id="a40fdf038dbb012dea855d5205be03291" name="a40fdf038dbb012dea855d5205be03291"></a>
-int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>maxValue</b> { 0 }</td></tr>
-<tr class="memdesc:a40fdf038dbb012dea855d5205be03291"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the option is an INTEGER or NUMBER type, the maximum value permitted. <br /></td></tr>
-<tr class="separator:a40fdf038dbb012dea855d5205be03291"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac68de287b48c1870d0041e1d42db54a8"><td class="memItemLeft" align="right" valign="top"><a id="ac68de287b48c1870d0041e1d42db54a8" name="ac68de287b48c1870d0041e1d42db54a8"></a>
-int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>minValue</b> { 0 }</td></tr>
-<tr class="memdesc:ac68de287b48c1870d0041e1d42db54a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the option is an INTEGER or NUMBER type, the minimum value permitted. <br /></td></tr>
-<tr class="separator:ac68de287b48c1870d0041e1d42db54a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a209fd82e5361cec1a1c63dbdee5b245b"><td class="memItemLeft" align="right" valign="top"><a id="a209fd82e5361cec1a1c63dbdee5b245b" name="a209fd82e5361cec1a1c63dbdee5b245b"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> {}</td></tr>
-<tr class="memdesc:a209fd82e5361cec1a1c63dbdee5b245b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the current <a class="el" href="../../dd/d00/a01776.html" title="A single ApplicationCommand.">ApplicationCommand</a> option. <br /></td></tr>
-<tr class="separator:a209fd82e5361cec1a1c63dbdee5b245b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a258d40f65a48e4f9df8e73907657f3f0"><td class="memItemLeft" align="right" valign="top"><a id="a258d40f65a48e4f9df8e73907657f3f0" name="a258d40f65a48e4f9df8e73907657f3f0"></a>
-std::unordered_map&lt; std::string, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>nameLocalizations</b> {}</td></tr>
-<tr class="memdesc:a258d40f65a48e4f9df8e73907657f3f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dictionary for the name localizations field. <br /></td></tr>
-<tr class="separator:a258d40f65a48e4f9df8e73907657f3f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc5b978880dd07355b2597e70e59de39"><td class="memItemLeft" align="right" valign="top"><a id="acc5b978880dd07355b2597e70e59de39" name="acc5b978880dd07355b2597e70e59de39"></a>
-std::vector&lt; <a class="el" href="../../dd/d32/a02636.html">ApplicationCommandOptionData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>options</b> {}</td></tr>
-<tr class="memdesc:acc5b978880dd07355b2597e70e59de39"><td class="mdescLeft">&#160;</td><td class="mdescRight">A vector of possible options for the current <a class="el" href="../../dd/d00/a01776.html" title="A single ApplicationCommand.">ApplicationCommand</a> option. <br /></td></tr>
-<tr class="separator:acc5b978880dd07355b2597e70e59de39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8b908bc38bc9bf60ef13c2eacc5caf1"><td class="memItemLeft" align="right" valign="top"><a id="ac8b908bc38bc9bf60ef13c2eacc5caf1" name="ac8b908bc38bc9bf60ef13c2eacc5caf1"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>required</b> { false }</td></tr>
-<tr class="memdesc:ac8b908bc38bc9bf60ef13c2eacc5caf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the parameter is required or optional&ndash; default false. <br /></td></tr>
-<tr class="separator:ac8b908bc38bc9bf60ef13c2eacc5caf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbc5901e842403802b08b1a25074c1ea"><td class="memItemLeft" align="right" valign="top"><a id="acbc5901e842403802b08b1a25074c1ea" name="acbc5901e842403802b08b1a25074c1ea"></a>
-<a class="el" href="../../de/dfc/a00891.html#ga1545487c64a71c2b5c36cde9f2bed49d">ApplicationCommandOptionType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> {}</td></tr>
-<tr class="memdesc:acbc5901e842403802b08b1a25074c1ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of command option. <br /></td></tr>
-<tr class="separator:acbc5901e842403802b08b1a25074c1ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6f26e7bbde3f1a6aa1e58368c35b99d"><td class="memItemLeft" align="right" valign="top"><a id="ab6f26e7bbde3f1a6aa1e58368c35b99d" name="ab6f26e7bbde3f1a6aa1e58368c35b99d"></a>
+<a class="el" href="../../dc/d64/a02620.html">AllowedMentionsData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>allowedMentions</b> {}</td></tr>
+<tr class="memdesc:ab6f26e7bbde3f1a6aa1e58368c35b99d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allowed mentions data. <br /></td></tr>
+<tr class="separator:ab6f26e7bbde3f1a6aa1e58368c35b99d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a389eab0779512973c26a09a3a4b23be4"><td class="memItemLeft" align="right" valign="top"><a id="a389eab0779512973c26a09a3a4b23be4" name="a389eab0779512973c26a09a3a4b23be4"></a>
+std::vector&lt; <a class="el" href="../../d7/d70/a02252.html">AttachmentData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>attachments</b> {}</td></tr>
+<tr class="memdesc:a389eab0779512973c26a09a3a4b23be4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of partial attachment objects attachment objects with filename and description. <br /></td></tr>
+<tr class="separator:a389eab0779512973c26a09a3a4b23be4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a343851abd9d62d48a99609b528eb2146"><td class="memItemLeft" align="right" valign="top"><a id="a343851abd9d62d48a99609b528eb2146" name="a343851abd9d62d48a99609b528eb2146"></a>
+std::vector&lt; <a class="el" href="../../dc/d28/a02584.html">ApplicationCommandOptionChoiceData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>choices</b> {}</td></tr>
+<tr class="memdesc:a343851abd9d62d48a99609b528eb2146"><td class="mdescLeft">&#160;</td><td class="mdescRight">Autocomplete choices(max of 25 choices). <br /></td></tr>
+<tr class="separator:a343851abd9d62d48a99609b528eb2146"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c3552b148dddc7efe5e7f7f8df9c741"><td class="memItemLeft" align="right" valign="top"><a id="a7c3552b148dddc7efe5e7f7f8df9c741" name="a7c3552b148dddc7efe5e7f7f8df9c741"></a>
+std::vector&lt; <a class="el" href="../../dd/dc4/a02632.html">ActionRowData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>components</b> {}</td></tr>
+<tr class="memdesc:a7c3552b148dddc7efe5e7f7f8df9c741"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d6/da1/a03180.html" title="A single Message.">Message</a> components. <br /></td></tr>
+<tr class="separator:a7c3552b148dddc7efe5e7f7f8df9c741"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01af1fc1acf012572b52cd31b71e9248"><td class="memItemLeft" align="right" valign="top"><a id="a01af1fc1acf012572b52cd31b71e9248" name="a01af1fc1acf012572b52cd31b71e9248"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>content</b> {}</td></tr>
+<tr class="memdesc:a01af1fc1acf012572b52cd31b71e9248"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d6/da1/a03180.html" title="A single Message.">Message</a> content. <br /></td></tr>
+<tr class="separator:a01af1fc1acf012572b52cd31b71e9248"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c873b8ee992fac51dba6db457850b90"><td class="memItemLeft" align="right" valign="top"><a id="a0c873b8ee992fac51dba6db457850b90" name="a0c873b8ee992fac51dba6db457850b90"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>customId</b> {}</td></tr>
+<tr class="memdesc:a0c873b8ee992fac51dba6db457850b90"><td class="mdescLeft">&#160;</td><td class="mdescRight">A developer-defined identifier for the component, max 100 characters. <br /></td></tr>
+<tr class="separator:a0c873b8ee992fac51dba6db457850b90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a99258e86d86a72a629f0964d588950"><td class="memItemLeft" align="right" valign="top"><a id="a4a99258e86d86a72a629f0964d588950" name="a4a99258e86d86a72a629f0964d588950"></a>
+std::vector&lt; <a class="el" href="../../d3/d81/a02284.html">EmbedData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>embeds</b> {}</td></tr>
+<tr class="memdesc:a4a99258e86d86a72a629f0964d588950"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d6/da1/a03180.html" title="A single Message.">Message</a> embeds. <br /></td></tr>
+<tr class="separator:a4a99258e86d86a72a629f0964d588950"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fee881eb6b71c953d49e2cffa645a9f"><td class="memItemLeft" align="right" valign="top"><a id="a9fee881eb6b71c953d49e2cffa645a9f" name="a9fee881eb6b71c953d49e2cffa645a9f"></a>
+std::vector&lt; <a class="el" href="../../d4/d8c/a02292.html">File</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>files</b> {}</td></tr>
+<tr class="memdesc:a9fee881eb6b71c953d49e2cffa645a9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Files for uploading. <br /></td></tr>
+<tr class="separator:a9fee881eb6b71c953d49e2cffa645a9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c2f590b6f7318cf4732343fbb9053bf"><td class="memItemLeft" align="right" valign="top"><a id="a9c2f590b6f7318cf4732343fbb9053bf" name="a9c2f590b6f7318cf4732343fbb9053bf"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>flags</b> { 0 }</td></tr>
+<tr class="memdesc:a9c2f590b6f7318cf4732343fbb9053bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flags. <br /></td></tr>
+<tr class="separator:a9c2f590b6f7318cf4732343fbb9053bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4bcd77c87df2c4381fad9f64364efa7"><td class="memItemLeft" align="right" valign="top"><a id="ad4bcd77c87df2c4381fad9f64364efa7" name="ad4bcd77c87df2c4381fad9f64364efa7"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>title</b> {}</td></tr>
+<tr class="memdesc:ad4bcd77c87df2c4381fad9f64364efa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The title of the popup modal. <br /></td></tr>
+<tr class="separator:ad4bcd77c87df2c4381fad9f64364efa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adefe6ecb515b8b70424e8121d81fd863"><td class="memItemLeft" align="right" valign="top"><a id="adefe6ecb515b8b70424e8121d81fd863" name="adefe6ecb515b8b70424e8121d81fd863"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>tts</b> { false }</td></tr>
+<tr class="memdesc:adefe6ecb515b8b70424e8121d81fd863"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is it TTS? <br /></td></tr>
+<tr class="separator:adefe6ecb515b8b70424e8121d81fd863"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following files:<ul>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a></li>
-<li><a class="el" href="../../d5/d72/a00803_source.html">DataParsingFunctions.cpp</a></li>
-<li><a class="el" href="../../d3/d60/a00818_source.html">FoundationEntities.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -178,7 +170,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>required</b> { false 
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dd/d32/a02636.html">ApplicationCommandOptionData</a></li>
+    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dd/d32/a02636.html">InteractionCallbackData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

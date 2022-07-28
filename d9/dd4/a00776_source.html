@@ -127,8 +127,8 @@ $(document).ready(function(){initNavTree('d9/dd4/a00776_source.html','../../'); 
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;<a class="code" href="../../d4/deb/a00710.html">discordcoreapi/FoundationEntities.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;<a class="code" href="../../d4/d9b/a00680.html">discordcoreapi/AudioDecoder.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/db6/a00692.html">discordcoreapi/CommandController.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;<a class="code" href="../../d5/d5b/a00695.html">discordcoreapi/Demuxer.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;<a class="code" href="../../d1/d87/a00689.html">discordcoreapi/CommandController.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;<a class="code" href="../../dd/d57/a00701.html">discordcoreapi/ErlPacker.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;<a class="code" href="../../d4/d6a/a00704.html">discordcoreapi/EventEntities.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../d5/de8/a00749.html">discordcoreapi/SSLClients.hpp</a>&gt;</span></div>
@@ -162,15 +162,15 @@ $(document).ready(function(){initNavTree('d9/dd4/a00776_source.html','../../'); 
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">class </span>DiscordCoreAPI_Dll WebSocketSSLShard : <span class="keyword">public</span> SSLClient, <span class="keyword">public</span> WebSocketMessageHandler {</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>      <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="../../d6/da5/a03652.html">DiscordCoreAPI::VoiceConnection</a>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="../../d9/dbd/a03604.html">DiscordCoreAPI::VoiceConnection</a>;</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keyword">friend</span> <span class="keyword">class </span>WebSocketMessageHandler;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="../../dc/dca/a03580.html">DiscordCoreAPI::BotUser</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="../../d5/d54/a03532.html">DiscordCoreAPI::BotUser</a>;</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keyword">friend</span> <span class="keyword">class </span>BaseSocketAgent;</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keyword">friend</span> <span class="keyword">class </span>YouTubeAPI;</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        WebSocketSSLShard() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        WebSocketSSLShard(<a class="code hl_class" href="../../d6/d33/a01992.html">DiscordCoreAPI::DiscordCoreClient</a>* theClient, std::queue&lt;DiscordCoreAPI::ConnectionPackage&gt;* connectionsNew, int32_t currentBaseSocketAgentNew,</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        WebSocketSSLShard(<a class="code hl_class" href="../../db/da1/a01944.html">DiscordCoreAPI::DiscordCoreClient</a>* theClient, std::queue&lt;DiscordCoreAPI::ConnectionPackage&gt;* connectionsNew, int32_t currentBaseSocketAgentNew,</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            int32_t currentShardNew, std::atomic_bool* doWeQuitNew) <span class="keyword">noexcept</span>;</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordtype">void</span> getVoiceConnectionData(<span class="keyword">const</span> VoiceConnectInitData&amp; doWeCollect) <span class="keyword">noexcept</span>;</div>
@@ -191,7 +191,7 @@ $(document).ready(function(){initNavTree('d9/dd4/a00776_source.html','../../'); 
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        std::unordered_map&lt;Snowflake, <a class="code hl_namespace" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a>::UnboundedMessageBlock&lt;VoiceConnectionData&gt;*&gt; voiceConnectionDataBufferMap{};</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        std::atomic&lt;WebSocketSSLShardState&gt; theWebSocketState{ WebSocketSSLShardState ::Connecting };</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        DiscordCoreAPI::StopWatch&lt;std::chrono::milliseconds&gt; heartBeatStopWatch{ 0ms };</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <a class="code hl_class" href="../../d6/d33/a01992.html">DiscordCoreAPI::DiscordCoreClient</a>* discordCoreClient{ <span class="keyword">nullptr</span> };</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <a class="code hl_class" href="../../db/da1/a01944.html">DiscordCoreAPI::DiscordCoreClient</a>* discordCoreClient{ <span class="keyword">nullptr</span> };</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        std::queue&lt;std::string&gt; processedMessages{};</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        VoiceConnectionData voiceConnectionData{};</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keywordtype">bool</span> haveWeReceivedHeartbeatAck{ <span class="keyword">true</span> };</div>
@@ -217,12 +217,12 @@ $(document).ready(function(){initNavTree('d9/dd4/a00776_source.html','../../'); 
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keyword">class </span>DiscordCoreAPI_Dll BaseSocketAgent {</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>      <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="../../d6/d33/a01992.html">DiscordCoreAPI::DiscordCoreClient</a>;</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="../../d6/da5/a03652.html">DiscordCoreAPI::VoiceConnection</a>;</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="../../dc/dca/a03580.html">DiscordCoreAPI::BotUser</a>;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="../../db/da1/a01944.html">DiscordCoreAPI::DiscordCoreClient</a>;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="../../d9/dbd/a03604.html">DiscordCoreAPI::VoiceConnection</a>;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="../../d5/d54/a03532.html">DiscordCoreAPI::BotUser</a>;</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <span class="keyword">friend</span> <span class="keyword">class </span>WebSocketSSLShard;</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        BaseSocketAgent(<a class="code hl_class" href="../../d6/d33/a01992.html">DiscordCoreAPI::DiscordCoreClient</a>* discordCoreClientNew, std::atomic_bool* doWeQuitNew, int32_t currentBaseSocketAgentNew) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        BaseSocketAgent(<a class="code hl_class" href="../../db/da1/a01944.html">DiscordCoreAPI::DiscordCoreClient</a>* discordCoreClientNew, std::atomic_bool* doWeQuitNew, int32_t currentBaseSocketAgentNew) <span class="keyword">noexcept</span>;</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        <span class="keywordtype">void</span> connectVoiceChannel(VoiceConnectInitData theData) <span class="keyword">noexcept</span>;</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
@@ -235,7 +235,7 @@ $(document).ready(function(){initNavTree('d9/dd4/a00776_source.html','../../'); 
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>      protected:</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        <a class="code hl_namespace" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a>::StopWatch&lt;std::chrono::milliseconds&gt; theVCStopWatch{ 550ms };</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        std::unordered_map&lt;int32_t, std::unique_ptr&lt;WebSocketSSLShard&gt;&gt; sslShards{};</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <a class="code hl_class" href="../../d6/d33/a01992.html">DiscordCoreAPI::DiscordCoreClient</a>* discordCoreClient{ <span class="keyword">nullptr</span> };</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <a class="code hl_class" href="../../db/da1/a01944.html">DiscordCoreAPI::DiscordCoreClient</a>* discordCoreClient{ <span class="keyword">nullptr</span> };</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        std::queue&lt;DiscordCoreAPI::ConnectionPackage&gt; connections{};</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        std::unique_ptr&lt;std::jthread&gt; taskThread{ <span class="keyword">nullptr</span> };</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        std::queue&lt;VoiceConnectInitData&gt; voiceConnections{};</div>
@@ -257,8 +257,8 @@ $(document).ready(function(){initNavTree('d9/dd4/a00776_source.html','../../'); 
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    };</div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>}<span class="comment">// namespace DiscordCoreInternal</span></div>
-<div class="ttc" id="aa00680_html"><div class="ttname"><a href="../../d4/d9b/a00680.html">AudioDecoder.hpp</a></div></div>
-<div class="ttc" id="aa00692_html"><div class="ttname"><a href="../../d0/db6/a00692.html">CommandController.hpp</a></div></div>
+<div class="ttc" id="aa00689_html"><div class="ttname"><a href="../../d1/d87/a00689.html">CommandController.hpp</a></div></div>
+<div class="ttc" id="aa00695_html"><div class="ttname"><a href="../../d5/d5b/a00695.html">Demuxer.hpp</a></div></div>
 <div class="ttc" id="aa00701_html"><div class="ttname"><a href="../../dd/d57/a00701.html">ErlPacker.hpp</a></div></div>
 <div class="ttc" id="aa00704_html"><div class="ttname"><a href="../../d4/d6a/a00704.html">EventEntities.hpp</a></div></div>
 <div class="ttc" id="aa00710_html"><div class="ttname"><a href="../../d4/deb/a00710.html">FoundationEntities.hpp</a></div></div>
@@ -268,9 +268,9 @@ $(document).ready(function(){initNavTree('d9/dd4/a00776_source.html','../../'); 
 <div class="ttc" id="aa00893_html_a7db510a888c180dab0d18c694308c066ae321c53b354930ba96f0243e652df458"><div class="ttname"><a href="../../dc/d2c/a00893.html#a7db510a888c180dab0d18c694308c066ae321c53b354930ba96f0243e652df458">DiscordCoreAPI::VoiceActiveState::Connecting</a></div><div class="ttdeci">@ Connecting</div><div class="ttdoc">Connecting - it hasn't started or it's reconnecting.</div></div>
 <div class="ttc" id="aa00893_html_afe15cb95a487dea355bdfba55724535da7e98b13b3e8895e0d9b06562f1fbf3bd"><div class="ttname"><a href="../../dc/d2c/a00893.html#afe15cb95a487dea355bdfba55724535da7e98b13b3e8895e0d9b06562f1fbf3bd">DiscordCoreAPI::VoiceConnectionState::Sending_Identify</a></div><div class="ttdeci">@ Sending_Identify</div><div class="ttdoc">Sending the identify payload.</div></div>
 <div class="ttc" id="aa00893_html_afe15cb95a487dea355bdfba55724535da90f04d33ff20d8c558d7fc2d785a715b"><div class="ttname"><a href="../../dc/d2c/a00893.html#afe15cb95a487dea355bdfba55724535da90f04d33ff20d8c558d7fc2d785a715b">DiscordCoreAPI::VoiceConnectionState::Collecting_Hello</a></div><div class="ttdeci">@ Collecting_Hello</div><div class="ttdoc">Collecting the client hello.</div></div>
-<div class="ttc" id="aa01992_html"><div class="ttname"><a href="../../d6/d33/a01992.html">DiscordCoreAPI::DiscordCoreClient</a></div><div class="ttdoc">DiscordCoreClient - The main class for this library.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbb/a00698_source.html#l00075">DiscordCoreClient.hpp:75</a></div></div>
-<div class="ttc" id="aa03580_html"><div class="ttname"><a href="../../dc/dca/a03580.html">DiscordCoreAPI::BotUser</a></div><div class="ttdoc">A type of User, to represent the Bot and some of its associated endpoints.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d2c/a00764_source.html#l00123">UserEntities.hpp:123</a></div></div>
-<div class="ttc" id="aa03652_html"><div class="ttname"><a href="../../d6/da5/a03652.html">DiscordCoreAPI::VoiceConnection</a></div><div class="ttdoc">VoiceConnection class - represents the connection to a given voice Channel.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d7e/a00770_source.html#l00078">VoiceConnection.hpp:78</a></div></div>
+<div class="ttc" id="aa01944_html"><div class="ttname"><a href="../../db/da1/a01944.html">DiscordCoreAPI::DiscordCoreClient</a></div><div class="ttdoc">DiscordCoreClient - The main class for this library.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbb/a00698_source.html#l00075">DiscordCoreClient.hpp:75</a></div></div>
+<div class="ttc" id="aa03532_html"><div class="ttname"><a href="../../d5/d54/a03532.html">DiscordCoreAPI::BotUser</a></div><div class="ttdoc">A type of User, to represent the Bot and some of its associated endpoints.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d2c/a00764_source.html#l00123">UserEntities.hpp:123</a></div></div>
+<div class="ttc" id="aa03604_html"><div class="ttname"><a href="../../d9/dbd/a03604.html">DiscordCoreAPI::VoiceConnection</a></div><div class="ttdoc">VoiceConnection class - represents the connection to a given voice Channel.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d7e/a00770_source.html#l00078">VoiceConnection.hpp:78</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->

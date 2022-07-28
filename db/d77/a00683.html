@@ -102,30 +102,70 @@ $(document).ready(function(){initNavTree('db/d77/a00683.html','../../'); initRes
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">AudioEncoder.hpp File Reference</div></div>
+  <div class="summary">
+<a href="#nested-classes">Classes and Structures</a> &#124;
+<a href="#namespaces">Namespaces</a>  </div>
+  <div class="headertitle"><div class="title">AutoModerationEntities.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="../../d4/deb/a00710_source.html">discordcoreapi/FoundationEntities.hpp</a>&gt;</code><br />
-<code>#include &lt;opus/opus.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d0/db6/a00692_source.html">discordcoreapi/CoRoutine.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../db/d7c/a00722_source.html">discordcoreapi/Https.hpp</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for AudioEncoder.hpp:</div>
+Include dependency graph for AutoModerationEntities.hpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d3/db4/a00684.svg" width="2299" height="276"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d3/db4/a00684.svg" width="2980" height="650"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/df1/a00685.svg" width="1982" height="486"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/df1/a00685.svg" width="1914" height="336"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 </div>
 <p><a href="../../db/d77/a00683_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes and Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dc4/a01816.html">DiscordCoreAPI::AutoModerationActionExecutionEventData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For when an auto-moderation-rule is executed.  <a href="../../d6/dc4/a01816.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d92/a01796.html">DiscordCoreAPI::AutoModerationRule</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an auto-moderation-rule.  <a href="../../d3/d92/a01796.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d79/a01828.html">DiscordCoreAPI::AutoModerationRules</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An interface class for the <a class="el" href="../../d3/d92/a01796.html" title="Represents an auto-moderation-rule.">AutoModerationRule</a> related Discord endpoints.  <a href="../../dc/d79/a01828.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d5b/a01812.html">DiscordCoreAPI::CreateAutoModerationRuleData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For creating an auto-moderation-rule.  <a href="../../dc/d5b/a01812.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d77/a01824.html">DiscordCoreAPI::DeleteAutoModerationRuleData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For deleting an auto-moderation-rule.  <a href="../../d2/d77/a01824.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d02/a01808.html">DiscordCoreAPI::GetAutoModerationRuleData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For collecting an auto-moderation-rule for a particular <a class="el" href="../../d3/d92/a01796.html" title="Represents an auto-moderation-rule.">AutoModerationRule</a>.  <a href="../../d7/d02/a01808.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dec/a01804.html">DiscordCoreAPI::ListAutoModerationRulesForGuildData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For listing all of the auto-moderation-rules for a particular <a class="el" href="../../d2/d0c/a02932.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>.  <a href="../../dc/dec/a01804.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dd6/a01820.html">DiscordCoreAPI::ModifyAutoModerationRuleData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For modifying an auto-moderation-rule.  <a href="../../d5/dd6/a01820.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:dc/d2c/a00893"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></td></tr>
+<tr class="memdesc:dc/d2c/a00893"><td class="mdescLeft">&#160;</td><td class="mdescRight">The main namespace for this library. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_856524284ebe840938865dc061f982fb.html">Include</a></li><li class="navelem"><a class="el" href="../../dir_9b16bdde4f6a21e020962bfdb0aa5092.html">discordcoreapi</a></li><li class="navelem"><a class="el" href="../../db/d77/a00683.html">AudioEncoder.hpp</a></li>
+    <li class="navelem"><a class="el" href="../../dir_856524284ebe840938865dc061f982fb.html">Include</a></li><li class="navelem"><a class="el" href="../../dir_9b16bdde4f6a21e020962bfdb0aa5092.html">discordcoreapi</a></li><li class="navelem"><a class="el" href="../../db/d77/a00683.html">AutoModerationEntities.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

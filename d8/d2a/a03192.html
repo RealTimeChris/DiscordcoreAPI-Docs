@@ -103,52 +103,69 @@ $(document).ready(function(){initNavTree('d8/d2a/a03192.html','../../'); initRes
 
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="../../d1/d5f/a03189.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::CreateMessageData Class Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::MessageCollector Class Reference<div class="ingroups"><a class="el" href="../../d7/d46/a00890.html">Utilities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For creating a <a class="el" href="../../d6/d63/a03228.html" title="A single Message.">Message</a>.  
+<p><a class="el" href="../../d8/d2a/a03192.html" title="MessageCollector, for collecting Messages from a Channel.">MessageCollector</a>, for collecting <a class="el" href="../../dc/ddd/a03196.html" title="An interface class for the Message related Discord endpoints.">Messages</a> from a <a class="el" href="../../dc/d7f/a01884.html" title="A Channel object.">Channel</a>.  
  <a href="../../d8/d2a/a03192.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d6/dc0/a00734_source.html">MessageEntities.hpp</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for DiscordCoreAPI::CreateMessageData:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d1/d45/a03191.svg" width="274" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_methods_a02792"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a02792')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../de/db6/a02792.html">DiscordCoreAPI::MessageResponseBase</a></td></tr>
-<tr class="memitem:aabf78318ecfa0730456ec0ecfe0b8abb inherit pub_methods_a02792"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/db6/a02792.html">MessageResponseBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/db6/a02792.html#aabf78318ecfa0730456ec0ecfe0b8abb">addAllowedMentions</a> (<a class="el" href="../../d9/d5b/a02668.html">AllowedMentionsData</a> dataPackage)</td></tr>
-<tr class="memdesc:aabf78318ecfa0730456ec0ecfe0b8abb inherit pub_methods_a02792"><td class="mdescLeft">&#160;</td><td class="mdescRight">For setting the allowable mentions in a response.  <a href="../../de/db6/a02792.html#aabf78318ecfa0730456ec0ecfe0b8abb">More...</a><br /></td></tr>
-<tr class="separator:aabf78318ecfa0730456ec0ecfe0b8abb inherit pub_methods_a02792"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af70945eeb5934a2c7286aa81408c25b5 inherit pub_methods_a02792"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/db6/a02792.html">MessageResponseBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/db6/a02792.html#af70945eeb5934a2c7286aa81408c25b5">addButton</a> (bool disabled, const std::string &amp;customIdNew, const std::string &amp;buttonLabel, <a class="el" href="../../de/dfc/a00891.html#gae05b1bfe988b0c2989b7bed279c9c95c">ButtonStyle</a> buttonStyle, const std::string &amp;emojiName=&quot;&quot;, <a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> emojiId=0, const std::string &amp;url=&quot;&quot;)</td></tr>
-<tr class="memdesc:af70945eeb5934a2c7286aa81408c25b5 inherit pub_methods_a02792"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a button to the response <a class="el" href="../../d6/d63/a03228.html" title="A single Message.">Message</a>.  <a href="../../de/db6/a02792.html#af70945eeb5934a2c7286aa81408c25b5">More...</a><br /></td></tr>
-<tr class="separator:af70945eeb5934a2c7286aa81408c25b5 inherit pub_methods_a02792"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb024c85aace9e7ba512d3d7614f0fd8 inherit pub_methods_a02792"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/db6/a02792.html">MessageResponseBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/db6/a02792.html#acb024c85aace9e7ba512d3d7614f0fd8">addComponentRow</a> (<a class="el" href="../../d5/d6a/a02680.html">ActionRowData</a> dataPackage)</td></tr>
-<tr class="memdesc:acb024c85aace9e7ba512d3d7614f0fd8 inherit pub_methods_a02792"><td class="mdescLeft">&#160;</td><td class="mdescRight">For setting the components in a response.  <a href="../../de/db6/a02792.html#acb024c85aace9e7ba512d3d7614f0fd8">More...</a><br /></td></tr>
-<tr class="separator:acb024c85aace9e7ba512d3d7614f0fd8 inherit pub_methods_a02792"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a097c56971fcac19aebf3d03c4defd696 inherit pub_methods_a02792"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/db6/a02792.html">MessageResponseBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/db6/a02792.html#a097c56971fcac19aebf3d03c4defd696">addContent</a> (const std::string &amp;dataPackage)</td></tr>
-<tr class="memdesc:a097c56971fcac19aebf3d03c4defd696 inherit pub_methods_a02792"><td class="mdescLeft">&#160;</td><td class="mdescRight">For setting the <a class="el" href="../../d6/d63/a03228.html" title="A single Message.">Message</a> content in a response.  <a href="../../de/db6/a02792.html#a097c56971fcac19aebf3d03c4defd696">More...</a><br /></td></tr>
-<tr class="separator:a097c56971fcac19aebf3d03c4defd696 inherit pub_methods_a02792"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7836f5e0e2be3ddad71b6fbba81510c5 inherit pub_methods_a02792"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/db6/a02792.html">MessageResponseBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/db6/a02792.html#a7836f5e0e2be3ddad71b6fbba81510c5">addFile</a> (<a class="el" href="../../df/d49/a02340.html">File</a> theFile)</td></tr>
-<tr class="memdesc:a7836f5e0e2be3ddad71b6fbba81510c5 inherit pub_methods_a02792"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a file to the current collection of files for this message response.  <a href="../../de/db6/a02792.html#a7836f5e0e2be3ddad71b6fbba81510c5">More...</a><br /></td></tr>
-<tr class="separator:a7836f5e0e2be3ddad71b6fbba81510c5 inherit pub_methods_a02792"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4fe2258d1df3f709e009eafb363e7a52 inherit pub_methods_a02792"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/db6/a02792.html">MessageResponseBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/db6/a02792.html#a4fe2258d1df3f709e009eafb363e7a52">addMessageEmbed</a> (<a class="el" href="../../d1/d03/a02332.html">EmbedData</a> dataPackage)</td></tr>
-<tr class="memdesc:a4fe2258d1df3f709e009eafb363e7a52 inherit pub_methods_a02792"><td class="mdescLeft">&#160;</td><td class="mdescRight">For setting the embeds in a response.  <a href="../../de/db6/a02792.html#a4fe2258d1df3f709e009eafb363e7a52">More...</a><br /></td></tr>
-<tr class="separator:a4fe2258d1df3f709e009eafb363e7a52 inherit pub_methods_a02792"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4007c6bc0c1798d8bb824c1c6708a16d inherit pub_methods_a02792"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/db6/a02792.html">MessageResponseBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/db6/a02792.html#a4007c6bc0c1798d8bb824c1c6708a16d">addModal</a> (const std::string &amp;topTitleNew, const std::string &amp;topCustomIdNew, const std::string &amp;titleNew, const std::string &amp;customIdNew, bool required, int32_t minLength, int32_t maxLength, <a class="el" href="../../de/dfc/a00891.html#ga24a639fa950fb1c20605b41b9adfaa2c">TextInputStyle</a> inputStyle, const std::string &amp;label=&quot;&quot;, const std::string &amp;placeholder=&quot;&quot;)</td></tr>
-<tr class="memdesc:a4007c6bc0c1798d8bb824c1c6708a16d inherit pub_methods_a02792"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a modal to the response <a class="el" href="../../d6/d63/a03228.html" title="A single Message.">Message</a>.  <a href="../../de/db6/a02792.html#a4007c6bc0c1798d8bb824c1c6708a16d">More...</a><br /></td></tr>
-<tr class="separator:a4007c6bc0c1798d8bb824c1c6708a16d inherit pub_methods_a02792"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae67eca92c96c14b3dcc6373dd86429af inherit pub_methods_a02792"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/db6/a02792.html">MessageResponseBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/db6/a02792.html#ae67eca92c96c14b3dcc6373dd86429af">addSelectMenu</a> (bool disabled, const std::string &amp;customIdNew, std::vector&lt; <a class="el" href="../../d0/d9f/a02672.html">SelectOptionData</a> &gt; options, const std::string &amp;placeholder, int32_t maxValues, int32_t minValues)</td></tr>
-<tr class="memdesc:ae67eca92c96c14b3dcc6373dd86429af inherit pub_methods_a02792"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a select-menu to the response <a class="el" href="../../d6/d63/a03228.html" title="A single Message.">Message</a>.  <a href="../../de/db6/a02792.html#ae67eca92c96c14b3dcc6373dd86429af">More...</a><br /></td></tr>
-<tr class="separator:ae67eca92c96c14b3dcc6373dd86429af inherit pub_methods_a02792"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86725bc302b3d73c2cc149f7b87a42f9 inherit pub_methods_a02792"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/db6/a02792.html">MessageResponseBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/db6/a02792.html#a86725bc302b3d73c2cc149f7b87a42f9">setTTSStatus</a> (bool enabledTTs)</td></tr>
-<tr class="memdesc:a86725bc302b3d73c2cc149f7b87a42f9 inherit pub_methods_a02792"><td class="mdescLeft">&#160;</td><td class="mdescRight">For setting the tts status of a response.  <a href="../../de/db6/a02792.html#a86725bc302b3d73c2cc149f7b87a42f9">More...</a><br /></td></tr>
-<tr class="separator:a86725bc302b3d73c2cc149f7b87a42f9 inherit pub_methods_a02792"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:aa5712e643f8c09387ca9892a536e379a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/dd0/a01912.html">CoRoutine</a>&lt; <a class="el" href="../../da/dfb/a03188.html">MessageCollectorReturnData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d2a/a03192.html#aa5712e643f8c09387ca9892a536e379a">collectMessages</a> (int32_t quantityToCollect, int32_t msToCollectForNew, <a class="el" href="../../d7/d46/a00890.html#ga86831633c56c590266071aafe18bd657">MessageFilter</a> messageFilter)</td></tr>
+<tr class="memdesc:aa5712e643f8c09387ca9892a536e379a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin waiting for <a class="el" href="../../dc/ddd/a03196.html" title="An interface class for the Message related Discord endpoints.">Messages</a>.  <a href="../../d8/d2a/a03192.html#aa5712e643f8c09387ca9892a536e379a">More...</a><br /></td></tr>
+<tr class="separator:aa5712e643f8c09387ca9892a536e379a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa5712e643f8c09387ca9892a536e379a" name="aa5712e643f8c09387ca9892a536e379a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5712e643f8c09387ca9892a536e379a">&#9670;&nbsp;</a></span>collectMessages()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/dd0/a01912.html">CoRoutine</a>&lt; <a class="el" href="../../da/dfb/a03188.html">MessageCollectorReturnData</a> &gt; DiscordCoreAPI::MessageCollector::collectMessages </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>quantityToCollect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>msToCollectForNew</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d7/d46/a00890.html#ga86831633c56c590266071aafe18bd657">MessageFilter</a>&#160;</td>
+          <td class="paramname"><em>messageFilter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Begin waiting for <a class="el" href="../../dc/ddd/a03196.html" title="An interface class for the Message related Discord endpoints.">Messages</a>.</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">quantityToCollect</td><td>Maximum quantity of <a class="el" href="../../dc/ddd/a03196.html" title="An interface class for the Message related Discord endpoints.">Messages</a> to collect before returning the results. </td></tr>
+    <tr><td class="paramname">msToCollectForNew</td><td>Maximum number of std::chrono::milliseconds to wait for <a class="el" href="../../dc/ddd/a03196.html" title="An interface class for the Message related Discord endpoints.">Messages</a> before returning the results. </td></tr>
+    <tr><td class="paramname">messageFilter</td><td>A filter function to apply to new <a class="el" href="../../dc/ddd/a03196.html" title="An interface class for the Message related Discord endpoints.">Messages</a>, where returning "true" from the function results in a <a class="el" href="../../d6/da1/a03180.html" title="A single Message.">Message</a> being stored. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../da/dfb/a03188.html" title="MessageCollectorReturnData responseData.">MessageCollectorReturnData</a> structure. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../df/de8/a00839_source.html#l00169">169</a> of file <a class="el" href="../../df/de8/a00839_source.html">MessageEntities.cpp</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="../../d6/dc0/a00734_source.html">MessageEntities.hpp</a></li>
 <li><a class="el" href="../../df/de8/a00839_source.html">MessageEntities.cpp</a></li>
@@ -159,7 +176,7 @@ Additional Inherited Members</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d8/d2a/a03192.html">CreateMessageData</a></li>
+    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d8/d2a/a03192.html">MessageCollector</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

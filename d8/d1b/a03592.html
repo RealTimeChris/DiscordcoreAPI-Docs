@@ -103,39 +103,252 @@ $(document).ready(function(){initNavTree('d8/d1b/a03592.html','../../'); initRes
 
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Public Data Members</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="../../d1/d3c/a03589.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreInternal::UpdatePresenceData Struct Reference</div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::UnboundedMessageBlock&lt; ObjectType &gt; Class Template Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For updating a User's presence.  
+<p>A thread-safe messaging block for data-structures.  
  <a href="../../d8/d1b/a03592.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d5/dae/a00767_source.html">Utilities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Public Data Members</h2></td></tr>
-<tr class="memitem:a9df6cf3a14c8eb16b2acd0a6dfd6e040"><td class="memItemLeft" align="right" valign="top"><a id="a9df6cf3a14c8eb16b2acd0a6dfd6e040" name="a9df6cf3a14c8eb16b2acd0a6dfd6e040"></a>
-std::vector&lt; <a class="el" href="../../d6/d24/a02536.html">DiscordCoreAPI::ActivityData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>activities</b> {}</td></tr>
-<tr class="memdesc:a9df6cf3a14c8eb16b2acd0a6dfd6e040"><td class="mdescLeft">&#160;</td><td class="mdescRight">A vector of activities. <br /></td></tr>
-<tr class="separator:a9df6cf3a14c8eb16b2acd0a6dfd6e040"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7f4c4ce784dae5f362e479eb4fc2933"><td class="memItemLeft" align="right" valign="top"><a id="ab7f4c4ce784dae5f362e479eb4fc2933" name="ab7f4c4ce784dae5f362e479eb4fc2933"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>afk</b> { false }</td></tr>
-<tr class="memdesc:ab7f4c4ce784dae5f362e479eb4fc2933"><td class="mdescLeft">&#160;</td><td class="mdescRight">Are we afk. <br /></td></tr>
-<tr class="separator:ab7f4c4ce784dae5f362e479eb4fc2933"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc3520c73ab80529ad93165f62353c69"><td class="memItemLeft" align="right" valign="top"><a id="adc3520c73ab80529ad93165f62353c69" name="adc3520c73ab80529ad93165f62353c69"></a>
-int64_t&#160;</td><td class="memItemRight" valign="bottom"><b>since</b> { 0 }</td></tr>
-<tr class="memdesc:adc3520c73ab80529ad93165f62353c69"><td class="mdescLeft">&#160;</td><td class="mdescRight">When was the activity started? <br /></td></tr>
-<tr class="separator:adc3520c73ab80529ad93165f62353c69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5abf212bfef01a19c8913873f590a709"><td class="memItemLeft" align="right" valign="top"><a id="a5abf212bfef01a19c8913873f590a709" name="a5abf212bfef01a19c8913873f590a709"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>status</b> {}</td></tr>
-<tr class="memdesc:a5abf212bfef01a19c8913873f590a709"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current status. <br /></td></tr>
-<tr class="separator:a5abf212bfef01a19c8913873f590a709"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a1096795a528f8831115b7b5184f591a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d1b/a03592.html#a1096795a528f8831115b7b5184f591a6">clearContents</a> ()</td></tr>
+<tr class="memdesc:a1096795a528f8831115b7b5184f591a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the contents of the messaging block.  <a href="../../d8/d1b/a03592.html#a1096795a528f8831115b7b5184f591a6">More...</a><br /></td></tr>
+<tr class="separator:a1096795a528f8831115b7b5184f591a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a154a9ebfea506914823497700ec353cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d1b/a03592.html#a154a9ebfea506914823497700ec353cd">send</a> (const ObjectType &amp;&amp;theObject)</td></tr>
+<tr class="memdesc:a154a9ebfea506914823497700ec353cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends an object of type ObjectType to the "recipient".  <a href="../../d8/d1b/a03592.html#a154a9ebfea506914823497700ec353cd">More...</a><br /></td></tr>
+<tr class="separator:a154a9ebfea506914823497700ec353cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2c1b708bd06fc88280c70946e94ce19"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d1b/a03592.html#ae2c1b708bd06fc88280c70946e94ce19">send</a> (const ObjectType &amp;theObject)</td></tr>
+<tr class="memdesc:ae2c1b708bd06fc88280c70946e94ce19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends an object of type ObjectType to the "recipient".  <a href="../../d8/d1b/a03592.html#ae2c1b708bd06fc88280c70946e94ce19">More...</a><br /></td></tr>
+<tr class="separator:ae2c1b708bd06fc88280c70946e94ce19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9e72ad08e2c87db91c9eb269483f8c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d1b/a03592.html#ae9e72ad08e2c87db91c9eb269483f8c2">send</a> (ObjectType &amp;&amp;theObject)</td></tr>
+<tr class="memdesc:ae9e72ad08e2c87db91c9eb269483f8c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends an object of type ObjectType to the "recipient".  <a href="../../d8/d1b/a03592.html#ae9e72ad08e2c87db91c9eb269483f8c2">More...</a><br /></td></tr>
+<tr class="separator:ae9e72ad08e2c87db91c9eb269483f8c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0080e5f3795ea25b51b1cc89048217e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d1b/a03592.html#af0080e5f3795ea25b51b1cc89048217e">send</a> (ObjectType &amp;theObject)</td></tr>
+<tr class="memdesc:af0080e5f3795ea25b51b1cc89048217e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends an object of type ObjectType to the "recipient".  <a href="../../d8/d1b/a03592.html#af0080e5f3795ea25b51b1cc89048217e">More...</a><br /></td></tr>
+<tr class="separator:af0080e5f3795ea25b51b1cc89048217e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5845dd8c3af6c44112754d450ebabdbf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d1b/a03592.html#a5845dd8c3af6c44112754d450ebabdbf">tryReceive</a> (ObjectType &amp;theObject)</td></tr>
+<tr class="memdesc:a5845dd8c3af6c44112754d450ebabdbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tries to receive an object of type ObjectType to be placed into a reference.  <a href="../../d8/d1b/a03592.html#a5845dd8c3af6c44112754d450ebabdbf">More...</a><br /></td></tr>
+<tr class="separator:a5845dd8c3af6c44112754d450ebabdbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following files:<ul>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1096795a528f8831115b7b5184f591a6" name="a1096795a528f8831115b7b5184f591a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1096795a528f8831115b7b5184f591a6">&#9670;&nbsp;</a></span>clearContents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Copyable ObjectType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d8/d1b/a03592.html">DiscordCoreAPI::UnboundedMessageBlock</a>&lt; ObjectType &gt;::clearContents </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Clears the contents of the messaging block. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d5/dae/a00767_source.html#l01089">1089</a> of file <a class="el" href="../../d5/dae/a00767_source.html">Utilities.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a154a9ebfea506914823497700ec353cd" name="a154a9ebfea506914823497700ec353cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a154a9ebfea506914823497700ec353cd">&#9670;&nbsp;</a></span>send() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Copyable ObjectType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d8/d1b/a03592.html">DiscordCoreAPI::UnboundedMessageBlock</a>&lt; ObjectType &gt;::send </td>
+          <td>(</td>
+          <td class="paramtype">const ObjectType &amp;&amp;&#160;</td>
+          <td class="paramname"><em>theObject</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Sends an object of type ObjectType to the "recipient".</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">theObject</td><td>An object of ObjectType. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d5/dae/a00767_source.html#l01062">1062</a> of file <a class="el" href="../../d5/dae/a00767_source.html">Utilities.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ae2c1b708bd06fc88280c70946e94ce19" name="ae2c1b708bd06fc88280c70946e94ce19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2c1b708bd06fc88280c70946e94ce19">&#9670;&nbsp;</a></span>send() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Copyable ObjectType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d8/d1b/a03592.html">DiscordCoreAPI::UnboundedMessageBlock</a>&lt; ObjectType &gt;::send </td>
+          <td>(</td>
+          <td class="paramtype">const ObjectType &amp;&#160;</td>
+          <td class="paramname"><em>theObject</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Sends an object of type ObjectType to the "recipient".</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">theObject</td><td>An object of ObjectType. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d5/dae/a00767_source.html#l01076">1076</a> of file <a class="el" href="../../d5/dae/a00767_source.html">Utilities.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ae9e72ad08e2c87db91c9eb269483f8c2" name="ae9e72ad08e2c87db91c9eb269483f8c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9e72ad08e2c87db91c9eb269483f8c2">&#9670;&nbsp;</a></span>send() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Copyable ObjectType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d8/d1b/a03592.html">DiscordCoreAPI::UnboundedMessageBlock</a>&lt; ObjectType &gt;::send </td>
+          <td>(</td>
+          <td class="paramtype">ObjectType &amp;&amp;&#160;</td>
+          <td class="paramname"><em>theObject</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Sends an object of type ObjectType to the "recipient".</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">theObject</td><td>An object of ObjectType. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d5/dae/a00767_source.html#l01069">1069</a> of file <a class="el" href="../../d5/dae/a00767_source.html">Utilities.hpp</a>.</p>
+
+</div>
+</div>
+<a id="af0080e5f3795ea25b51b1cc89048217e" name="af0080e5f3795ea25b51b1cc89048217e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0080e5f3795ea25b51b1cc89048217e">&#9670;&nbsp;</a></span>send() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Copyable ObjectType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d8/d1b/a03592.html">DiscordCoreAPI::UnboundedMessageBlock</a>&lt; ObjectType &gt;::send </td>
+          <td>(</td>
+          <td class="paramtype">ObjectType &amp;&#160;</td>
+          <td class="paramname"><em>theObject</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Sends an object of type ObjectType to the "recipient".</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">theObject</td><td>An object of ObjectType. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d5/dae/a00767_source.html#l01083">1083</a> of file <a class="el" href="../../d5/dae/a00767_source.html">Utilities.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a5845dd8c3af6c44112754d450ebabdbf" name="a5845dd8c3af6c44112754d450ebabdbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5845dd8c3af6c44112754d450ebabdbf">&#9670;&nbsp;</a></span>tryReceive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Copyable ObjectType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="../../d8/d1b/a03592.html">DiscordCoreAPI::UnboundedMessageBlock</a>&lt; ObjectType &gt;::tryReceive </td>
+          <td>(</td>
+          <td class="paramtype">ObjectType &amp;&#160;</td>
+          <td class="paramname"><em>theObject</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Tries to receive an object of type ObjectType to be placed into a reference.</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">theObject</td><td>A reference of type ObjectType for placing the potentially received object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool A bool, denoting whether or not we received an object. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d5/dae/a00767_source.html#l01097">1097</a> of file <a class="el" href="../../d5/dae/a00767_source.html">Utilities.hpp</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="../../d5/dae/a00767_source.html">Utilities.hpp</a></li>
-<li><a class="el" href="../../d3/d60/a00818_source.html">FoundationEntities.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -143,7 +356,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>status</b> {}<
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>DiscordCoreInternal</b></li><li class="navelem"><a class="el" href="../../d8/d1b/a03592.html">UpdatePresenceData</a></li>
+    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d8/d1b/a03592.html">UnboundedMessageBlock</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

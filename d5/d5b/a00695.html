@@ -102,74 +102,34 @@ $(document).ready(function(){initNavTree('d5/d5b/a00695.html','../../'); initRes
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#nested-classes">Classes and Structures</a> &#124;
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
-  <div class="headertitle"><div class="title">CoRoutine.hpp File Reference</div></div>
+  <div class="headertitle"><div class="title">Demuxer.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="../../d4/deb/a00710_source.html">discordcoreapi/FoundationEntities.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="../../d3/d4f/a00761_source.html">discordcoreapi/ThreadPool.hpp</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="../../d4/d6a/a00704_source.html">discordcoreapi/EventEntities.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d4/deb/a00710_source.html">discordcoreapi/FoundationEntities.hpp</a>&gt;</code><br />
+<code>#include &lt;opus/opus.h&gt;</code><br />
+<code>#include &lt;opus/opus_multistream.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for CoRoutine.hpp:</div>
+Include dependency graph for Demuxer.hpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/d7d/a00696.svg" width="2891" height="575"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/d7d/a00696.svg" width="2418" height="351"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d2/d74/a00697.svg" width="3667" height="784"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d2/d74/a00697.svg" width="2228" height="710"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 </div>
 <p><a href="../../d5/d5b/a00695_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes and Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d9d/a01972.html">DiscordCoreAPI::CoRoutine&lt; ReturnType &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="../../db/d9d/a01972.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> - representing a potentially asynchronous operation/function.  <a href="../../db/d9d/a01972.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d70/a01980.html">DiscordCoreAPI::CoRoutine&lt; void &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="../../db/d9d/a01972.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> - representing a potentially asynchronous operation/function.  <a href="../../d5/d70/a01980.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d90/a01964.html">DiscordCoreAPI::CoRoutineError</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An error type for CoRoutines.  <a href="../../d6/d90/a01964.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/da1/a01988.html">DiscordCoreAPI::NewThreadAwaiter&lt; ReturnType &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An awaitable that can be used to launch the <a class="el" href="../../db/d9d/a01972.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> onto a new thread - as well as return the handle for stoppping its execution.  <a href="../../d5/da1/a01988.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:dc/d2c/a00893"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></td></tr>
-<tr class="memdesc:dc/d2c/a00893"><td class="mdescLeft">&#160;</td><td class="mdescRight">The main namespace for this library. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:ga422a91ba942835ea1809a91d1fe1e1d5"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d46/a00890.html#ga422a91ba942835ea1809a91d1fe1e1d5">DiscordCoreAPI::CoRoutineStatus</a> { <a class="el" href="../../d7/d46/a00890.html#gga422a91ba942835ea1809a91d1fe1e1d5ae599161956d626eda4cb0a5ffb85271c">DiscordCoreAPI::CoRoutineStatus::Idle</a> = 0
-, <a class="el" href="../../d7/d46/a00890.html#gga422a91ba942835ea1809a91d1fe1e1d5a5bda814c4aedb126839228f1a3d92f09">DiscordCoreAPI::CoRoutineStatus::Running</a> = 1
-, <a class="el" href="../../d7/d46/a00890.html#gga422a91ba942835ea1809a91d1fe1e1d5aae94f80b3ce82062a5dd7815daa04f9d">DiscordCoreAPI::CoRoutineStatus::Complete</a> = 2
-, <a class="el" href="../../d7/d46/a00890.html#gga422a91ba942835ea1809a91d1fe1e1d5aa149e85a44aeec9140e92733d9ed694e">DiscordCoreAPI::CoRoutineStatus::Cancelled</a> = 3
- }</td></tr>
-<tr class="memdesc:ga422a91ba942835ea1809a91d1fe1e1d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current status of the associated CoRoutine.  <a href="../../d7/d46/a00890.html#ga422a91ba942835ea1809a91d1fe1e1d5">More...</a><br /></td></tr>
-<tr class="separator:ga422a91ba942835ea1809a91d1fe1e1d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:ga7cf0823c4aaed2bf49257a8f2ccd053f"><td class="memTemplParams" colspan="2">template&lt;typename ReturnType &gt; </td></tr>
-<tr class="memitem:ga7cf0823c4aaed2bf49257a8f2ccd053f"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d7/d46/a00890.html#ga7cf0823c4aaed2bf49257a8f2ccd053f">DiscordCoreAPI::NewThreadAwaitable</a> ()</td></tr>
-<tr class="memdesc:ga7cf0823c4aaed2bf49257a8f2ccd053f"><td class="mdescLeft">&#160;</td><td class="mdescRight">An awaitable that can be used to launch the <a class="el" href="../../db/d9d/a01972.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> onto a new thread - as well as return the handle for stoppping its execution.  <a href="../../d7/d46/a00890.html#ga7cf0823c4aaed2bf49257a8f2ccd053f">More...</a><br /></td></tr>
-<tr class="separator:ga7cf0823c4aaed2bf49257a8f2ccd053f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_856524284ebe840938865dc061f982fb.html">Include</a></li><li class="navelem"><a class="el" href="../../dir_9b16bdde4f6a21e020962bfdb0aa5092.html">discordcoreapi</a></li><li class="navelem"><a class="el" href="../../d5/d5b/a00695.html">CoRoutine.hpp</a></li>
+    <li class="navelem"><a class="el" href="../../dir_856524284ebe840938865dc061f982fb.html">Include</a></li><li class="navelem"><a class="el" href="../../dir_9b16bdde4f6a21e020962bfdb0aa5092.html">discordcoreapi</a></li><li class="navelem"><a class="el" href="../../d5/d5b/a00695.html">Demuxer.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

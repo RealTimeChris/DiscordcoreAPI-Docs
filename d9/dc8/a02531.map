@@ -1,0 +1,5 @@
+<map id="DiscordCoreAPI::GuildScheduledEventData" name="DiscordCoreAPI::GuildScheduledEventData">
+<area shape="rect" id="node1" title="Data representing a Guild Scheduled Event." alt="" coords="5,80,219,121"/>
+<area shape="rect" id="node3" href="$d0/d9d/a03016.html" title="A single GuildScheduledEvent responseData structure." alt="" coords="5,169,219,211"/>
+<area shape="rect" id="node2" href="$dc/d35/a02240.html" title="Base class for all Discord entities." alt="" coords="12,5,212,32"/>
+</map>

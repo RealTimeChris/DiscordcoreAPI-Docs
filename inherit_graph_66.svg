@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d0/dcc/a03148.html" target="_top" xlink:title="For deleting a follow up Message.">
+<g id="a_node1"><a xlink:href="d5/d3a/a03100.html" target="_top" xlink:title="For deleting a follow up Message.">
 <polygon fill="none" stroke="black" points="0,-0.5 0,-30.5 147,-30.5 147,-0.5 0,-0.5"/>
 <text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscordCoreAPI::DeleteFollow</text>
 <text text-anchor="middle" x="73.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">UpMessageData</text>

@@ -105,40 +105,95 @@ $(document).ready(function(){initNavTree('dc/dbb/a02520.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d4/db4/a02517.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::AssetsData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::GuildData Class Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Assets data.  
+<p>Data structure representing a single <a class="el" href="../../d2/d0c/a02932.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>.  
  <a href="../../dc/dbb/a02520.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a>&gt;</code></p>
-
-<p>Inherits DiscordCoreAPI::DataParser&lt; ObjectType &gt;.</p>
+<div class="dynheader">
+Inheritance diagram for DiscordCoreAPI::GuildData:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/dce/a02519.svg" width="211" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:adbbef29a522ef7fd60bcdd4858540feb"><td class="memItemLeft" align="right" valign="top"><a id="adbbef29a522ef7fd60bcdd4858540feb" name="adbbef29a522ef7fd60bcdd4858540feb"></a>
-StringWrapper&#160;</td><td class="memItemRight" valign="bottom"><b>largeImage</b> {}</td></tr>
-<tr class="memdesc:adbbef29a522ef7fd60bcdd4858540feb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keyname of an asset to display. <br /></td></tr>
-<tr class="separator:adbbef29a522ef7fd60bcdd4858540feb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64cfde54ff0e8377c4a81cb9b5ba3571"><td class="memItemLeft" align="right" valign="top"><a id="a64cfde54ff0e8377c4a81cb9b5ba3571" name="a64cfde54ff0e8377c4a81cb9b5ba3571"></a>
-StringWrapper&#160;</td><td class="memItemRight" valign="bottom"><b>largeText</b> {}</td></tr>
-<tr class="memdesc:a64cfde54ff0e8377c4a81cb9b5ba3571"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hover text for the large image. <br /></td></tr>
-<tr class="separator:a64cfde54ff0e8377c4a81cb9b5ba3571"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd7e450dc652f40fce44cc751c2b8b2d"><td class="memItemLeft" align="right" valign="top"><a id="abd7e450dc652f40fce44cc751c2b8b2d" name="abd7e450dc652f40fce44cc751c2b8b2d"></a>
-StringWrapper&#160;</td><td class="memItemRight" valign="bottom"><b>smallImage</b> {}</td></tr>
-<tr class="memdesc:abd7e450dc652f40fce44cc751c2b8b2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keyname of an asset to display. <br /></td></tr>
-<tr class="separator:abd7e450dc652f40fce44cc751c2b8b2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76df712710b7bef88a8803246c52fa01"><td class="memItemLeft" align="right" valign="top"><a id="a76df712710b7bef88a8803246c52fa01" name="a76df712710b7bef88a8803246c52fa01"></a>
-StringWrapper&#160;</td><td class="memItemRight" valign="bottom"><b>smallText</b> {}</td></tr>
-<tr class="memdesc:a76df712710b7bef88a8803246c52fa01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hover text for the small image. <br /></td></tr>
-<tr class="separator:a76df712710b7bef88a8803246c52fa01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1c82a0471b69dab344310faf0047384"><td class="memItemLeft" align="right" valign="top"><a id="ad1c82a0471b69dab344310faf0047384" name="ad1c82a0471b69dab344310faf0047384"></a>
+std::vector&lt; <a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>channels</b> {}</td></tr>
+<tr class="memdesc:ad1c82a0471b69dab344310faf0047384"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of <a class="el" href="../../d2/d0c/a02932.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> channels. <br /></td></tr>
+<tr class="separator:ad1c82a0471b69dab344310faf0047384"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9576cd011f93512d0784923590589082"><td class="memItemLeft" align="right" valign="top"><a id="a9576cd011f93512d0784923590589082" name="a9576cd011f93512d0784923590589082"></a>
+<a class="el" href="../../db/da1/a01944.html">DiscordCoreClient</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>discordCoreClient</b> { nullptr }</td></tr>
+<tr class="memdesc:a9576cd011f93512d0784923590589082"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pointer to the <a class="el" href="../../db/da1/a01944.html" title="DiscordCoreClient - The main class for this library.">DiscordCoreClient</a>. <br /></td></tr>
+<tr class="separator:a9576cd011f93512d0784923590589082"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8d566e347ea692a7c046701e90bd68b"><td class="memItemLeft" align="right" valign="top"><a id="ad8d566e347ea692a7c046701e90bd68b" name="ad8d566e347ea692a7c046701e90bd68b"></a>
+std::vector&lt; StringWrapper &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>features</b> {}</td></tr>
+<tr class="memdesc:ad8d566e347ea692a7c046701e90bd68b"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of <a class="el" href="../../d2/d0c/a02932.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> features. <br /></td></tr>
+<tr class="separator:ad8d566e347ea692a7c046701e90bd68b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa78f0a58803f2012c5a8c3472284ec87"><td class="memItemLeft" align="right" valign="top"><a id="aa78f0a58803f2012c5a8c3472284ec87" name="aa78f0a58803f2012c5a8c3472284ec87"></a>
+int8_t&#160;</td><td class="memItemRight" valign="bottom"><b>flags</b> { 0 }</td></tr>
+<tr class="memdesc:aa78f0a58803f2012c5a8c3472284ec87"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d2/d0c/a02932.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> flags. <br /></td></tr>
+<tr class="separator:aa78f0a58803f2012c5a8c3472284ec87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97537278ef93760689098df60fec049a"><td class="memItemLeft" align="right" valign="top"><a id="a97537278ef93760689098df60fec049a" name="a97537278ef93760689098df60fec049a"></a>
+StringWrapper&#160;</td><td class="memItemRight" valign="bottom"><b>icon</b> {}</td></tr>
+<tr class="memdesc:a97537278ef93760689098df60fec049a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Url to the <a class="el" href="../../d2/d0c/a02932.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>'s icon. <br /></td></tr>
+<tr class="separator:a97537278ef93760689098df60fec049a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c05df87860ce8f411c1e328aa4f4d83"><td class="memItemLeft" align="right" valign="top"><a id="a0c05df87860ce8f411c1e328aa4f4d83" name="a0c05df87860ce8f411c1e328aa4f4d83"></a>
+<a class="el" href="../../dd/dda/a03584.html">TimeStamp</a>&lt; std::chrono::milliseconds &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>joinedAt</b> {}</td></tr>
+<tr class="memdesc:a0c05df87860ce8f411c1e328aa4f4d83"><td class="mdescLeft">&#160;</td><td class="mdescRight">When the bot joined this <a class="el" href="../../d2/d0c/a02932.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>. <br /></td></tr>
+<tr class="separator:a0c05df87860ce8f411c1e328aa4f4d83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad06c76300822f24840a993e25af658e9"><td class="memItemLeft" align="right" valign="top"><a id="ad06c76300822f24840a993e25af658e9" name="ad06c76300822f24840a993e25af658e9"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>memberCount</b> { 0 }</td></tr>
+<tr class="memdesc:ad06c76300822f24840a993e25af658e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Member count. <br /></td></tr>
+<tr class="separator:ad06c76300822f24840a993e25af658e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49d5887b90cea6dc012edda96e6f1bf4"><td class="memItemLeft" align="right" valign="top"><a id="a49d5887b90cea6dc012edda96e6f1bf4" name="a49d5887b90cea6dc012edda96e6f1bf4"></a>
+std::vector&lt; <a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>members</b> {}</td></tr>
+<tr class="memdesc:a49d5887b90cea6dc012edda96e6f1bf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of <a class="el" href="../../d8/d7d/a02988.html" title="An interface class for the GuildMember related Discord endpoints.">GuildMembers</a>. <br /></td></tr>
+<tr class="separator:a49d5887b90cea6dc012edda96e6f1bf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fc39246d0ce977a2bbccf653af39a12"><td class="memItemLeft" align="right" valign="top"><a id="a3fc39246d0ce977a2bbccf653af39a12" name="a3fc39246d0ce977a2bbccf653af39a12"></a>
+StringWrapper&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> {}</td></tr>
+<tr class="memdesc:a3fc39246d0ce977a2bbccf653af39a12"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../d2/d0c/a02932.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>'s name. <br /></td></tr>
+<tr class="separator:a3fc39246d0ce977a2bbccf653af39a12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3c03f7887338777d6d295cf2be6e0f3"><td class="memItemLeft" align="right" valign="top"><a id="ac3c03f7887338777d6d295cf2be6e0f3" name="ac3c03f7887338777d6d295cf2be6e0f3"></a>
+<a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ownerId</b> {}</td></tr>
+<tr class="memdesc:ac3c03f7887338777d6d295cf2be6e0f3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../dc/d98/a03524.html" title="A single User.">User</a> id of the <a class="el" href="../../d2/d0c/a02932.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>'s owner. <br /></td></tr>
+<tr class="separator:ac3c03f7887338777d6d295cf2be6e0f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1246077e656c338764ec2dd87aa20187"><td class="memItemLeft" align="right" valign="top"><a id="a1246077e656c338764ec2dd87aa20187" name="a1246077e656c338764ec2dd87aa20187"></a>
+std::unordered_map&lt; <a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>, <a class="el" href="../../d3/df4/a02504.html">PresenceUpdateData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>presences</b> {}</td></tr>
+<tr class="memdesc:a1246077e656c338764ec2dd87aa20187"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map of presences for each <a class="el" href="../../d6/db9/a02980.html" title="A single GuildMember.">GuildMember</a>. <br /></td></tr>
+<tr class="separator:a1246077e656c338764ec2dd87aa20187"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8d32fa3356a013fbf3267cee3afa731"><td class="memItemLeft" align="right" valign="top"><a id="af8d32fa3356a013fbf3267cee3afa731" name="af8d32fa3356a013fbf3267cee3afa731"></a>
+std::vector&lt; <a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>roles</b> {}</td></tr>
+<tr class="memdesc:af8d32fa3356a013fbf3267cee3afa731"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of <a class="el" href="../../d2/d0c/a02932.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> roles. <br /></td></tr>
+<tr class="separator:af8d32fa3356a013fbf3267cee3afa731"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb2520cdbade6e08a4c4b3259a4ff9e9"><td class="memItemLeft" align="right" valign="top"><a id="adb2520cdbade6e08a4c4b3259a4ff9e9" name="adb2520cdbade6e08a4c4b3259a4ff9e9"></a>
+<a class="el" href="../../d9/dbd/a03604.html">VoiceConnection</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>voiceConnectionPtr</b> { nullptr }</td></tr>
+<tr class="memdesc:adb2520cdbade6e08a4c4b3259a4ff9e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pointer to the <a class="el" href="../../d9/dbd/a03604.html" title="VoiceConnection class - represents the connection to a given voice Channel.">VoiceConnection</a>, if present. <br /></td></tr>
+<tr class="separator:adb2520cdbade6e08a4c4b3259a4ff9e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab00244c98337a21ca2002bf55d9c0982"><td class="memItemLeft" align="right" valign="top"><a id="ab00244c98337a21ca2002bf55d9c0982" name="ab00244c98337a21ca2002bf55d9c0982"></a>
+std::unordered_map&lt; <a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>, <a class="el" href="../../d3/d01/a02316.html">VoiceStateData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>voiceStates</b> {}</td></tr>
+<tr class="memdesc:ab00244c98337a21ca2002bf55d9c0982"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map of Guild-member voice-states. <br /></td></tr>
+<tr class="separator:ab00244c98337a21ca2002bf55d9c0982"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_a02240"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_a02240')"><img src="../../closed.png" alt="-"/>&#160;Public Data Members inherited from <a class="el" href="../../dc/d35/a02240.html">DiscordCoreAPI::DiscordEntity</a></td></tr>
+<tr class="memitem:a903c33f2f50e17293b409cfe33bcd5e9 inherit pub_attribs_a02240"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d35/a02240.html#a903c33f2f50e17293b409cfe33bcd5e9">id</a> {}</td></tr>
+<tr class="separator:a903c33f2f50e17293b409cfe33bcd5e9 inherit pub_attribs_a02240"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_methods_a02240"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a02240')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../dc/d35/a02240.html">DiscordCoreAPI::DiscordEntity</a></td></tr>
+<tr class="memitem:a880fa695445dc41f6d371d2a6ef1e8c0 inherit pub_methods_a02240"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d35/a02240.html#a880fa695445dc41f6d371d2a6ef1e8c0">getCreatedAtTimestamp</a> (<a class="el" href="../../d7/d46/a00890.html#ga5f837e6437665f0a390fe2c6271e3a91">TimeFormat</a> timeFormat)</td></tr>
+<tr class="memdesc:a880fa695445dc41f6d371d2a6ef1e8c0 inherit pub_methods_a02240"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the snowflake-id into a time and date stamp.  <a href="../../dc/d35/a02240.html#a880fa695445dc41f6d371d2a6ef1e8c0">More...</a><br /></td></tr>
+<tr class="separator:a880fa695445dc41f6d371d2a6ef1e8c0 inherit pub_methods_a02240"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following files:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a></li>
-<li><a class="el" href="../../d5/d72/a00803_source.html">DataParsingFunctions.cpp</a></li>
+<li><a class="el" href="../../df/d0e/a00800_source.html">DataParsingFunctions.cpp</a></li>
 <li><a class="el" href="../../d3/d60/a00818_source.html">FoundationEntities.cpp</a></li>
+<li><a class="el" href="../../d6/d8b/a00821_source.html">GuildEntities.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -146,7 +201,7 @@ StringWrapper&#160;</td><td class="memItemRight" valign="bottom"><b>smallText</b
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dc/dbb/a02520.html">AssetsData</a></li>
+    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dc/dbb/a02520.html">GuildData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

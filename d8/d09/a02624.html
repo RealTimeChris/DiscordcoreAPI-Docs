@@ -103,17 +103,46 @@ $(document).ready(function(){initNavTree('d8/d09/a02624.html','../../'); initRes
 
 <div class="header">
   <div class="summary">
+<a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d6/d10/a02621.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::InteractionPackageData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::SelectOptionData Class Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For storing Interaction-related values.  
+<p>Represents a single selection from a select-menu.  
  <a href="../../d8/d09/a02624.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a>&gt;</code></p>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+
+<p>Inherits DiscordCoreAPI::DataParser&lt; ObjectType &gt;.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Data Members</h2></td></tr>
+<tr class="memitem:a87b1a14b1b4407e7ee4c51905b7ce0cd"><td class="memItemLeft" align="right" valign="top"><a id="a87b1a14b1b4407e7ee4c51905b7ce0cd" name="a87b1a14b1b4407e7ee4c51905b7ce0cd"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>_default</b> { false }</td></tr>
+<tr class="memdesc:a87b1a14b1b4407e7ee4c51905b7ce0cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is it the default option? <br /></td></tr>
+<tr class="separator:a87b1a14b1b4407e7ee4c51905b7ce0cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45f5cc6e66c695ee30b88abb6c08fa5b"><td class="memItemLeft" align="right" valign="top"><a id="a45f5cc6e66c695ee30b88abb6c08fa5b" name="a45f5cc6e66c695ee30b88abb6c08fa5b"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>description</b> {}</td></tr>
+<tr class="memdesc:a45f5cc6e66c695ee30b88abb6c08fa5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Description of the select-menu-option. <br /></td></tr>
+<tr class="separator:a45f5cc6e66c695ee30b88abb6c08fa5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62f65147b596a1e4188753417c8caad5"><td class="memItemLeft" align="right" valign="top"><a id="a62f65147b596a1e4188753417c8caad5" name="a62f65147b596a1e4188753417c8caad5"></a>
+<a class="el" href="../../d1/da2/a02368.html">EmojiData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>emoji</b> {}</td></tr>
+<tr class="memdesc:a62f65147b596a1e4188753417c8caad5"><td class="mdescLeft">&#160;</td><td class="mdescRight">An optional emoji to put on it. <br /></td></tr>
+<tr class="separator:a62f65147b596a1e4188753417c8caad5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96cd888323e76a263a53a9c816a81dfb"><td class="memItemLeft" align="right" valign="top"><a id="a96cd888323e76a263a53a9c816a81dfb" name="a96cd888323e76a263a53a9c816a81dfb"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>label</b> {}</td></tr>
+<tr class="memdesc:a96cd888323e76a263a53a9c816a81dfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">A visible label for the select-menu-option. <br /></td></tr>
+<tr class="separator:a96cd888323e76a263a53a9c816a81dfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ff0de74976060d03159119294199747"><td class="memItemLeft" align="right" valign="top"><a id="a5ff0de74976060d03159119294199747" name="a5ff0de74976060d03159119294199747"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>value</b> {}</td></tr>
+<tr class="memdesc:a5ff0de74976060d03159119294199747"><td class="mdescLeft">&#160;</td><td class="mdescRight">A value for identifying the option. <br /></td></tr>
+<tr class="separator:a5ff0de74976060d03159119294199747"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a></li>
+<li><a class="el" href="../../df/d0e/a00800_source.html">DataParsingFunctions.cpp</a></li>
+<li><a class="el" href="../../d3/d60/a00818_source.html">FoundationEntities.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -121,7 +150,7 @@ $(document).ready(function(){initNavTree('d8/d09/a02624.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d8/d09/a02624.html">InteractionPackageData</a></li>
+    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d8/d09/a02624.html">SelectOptionData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

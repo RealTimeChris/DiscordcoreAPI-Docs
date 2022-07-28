@@ -105,44 +105,40 @@ $(document).ready(function(){initNavTree('d8/d08/a03160.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d5/d27/a03157.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::SelectMenuResponseData Struct Reference<div class="ingroups"><a class="el" href="../../d7/d46/a00890.html">Utilities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::DeleteMessageData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Select menu response data.  
+<p>For deleting a <a class="el" href="../../d6/da1/a03180.html" title="A single Message.">Message</a>.  
  <a href="../../d8/d08/a03160.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="../../df/df7/a00731_source.html">InteractionEntities.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../d6/dc0/a00734_source.html">MessageEntities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:a6c5c0096082bfb9725a25b973e76dc14"><td class="memItemLeft" align="right" valign="top"><a id="a6c5c0096082bfb9725a25b973e76dc14" name="a6c5c0096082bfb9725a25b973e76dc14"></a>
+<tr class="memitem:a48b9b5fd255392d5733d284e314d530d"><td class="memItemLeft" align="right" valign="top"><a id="a48b9b5fd255392d5733d284e314d530d" name="a48b9b5fd255392d5733d284e314d530d"></a>
 <a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>channelId</b> {}</td></tr>
-<tr class="memdesc:a6c5c0096082bfb9725a25b973e76dc14"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../db/da1/a01944.html" title="A Channel object.">Channel</a> id where it took place. <br /></td></tr>
-<tr class="separator:a6c5c0096082bfb9725a25b973e76dc14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c90363b9bb6d29fa6e0074c037cea33"><td class="memItemLeft" align="right" valign="top"><a id="a3c90363b9bb6d29fa6e0074c037cea33" name="a3c90363b9bb6d29fa6e0074c037cea33"></a>
-std::unique_ptr&lt; <a class="el" href="../../d3/d55/a02760.html">InteractionData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>interactionData</b> { std::make_unique&lt;<a class="el" href="../../d3/d55/a02760.html">InteractionData</a>&gt;() }</td></tr>
-<tr class="memdesc:a3c90363b9bb6d29fa6e0074c037cea33"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d0/d9f/a03152.html" title="A single Interaction.">Interaction</a> data. <br /></td></tr>
-<tr class="separator:a3c90363b9bb6d29fa6e0074c037cea33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98d154f1ddd1281e951fc89045223452"><td class="memItemLeft" align="right" valign="top"><a id="a98d154f1ddd1281e951fc89045223452" name="a98d154f1ddd1281e951fc89045223452"></a>
+<tr class="memdesc:a48b9b5fd255392d5733d284e314d530d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The channel Id of the <a class="el" href="../../d6/da1/a03180.html" title="A single Message.">Message</a> to delete. <br /></td></tr>
+<tr class="separator:a48b9b5fd255392d5733d284e314d530d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f2315e3ef1233667aa5b7043711d86f"><td class="memItemLeft" align="right" valign="top"><a id="a3f2315e3ef1233667aa5b7043711d86f" name="a3f2315e3ef1233667aa5b7043711d86f"></a>
 <a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>messageId</b> {}</td></tr>
-<tr class="memdesc:a98d154f1ddd1281e951fc89045223452"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../d6/d63/a03228.html" title="A single Message.">Message</a> id where it took place. <br /></td></tr>
-<tr class="separator:a98d154f1ddd1281e951fc89045223452"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7aa029a8557635ddc18df1842e688d44"><td class="memItemLeft" align="right" valign="top"><a id="a7aa029a8557635ddc18df1842e688d44" name="a7aa029a8557635ddc18df1842e688d44"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>selectionId</b> {}</td></tr>
-<tr class="memdesc:a7aa029a8557635ddc18df1842e688d44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selection id. <br /></td></tr>
-<tr class="separator:a7aa029a8557635ddc18df1842e688d44"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f0a57e6e3dda8b4b7fb6f923385016d"><td class="memItemLeft" align="right" valign="top"><a id="a6f0a57e6e3dda8b4b7fb6f923385016d" name="a6f0a57e6e3dda8b4b7fb6f923385016d"></a>
-<a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>userId</b> {}</td></tr>
-<tr class="memdesc:a6f0a57e6e3dda8b4b7fb6f923385016d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../d8/db0/a03572.html" title="A single User.">User</a> id who selected the menu options. <br /></td></tr>
-<tr class="separator:a6f0a57e6e3dda8b4b7fb6f923385016d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2b79c7aeda60afc5c353ca95d574761"><td class="memItemLeft" align="right" valign="top"><a id="ad2b79c7aeda60afc5c353ca95d574761" name="ad2b79c7aeda60afc5c353ca95d574761"></a>
-std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>values</b> {}</td></tr>
-<tr class="memdesc:ad2b79c7aeda60afc5c353ca95d574761"><td class="mdescLeft">&#160;</td><td class="mdescRight">A vector of the chosen values. <br /></td></tr>
-<tr class="separator:ad2b79c7aeda60afc5c353ca95d574761"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:a3f2315e3ef1233667aa5b7043711d86f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The message Id of the <a class="el" href="../../d6/da1/a03180.html" title="A single Message.">Message</a> to delete. <br /></td></tr>
+<tr class="separator:a3f2315e3ef1233667aa5b7043711d86f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca484e348ecd108e85bee8d262115204"><td class="memItemLeft" align="right" valign="top"><a id="aca484e348ecd108e85bee8d262115204" name="aca484e348ecd108e85bee8d262115204"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>reason</b> {}</td></tr>
+<tr class="memdesc:aca484e348ecd108e85bee8d262115204"><td class="mdescLeft">&#160;</td><td class="mdescRight">The reason for deleting the <a class="el" href="../../d6/da1/a03180.html" title="A single Message.">Message</a>. <br /></td></tr>
+<tr class="separator:aca484e348ecd108e85bee8d262115204"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26e6307fc378c23a2186558f270a51c7"><td class="memItemLeft" align="right" valign="top"><a id="a26e6307fc378c23a2186558f270a51c7" name="a26e6307fc378c23a2186558f270a51c7"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>timeDelay</b> { 0 }</td></tr>
+<tr class="memdesc:a26e6307fc378c23a2186558f270a51c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of std::chrono::milliseconds to wait before deleting the <a class="el" href="../../d6/da1/a03180.html" title="A single Message.">Message</a>. <br /></td></tr>
+<tr class="separator:a26e6307fc378c23a2186558f270a51c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae69cc3cd4f3186678998216f19b22839"><td class="memItemLeft" align="right" valign="top"><a id="ae69cc3cd4f3186678998216f19b22839" name="ae69cc3cd4f3186678998216f19b22839"></a>
+<a class="el" href="../../dd/dda/a03584.html">TimeStamp</a>&lt; std::chrono::milliseconds &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>timeStamp</b> { &quot;&quot; }</td></tr>
+<tr class="memdesc:ae69cc3cd4f3186678998216f19b22839"><td class="mdescLeft">&#160;</td><td class="mdescRight">The created-at timestamp of the original message. <br /></td></tr>
+<tr class="separator:ae69cc3cd4f3186678998216f19b22839"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="../../df/df7/a00731_source.html">InteractionEntities.hpp</a></li>
+<li><a class="el" href="../../d6/dc0/a00734_source.html">MessageEntities.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -150,7 +146,7 @@ std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bott
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d8/d08/a03160.html">SelectMenuResponseData</a></li>
+    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d8/d08/a03160.html">DeleteMessageData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

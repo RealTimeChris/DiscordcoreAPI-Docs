@@ -103,34 +103,57 @@ $(document).ready(function(){initNavTree('d9/dbd/a03604.html','../../'); initRes
 
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Public Data Members</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="../../d6/d8c/a03601.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::RepeatedFunctionData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::VoiceConnection Class Reference<div class="ingroups"><a class="el" href="../../dd/d94/a00888.html">Voice Connection</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Function data for repeated functions to be loaded.  
+<p><a class="el" href="../../d9/dbd/a03604.html" title="VoiceConnection class - represents the connection to a given voice Channel.">VoiceConnection</a> class - represents the connection to a given voice <a class="el" href="../../dc/d7f/a01884.html" title="A Channel object.">Channel</a>.  
  <a href="../../d9/dbd/a03604.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="../../d5/dae/a00767_source.html">Utilities.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../d0/d7e/a00770_source.html">VoiceConnection.hpp</a>&gt;</code></p>
+
+<p>Inherits DiscordCoreInternal::WebSocketSSLShard, and DiscordCoreInternal::DatagramSocketClient.</p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Public Data Members</h2></td></tr>
-<tr class="memitem:ab3113ed967aef68dc02622fcc8d1a8a1"><td class="memItemLeft" align="right" valign="top"><a id="ab3113ed967aef68dc02622fcc8d1a8a1" name="ab3113ed967aef68dc02622fcc8d1a8a1"></a>
-std::function&lt; void(<a class="el" href="../../d6/d33/a01992.html">DiscordCoreClient</a> *)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>function</b> { nullptr }</td></tr>
-<tr class="memdesc:ab3113ed967aef68dc02622fcc8d1a8a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The std::function pointer to be loaded. <br /></td></tr>
-<tr class="separator:ab3113ed967aef68dc02622fcc8d1a8a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6cd7f6c69dd885d3fc19ee1478835b0"><td class="memItemLeft" align="right" valign="top"><a id="ad6cd7f6c69dd885d3fc19ee1478835b0" name="ad6cd7f6c69dd885d3fc19ee1478835b0"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>intervalInMs</b> { 0 }</td></tr>
-<tr class="memdesc:ad6cd7f6c69dd885d3fc19ee1478835b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The time interval at which to call the std::function. <br /></td></tr>
-<tr class="separator:ad6cd7f6c69dd885d3fc19ee1478835b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5779846654b535a8a63abe4be753e13"><td class="memItemLeft" align="right" valign="top"><a id="ad5779846654b535a8a63abe4be753e13" name="ad5779846654b535a8a63abe4be753e13"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>repeated</b> { false }</td></tr>
-<tr class="memdesc:ad5779846654b535a8a63abe4be753e13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not the std::function is repeating. <br /></td></tr>
-<tr class="separator:ad5779846654b535a8a63abe4be753e13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ae790f8b154a461a5878a224f371eb546"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dbd/a03604.html#ae790f8b154a461a5878a224f371eb546">getChannelId</a> () noexcept</td></tr>
+<tr class="memdesc:ae790f8b154a461a5878a224f371eb546"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collects the currently connected-to voice <a class="el" href="../../dc/d7f/a01884.html" title="A Channel object.">Channel</a>'s id.  <a href="../../d9/dbd/a03604.html#ae790f8b154a461a5878a224f371eb546">More...</a><br /></td></tr>
+<tr class="separator:ae790f8b154a461a5878a224f371eb546"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="../../d5/dae/a00767_source.html">Utilities.hpp</a></li>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae790f8b154a461a5878a224f371eb546" name="ae790f8b154a461a5878a224f371eb546"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae790f8b154a461a5878a224f371eb546">&#9670;&nbsp;</a></span>getChannelId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> DiscordCoreAPI::VoiceConnection::getChannelId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Collects the currently connected-to voice <a class="el" href="../../dc/d7f/a01884.html" title="A Channel object.">Channel</a>'s id.</p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef" title="For ids of DiscordEntities.">DiscordCoreAPI::Snowflake</a> A Snowflake containing the <a class="el" href="../../dc/d7f/a01884.html" title="A Channel object.">Channel</a>'s id. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d1/d93/a00875_source.html#l00084">84</a> of file <a class="el" href="../../d1/d93/a00875_source.html">VoiceConnection.cpp</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li><a class="el" href="../../d0/d7e/a00770_source.html">VoiceConnection.hpp</a></li>
+<li><a class="el" href="../../d1/d93/a00875_source.html">VoiceConnection.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -138,7 +161,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>repeated</b> { false 
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/dbd/a03604.html">RepeatedFunctionData</a></li>
+    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/dbd/a03604.html">VoiceConnection</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

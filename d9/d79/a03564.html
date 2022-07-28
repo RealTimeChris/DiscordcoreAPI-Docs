@@ -105,24 +105,44 @@ $(document).ready(function(){initNavTree('d9/d79/a03564.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../df/df7/a03561.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::GetUserData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::LoggingOptions Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For getting <a class="el" href="../../d8/db0/a03572.html" title="A single User.">User</a> responseData from the library's cache or the Discord server.  
+<p>Logging options for the library.  
  <a href="../../d9/d79/a03564.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="../../d3/d2c/a00764_source.html">UserEntities.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../d5/dae/a00767_source.html">Utilities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:a6526bebb486498dde524407b2baf5719"><td class="memItemLeft" align="right" valign="top"><a id="a6526bebb486498dde524407b2baf5719" name="a6526bebb486498dde524407b2baf5719"></a>
-<a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>userId</b> {}</td></tr>
-<tr class="memdesc:a6526bebb486498dde524407b2baf5719"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the desired <a class="el" href="../../d8/db0/a03572.html" title="A single User.">User</a>. <br /></td></tr>
-<tr class="separator:a6526bebb486498dde524407b2baf5719"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c8e32ca719f7a02d0a950c5e81f4e86"><td class="memItemLeft" align="right" valign="top"><a id="a2c8e32ca719f7a02d0a950c5e81f4e86" name="a2c8e32ca719f7a02d0a950c5e81f4e86"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>logGeneralErrorMessages</b> { false }</td></tr>
+<tr class="memdesc:a2c8e32ca719f7a02d0a950c5e81f4e86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do we log general error messages to cout? <br /></td></tr>
+<tr class="separator:a2c8e32ca719f7a02d0a950c5e81f4e86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab748a5dc3c950f4a29ddb5938502a7a4"><td class="memItemLeft" align="right" valign="top"><a id="ab748a5dc3c950f4a29ddb5938502a7a4" name="ab748a5dc3c950f4a29ddb5938502a7a4"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>logGeneralSuccessMessages</b> { false }</td></tr>
+<tr class="memdesc:ab748a5dc3c950f4a29ddb5938502a7a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do we log general success messages to cout? <br /></td></tr>
+<tr class="separator:ab748a5dc3c950f4a29ddb5938502a7a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa90f4dcfee2986a12868ec08b6a81b86"><td class="memItemLeft" align="right" valign="top"><a id="aa90f4dcfee2986a12868ec08b6a81b86" name="aa90f4dcfee2986a12868ec08b6a81b86"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>logHttpsErrorMessages</b> { false }</td></tr>
+<tr class="memdesc:aa90f4dcfee2986a12868ec08b6a81b86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do we log Http response error messages to cout? <br /></td></tr>
+<tr class="separator:aa90f4dcfee2986a12868ec08b6a81b86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa781c41c6fc37532bf63f2f8ccc1c203"><td class="memItemLeft" align="right" valign="top"><a id="aa781c41c6fc37532bf63f2f8ccc1c203" name="aa781c41c6fc37532bf63f2f8ccc1c203"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>logHttpsSuccessMessages</b> { false }</td></tr>
+<tr class="memdesc:aa781c41c6fc37532bf63f2f8ccc1c203"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do we log Http response success messages to cout? <br /></td></tr>
+<tr class="separator:aa781c41c6fc37532bf63f2f8ccc1c203"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ae4294313beb1e81a145394cc2292a1"><td class="memItemLeft" align="right" valign="top"><a id="a1ae4294313beb1e81a145394cc2292a1" name="a1ae4294313beb1e81a145394cc2292a1"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>logWebSocketErrorMessages</b> { false }</td></tr>
+<tr class="memdesc:a1ae4294313beb1e81a145394cc2292a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do we log the websocket error messages to cout? <br /></td></tr>
+<tr class="separator:a1ae4294313beb1e81a145394cc2292a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b201a80503c27c534994796cdc782f4"><td class="memItemLeft" align="right" valign="top"><a id="a6b201a80503c27c534994796cdc782f4" name="a6b201a80503c27c534994796cdc782f4"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>logWebSocketSuccessMessages</b> { false }</td></tr>
+<tr class="memdesc:a6b201a80503c27c534994796cdc782f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do we log the websocket success messages to cout? <br /></td></tr>
+<tr class="separator:a6b201a80503c27c534994796cdc782f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="../../d3/d2c/a00764_source.html">UserEntities.hpp</a></li>
+<li><a class="el" href="../../d5/dae/a00767_source.html">Utilities.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -130,7 +150,7 @@ Public Data Members</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d79/a03564.html">GetUserData</a></li>
+    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d9/d79/a03564.html">LoggingOptions</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

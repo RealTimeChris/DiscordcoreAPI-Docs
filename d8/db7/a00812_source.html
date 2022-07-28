@@ -181,7 +181,7 @@ $(document).ready(function(){initNavTree('d8/db7/a00812_source.html','../../'); 
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            }</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (jsonData.is_number_integer()) {</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            uint64_t numberOld = jsonData.get&lt;uint64_t&gt;();</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="keywordflow">if</span> (numberOld &lt;= 127) {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="keywordflow">if</span> (numberOld &gt;= 0 &amp;&amp; numberOld &lt;= 127) {</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                uint8_t number = jsonData.get&lt;uint8_t&gt;();</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                ErlPacker::appendSmallIntegerExt(buffer, number);</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (jsonData.is_number_unsigned() &amp;&amp; (numberOld &gt;= std::numeric_limits&lt;uint32_t&gt;::max() - <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(1))) {</div>

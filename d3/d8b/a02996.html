@@ -105,28 +105,70 @@ $(document).ready(function(){initNavTree('d3/d8b/a02996.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d6/d58/a02993.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::GetGuildMemberData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::CreateGuildScheduledEventData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For getting a <a class="el" href="../../de/dae/a03028.html" title="A single GuildMember.">GuildMember</a>, from the library's cache or Discord server.  
+<p>For creating a <a class="el" href="../../d0/d9d/a03016.html" title="A single GuildScheduledEvent responseData structure.">GuildScheduledEvent</a>.  
  <a href="../../d3/d8b/a02996.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="../../d2/d94/a00716_source.html">GuildMemberEntities.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../dd/dd8/a00719_source.html">GuildScheduledEventEntities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:a2eb42864846c8d63a364a45d883e6a66"><td class="memItemLeft" align="right" valign="top"><a id="a2eb42864846c8d63a364a45d883e6a66" name="a2eb42864846c8d63a364a45d883e6a66"></a>
+<tr class="memitem:ab1e256d85f74638bb77a55d8b0fb8189"><td class="memItemLeft" align="right" valign="top"><a id="ab1e256d85f74638bb77a55d8b0fb8189" name="ab1e256d85f74638bb77a55d8b0fb8189"></a>
+<a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>channelId</b> {}</td></tr>
+<tr class="memdesc:ab1e256d85f74638bb77a55d8b0fb8189"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../dc/d7f/a01884.html" title="A Channel object.">Channel</a> id of the scheduled event. <br /></td></tr>
+<tr class="separator:ab1e256d85f74638bb77a55d8b0fb8189"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6308a0cf228f0adf794bfdb65080328b"><td class="memItemLeft" align="right" valign="top"><a id="a6308a0cf228f0adf794bfdb65080328b" name="a6308a0cf228f0adf794bfdb65080328b"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>description</b> {}</td></tr>
+<tr class="memdesc:a6308a0cf228f0adf794bfdb65080328b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The description of the scheduled event. <br /></td></tr>
+<tr class="separator:a6308a0cf228f0adf794bfdb65080328b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65daa5c7bed09a3af8bee5edaea0d5fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/dfc/a00891.html#ga3be930a37ea8f73fdab875716ac40643">GuildScheduledEventEntityType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d8b/a02996.html#a65daa5c7bed09a3af8bee5edaea0d5fa">entityType</a> {}</td></tr>
+<tr class="memdesc:a65daa5c7bed09a3af8bee5edaea0d5fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">The entity metadata of the scheduled event.  <a href="../../d3/d8b/a02996.html#a65daa5c7bed09a3af8bee5edaea0d5fa">More...</a><br /></td></tr>
+<tr class="separator:a65daa5c7bed09a3af8bee5edaea0d5fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f8c2a68a2f2da1667f4dc166e7f4949"><td class="memItemLeft" align="right" valign="top"><a id="a9f8c2a68a2f2da1667f4dc166e7f4949" name="a9f8c2a68a2f2da1667f4dc166e7f4949"></a>
 <a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildId</b> {}</td></tr>
-<tr class="memdesc:a2eb42864846c8d63a364a45d883e6a66"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the <a class="el" href="../../d6/db9/a02980.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> from which you would like to acquire a member. <br /></td></tr>
-<tr class="separator:a2eb42864846c8d63a364a45d883e6a66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d1f035f46012eb014286afcd5f9eba8"><td class="memItemLeft" align="right" valign="top"><a id="a9d1f035f46012eb014286afcd5f9eba8" name="a9d1f035f46012eb014286afcd5f9eba8"></a>
-<a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildMemberId</b> {}</td></tr>
-<tr class="memdesc:a9d1f035f46012eb014286afcd5f9eba8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The user id of the desired <a class="el" href="../../de/dae/a03028.html" title="A single GuildMember.">GuildMember</a>. <br /></td></tr>
-<tr class="separator:a9d1f035f46012eb014286afcd5f9eba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:a9f8c2a68a2f2da1667f4dc166e7f4949"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../d2/d0c/a02932.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> within which to create the event. <br /></td></tr>
+<tr class="separator:a9f8c2a68a2f2da1667f4dc166e7f4949"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3dc94e4d7670c7892ae163b6a12af3b"><td class="memItemLeft" align="right" valign="top"><a id="ad3dc94e4d7670c7892ae163b6a12af3b" name="ad3dc94e4d7670c7892ae163b6a12af3b"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> {}</td></tr>
+<tr class="memdesc:ad3dc94e4d7670c7892ae163b6a12af3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of the scheduled event. <br /></td></tr>
+<tr class="separator:ad3dc94e4d7670c7892ae163b6a12af3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab30592589d3e4d41f8e189e2e6e865b"><td class="memItemLeft" align="right" valign="top"><a id="aab30592589d3e4d41f8e189e2e6e865b" name="aab30592589d3e4d41f8e189e2e6e865b"></a>
+<a class="el" href="../../de/dfc/a00891.html#ga823190c71b2ac8925b8f53f0b0b17c20">GuildScheduledEventPrivacyLevel</a>&#160;</td><td class="memItemRight" valign="bottom"><b>privacyLevel</b> { <a class="el" href="../../de/dfc/a00891.html#gga823190c71b2ac8925b8f53f0b0b17c20acbdc236efc81089d5c3004ca4692391d">GuildScheduledEventPrivacyLevel::Guild_Only</a> }</td></tr>
+<tr class="memdesc:aab30592589d3e4d41f8e189e2e6e865b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The privacy level of the scheduled event. <br /></td></tr>
+<tr class="separator:aab30592589d3e4d41f8e189e2e6e865b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a665306e0ad76915218810e428671a1"><td class="memItemLeft" align="right" valign="top"><a id="a3a665306e0ad76915218810e428671a1" name="a3a665306e0ad76915218810e428671a1"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>scheduledEndTime</b> {}</td></tr>
+<tr class="memdesc:a3a665306e0ad76915218810e428671a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The time when the scheduled event is scheduled to end. <br /></td></tr>
+<tr class="separator:a3a665306e0ad76915218810e428671a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9b7aeef134bb3a173ae330db294dd0e"><td class="memItemLeft" align="right" valign="top"><a id="ab9b7aeef134bb3a173ae330db294dd0e" name="ab9b7aeef134bb3a173ae330db294dd0e"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>scheduledStartTime</b> {}</td></tr>
+<tr class="memdesc:ab9b7aeef134bb3a173ae330db294dd0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The time to schedule the scheduled event. <br /></td></tr>
+<tr class="separator:ab9b7aeef134bb3a173ae330db294dd0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="../../d2/d94/a00716_source.html">GuildMemberEntities.hpp</a></li>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a65daa5c7bed09a3af8bee5edaea0d5fa" name="a65daa5c7bed09a3af8bee5edaea0d5fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65daa5c7bed09a3af8bee5edaea0d5fa">&#9670;&nbsp;</a></span>entityType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/dfc/a00891.html#ga3be930a37ea8f73fdab875716ac40643">GuildScheduledEventEntityType</a> DiscordCoreAPI::CreateGuildScheduledEventData::entityType {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >The entity type of the scheduled event. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../dd/dd8/a00719_source.html#l00041">41</a> of file <a class="el" href="../../dd/dd8/a00719_source.html">GuildScheduledEventEntities.hpp</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following files:<ul>
+<li><a class="el" href="../../dd/dd8/a00719_source.html">GuildScheduledEventEntities.hpp</a></li>
+<li><a class="el" href="../../dc/d1b/a00827_source.html">GuildScheduledEventEntities.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -134,7 +176,7 @@ Public Data Members</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d3/d8b/a02996.html">GetGuildMemberData</a></li>
+    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d3/d8b/a02996.html">CreateGuildScheduledEventData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

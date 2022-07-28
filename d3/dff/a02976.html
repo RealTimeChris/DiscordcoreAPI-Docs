@@ -105,24 +105,36 @@ $(document).ready(function(){initNavTree('d3/dff/a02976.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../df/d45/a02973.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::LeaveGuildData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::TimeoutGuildMemberData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For leaving a particular <a class="el" href="../../d6/db9/a02980.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>.  
+<p>For timing out a <a class="el" href="../../d6/db9/a02980.html" title="A single GuildMember.">GuildMember</a>.  
  <a href="../../d3/dff/a02976.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="../../d1/d04/a00713_source.html">GuildEntities.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../d2/d94/a00716_source.html">GuildMemberEntities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:a03e74d41f94cec4100b94d47b14dcdce"><td class="memItemLeft" align="right" valign="top"><a id="a03e74d41f94cec4100b94d47b14dcdce" name="a03e74d41f94cec4100b94d47b14dcdce"></a>
+<tr class="memitem:a0cb9b84199b83ffe325ddd67365f217f"><td class="memItemLeft" align="right" valign="top"><a id="a0cb9b84199b83ffe325ddd67365f217f" name="a0cb9b84199b83ffe325ddd67365f217f"></a>
 <a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildId</b> {}</td></tr>
-<tr class="memdesc:a03e74d41f94cec4100b94d47b14dcdce"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the <a class="el" href="../../d6/db9/a02980.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> you would like the bot to leave. <br /></td></tr>
-<tr class="separator:a03e74d41f94cec4100b94d47b14dcdce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:a0cb9b84199b83ffe325ddd67365f217f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the <a class="el" href="../../d2/d0c/a02932.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> from which you would like to acquire a member. <br /></td></tr>
+<tr class="separator:a0cb9b84199b83ffe325ddd67365f217f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c054cb4aaabb039d47d272defc2052f"><td class="memItemLeft" align="right" valign="top"><a id="a1c054cb4aaabb039d47d272defc2052f" name="a1c054cb4aaabb039d47d272defc2052f"></a>
+<a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildMemberId</b> {}</td></tr>
+<tr class="memdesc:a1c054cb4aaabb039d47d272defc2052f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the <a class="el" href="../../d6/db9/a02980.html" title="A single GuildMember.">GuildMember</a> to be timed-out. <br /></td></tr>
+<tr class="separator:a1c054cb4aaabb039d47d272defc2052f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83bae6ec16b95643351f27c8814120a9"><td class="memItemLeft" align="right" valign="top"><a id="a83bae6ec16b95643351f27c8814120a9" name="a83bae6ec16b95643351f27c8814120a9"></a>
+<a class="el" href="../../de/dfc/a00891.html#gabf2b1ab64cdccd4c7e631eaf34e7d749">TimeoutDurations</a>&#160;</td><td class="memItemRight" valign="bottom"><b>numOfMinutesToTimeoutFor</b> {}</td></tr>
+<tr class="memdesc:a83bae6ec16b95643351f27c8814120a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of minutes to time-out the <a class="el" href="../../d6/db9/a02980.html" title="A single GuildMember.">GuildMember</a> for. <br /></td></tr>
+<tr class="separator:a83bae6ec16b95643351f27c8814120a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20452f887854e751ae4cf486a13bc22a"><td class="memItemLeft" align="right" valign="top"><a id="a20452f887854e751ae4cf486a13bc22a" name="a20452f887854e751ae4cf486a13bc22a"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>reason</b> {}</td></tr>
+<tr class="memdesc:a20452f887854e751ae4cf486a13bc22a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reason for timing them out. <br /></td></tr>
+<tr class="separator:a20452f887854e751ae4cf486a13bc22a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="../../d1/d04/a00713_source.html">GuildEntities.hpp</a></li>
+<li><a class="el" href="../../d2/d94/a00716_source.html">GuildMemberEntities.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -130,7 +142,7 @@ Public Data Members</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d3/dff/a02976.html">LeaveGuildData</a></li>
+    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d3/dff/a02976.html">TimeoutGuildMemberData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

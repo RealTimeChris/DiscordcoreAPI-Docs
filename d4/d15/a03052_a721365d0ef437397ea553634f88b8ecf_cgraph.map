@@ -1,0 +1,5 @@
+<map id="DiscordCoreAPI::InputEvents::deleteInputEventResponseAsync" name="DiscordCoreAPI::InputEvents::deleteInputEventResponseAsync">
+<area shape="rect" id="node1" title="Deletes a previously sent &quot;input&#45;event&#45;response&quot;." alt="" coords="5,39,225,80"/>
+<area shape="rect" id="node2" href="$da/dcd/a03108.html#a4f96f93f629527358ad27c06bd469f9b" title="Deletes a follow up Message." alt="" coords="273,5,481,47"/>
+<area shape="rect" id="node3" href="$d6/da2/a01920.html#a904d030f3edbf8efac15b2cebba3e37a" title="Gets the resulting value of the CoRoutine." alt="" coords="286,71,469,112"/>
+</map>

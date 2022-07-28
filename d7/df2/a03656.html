@@ -105,29 +105,33 @@ $(document).ready(function(){initNavTree('d7/df2/a03656.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../dc/d0b/a03653.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::CreateWebHookData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::DeleteWebHookMessageData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For creating a new <a class="el" href="../../dc/d0d/a03708.html" title="A single WebHook.">WebHook</a>.  
+<p>For deleting a <a class="el" href="../../d0/d99/a03660.html" title="A single WebHook.">WebHook</a> <a class="el" href="../../d6/da1/a03180.html" title="A single Message.">Message</a>.  
  <a href="../../d7/df2/a03656.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d8/dba/a00773_source.html">WebHookEntities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:abd2a5b440d3eb2a1daa5fd7cb3d0742b"><td class="memItemLeft" align="right" valign="top"><a id="abd2a5b440d3eb2a1daa5fd7cb3d0742b" name="abd2a5b440d3eb2a1daa5fd7cb3d0742b"></a>
-std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>avatar</b> {}</td></tr>
-<tr class="memdesc:abd2a5b440d3eb2a1daa5fd7cb3d0742b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Image for the default webhook avatar. <br /></td></tr>
-<tr class="separator:abd2a5b440d3eb2a1daa5fd7cb3d0742b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9cfb9ecc35232101605bce70c000f03"><td class="memItemLeft" align="right" valign="top"><a id="aa9cfb9ecc35232101605bce70c000f03" name="aa9cfb9ecc35232101605bce70c000f03"></a>
-<a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>channelId</b> {}</td></tr>
-<tr class="memdesc:aa9cfb9ecc35232101605bce70c000f03"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../db/da1/a01944.html" title="A Channel object.">Channel</a> within which to create the <a class="el" href="../../dc/d0d/a03708.html" title="A single WebHook.">WebHook</a>. <br /></td></tr>
-<tr class="separator:aa9cfb9ecc35232101605bce70c000f03"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed2bbdbf37159b013291bbe766d89df6"><td class="memItemLeft" align="right" valign="top"><a id="aed2bbdbf37159b013291bbe766d89df6" name="aed2bbdbf37159b013291bbe766d89df6"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> {}</td></tr>
-<tr class="memdesc:aed2bbdbf37159b013291bbe766d89df6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the webhook(1 - 80 characters). <br /></td></tr>
-<tr class="separator:aed2bbdbf37159b013291bbe766d89df6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a124c8caab662a3c690277c6233802cdd"><td class="memItemLeft" align="right" valign="top"><a id="a124c8caab662a3c690277c6233802cdd" name="a124c8caab662a3c690277c6233802cdd"></a>
+<a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>messageId</b> {}</td></tr>
+<tr class="memdesc:a124c8caab662a3c690277c6233802cdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../d6/da1/a03180.html" title="A single Message.">Message</a> Id to collect. <br /></td></tr>
+<tr class="separator:a124c8caab662a3c690277c6233802cdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd10c19c414f784aefc45ef05ac49760"><td class="memItemLeft" align="right" valign="top"><a id="acd10c19c414f784aefc45ef05ac49760" name="acd10c19c414f784aefc45ef05ac49760"></a>
+<a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>threadId</b> {}</td></tr>
+<tr class="memdesc:acd10c19c414f784aefc45ef05ac49760"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a message to the specified thread within a webhook's <a class="el" href="../../dc/d7f/a01884.html" title="A Channel object.">Channel</a>. The thread will automatically be unarchived. <br /></td></tr>
+<tr class="separator:acd10c19c414f784aefc45ef05ac49760"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b8dccf10c3ca9a6a7ee3581ff6da218"><td class="memItemLeft" align="right" valign="top"><a id="a7b8dccf10c3ca9a6a7ee3581ff6da218" name="a7b8dccf10c3ca9a6a7ee3581ff6da218"></a>
+<a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>webHookId</b> {}</td></tr>
+<tr class="memdesc:a7b8dccf10c3ca9a6a7ee3581ff6da218"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../d0/d99/a03660.html" title="A single WebHook.">WebHook</a> you would like to collect. <br /></td></tr>
+<tr class="separator:a7b8dccf10c3ca9a6a7ee3581ff6da218"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e6bc5dac9239b9aa40fb3b9aceb2f32"><td class="memItemLeft" align="right" valign="top"><a id="a1e6bc5dac9239b9aa40fb3b9aceb2f32" name="a1e6bc5dac9239b9aa40fb3b9aceb2f32"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>webhookToken</b> {}</td></tr>
+<tr class="memdesc:a1e6bc5dac9239b9aa40fb3b9aceb2f32"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../d0/d99/a03660.html" title="A single WebHook.">WebHook</a> token you would like to collect. <br /></td></tr>
+<tr class="separator:a1e6bc5dac9239b9aa40fb3b9aceb2f32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d8/dba/a00773_source.html">WebHookEntities.hpp</a></li>
@@ -138,7 +142,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> {}</t
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d7/df2/a03656.html">CreateWebHookData</a></li>
+    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d7/df2/a03656.html">DeleteWebHookMessageData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

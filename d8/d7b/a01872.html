@@ -105,57 +105,36 @@ $(document).ready(function(){initNavTree('d8/d7b/a01872.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d8/d3a/a01869.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::CreateAutoModerationRuleData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::ModifyGuildChannelPositionData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For creating an auto-moderation-rule.  
+<p>For modifying the <a class="el" href="../../dc/d7f/a01884.html" title="A Channel object.">Channel</a> position responseData of a single <a class="el" href="../../dc/d7f/a01884.html" title="A Channel object.">Channel</a>.  
  <a href="../../d8/d7b/a01872.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="../../df/d9e/a00686_source.html">AutoModerationEntities.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../df/d9e/a00686_source.html">ChannelEntities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:a652939edad38e29e0729c3969f76bc84"><td class="memItemLeft" align="right" valign="top"><a id="a652939edad38e29e0729c3969f76bc84" name="a652939edad38e29e0729c3969f76bc84"></a>
-std::vector&lt; <a class="el" href="../../d5/d10/a02396.html">ActionData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>actions</b> {}</td></tr>
-<tr class="memdesc:a652939edad38e29e0729c3969f76bc84"><td class="mdescLeft">&#160;</td><td class="mdescRight">The actions which will execute when the rule is triggered. <br /></td></tr>
-<tr class="separator:a652939edad38e29e0729c3969f76bc84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11be4dfcce15f35c0b672a956004c4d9"><td class="memItemLeft" align="right" valign="top"><a id="a11be4dfcce15f35c0b672a956004c4d9" name="a11be4dfcce15f35c0b672a956004c4d9"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>enabled</b> {}</td></tr>
-<tr class="memdesc:a11be4dfcce15f35c0b672a956004c4d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the rule is enabled(False by default). <br /></td></tr>
-<tr class="separator:a11be4dfcce15f35c0b672a956004c4d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33ee38d903a2366f1303947bb96f6b69"><td class="memItemLeft" align="right" valign="top"><a id="a33ee38d903a2366f1303947bb96f6b69" name="a33ee38d903a2366f1303947bb96f6b69"></a>
-<a class="el" href="../../de/dfc/a00891.html#ga5dd2e40b084b06961a22cbc0fd491a72">EventType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>eventType</b> {}</td></tr>
-<tr class="memdesc:a33ee38d903a2366f1303947bb96f6b69"><td class="mdescLeft">&#160;</td><td class="mdescRight">The event type. <br /></td></tr>
-<tr class="separator:a33ee38d903a2366f1303947bb96f6b69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2fb710b4df8009081981d79dcaf6fae1"><td class="memItemLeft" align="right" valign="top"><a id="a2fb710b4df8009081981d79dcaf6fae1" name="a2fb710b4df8009081981d79dcaf6fae1"></a>
-std::vector&lt; uint64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>exemptChannels</b> {}</td></tr>
-<tr class="memdesc:a2fb710b4df8009081981d79dcaf6fae1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The channel ids that should not be affected by the rule(Maximum of 50). <br /></td></tr>
-<tr class="separator:a2fb710b4df8009081981d79dcaf6fae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c32ad125f5693ac0478b7d9ebfc51c1"><td class="memItemLeft" align="right" valign="top"><a id="a2c32ad125f5693ac0478b7d9ebfc51c1" name="a2c32ad125f5693ac0478b7d9ebfc51c1"></a>
-std::vector&lt; uint64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>exemptRoles</b> {}</td></tr>
-<tr class="memdesc:a2c32ad125f5693ac0478b7d9ebfc51c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The role ids that should not be affected by the rule(Maximum of 20). <br /></td></tr>
-<tr class="separator:a2c32ad125f5693ac0478b7d9ebfc51c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94b7899d67dcf8b5231ef5ee127fa999"><td class="memItemLeft" align="right" valign="top"><a id="a94b7899d67dcf8b5231ef5ee127fa999" name="a94b7899d67dcf8b5231ef5ee127fa999"></a>
-<a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildId</b> {}</td></tr>
-<tr class="memdesc:a94b7899d67dcf8b5231ef5ee127fa999"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../d6/db9/a02980.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> within which to create the <a class="el" href="../../da/d66/a01856.html" title="Represents an auto-moderation-rule.">AutoModerationRule</a>. <br /></td></tr>
-<tr class="separator:a94b7899d67dcf8b5231ef5ee127fa999"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af67f64c74c4757917d555fac6e76156c"><td class="memItemLeft" align="right" valign="top"><a id="af67f64c74c4757917d555fac6e76156c" name="af67f64c74c4757917d555fac6e76156c"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> {}</td></tr>
-<tr class="memdesc:af67f64c74c4757917d555fac6e76156c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The rule name. <br /></td></tr>
-<tr class="separator:af67f64c74c4757917d555fac6e76156c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5def7432bd9aab36b082bd45f280061"><td class="memItemLeft" align="right" valign="top"><a id="ab5def7432bd9aab36b082bd45f280061" name="ab5def7432bd9aab36b082bd45f280061"></a>
-<a class="el" href="../../d5/df1/a02392.html">TriggerMetaData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>triggerMetadata</b> {}</td></tr>
-<tr class="memdesc:ab5def7432bd9aab36b082bd45f280061"><td class="mdescLeft">&#160;</td><td class="mdescRight">The trigger metadata. <br /></td></tr>
-<tr class="separator:ab5def7432bd9aab36b082bd45f280061"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade922cb1f569d94241f9d335c1cb293e"><td class="memItemLeft" align="right" valign="top"><a id="ade922cb1f569d94241f9d335c1cb293e" name="ade922cb1f569d94241f9d335c1cb293e"></a>
-<a class="el" href="../../de/dfc/a00891.html#ga44d3f8351eb0531260b0a92e1ceb4956">TriggerType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>triggerType</b> {}</td></tr>
-<tr class="memdesc:ade922cb1f569d94241f9d335c1cb293e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The trigger type. <br /></td></tr>
-<tr class="separator:ade922cb1f569d94241f9d335c1cb293e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d0eda8cc30c83339632de85bf38ae97"><td class="memItemLeft" align="right" valign="top"><a id="a6d0eda8cc30c83339632de85bf38ae97" name="a6d0eda8cc30c83339632de85bf38ae97"></a>
+<a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>id</b> {}</td></tr>
+<tr class="memdesc:a6d0eda8cc30c83339632de85bf38ae97"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../dc/d7f/a01884.html" title="A Channel object.">Channel</a> id. <br /></td></tr>
+<tr class="separator:a6d0eda8cc30c83339632de85bf38ae97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a762eb3049e777960c5b2e88e193e7fba"><td class="memItemLeft" align="right" valign="top"><a id="a762eb3049e777960c5b2e88e193e7fba" name="a762eb3049e777960c5b2e88e193e7fba"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>lockPermissions</b> { false }</td></tr>
+<tr class="memdesc:a762eb3049e777960c5b2e88e193e7fba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Syncs the permission overwrites with the new parent, if moving to a new category. <br /></td></tr>
+<tr class="separator:a762eb3049e777960c5b2e88e193e7fba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f9ed77dc53738201fbf5fce2143d87d"><td class="memItemLeft" align="right" valign="top"><a id="a6f9ed77dc53738201fbf5fce2143d87d" name="a6f9ed77dc53738201fbf5fce2143d87d"></a>
+<a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>parentId</b> {}</td></tr>
+<tr class="memdesc:a6f9ed77dc53738201fbf5fce2143d87d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The new parent ID for the <a class="el" href="../../dc/d7f/a01884.html" title="A Channel object.">Channel</a> that is moved. <br /></td></tr>
+<tr class="separator:a6f9ed77dc53738201fbf5fce2143d87d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21128c5806a1aa5058ab6cf9bdce6c3f"><td class="memItemLeft" align="right" valign="top"><a id="a21128c5806a1aa5058ab6cf9bdce6c3f" name="a21128c5806a1aa5058ab6cf9bdce6c3f"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>position</b> { 0 }</td></tr>
+<tr class="memdesc:a21128c5806a1aa5058ab6cf9bdce6c3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sorting position of the <a class="el" href="../../dc/d7f/a01884.html" title="A Channel object.">Channel</a>. <br /></td></tr>
+<tr class="separator:a21128c5806a1aa5058ab6cf9bdce6c3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following files:<ul>
-<li><a class="el" href="../../df/d9e/a00686_source.html">AutoModerationEntities.hpp</a></li>
-<li><a class="el" href="../../d4/d45/a00791_source.html">AutoModerationEntities.cpp</a></li>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="../../df/d9e/a00686_source.html">ChannelEntities.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -163,7 +142,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> {}</t
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d8/d7b/a01872.html">CreateAutoModerationRuleData</a></li>
+    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d8/d7b/a01872.html">ModifyGuildChannelPositionData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

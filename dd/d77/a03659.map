@@ -1,6 +1,5 @@
-<map id="DiscordCoreAPI::ExecuteWebHookData" name="DiscordCoreAPI::ExecuteWebHookData">
-<area shape="rect" id="node1" title="For executing a WebHook." alt="" coords="5,71,203,112"/>
-<area shape="rect" id="node2" href="$df/dbf/a03132.html" title="For creating an ephemeral follow up Message." alt="" coords="254,5,477,47"/>
-<area shape="rect" id="node3" href="$dc/d28/a03136.html" title="For creating a follow up Message." alt="" coords="267,71,464,112"/>
-<area shape="rect" id="node4" href="$dc/d4c/a03664.html" title="For editing a WebHook Message." alt="" coords="251,137,480,163"/>
+<map id="DiscordCoreAPI::WebHook" name="DiscordCoreAPI::WebHook">
+<area shape="rect" id="node1" title="A single WebHook." alt="" coords="19,155,198,181"/>
+<area shape="rect" id="node2" href="$d1/d03/a02560.html" title="WebHook data." alt="" coords="5,80,212,107"/>
+<area shape="rect" id="node3" href="$dc/d35/a02240.html" title="Base class for all Discord entities." alt="" coords="9,5,209,32"/>
 </map>

@@ -105,11 +105,11 @@ $(document).ready(function(){initNavTree('dc/d28/a02584.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d6/dae/a02581.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::GuildScheduledEventUserData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::ApplicationCommandOptionChoiceData Class Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Data representing a single GuildScheduledEventUser.  
+<p>Data structure representing an <a class="el" href="../../dd/d00/a01776.html" title="A single ApplicationCommand.">ApplicationCommand</a>'s option choice.  
  <a href="../../dc/d28/a02584.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a>&gt;</code></p>
@@ -118,22 +118,22 @@ $(document).ready(function(){initNavTree('dc/d28/a02584.html','../../'); initRes
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:a9af25d92ab0c3960f57049c6d91f4346"><td class="memItemLeft" align="right" valign="top"><a id="a9af25d92ab0c3960f57049c6d91f4346" name="a9af25d92ab0c3960f57049c6d91f4346"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>guildScheduledEventId</b> {}</td></tr>
-<tr class="memdesc:a9af25d92ab0c3960f57049c6d91f4346"><td class="mdescLeft">&#160;</td><td class="mdescRight">The scheduled event id which the <a class="el" href="../../d8/db0/a03572.html" title="A single User.">User</a> subscribed to/. <br /></td></tr>
-<tr class="separator:a9af25d92ab0c3960f57049c6d91f4346"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62a9bdd9b83704440255e775017b2688"><td class="memItemLeft" align="right" valign="top"><a id="a62a9bdd9b83704440255e775017b2688" name="a62a9bdd9b83704440255e775017b2688"></a>
-<a class="el" href="../../d3/d35/a02360.html">GuildMemberData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>member</b> {}</td></tr>
-<tr class="memdesc:a62a9bdd9b83704440255e775017b2688"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d6/db9/a02980.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> member data for this <a class="el" href="../../d8/db0/a03572.html" title="A single User.">User</a> for the <a class="el" href="../../d6/db9/a02980.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> which this event belongs to, if any. <br /></td></tr>
-<tr class="separator:a62a9bdd9b83704440255e775017b2688"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a4c17e211989ef143cb6391abec0624"><td class="memItemLeft" align="right" valign="top"><a id="a4a4c17e211989ef143cb6391abec0624" name="a4a4c17e211989ef143cb6391abec0624"></a>
-<a class="el" href="../../d8/d9a/a02296.html">UserData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>user</b> {}</td></tr>
-<tr class="memdesc:a4a4c17e211989ef143cb6391abec0624"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d8/db0/a03572.html" title="A single User.">User</a> which subscribed to an event. <br /></td></tr>
-<tr class="separator:a4a4c17e211989ef143cb6391abec0624"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95e459ddc657b13bf23432adfd10525c"><td class="memItemLeft" align="right" valign="top"><a id="a95e459ddc657b13bf23432adfd10525c" name="a95e459ddc657b13bf23432adfd10525c"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> {}</td></tr>
+<tr class="memdesc:a95e459ddc657b13bf23432adfd10525c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of the current choice. <br /></td></tr>
+<tr class="separator:a95e459ddc657b13bf23432adfd10525c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fffd5b9869e4e271f83f8bda8e93cfa"><td class="memItemLeft" align="right" valign="top"><a id="a8fffd5b9869e4e271f83f8bda8e93cfa" name="a8fffd5b9869e4e271f83f8bda8e93cfa"></a>
+std::unordered_map&lt; std::string, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>nameLocalizations</b> {}</td></tr>
+<tr class="memdesc:a8fffd5b9869e4e271f83f8bda8e93cfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dictionary with keys in available locales Localization dictionary for the name field. <br /></td></tr>
+<tr class="separator:a8fffd5b9869e4e271f83f8bda8e93cfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0680ea536463bdf05f6143aedd6a74cc"><td class="memItemLeft" align="right" valign="top"><a id="a0680ea536463bdf05f6143aedd6a74cc" name="a0680ea536463bdf05f6143aedd6a74cc"></a>
+nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><b>value</b> {}</td></tr>
+<tr class="memdesc:a0680ea536463bdf05f6143aedd6a74cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The value of the option. <br /></td></tr>
+<tr class="separator:a0680ea536463bdf05f6143aedd6a74cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following files:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a></li>
-<li><a class="el" href="../../d5/d72/a00803_source.html">DataParsingFunctions.cpp</a></li>
+<li><a class="el" href="../../df/d0e/a00800_source.html">DataParsingFunctions.cpp</a></li>
 <li><a class="el" href="../../d3/d60/a00818_source.html">FoundationEntities.cpp</a></li>
 </ul>
 </div><!-- contents -->
@@ -142,7 +142,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>guildScheduled
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dc/d28/a02584.html">GuildScheduledEventUserData</a></li>
+    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dc/d28/a02584.html">ApplicationCommandOptionChoiceData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

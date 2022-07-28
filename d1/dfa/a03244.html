@@ -103,404 +103,69 @@ $(document).ready(function(){initNavTree('d1/dfa/a03244.html','../../'); initRes
 
 <div class="header">
   <div class="summary">
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="../../dc/dc7/a03241.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::Messages Class Reference<div class="ingroups"><a class="el" href="../../d7/d92/a00887.html">Main Endpoints</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::Reaction Class Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>An interface class for the <a class="el" href="../../d6/d63/a03228.html" title="A single Message.">Message</a> related Discord endpoints.  
+<p>A single <a class="el" href="../../d1/dfa/a03244.html" title="A single Reaction.">Reaction</a>.  
  <a href="../../d1/dfa/a03244.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="../../d6/dc0/a00734_source.html">MessageEntities.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../dd/db2/a00737_source.html">ReactionEntities.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for DiscordCoreAPI::Reaction:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/d36/a03243.svg" width="211" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a64d985c14562deb99044d9eab00d0379"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d9d/a01972.html">CoRoutine</a>&lt; <a class="el" href="../../d6/d63/a03228.html">Message</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dfa/a03244.html#a64d985c14562deb99044d9eab00d0379">createMessageAsync</a> (<a class="el" href="../../d8/d2a/a03192.html">CreateMessageData</a> dataPackage)</td></tr>
-<tr class="memdesc:a64d985c14562deb99044d9eab00d0379"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="../../d6/d63/a03228.html" title="A single Message.">Message</a>.  <a href="../../d1/dfa/a03244.html#a64d985c14562deb99044d9eab00d0379">More...</a><br /></td></tr>
-<tr class="separator:a64d985c14562deb99044d9eab00d0379"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac85138fd763e3e08d36fe62162f68140"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d9d/a01972.html">CoRoutine</a>&lt; <a class="el" href="../../d6/d63/a03228.html">Message</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dfa/a03244.html#ac85138fd763e3e08d36fe62162f68140">crosspostMessageAsync</a> (<a class="el" href="../../de/d3a/a03200.html">CrosspostMessageData</a> dataPackage)</td></tr>
-<tr class="memdesc:ac85138fd763e3e08d36fe62162f68140"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crossposts a message from a News <a class="el" href="../../db/da1/a01944.html" title="A Channel object.">Channel</a> to the following <a class="el" href="../../d0/d59/a01956.html" title="An interface class for the Channel related endpoints.">Channels</a>.  <a href="../../d1/dfa/a03244.html#ac85138fd763e3e08d36fe62162f68140">More...</a><br /></td></tr>
-<tr class="separator:ac85138fd763e3e08d36fe62162f68140"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9843730873822b1da5e548cc53907943"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d9d/a01972.html">CoRoutine</a>&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dfa/a03244.html#a9843730873822b1da5e548cc53907943">deleteMessageAsync</a> (<a class="el" href="../../d6/d1a/a03208.html">DeleteMessageData</a> dataPackage)</td></tr>
-<tr class="memdesc:a9843730873822b1da5e548cc53907943"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes a <a class="el" href="../../d6/d63/a03228.html" title="A single Message.">Message</a>.  <a href="../../d1/dfa/a03244.html#a9843730873822b1da5e548cc53907943">More...</a><br /></td></tr>
-<tr class="separator:a9843730873822b1da5e548cc53907943"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a103737c702f2afefdaa82f848ad8a16f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d9d/a01972.html">CoRoutine</a>&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dfa/a03244.html#a103737c702f2afefdaa82f848ad8a16f">deleteMessagesBulkAsync</a> (<a class="el" href="../../df/d1e/a03212.html">DeleteMessagesBulkData</a> dataPackage)</td></tr>
-<tr class="memdesc:a103737c702f2afefdaa82f848ad8a16f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes a collection of <a class="el" href="../../d1/dfa/a03244.html" title="An interface class for the Message related Discord endpoints.">Messages</a>.  <a href="../../d1/dfa/a03244.html#a103737c702f2afefdaa82f848ad8a16f">More...</a><br /></td></tr>
-<tr class="separator:a103737c702f2afefdaa82f848ad8a16f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0bbb26d01567481ec72d6eca3915b5b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d9d/a01972.html">CoRoutine</a>&lt; <a class="el" href="../../d6/d63/a03228.html">Message</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dfa/a03244.html#af0bbb26d01567481ec72d6eca3915b5b">editMessageAsync</a> (<a class="el" href="../../d6/d75/a03204.html">EditMessageData</a> dataPackage)</td></tr>
-<tr class="memdesc:af0bbb26d01567481ec72d6eca3915b5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Edit a <a class="el" href="../../d6/d63/a03228.html" title="A single Message.">Message</a>.  <a href="../../d1/dfa/a03244.html#af0bbb26d01567481ec72d6eca3915b5b">More...</a><br /></td></tr>
-<tr class="separator:af0bbb26d01567481ec72d6eca3915b5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa513167a4f89e3ebd8a97537893e35c1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d9d/a01972.html">CoRoutine</a>&lt; <a class="el" href="../../d6/d63/a03228.html">Message</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dfa/a03244.html#aa513167a4f89e3ebd8a97537893e35c1">getMessageAsync</a> (<a class="el" href="../../da/dfb/a03188.html">GetMessageData</a> dataPackage)</td></tr>
-<tr class="memdesc:aa513167a4f89e3ebd8a97537893e35c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collects a <a class="el" href="../../d6/d63/a03228.html" title="A single Message.">Message</a> from the Discord servers.  <a href="../../d1/dfa/a03244.html#aa513167a4f89e3ebd8a97537893e35c1">More...</a><br /></td></tr>
-<tr class="separator:aa513167a4f89e3ebd8a97537893e35c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ada29a2229e184e988024a152e15f67"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d9d/a01972.html">CoRoutine</a>&lt; std::vector&lt; <a class="el" href="../../d6/d63/a03228.html">Message</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dfa/a03244.html#a2ada29a2229e184e988024a152e15f67">getMessagesAsync</a> (<a class="el" href="../../d0/d08/a03184.html">GetMessagesData</a> dataPackage)</td></tr>
-<tr class="memdesc:a2ada29a2229e184e988024a152e15f67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collects a collection of <a class="el" href="../../d6/d63/a03228.html" title="A single Message.">Message</a> from the Discord servers.  <a href="../../d1/dfa/a03244.html#a2ada29a2229e184e988024a152e15f67">More...</a><br /></td></tr>
-<tr class="separator:a2ada29a2229e184e988024a152e15f67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b6c1f023374e667f09d71d84b8c05bc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d9d/a01972.html">CoRoutine</a>&lt; std::vector&lt; <a class="el" href="../../d6/d63/a03228.html">Message</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dfa/a03244.html#a7b6c1f023374e667f09d71d84b8c05bc">getPinnedMessagesAsync</a> (<a class="el" href="../../d5/d2f/a03216.html">GetPinnedMessagesData</a> dataPackage)</td></tr>
-<tr class="memdesc:a7b6c1f023374e667f09d71d84b8c05bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collects a collection of pinned <a class="el" href="../../d1/dfa/a03244.html" title="An interface class for the Message related Discord endpoints.">Messages</a> from the Discord servers.  <a href="../../d1/dfa/a03244.html#a7b6c1f023374e667f09d71d84b8c05bc">More...</a><br /></td></tr>
-<tr class="separator:a7b6c1f023374e667f09d71d84b8c05bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7c1fbd9e4497c5065bc677d1ba3b057"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d9d/a01972.html">CoRoutine</a>&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dfa/a03244.html#ac7c1fbd9e4497c5065bc677d1ba3b057">pinMessageAsync</a> (<a class="el" href="../../da/df5/a03220.html">PinMessageData</a> dataPackage)</td></tr>
-<tr class="memdesc:ac7c1fbd9e4497c5065bc677d1ba3b057"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pins a <a class="el" href="../../d6/d63/a03228.html" title="A single Message.">Message</a> to a given <a class="el" href="../../db/da1/a01944.html" title="A Channel object.">Channel</a>.  <a href="../../d1/dfa/a03244.html#ac7c1fbd9e4497c5065bc677d1ba3b057">More...</a><br /></td></tr>
-<tr class="separator:ac7c1fbd9e4497c5065bc677d1ba3b057"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6218ef539d4c35f740b52d9fa117070"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d9d/a01972.html">CoRoutine</a>&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dfa/a03244.html#ae6218ef539d4c35f740b52d9fa117070">unpinMessageAsync</a> (<a class="el" href="../../d7/de1/a03224.html">UnpinMessageData</a> dataPackage)</td></tr>
-<tr class="memdesc:ae6218ef539d4c35f740b52d9fa117070"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unpins a <a class="el" href="../../d6/d63/a03228.html" title="A single Message.">Message</a> from a given <a class="el" href="../../db/da1/a01944.html" title="A Channel object.">Channel</a>.  <a href="../../d1/dfa/a03244.html#ae6218ef539d4c35f740b52d9fa117070">More...</a><br /></td></tr>
-<tr class="separator:ae6218ef539d4c35f740b52d9fa117070"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_methods_a02240"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a02240')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../dc/d35/a02240.html">DiscordCoreAPI::DiscordEntity</a></td></tr>
+<tr class="memitem:a880fa695445dc41f6d371d2a6ef1e8c0 inherit pub_methods_a02240"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d35/a02240.html#a880fa695445dc41f6d371d2a6ef1e8c0">getCreatedAtTimestamp</a> (<a class="el" href="../../d7/d46/a00890.html#ga5f837e6437665f0a390fe2c6271e3a91">TimeFormat</a> timeFormat)</td></tr>
+<tr class="memdesc:a880fa695445dc41f6d371d2a6ef1e8c0 inherit pub_methods_a02240"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the snowflake-id into a time and date stamp.  <a href="../../dc/d35/a02240.html#a880fa695445dc41f6d371d2a6ef1e8c0">More...</a><br /></td></tr>
+<tr class="separator:a880fa695445dc41f6d371d2a6ef1e8c0 inherit pub_methods_a02240"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_a02380"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_a02380')"><img src="../../closed.png" alt="-"/>&#160;Public Data Members inherited from <a class="el" href="../../d8/d30/a02380.html">DiscordCoreAPI::ReactionData</a></td></tr>
+<tr class="memitem:a8e4efbd2a9aef02a347072d1d3703dd2 inherit pub_attribs_a02380"><td class="memItemLeft" align="right" valign="top"><a id="a8e4efbd2a9aef02a347072d1d3703dd2" name="a8e4efbd2a9aef02a347072d1d3703dd2"></a>
+<a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>channelId</b> {}</td></tr>
+<tr class="memdesc:a8e4efbd2a9aef02a347072d1d3703dd2 inherit pub_attribs_a02380"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the <a class="el" href="../../dc/d7f/a01884.html" title="A Channel object.">Channel</a> where it was placed. <br /></td></tr>
+<tr class="separator:a8e4efbd2a9aef02a347072d1d3703dd2 inherit pub_attribs_a02380"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af32b0d15134cda46cd31ad27a143770c inherit pub_attribs_a02380"><td class="memItemLeft" align="right" valign="top"><a id="af32b0d15134cda46cd31ad27a143770c" name="af32b0d15134cda46cd31ad27a143770c"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>count</b> { 0 }</td></tr>
+<tr class="memdesc:af32b0d15134cda46cd31ad27a143770c inherit pub_attribs_a02380"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of times this particular emoji was placed as a reaction to the given <a class="el" href="../../d6/da1/a03180.html" title="A single Message.">Message</a>. <br /></td></tr>
+<tr class="separator:af32b0d15134cda46cd31ad27a143770c inherit pub_attribs_a02380"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8692054e48346635712d4efe16a1b84b inherit pub_attribs_a02380"><td class="memItemLeft" align="right" valign="top"><a id="a8692054e48346635712d4efe16a1b84b" name="a8692054e48346635712d4efe16a1b84b"></a>
+<a class="el" href="../../d1/da2/a02368.html">EmojiData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>emoji</b> {}</td></tr>
+<tr class="memdesc:a8692054e48346635712d4efe16a1b84b inherit pub_attribs_a02380"><td class="mdescLeft">&#160;</td><td class="mdescRight">The emoji that was placed as a reaction. <br /></td></tr>
+<tr class="separator:a8692054e48346635712d4efe16a1b84b inherit pub_attribs_a02380"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c5f557af0834d9ccfc125e88fd10e75 inherit pub_attribs_a02380"><td class="memItemLeft" align="right" valign="top"><a id="a6c5f557af0834d9ccfc125e88fd10e75" name="a6c5f557af0834d9ccfc125e88fd10e75"></a>
+<a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildId</b> {}</td></tr>
+<tr class="memdesc:a6c5f557af0834d9ccfc125e88fd10e75 inherit pub_attribs_a02380"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the <a class="el" href="../../d2/d0c/a02932.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> where it was placed. <br /></td></tr>
+<tr class="separator:a6c5f557af0834d9ccfc125e88fd10e75 inherit pub_attribs_a02380"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51122905d5384e47173f0487b185fe1a inherit pub_attribs_a02380"><td class="memItemLeft" align="right" valign="top"><a id="a51122905d5384e47173f0487b185fe1a" name="a51122905d5384e47173f0487b185fe1a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>me</b> { false }</td></tr>
+<tr class="memdesc:a51122905d5384e47173f0487b185fe1a inherit pub_attribs_a02380"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not I (The bot) placed it. <br /></td></tr>
+<tr class="separator:a51122905d5384e47173f0487b185fe1a inherit pub_attribs_a02380"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98772b571c2059e3e7790f53b8e9abdb inherit pub_attribs_a02380"><td class="memItemLeft" align="right" valign="top"><a id="a98772b571c2059e3e7790f53b8e9abdb" name="a98772b571c2059e3e7790f53b8e9abdb"></a>
+<a class="el" href="../../df/d73/a02312.html">GuildMemberData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>member</b> {}</td></tr>
+<tr class="memdesc:a98772b571c2059e3e7790f53b8e9abdb inherit pub_attribs_a02380"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../d6/db9/a02980.html" title="A single GuildMember.">GuildMember</a> who placed the reaction. <br /></td></tr>
+<tr class="separator:a98772b571c2059e3e7790f53b8e9abdb inherit pub_attribs_a02380"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53217ca3a2985efdb94e3a98cac5fcd8 inherit pub_attribs_a02380"><td class="memItemLeft" align="right" valign="top"><a id="a53217ca3a2985efdb94e3a98cac5fcd8" name="a53217ca3a2985efdb94e3a98cac5fcd8"></a>
+<a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>messageId</b> {}</td></tr>
+<tr class="memdesc:a53217ca3a2985efdb94e3a98cac5fcd8 inherit pub_attribs_a02380"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the <a class="el" href="../../d6/da1/a03180.html" title="A single Message.">Message</a> upon which it was placed. <br /></td></tr>
+<tr class="separator:a53217ca3a2985efdb94e3a98cac5fcd8 inherit pub_attribs_a02380"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeab7a43a8fa1236c938ae9eda5aac1e0 inherit pub_attribs_a02380"><td class="memItemLeft" align="right" valign="top"><a id="aeab7a43a8fa1236c938ae9eda5aac1e0" name="aeab7a43a8fa1236c938ae9eda5aac1e0"></a>
+<a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>userId</b> {}</td></tr>
+<tr class="memdesc:aeab7a43a8fa1236c938ae9eda5aac1e0 inherit pub_attribs_a02380"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the <a class="el" href="../../dc/d98/a03524.html" title="A single User.">User</a> who placed the reaction. <br /></td></tr>
+<tr class="separator:aeab7a43a8fa1236c938ae9eda5aac1e0 inherit pub_attribs_a02380"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_a02240"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_a02240')"><img src="../../closed.png" alt="-"/>&#160;Public Data Members inherited from <a class="el" href="../../dc/d35/a02240.html">DiscordCoreAPI::DiscordEntity</a></td></tr>
+<tr class="memitem:a903c33f2f50e17293b409cfe33bcd5e9 inherit pub_attribs_a02240"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d35/a02240.html#a903c33f2f50e17293b409cfe33bcd5e9">id</a> {}</td></tr>
+<tr class="separator:a903c33f2f50e17293b409cfe33bcd5e9 inherit pub_attribs_a02240"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a64d985c14562deb99044d9eab00d0379" name="a64d985c14562deb99044d9eab00d0379"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64d985c14562deb99044d9eab00d0379">&#9670;&nbsp;</a></span>createMessageAsync()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../db/d9d/a01972.html">CoRoutine</a>&lt; <a class="el" href="../../d6/d63/a03228.html">Message</a> &gt; DiscordCoreAPI::Messages::createMessageAsync </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d8/d2a/a03192.html">CreateMessageData</a>&#160;</td>
-          <td class="paramname"><em>dataPackage</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >Creates a new <a class="el" href="../../d6/d63/a03228.html" title="A single Message.">Message</a>.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dataPackage</td><td>A <a class="el" href="../../d8/d2a/a03192.html" title="For creating a Message.">CreateMessageData</a> structure. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../db/d9d/a01972.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> containing a <a class="el" href="../../d6/d63/a03228.html" title="A single Message.">Message</a>. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../df/de8/a00839_source.html#l00253">253</a> of file <a class="el" href="../../df/de8/a00839_source.html">MessageEntities.cpp</a>.</p>
-
-</div>
-</div>
-<a id="ac85138fd763e3e08d36fe62162f68140" name="ac85138fd763e3e08d36fe62162f68140"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac85138fd763e3e08d36fe62162f68140">&#9670;&nbsp;</a></span>crosspostMessageAsync()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../db/d9d/a01972.html">CoRoutine</a>&lt; <a class="el" href="../../d6/d63/a03228.html">Message</a> &gt; DiscordCoreAPI::Messages::crosspostMessageAsync </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../de/d3a/a03200.html">CrosspostMessageData</a>&#160;</td>
-          <td class="paramname"><em>dataPackage</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >Crossposts a message from a News <a class="el" href="../../db/da1/a01944.html" title="A Channel object.">Channel</a> to the following <a class="el" href="../../d0/d59/a01956.html" title="An interface class for the Channel related endpoints.">Channels</a>.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dataPackage</td><td>A <a class="el" href="../../de/d3a/a03200.html" title="For crossposting a Message.">CrosspostMessageData</a> structure. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../db/d9d/a01972.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> containing void. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../df/de8/a00839_source.html#l00269">269</a> of file <a class="el" href="../../df/de8/a00839_source.html">MessageEntities.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a9843730873822b1da5e548cc53907943" name="a9843730873822b1da5e548cc53907943"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9843730873822b1da5e548cc53907943">&#9670;&nbsp;</a></span>deleteMessageAsync()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../db/d9d/a01972.html">CoRoutine</a>&lt; void &gt; DiscordCoreAPI::Messages::deleteMessageAsync </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d6/d1a/a03208.html">DeleteMessageData</a>&#160;</td>
-          <td class="paramname"><em>dataPackage</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >Deletes a <a class="el" href="../../d6/d63/a03228.html" title="A single Message.">Message</a>.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dataPackage</td><td>A <a class="el" href="../../d6/d1a/a03208.html" title="For deleting a Message.">DeleteMessageData</a> structure. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../db/d9d/a01972.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> containing void. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../df/de8/a00839_source.html#l00294">294</a> of file <a class="el" href="../../df/de8/a00839_source.html">MessageEntities.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a103737c702f2afefdaa82f848ad8a16f" name="a103737c702f2afefdaa82f848ad8a16f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a103737c702f2afefdaa82f848ad8a16f">&#9670;&nbsp;</a></span>deleteMessagesBulkAsync()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../db/d9d/a01972.html">CoRoutine</a>&lt; void &gt; DiscordCoreAPI::Messages::deleteMessagesBulkAsync </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../df/d1e/a03212.html">DeleteMessagesBulkData</a>&#160;</td>
-          <td class="paramname"><em>dataPackage</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >Deletes a collection of <a class="el" href="../../d1/dfa/a03244.html" title="An interface class for the Message related Discord endpoints.">Messages</a>.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dataPackage</td><td>A <a class="el" href="../../df/d1e/a03212.html" title="For deleting a bulk of Messages.">DeleteMessagesBulkData</a> structure. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../db/d9d/a01972.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> containing void. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../df/de8/a00839_source.html#l00313">313</a> of file <a class="el" href="../../df/de8/a00839_source.html">MessageEntities.cpp</a>.</p>
-
-</div>
-</div>
-<a id="af0bbb26d01567481ec72d6eca3915b5b" name="af0bbb26d01567481ec72d6eca3915b5b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0bbb26d01567481ec72d6eca3915b5b">&#9670;&nbsp;</a></span>editMessageAsync()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../db/d9d/a01972.html">CoRoutine</a>&lt; <a class="el" href="../../d6/d63/a03228.html">Message</a> &gt; DiscordCoreAPI::Messages::editMessageAsync </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d6/d75/a03204.html">EditMessageData</a>&#160;</td>
-          <td class="paramname"><em>dataPackage</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >Edit a <a class="el" href="../../d6/d63/a03228.html" title="A single Message.">Message</a>.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dataPackage</td><td>An <a class="el" href="../../d6/d75/a03204.html" title="For editing a Message.">EditMessageData</a> structure. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../db/d9d/a01972.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> containing a <a class="el" href="../../d6/d63/a03228.html" title="A single Message.">Message</a>. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../df/de8/a00839_source.html#l00278">278</a> of file <a class="el" href="../../df/de8/a00839_source.html">MessageEntities.cpp</a>.</p>
-
-</div>
-</div>
-<a id="aa513167a4f89e3ebd8a97537893e35c1" name="aa513167a4f89e3ebd8a97537893e35c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa513167a4f89e3ebd8a97537893e35c1">&#9670;&nbsp;</a></span>getMessageAsync()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../db/d9d/a01972.html">CoRoutine</a>&lt; <a class="el" href="../../d6/d63/a03228.html">Message</a> &gt; DiscordCoreAPI::Messages::getMessageAsync </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../da/dfb/a03188.html">GetMessageData</a>&#160;</td>
-          <td class="paramname"><em>dataPackage</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >Collects a <a class="el" href="../../d6/d63/a03228.html" title="A single Message.">Message</a> from the Discord servers.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dataPackage</td><td>A <a class="el" href="../../da/dfb/a03188.html" title="For getting a Message.">GetMessageData</a> structure. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../db/d9d/a01972.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> containing a <a class="el" href="../../d6/d63/a03228.html" title="A single Message.">Message</a>. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../df/de8/a00839_source.html#l00244">244</a> of file <a class="el" href="../../df/de8/a00839_source.html">MessageEntities.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a2ada29a2229e184e988024a152e15f67" name="a2ada29a2229e184e988024a152e15f67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2ada29a2229e184e988024a152e15f67">&#9670;&nbsp;</a></span>getMessagesAsync()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../db/d9d/a01972.html">CoRoutine</a>&lt; std::vector&lt; <a class="el" href="../../d6/d63/a03228.html">Message</a> &gt; &gt; DiscordCoreAPI::Messages::getMessagesAsync </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d08/a03184.html">GetMessagesData</a>&#160;</td>
-          <td class="paramname"><em>dataPackage</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >Collects a collection of <a class="el" href="../../d6/d63/a03228.html" title="A single Message.">Message</a> from the Discord servers.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dataPackage</td><td>A <a class="el" href="../../d0/d08/a03184.html" title="For getting a collection of Messages.">GetMessagesData</a> structure. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../db/d9d/a01972.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> containing a MessageVector. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../df/de8/a00839_source.html#l00207">207</a> of file <a class="el" href="../../df/de8/a00839_source.html">MessageEntities.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a7b6c1f023374e667f09d71d84b8c05bc" name="a7b6c1f023374e667f09d71d84b8c05bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b6c1f023374e667f09d71d84b8c05bc">&#9670;&nbsp;</a></span>getPinnedMessagesAsync()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../db/d9d/a01972.html">CoRoutine</a>&lt; std::vector&lt; <a class="el" href="../../d6/d63/a03228.html">Message</a> &gt; &gt; DiscordCoreAPI::Messages::getPinnedMessagesAsync </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d5/d2f/a03216.html">GetPinnedMessagesData</a>&#160;</td>
-          <td class="paramname"><em>dataPackage</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >Collects a collection of pinned <a class="el" href="../../d1/dfa/a03244.html" title="An interface class for the Message related Discord endpoints.">Messages</a> from the Discord servers.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dataPackage</td><td>A <a class="el" href="../../d5/d2f/a03216.html" title="For getting a collection of pinned Messages.">GetPinnedMessagesData</a> structure. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../db/d9d/a01972.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> containing a MessageVector. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../df/de8/a00839_source.html#l00326">326</a> of file <a class="el" href="../../df/de8/a00839_source.html">MessageEntities.cpp</a>.</p>
-
-</div>
-</div>
-<a id="ac7c1fbd9e4497c5065bc677d1ba3b057" name="ac7c1fbd9e4497c5065bc677d1ba3b057"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac7c1fbd9e4497c5065bc677d1ba3b057">&#9670;&nbsp;</a></span>pinMessageAsync()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../db/d9d/a01972.html">CoRoutine</a>&lt; void &gt; DiscordCoreAPI::Messages::pinMessageAsync </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../da/df5/a03220.html">PinMessageData</a>&#160;</td>
-          <td class="paramname"><em>dataPackage</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >Pins a <a class="el" href="../../d6/d63/a03228.html" title="A single Message.">Message</a> to a given <a class="el" href="../../db/da1/a01944.html" title="A Channel object.">Channel</a>.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dataPackage</td><td>A <a class="el" href="../../da/df5/a03220.html" title="For pinning a single Message.">PinMessageData</a> structure. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../db/d9d/a01972.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> containing void. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../df/de8/a00839_source.html#l00335">335</a> of file <a class="el" href="../../df/de8/a00839_source.html">MessageEntities.cpp</a>.</p>
-
-</div>
-</div>
-<a id="ae6218ef539d4c35f740b52d9fa117070" name="ae6218ef539d4c35f740b52d9fa117070"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae6218ef539d4c35f740b52d9fa117070">&#9670;&nbsp;</a></span>unpinMessageAsync()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../db/d9d/a01972.html">CoRoutine</a>&lt; void &gt; DiscordCoreAPI::Messages::unpinMessageAsync </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d7/de1/a03224.html">UnpinMessageData</a>&#160;</td>
-          <td class="paramname"><em>dataPackage</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >Unpins a <a class="el" href="../../d6/d63/a03228.html" title="A single Message.">Message</a> from a given <a class="el" href="../../db/da1/a01944.html" title="A Channel object.">Channel</a>.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dataPackage</td><td>An <a class="el" href="../../d7/de1/a03224.html" title="For unpinning a single Message.">UnpinMessageData</a> structure. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../db/d9d/a01972.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> containing void. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../df/de8/a00839_source.html#l00347">347</a> of file <a class="el" href="../../df/de8/a00839_source.html">MessageEntities.cpp</a>.</p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="../../d6/dc0/a00734_source.html">MessageEntities.hpp</a></li>
-<li><a class="el" href="../../df/de8/a00839_source.html">MessageEntities.cpp</a></li>
+<li><a class="el" href="../../dd/db2/a00737_source.html">ReactionEntities.hpp</a></li>
+<li><a class="el" href="../../df/d0e/a00800_source.html">DataParsingFunctions.cpp</a></li>
+<li><a class="el" href="../../d0/d11/a00842_source.html">ReactionEntities.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -508,7 +173,7 @@ Static Public Member Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d1/dfa/a03244.html">Messages</a></li>
+    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d1/dfa/a03244.html">Reaction</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

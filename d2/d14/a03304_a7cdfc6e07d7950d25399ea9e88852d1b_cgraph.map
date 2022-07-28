@@ -1,0 +1,5 @@
+<map id="DiscordCoreAPI::Roles::getCachedRoleAsync" name="DiscordCoreAPI::Roles::getCachedRoleAsync">
+<area shape="rect" id="node1" title="Collects a given Role from the library&#39;s cache." alt="" coords="5,5,160,47"/>
+<area shape="rect" id="node2" href="$d2/d14/a03304.html#a288de1b0e26b722f78a4b68abc1c86aa" title="Collects a Role from the Discord servers." alt="" coords="208,5,363,47"/>
+<area shape="rect" id="node3" href="$d2/d14/a03304.html#a754076febb3e97b056fcbd2801646f5b" title="Collects the Roles that a Guild has." alt="" coords="411,5,565,47"/>
+</map>

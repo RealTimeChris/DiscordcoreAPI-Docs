@@ -1,6 +1,6 @@
 <map id="FoundationEntities.hpp" name="FoundationEntities.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="1253,5,1407,32"/>
-<area shape="rect" id="node2" href="$d5/dae/a00767.html" title=" " alt="" coords="1241,80,1419,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1317,5,1471,32"/>
+<area shape="rect" id="node2" href="$d5/dae/a00767.html" title=" " alt="" coords="1305,80,1483,107"/>
 <area shape="rect" id="node3" title=" " alt="" coords="5,155,81,181"/>
 <area shape="rect" id="node4" title=" " alt="" coords="106,155,189,181"/>
 <area shape="rect" id="node5" title=" " alt="" coords="213,155,271,181"/>
@@ -10,18 +10,19 @@
 <area shape="rect" id="node9" title=" " alt="" coords="679,155,792,181"/>
 <area shape="rect" id="node10" title=" " alt="" coords="816,155,927,181"/>
 <area shape="rect" id="node11" title=" " alt="" coords="951,155,1055,181"/>
-<area shape="rect" id="node12" title=" " alt="" coords="1079,155,1157,181"/>
-<area shape="rect" id="node13" title=" " alt="" coords="1181,155,1268,181"/>
-<area shape="rect" id="node14" title=" " alt="" coords="1293,155,1367,181"/>
-<area shape="rect" id="node15" title=" " alt="" coords="1391,155,1463,181"/>
-<area shape="rect" id="node16" title=" " alt="" coords="1488,155,1553,181"/>
-<area shape="rect" id="node17" title=" " alt="" coords="1577,155,1632,181"/>
-<area shape="rect" id="node18" title=" " alt="" coords="1657,155,1726,181"/>
-<area shape="rect" id="node19" title=" " alt="" coords="1751,155,1816,181"/>
-<area shape="rect" id="node20" title=" " alt="" coords="1840,155,1895,181"/>
-<area shape="rect" id="node21" title=" " alt="" coords="1919,155,1975,181"/>
-<area shape="rect" id="node22" title=" " alt="" coords="1999,155,2058,181"/>
-<area shape="rect" id="node23" title=" " alt="" coords="2082,155,2141,181"/>
-<area shape="rect" id="node24" title=" " alt="" coords="2165,155,2223,181"/>
-<area shape="rect" id="node25" title=" " alt="" coords="2247,155,2293,181"/>
+<area shape="rect" id="node12" title=" " alt="" coords="1079,155,1173,181"/>
+<area shape="rect" id="node13" title=" " alt="" coords="1197,155,1274,181"/>
+<area shape="rect" id="node14" title=" " alt="" coords="1299,155,1385,181"/>
+<area shape="rect" id="node15" title=" " alt="" coords="1410,155,1485,181"/>
+<area shape="rect" id="node16" title=" " alt="" coords="1509,155,1581,181"/>
+<area shape="rect" id="node17" title=" " alt="" coords="1605,155,1671,181"/>
+<area shape="rect" id="node18" title=" " alt="" coords="1695,155,1749,181"/>
+<area shape="rect" id="node19" title=" " alt="" coords="1774,155,1843,181"/>
+<area shape="rect" id="node20" title=" " alt="" coords="1868,155,1933,181"/>
+<area shape="rect" id="node21" title=" " alt="" coords="1957,155,2012,181"/>
+<area shape="rect" id="node22" title=" " alt="" coords="2037,155,2093,181"/>
+<area shape="rect" id="node23" title=" " alt="" coords="2117,155,2175,181"/>
+<area shape="rect" id="node24" title=" " alt="" coords="2199,155,2258,181"/>
+<area shape="rect" id="node25" title=" " alt="" coords="2283,155,2340,181"/>
+<area shape="rect" id="node26" title=" " alt="" coords="2364,155,2411,181"/>
 </map>

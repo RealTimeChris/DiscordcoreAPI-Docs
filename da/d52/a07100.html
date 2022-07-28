@@ -102,108 +102,33 @@ $(document).ready(function(){initNavTree('da/d52/a07100.html','../../'); initRes
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Instantiating/Creating an Autocomplete </div></div>
+  <div class="headertitle"><div class="title">Introduction </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Autocomplete_Stuff_Instantiating_Creating_Autocomplete"></a></p><ul>
-<li>Create a data structure of type <code><a class="el" href="../../da/d0e/a01720.html" title="For creating a single global ApplicationCommand.">DiscordCoreAPI::CreateGlobalApplicationCommandData</a></code> or <code><a class="el" href="../../df/d8f/a01740.html" title="For creating a single Guild ApplicationCommand.">DiscordCoreAPI::CreateGuildApplicationCommandData</a></code>, and be sure to set one or more of the <code><a class="el" href="../../dd/d32/a02636.html" title="Data structure representing an ApplicationCommand&#39;s option.">DiscordCoreAPI::ApplicationCommandOptionData</a></code>'s settings for <code>autocomplete</code> to true.</li>
-<li>Use this data structure to create the application command.</li>
-</ul>
-<div class="fragment"><div class="line"><span class="comment">// Test.hpp - Header for the &quot;test&quot; command.</span></div>
-<div class="line"><span class="comment">// https://github.com/RealTimeChris</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#pragma once</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &quot;HelperFunctions.hpp&quot;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a> {</div>
-<div class="line"> </div>
-<div class="line">    <span class="keyword">class </span>Test : <span class="keyword">public</span> <a class="code hl_struct" href="../../d9/d4d/a02840.html">DiscordCoreAPI::BaseFunction</a> {</div>
-<div class="line">      <span class="keyword">public</span>:</div>
-<div class="line">        Test() {</div>
-<div class="line">            this-&gt;commandName = <span class="stringliteral">&quot;test&quot;</span>;</div>
-<div class="line">            this-&gt;helpDescription = <span class="stringliteral">&quot;Testing purposes!&quot;</span>;</div>
-<div class="line">            <a class="code hl_class" href="../../d1/d03/a02332.html">DiscordCoreAPI::EmbedData</a> msgEmbed{};</div>
-<div class="line">            msgEmbed.<a class="code hl_function" href="../../d1/d03/a02332.html#a9d4066a4861408bc00eccb22a12db7f9">setDescription</a>(<span class="stringliteral">&quot;------\nSimply enter /test!\n------&quot;</span>);</div>
-<div class="line">            msgEmbed.<a class="code hl_function" href="../../d1/d03/a02332.html#a20ca60ec3235f44a223f3d3b687c0c9e">setTitle</a>(<span class="stringliteral">&quot;__**Test Usage:**__&quot;</span>);</div>
-<div class="line">            msgEmbed.<a class="code hl_function" href="../../d1/d03/a02332.html#ae356e6dc3c93658b7228b56da3187896">setTimeStamp</a>(<a class="code hl_function" href="../../de/dfc/a00891.html#ga63ce723358a8b7a00c14e055f2a26998">getTimeAndDate</a>());</div>
-<div class="line">            msgEmbed.<a class="code hl_function" href="../../d1/d03/a02332.html#ab417d83fddf9df80eca98e9ec6e888aa">setColor</a>(<span class="stringliteral">&quot;FeFeFe&quot;</span>);</div>
-<div class="line">            this-&gt;helpEmbed = msgEmbed;</div>
-<div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">        std::unique_ptr&lt;DiscordCoreAPI::BaseFunction&gt; create() {</div>
-<div class="line">            <span class="keywordflow">return</span> std::make_unique&lt;Test&gt;();</div>
-<div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> execute(<a class="code hl_struct" href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a>&amp; newArgs) {</div>
-<div class="line">            <span class="keywordflow">try</span> {</div>
-<div class="line">                </div>
-<div class="line">                <a class="code hl_struct" href="../../da/d0e/a01720.html">DiscordCoreAPI::CreateGlobalApplicationCommandData</a> createTestData;</div>
-<div class="line">                createTestData.<a class="code hl_variable" href="../../da/d0e/a01720.html#a3a4be4feb8f643568e42663b6e792ecc">dmPermission</a> = <span class="keyword">true</span>;</div>
-<div class="line">                createTestData.<a class="code hl_variable" href="../../da/d0e/a01720.html#aabb8ea21db910d0b2608778b2d2d3b01">applicationId</a> = newArgs.<a class="code hl_variable" href="../../d2/ddb/a02836.html#a20009c042119fe1463a36ed29d74bb1b">discordCoreClient</a>-&gt;<a class="code hl_function" href="../../d6/d33/a01992.html#a497b6ef5b6407f58be5c6c6e85389fea">getBotUser</a>().<a class="code hl_variable" href="../../dc/d1a/a02288.html#a903c33f2f50e17293b409cfe33bcd5e9">id</a>;</div>
-<div class="line">                createTestData.<a class="code hl_variable" href="../../da/d0e/a01720.html#aa661f78efe1e5f6ae08bb0815c377ddc">type</a> = <a class="code hl_enumvalue" href="../../de/dfc/a00891.html#gga0c1e88669ddc5cba35fdf5d84af435b8a2be84bc520b8345a62d14e59215b1cca">DiscordCoreAPI::ApplicationCommandType::Chat_Input</a>;</div>
-<div class="line">                createTestData.<a class="code hl_variable" href="../../da/d0e/a01720.html#a9249b62c6e10592c81166694568167f8">name</a> = <span class="stringliteral">&quot;test&quot;</span>;</div>
-<div class="line">                createTestData.<a class="code hl_variable" href="../../da/d0e/a01720.html#aa5ce25d4f1a22d5000658d7cb3f5bc78">description</a> = <span class="stringliteral">&quot;Test command.&quot;</span>;</div>
-<div class="line">                <a class="code hl_struct" href="../../dd/d32/a02636.html">DiscordCoreAPI::ApplicationCommandOptionData</a> testOptionOne;</div>
-<div class="line">                testOptionOne.<a class="code hl_variable" href="../../dd/d32/a02636.html#acbc5901e842403802b08b1a25074c1ea">type</a> = <a class="code hl_enumvalue" href="../../de/dfc/a00891.html#gga1545487c64a71c2b5c36cde9f2bed49dae9cb217697088a98b1937d111d936281">DiscordCoreAPI::ApplicationCommandOptionType::Attachment</a>;</div>
-<div class="line">                testOptionOne.<a class="code hl_variable" href="../../dd/d32/a02636.html#a209fd82e5361cec1a1c63dbdee5b245b">name</a> = <span class="stringliteral">&quot;attachment&quot;</span>;</div>
-<div class="line">                testOptionOne.<a class="code hl_variable" href="../../dd/d32/a02636.html#ac8b908bc38bc9bf60ef13c2eacc5caf1">required</a> = <span class="keyword">false</span>;</div>
-<div class="line">                testOptionOne.<a class="code hl_variable" href="../../dd/d32/a02636.html#a419935eb28eca422646a452dd9f496d7">description</a> = <span class="stringliteral">&quot;Test attachment!&quot;</span>;</div>
-<div class="line">                createTestData.<a class="code hl_variable" href="../../da/d0e/a01720.html#a1f48da289aba34c9363d4ccb54f1b1a4">options</a>.push_back(testOptionOne);</div>
-<div class="line">                <a class="code hl_struct" href="../../dd/d32/a02636.html">DiscordCoreAPI::ApplicationCommandOptionData</a> testOptionTwo;</div>
-<div class="line">                testOptionTwo.<a class="code hl_variable" href="../../dd/d32/a02636.html#acbc5901e842403802b08b1a25074c1ea">type</a> = <a class="code hl_enumvalue" href="../../de/dfc/a00891.html#gga1545487c64a71c2b5c36cde9f2bed49da27118326006d3829667a400ad23d5d98">DiscordCoreAPI::ApplicationCommandOptionType::String</a>;</div>
-<div class="line">                testOptionTwo.<a class="code hl_variable" href="../../dd/d32/a02636.html#a209fd82e5361cec1a1c63dbdee5b245b">name</a> = <span class="stringliteral">&quot;test_string&quot;</span>;</div>
-<div class="line">                testOptionTwo.<a class="code hl_variable" href="../../dd/d32/a02636.html#ac8b908bc38bc9bf60ef13c2eacc5caf1">required</a> = <span class="keyword">false</span>;</div>
-<div class="line">                testOptionTwo.<a class="code hl_variable" href="../../dd/d32/a02636.html#a704a86c362d1378372bc0e8246ba6ce1">autocomplete</a> = <span class="keyword">true</span>;</div>
-<div class="line">                testOptionTwo.<a class="code hl_variable" href="../../dd/d32/a02636.html#a419935eb28eca422646a452dd9f496d7">description</a> = <span class="stringliteral">&quot;Test string!&quot;</span>;</div>
-<div class="line">                createTestData.<a class="code hl_variable" href="../../da/d0e/a01720.html#a1f48da289aba34c9363d4ccb54f1b1a4">options</a>.push_back(testOptionTwo);</div>
-<div class="line">                <a class="code hl_function" href="../../d0/dce/a01780.html#a2e8f9f3ef861ffc072a042520f66afbf">DiscordCoreAPI::ApplicationCommands::createGlobalApplicationCommandAsync</a>(createTestData).get();</div>
-<div class="line"> </div>
-<div class="line">            } <span class="keywordflow">catch</span> (...) {</div>
-<div class="line">                <a class="code hl_function" href="../../de/dfc/a00891.html#ga805bf7170903087e933a7b81c8e39f15">reportException</a>(<span class="stringliteral">&quot;Test::execute()&quot;</span>);</div>
-<div class="line">            }</div>
-<div class="line">        }</div>
-<div class="line">        <span class="keyword">virtual</span> ~Test(){};</div>
-<div class="line">    };</div>
-<div class="line">}</div>
-<div class="ttc" id="aa00891_html_ga63ce723358a8b7a00c14e055f2a26998"><div class="ttname"><a href="../../de/dfc/a00891.html#ga63ce723358a8b7a00c14e055f2a26998">DiscordCoreAPI::getTimeAndDate</a></div><div class="ttdeci">DiscordCoreAPI_Dll std::string getTimeAndDate()</div><div class="ttdoc">Acquires a timestamp with the current time and date - suitable for use in message-embeds.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d17/a00872_source.html#l00841">Utilities.cpp:841</a></div></div>
-<div class="ttc" id="aa00891_html_ga805bf7170903087e933a7b81c8e39f15"><div class="ttname"><a href="../../de/dfc/a00891.html#ga805bf7170903087e933a7b81c8e39f15">DiscordCoreAPI::reportException</a></div><div class="ttdeci">DiscordCoreAPI_Dll void reportException(const std::string &amp;currentFunctionName, std::source_location theLocation=std::source_location::current())</div><div class="ttdoc">Prints the current file, line, and column from which the function is being called - typically from wi...</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d17/a00872_source.html#l00626">Utilities.cpp:626</a></div></div>
-<div class="ttc" id="aa00891_html_gga0c1e88669ddc5cba35fdf5d84af435b8a2be84bc520b8345a62d14e59215b1cca"><div class="ttname"><a href="../../de/dfc/a00891.html#gga0c1e88669ddc5cba35fdf5d84af435b8a2be84bc520b8345a62d14e59215b1cca">DiscordCoreAPI::ApplicationCommandType::Chat_Input</a></div><div class="ttdeci">@ Chat_Input</div><div class="ttdoc">Chat input.</div></div>
-<div class="ttc" id="aa00891_html_gga1545487c64a71c2b5c36cde9f2bed49da27118326006d3829667a400ad23d5d98"><div class="ttname"><a href="../../de/dfc/a00891.html#gga1545487c64a71c2b5c36cde9f2bed49da27118326006d3829667a400ad23d5d98">DiscordCoreAPI::ApplicationCommandOptionType::String</a></div><div class="ttdeci">@ String</div><div class="ttdoc">String.</div></div>
-<div class="ttc" id="aa00891_html_gga1545487c64a71c2b5c36cde9f2bed49dae9cb217697088a98b1937d111d936281"><div class="ttname"><a href="../../de/dfc/a00891.html#gga1545487c64a71c2b5c36cde9f2bed49dae9cb217697088a98b1937d111d936281">DiscordCoreAPI::ApplicationCommandOptionType::Attachment</a></div><div class="ttdeci">@ Attachment</div><div class="ttdoc">Attachment.</div></div>
-<div class="ttc" id="aa00893_html"><div class="ttname"><a href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></div><div class="ttdoc">The main namespace for this library.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00025">ApplicationCommandEntities.hpp:25</a></div></div>
-<div class="ttc" id="aa01720_html"><div class="ttname"><a href="../../da/d0e/a01720.html">DiscordCoreAPI::CreateGlobalApplicationCommandData</a></div><div class="ttdoc">For creating a single global ApplicationCommand.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00045">ApplicationCommandEntities.hpp:45</a></div></div>
-<div class="ttc" id="aa01720_html_a1f48da289aba34c9363d4ccb54f1b1a4"><div class="ttname"><a href="../../da/d0e/a01720.html#a1f48da289aba34c9363d4ccb54f1b1a4">DiscordCoreAPI::CreateGlobalApplicationCommandData::options</a></div><div class="ttdeci">std::vector&lt; ApplicationCommandOptionData &gt; options</div><div class="ttdoc">The options for the ApplicationCommand.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00048">ApplicationCommandEntities.hpp:48</a></div></div>
-<div class="ttc" id="aa01720_html_a3a4be4feb8f643568e42663b6e792ecc"><div class="ttname"><a href="../../da/d0e/a01720.html#a3a4be4feb8f643568e42663b6e792ecc">DiscordCoreAPI::CreateGlobalApplicationCommandData::dmPermission</a></div><div class="ttdeci">bool dmPermission</div><div class="ttdoc">Indicates whether the command is available in DMs with the app,.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00051">ApplicationCommandEntities.hpp:51</a></div></div>
-<div class="ttc" id="aa01720_html_a9249b62c6e10592c81166694568167f8"><div class="ttname"><a href="../../da/d0e/a01720.html#a9249b62c6e10592c81166694568167f8">DiscordCoreAPI::CreateGlobalApplicationCommandData::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">A name for the new command.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00054">ApplicationCommandEntities.hpp:54</a></div></div>
-<div class="ttc" id="aa01720_html_aa5ce25d4f1a22d5000658d7cb3f5bc78"><div class="ttname"><a href="../../da/d0e/a01720.html#aa5ce25d4f1a22d5000658d7cb3f5bc78">DiscordCoreAPI::CreateGlobalApplicationCommandData::description</a></div><div class="ttdeci">std::string description</div><div class="ttdoc">A description of the command.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00052">ApplicationCommandEntities.hpp:52</a></div></div>
-<div class="ttc" id="aa01720_html_aa661f78efe1e5f6ae08bb0815c377ddc"><div class="ttname"><a href="../../da/d0e/a01720.html#aa661f78efe1e5f6ae08bb0815c377ddc">DiscordCoreAPI::CreateGlobalApplicationCommandData::type</a></div><div class="ttdeci">ApplicationCommandType type</div><div class="ttdoc">The type of ApplicationCommand.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00050">ApplicationCommandEntities.hpp:50</a></div></div>
-<div class="ttc" id="aa01720_html_aabb8ea21db910d0b2608778b2d2d3b01"><div class="ttname"><a href="../../da/d0e/a01720.html#aabb8ea21db910d0b2608778b2d2d3b01">DiscordCoreAPI::CreateGlobalApplicationCommandData::applicationId</a></div><div class="ttdeci">Snowflake applicationId</div><div class="ttdoc">Application id.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de4/a00677_source.html#l00053">ApplicationCommandEntities.hpp:53</a></div></div>
-<div class="ttc" id="aa01780_html_a2e8f9f3ef861ffc072a042520f66afbf"><div class="ttname"><a href="../../d0/dce/a01780.html#a2e8f9f3ef861ffc072a042520f66afbf">DiscordCoreAPI::ApplicationCommands::createGlobalApplicationCommandAsync</a></div><div class="ttdeci">static CoRoutine&lt; ApplicationCommand &gt; createGlobalApplicationCommandAsync(CreateGlobalApplicationCommandData dataPackage)</div><div class="ttdoc">Create a global ApplicationCommand for this bot.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d96/a00782_source.html#l00141">ApplicationCommandEntities.cpp:141</a></div></div>
-<div class="ttc" id="aa01992_html_a497b6ef5b6407f58be5c6c6e85389fea"><div class="ttname"><a href="../../d6/d33/a01992.html#a497b6ef5b6407f58be5c6c6e85389fea">DiscordCoreAPI::DiscordCoreClient::getBotUser</a></div><div class="ttdeci">BotUser getBotUser()</div><div class="ttdoc">For collecting a copy of the current bot's User.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dad/a00806_source.html#l00127">DiscordCoreClient.cpp:127</a></div></div>
-<div class="ttc" id="aa02288_html_a903c33f2f50e17293b409cfe33bcd5e9"><div class="ttname"><a href="../../dc/d1a/a02288.html#a903c33f2f50e17293b409cfe33bcd5e9">DiscordCoreAPI::DiscordEntity::id</a></div><div class="ttdeci">Snowflake id</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l00350">FoundationEntities.hpp:350</a></div></div>
-<div class="ttc" id="aa02332_html"><div class="ttname"><a href="../../d1/d03/a02332.html">DiscordCoreAPI::EmbedData</a></div><div class="ttdoc">Embed data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l00601">FoundationEntities.hpp:601</a></div></div>
-<div class="ttc" id="aa02332_html_a20ca60ec3235f44a223f3d3b687c0c9e"><div class="ttname"><a href="../../d1/d03/a02332.html#a20ca60ec3235f44a223f3d3b687c0c9e">DiscordCoreAPI::EmbedData::setTitle</a></div><div class="ttdeci">EmbedData &amp; setTitle(const std::string &amp;titleNew)</div><div class="ttdoc">Sets the title of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d60/a00818_source.html#l00394">FoundationEntities.cpp:394</a></div></div>
-<div class="ttc" id="aa02332_html_a9d4066a4861408bc00eccb22a12db7f9"><div class="ttname"><a href="../../d1/d03/a02332.html#a9d4066a4861408bc00eccb22a12db7f9">DiscordCoreAPI::EmbedData::setDescription</a></div><div class="ttdeci">EmbedData &amp; setDescription(const std::string &amp;descriptionNew)</div><div class="ttdoc">Sets the description (the main contents) of the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d60/a00818_source.html#l00379">FoundationEntities.cpp:379</a></div></div>
-<div class="ttc" id="aa02332_html_ab417d83fddf9df80eca98e9ec6e888aa"><div class="ttname"><a href="../../d1/d03/a02332.html#ab417d83fddf9df80eca98e9ec6e888aa">DiscordCoreAPI::EmbedData::setColor</a></div><div class="ttdeci">EmbedData &amp; setColor(const std::string &amp;hexColorValueNew)</div><div class="ttdoc">Sets the color of the embed, by applying a hex-color value.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d60/a00818_source.html#l00384">FoundationEntities.cpp:384</a></div></div>
-<div class="ttc" id="aa02332_html_ae356e6dc3c93658b7228b56da3187896"><div class="ttname"><a href="../../d1/d03/a02332.html#ae356e6dc3c93658b7228b56da3187896">DiscordCoreAPI::EmbedData::setTimeStamp</a></div><div class="ttdeci">EmbedData &amp; setTimeStamp(const std::string &amp;timeStamp)</div><div class="ttdoc">Sets the timestamp on the embed.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d60/a00818_source.html#l00365">FoundationEntities.cpp:365</a></div></div>
-<div class="ttc" id="aa02636_html"><div class="ttname"><a href="../../dd/d32/a02636.html">DiscordCoreAPI::ApplicationCommandOptionData</a></div><div class="ttdoc">Data structure representing an ApplicationCommand's option.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l02478">FoundationEntities.hpp:2478</a></div></div>
-<div class="ttc" id="aa02636_html_a209fd82e5361cec1a1c63dbdee5b245b"><div class="ttname"><a href="../../dd/d32/a02636.html#a209fd82e5361cec1a1c63dbdee5b245b">DiscordCoreAPI::ApplicationCommandOptionData::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">Name of the current ApplicationCommand option.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l02490">FoundationEntities.hpp:2490</a></div></div>
-<div class="ttc" id="aa02636_html_a419935eb28eca422646a452dd9f496d7"><div class="ttname"><a href="../../dd/d32/a02636.html#a419935eb28eca422646a452dd9f496d7">DiscordCoreAPI::ApplicationCommandOptionData::description</a></div><div class="ttdeci">std::string description</div><div class="ttdoc">A description of the current ApplicationCommand option.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l02486">FoundationEntities.hpp:2486</a></div></div>
-<div class="ttc" id="aa02636_html_a704a86c362d1378372bc0e8246ba6ce1"><div class="ttname"><a href="../../dd/d32/a02636.html#a704a86c362d1378372bc0e8246ba6ce1">DiscordCoreAPI::ApplicationCommandOptionData::autocomplete</a></div><div class="ttdeci">bool autocomplete</div><div class="ttdoc">If autocomplete interactions are enabled for this STRING, INTEGER, or NUMBER type option.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l02485">FoundationEntities.hpp:2485</a></div></div>
-<div class="ttc" id="aa02636_html_ac8b908bc38bc9bf60ef13c2eacc5caf1"><div class="ttname"><a href="../../dd/d32/a02636.html#ac8b908bc38bc9bf60ef13c2eacc5caf1">DiscordCoreAPI::ApplicationCommandOptionData::required</a></div><div class="ttdeci">bool required</div><div class="ttdoc">If the parameter is required or optional– default false.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l02487">FoundationEntities.hpp:2487</a></div></div>
-<div class="ttc" id="aa02636_html_acbc5901e842403802b08b1a25074c1ea"><div class="ttname"><a href="../../dd/d32/a02636.html#acbc5901e842403802b08b1a25074c1ea">DiscordCoreAPI::ApplicationCommandOptionData::type</a></div><div class="ttdeci">ApplicationCommandOptionType type</div><div class="ttdoc">The type of command option.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l02484">FoundationEntities.hpp:2484</a></div></div>
-<div class="ttc" id="aa02836_html"><div class="ttname"><a href="../../d2/ddb/a02836.html">DiscordCoreAPI::BaseFunctionArguments</a></div><div class="ttdoc">Base arguments for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03796">FoundationEntities.hpp:3796</a></div></div>
-<div class="ttc" id="aa02836_html_a20009c042119fe1463a36ed29d74bb1b"><div class="ttname"><a href="../../d2/ddb/a02836.html#a20009c042119fe1463a36ed29d74bb1b">DiscordCoreAPI::BaseFunctionArguments::discordCoreClient</a></div><div class="ttdeci">DiscordCoreClient * discordCoreClient</div><div class="ttdoc">A pointer to the instance of DiscordCoreClient.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03797">FoundationEntities.hpp:3797</a></div></div>
-<div class="ttc" id="aa02840_html"><div class="ttname"><a href="../../d9/d4d/a02840.html">DiscordCoreAPI::BaseFunction</a></div><div class="ttdoc">Base class for the command classes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/deb/a00710_source.html#l03807">FoundationEntities.hpp:3807</a></div></div>
-</div><!-- fragment --> </div></div><!-- contents -->
+<div class="textblock"><p ><a class="anchor" id="md_Documentation_Examples_Music_Bot_MBot_Introduction"></a> Hey there! So it looks as though this area is still under construction... But you may be able to piece things together with the code! If not - come and hit me up with any questions you may have on the Discord server! Cheers and happy coding!</p>
+<p ><a class="el" href="../../d9/d62/a07097.html">Helper Functions</a></p>
+<p ><a class="el" href="../../d4/def/a07096.html">Help</a></p>
+<p ><a class="el" href="../../d0/da5/a07104.html">Play</a></p>
+<p ><a class="el" href="../../dc/da2/a07106.html">PlayRN</a></p>
+<p ><a class="el" href="../../db/d3a/a07105.html">PlayQ</a></p>
+<p ><a class="el" href="../../d2/da1/a07109.html">Skip</a></p>
+<p ><a class="el" href="../../de/dde/a07107.html">Queue</a></p>
+<p ><a class="el" href="../../da/d25/a07110.html">Stop</a></p>
+<p ><a class="el" href="../../d5/d2f/a07094.html">Clear</a></p>
+<p ><a class="el" href="../../d4/d5e/a07103.html">Pause</a></p>
+<p ><a class="el" href="../../da/dea/a07108.html">Set Music Channel</a></p>
+<p ><a class="el" href="../../db/d4a/a07098.html">Loop All</a></p>
+<p ><a class="el" href="../../d9/d1d/a07099.html">Loop Song</a></p>
+<p ><a class="el" href="../../d3/dd9/a07102.html">NP(Now-Playing)</a></p>
+<p ><a class="el" href="../../d0/dc9/a07095.html">Disconnect</a> </p>
+</div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../dd/d67/a07058.html">Docs/Examples</a></li><li class="navelem"><a class="el" href="../../d6/d0e/a07062.html">Autocomplete Stuff</a></li>
+    <li class="navelem"><a class="el" href="../../index.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../da/d3c/a06987.html">Guides</a></li><li class="navelem"><a class="el" href="../../de/d32/a07101.html">Music-Bot Guide</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

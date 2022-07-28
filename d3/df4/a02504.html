@@ -105,11 +105,11 @@ $(document).ready(function(){initNavTree('d3/df4/a02504.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d1/df7/a02501.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::AuditLogChangeData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::PresenceUpdateData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Audit log change data.  
+<p>Presence update data.  
  <a href="../../d3/df4/a02504.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a>&gt;</code></p>
@@ -118,22 +118,30 @@ $(document).ready(function(){initNavTree('d3/df4/a02504.html','../../'); initRes
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:a1d2a2b543935e533cf5377c0fa7b3cb0"><td class="memItemLeft" align="right" valign="top"><a id="a1d2a2b543935e533cf5377c0fa7b3cb0" name="a1d2a2b543935e533cf5377c0fa7b3cb0"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>key</b> {}</td></tr>
-<tr class="memdesc:a1d2a2b543935e533cf5377c0fa7b3cb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The key of the audit log change. <br /></td></tr>
-<tr class="separator:a1d2a2b543935e533cf5377c0fa7b3cb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04539767bd3db99b20f546bcb9180ab2"><td class="memItemLeft" align="right" valign="top"><a id="a04539767bd3db99b20f546bcb9180ab2" name="a04539767bd3db99b20f546bcb9180ab2"></a>
-nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><b>newValue</b> {}</td></tr>
-<tr class="memdesc:a04539767bd3db99b20f546bcb9180ab2"><td class="mdescLeft">&#160;</td><td class="mdescRight">New value. <br /></td></tr>
-<tr class="separator:a04539767bd3db99b20f546bcb9180ab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af86f86d55533fbee71192ec3057e9bc9"><td class="memItemLeft" align="right" valign="top"><a id="af86f86d55533fbee71192ec3057e9bc9" name="af86f86d55533fbee71192ec3057e9bc9"></a>
-nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><b>oldValue</b> {}</td></tr>
-<tr class="memdesc:af86f86d55533fbee71192ec3057e9bc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Old value. <br /></td></tr>
-<tr class="separator:af86f86d55533fbee71192ec3057e9bc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a611047ad9f8dfb62720903a4ef5706c8"><td class="memItemLeft" align="right" valign="top"><a id="a611047ad9f8dfb62720903a4ef5706c8" name="a611047ad9f8dfb62720903a4ef5706c8"></a>
+std::vector&lt; <a class="el" href="../../d6/d57/a02488.html">ActivityData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>activities</b> {}</td></tr>
+<tr class="memdesc:a611047ad9f8dfb62720903a4ef5706c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of activities. <br /></td></tr>
+<tr class="separator:a611047ad9f8dfb62720903a4ef5706c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86286a871e20790e6c77f93ff739c573"><td class="memItemLeft" align="right" valign="top"><a id="a86286a871e20790e6c77f93ff739c573" name="a86286a871e20790e6c77f93ff739c573"></a>
+<a class="el" href="../../d6/d90/a02492.html">ClientStatusData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>clientStatus</b> {}</td></tr>
+<tr class="memdesc:a86286a871e20790e6c77f93ff739c573"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current client status. <br /></td></tr>
+<tr class="separator:a86286a871e20790e6c77f93ff739c573"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a864eb3ce3cd017bc0f46aacef1456166"><td class="memItemLeft" align="right" valign="top"><a id="a864eb3ce3cd017bc0f46aacef1456166" name="a864eb3ce3cd017bc0f46aacef1456166"></a>
+<a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildId</b> {}</td></tr>
+<tr class="memdesc:a864eb3ce3cd017bc0f46aacef1456166"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d2/d0c/a02932.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> id for the current presence. <br /></td></tr>
+<tr class="separator:a864eb3ce3cd017bc0f46aacef1456166"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a747c3926603820cfe760697b6e5244c2"><td class="memItemLeft" align="right" valign="top"><a id="a747c3926603820cfe760697b6e5244c2" name="a747c3926603820cfe760697b6e5244c2"></a>
+StringWrapper&#160;</td><td class="memItemRight" valign="bottom"><b>status</b> {}</td></tr>
+<tr class="memdesc:a747c3926603820cfe760697b6e5244c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status of the current presence. <br /></td></tr>
+<tr class="separator:a747c3926603820cfe760697b6e5244c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f685cebe15ab4fd798e9aec31b16a51"><td class="memItemLeft" align="right" valign="top"><a id="a1f685cebe15ab4fd798e9aec31b16a51" name="a1f685cebe15ab4fd798e9aec31b16a51"></a>
+<a class="el" href="../../dc/de2/a02248.html">UserData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>user</b> {}</td></tr>
+<tr class="memdesc:a1f685cebe15ab4fd798e9aec31b16a51"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../dc/d98/a03524.html" title="A single User.">User</a> data for the current presence. <br /></td></tr>
+<tr class="separator:a1f685cebe15ab4fd798e9aec31b16a51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following files:<ul>
 <li><a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a></li>
-<li><a class="el" href="../../d5/d72/a00803_source.html">DataParsingFunctions.cpp</a></li>
+<li><a class="el" href="../../df/d0e/a00800_source.html">DataParsingFunctions.cpp</a></li>
 <li><a class="el" href="../../d3/d60/a00818_source.html">FoundationEntities.cpp</a></li>
 </ul>
 </div><!-- contents -->
@@ -142,7 +150,7 @@ nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><b>oldValue</b
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d3/df4/a02504.html">AuditLogChangeData</a></li>
+    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d3/df4/a02504.html">PresenceUpdateData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

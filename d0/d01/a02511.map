@@ -1,4 +1,5 @@
-<map id="DiscordCoreAPI::AuditLogEntryData" name="DiscordCoreAPI::AuditLogEntryData">
-<area shape="rect" id="node1" title="Audit log entry data." alt="" coords="19,80,192,121"/>
-<area shape="rect" id="node2" href="$dc/d1a/a02288.html" title="Base class for all Discord entities." alt="" coords="5,5,205,32"/>
+<map id="DiscordCoreAPI::StickerData" name="DiscordCoreAPI::StickerData">
+<area shape="rect" id="node1" title="Data representing a single Sticker." alt="" coords="10,80,201,107"/>
+<area shape="rect" id="node3" href="$d4/d57/a03412.html" title="A single Sticker." alt="" coords="24,155,187,181"/>
+<area shape="rect" id="node2" href="$dc/d35/a02240.html" title="Base class for all Discord entities." alt="" coords="5,5,205,32"/>
 </map>

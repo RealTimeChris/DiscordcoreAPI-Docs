@@ -105,11 +105,11 @@ $(document).ready(function(){initNavTree('d3/d01/a02316.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d4/d16/a02313.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::EmbedVideoData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::VoiceStateData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Embed video data.  
+<p>Voice state data.  
  <a href="../../d3/d01/a02316.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a>&gt;</code></p>
@@ -118,26 +118,62 @@ $(document).ready(function(){initNavTree('d3/d01/a02316.html','../../'); initRes
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:a739c7f30239dfa6dd5eb254148781d21"><td class="memItemLeft" align="right" valign="top"><a id="a739c7f30239dfa6dd5eb254148781d21" name="a739c7f30239dfa6dd5eb254148781d21"></a>
-int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>height</b> { 0 }</td></tr>
-<tr class="memdesc:a739c7f30239dfa6dd5eb254148781d21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Image height. <br /></td></tr>
-<tr class="separator:a739c7f30239dfa6dd5eb254148781d21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2e6eaea6187dd90aabaf3593bcdc8b6"><td class="memItemLeft" align="right" valign="top"><a id="ab2e6eaea6187dd90aabaf3593bcdc8b6" name="ab2e6eaea6187dd90aabaf3593bcdc8b6"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>proxyUrl</b> {}</td></tr>
-<tr class="memdesc:ab2e6eaea6187dd90aabaf3593bcdc8b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Proxy url. <br /></td></tr>
-<tr class="separator:ab2e6eaea6187dd90aabaf3593bcdc8b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64f427d09644a82e6cefa853696d6dc4"><td class="memItemLeft" align="right" valign="top"><a id="a64f427d09644a82e6cefa853696d6dc4" name="a64f427d09644a82e6cefa853696d6dc4"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>url</b> {}</td></tr>
-<tr class="memdesc:a64f427d09644a82e6cefa853696d6dc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Image url. <br /></td></tr>
-<tr class="separator:a64f427d09644a82e6cefa853696d6dc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c31d703e1f456dcb339179c0c42906a"><td class="memItemLeft" align="right" valign="top"><a id="a2c31d703e1f456dcb339179c0c42906a" name="a2c31d703e1f456dcb339179c0c42906a"></a>
-int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>width</b> { 0 }</td></tr>
-<tr class="memdesc:a2c31d703e1f456dcb339179c0c42906a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Image width. <br /></td></tr>
-<tr class="separator:a2c31d703e1f456dcb339179c0c42906a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f81aaf95cf4f7eae240f0513dd34ef9"><td class="memItemLeft" align="right" valign="top"><a id="a1f81aaf95cf4f7eae240f0513dd34ef9" name="a1f81aaf95cf4f7eae240f0513dd34ef9"></a>
+<a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>channelId</b> {}</td></tr>
+<tr class="memdesc:a1f81aaf95cf4f7eae240f0513dd34ef9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../dc/d7f/a01884.html" title="A Channel object.">Channel</a> id this <a class="el" href="../../dc/d98/a03524.html" title="A single User.">User</a> is connected to. <br /></td></tr>
+<tr class="separator:a1f81aaf95cf4f7eae240f0513dd34ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a853431915881ab19e31e716b539ce2ca"><td class="memItemLeft" align="right" valign="top"><a id="a853431915881ab19e31e716b539ce2ca" name="a853431915881ab19e31e716b539ce2ca"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>deaf</b> { false }</td></tr>
+<tr class="memdesc:a853431915881ab19e31e716b539ce2ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether this <a class="el" href="../../dc/d98/a03524.html" title="A single User.">User</a> is deafened by the server. <br /></td></tr>
+<tr class="separator:a853431915881ab19e31e716b539ce2ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a095f20957ac4bc602981b4a6ab7cfd8a"><td class="memItemLeft" align="right" valign="top"><a id="a095f20957ac4bc602981b4a6ab7cfd8a" name="a095f20957ac4bc602981b4a6ab7cfd8a"></a>
+<a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildId</b> {}</td></tr>
+<tr class="memdesc:a095f20957ac4bc602981b4a6ab7cfd8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../d2/d0c/a02932.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> id this voice state is for. <br /></td></tr>
+<tr class="separator:a095f20957ac4bc602981b4a6ab7cfd8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87fee3f7cc630610ae038e3bc7466500"><td class="memItemLeft" align="right" valign="top"><a id="a87fee3f7cc630610ae038e3bc7466500" name="a87fee3f7cc630610ae038e3bc7466500"></a>
+<a class="el" href="../../df/d73/a02312.html">GuildMemberData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>member</b> {}</td></tr>
+<tr class="memdesc:a87fee3f7cc630610ae038e3bc7466500"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../d2/d0c/a02932.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> member id this voice state is for. <br /></td></tr>
+<tr class="separator:a87fee3f7cc630610ae038e3bc7466500"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49601382f01d1dd8b2dc9264b68030fc"><td class="memItemLeft" align="right" valign="top"><a id="a49601382f01d1dd8b2dc9264b68030fc" name="a49601382f01d1dd8b2dc9264b68030fc"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>mute</b> { false }</td></tr>
+<tr class="memdesc:a49601382f01d1dd8b2dc9264b68030fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether this <a class="el" href="../../dc/d98/a03524.html" title="A single User.">User</a> is muted by the server. <br /></td></tr>
+<tr class="separator:a49601382f01d1dd8b2dc9264b68030fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e673eea4e3536fdf1e54803076cb301"><td class="memItemLeft" align="right" valign="top"><a id="a3e673eea4e3536fdf1e54803076cb301" name="a3e673eea4e3536fdf1e54803076cb301"></a>
+<a class="el" href="../../dd/dda/a03584.html">TimeStamp</a>&lt; std::chrono::milliseconds &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>requestToSpeakTimestamp</b> { &quot;&quot; }</td></tr>
+<tr class="memdesc:a3e673eea4e3536fdf1e54803076cb301"><td class="mdescLeft">&#160;</td><td class="mdescRight">The time at which the <a class="el" href="../../dc/d98/a03524.html" title="A single User.">User</a> requested to speak. <br /></td></tr>
+<tr class="separator:a3e673eea4e3536fdf1e54803076cb301"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3505e763ae5dc096954716f0e9e9c219"><td class="memItemLeft" align="right" valign="top"><a id="a3505e763ae5dc096954716f0e9e9c219" name="a3505e763ae5dc096954716f0e9e9c219"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>selfDeaf</b> { false }</td></tr>
+<tr class="memdesc:a3505e763ae5dc096954716f0e9e9c219"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether this <a class="el" href="../../dc/d98/a03524.html" title="A single User.">User</a> is locally deafened. <br /></td></tr>
+<tr class="separator:a3505e763ae5dc096954716f0e9e9c219"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97a7c0d895203a74e174d26e85f8cbd3"><td class="memItemLeft" align="right" valign="top"><a id="a97a7c0d895203a74e174d26e85f8cbd3" name="a97a7c0d895203a74e174d26e85f8cbd3"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>selfMute</b> { false }</td></tr>
+<tr class="memdesc:a97a7c0d895203a74e174d26e85f8cbd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether this <a class="el" href="../../dc/d98/a03524.html" title="A single User.">User</a> is locally muted. <br /></td></tr>
+<tr class="separator:a97a7c0d895203a74e174d26e85f8cbd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85ee163c976302aab11153b9ceb61398"><td class="memItemLeft" align="right" valign="top"><a id="a85ee163c976302aab11153b9ceb61398" name="a85ee163c976302aab11153b9ceb61398"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>selfStream</b> { false }</td></tr>
+<tr class="memdesc:a85ee163c976302aab11153b9ceb61398"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether this <a class="el" href="../../dc/d98/a03524.html" title="A single User.">User</a> is streaming using "Go Live". <br /></td></tr>
+<tr class="separator:a85ee163c976302aab11153b9ceb61398"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7266bce44dd5e9cef4259bcace8147f"><td class="memItemLeft" align="right" valign="top"><a id="aa7266bce44dd5e9cef4259bcace8147f" name="aa7266bce44dd5e9cef4259bcace8147f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>selfVideo</b> { false }</td></tr>
+<tr class="memdesc:aa7266bce44dd5e9cef4259bcace8147f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether this <a class="el" href="../../dc/d98/a03524.html" title="A single User.">User</a>'s camera is enabled. <br /></td></tr>
+<tr class="separator:aa7266bce44dd5e9cef4259bcace8147f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe148dcc20f2ea8e73260f08139095a9"><td class="memItemLeft" align="right" valign="top"><a id="abe148dcc20f2ea8e73260f08139095a9" name="abe148dcc20f2ea8e73260f08139095a9"></a>
+StringWrapper&#160;</td><td class="memItemRight" valign="bottom"><b>sessionId</b> {}</td></tr>
+<tr class="memdesc:abe148dcc20f2ea8e73260f08139095a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The session id for this voice state. <br /></td></tr>
+<tr class="separator:abe148dcc20f2ea8e73260f08139095a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a878b1db49183d3c4aee837ee7ce43ce1"><td class="memItemLeft" align="right" valign="top"><a id="a878b1db49183d3c4aee837ee7ce43ce1" name="a878b1db49183d3c4aee837ee7ce43ce1"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>suppress</b> { false }</td></tr>
+<tr class="memdesc:a878b1db49183d3c4aee837ee7ce43ce1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether this <a class="el" href="../../dc/d98/a03524.html" title="A single User.">User</a> is muted by the current <a class="el" href="../../dc/d98/a03524.html" title="A single User.">User</a>. <br /></td></tr>
+<tr class="separator:a878b1db49183d3c4aee837ee7ce43ce1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1af895eb508f191cf1bc6dad7bfd06be"><td class="memItemLeft" align="right" valign="top"><a id="a1af895eb508f191cf1bc6dad7bfd06be" name="a1af895eb508f191cf1bc6dad7bfd06be"></a>
+<a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>userId</b> {}</td></tr>
+<tr class="memdesc:a1af895eb508f191cf1bc6dad7bfd06be"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../dc/d98/a03524.html" title="A single User.">User</a> id this voice state is for. <br /></td></tr>
+<tr class="separator:a1af895eb508f191cf1bc6dad7bfd06be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following files:<ul>
 <li><a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a></li>
-<li><a class="el" href="../../d5/d72/a00803_source.html">DataParsingFunctions.cpp</a></li>
+<li><a class="el" href="../../df/d0e/a00800_source.html">DataParsingFunctions.cpp</a></li>
 <li><a class="el" href="../../d3/d60/a00818_source.html">FoundationEntities.cpp</a></li>
 </ul>
 </div><!-- contents -->
@@ -146,7 +182,7 @@ int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>width</b> { 0 }</t
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d3/d01/a02316.html">EmbedVideoData</a></li>
+    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d3/d01/a02316.html">VoiceStateData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

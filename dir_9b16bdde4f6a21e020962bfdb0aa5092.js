@@ -1,12 +1,12 @@
 var dir_9b16bdde4f6a21e020962bfdb0aa5092 =
 [
     [ "ApplicationCommandEntities.hpp", "dc/de4/a00677.html", null ],
-    [ "AudioDecoder.hpp", "d4/d9b/a00680.html", null ],
-    [ "AudioEncoder.hpp", "db/d77/a00683.html", null ],
-    [ "AutoModerationEntities.hpp", "df/d9e/a00686.html", null ],
-    [ "ChannelEntities.hpp", "d1/d87/a00689.html", null ],
-    [ "CommandController.hpp", "d0/db6/a00692.html", "d0/db6/a00692" ],
-    [ "CoRoutine.hpp", "d5/d5b/a00695.html", "d5/d5b/a00695" ],
+    [ "AudioEncoder.hpp", "d4/d9b/a00680.html", null ],
+    [ "AutoModerationEntities.hpp", "db/d77/a00683.html", null ],
+    [ "ChannelEntities.hpp", "df/d9e/a00686.html", null ],
+    [ "CommandController.hpp", "d1/d87/a00689.html", "d1/d87/a00689" ],
+    [ "CoRoutine.hpp", "d0/db6/a00692.html", "d0/db6/a00692" ],
+    [ "Demuxer.hpp", "d5/d5b/a00695.html", null ],
     [ "DiscordCoreClient.hpp", "df/dbb/a00698.html", null ],
     [ "ErlPacker.hpp", "dd/d57/a00701.html", null ],
     [ "EventEntities.hpp", "d4/d6a/a00704.html", null ],

@@ -105,32 +105,44 @@ $(document).ready(function(){initNavTree('d5/d99/a03012.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../db/dc5/a03009.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::ModifyCurrentGuildMemberData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::GetGuildScheduledEventUsersData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For modifying the Current <a class="el" href="../../de/dae/a03028.html" title="A single GuildMember.">GuildMember</a>'s values.  
+<p>For collecting a list of <a class="el" href="../../d2/d0c/a02932.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> Scheduled Event <a class="el" href="../../d1/dfd/a03536.html" title="An interface class for the User related Discord endpoints.">Users</a>.  
  <a href="../../d5/d99/a03012.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="../../d2/d94/a00716_source.html">GuildMemberEntities.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../dd/dd8/a00719_source.html">GuildScheduledEventEntities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:a8509f067628bb4610cdbf04bc2cd296f"><td class="memItemLeft" align="right" valign="top"><a id="a8509f067628bb4610cdbf04bc2cd296f" name="a8509f067628bb4610cdbf04bc2cd296f"></a>
+<tr class="memitem:aa3684137414031530b631345b9cff1d8"><td class="memItemLeft" align="right" valign="top"><a id="aa3684137414031530b631345b9cff1d8" name="aa3684137414031530b631345b9cff1d8"></a>
+<a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>after</b> {}</td></tr>
+<tr class="memdesc:aa3684137414031530b631345b9cff1d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consider only users after given user id. <br /></td></tr>
+<tr class="separator:aa3684137414031530b631345b9cff1d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d7fe08a958aa734299cb8da6ee5baa9"><td class="memItemLeft" align="right" valign="top"><a id="a9d7fe08a958aa734299cb8da6ee5baa9" name="a9d7fe08a958aa734299cb8da6ee5baa9"></a>
+<a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>before</b> {}</td></tr>
+<tr class="memdesc:a9d7fe08a958aa734299cb8da6ee5baa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consider only users before given user id. <br /></td></tr>
+<tr class="separator:a9d7fe08a958aa734299cb8da6ee5baa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a875828d5bbde2467b428965daad4c1be"><td class="memItemLeft" align="right" valign="top"><a id="a875828d5bbde2467b428965daad4c1be" name="a875828d5bbde2467b428965daad4c1be"></a>
 <a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildId</b> {}</td></tr>
-<tr class="memdesc:a8509f067628bb4610cdbf04bc2cd296f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../d6/db9/a02980.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> within which to modify the current user's values. <br /></td></tr>
-<tr class="separator:a8509f067628bb4610cdbf04bc2cd296f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac90bd35f368e45b4f2a4bcd8dfe575d9"><td class="memItemLeft" align="right" valign="top"><a id="ac90bd35f368e45b4f2a4bcd8dfe575d9" name="ac90bd35f368e45b4f2a4bcd8dfe575d9"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>nick</b> {}</td></tr>
-<tr class="memdesc:ac90bd35f368e45b4f2a4bcd8dfe575d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">A new nickname for the current user. <br /></td></tr>
-<tr class="separator:ac90bd35f368e45b4f2a4bcd8dfe575d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a840f12ae446d296fe8f2f42fc96d2240"><td class="memItemLeft" align="right" valign="top"><a id="a840f12ae446d296fe8f2f42fc96d2240" name="a840f12ae446d296fe8f2f42fc96d2240"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>reason</b> {}</td></tr>
-<tr class="memdesc:a840f12ae446d296fe8f2f42fc96d2240"><td class="mdescLeft">&#160;</td><td class="mdescRight">A reason for modifying the current user's values. <br /></td></tr>
-<tr class="separator:a840f12ae446d296fe8f2f42fc96d2240"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:a875828d5bbde2467b428965daad4c1be"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../d2/d0c/a02932.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> within which to modify the event. <br /></td></tr>
+<tr class="separator:a875828d5bbde2467b428965daad4c1be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97fd698612b4ce7bf36a66df58797aeb"><td class="memItemLeft" align="right" valign="top"><a id="a97fd698612b4ce7bf36a66df58797aeb" name="a97fd698612b4ce7bf36a66df58797aeb"></a>
+<a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildScheduledEventId</b> {}</td></tr>
+<tr class="memdesc:a97fd698612b4ce7bf36a66df58797aeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the event to modify. <br /></td></tr>
+<tr class="separator:a97fd698612b4ce7bf36a66df58797aeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a238c67643827521dd616598fd8f3efbd"><td class="memItemLeft" align="right" valign="top"><a id="a238c67643827521dd616598fd8f3efbd" name="a238c67643827521dd616598fd8f3efbd"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>limit</b> { 0 }</td></tr>
+<tr class="memdesc:a238c67643827521dd616598fd8f3efbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">How many users to receive from the event. <br /></td></tr>
+<tr class="separator:a238c67643827521dd616598fd8f3efbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57b6d2681176906e4ad06e53b27a5510"><td class="memItemLeft" align="right" valign="top"><a id="a57b6d2681176906e4ad06e53b27a5510" name="a57b6d2681176906e4ad06e53b27a5510"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>withMember</b> { false }</td></tr>
+<tr class="memdesc:a57b6d2681176906e4ad06e53b27a5510"><td class="mdescLeft">&#160;</td><td class="mdescRight">Include <a class="el" href="../../d2/d0c/a02932.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> member responseData if it exists. <br /></td></tr>
+<tr class="separator:a57b6d2681176906e4ad06e53b27a5510"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="../../d2/d94/a00716_source.html">GuildMemberEntities.hpp</a></li>
+<li><a class="el" href="../../dd/dd8/a00719_source.html">GuildScheduledEventEntities.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -138,7 +150,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>reason</b> {}<
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d5/d99/a03012.html">ModifyCurrentGuildMemberData</a></li>
+    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d5/d99/a03012.html">GetGuildScheduledEventUsersData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

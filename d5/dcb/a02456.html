@@ -105,36 +105,35 @@ $(document).ready(function(){initNavTree('d5/dcb/a02456.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d3/d27/a02453.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::UpdateVoiceStateData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::AuditLogChangeData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For updating the current voice state.  
+<p>Audit log change data.  
  <a href="../../d5/dcb/a02456.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a>&gt;</code></p>
+
+<p>Inherits DiscordCoreAPI::DataParser&lt; ObjectType &gt;.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:a6f25f937138e6cc400e9ca85877430bd"><td class="memItemLeft" align="right" valign="top"><a id="a6f25f937138e6cc400e9ca85877430bd" name="a6f25f937138e6cc400e9ca85877430bd"></a>
-<a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>channelId</b> {}</td></tr>
-<tr class="memdesc:a6f25f937138e6cc400e9ca85877430bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Id of the desired voice <a class="el" href="../../db/da1/a01944.html" title="A Channel object.">Channel</a>. Leave blank to disconnect. <br /></td></tr>
-<tr class="separator:a6f25f937138e6cc400e9ca85877430bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a1d396515058e458dd4707bd8b546ef"><td class="memItemLeft" align="right" valign="top"><a id="a1a1d396515058e458dd4707bd8b546ef" name="a1a1d396515058e458dd4707bd8b546ef"></a>
-<a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildId</b> {}</td></tr>
-<tr class="memdesc:a1a1d396515058e458dd4707bd8b546ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the <a class="el" href="../../d6/db9/a02980.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> fo which we would like to establish a voice connection. <br /></td></tr>
-<tr class="separator:a1a1d396515058e458dd4707bd8b546ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af23731285ed5120fbd05ae4b503d2cf1"><td class="memItemLeft" align="right" valign="top"><a id="af23731285ed5120fbd05ae4b503d2cf1" name="af23731285ed5120fbd05ae4b503d2cf1"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>selfDeaf</b> { false }</td></tr>
-<tr class="memdesc:af23731285ed5120fbd05ae4b503d2cf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not we self-deafen ourselves. <br /></td></tr>
-<tr class="separator:af23731285ed5120fbd05ae4b503d2cf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a513af22285b248b90ca51f9dff2f82cc"><td class="memItemLeft" align="right" valign="top"><a id="a513af22285b248b90ca51f9dff2f82cc" name="a513af22285b248b90ca51f9dff2f82cc"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>selfMute</b> { false }</td></tr>
-<tr class="memdesc:a513af22285b248b90ca51f9dff2f82cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not we self-mute ourselves. <br /></td></tr>
-<tr class="separator:a513af22285b248b90ca51f9dff2f82cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d2a2b543935e533cf5377c0fa7b3cb0"><td class="memItemLeft" align="right" valign="top"><a id="a1d2a2b543935e533cf5377c0fa7b3cb0" name="a1d2a2b543935e533cf5377c0fa7b3cb0"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>key</b> {}</td></tr>
+<tr class="memdesc:a1d2a2b543935e533cf5377c0fa7b3cb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The key of the audit log change. <br /></td></tr>
+<tr class="separator:a1d2a2b543935e533cf5377c0fa7b3cb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04539767bd3db99b20f546bcb9180ab2"><td class="memItemLeft" align="right" valign="top"><a id="a04539767bd3db99b20f546bcb9180ab2" name="a04539767bd3db99b20f546bcb9180ab2"></a>
+nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><b>newValue</b> {}</td></tr>
+<tr class="memdesc:a04539767bd3db99b20f546bcb9180ab2"><td class="mdescLeft">&#160;</td><td class="mdescRight">New value. <br /></td></tr>
+<tr class="separator:a04539767bd3db99b20f546bcb9180ab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af86f86d55533fbee71192ec3057e9bc9"><td class="memItemLeft" align="right" valign="top"><a id="af86f86d55533fbee71192ec3057e9bc9" name="af86f86d55533fbee71192ec3057e9bc9"></a>
+nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><b>oldValue</b> {}</td></tr>
+<tr class="memdesc:af86f86d55533fbee71192ec3057e9bc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Old value. <br /></td></tr>
+<tr class="separator:af86f86d55533fbee71192ec3057e9bc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following files:<ul>
 <li><a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a></li>
+<li><a class="el" href="../../df/d0e/a00800_source.html">DataParsingFunctions.cpp</a></li>
 <li><a class="el" href="../../d3/d60/a00818_source.html">FoundationEntities.cpp</a></li>
 </ul>
 </div><!-- contents -->
@@ -143,7 +142,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>selfMute</b> { false 
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d5/dcb/a02456.html">UpdateVoiceStateData</a></li>
+    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d5/dcb/a02456.html">AuditLogChangeData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

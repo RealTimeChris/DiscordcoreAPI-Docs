@@ -105,11 +105,11 @@ $(document).ready(function(){initNavTree('d6/d71/a02344.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d4/dfb/a02341.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::ThreadMetadataData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::TriggerMetaData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Meta data for a <a class="el" href="../../d0/d61/a03528.html" title="Represents a single Thread.">Thread</a> type of <a class="el" href="../../db/da1/a01944.html" title="A Channel object.">Channel</a>.  
+<p>Trigger metadata for auto-moderation-rules.  
  <a href="../../d6/d71/a02344.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a>&gt;</code></p>
@@ -118,30 +118,18 @@ $(document).ready(function(){initNavTree('d6/d71/a02344.html','../../'); initRes
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:a6143bdc2e17f7a5b57acc735b48eccd2"><td class="memItemLeft" align="right" valign="top"><a id="a6143bdc2e17f7a5b57acc735b48eccd2" name="a6143bdc2e17f7a5b57acc735b48eccd2"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>archived</b> { false }</td></tr>
-<tr class="memdesc:a6143bdc2e17f7a5b57acc735b48eccd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not this <a class="el" href="../../d0/d61/a03528.html" title="Represents a single Thread.">Thread</a> is currently archived. <br /></td></tr>
-<tr class="separator:a6143bdc2e17f7a5b57acc735b48eccd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd184cc2be32061aeeb90f789748b976"><td class="memItemLeft" align="right" valign="top"><a id="afd184cc2be32061aeeb90f789748b976" name="afd184cc2be32061aeeb90f789748b976"></a>
-<a class="el" href="../../d3/d50/a03632.html">TimeStamp</a>&lt; std::chrono::milliseconds &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>archiveTimestamp</b> {}</td></tr>
-<tr class="memdesc:afd184cc2be32061aeeb90f789748b976"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Where applicable) the time at which this <a class="el" href="../../d0/d61/a03528.html" title="Represents a single Thread.">Thread</a> was archived. <br /></td></tr>
-<tr class="separator:afd184cc2be32061aeeb90f789748b976"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35ebac2350274c67cc8ad3948465bc0a"><td class="memItemLeft" align="right" valign="top"><a id="a35ebac2350274c67cc8ad3948465bc0a" name="a35ebac2350274c67cc8ad3948465bc0a"></a>
-int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>autoArchiveDuration</b> { 0 }</td></tr>
-<tr class="memdesc:a35ebac2350274c67cc8ad3948465bc0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">How int64_t before archiving this <a class="el" href="../../d0/d61/a03528.html" title="Represents a single Thread.">Thread</a>. <br /></td></tr>
-<tr class="separator:a35ebac2350274c67cc8ad3948465bc0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98d9bf857ebf0c3b745867f8fc3eec1a"><td class="memItemLeft" align="right" valign="top"><a id="a98d9bf857ebf0c3b745867f8fc3eec1a" name="a98d9bf857ebf0c3b745867f8fc3eec1a"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>invitable</b> { false }</td></tr>
-<tr class="memdesc:a98d9bf857ebf0c3b745867f8fc3eec1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the individual who archived this <a class="el" href="../../d0/d61/a03528.html" title="Represents a single Thread.">Thread</a>. <br /></td></tr>
-<tr class="separator:a98d9bf857ebf0c3b745867f8fc3eec1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adeff39689c4f8bd8bc3b73d71ea571ef"><td class="memItemLeft" align="right" valign="top"><a id="adeff39689c4f8bd8bc3b73d71ea571ef" name="adeff39689c4f8bd8bc3b73d71ea571ef"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>locked</b> { false }</td></tr>
-<tr class="memdesc:adeff39689c4f8bd8bc3b73d71ea571ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not this <a class="el" href="../../d0/d61/a03528.html" title="Represents a single Thread.">Thread</a> is currently locked. <br /></td></tr>
-<tr class="separator:adeff39689c4f8bd8bc3b73d71ea571ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a853bbc54c809517591db7bf9614b088d"><td class="memItemLeft" align="right" valign="top"><a id="a853bbc54c809517591db7bf9614b088d" name="a853bbc54c809517591db7bf9614b088d"></a>
+std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>keywordFilter</b> {}</td></tr>
+<tr class="memdesc:a853bbc54c809517591db7bf9614b088d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Substrings which will be searched for in content. <br /></td></tr>
+<tr class="separator:a853bbc54c809517591db7bf9614b088d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0cdc0c74517d175ee1476a43503f11f"><td class="memItemLeft" align="right" valign="top"><a id="ae0cdc0c74517d175ee1476a43503f11f" name="ae0cdc0c74517d175ee1476a43503f11f"></a>
+std::vector&lt; <a class="el" href="../../de/dfc/a00891.html#gabbe8da5b6c45624468b15e4466104949">KeywordPresetType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>presets</b> {}</td></tr>
+<tr class="memdesc:ae0cdc0c74517d175ee1476a43503f11f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The internally pre-defined wordsets which will be searched for in content. <br /></td></tr>
+<tr class="separator:ae0cdc0c74517d175ee1476a43503f11f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following files:<ul>
 <li><a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a></li>
-<li><a class="el" href="../../d5/d72/a00803_source.html">DataParsingFunctions.cpp</a></li>
+<li><a class="el" href="../../df/d0e/a00800_source.html">DataParsingFunctions.cpp</a></li>
 <li><a class="el" href="../../d3/d60/a00818_source.html">FoundationEntities.cpp</a></li>
 </ul>
 </div><!-- contents -->
@@ -150,7 +138,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>locked</b> { false }<
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d6/d71/a02344.html">ThreadMetadataData</a></li>
+    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d6/d71/a02344.html">TriggerMetaData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

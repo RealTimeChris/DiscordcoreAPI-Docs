@@ -105,41 +105,32 @@ $(document).ready(function(){initNavTree('d6/d25/a03284.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d0/d84/a03281.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::ModifyGuildEmojiData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::RemoveGuildRoleData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For modifying a <a class="el" href="../../d6/db9/a02980.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> Emoji.  
+<p>For removing a <a class="el" href="../../d2/d76/a03296.html" title="A single Role.">Role</a> from a chosen <a class="el" href="../../d2/d0c/a02932.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>.  
  <a href="../../d6/d25/a03284.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="../../dd/db2/a00737_source.html">ReactionEntities.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../dc/dce/a00740_source.html">RoleEntities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:aab3289bad99454e7d2c1ea4fc7508d4c"><td class="memItemLeft" align="right" valign="top"><a id="aab3289bad99454e7d2c1ea4fc7508d4c" name="aab3289bad99454e7d2c1ea4fc7508d4c"></a>
-<a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>emojiId</b> {}</td></tr>
-<tr class="memdesc:aab3289bad99454e7d2c1ea4fc7508d4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the Emoji to modify. <br /></td></tr>
-<tr class="separator:aab3289bad99454e7d2c1ea4fc7508d4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad40f46c763a2c983ae100906d7e622ac"><td class="memItemLeft" align="right" valign="top"><a id="ad40f46c763a2c983ae100906d7e622ac" name="ad40f46c763a2c983ae100906d7e622ac"></a>
+<tr class="memitem:af71481cb429e2523f6bc5c0cd33be7be"><td class="memItemLeft" align="right" valign="top"><a id="af71481cb429e2523f6bc5c0cd33be7be" name="af71481cb429e2523f6bc5c0cd33be7be"></a>
 <a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildId</b> {}</td></tr>
-<tr class="memdesc:ad40f46c763a2c983ae100906d7e622ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../d6/db9/a02980.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> within which to modify the Emoji. <br /></td></tr>
-<tr class="separator:ad40f46c763a2c983ae100906d7e622ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab42476e605605ad94cfae4c1ef0cd400"><td class="memItemLeft" align="right" valign="top"><a id="ab42476e605605ad94cfae4c1ef0cd400" name="ab42476e605605ad94cfae4c1ef0cd400"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> {}</td></tr>
-<tr class="memdesc:ab42476e605605ad94cfae4c1ef0cd400"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the Emoji. <br /></td></tr>
-<tr class="separator:ab42476e605605ad94cfae4c1ef0cd400"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb130ce60e601b32d46dbc8ac8adc64f"><td class="memItemLeft" align="right" valign="top"><a id="aeb130ce60e601b32d46dbc8ac8adc64f" name="aeb130ce60e601b32d46dbc8ac8adc64f"></a>
+<tr class="memdesc:af71481cb429e2523f6bc5c0cd33be7be"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the <a class="el" href="../../d2/d0c/a02932.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> from which to remove the <a class="el" href="../../d2/d76/a03296.html" title="A single Role.">Role</a>. <br /></td></tr>
+<tr class="separator:af71481cb429e2523f6bc5c0cd33be7be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefde5164cbf5b3063b8018e49b27464f"><td class="memItemLeft" align="right" valign="top"><a id="aefde5164cbf5b3063b8018e49b27464f" name="aefde5164cbf5b3063b8018e49b27464f"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>reason</b> {}</td></tr>
-<tr class="memdesc:aeb130ce60e601b32d46dbc8ac8adc64f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reason for modifying the Emoji. <br /></td></tr>
-<tr class="separator:aeb130ce60e601b32d46dbc8ac8adc64f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c9428f19af04f18efef97d2e23e4f2c"><td class="memItemLeft" align="right" valign="top"><a id="a6c9428f19af04f18efef97d2e23e4f2c" name="a6c9428f19af04f18efef97d2e23e4f2c"></a>
-std::vector&lt; <a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>roles</b> {}</td></tr>
-<tr class="memdesc:a6c9428f19af04f18efef97d2e23e4f2c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d2/d66/a03352.html" title="An interface class for the Role related Discord endpoints.">Roles</a> that can use this Emoji. <br /></td></tr>
-<tr class="separator:a6c9428f19af04f18efef97d2e23e4f2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:aefde5164cbf5b3063b8018e49b27464f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reason for removing this <a class="el" href="../../d2/d76/a03296.html" title="A single Role.">Role</a>. <br /></td></tr>
+<tr class="separator:aefde5164cbf5b3063b8018e49b27464f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a217b17d540fd721dc99b97ac6996ecc0"><td class="memItemLeft" align="right" valign="top"><a id="a217b17d540fd721dc99b97ac6996ecc0" name="a217b17d540fd721dc99b97ac6996ecc0"></a>
+<a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>roleId</b> {}</td></tr>
+<tr class="memdesc:a217b17d540fd721dc99b97ac6996ecc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the <a class="el" href="../../d2/d76/a03296.html" title="A single Role.">Role</a> to remove. <br /></td></tr>
+<tr class="separator:a217b17d540fd721dc99b97ac6996ecc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following files:<ul>
-<li><a class="el" href="../../dd/db2/a00737_source.html">ReactionEntities.hpp</a></li>
-<li><a class="el" href="../../d0/d11/a00842_source.html">ReactionEntities.cpp</a></li>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="../../dc/dce/a00740_source.html">RoleEntities.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -147,7 +138,7 @@ std::vector&lt; <a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e7535
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d6/d25/a03284.html">ModifyGuildEmojiData</a></li>
+    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d6/d25/a03284.html">RemoveGuildRoleData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

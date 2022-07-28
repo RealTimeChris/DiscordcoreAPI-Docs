@@ -105,30 +105,32 @@ $(document).ready(function(){initNavTree('d2/ddb/a02836.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d0/d2b/a02833.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::BaseFunctionArguments Struct Reference<div class="ingroups"><a class="el" href="../../d7/d46/a00890.html">Utilities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::GetGuildPruneCountData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Base arguments for the command classes.  
+<p>For collecting the <a class="el" href="../../d2/d0c/a02932.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> prune count.  
  <a href="../../d2/ddb/a02836.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for DiscordCoreAPI::BaseFunctionArguments:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d6/d97/a02835.svg" width="219" height="127"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
+<p><code>#include &lt;<a class="el" href="../../d1/d04/a00713_source.html">GuildEntities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:a20009c042119fe1463a36ed29d74bb1b"><td class="memItemLeft" align="right" valign="top"><a id="a20009c042119fe1463a36ed29d74bb1b" name="a20009c042119fe1463a36ed29d74bb1b"></a>
-<a class="el" href="../../d6/d33/a01992.html">DiscordCoreClient</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>discordCoreClient</b> { nullptr }</td></tr>
-<tr class="memdesc:a20009c042119fe1463a36ed29d74bb1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pointer to the instance of <a class="el" href="../../d6/d33/a01992.html" title="DiscordCoreClient - The main class for this library.">DiscordCoreClient</a>. <br /></td></tr>
-<tr class="separator:a20009c042119fe1463a36ed29d74bb1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a153eb98f7cd22264755f7f7a17b05ac3"><td class="memItemLeft" align="right" valign="top"><a id="a153eb98f7cd22264755f7f7a17b05ac3" name="a153eb98f7cd22264755f7f7a17b05ac3"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>days</b> { 0 }</td></tr>
+<tr class="memdesc:a153eb98f7cd22264755f7f7a17b05ac3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of days beyond which to prune the user's for inactivity. <br /></td></tr>
+<tr class="separator:a153eb98f7cd22264755f7f7a17b05ac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a123c5d64d16d39950b4f964818a3d040"><td class="memItemLeft" align="right" valign="top"><a id="a123c5d64d16d39950b4f964818a3d040" name="a123c5d64d16d39950b4f964818a3d040"></a>
+<a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildId</b> {}</td></tr>
+<tr class="memdesc:a123c5d64d16d39950b4f964818a3d040"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../d2/d0c/a02932.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> to be pruned. <br /></td></tr>
+<tr class="separator:a123c5d64d16d39950b4f964818a3d040"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecf783c0e495d9a0a0abd5fd14f99908"><td class="memItemLeft" align="right" valign="top"><a id="aecf783c0e495d9a0a0abd5fd14f99908" name="aecf783c0e495d9a0a0abd5fd14f99908"></a>
+std::vector&lt; <a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>includeRoles</b> {}</td></tr>
+<tr class="memdesc:aecf783c0e495d9a0a0abd5fd14f99908"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d2/d14/a03304.html" title="An interface class for the Role related Discord endpoints.">Roles</a> to be included in the prune. <br /></td></tr>
+<tr class="separator:aecf783c0e495d9a0a0abd5fd14f99908"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following files:<ul>
-<li><a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a></li>
-<li><a class="el" href="../../d3/d60/a00818_source.html">FoundationEntities.cpp</a></li>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="../../d1/d04/a00713_source.html">GuildEntities.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -136,7 +138,7 @@ Public Data Members</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d2/ddb/a02836.html">BaseFunctionArguments</a></li>
+    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d2/ddb/a02836.html">GetGuildPruneCountData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

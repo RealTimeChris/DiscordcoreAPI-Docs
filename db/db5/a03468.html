@@ -103,245 +103,34 @@ $(document).ready(function(){initNavTree('db/db5/a03468.html','../../'); initRes
 
 <div class="header">
   <div class="summary">
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../da/da5/a03465.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::Stickers Class Reference<div class="ingroups"><a class="el" href="../../d7/d92/a00887.html">Main Endpoints</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::GetPrivateArchivedThreadsData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>An interface class for the <a class="el" href="../../dc/d18/a03460.html" title="A single Sticker.">Sticker</a> related Discord endpoints.  
+<p>For collecting private archived <a class="el" href="../../de/df6/a03484.html" title="An interface class for the Thread related endpoints.">Threads</a> from a given <a class="el" href="../../dc/d7f/a01884.html" title="A Channel object.">Channel</a>.  
  <a href="../../db/db5/a03468.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="../../d2/ddd/a00755_source.html">StickerEntities.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../d2/d4a/a00758_source.html">ThreadEntities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:aaa0cd3527695c14978aa65dbbabcdc18"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d9d/a01972.html">CoRoutine</a>&lt; <a class="el" href="../../dc/d18/a03460.html">Sticker</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/db5/a03468.html#aaa0cd3527695c14978aa65dbbabcdc18">createGuildStickerAsync</a> (<a class="el" href="../../d2/d29/a03448.html">CreateGuildStickerData</a> dataPackage)</td></tr>
-<tr class="memdesc:aaa0cd3527695c14978aa65dbbabcdc18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="../../dc/d18/a03460.html" title="A single Sticker.">Sticker</a> within a chosen <a class="el" href="../../d6/db9/a02980.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>.  <a href="../../db/db5/a03468.html#aaa0cd3527695c14978aa65dbbabcdc18">More...</a><br /></td></tr>
-<tr class="separator:aaa0cd3527695c14978aa65dbbabcdc18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee89d4a62c280fcfb2f76b4b8e5a8545"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d9d/a01972.html">CoRoutine</a>&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/db5/a03468.html#aee89d4a62c280fcfb2f76b4b8e5a8545">deleteGuildStickerAsync</a> (<a class="el" href="../../d6/d36/a03456.html">DeleteGuildStickerData</a> dataPackage)</td></tr>
-<tr class="memdesc:aee89d4a62c280fcfb2f76b4b8e5a8545"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes a <a class="el" href="../../dc/d18/a03460.html" title="A single Sticker.">Sticker</a> within a chosen <a class="el" href="../../d6/db9/a02980.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>.  <a href="../../db/db5/a03468.html#aee89d4a62c280fcfb2f76b4b8e5a8545">More...</a><br /></td></tr>
-<tr class="separator:aee89d4a62c280fcfb2f76b4b8e5a8545"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a675b23a029eb81186f48f4399d9543c5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d9d/a01972.html">CoRoutine</a>&lt; std::vector&lt; <a class="el" href="../../dc/d18/a03460.html">Sticker</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/db5/a03468.html#a675b23a029eb81186f48f4399d9543c5">getGuildStickersAsync</a> (<a class="el" href="../../dd/ddc/a03444.html">GetGuildStickersData</a> dataPackage)</td></tr>
-<tr class="memdesc:a675b23a029eb81186f48f4399d9543c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a list of <a class="el" href="../../db/db5/a03468.html" title="An interface class for the Sticker related Discord endpoints.">Stickers</a> from a <a class="el" href="../../d6/db9/a02980.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>.  <a href="../../db/db5/a03468.html#a675b23a029eb81186f48f4399d9543c5">More...</a><br /></td></tr>
-<tr class="separator:a675b23a029eb81186f48f4399d9543c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cff15150c58e1cb8cb148da37425ba5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d9d/a01972.html">CoRoutine</a>&lt; std::vector&lt; <a class="el" href="../../d7/d1c/a02732.html">StickerPackData</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/db5/a03468.html#a4cff15150c58e1cb8cb148da37425ba5">getNitroStickerPacksAsync</a> ()</td></tr>
-<tr class="memdesc:a4cff15150c58e1cb8cb148da37425ba5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a list of nitro-available <a class="el" href="../../dc/d18/a03460.html" title="A single Sticker.">Sticker</a> packs.  <a href="../../db/db5/a03468.html#a4cff15150c58e1cb8cb148da37425ba5">More...</a><br /></td></tr>
-<tr class="separator:a4cff15150c58e1cb8cb148da37425ba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38466742178dbe6d223afdf5e7298bcf"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d9d/a01972.html">CoRoutine</a>&lt; <a class="el" href="../../dc/d18/a03460.html">Sticker</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/db5/a03468.html#a38466742178dbe6d223afdf5e7298bcf">getStickerAsync</a> (<a class="el" href="../../df/d89/a03440.html">GetStickerData</a> dataPackage)</td></tr>
-<tr class="memdesc:a38466742178dbe6d223afdf5e7298bcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a single <a class="el" href="../../dc/d18/a03460.html" title="A single Sticker.">Sticker</a> item.  <a href="../../db/db5/a03468.html#a38466742178dbe6d223afdf5e7298bcf">More...</a><br /></td></tr>
-<tr class="separator:a38466742178dbe6d223afdf5e7298bcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35d9b84cb021bfadf355ef52c8d730af"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d9d/a01972.html">CoRoutine</a>&lt; <a class="el" href="../../dc/d18/a03460.html">Sticker</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/db5/a03468.html#a35d9b84cb021bfadf355ef52c8d730af">modifyGuildStickerAsync</a> (<a class="el" href="../../df/d0f/a03452.html">ModifyGuildStickerData</a> dataPackage)</td></tr>
-<tr class="memdesc:a35d9b84cb021bfadf355ef52c8d730af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifies a <a class="el" href="../../dc/d18/a03460.html" title="A single Sticker.">Sticker</a> within a chosen <a class="el" href="../../d6/db9/a02980.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>.  <a href="../../db/db5/a03468.html#a35d9b84cb021bfadf355ef52c8d730af">More...</a><br /></td></tr>
-<tr class="separator:a35d9b84cb021bfadf355ef52c8d730af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Data Members</h2></td></tr>
+<tr class="memitem:a0b9a59687ac0e7c7695dbacf0deca884"><td class="memItemLeft" align="right" valign="top"><a id="a0b9a59687ac0e7c7695dbacf0deca884" name="a0b9a59687ac0e7c7695dbacf0deca884"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>before</b> {}</td></tr>
+<tr class="memdesc:a0b9a59687ac0e7c7695dbacf0deca884"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns threads before this timestamp. <br /></td></tr>
+<tr class="separator:a0b9a59687ac0e7c7695dbacf0deca884"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3259c451999fe4496a043a2fbf4d8127"><td class="memItemLeft" align="right" valign="top"><a id="a3259c451999fe4496a043a2fbf4d8127" name="a3259c451999fe4496a043a2fbf4d8127"></a>
+<a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>channelId</b> {}</td></tr>
+<tr class="memdesc:a3259c451999fe4496a043a2fbf4d8127"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../dc/d7f/a01884.html" title="A Channel object.">Channel</a> to acquire the <a class="el" href="../../de/df6/a03484.html" title="An interface class for the Thread related endpoints.">Threads</a> from. <br /></td></tr>
+<tr class="separator:a3259c451999fe4496a043a2fbf4d8127"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28bb36d4b8b479049e94dc46151868fa"><td class="memItemLeft" align="right" valign="top"><a id="a28bb36d4b8b479049e94dc46151868fa" name="a28bb36d4b8b479049e94dc46151868fa"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>limit</b> { 0 }</td></tr>
+<tr class="memdesc:a28bb36d4b8b479049e94dc46151868fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of threads to return. <br /></td></tr>
+<tr class="separator:a28bb36d4b8b479049e94dc46151868fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="aaa0cd3527695c14978aa65dbbabcdc18" name="aaa0cd3527695c14978aa65dbbabcdc18"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa0cd3527695c14978aa65dbbabcdc18">&#9670;&nbsp;</a></span>createGuildStickerAsync()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../db/d9d/a01972.html">CoRoutine</a>&lt; <a class="el" href="../../dc/d18/a03460.html">Sticker</a> &gt; DiscordCoreAPI::Stickers::createGuildStickerAsync </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d2/d29/a03448.html">CreateGuildStickerData</a>&#160;</td>
-          <td class="paramname"><em>dataPackage</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >Creates a new <a class="el" href="../../dc/d18/a03460.html" title="A single Sticker.">Sticker</a> within a chosen <a class="el" href="../../d6/db9/a02980.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dataPackage</td><td>A <a class="el" href="../../d2/d29/a03448.html" title="For creating a single Sticker.">CreateGuildStickerData</a> structure. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../db/d9d/a01972.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> containing a <a class="el" href="../../dc/d18/a03460.html" title="A single Sticker.">Sticker</a>. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d2/d5e/a00860_source.html#l00078">78</a> of file <a class="el" href="../../d2/d5e/a00860_source.html">StickerEntities.cpp</a>.</p>
-
-</div>
-</div>
-<a id="aee89d4a62c280fcfb2f76b4b8e5a8545" name="aee89d4a62c280fcfb2f76b4b8e5a8545"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee89d4a62c280fcfb2f76b4b8e5a8545">&#9670;&nbsp;</a></span>deleteGuildStickerAsync()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../db/d9d/a01972.html">CoRoutine</a>&lt; void &gt; DiscordCoreAPI::Stickers::deleteGuildStickerAsync </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d6/d36/a03456.html">DeleteGuildStickerData</a>&#160;</td>
-          <td class="paramname"><em>dataPackage</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >Deletes a <a class="el" href="../../dc/d18/a03460.html" title="A single Sticker.">Sticker</a> within a chosen <a class="el" href="../../d6/db9/a02980.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dataPackage</td><td>A <a class="el" href="../../d6/d36/a03456.html" title="For deleting a single Sticker.">DeleteGuildStickerData</a> structure. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../db/d9d/a01972.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> containing void. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d2/d5e/a00860_source.html#l00106">106</a> of file <a class="el" href="../../d2/d5e/a00860_source.html">StickerEntities.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a675b23a029eb81186f48f4399d9543c5" name="a675b23a029eb81186f48f4399d9543c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a675b23a029eb81186f48f4399d9543c5">&#9670;&nbsp;</a></span>getGuildStickersAsync()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../db/d9d/a01972.html">CoRoutine</a>&lt; std::vector&lt; <a class="el" href="../../dc/d18/a03460.html">Sticker</a> &gt; &gt; DiscordCoreAPI::Stickers::getGuildStickersAsync </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dd/ddc/a03444.html">GetGuildStickersData</a>&#160;</td>
-          <td class="paramname"><em>dataPackage</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >Gets a list of <a class="el" href="../../db/db5/a03468.html" title="An interface class for the Sticker related Discord endpoints.">Stickers</a> from a <a class="el" href="../../d6/db9/a02980.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dataPackage</td><td>A <a class="el" href="../../dd/ddc/a03444.html" title="For collecting a list of Stickers from a chosen Guild.">GetGuildStickersData</a> structure. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../db/d9d/a01972.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> containing a StickerVector. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d2/d5e/a00860_source.html#l00069">69</a> of file <a class="el" href="../../d2/d5e/a00860_source.html">StickerEntities.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a4cff15150c58e1cb8cb148da37425ba5" name="a4cff15150c58e1cb8cb148da37425ba5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4cff15150c58e1cb8cb148da37425ba5">&#9670;&nbsp;</a></span>getNitroStickerPacksAsync()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../db/d9d/a01972.html">CoRoutine</a>&lt; std::vector&lt; <a class="el" href="../../d7/d1c/a02732.html">StickerPackData</a> &gt; &gt; DiscordCoreAPI::Stickers::getNitroStickerPacksAsync </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >Gets a list of nitro-available <a class="el" href="../../dc/d18/a03460.html" title="A single Sticker.">Sticker</a> packs.</p><dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../db/d9d/a01972.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> containing a StickerPackDataVector. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d2/d5e/a00860_source.html#l00060">60</a> of file <a class="el" href="../../d2/d5e/a00860_source.html">StickerEntities.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a38466742178dbe6d223afdf5e7298bcf" name="a38466742178dbe6d223afdf5e7298bcf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a38466742178dbe6d223afdf5e7298bcf">&#9670;&nbsp;</a></span>getStickerAsync()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../db/d9d/a01972.html">CoRoutine</a>&lt; <a class="el" href="../../dc/d18/a03460.html">Sticker</a> &gt; DiscordCoreAPI::Stickers::getStickerAsync </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../df/d89/a03440.html">GetStickerData</a>&#160;</td>
-          <td class="paramname"><em>dataPackage</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >Gets a single <a class="el" href="../../dc/d18/a03460.html" title="A single Sticker.">Sticker</a> item.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dataPackage</td><td>A <a class="el" href="../../df/d89/a03440.html" title="For getting a Sticker object for the given sticker ID.">GetStickerData</a> structure. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../db/d9d/a01972.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> containing a <a class="el" href="../../dc/d18/a03460.html" title="A single Sticker.">Sticker</a>. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d2/d5e/a00860_source.html#l00051">51</a> of file <a class="el" href="../../d2/d5e/a00860_source.html">StickerEntities.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a35d9b84cb021bfadf355ef52c8d730af" name="a35d9b84cb021bfadf355ef52c8d730af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a35d9b84cb021bfadf355ef52c8d730af">&#9670;&nbsp;</a></span>modifyGuildStickerAsync()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../db/d9d/a01972.html">CoRoutine</a>&lt; <a class="el" href="../../dc/d18/a03460.html">Sticker</a> &gt; DiscordCoreAPI::Stickers::modifyGuildStickerAsync </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../df/d0f/a03452.html">ModifyGuildStickerData</a>&#160;</td>
-          <td class="paramname"><em>dataPackage</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >Modifies a <a class="el" href="../../dc/d18/a03460.html" title="A single Sticker.">Sticker</a> within a chosen <a class="el" href="../../d6/db9/a02980.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dataPackage</td><td>A <a class="el" href="../../df/d0f/a03452.html" title="For modifying a single Sticker.">ModifyGuildStickerData</a> structure. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../db/d9d/a01972.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> containing a <a class="el" href="../../dc/d18/a03460.html" title="A single Sticker.">Sticker</a>. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d2/d5e/a00860_source.html#l00092">92</a> of file <a class="el" href="../../d2/d5e/a00860_source.html">StickerEntities.cpp</a>.</p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="../../d2/ddd/a00755_source.html">StickerEntities.hpp</a></li>
-<li><a class="el" href="../../d2/d5e/a00860_source.html">StickerEntities.cpp</a></li>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="../../d2/d4a/a00758_source.html">ThreadEntities.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -349,7 +138,7 @@ Static Public Member Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../db/db5/a03468.html">Stickers</a></li>
+    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../db/db5/a03468.html">GetPrivateArchivedThreadsData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

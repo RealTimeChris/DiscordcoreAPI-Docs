@@ -105,11 +105,11 @@ $(document).ready(function(){initNavTree('d2/d5a/a02652.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d9/dfe/a02649.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::UserCommandInteractionData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::ThreadListSyncData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="../../d8/db0/a03572.html" title="A single User.">User</a> command <a class="el" href="../../d0/d9f/a03152.html" title="A single Interaction.">Interaction</a> data.  
+<p>Data for when threads are synced.  
  <a href="../../d2/d5a/a02652.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a>&gt;</code></p>
@@ -118,14 +118,26 @@ $(document).ready(function(){initNavTree('d2/d5a/a02652.html','../../'); initRes
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:a107f1cfcb0538649779008be3a83fc06"><td class="memItemLeft" align="right" valign="top"><a id="a107f1cfcb0538649779008be3a83fc06" name="a107f1cfcb0538649779008be3a83fc06"></a>
-<a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>targetId</b> {}</td></tr>
-<tr class="memdesc:a107f1cfcb0538649779008be3a83fc06"><td class="mdescLeft">&#160;</td><td class="mdescRight">The target <a class="el" href="../../d8/db0/a03572.html" title="A single User.">User</a>'s id. <br /></td></tr>
-<tr class="separator:a107f1cfcb0538649779008be3a83fc06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2b02f2a32eb2486bac02571c670005e"><td class="memItemLeft" align="right" valign="top"><a id="af2b02f2a32eb2486bac02571c670005e" name="af2b02f2a32eb2486bac02571c670005e"></a>
+std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>channelIds</b> {}</td></tr>
+<tr class="memdesc:af2b02f2a32eb2486bac02571c670005e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The parent <a class="el" href="../../dc/d7f/a01884.html" title="A Channel object.">Channel</a> ids whose threads are being synced. If omitted, then threads were synced for entire <a class="el" href="../../d2/d0c/a02932.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a>. <br /></td></tr>
+<tr class="separator:af2b02f2a32eb2486bac02571c670005e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0accafbbd5508b0053cc0acb2dcc1a0f"><td class="memItemLeft" align="right" valign="top"><a id="a0accafbbd5508b0053cc0acb2dcc1a0f" name="a0accafbbd5508b0053cc0acb2dcc1a0f"></a>
+<a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildId</b> {}</td></tr>
+<tr class="memdesc:a0accafbbd5508b0053cc0acb2dcc1a0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the <a class="el" href="../../d2/d0c/a02932.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> for which the threads are being synced. <br /></td></tr>
+<tr class="separator:a0accafbbd5508b0053cc0acb2dcc1a0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81232da7e8773c8ddec59ee43d71c862"><td class="memItemLeft" align="right" valign="top"><a id="a81232da7e8773c8ddec59ee43d71c862" name="a81232da7e8773c8ddec59ee43d71c862"></a>
+std::vector&lt; <a class="el" href="../../d1/d47/a02300.html">ThreadMemberData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>members</b> {}</td></tr>
+<tr class="memdesc:a81232da7e8773c8ddec59ee43d71c862"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of members that are a part of the <a class="el" href="../../d8/dbb/a03480.html" title="Represents a single Thread.">Thread</a>. <br /></td></tr>
+<tr class="separator:a81232da7e8773c8ddec59ee43d71c862"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7013207951b5b61105cfce8608be4dbd"><td class="memItemLeft" align="right" valign="top"><a id="a7013207951b5b61105cfce8608be4dbd" name="a7013207951b5b61105cfce8608be4dbd"></a>
+std::vector&lt; <a class="el" href="../../dd/d6e/a02324.html">ChannelData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>threads</b> {}</td></tr>
+<tr class="memdesc:a7013207951b5b61105cfce8608be4dbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">All active threads in the given channels that the current <a class="el" href="../../dc/d98/a03524.html" title="A single User.">User</a> can access. <br /></td></tr>
+<tr class="separator:a7013207951b5b61105cfce8608be4dbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following files:<ul>
 <li><a class="el" href="../../d4/deb/a00710_source.html">FoundationEntities.hpp</a></li>
-<li><a class="el" href="../../d5/d72/a00803_source.html">DataParsingFunctions.cpp</a></li>
+<li><a class="el" href="../../df/d0e/a00800_source.html">DataParsingFunctions.cpp</a></li>
 <li><a class="el" href="../../d3/d60/a00818_source.html">FoundationEntities.cpp</a></li>
 </ul>
 </div><!-- contents -->
@@ -134,7 +146,7 @@ Public Data Members</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d2/d5a/a02652.html">UserCommandInteractionData</a></li>
+    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d2/d5a/a02652.html">ThreadListSyncData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

@@ -103,67 +103,117 @@ $(document).ready(function(){initNavTree('d4/d15/a03052.html','../../'); initRes
 
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Public Data Members</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="../../d7/d8c/a03049.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::ModifyGuildScheduledEventData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::InputEvents Class Reference<div class="ingroups"><a class="el" href="../../d7/d92/a00887.html">Main Endpoints</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For modifying a single <a class="el" href="../../d6/db9/a02980.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> Scheduled Event.  
+<p>For handling <a class="el" href="../../dc/d98/a03524.html" title="A single User.">User</a> input - <a class="el" href="../../dc/ddd/a03196.html" title="An interface class for the Message related Discord endpoints.">Messages</a> or <a class="el" href="../../da/dcd/a03108.html" title="An interface class for the Interaction related Discord endpoints.">Interactions</a>.  
  <a href="../../d4/d15/a03052.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="../../dd/dd8/a00719_source.html">GuildScheduledEventEntities.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../df/d3b/a00728_source.html">InputEvents.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Public Data Members</h2></td></tr>
-<tr class="memitem:afcdb9d81cffeecff5b2851830600a6c2"><td class="memItemLeft" align="right" valign="top"><a id="afcdb9d81cffeecff5b2851830600a6c2" name="afcdb9d81cffeecff5b2851830600a6c2"></a>
-<a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>channelId</b> {}</td></tr>
-<tr class="memdesc:afcdb9d81cffeecff5b2851830600a6c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../db/da1/a01944.html" title="A Channel object.">Channel</a> id of the scheduled event, set to null if changing entity type to External. <br /></td></tr>
-<tr class="separator:afcdb9d81cffeecff5b2851830600a6c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9523bb6269bdca5a74bf0702fb06e8dc"><td class="memItemLeft" align="right" valign="top"><a id="a9523bb6269bdca5a74bf0702fb06e8dc" name="a9523bb6269bdca5a74bf0702fb06e8dc"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>description</b> {}</td></tr>
-<tr class="memdesc:a9523bb6269bdca5a74bf0702fb06e8dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The description of the scheduled event. <br /></td></tr>
-<tr class="separator:a9523bb6269bdca5a74bf0702fb06e8dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22bfd5be53182ce0765eb3e32eeaaad8"><td class="memItemLeft" align="right" valign="top"><a id="a22bfd5be53182ce0765eb3e32eeaaad8" name="a22bfd5be53182ce0765eb3e32eeaaad8"></a>
-<a class="el" href="../../d0/df5/a02576.html">GuildScheduledEventMetadata</a>&#160;</td><td class="memItemRight" valign="bottom"><b>entityMetadata</b> {}</td></tr>
-<tr class="memdesc:a22bfd5be53182ce0765eb3e32eeaaad8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The entity metadata of the scheduled event. <br /></td></tr>
-<tr class="separator:a22bfd5be53182ce0765eb3e32eeaaad8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1b2e7fce8a7f4ee36fd2f3d2dc161ff"><td class="memItemLeft" align="right" valign="top"><a id="ad1b2e7fce8a7f4ee36fd2f3d2dc161ff" name="ad1b2e7fce8a7f4ee36fd2f3d2dc161ff"></a>
-<a class="el" href="../../de/dfc/a00891.html#ga3be930a37ea8f73fdab875716ac40643">GuildScheduledEventEntityType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>entityType</b> {}</td></tr>
-<tr class="memdesc:ad1b2e7fce8a7f4ee36fd2f3d2dc161ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">The entity type of the scheduled event. <br /></td></tr>
-<tr class="separator:ad1b2e7fce8a7f4ee36fd2f3d2dc161ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba40e83fd66a5b4d4119811a6df24244"><td class="memItemLeft" align="right" valign="top"><a id="aba40e83fd66a5b4d4119811a6df24244" name="aba40e83fd66a5b4d4119811a6df24244"></a>
-<a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildId</b> {}</td></tr>
-<tr class="memdesc:aba40e83fd66a5b4d4119811a6df24244"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../d6/db9/a02980.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> within which to modify the event. <br /></td></tr>
-<tr class="separator:aba40e83fd66a5b4d4119811a6df24244"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6ca7fdf06ce0ea7a832d6be679806bf"><td class="memItemLeft" align="right" valign="top"><a id="af6ca7fdf06ce0ea7a832d6be679806bf" name="af6ca7fdf06ce0ea7a832d6be679806bf"></a>
-<a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildScheduledEventId</b> {}</td></tr>
-<tr class="memdesc:af6ca7fdf06ce0ea7a832d6be679806bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the event to modify. <br /></td></tr>
-<tr class="separator:af6ca7fdf06ce0ea7a832d6be679806bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5c0cc4a85a834c70c3e47f5aec65d55"><td class="memItemLeft" align="right" valign="top"><a id="ab5c0cc4a85a834c70c3e47f5aec65d55" name="ab5c0cc4a85a834c70c3e47f5aec65d55"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> {}</td></tr>
-<tr class="memdesc:ab5c0cc4a85a834c70c3e47f5aec65d55"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of the scheduled event. <br /></td></tr>
-<tr class="separator:ab5c0cc4a85a834c70c3e47f5aec65d55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5aac286aa36a089632f8703f1ae6accc"><td class="memItemLeft" align="right" valign="top"><a id="a5aac286aa36a089632f8703f1ae6accc" name="a5aac286aa36a089632f8703f1ae6accc"></a>
-<a class="el" href="../../de/dfc/a00891.html#ga823190c71b2ac8925b8f53f0b0b17c20">GuildScheduledEventPrivacyLevel</a>&#160;</td><td class="memItemRight" valign="bottom"><b>privacyLevel</b> { <a class="el" href="../../de/dfc/a00891.html#gga823190c71b2ac8925b8f53f0b0b17c20acbdc236efc81089d5c3004ca4692391d">GuildScheduledEventPrivacyLevel::Guild_Only</a> }</td></tr>
-<tr class="memdesc:a5aac286aa36a089632f8703f1ae6accc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The privacy level of the scheduled event. <br /></td></tr>
-<tr class="separator:a5aac286aa36a089632f8703f1ae6accc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aafd280c5cd38d93616afd45ae66a8379"><td class="memItemLeft" align="right" valign="top"><a id="aafd280c5cd38d93616afd45ae66a8379" name="aafd280c5cd38d93616afd45ae66a8379"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>scheduledEndTime</b> {}</td></tr>
-<tr class="memdesc:aafd280c5cd38d93616afd45ae66a8379"><td class="mdescLeft">&#160;</td><td class="mdescRight">The time when the scheduled event is scheduled to end. <br /></td></tr>
-<tr class="separator:aafd280c5cd38d93616afd45ae66a8379"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a307eec1da83aebf7e55cceb6d8382444"><td class="memItemLeft" align="right" valign="top"><a id="a307eec1da83aebf7e55cceb6d8382444" name="a307eec1da83aebf7e55cceb6d8382444"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>scheduledStartTime</b> {}</td></tr>
-<tr class="memdesc:a307eec1da83aebf7e55cceb6d8382444"><td class="mdescLeft">&#160;</td><td class="mdescRight">The time to schedule the scheduled event. <br /></td></tr>
-<tr class="separator:a307eec1da83aebf7e55cceb6d8382444"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a662202e3b643018716e379b9a11759a0"><td class="memItemLeft" align="right" valign="top"><a id="a662202e3b643018716e379b9a11759a0" name="a662202e3b643018716e379b9a11759a0"></a>
-<a class="el" href="../../de/dfc/a00891.html#ga7eb11b08602561ca5e539540d753aa53">GuildScheduledEventStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><b>status</b> { <a class="el" href="../../de/dfc/a00891.html#gga7eb11b08602561ca5e539540d753aa53a4d3d769b812b6faa6b76e1a8abaece2d">GuildScheduledEventStatus::Active</a> }</td></tr>
-<tr class="memdesc:a662202e3b643018716e379b9a11759a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The status of the scheduled event. <br /></td></tr>
-<tr class="separator:a662202e3b643018716e379b9a11759a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a721365d0ef437397ea553634f88b8ecf"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../df/dd0/a01912.html">CoRoutine</a>&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d15/a03052.html#a721365d0ef437397ea553634f88b8ecf">deleteInputEventResponseAsync</a> (<a class="el" href="../../da/dd3/a02736.html">InputEventData</a> &amp;dataPackage, int32_t timeDelayNew=0)</td></tr>
+<tr class="memdesc:a721365d0ef437397ea553634f88b8ecf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes a previously sent "input-event-response".  <a href="../../d4/d15/a03052.html#a721365d0ef437397ea553634f88b8ecf">More...</a><br /></td></tr>
+<tr class="separator:a721365d0ef437397ea553634f88b8ecf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91f7a025c00ec5b858a260ebcda49a3c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../df/dd0/a01912.html">CoRoutine</a>&lt; <a class="el" href="../../da/dd3/a02736.html">InputEventData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d15/a03052.html#a91f7a025c00ec5b858a260ebcda49a3c">respondToInputEventAsync</a> (<a class="el" href="../../da/d20/a02740.html">RespondToInputEventData</a> dataPackage)</td></tr>
+<tr class="memdesc:a91f7a025c00ec5b858a260ebcda49a3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Responds to one of a number of types of "InputEvents".  <a href="../../d4/d15/a03052.html#a91f7a025c00ec5b858a260ebcda49a3c">More...</a><br /></td></tr>
+<tr class="separator:a91f7a025c00ec5b858a260ebcda49a3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following files:<ul>
-<li><a class="el" href="../../dd/dd8/a00719_source.html">GuildScheduledEventEntities.hpp</a></li>
-<li><a class="el" href="../../dc/d1b/a00827_source.html">GuildScheduledEventEntities.cpp</a></li>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a721365d0ef437397ea553634f88b8ecf" name="a721365d0ef437397ea553634f88b8ecf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a721365d0ef437397ea553634f88b8ecf">&#9670;&nbsp;</a></span>deleteInputEventResponseAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/dd0/a01912.html">CoRoutine</a>&lt; void &gt; DiscordCoreAPI::InputEvents::deleteInputEventResponseAsync </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/dd3/a02736.html">InputEventData</a> &amp;&#160;</td>
+          <td class="paramname"><em>dataPackage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>timeDelayNew</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Deletes a previously sent "input-event-response".</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dataPackage</td><td>A std::unique_ptr containing an <a class="el" href="../../da/dd3/a02736.html" title="Data representing an input-event, which is any Message or Interaction that is coming into the bot as ...">InputEventData</a> structure. </td></tr>
+    <tr><td class="paramname">timeDelayNew</td><td>An int32_t representing the desired delay until the message is deleted, in std::chrono::milliseconds. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../df/dd0/a01912.html" title="A CoRoutine - representing a potentially asynchronous operation/function.">CoRoutine</a> containing void. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d6e/a00833_source.html#l00103">103</a> of file <a class="el" href="../../dc/d6e/a00833_source.html">InputEvents.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/d15/a03052_a721365d0ef437397ea553634f88b8ecf_cgraph.svg" width="487" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a91f7a025c00ec5b858a260ebcda49a3c" name="a91f7a025c00ec5b858a260ebcda49a3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91f7a025c00ec5b858a260ebcda49a3c">&#9670;&nbsp;</a></span>respondToInputEventAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/dd0/a01912.html">CoRoutine</a>&lt; <a class="el" href="../../da/dd3/a02736.html">InputEventData</a> &gt; DiscordCoreAPI::InputEvents::respondToInputEventAsync </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/d20/a02740.html">RespondToInputEventData</a>&#160;</td>
+          <td class="paramname"><em>dataPackage</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Responds to one of a number of types of "InputEvents".</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dataPackage</td><td>A <a class="el" href="../../da/d20/a02740.html" title="Data for responding to an input-event.">RespondToInputEventData</a> structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An std::unique_ptr containing an <a class="el" href="../../da/dd3/a02736.html" title="Data representing an input-event, which is any Message or Interaction that is coming into the bot as ...">InputEventData</a> structure. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d6e/a00833_source.html#l00026">26</a> of file <a class="el" href="../../dc/d6e/a00833_source.html">InputEvents.cpp</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li><a class="el" href="../../df/d3b/a00728_source.html">InputEvents.hpp</a></li>
+<li><a class="el" href="../../dc/d6e/a00833_source.html">InputEvents.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -171,7 +221,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>scheduledStart
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d4/d15/a03052.html">ModifyGuildScheduledEventData</a></li>
+    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d4/d15/a03052.html">InputEvents</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

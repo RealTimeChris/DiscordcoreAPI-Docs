@@ -1,5 +1,4 @@
-<map id="DiscordCoreAPI::ReactionData" name="DiscordCoreAPI::ReactionData">
-<area shape="rect" id="node1" title="Data structure representing a single reaction." alt="" coords="5,80,205,107"/>
-<area shape="rect" id="node3" href="$d7/d52/a03292.html" title="A single Reaction." alt="" coords="19,155,192,181"/>
-<area shape="rect" id="node2" href="$dc/d1a/a02288.html" title="Base class for all Discord entities." alt="" coords="5,5,205,32"/>
+<map id="DiscordCoreAPI::AccountData" name="DiscordCoreAPI::AccountData">
+<area shape="rect" id="node1" title="Account data." alt="" coords="7,80,204,107"/>
+<area shape="rect" id="node2" href="$dc/d35/a02240.html" title="Base class for all Discord entities." alt="" coords="5,5,205,32"/>
 </map>

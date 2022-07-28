@@ -1,8 +1,8 @@
 var a00752 =
 [
-    [ "DiscordCoreAPI::CreateStageInstanceData", "df/df7/a03416.html", "df/df7/a03416" ],
-    [ "DiscordCoreAPI::DeleteStageInstanceData", "d5/d6b/a03428.html", "d5/d6b/a03428" ],
-    [ "DiscordCoreAPI::GetStageInstanceData", "d1/d8b/a03420.html", "d1/d8b/a03420" ],
-    [ "DiscordCoreAPI::ModifyStageInstanceData", "dc/dc7/a03424.html", "dc/dc7/a03424" ],
-    [ "DiscordCoreAPI::StageInstance", "de/df8/a03432.html", null ]
+    [ "DiscordCoreAPI::CreateStageInstanceData", "d0/d06/a03368.html", "d0/d06/a03368" ],
+    [ "DiscordCoreAPI::DeleteStageInstanceData", "d0/d57/a03380.html", "d0/d57/a03380" ],
+    [ "DiscordCoreAPI::GetStageInstanceData", "d0/db9/a03372.html", "d0/db9/a03372" ],
+    [ "DiscordCoreAPI::ModifyStageInstanceData", "d7/d4f/a03376.html", "d7/d4f/a03376" ],
+    [ "DiscordCoreAPI::StageInstance", "d7/d22/a03384.html", null ]
 ];

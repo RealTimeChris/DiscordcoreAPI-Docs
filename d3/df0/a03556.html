@@ -105,36 +105,32 @@ $(document).ready(function(){initNavTree('d3/df0/a03556.html','../../'); initRes
   <div class="summary">
 <a href="#pub-attribs">Public Data Members</a> &#124;
 <a href="../../d1/da6/a03553.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DiscordCoreAPI::ModifyCurrentUserVoiceStateData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
+  <div class="headertitle"><div class="title">DiscordCoreAPI::RepeatedFunctionData Struct Reference<div class="ingroups"><a class="el" href="../../de/dfc/a00891.html">Foundation Entities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>For updating the bot's current voice state.  
+<p>Function data for repeated functions to be loaded.  
  <a href="../../d3/df0/a03556.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="../../d3/d2c/a00764_source.html">UserEntities.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../d5/dae/a00767_source.html">Utilities.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Data Members</h2></td></tr>
-<tr class="memitem:a2f2074ac5b91f863865413439eff47ca"><td class="memItemLeft" align="right" valign="top"><a id="a2f2074ac5b91f863865413439eff47ca" name="a2f2074ac5b91f863865413439eff47ca"></a>
-<a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>channelId</b> {}</td></tr>
-<tr class="memdesc:a2f2074ac5b91f863865413439eff47ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the <a class="el" href="../../db/da1/a01944.html" title="A Channel object.">Channel</a> the user is currently in. <br /></td></tr>
-<tr class="separator:a2f2074ac5b91f863865413439eff47ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b397b5eb2f6198fdb19d0481c96f79c"><td class="memItemLeft" align="right" valign="top"><a id="a4b397b5eb2f6198fdb19d0481c96f79c" name="a4b397b5eb2f6198fdb19d0481c96f79c"></a>
-<a class="el" href="../../de/dfc/a00891.html#gabeb353982ff7e75352fc30c8543641ef">Snowflake</a>&#160;</td><td class="memItemRight" valign="bottom"><b>guildId</b> {}</td></tr>
-<tr class="memdesc:a4b397b5eb2f6198fdb19d0481c96f79c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../d6/db9/a02980.html" title="A discord Guild. Used to connect to/disconnect from voice.">Guild</a> within which to update the bot's voice state. <br /></td></tr>
-<tr class="separator:a4b397b5eb2f6198fdb19d0481c96f79c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0dbe3943e32cc7263316e54c54a70111"><td class="memItemLeft" align="right" valign="top"><a id="a0dbe3943e32cc7263316e54c54a70111" name="a0dbe3943e32cc7263316e54c54a70111"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>requestToSpeakTimestamp</b> {}</td></tr>
-<tr class="memdesc:a0dbe3943e32cc7263316e54c54a70111"><td class="mdescLeft">&#160;</td><td class="mdescRight">ISO8601 timestamp. <br /></td></tr>
-<tr class="separator:a0dbe3943e32cc7263316e54c54a70111"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0e5c3ef1f543c9d6bd637246896bbb0"><td class="memItemLeft" align="right" valign="top"><a id="ae0e5c3ef1f543c9d6bd637246896bbb0" name="ae0e5c3ef1f543c9d6bd637246896bbb0"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>suppress</b> { false }</td></tr>
-<tr class="memdesc:ae0e5c3ef1f543c9d6bd637246896bbb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggles the user's suppress state. <br /></td></tr>
-<tr class="separator:ae0e5c3ef1f543c9d6bd637246896bbb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3113ed967aef68dc02622fcc8d1a8a1"><td class="memItemLeft" align="right" valign="top"><a id="ab3113ed967aef68dc02622fcc8d1a8a1" name="ab3113ed967aef68dc02622fcc8d1a8a1"></a>
+std::function&lt; void(<a class="el" href="../../db/da1/a01944.html">DiscordCoreClient</a> *)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>function</b> { nullptr }</td></tr>
+<tr class="memdesc:ab3113ed967aef68dc02622fcc8d1a8a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The std::function pointer to be loaded. <br /></td></tr>
+<tr class="separator:ab3113ed967aef68dc02622fcc8d1a8a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6cd7f6c69dd885d3fc19ee1478835b0"><td class="memItemLeft" align="right" valign="top"><a id="ad6cd7f6c69dd885d3fc19ee1478835b0" name="ad6cd7f6c69dd885d3fc19ee1478835b0"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>intervalInMs</b> { 0 }</td></tr>
+<tr class="memdesc:ad6cd7f6c69dd885d3fc19ee1478835b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The time interval at which to call the std::function. <br /></td></tr>
+<tr class="separator:ad6cd7f6c69dd885d3fc19ee1478835b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5779846654b535a8a63abe4be753e13"><td class="memItemLeft" align="right" valign="top"><a id="ad5779846654b535a8a63abe4be753e13" name="ad5779846654b535a8a63abe4be753e13"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>repeated</b> { false }</td></tr>
+<tr class="memdesc:ad5779846654b535a8a63abe4be753e13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not the std::function is repeating. <br /></td></tr>
+<tr class="separator:ad5779846654b535a8a63abe4be753e13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="../../d3/d2c/a00764_source.html">UserEntities.hpp</a></li>
+<li><a class="el" href="../../d5/dae/a00767_source.html">Utilities.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -142,7 +138,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>suppress</b> { false 
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d3/df0/a03556.html">ModifyCurrentUserVoiceStateData</a></li>
+    <li class="navelem"><a class="el" href="../../dc/d2c/a00893.html">DiscordCoreAPI</a></li><li class="navelem"><a class="el" href="../../d3/df0/a03556.html">RepeatedFunctionData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
