@@ -1,4 +1,0 @@
-<map id="DiscordCoreAPI::GuildMembers::modifyGuildMemberAsync" name="DiscordCoreAPI::GuildMembers::modifyGuildMemberAsync">
-<area shape="rect" id="node1" title="Modifies a GuildMember&#39;s properties." alt="" coords="279,5,504,45"/>
-<area shape="rect" id="node2" href="$d6/def/a03033.html#a88420174e234c67b17f7760adb8beda9" title="Times&#45;out a chosen GuildMember from a chosen Guild." alt="" coords="5,5,231,45"/>
-</map>

@@ -1,4 +1,0 @@
-<map id="DiscordCoreAPI::ApplicationCommands::deleteGuildApplicationCommandAsync" name="DiscordCoreAPI::ApplicationCommands::deleteGuildApplicationCommandAsync">
-<area shape="rect" id="node1" title="Delete a single Guild ApplicationCommand for a single server for this bot." alt="" coords="5,5,257,60"/>
-<area shape="rect" id="node2" href="$d0/dce/a01780.html#a038ea064d3458d653c1d82b22adf3469" title="Get all of the Guild ApplicationCommands for a single Guild for this bot." alt="" coords="305,13,651,53"/>
-</map>

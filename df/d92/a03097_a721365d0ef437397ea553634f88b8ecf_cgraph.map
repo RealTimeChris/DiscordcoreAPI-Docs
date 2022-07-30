@@ -1,7 +1,0 @@
-<map id="DiscordCoreAPI::InputEvents::deleteInputEventResponseAsync" name="DiscordCoreAPI::InputEvents::deleteInputEventResponseAsync">
-<area shape="rect" id="node1" title="Deletes a previously sent &quot;input&#45;event&#45;response&quot;." alt="" coords="5,69,248,109"/>
-<area shape="rect" id="node2" href="$db/d44/a03153.html#a4f96f93f629527358ad27c06bd469f9b" title="Deletes a follow up Message." alt="" coords="303,5,531,45"/>
-<area shape="rect" id="node3" href="$db/d44/a03153.html#ac0674533569a79e2c0debf7ae75c97db" title="Deletes an Interaction respnose." alt="" coords="296,69,539,109"/>
-<area shape="rect" id="node4" href="$d5/d92/a01977.html#a904d030f3edbf8efac15b2cebba3e37a" title="Gets the resulting value of the CoRoutine." alt="" coords="319,133,516,173"/>
-<area shape="rect" id="node5" href="$dc/d58/a03633.html#a5845dd8c3af6c44112754d450ebabdbf" title="Tries to receive an object of type ObjectType to be placed into a reference." alt="" coords="587,133,791,173"/>
-</map>

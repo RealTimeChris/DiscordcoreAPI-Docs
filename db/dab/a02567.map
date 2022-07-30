@@ -1,5 +1,0 @@
-<map id="DiscordCoreAPI::GuildData" name="DiscordCoreAPI::GuildData">
-<area shape="rect" id="node1" title="Data structure representing a single Guild." alt="" coords="16,80,195,107"/>
-<area shape="rect" id="node3" href="$d6/db9/a02980.html" title="A discord Guild. Used to connect to/disconnect from voice." alt="" coords="29,155,181,181"/>
-<area shape="rect" id="node2" href="$dc/d1a/a02288.html" title="Base class for all Discord entities." alt="" coords="5,5,205,32"/>
-</map>

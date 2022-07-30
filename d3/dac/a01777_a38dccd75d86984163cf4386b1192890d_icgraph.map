@@ -1,5 +1,0 @@
-<map id="DiscordCoreAPI::ApplicationCommands::getGlobalApplicationCommandsAsync" name="DiscordCoreAPI::ApplicationCommands::getGlobalApplicationCommandsAsync">
-<area shape="rect" id="node1" title="Get all of the global ApplicationCommands for this bot." alt="" coords="313,53,667,93"/>
-<area shape="rect" id="node2" href="$d3/dac/a01777.html#ab00b1699050fc0f209bd1d23cc28c089" title="Delete a global ApplicationCommand for this bot." alt="" coords="5,5,265,60"/>
-<area shape="rect" id="node3" href="$d3/dac/a01777.html#ac0b0792aeb6422a8694c15d1726decf8" title="Edit a global ApplicationCommand for this bot." alt="" coords="13,84,257,139"/>
-</map>

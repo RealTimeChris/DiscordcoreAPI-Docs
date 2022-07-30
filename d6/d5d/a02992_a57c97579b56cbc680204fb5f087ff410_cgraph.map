@@ -1,5 +1,0 @@
-<map id="DiscordCoreAPI::Guilds::modifyGuildAsync" name="DiscordCoreAPI::Guilds::modifyGuildAsync">
-<area shape="rect" id="node1" title="Modifies a chosen Guild&#39;s properties." alt="" coords="5,5,176,45"/>
-<area shape="rect" id="node2" href="$d6/d5d/a02992.html#a82ab9685bbc1cd69019bfb42e2870a0e" title="Collects a Guild from the library&#39;s cache." alt="" coords="224,5,396,45"/>
-<area shape="rect" id="node3" href="$d6/d5d/a02992.html#a7f53cb376716ebe782cde17a7f0109e6" title="Collects a Guild from the Discord servers." alt="" coords="444,5,615,45"/>
-</map>
