@@ -639,24 +639,22 @@ $(document).ready(function(){initNavTree('d5/d12/a00794_source.html','../../'); 
 <div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span>                            (theData.responseCode == -5 &amp;&amp; theData.contentSize == -5)) {</div>
 <div class="line"><a id="l00533" name="l00533"></a><span class="lineno">  533</span>                            doWeReturn = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00534" name="l00534"></a><span class="lineno">  534</span>                        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (theResult) {</div>
-<div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span>                            <span class="keywordflow">if</span> (stopWatch.hasTimePassed()) {</div>
-<div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span>                                doWeReturn = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span>                            }</div>
-<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>                        }</div>
-<div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>                    }</div>
-<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>                }</div>
-<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>                <span class="keywordflow">if</span> (doWeReturn) {</div>
-<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>                }</div>
-<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>                std::this_thread::sleep_for(1ms);</div>
-<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>            }</div>
-<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>            <span class="keywordflow">return</span> theConnection.finalizeReturnValues(theData, rateLimitData);</div>
-<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>        } <span class="keywordflow">catch</span> (...) {</div>
-<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>            theData.responseCode = -1;</div>
-<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>            <span class="keywordflow">return</span> theData;</div>
-<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>        }</div>
-<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>    }</div>
-<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>}</div>
+<div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span>                            stopWatch.resetTimer();</div>
+<div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span>                        }</div>
+<div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span>                    }</div>
+<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>                }</div>
+<div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>                <span class="keywordflow">if</span> (doWeReturn) {</div>
+<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>                }</div>
+<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>                std::this_thread::sleep_for(1ms);</div>
+<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>            }</div>
+<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>            <span class="keywordflow">return</span> theConnection.finalizeReturnValues(theData, rateLimitData);</div>
+<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>        } <span class="keywordflow">catch</span> (...) {</div>
+<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>            theData.responseCode = -1;</div>
+<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>            <span class="keywordflow">return</span> theData;</div>
+<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>        }</div>
+<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>    }</div>
+<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>}</div>
 <div class="ttc" id="aa00722_html"><div class="ttname"><a href="../../db/d7c/a00722.html">Https.hpp</a></div></div>
 <div class="ttc" id="aa00728_html"><div class="ttname"><a href="../../df/d3b/a00728.html">ThreadPool.hpp</a></div></div>
 <div class="ttc" id="aa00758_html"><div class="ttname"><a href="../../d2/d4a/a00758.html">CoRoutine.hpp</a></div></div>
