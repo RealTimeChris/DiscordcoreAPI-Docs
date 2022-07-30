@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['editchannelpermissionoverwritesdata_0',['EditChannelPermissionOverwritesData',['../d5/dcc/a01900.html',1,'DiscordCoreAPI']]],
+  ['editfollowupmessagedata_1',['EditFollowUpMessageData',['../d2/d19/a03144.html',1,'DiscordCoreAPI']]],
+  ['editglobalapplicationcommanddata_2',['EditGlobalApplicationCommandData',['../d3/d4c/a01724.html',1,'DiscordCoreAPI']]],
+  ['editguildapplicationcommanddata_3',['EditGuildApplicationCommandData',['../d9/d0d/a01748.html',1,'DiscordCoreAPI']]],
+  ['editguildapplicationcommandpermissionsdata_4',['EditGuildApplicationCommandPermissionsData',['../de/dda/a01768.html',1,'DiscordCoreAPI']]],
+  ['editinteractionresponsedata_5',['EditInteractionResponseData',['../d6/d1e/a03124.html',1,'DiscordCoreAPI']]],
+  ['editmessagedata_6',['EditMessageData',['../d6/d75/a03204.html',1,'DiscordCoreAPI']]],
+  ['editwebhookdata_7',['EditWebHookData',['../dc/d4c/a03664.html',1,'DiscordCoreAPI']]],
+  ['embedauthordata_8',['EmbedAuthorData',['../dd/d6e/a02324.html',1,'DiscordCoreAPI']]],
+  ['embeddata_9',['EmbedData',['../d1/d03/a02332.html',1,'DiscordCoreAPI']]],
+  ['embedfielddata_10',['EmbedFieldData',['../db/d83/a02328.html',1,'DiscordCoreAPI']]],
+  ['embedfooterdata_11',['EmbedFooterData',['../db/d77/a02304.html',1,'DiscordCoreAPI']]],
+  ['embedimagedata_12',['EmbedImageData',['../d7/d67/a02308.html',1,'DiscordCoreAPI']]],
+  ['embedproviderdata_13',['EmbedProviderData',['../df/d2a/a02320.html',1,'DiscordCoreAPI']]],
+  ['embedthumbnaildata_14',['EmbedThumbnailData',['../df/d73/a02312.html',1,'DiscordCoreAPI']]],
+  ['embedvideodata_15',['EmbedVideoData',['../d3/d01/a02316.html',1,'DiscordCoreAPI']]],
+  ['emojidata_16',['EmojiData',['../d1/da0/a02416.html',1,'DiscordCoreAPI']]],
+  ['encodedframedata_17',['EncodedFrameData',['../d1/d19/a02812.html',1,'DiscordCoreAPI']]],
+  ['eventdelegate_18',['EventDelegate',['../d5/d2c/a02012.html',1,'DiscordCoreInternal']]],
+  ['eventdelegate_3c_20discordcoreapi_3a_3acoroutine_3c_20void_20_3e_2c_20argtypes_2e_2e_2e_20_3e_19',['EventDelegate&lt; DiscordCoreAPI::CoRoutine&lt; void &gt;, ArgTypes... &gt;',['../d5/d2c/a02012.html',1,'DiscordCoreInternal']]],
+  ['eventdelegate_3c_20returntype_2c_20argtypes_2e_2e_2e_20_3e_20',['EventDelegate&lt; ReturnType, ArgTypes... &gt;',['../d5/d2c/a02012.html',1,'DiscordCoreInternal']]],
+  ['eventdelegatetoken_21',['EventDelegateToken',['../d5/d6e/a02008.html',1,'DiscordCoreInternal']]],
+  ['eventmanager_22',['EventManager',['../dc/d35/a02240.html',1,'DiscordCoreAPI']]],
+  ['executewebhookdata_23',['ExecuteWebHookData',['../d0/d99/a03660.html',1,'DiscordCoreAPI']]]
+];
