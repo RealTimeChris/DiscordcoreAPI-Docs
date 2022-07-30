@@ -11,7 +11,7 @@ var searchData=
   ['high_8',['High',['../de/dfc/a00891.html#gga2e8030ba5c8a6dcc6b24c051962ef1a7a655d20c1ca69519ca647684edbb2db35',1,'DiscordCoreAPI']]],
   ['hoist_9',['hoist',['../df/daa/a03316.html#a4cc80c2d5315cc7e9d9a6c61c8c2fb73',1,'DiscordCoreAPI::CreateGuildRoleData::hoist()'],['../d3/d5d/a03328.html#ac5c1e23e618e7fffd82518678253c47e',1,'DiscordCoreAPI::ModifyGuildRoleData::hoist()']]],
   ['hour_10',['Hour',['../de/dfc/a00891.html#ggabf2b1ab64cdccd4c7e631eaf34e7d749ab55e509c697e4cca0e1d160a7806698f',1,'DiscordCoreAPI']]],
-  ['https_2ecpp_11',['Https.cpp',['../d9/daf/a00830.html',1,'']]],
+  ['https_2ecpp_11',['Https.cpp',['../d5/d12/a00794.html',1,'']]],
   ['https_2ehpp_12',['Https.hpp',['../db/d7c/a00722.html',1,'']]],
   ['hypesquad_13',['Hypesquad',['../de/dfc/a00891.html#gga77e977be11fabdf18190c418b8ecf47ea5fa91d8bae24c13bbb3a74bdce29aa6c',1,'DiscordCoreAPI']]],
   ['hypesquad_5fonline_5fhouse_5f1_14',['Hypesquad_Online_House_1',['../de/dfc/a00891.html#gga77e977be11fabdf18190c418b8ecf47ea9bbd4e739e8b77eb2b01bf366aa9eb7b',1,'DiscordCoreAPI']]],
