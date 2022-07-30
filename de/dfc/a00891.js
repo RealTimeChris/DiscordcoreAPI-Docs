@@ -352,7 +352,7 @@ var a00891 =
     [ "DiscordCoreAPI::CreateFollowUpMessageData", "dc/d28/a03136.html", null ],
     [ "DiscordCoreAPI::CreateGlobalApplicationCommandData", "da/d0e/a01720.html", [
       [ "applicationId", "da/d0e/a01720.html#aabb8ea21db910d0b2608778b2d2d3b01", null ],
-      [ "defaultMemberPermissions", "da/d0e/a01720.html#a6770d2040f8c613f554ef598d9bd6c29", null ],
+      [ "defaultMemberPermissions", "da/d0e/a01720.html#ae46000c7a7f4257b497b0e82fd6e0fcf", null ],
       [ "description", "da/d0e/a01720.html#aa5ce25d4f1a22d5000658d7cb3f5bc78", null ],
       [ "descriptionLocalizations", "da/d0e/a01720.html#aca3f1133447f1ac165b262e985e154b5", null ],
       [ "dmPermission", "da/d0e/a01720.html#a3a4be4feb8f643568e42663b6e792ecc", null ],

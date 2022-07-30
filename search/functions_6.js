@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['get_0',['get',['../d5/d70/a01980.html#a904d030f3edbf8efac15b2cebba3e37a',1,'DiscordCoreAPI::CoRoutine&lt; void &gt;::get()'],['../db/d9d/a01972.html#a4677e19e0a190bf91b35c2345533ed6b',1,'DiscordCoreAPI::CoRoutine::get()']]],
+  ['get_0',['get',['../db/d9d/a01972.html#a4677e19e0a190bf91b35c2345533ed6b',1,'DiscordCoreAPI::CoRoutine::get()'],['../d5/d70/a01980.html#a904d030f3edbf8efac15b2cebba3e37a',1,'DiscordCoreAPI::CoRoutine&lt; void &gt;::get()']]],
   ['getactiveguildthreadsasync_1',['getActiveGuildThreadsAsync',['../d5/d54/a03532.html#a80eee596b5aae97451f08fb19e085e39',1,'DiscordCoreAPI::Threads']]],
   ['getactivethreadsasync_2',['getActiveThreadsAsync',['../d5/d54/a03532.html#a1584dcebbb864acb1d81e3a19af12111',1,'DiscordCoreAPI::Threads']]],
   ['getallguildsasync_3',['getAllGuildsAsync',['../d6/d5d/a02992.html#acc5069ff3b0d81b7260b0c48e929392d',1,'DiscordCoreAPI::Guilds']]],
@@ -86,7 +86,7 @@ var searchData=
   ['getreactionsasync_83',['getReactionsAsync',['../d0/d7c/a03300.html#a1ce4d89305a9c66f7383dcd155182a49',1,'DiscordCoreAPI::Reactions']]],
   ['getroleasync_84',['getRoleAsync',['../d2/d66/a03352.html#a288de1b0e26b722f78a4b68abc1c86aa',1,'DiscordCoreAPI::Roles']]],
   ['getstageinstanceasync_85',['getStageInstanceAsync',['../d4/d87/a03436.html#a26cd124cec9c5547f35208c2a2d21e16',1,'DiscordCoreAPI::StageInstances']]],
-  ['getstatus_86',['getStatus',['../d5/d70/a01980.html#a75c0bb8818ae93b8ff7ca837f27576c6',1,'DiscordCoreAPI::CoRoutine&lt; void &gt;::getStatus()'],['../db/d9d/a01972.html#a282f0c3595d985cfa1bfe00828627f99',1,'DiscordCoreAPI::CoRoutine::getStatus()']]],
+  ['getstatus_86',['getStatus',['../db/d9d/a01972.html#a282f0c3595d985cfa1bfe00828627f99',1,'DiscordCoreAPI::CoRoutine::getStatus()'],['../d5/d70/a01980.html#a75c0bb8818ae93b8ff7ca837f27576c6',1,'DiscordCoreAPI::CoRoutine&lt; void &gt;::getStatus()']]],
   ['getstickerasync_87',['getStickerAsync',['../db/db5/a03468.html#a38466742178dbe6d223afdf5e7298bcf',1,'DiscordCoreAPI::Stickers']]],
   ['getthreadmemberasync_88',['getThreadMemberAsync',['../d5/d54/a03532.html#a13cac409393167803e907fafc3750058',1,'DiscordCoreAPI::Threads']]],
   ['getthreadmembersasync_89',['getThreadMembersAsync',['../d5/d54/a03532.html#ad9a931416387dfa4b6353293c42a40db',1,'DiscordCoreAPI::Threads']]],
