@@ -1,0 +1,6 @@
+<map id="discord_core_api::roles::modifyGuildRolePositionsAsync" name="discord_core_api::roles::modifyGuildRolePositionsAsync">
+<area shape="rect" id="node1" title="Updates a role_data&#39;s positions." alt="" coords="5,35,220,75"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1roles.html#a8642b4b5cd5ffb1539afec395d11ef09" title="Collects a given role from the library&#39;s cache." alt="" coords="268,5,424,45"/>
+<area shape="rect" id="node4" href="$classdiscord__core__api_1_1roles.html#a767affffd8bd3b4e23419be4de80a8f8" title="Collects the roles that a guild has." alt="" coords="676,35,832,75"/>
+<area shape="rect" id="node3" href="$classdiscord__core__api_1_1roles.html#a5ffa574fb5a9d549f03e636b688b9c78" title="Collects a role_data from the discord servers." alt="" coords="472,5,628,45"/>
+</map>

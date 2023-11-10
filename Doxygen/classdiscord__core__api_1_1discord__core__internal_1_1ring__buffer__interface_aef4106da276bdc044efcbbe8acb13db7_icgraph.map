@@ -1,0 +1,4 @@
+<map id="discord_core_api::discord_core_internal::ring_buffer_interface::getCurrentTail" name="discord_core_api::discord_core_internal::ring_buffer_interface::getCurrentTail">
+<area shape="rect" id="node1" title="Get a pointer to the current tail position." alt="" coords="224,5,395,60"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1discord__core__internal_1_1ring__buffer.html#a7bd45f831925564086ae51de2528b91d" title="Read data from the buffer." alt="" coords="5,5,176,60"/>
+</map>

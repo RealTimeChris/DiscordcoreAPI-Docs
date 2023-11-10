@@ -1,0 +1,4 @@
+<map id="discord_core_api::time_stamp::operator=" name="discord_core_api::time_stamp::operator=">
+<area shape="rect" id="node1" title="Move assignment operator to move a string value into time_stamp." alt="" coords="5,13,159,53"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1time__stamp__base.html#ab72c67b0e9eae765528653a27e019720" title="Converts a string time stamp into a uint64_t time value." alt="" coords="207,5,427,60"/>
+</map>

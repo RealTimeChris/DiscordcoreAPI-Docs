@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['rate_5flimited_0',['Rate_Limited',['../classdiscord__core__api_1_1discord__core__internal_1_1websocket__close.html#a60fda9830526e56d25240b502db684caaa42320bff0ecf00ae4af1cb62310398a',1,'discord_core_api::discord_core_internal::websocket_close']]],
+  ['raw_5fpcm_1',['raw_pcm',['../group__voice__connection.html#ggac96bab2aefa2999803220be3d1692362aadb73bea84e8f7855386d16235458cf1',1,'discord_core_api']]],
+  ['read_5fmessage_5fhistory_2',['Read_Message_History',['../group__foundation__entities.html#ggabc951de32bcb7bfbbaa932fe93f1dd4da845e83843425b636f5d6e6d881e10c01',1,'discord_core_api']]],
+  ['ready_5fserver_3',['Ready_Server',['../namespacediscord__core__api.html#a4281778fa2930a29b3eb5a40a377a527a59e8fe8c2225f1e771e8cf7e484c3d11',1,'discord_core_api']]],
+  ['recipient_5fadd_4',['Recipient_Add',['../group__foundation__entities.html#gga0bc8986d5cb3f662a4e9c9c5e2f89cbba63ea5c833506efdbd3aa2a856d65a842',1,'discord_core_api']]],
+  ['recipient_5fremove_5',['Recipient_Remove',['../group__foundation__entities.html#gga0bc8986d5cb3f662a4e9c9c5e2f89cbbab4e9134b5bfbf42f3fbe07f8d9f3a711',1,'discord_core_api']]],
+  ['reconnect_6',['reconnect',['../_web_socket_client_8hpp.html#a5de292a45712d6ab183d69b6824378eeaad5cd0c1aa08427cdec8d8cc5349a6e6',1,'discord_core_api::discord_core_internal']]],
+  ['reply_7',['Reply',['../group__foundation__entities.html#gga0bc8986d5cb3f662a4e9c9c5e2f89cbba25d8df6e580905091a0d5ef5b9e05bf0',1,'discord_core_api']]],
+  ['request_5fguild_5fmembers_8',['Request_Guild_Members',['../_web_socket_client_8hpp.html#a5de292a45712d6ab183d69b6824378eea9577bf7d11219c6d7f3985633b2e1694',1,'discord_core_api::discord_core_internal']]],
+  ['request_5fto_5fspeak_9',['Request_to_Speak',['../group__foundation__entities.html#ggabc951de32bcb7bfbbaa932fe93f1dd4dae04255c0c0d613aae5c36b805cbf5932',1,'discord_core_api']]],
+  ['resume_10',['resume',['../namespacediscord__core__api.html#a4281778fa2930a29b3eb5a40a377a527a69f2afc2390cec954f7c208b07212d39',1,'discord_core_api::resume()'],['../_web_socket_client_8hpp.html#a5de292a45712d6ab183d69b6824378eea69f2afc2390cec954f7c208b07212d39',1,'resume()discord_core_api::discord_core_internal']]],
+  ['resumed_11',['resumed',['../namespacediscord__core__api.html#a4281778fa2930a29b3eb5a40a377a527a121ad2eb76415d284215a4c9deddf79c',1,'discord_core_api']]],
+  ['rich_12',['Rich',['../group__foundation__entities.html#ggaf6597383b1e625be534b7f9c3c894d06a84814b43bd0271bd407e14ca38654207',1,'discord_core_api']]],
+  ['role_5fcreate_13',['Role_Create',['../group__foundation__entities.html#gga5189f9d4d44bdfc0441c0ff1fa57db8ba50bfc11dde2929952ea49b0b935afd91',1,'discord_core_api']]],
+  ['role_5fdata_14',['Role_Data',['../group__foundation__entities.html#ggaa205d47e439404fe3ffd035c69aed384ae50a424795e1deee3a7e0dbf12782557',1,'discord_core_api::Role_Data()'],['../group__foundation__entities.html#gga44089da805158b4ea810c3553fb1a3e5ae50a424795e1deee3a7e0dbf12782557',1,'discord_core_api::Role_Data()']]],
+  ['role_5fdata_15',['role_data',['../group__foundation__entities.html#gga8788094e08b336c25461018af62d0fe9a3b84a104a376baa9bd06e02df5c1bd0c',1,'discord_core_api']]],
+  ['role_5fdelete_16',['Role_Delete',['../group__foundation__entities.html#gga5189f9d4d44bdfc0441c0ff1fa57db8baf178591f397b2e25f6688d60b12e827f',1,'discord_core_api']]],
+  ['role_5fselect_17',['Role_Select',['../group__foundation__entities.html#gga6bc56188c97e6978b23c5e6b3f251ce2a38a3eea05899cc0e60375eb6e7bfe2c0',1,'discord_core_api']]],
+  ['role_5fupdate_18',['Role_Update',['../group__foundation__entities.html#gga5189f9d4d44bdfc0441c0ff1fa57db8ba787c97ce952ae9ae3c0845c2ed197b05',1,'discord_core_api']]],
+  ['running_19',['running',['../group__utilities.html#ggaa62f21d02dc553eea47843e6282b4ffaa75101dcdfc88455bcafc9e53e0b06689',1,'discord_core_api']]]
+];

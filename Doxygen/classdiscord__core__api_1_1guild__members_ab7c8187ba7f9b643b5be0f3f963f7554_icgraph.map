@@ -1,0 +1,5 @@
+<map id="discord_core_api::guild_members::getGuildMemberAsync" name="discord_core_api::guild_members::getGuildMemberAsync">
+<area shape="rect" id="node1" title="Collects a guild_member from the discord servers." alt="" coords="580,5,803,45"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1guild__members.html#aa5a51be2db7be7064e235572a594e198" title="Collects a guild_member from the library&#39;s cache." alt="" coords="301,5,532,45"/>
+<area shape="rect" id="node3" href="$classdiscord__core__api_1_1guild__members.html#afd8b9ef7f1cc785951fb58462112382c" title="Times&#45;out a chosen guild_member_data from a chosen guild." alt="" coords="5,5,253,45"/>
+</map>

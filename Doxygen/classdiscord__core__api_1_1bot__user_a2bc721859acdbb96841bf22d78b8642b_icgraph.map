@@ -1,0 +1,5 @@
+<map id="discord_core_api::bot_user::updateVoiceStatus" name="discord_core_api::bot_user::updateVoiceStatus">
+<area shape="rect" id="node1" title="Updates the bot&#39;s current voice&#45;status. joins/leaves a channel, and/or self deafens/mutes." alt="" coords="220,37,392,77"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1guild__data.html#a20d3a7d33cd7db64bcb9bf3ded6799a9" title="For disconnecting from the current guild&#39;s voice channel." alt="" coords="11,5,166,45"/>
+<area shape="rect" id="node3" href="$classdiscord__core__api_1_1guild__cache__data.html#a5bc0db60572a5be2c29b884d8cf51c35" title="For disconnecting from the current guild&#39;s voice channel." alt="" coords="5,69,172,109"/>
+</map>

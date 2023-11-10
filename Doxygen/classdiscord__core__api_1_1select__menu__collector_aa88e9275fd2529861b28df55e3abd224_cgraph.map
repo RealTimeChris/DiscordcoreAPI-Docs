@@ -1,0 +1,4 @@
+<map id="discord_core_api::select_menu_collector::collectSelectMenuData" name="discord_core_api::select_menu_collector::collectSelectMenuData">
+<area shape="rect" id="node1" title="Used to collect the select&#45;menu inputs from one or more users." alt="" coords="5,5,205,60"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1discord__core__internal_1_1trigger__event__delegate.html#a3dbe99e1e8e0b5f46254d7bef2f402c5" title="Sets the test function to determine conditional execution." alt="" coords="253,5,469,60"/>
+</map>

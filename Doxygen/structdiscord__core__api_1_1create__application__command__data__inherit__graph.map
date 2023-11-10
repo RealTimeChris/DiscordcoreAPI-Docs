@@ -1,0 +1,6 @@
+<map id="discord_core_api::create_application_command_data" name="discord_core_api::create_application_command_data">
+<area shape="rect" id="node1" title="For creating an application command." alt="" coords="26,93,213,133"/>
+<area shape="rect" id="node3" href="$structdiscord__core__api_1_1create__global__application__command__data.html" title="For creating a single global application_command_data." alt="" coords="5,181,233,221"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1application__command__data.html" title="Data structure representing an application_command_data." alt="" coords="24,5,215,45"/>
+<area shape="rect" id="node4" href="$structdiscord__core__api_1_1create__guild__application__command__data.html" title="For creating a single guild application_command_data." alt="" coords="9,269,230,309"/>
+</map>

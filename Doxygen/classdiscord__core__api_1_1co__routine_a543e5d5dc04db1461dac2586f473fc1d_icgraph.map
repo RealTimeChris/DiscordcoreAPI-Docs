@@ -1,0 +1,5 @@
+<map id="discord_core_api::co_routine::cancelAndWait" name="discord_core_api::co_routine::cancelAndWait">
+<area shape="rect" id="node1" title="Cancels the currently running co_routine, while blocking to wait for it to complete." alt="" coords="209,37,373,77"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1song__api.html#aabdfc4ebf2ed57449343e338bd7ee43d" title="Plays the current song. (assuming that you are currently connected to a voice_connection)." alt="" coords="5,5,161,45"/>
+<area shape="rect" id="node3" href="$classdiscord__core__api_1_1song__api.html#aea128000f8b9805bd9dc497fa9725ca8" title="Stops the currently playing song." alt="" coords="5,69,161,109"/>
+</map>

@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['search_5fguild_5fmembers_5fdata_0',['search_guild_members_data',['../structdiscord__core__api_1_1search__guild__members__data.html',1,'discord_core_api']]],
+  ['select_5fmenu_5fcollector_1',['select_menu_collector',['../classdiscord__core__api_1_1select__menu__collector.html',1,'discord_core_api']]],
+  ['select_5fmenu_5fresponse_5fdata_2',['select_menu_response_data',['../structdiscord__core__api_1_1select__menu__response__data.html',1,'discord_core_api']]],
+  ['select_5foption_5fdata_3',['select_option_data',['../classdiscord__core__api_1_1select__option__data.html',1,'discord_core_api']]],
+  ['send_5fdmdata_4',['send_dmdata',['../classdiscord__core__api_1_1send__dmdata.html',1,'discord_core_api']]],
+  ['session_5fstart_5fdata_5',['session_start_data',['../structdiscord__core__api_1_1session__start__data.html',1,'discord_core_api']]],
+  ['sharding_5foptions_6',['sharding_options',['../structdiscord__core__api_1_1sharding__options.html',1,'discord_core_api']]],
+  ['snowflake_7',['snowflake',['../classdiscord__core__api_1_1snowflake.html',1,'discord_core_api']]],
+  ['song_5fapi_8',['song_api',['../classdiscord__core__api_1_1song__api.html',1,'discord_core_api']]],
+  ['song_5fcompletion_5fevent_5fdata_9',['song_completion_event_data',['../structdiscord__core__api_1_1song__completion__event__data.html',1,'discord_core_api']]],
+  ['stage_5finstance_5fdata_10',['stage_instance_data',['../classdiscord__core__api_1_1stage__instance__data.html',1,'discord_core_api']]],
+  ['stage_5finstances_11',['stage_instances',['../classdiscord__core__api_1_1stage__instances.html',1,'discord_core_api']]],
+  ['start_5fthread_5fin_5fforum_5fchannel_5fdata_12',['start_thread_in_forum_channel_data',['../structdiscord__core__api_1_1start__thread__in__forum__channel__data.html',1,'discord_core_api']]],
+  ['start_5fthread_5fwith_5fmessage_5fdata_13',['start_thread_with_message_data',['../structdiscord__core__api_1_1start__thread__with__message__data.html',1,'discord_core_api']]],
+  ['start_5fthread_5fwithout_5fmessage_5fdata_14',['start_thread_without_message_data',['../structdiscord__core__api_1_1start__thread__without__message__data.html',1,'discord_core_api']]],
+  ['sticker_5fdata_15',['sticker_data',['../classdiscord__core__api_1_1sticker__data.html',1,'discord_core_api']]],
+  ['sticker_5fitem_5fdata_16',['sticker_item_data',['../classdiscord__core__api_1_1sticker__item__data.html',1,'discord_core_api']]],
+  ['sticker_5fpack_5fdata_17',['sticker_pack_data',['../structdiscord__core__api_1_1sticker__pack__data.html',1,'discord_core_api']]],
+  ['stickers_18',['stickers',['../classdiscord__core__api_1_1stickers.html',1,'discord_core_api']]],
+  ['stream_5finfo_19',['stream_info',['../structdiscord__core__api_1_1stream__info.html',1,'discord_core_api']]],
+  ['sync_5fguild_5ftemplate_5fdata_20',['sync_guild_template_data',['../structdiscord__core__api_1_1sync__guild__template__data.html',1,'discord_core_api']]]
+];

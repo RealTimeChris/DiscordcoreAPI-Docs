@@ -1,0 +1,4 @@
+<map id="discord_core_api::command_data::getMessageData" name="discord_core_api::command_data::getMessageData">
+<area shape="rect" id="node1" title="Returns the message data, if applicable, of this input&#45;event." alt="" coords="5,5,191,45"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1input__event__data.html#ab71fbb92479aa72ddee7299c2895719f" title="Returns the message data, if applicable, of this input&#45;event." alt="" coords="239,5,436,45"/>
+</map>

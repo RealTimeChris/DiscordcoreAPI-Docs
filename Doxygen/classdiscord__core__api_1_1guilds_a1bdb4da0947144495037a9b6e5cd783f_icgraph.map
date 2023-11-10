@@ -1,0 +1,4 @@
+<map id="discord_core_api::guilds::getGuildAsync" name="discord_core_api::guilds::getGuildAsync">
+<area shape="rect" id="node1" title="Collects a guild from the discord servers." alt="" coords="216,5,379,45"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1guilds.html#a98d1b72a81fa72e059c600abdffa92b9" title="Collects a guild from the library&#39;s cache." alt="" coords="5,5,168,45"/>
+</map>

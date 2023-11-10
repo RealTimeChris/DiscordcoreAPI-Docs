@@ -1,0 +1,6 @@
+<map id="discord_core_api::unique_ptr::operator=" name="discord_core_api::unique_ptr::operator=">
+<area shape="rect" id="node1" title="Move assignment operator for raw pointer." alt="" coords="5,35,172,75"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1unique__ptr.html#af838aeef646a628fabd5b86a584f74e4" title="Commits a new pointer value and resets the current one." alt="" coords="220,5,387,45"/>
+<area shape="rect" id="node3" href="$classdiscord__core__api_1_1unique__ptr.html#ac4181f2db372911de8b59113fee8e057" title="Resets the managed pointer and invokes the deleter." alt="" coords="435,35,601,75"/>
+<area shape="rect" id="node4" href="$classdiscord__core__api_1_1unique__ptr.html#a214c4ae19c56f00fea131d352e97aa86" title="Gets the deleter associated with the managed object." alt="" coords="649,35,816,75"/>
+</map>

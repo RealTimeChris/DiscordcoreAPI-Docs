@@ -1,0 +1,4 @@
+<map id="discord_core_api::application_commands::getApplicationCommandPermissionsAsync" name="discord_core_api::application_commands::getApplicationCommandPermissionsAsync">
+<area shape="rect" id="node1" title="Get application_command_data permissions for a single command on this bot." alt="" coords="5,5,248,60"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1application__commands.html#ad364c0ab849882007abdcaf96303ed69" title="Get all of the guild application_commands for a single guild for this bot." alt="" coords="296,13,612,53"/>
+</map>

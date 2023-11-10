@@ -1,0 +1,4 @@
+<map id="discord_core_api::guild_cache_data" name="discord_core_api::guild_cache_data">
+<area shape="rect" id="node1" title="Data structure representing a single guild, for the purposes of populating the cache." alt="" coords="232,20,387,60"/>
+<area shape="rect" id="node2" href="$structdiscord__core__api_1_1connect__to__voice.html" title=" " alt="" coords="5,5,184,75"/>
+</map>

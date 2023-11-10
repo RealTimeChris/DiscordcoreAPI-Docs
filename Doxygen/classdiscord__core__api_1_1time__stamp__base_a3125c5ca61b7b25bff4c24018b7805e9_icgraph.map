@@ -1,0 +1,9 @@
+<map id="discord_core_api::time_stamp_base::getTimeSinceEpoch" name="discord_core_api::time_stamp_base::getTimeSinceEpoch">
+<area shape="rect" id="node1" title="Gets the time since the unix epoch for the specified date and time." alt="" coords="756,127,980,167"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1time__stamp__base.html#adb6cb1d482b99d0d9be5b35dbfaa20fe" title="Converts a string time stamp into a uint64_t time value." alt="" coords="493,41,708,96"/>
+<area shape="rect" id="node6" href="$classdiscord__core__api_1_1time__stamp__base.html#a6147253339945417c491610c61122b1f" title="Converts the current time into an iso8601 time stamp." alt="" coords="498,120,703,175"/>
+<area shape="rect" id="node7" href="$classdiscord__core__api_1_1time__stamp__base.html#af63f669a86beebdca4d90598394b275e" title="Converts given time values into a future iso8601 time stamp." alt="" coords="501,199,701,253"/>
+<area shape="rect" id="node3" href="$classdiscord__core__api_1_1time__stamp__base.html#ab72c67b0e9eae765528653a27e019720" title="Converts a string time stamp into a uint64_t time value." alt="" coords="245,5,442,60"/>
+<area shape="rect" id="node4" href="$classdiscord__core__api_1_1time__stamp__base.html#ad0216deb6195100d9e00a5e915dc54e9" title="Checks if a certain time duration has elapsed." alt="" coords="241,85,445,125"/>
+<area shape="rect" id="node5" href="$classdiscord__core__api_1_1messages.html#ab824032cc6936d2c0aa8375f0a209040" title="Deletes a message." alt="" coords="5,85,193,125"/>
+</map>

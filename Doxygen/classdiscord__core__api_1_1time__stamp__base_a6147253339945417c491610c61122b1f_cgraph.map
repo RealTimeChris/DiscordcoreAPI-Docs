@@ -1,0 +1,5 @@
+<map id="discord_core_api::time_stamp_base::convertToCurrentISO8601TimeStamp" name="discord_core_api::time_stamp_base::convertToCurrentISO8601TimeStamp">
+<area shape="rect" id="node1" title="Converts the current time into an iso8601 time stamp." alt="" coords="5,30,211,85"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1time__stamp__base.html#aecd4ccd369e954e864c0ca20e0b28ff1" title="Gets an iso8601 time stamp string based on the provided time format." alt="" coords="259,5,501,45"/>
+<area shape="rect" id="node3" href="$classdiscord__core__api_1_1time__stamp__base.html#a3125c5ca61b7b25bff4c24018b7805e9" title="Gets the time since the unix epoch for the specified date and time." alt="" coords="268,69,492,109"/>
+</map>

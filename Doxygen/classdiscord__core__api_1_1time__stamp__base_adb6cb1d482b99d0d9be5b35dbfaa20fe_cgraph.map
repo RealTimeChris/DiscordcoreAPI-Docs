@@ -1,0 +1,4 @@
+<map id="discord_core_api::time_stamp_base::convertTimeStampToTimeUnits" name="discord_core_api::time_stamp_base::convertTimeStampToTimeUnits">
+<area shape="rect" id="node1" title="Converts a string time stamp into a uint64_t time value." alt="" coords="5,5,220,60"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1time__stamp__base.html#a3125c5ca61b7b25bff4c24018b7805e9" title="Gets the time since the unix epoch for the specified date and time." alt="" coords="268,13,492,53"/>
+</map>

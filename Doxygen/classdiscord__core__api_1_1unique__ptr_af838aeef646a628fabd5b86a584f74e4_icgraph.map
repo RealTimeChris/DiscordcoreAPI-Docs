@@ -1,0 +1,5 @@
+<map id="discord_core_api::unique_ptr::commit" name="discord_core_api::unique_ptr::commit">
+<area shape="rect" id="node1" title="Commits a new pointer value and resets the current one." alt="" coords="225,41,392,81"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1unique__ptr.html#aae122579e38834589e68bef8c3e1efe8" title="Move assignment operator for related pointers." alt="" coords="8,5,175,45"/>
+<area shape="rect" id="node3" href="$classdiscord__core__api_1_1unique__ptr_3_01value__type_0f_0e_00_01deleter_01_4.html#adafd686791a9e8f0081e9017c8b9edfa" title="Move assignment operator for related pointers." alt="" coords="5,70,177,125"/>
+</map>

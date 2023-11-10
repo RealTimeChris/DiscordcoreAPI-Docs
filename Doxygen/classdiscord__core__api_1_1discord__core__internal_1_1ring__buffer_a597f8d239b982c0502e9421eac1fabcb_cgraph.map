@@ -1,0 +1,9 @@
+<map id="discord_core_api::discord_core_internal::ring_buffer::writeData" name="discord_core_api::discord_core_internal::ring_buffer::writeData">
+<area shape="rect" id="node1" title="Write data into the buffer." alt="" coords="5,352,176,407"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1discord__core__internal_1_1ring__buffer__interface.html#a4caa83386f429171894be63c13eee2b0" title="Clear the buffer by resetting positions." alt="" coords="262,5,433,60"/>
+<area shape="rect" id="node3" href="$classdiscord__core__api_1_1discord__core__internal_1_1ring__buffer__interface.html#ae537b696b125410e1f668ddc538d56a7" title="Get a pointer to the current head position." alt="" coords="227,85,468,183"/>
+<area shape="rect" id="node4" href="$classdiscord__core__api_1_1discord__core__internal_1_1ring__buffer__interface.html#aef4106da276bdc044efcbbe8acb13db7" title="Get a pointer to the current tail position." alt="" coords="227,207,468,306"/>
+<area shape="rect" id="node5" href="$classdiscord__core__api_1_1discord__core__internal_1_1ring__buffer__interface.html#afb8531c883d540cd1ee5e3f05b4ffe21" title="Get the used space in the buffer." alt="" coords="227,330,468,429"/>
+<area shape="rect" id="node6" href="$classdiscord__core__api_1_1discord__core__internal_1_1ring__buffer__interface.html#afbbe905efed4a1af794530751b357bbe" title="Check if the buffer is full." alt="" coords="227,453,468,551"/>
+<area shape="rect" id="node7" href="$classdiscord__core__api_1_1discord__core__internal_1_1ring__buffer__interface.html#a9755eb1b81e10cff09603f24142d7ed3" title="Modify the read or write position of the buffer." alt="" coords="224,576,471,631"/>
+</map>

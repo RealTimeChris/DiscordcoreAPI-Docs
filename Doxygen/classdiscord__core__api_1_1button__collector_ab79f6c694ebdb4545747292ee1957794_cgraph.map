@@ -1,0 +1,5 @@
+<map id="discord_core_api::button_collector::button_collector" name="discord_core_api::button_collector::button_collector">
+<area shape="rect" id="node1" title="Constructor." alt="" coords="5,37,184,77"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1input__event__data.html#a90b36195d32d224726f0984d04a8a3d0" title="Returns the interaction data, if appplicable, of this input&#45;event." alt="" coords="232,5,436,45"/>
+<area shape="rect" id="node3" href="$classdiscord__core__api_1_1input__event__data.html#ab71fbb92479aa72ddee7299c2895719f" title="Returns the message data, if applicable, of this input&#45;event." alt="" coords="235,69,433,109"/>
+</map>

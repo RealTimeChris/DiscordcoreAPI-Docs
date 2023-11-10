@@ -1,0 +1,4 @@
+<map id="discord_core_api::discord_core_internal::ring_buffer_interface::isItFull" name="discord_core_api::discord_core_internal::ring_buffer_interface::isItFull">
+<area shape="rect" id="node1" title="Check if the buffer is full." alt="" coords="5,5,176,60"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1discord__core__internal_1_1ring__buffer__interface.html#afb8531c883d540cd1ee5e3f05b4ffe21" title="Get the used space in the buffer." alt="" coords="224,5,395,60"/>
+</map>

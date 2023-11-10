@@ -1,0 +1,4 @@
+<map id="discord_core_api::discord_core_internal::matroska_demuxer::collectElementSize" name="discord_core_api::discord_core_internal::matroska_demuxer::collectElementSize">
+<area shape="rect" id="node1" title="Collects the size of the current element being processed." alt="" coords="5,5,204,60"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1discord__core__internal_1_1matroska__demuxer.html#af3b576384d24b16d9df76dd4edb562bb" title="Collects a number from the data." alt="" coords="252,5,423,60"/>
+</map>

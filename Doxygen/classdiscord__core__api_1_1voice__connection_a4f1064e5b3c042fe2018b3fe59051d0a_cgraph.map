@@ -1,0 +1,4 @@
+<map id="discord_core_api::voice_connection::connect" name="discord_core_api::voice_connection::connect">
+<area shape="rect" id="node1" title="Connects to a currently held voice channel." alt="" coords="5,5,163,45"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1co__routine.html#a466be18382a2335dc9d9da7b3a2b70bd" title="Collects the status of the co_routine." alt="" coords="211,5,353,45"/>
+</map>

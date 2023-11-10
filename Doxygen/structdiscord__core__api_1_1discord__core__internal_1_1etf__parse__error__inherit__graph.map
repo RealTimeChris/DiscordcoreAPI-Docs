@@ -1,0 +1,4 @@
+<map id="discord_core_api::discord_core_internal::etf_parse_error" name="discord_core_api::discord_core_internal::etf_parse_error">
+<area shape="rect" id="node1" title="Exception class for etf parsing errors." alt="" coords="5,93,203,133"/>
+<area shape="rect" id="node2" href="$structdiscord__core__api_1_1dca__exception.html" title="An exception class derived from std::runtime_error for dca&#45;related exceptions." alt="" coords="29,5,179,45"/>
+</map>

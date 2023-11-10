@@ -1,0 +1,6 @@
+<map id="discord_core_api::guild_members::timeoutGuildMemberAsync" name="discord_core_api::guild_members::timeoutGuildMemberAsync">
+<area shape="rect" id="node1" title="Times&#45;out a chosen guild_member_data from a chosen guild." alt="" coords="5,37,253,77"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1guild__members.html#aa5a51be2db7be7064e235572a594e198" title="Collects a guild_member from the library&#39;s cache." alt="" coords="307,5,538,45"/>
+<area shape="rect" id="node4" href="$classdiscord__core__api_1_1guild__members.html#a5d3b8272d5dec0c3a104ac7836e4b848" title="Modifies a guild_member&#39;s properties." alt="" coords="301,69,544,109"/>
+<area shape="rect" id="node3" href="$classdiscord__core__api_1_1guild__members.html#ab7c8187ba7f9b643b5be0f3f963f7554" title="Collects a guild_member from the discord servers." alt="" coords="592,5,815,45"/>
+</map>

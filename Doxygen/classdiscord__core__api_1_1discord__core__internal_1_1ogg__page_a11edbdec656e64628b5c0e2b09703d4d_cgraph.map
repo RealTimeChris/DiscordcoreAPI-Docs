@@ -1,0 +1,5 @@
+<map id="discord_core_api::discord_core_internal::ogg_page::ogg_page" name="discord_core_api::discord_core_internal::ogg_page::ogg_page">
+<area shape="rect" id="node1" title="Constructor for ogg_page." alt="" coords="5,45,176,100"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1discord__core__internal_1_1ogg__page.html#acee86870b6f6e13d955017ca6bf4eef7" title="Parses the segment data of the Ogg page." alt="" coords="224,5,395,60"/>
+<area shape="rect" id="node3" href="$classdiscord__core__api_1_1discord__core__internal_1_1ogg__page.html#ae866c6fd90bfcff2645cad6f86bd1490" title="Verifies that the data represents a valid Ogg page." alt="" coords="224,84,395,139"/>
+</map>

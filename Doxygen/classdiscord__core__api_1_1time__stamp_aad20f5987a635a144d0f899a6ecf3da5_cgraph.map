@@ -1,0 +1,4 @@
+<map id="discord_core_api::time_stamp::string" name="discord_core_api::time_stamp::string">
+<area shape="rect" id="node1" title="Conversion operator to convert time_stamp to jsonifier::string." alt="" coords="5,13,159,53"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1time__stamp__base.html#af35cfac4cd9f51c1d245e56f36fb6e20" title="Converts a uint64_t time value into a string time stamp." alt="" coords="207,5,427,60"/>
+</map>

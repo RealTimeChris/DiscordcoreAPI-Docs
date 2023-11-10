@@ -1,0 +1,4 @@
+<map id="discord_core_api::application_commands::editGuildApplicationCommandAsync" name="discord_core_api::application_commands::editGuildApplicationCommandAsync">
+<area shape="rect" id="node1" title="Edit a single guild application_command_data for a single server for this bot." alt="" coords="5,5,317,45"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1application__commands.html#ad364c0ab849882007abdcaf96303ed69" title="Get all of the guild application_commands for a single guild for this bot." alt="" coords="365,5,681,45"/>
+</map>

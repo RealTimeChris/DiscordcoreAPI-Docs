@@ -1,0 +1,4 @@
+<map id="discord_core_api::roles::getGuildMemberRolesAsync" name="discord_core_api::roles::getGuildMemberRolesAsync">
+<area shape="rect" id="node1" title="Collects the roles that a guild_member has." alt="" coords="5,5,200,45"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1roles.html#a767affffd8bd3b4e23419be4de80a8f8" title="Collects the roles that a guild has." alt="" coords="248,5,404,45"/>
+</map>

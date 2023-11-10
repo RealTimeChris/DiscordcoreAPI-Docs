@@ -1,0 +1,6 @@
+<map id="discord_core_api::input_event_data::getMessageData" name="discord_core_api::input_event_data::getMessageData">
+<area shape="rect" id="node1" title="Returns the message data, if applicable, of this input&#45;event." alt="" coords="239,69,436,109"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1button__collector.html#ab79f6c694ebdb4545747292ee1957794" title="Constructor." alt="" coords="9,5,187,45"/>
+<area shape="rect" id="node3" href="$classdiscord__core__api_1_1command__data.html#aa14b54cb5f3f033f1a9acbf3db3efa24" title="Returns the message data, if applicable, of this input&#45;event." alt="" coords="5,69,191,109"/>
+<area shape="rect" id="node4" href="$classdiscord__core__api_1_1select__menu__collector.html#a9a5118ff126df5e7261e864da579d0f8" title="Constructor." alt="" coords="17,134,179,189"/>
+</map>

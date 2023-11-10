@@ -1,0 +1,4 @@
+<map id="discord_core_api::input_event_data::getChannelData" name="discord_core_api::input_event_data::getChannelData">
+<area shape="rect" id="node1" title="Returns the channel_data of this input&#45;event." alt="" coords="239,5,429,45"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1command__data.html#a83b4edab14fd6ce9eef6a8b5a30e4324" title="Returns the channel_data of this input&#45;event." alt="" coords="5,5,191,45"/>
+</map>

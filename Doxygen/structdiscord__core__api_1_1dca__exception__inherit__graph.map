@@ -1,0 +1,6 @@
+<map id="discord_core_api::dca_exception" name="discord_core_api::dca_exception">
+<area shape="rect" id="node1" title="An exception class derived from std::runtime_error for dca&#45;related exceptions." alt="" coords="5,69,155,109"/>
+<area shape="rect" id="node2" href="$structdiscord__core__api_1_1co__routine__error.html" title="An error type for co_routines." alt="" coords="238,5,381,45"/>
+<area shape="rect" id="node3" href="$structdiscord__core__api_1_1discord__core__internal_1_1etf__parse__error.html" title="Exception class for etf parsing errors." alt="" coords="211,69,408,109"/>
+<area shape="rect" id="node4" href="$structdiscord__core__api_1_1discord__core__internal_1_1etf__serialize__error.html" title="Custom exception class for etf serialization errors." alt="" coords="203,133,416,173"/>
+</map>

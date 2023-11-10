@@ -1,0 +1,6 @@
+<map id="discord_core_api::messages::deleteMessageAsync" name="discord_core_api::messages::deleteMessageAsync">
+<area shape="rect" id="node1" title="Deletes a message." alt="" coords="5,13,193,53"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1time__stamp__base.html#ad0216deb6195100d9e00a5e915dc54e9" title="Checks if a certain time duration has elapsed." alt="" coords="241,13,445,53"/>
+<area shape="rect" id="node3" href="$classdiscord__core__api_1_1time__stamp__base.html#adb6cb1d482b99d0d9be5b35dbfaa20fe" title="Converts a string time stamp into a uint64_t time value." alt="" coords="493,5,708,60"/>
+<area shape="rect" id="node4" href="$classdiscord__core__api_1_1time__stamp__base.html#a3125c5ca61b7b25bff4c24018b7805e9" title="Gets the time since the unix epoch for the specified date and time." alt="" coords="756,13,980,53"/>
+</map>

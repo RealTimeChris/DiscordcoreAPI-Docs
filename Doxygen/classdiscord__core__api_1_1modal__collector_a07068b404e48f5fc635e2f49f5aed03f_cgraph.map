@@ -1,0 +1,4 @@
+<map id="discord_core_api::modal_collector::modal_collector" name="discord_core_api::modal_collector::modal_collector">
+<area shape="rect" id="node1" title="Constructor." alt="" coords="5,5,183,45"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1input__event__data.html#a90b36195d32d224726f0984d04a8a3d0" title="Returns the interaction data, if appplicable, of this input&#45;event." alt="" coords="231,5,435,45"/>
+</map>

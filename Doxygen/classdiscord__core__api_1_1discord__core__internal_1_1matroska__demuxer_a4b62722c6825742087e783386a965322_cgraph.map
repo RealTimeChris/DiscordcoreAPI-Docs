@@ -1,0 +1,4 @@
+<map id="discord_core_api::discord_core_internal::matroska_demuxer::reverseBytes" name="discord_core_api::discord_core_internal::matroska_demuxer::reverseBytes">
+<area shape="rect" id="node1" title="Reverses the byte order of the current element being processed." alt="" coords="5,5,176,60"/>
+<area shape="rect" id="node2" href="$group__discord__core__internal.html#gabc7f83b84477c08e3b5b22d779f6ca1f" title="Reverses the byte order of a value if needed, based on the endianness." alt="" coords="224,13,435,53"/>
+</map>

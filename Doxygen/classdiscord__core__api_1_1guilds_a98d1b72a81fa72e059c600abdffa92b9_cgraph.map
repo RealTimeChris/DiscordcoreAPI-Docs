@@ -1,0 +1,4 @@
+<map id="discord_core_api::guilds::getCachedGuild" name="discord_core_api::guilds::getCachedGuild">
+<area shape="rect" id="node1" title="Collects a guild from the library&#39;s cache." alt="" coords="5,5,168,45"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1guilds.html#a1bdb4da0947144495037a9b6e5cd783f" title="Collects a guild from the discord servers." alt="" coords="216,5,379,45"/>
+</map>

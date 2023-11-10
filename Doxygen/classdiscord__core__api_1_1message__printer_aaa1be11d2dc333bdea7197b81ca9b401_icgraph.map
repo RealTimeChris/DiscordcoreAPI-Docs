@@ -1,0 +1,4 @@
+<map id="discord_core_api::message_printer::initialize" name="discord_core_api::message_printer::initialize">
+<area shape="rect" id="node1" title="Initialize the message_printer with configuration settings and output/error streams." alt="" coords="265,5,447,45"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1discord__core__client.html#a4931e5d3c1cfac03f5b543f5fc553fc6" title="discord_core_client constructor." alt="" coords="5,5,217,45"/>
+</map>

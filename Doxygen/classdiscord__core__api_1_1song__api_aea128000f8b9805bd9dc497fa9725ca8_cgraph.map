@@ -1,0 +1,5 @@
+<map id="discord_core_api::song_api::stop" name="discord_core_api::song_api::stop">
+<area shape="rect" id="node1" title="Stops the currently playing song." alt="" coords="5,37,161,77"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1co__routine.html#a543e5d5dc04db1461dac2586f473fc1d" title="Cancels the currently running co_routine, while blocking to wait for it to complete." alt="" coords="209,5,373,45"/>
+<area shape="rect" id="node3" href="$classdiscord__core__api_1_1co__routine.html#a466be18382a2335dc9d9da7b3a2b70bd" title="Collects the status of the co_routine." alt="" coords="220,69,363,109"/>
+</map>

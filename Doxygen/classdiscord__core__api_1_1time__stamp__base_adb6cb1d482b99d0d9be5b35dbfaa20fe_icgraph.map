@@ -1,0 +1,6 @@
+<map id="discord_core_api::time_stamp_base::convertTimeStampToTimeUnits" name="discord_core_api::time_stamp_base::convertTimeStampToTimeUnits">
+<area shape="rect" id="node1" title="Converts a string time stamp into a uint64_t time value." alt="" coords="493,41,708,96"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1time__stamp__base.html#ab72c67b0e9eae765528653a27e019720" title="Converts a string time stamp into a uint64_t time value." alt="" coords="245,5,442,60"/>
+<area shape="rect" id="node3" href="$classdiscord__core__api_1_1time__stamp__base.html#ad0216deb6195100d9e00a5e915dc54e9" title="Checks if a certain time duration has elapsed." alt="" coords="241,85,445,125"/>
+<area shape="rect" id="node4" href="$classdiscord__core__api_1_1messages.html#ab824032cc6936d2c0aa8375f0a209040" title="Deletes a message." alt="" coords="5,85,193,125"/>
+</map>

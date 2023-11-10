@@ -1,0 +1,6 @@
+<map id="discord_core_api::message_response_base" name="discord_core_api::message_response_base">
+<area shape="rect" id="node1" title="Message response base, for responding to messages." alt="" coords="87,5,269,45"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1create__message__data.html" title="For creating a message." alt="" coords="5,93,169,133"/>
+<area shape="rect" id="node4" href="$classdiscord__core__api_1_1edit__message__data.html" title="For editing a message." alt="" coords="194,93,343,133"/>
+<area shape="rect" id="node3" href="$classdiscord__core__api_1_1send__dmdata.html" title="For sending a direct&#45;message." alt="" coords="9,181,165,221"/>
+</map>

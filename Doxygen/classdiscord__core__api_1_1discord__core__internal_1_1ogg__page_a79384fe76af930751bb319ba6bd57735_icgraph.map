@@ -1,0 +1,6 @@
+<map id="discord_core_api::discord_core_internal::ogg_page::getOpusPacket" name="discord_core_api::discord_core_internal::ogg_page::getOpusPacket">
+<area shape="rect" id="node1" title="Retrieves the next Opus packet from the Ogg page." alt="" coords="717,5,888,60"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1discord__core__internal_1_1ogg__demuxer.html#a985d1a0148a52aa7bee1aebf01a1eeae" title="Processes Ogg pages to extract Opus packets." alt="" coords="480,5,669,60"/>
+<area shape="rect" id="node3" href="$classdiscord__core__api_1_1discord__core__internal_1_1ogg__demuxer.html#a7bd30881b8d48227da22561d21215030" title="Processes an Ogg page for demuxing." alt="" coords="243,5,432,60"/>
+<area shape="rect" id="node4" href="$classdiscord__core__api_1_1discord__core__internal_1_1ogg__demuxer.html#af4ae6f3844f1eb59d7b0634ec521ac73" title="Proceeds with the demuxing process." alt="" coords="5,5,195,60"/>
+</map>

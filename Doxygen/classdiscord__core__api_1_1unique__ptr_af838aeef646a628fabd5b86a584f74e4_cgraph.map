@@ -1,0 +1,5 @@
+<map id="discord_core_api::unique_ptr::commit" name="discord_core_api::unique_ptr::commit">
+<area shape="rect" id="node1" title="Commits a new pointer value and resets the current one." alt="" coords="5,5,172,45"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1unique__ptr.html#ac4181f2db372911de8b59113fee8e057" title="Resets the managed pointer and invokes the deleter." alt="" coords="220,5,387,45"/>
+<area shape="rect" id="node3" href="$classdiscord__core__api_1_1unique__ptr.html#a214c4ae19c56f00fea131d352e97aa86" title="Gets the deleter associated with the managed object." alt="" coords="435,5,601,45"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="discord_core_api::application_commands::editGlobalApplicationCommandAsync" name="discord_core_api::application_commands::editGlobalApplicationCommandAsync">
+<area shape="rect" id="node1" title="Edit a global application_command_data for this bot." alt="" coords="5,5,228,60"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1application__commands.html#a07ccce7196e7d5c01003e2b362131845" title="Get all of the global application_commands for this bot." alt="" coords="276,13,599,53"/>
+</map>

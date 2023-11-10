@@ -1,0 +1,4 @@
+<map id="discord_core_api::makeUnique" name="discord_core_api::makeUnique">
+<area shape="rect" id="node1" title="Helper function to create a unique_ptr for a non&#45;array object." alt="" coords="216,13,416,38"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1object__cache.html#a4a487c54741f106b2d1258cc97360926" title="Add an object to the cache." alt="" coords="5,5,168,45"/>
+</map>

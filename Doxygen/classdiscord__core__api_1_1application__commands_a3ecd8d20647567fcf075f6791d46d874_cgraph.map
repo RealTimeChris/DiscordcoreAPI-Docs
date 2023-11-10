@@ -1,0 +1,4 @@
+<map id="discord_core_api::application_commands::deleteGlobalApplicationCommandAsync" name="discord_core_api::application_commands::deleteGlobalApplicationCommandAsync">
+<area shape="rect" id="node1" title="Delete a global application_command_data for this bot." alt="" coords="5,5,243,60"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1application__commands.html#a07ccce7196e7d5c01003e2b362131845" title="Get all of the global application_commands for this bot." alt="" coords="291,13,613,53"/>
+</map>

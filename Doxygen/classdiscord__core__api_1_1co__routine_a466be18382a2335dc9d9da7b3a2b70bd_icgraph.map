@@ -1,0 +1,6 @@
+<map id="discord_core_api::co_routine::getStatus" name="discord_core_api::co_routine::getStatus">
+<area shape="rect" id="node1" title="Collects the status of the co_routine." alt="" coords="211,69,353,109"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1voice__connection.html#a4f1064e5b3c042fe2018b3fe59051d0a" title="Connects to a currently held voice channel." alt="" coords="5,5,163,45"/>
+<area shape="rect" id="node3" href="$classdiscord__core__api_1_1song__api.html#aabdfc4ebf2ed57449343e338bd7ee43d" title="Plays the current song. (assuming that you are currently connected to a voice_connection)." alt="" coords="6,69,162,109"/>
+<area shape="rect" id="node4" href="$classdiscord__core__api_1_1song__api.html#aea128000f8b9805bd9dc497fa9725ca8" title="Stops the currently playing song." alt="" coords="6,133,162,173"/>
+</map>

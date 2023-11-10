@@ -1,0 +1,4 @@
+<map id="discord_core_api::create_ephemeral_follow_up_message_data" name="discord_core_api::create_ephemeral_follow_up_message_data">
+<area shape="rect" id="node1" title="For creating an ephemeral follow up message_data." alt="" coords="5,93,247,133"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1execute__web__hook__data.html" title="For executing a web_hook." alt="" coords="39,5,213,45"/>
+</map>

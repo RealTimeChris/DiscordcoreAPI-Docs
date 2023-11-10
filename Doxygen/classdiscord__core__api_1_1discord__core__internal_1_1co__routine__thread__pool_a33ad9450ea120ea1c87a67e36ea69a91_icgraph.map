@@ -1,0 +1,5 @@
+<map id="discord_core_api::discord_core_internal::co_routine_thread_pool::threadFunction" name="discord_core_api::discord_core_internal::co_routine_thread_pool::threadFunction">
+<area shape="rect" id="node1" title="Thread function for each worker thread." alt="" coords="292,45,483,100"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1discord__core__internal_1_1co__routine__thread__pool.html#a4c7145b030b2f1403cd62b1563a8ab0e" title="Constructor to create a coroutine thread pool. initializes the worker threads." alt="" coords="5,5,244,60"/>
+<area shape="rect" id="node3" href="$classdiscord__core__api_1_1discord__core__internal_1_1co__routine__thread__pool.html#adf51b66abc0f658ffa3db084f9503249" title="Submit a coroutine task to the thread pool." alt="" coords="39,84,210,139"/>
+</map>

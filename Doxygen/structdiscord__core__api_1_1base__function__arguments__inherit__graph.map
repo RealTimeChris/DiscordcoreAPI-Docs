@@ -1,0 +1,4 @@
+<map id="discord_core_api::base_function_arguments" name="discord_core_api::base_function_arguments">
+<area shape="rect" id="node1" title="Base arguments for the command classes." alt="" coords="36,79,192,119"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1command__data.html" title="Command data, for functions executed by the command_controller." alt="" coords="5,5,223,31"/>
+</map>

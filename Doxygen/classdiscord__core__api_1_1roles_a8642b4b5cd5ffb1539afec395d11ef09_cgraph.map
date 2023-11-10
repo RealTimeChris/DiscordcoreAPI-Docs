@@ -1,0 +1,5 @@
+<map id="discord_core_api::roles::getCachedRole" name="discord_core_api::roles::getCachedRole">
+<area shape="rect" id="node1" title="Collects a given role from the library&#39;s cache." alt="" coords="5,5,161,45"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1roles.html#a5ffa574fb5a9d549f03e636b688b9c78" title="Collects a role_data from the discord servers." alt="" coords="209,5,365,45"/>
+<area shape="rect" id="node3" href="$classdiscord__core__api_1_1roles.html#a767affffd8bd3b4e23419be4de80a8f8" title="Collects the roles that a guild has." alt="" coords="413,5,569,45"/>
+</map>

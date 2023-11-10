@@ -1,0 +1,4 @@
+<map id="discord_core_api::command_data::getGuildMemberData" name="discord_core_api::command_data::getGuildMemberData">
+<area shape="rect" id="node1" title="Returns the guild_member_data of this input&#45;event." alt="" coords="5,5,191,45"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1input__event__data.html#a4baf5101b7feeb930782a57a761c3268" title="Returns the guild_member_data of this input&#45;event." alt="" coords="239,5,460,45"/>
+</map>

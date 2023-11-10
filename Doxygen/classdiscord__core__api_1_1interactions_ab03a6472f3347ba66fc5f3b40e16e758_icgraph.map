@@ -1,0 +1,4 @@
+<map id="discord_core_api::interactions::getInteractionResponseAsync" name="discord_core_api::interactions::getInteractionResponseAsync">
+<area shape="rect" id="node1" title="Collects an interaction response." alt="" coords="275,5,477,45"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1interactions.html#afc1f06176ec1266d66b36bd5f3730907" title="Creates a response to an input interaction." alt="" coords="5,5,227,45"/>
+</map>

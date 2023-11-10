@@ -1,0 +1,4 @@
+<map id="discord_core_api::discord_core_internal::etf_serialize_error" name="discord_core_api::discord_core_internal::etf_serialize_error">
+<area shape="rect" id="node1" title="Custom exception class for etf serialization errors." alt="" coords="5,93,219,133"/>
+<area shape="rect" id="node2" href="$structdiscord__core__api_1_1dca__exception.html" title="An exception class derived from std::runtime_error for dca&#45;related exceptions." alt="" coords="37,5,187,45"/>
+</map>

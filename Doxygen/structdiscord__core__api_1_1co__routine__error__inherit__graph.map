@@ -1,0 +1,4 @@
+<map id="discord_core_api::co_routine_error" name="discord_core_api::co_routine_error">
+<area shape="rect" id="node1" title="An error type for co_routines." alt="" coords="9,93,151,133"/>
+<area shape="rect" id="node2" href="$structdiscord__core__api_1_1dca__exception.html" title="An exception class derived from std::runtime_error for dca&#45;related exceptions." alt="" coords="5,5,155,45"/>
+</map>

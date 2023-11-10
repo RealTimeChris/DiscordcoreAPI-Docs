@@ -1,0 +1,6 @@
+<map id="discord_core_api::discord_core_client::getBotUser" name="discord_core_api::discord_core_client::getBotUser">
+<area shape="rect" id="node1" title="For collecting a copy of the current bot&#39;s user_data." alt="" coords="224,69,395,109"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1guild__data.html#a20d3a7d33cd7db64bcb9bf3ded6799a9" title="For disconnecting from the current guild&#39;s voice channel." alt="" coords="13,5,168,45"/>
+<area shape="rect" id="node3" href="$classdiscord__core__api_1_1guild__cache__data.html#a5bc0db60572a5be2c29b884d8cf51c35" title="For disconnecting from the current guild&#39;s voice channel." alt="" coords="7,69,174,109"/>
+<area shape="rect" id="node4" href="$classdiscord__core__api_1_1discord__core__client.html#a3d713a5a5a7d11c19a9b9d0d8f570560" title="Executes the library, and waits for completion." alt="" coords="5,133,176,173"/>
+</map>

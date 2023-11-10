@@ -1,0 +1,6 @@
+<map id="discord_core_api::input_event_data::getInteractionData" name="discord_core_api::input_event_data::getInteractionData">
+<area shape="rect" id="node1" title="Returns the interaction data, if appplicable, of this input&#45;event." alt="" coords="232,69,436,109"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1button__collector.html#ab79f6c694ebdb4545747292ee1957794" title="Constructor." alt="" coords="5,5,184,45"/>
+<area shape="rect" id="node3" href="$classdiscord__core__api_1_1modal__collector.html#a07068b404e48f5fc635e2f49f5aed03f" title="Constructor." alt="" coords="6,69,183,109"/>
+<area shape="rect" id="node4" href="$classdiscord__core__api_1_1select__menu__collector.html#a9a5118ff126df5e7261e864da579d0f8" title="Constructor." alt="" coords="13,134,176,189"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="discord_core_api::discord_core_internal::trigger_event_delegate::setTestFunction" name="discord_core_api::discord_core_internal::trigger_event_delegate::setTestFunction">
+<area shape="rect" id="node1" title="Sets the test function to determine conditional execution." alt="" coords="253,62,469,117"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1button__collector.html#a442a82f72a3c6138c7b4c838f4bdea85" title="Used to collect the button inputs from one or more users." alt="" coords="11,5,200,45"/>
+<area shape="rect" id="node3" href="$classdiscord__core__api_1_1modal__collector.html#a58907247eaf5cde377b761b186cc4677" title="Used to collect the modal from one or more users." alt="" coords="12,69,199,109"/>
+<area shape="rect" id="node4" href="$classdiscord__core__api_1_1select__menu__collector.html#aa88e9275fd2529861b28df55e3abd224" title="Used to collect the select&#45;menu inputs from one or more users." alt="" coords="5,134,205,189"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="discord_core_api::unique_ptr&lt; value_type[], deleter &gt;::reset" name="discord_core_api::unique_ptr&lt; value_type[], deleter &gt;::reset">
+<area shape="rect" id="node1" title="Resets the managed pointer and invokes the deleter." alt="" coords="5,5,177,60"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1unique__ptr.html#a214c4ae19c56f00fea131d352e97aa86" title="Gets the deleter associated with the managed object." alt="" coords="225,13,392,53"/>
+</map>

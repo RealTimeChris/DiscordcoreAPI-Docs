@@ -1,0 +1,6 @@
+<map id="discord_core_api::edit_web_hook_data" name="discord_core_api::edit_web_hook_data">
+<area shape="rect" id="node1" title="For editing a web_hook message_data." alt="" coords="228,37,377,77"/>
+<area shape="rect" id="node3" href="$classdiscord__core__api_1_1edit__follow__up__message__data.html" title="For editing a follow up message_data." alt="" coords="429,5,603,45"/>
+<area shape="rect" id="node4" href="$classdiscord__core__api_1_1edit__interaction__response__data.html" title="For editing an interaction response." alt="" coords="425,69,607,109"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1execute__web__hook__data.html" title="For executing a web_hook." alt="" coords="5,37,180,77"/>
+</map>

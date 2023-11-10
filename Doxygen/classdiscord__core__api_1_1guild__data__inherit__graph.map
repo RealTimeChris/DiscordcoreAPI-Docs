@@ -1,0 +1,4 @@
+<map id="discord_core_api::guild_data" name="discord_core_api::guild_data">
+<area shape="rect" id="node1" title="A discord guild. used to connect to/disconnect from voice." alt="" coords="228,27,415,53"/>
+<area shape="rect" id="node2" href="$structdiscord__core__api_1_1connect__to__voice.html" title=" " alt="" coords="5,5,180,75"/>
+</map>

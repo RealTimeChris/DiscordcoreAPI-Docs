@@ -1,0 +1,4 @@
+<map id="discord_core_api::object_cache::emplace" name="discord_core_api::object_cache::emplace">
+<area shape="rect" id="node1" title="Add an object to the cache." alt="" coords="5,5,168,45"/>
+<area shape="rect" id="node2" href="$group__utilities.html#gaf019a744faaf1ed302166004d225f4dc" title="Helper function to create a unique_ptr for a non&#45;array object." alt="" coords="216,13,416,38"/>
+</map>

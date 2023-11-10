@@ -1,0 +1,4 @@
+<map id="discord_core_api::input_event_data::getUserData" name="discord_core_api::input_event_data::getUserData">
+<area shape="rect" id="node1" title="Returns the user_data of this input&#45;event." alt="" coords="239,5,409,45"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1command__data.html#a2bc37fab178a5ec5a081c29f415a139f" title="Returns the user_data of this input&#45;event." alt="" coords="5,5,191,45"/>
+</map>

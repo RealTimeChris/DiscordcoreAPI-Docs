@@ -1,0 +1,4 @@
+<map id="discord_core_api::discord_core_internal::matroska_demuxer::findNextId" name="discord_core_api::discord_core_internal::matroska_demuxer::findNextId">
+<area shape="rect" id="node1" title="Finds the next occurrence of the specified value in the data." alt="" coords="244,5,415,60"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1discord__core__internal_1_1matroska__demuxer.html#a701e14cae4c80a0ea1777cab0227b269" title="Proceed with the demuxing process." alt="" coords="5,5,196,60"/>
+</map>

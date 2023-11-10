@@ -1,0 +1,4 @@
+<map id="discord_core_api::time_stamp_base::convertUintToStringTimeStamp" name="discord_core_api::time_stamp_base::convertUintToStringTimeStamp">
+<area shape="rect" id="node1" title="Converts a uint64_t time value into a string time stamp." alt="" coords="5,5,225,60"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1time__stamp__base.html#aecd4ccd369e954e864c0ca20e0b28ff1" title="Gets an iso8601 time stamp string based on the provided time format." alt="" coords="273,13,516,53"/>
+</map>

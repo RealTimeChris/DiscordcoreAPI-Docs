@@ -1,0 +1,4 @@
+<map id="discord_core_api::interactions::deleteInteractionResponseAsync" name="discord_core_api::interactions::deleteInteractionResponseAsync">
+<area shape="rect" id="node1" title="Deletes an interaction respnose." alt="" coords="317,5,537,45"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1input__events.html#a51363a3fad5479d25bcbd5d8223a32af" title="Deletes a previously sent &quot;input&#45;event&#45;response&quot;." alt="" coords="5,5,269,45"/>
+</map>

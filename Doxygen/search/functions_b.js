@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['makeunique_0',['makeUnique',['../group__utilities.html#gaf019a744faaf1ed302166004d225f4dc',1,'discord_core_api::makeUnique(arg_types &amp;&amp;... args)'],['../group__utilities.html#gab038df09fed76ff3623850cb710eaa26',1,'discord_core_api::makeUnique(const uint64_t size)'],['../group__utilities.html#ga86d4593228b2f261c94cf1b2e04b6930',1,'discord_core_api::makeUnique(arg_types &amp;&amp;...)=delete']]],
+  ['matroska_5fdemuxer_1',['matroska_demuxer',['../classdiscord__core__api_1_1discord__core__internal_1_1matroska__demuxer.html#a8a85c986cecc2d8a3202cd080e355ca5',1,'discord_core_api::discord_core_internal::matroska_demuxer']]],
+  ['modal_5fcollector_2',['modal_collector',['../classdiscord__core__api_1_1modal__collector.html#a07068b404e48f5fc635e2f49f5aed03f',1,'discord_core_api::modal_collector']]],
+  ['modifyautomoderationruleasync_3',['modifyAutoModerationRuleAsync',['../classdiscord__core__api_1_1auto__moderation__rules.html#a6b762392d66c4cb47d76b99fa946ab45',1,'discord_core_api::auto_moderation_rules']]],
+  ['modifychannelasync_4',['modifyChannelAsync',['../classdiscord__core__api_1_1channels.html#ab764fd055065c05f86c8c020e19c3666',1,'discord_core_api::channels']]],
+  ['modifycurrentguildmemberasync_5',['modifyCurrentGuildMemberAsync',['../classdiscord__core__api_1_1guild__members.html#a9ea47f927ebc41de26a46ee93664b2cc',1,'discord_core_api::guild_members']]],
+  ['modifycurrentuserasync_6',['modifyCurrentUserAsync',['../classdiscord__core__api_1_1users.html#a7b39b1fb038a3bd18a6547eb4b4abd86',1,'discord_core_api::users']]],
+  ['modifycurrentuservoicestateasync_7',['modifyCurrentUserVoiceStateAsync',['../classdiscord__core__api_1_1users.html#aa2bee91c6861f0bfc8e1ea9f9fec886d',1,'discord_core_api::users']]],
+  ['modifyguildasync_8',['modifyGuildAsync',['../classdiscord__core__api_1_1guilds.html#a7a72afe864305d4417262517ba550925',1,'discord_core_api::guilds']]],
+  ['modifyguildchannelpositionsasync_9',['modifyGuildChannelPositionsAsync',['../classdiscord__core__api_1_1channels.html#afc55d1178a03ac2c14e79277fc72a6d4',1,'discord_core_api::channels']]],
+  ['modifyguildemojiasync_10',['modifyGuildEmojiAsync',['../classdiscord__core__api_1_1reactions.html#ae2551d3c532234f9267b056b1630c1db',1,'discord_core_api::reactions']]],
+  ['modifyguildmemberasync_11',['modifyGuildMemberAsync',['../classdiscord__core__api_1_1guild__members.html#a5d3b8272d5dec0c3a104ac7836e4b848',1,'discord_core_api::guild_members']]],
+  ['modifyguildroleasync_12',['modifyGuildRoleAsync',['../classdiscord__core__api_1_1roles.html#a191523729eade5f9c4de49f3c2db713b',1,'discord_core_api::roles']]],
+  ['modifyguildrolepositionsasync_13',['modifyGuildRolePositionsAsync',['../classdiscord__core__api_1_1roles.html#a53a90ed9bfc3c7b61121cb2b0ce31a19',1,'discord_core_api::roles']]],
+  ['modifyguildscheduledeventasync_14',['modifyGuildScheduledEventAsync',['../classdiscord__core__api_1_1guild__scheduled__events.html#a6f4faf0168380f3d60e44ad0164ad354',1,'discord_core_api::guild_scheduled_events']]],
+  ['modifyguildstickerasync_15',['modifyGuildStickerAsync',['../classdiscord__core__api_1_1stickers.html#a52a4c393c2918861b954164ab2db605f',1,'discord_core_api::stickers']]],
+  ['modifyguildtemplateasync_16',['modifyGuildTemplateAsync',['../classdiscord__core__api_1_1guilds.html#a399f2e7aa23c78cf5f84755a35739bbf',1,'discord_core_api::guilds']]],
+  ['modifyguildwelcomescreenasync_17',['modifyGuildWelcomeScreenAsync',['../classdiscord__core__api_1_1guilds.html#a1302beddb80fe6b31309e7a1728a9456',1,'discord_core_api::guilds']]],
+  ['modifyguildwidgetasync_18',['modifyGuildWidgetAsync',['../classdiscord__core__api_1_1guilds.html#ae9a398a44ab7b185627325153ed5335d',1,'discord_core_api::guilds']]],
+  ['modifyreadorwriteposition_19',['modifyReadOrWritePosition',['../classdiscord__core__api_1_1discord__core__internal_1_1ring__buffer__interface.html#a9755eb1b81e10cff09603f24142d7ed3',1,'discord_core_api::discord_core_internal::ring_buffer_interface']]],
+  ['modifystageinstanceasync_20',['modifyStageInstanceAsync',['../classdiscord__core__api_1_1stage__instances.html#a2c589c1e1e5c9c9fa32e1a8c830af30a',1,'discord_core_api::stage_instances']]],
+  ['modifyuservoicestateasync_21',['modifyUserVoiceStateAsync',['../classdiscord__core__api_1_1users.html#a804067686ba2e43d2caef1c6cdc85c21',1,'discord_core_api::users']]],
+  ['modifywebhookasync_22',['modifyWebHookAsync',['../classdiscord__core__api_1_1web__hooks.html#ae822c27116dd462438d6e3bf2bb86124',1,'discord_core_api::web_hooks']]],
+  ['modifywebhookwithtokenasync_23',['modifyWebHookWithTokenAsync',['../classdiscord__core__api_1_1web__hooks.html#a4469c4924d8500ac53b33863cd4532ac',1,'discord_core_api::web_hooks']]]
+];

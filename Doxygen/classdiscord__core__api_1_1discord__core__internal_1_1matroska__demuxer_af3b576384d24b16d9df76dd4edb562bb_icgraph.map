@@ -1,0 +1,5 @@
+<map id="discord_core_api::discord_core_internal::matroska_demuxer::collectNumber" name="discord_core_api::discord_core_internal::matroska_demuxer::collectNumber">
+<area shape="rect" id="node1" title="Collects a number from the data." alt="" coords="491,5,661,60"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1discord__core__internal_1_1matroska__demuxer.html#aec66cd52ad5fa0db6335da76789ab1ee" title="Collects the size of the current element being processed." alt="" coords="244,5,443,60"/>
+<area shape="rect" id="node3" href="$classdiscord__core__api_1_1discord__core__internal_1_1matroska__demuxer.html#a701e14cae4c80a0ea1777cab0227b269" title="Proceed with the demuxing process." alt="" coords="5,5,196,60"/>
+</map>

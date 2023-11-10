@@ -1,0 +1,6 @@
+<map id="discord_core_api::discord_core_internal::reverseByteOrder" name="discord_core_api::discord_core_internal::reverseByteOrder">
+<area shape="rect" id="node1" title="Reverses the byte order of a value if needed, based on the endianness." alt="" coords="224,91,435,131"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1discord__core__internal_1_1etf__parser.html#abb7848b5eb8551d2a27700421da3db5e" title="Read bits from the data buffer and convert to return_type." alt="" coords="5,5,176,60"/>
+<area shape="rect" id="node3" href="$classdiscord__core__api_1_1discord__core__internal_1_1matroska__demuxer.html#a4b62722c6825742087e783386a965322" title="Reverses the byte order of the current element being processed." alt="" coords="5,84,176,139"/>
+<area shape="rect" id="node4" href="$group__discord__core__internal.html#ga2f548b572ffb8948a181828a299bef89" title="Stores the bits of a number into a character array." alt="" coords="5,163,176,203"/>
+</map>

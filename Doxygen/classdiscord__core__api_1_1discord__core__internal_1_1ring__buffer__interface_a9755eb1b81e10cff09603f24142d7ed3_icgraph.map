@@ -1,0 +1,4 @@
+<map id="discord_core_api::discord_core_internal::ring_buffer_interface::modifyReadOrWritePosition" name="discord_core_api::discord_core_internal::ring_buffer_interface::modifyReadOrWritePosition">
+<area shape="rect" id="node1" title="Modify the read or write position of the buffer." alt="" coords="224,5,471,60"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1discord__core__internal_1_1ring__buffer.html#a597f8d239b982c0502e9421eac1fabcb" title="Write data into the buffer." alt="" coords="5,5,176,60"/>
+</map>

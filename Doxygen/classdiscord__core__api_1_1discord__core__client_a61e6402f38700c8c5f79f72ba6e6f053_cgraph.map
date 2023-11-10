@@ -1,0 +1,4 @@
+<map id="discord_core_api::discord_core_client::registerFunction" name="discord_core_api::discord_core_client::registerFunction">
+<area shape="rect" id="node1" title="For registering a function with the command_controller." alt="" coords="5,5,199,45"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1command__controller.html#afd9b8eb2fee4b87875ae44c0311ac81d" title="Registers a function to be called." alt="" coords="247,5,432,45"/>
+</map>

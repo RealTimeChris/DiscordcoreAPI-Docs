@@ -1,0 +1,4 @@
+<map id="discord_core_api::user_data" name="discord_core_api::user_data">
+<area shape="rect" id="node1" title="A single user_data." alt="" coords="5,5,191,31"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1bot__user.html" title="A type of user_data, to represent the bot and some of its associated endpoints." alt="" coords="9,79,187,104"/>
+</map>

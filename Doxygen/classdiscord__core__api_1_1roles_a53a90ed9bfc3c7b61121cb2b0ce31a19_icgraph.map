@@ -1,0 +1,4 @@
+<map id="discord_core_api::roles::modifyGuildRolePositionsAsync" name="discord_core_api::roles::modifyGuildRolePositionsAsync">
+<area shape="rect" id="node1" title="Updates a role_data&#39;s positions." alt="" coords="212,5,427,45"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1roles.html#aa705ecb5a94c0406ef505100f56f90c5" title="Creates a new role_data within the given guild." alt="" coords="5,5,164,45"/>
+</map>

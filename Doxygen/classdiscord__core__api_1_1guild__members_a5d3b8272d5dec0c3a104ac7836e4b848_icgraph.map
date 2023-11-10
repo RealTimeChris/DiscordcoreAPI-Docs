@@ -1,0 +1,4 @@
+<map id="discord_core_api::guild_members::modifyGuildMemberAsync" name="discord_core_api::guild_members::modifyGuildMemberAsync">
+<area shape="rect" id="node1" title="Modifies a guild_member&#39;s properties." alt="" coords="301,5,544,45"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1guild__members.html#afd8b9ef7f1cc785951fb58462112382c" title="Times&#45;out a chosen guild_member_data from a chosen guild." alt="" coords="5,5,253,45"/>
+</map>

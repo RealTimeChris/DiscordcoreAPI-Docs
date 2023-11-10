@@ -1,0 +1,4 @@
+<map id="discord_core_api::discord_core_internal::co_routine_thread_pool::submitTask" name="discord_core_api::discord_core_internal::co_routine_thread_pool::submitTask">
+<area shape="rect" id="node1" title="Submit a coroutine task to the thread pool." alt="" coords="5,5,176,60"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1discord__core__internal_1_1co__routine__thread__pool.html#a33ad9450ea120ea1c87a67e36ea69a91" title="Thread function for each worker thread." alt="" coords="224,5,415,60"/>
+</map>

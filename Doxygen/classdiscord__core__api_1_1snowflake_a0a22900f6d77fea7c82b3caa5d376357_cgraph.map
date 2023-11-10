@@ -1,0 +1,4 @@
+<map id="discord_core_api::snowflake::getCreatedAtTimeStamp" name="discord_core_api::snowflake::getCreatedAtTimeStamp">
+<area shape="rect" id="node1" title="Converts the snowflake id into a time and date stamp." alt="" coords="5,13,191,53"/>
+<area shape="rect" id="node2" href="$classdiscord__core__api_1_1time__stamp__base.html#aecd4ccd369e954e864c0ca20e0b28ff1" title="Gets an iso8601 time stamp string based on the provided time format." alt="" coords="239,5,419,60"/>
+</map>
