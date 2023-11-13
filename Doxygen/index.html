@@ -251,7 +251,7 @@ Build Instructions (Non-Vcpkg) - The Library</h1>
 </li>
 <li>Clone <a href="https://github.com/RealTimeChris/DiscordCoreAPI">this</a> git repository into a folder. <br  />
 </li>
-<li>Set, in CMakeLists.txt, the <code>discord_core_api::_VCPKG_ROOT_DIR</code>, or the <code>discord_core_api::Opus_DIR</code>, <code>discord_core_api::unofficial-sodium_DIR</code> paths to wherever each of the respective dependency files are located and they are as follows: <br  />
+<li>Set, in CMakeLists.txt, the <code>_VCPKG_ROOT_DIR</code>, or the <code>Opus_DIR</code>, <code>unofficial-sodium_DIR</code> paths to wherever each of the respective dependency files are located and they are as follows: <br  />
 <ul>
 <li>Opus_DIR # Set this one to the folder location of the file "OpusConfig.cmake". <br  />
 </li>
@@ -263,26 +263,26 @@ Build Instructions (Non-Vcpkg) - The Library</h1>
 </li>
 <li>Open a terminal inside the git repo's folder. <br  />
 </li>
-<li>Run <code>discord_core_api::cmake -S . --preset Linux_OR_Windows-Debug_OR_Release</code>.</li>
-<li>Then run <code>discord_core_api::cmake --build --preset Linux_OR_Windows-Debug_OR_Release</code>. <br  />
+<li>Run <code>cmake -S . --preset Linux_OR_Windows-Debug_OR_Release</code>.</li>
+<li>Then run <code>cmake --build --preset Linux_OR_Windows-Debug_OR_Release</code>. <br  />
 </li>
-<li>Run within the same terminal and folder <code>discord_core_api::cmake --install ./Build/Debug_OR_Release</code>.</li>
+<li>Run within the same terminal and folder <code>cmake --install ./Build/Debug_OR_Release</code>.</li>
 <li>The default installation paths are: Windows = "ROOT_DRIVE:/Users/USERNAME/CMake/DiscordCoreAPI", Linux = "/home/USERNAME/CMake/DiscordCoreAPI"</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md38"></a>
 The CMAKE Package</h1>
 <hr  />
 <ul>
-<li>By running <code>discord_core_api::cmake --install ./Build/Debug_OR_Release</code>, you will be given a cmake package, which can be used to build from this library, using other cmake projects.</li>
-<li>It is used by setting <code>discord_core_api::DiscordCoreAPI_DIR</code> to wherever the DiscordCoreAPIConfig.cmake file would have been installed on your system by having run the <code>discord_core_api::cmake --install</code> command, and then using <code>discord_core_api::find_package()</code> on <code>discord_core_api::DiscordCoreAPI</code>.</li>
-<li>When found, you will be granted the following cmake "variables"; <code>discord_core_api::DiscordCoreAPI</code> - this is the library target which can be linked to from other targets in cmake, and on Windows; <code><a class="el" href="namespacediscord__core__api.html" title="The main namespace for the forward-facing interfaces.">discord_core_api</a>::$&lt;TARGET_RUNTIME_DLLS:DiscordCoreAPI-Bot&gt;</code> - which is a list of dll files to be copied into your executable's final location after building. As well as <code>discord_core_api::RELEASE_PDB_FILE_PATH</code>, <code>discord_core_api::DEBUG_PDB_FILE_PATH</code>, <code>discord_core_api::RELEASE_PDB_FILE_NAME</code>, and <code>discord_core_api::DEBUG_PDB_FILE_NAME</code>, which are full file/directory paths/filenames to the library's PDB files.</li>
+<li>By running <code>cmake --install ./Build/Debug_OR_Release</code>, you will be given a cmake package, which can be used to build from this library, using other cmake projects.</li>
+<li>It is used by setting <code>DiscordCoreAPI_DIR</code> to wherever the DiscordCoreAPIConfig.cmake file would have been installed on your system by having run the <code>cmake --install</code> command, and then using <code>discord_core_api::find_package()</code> on <code>discord_core_api::DiscordCoreAPI</code>.</li>
+<li>When found, you will be granted the following cmake "variables"; <code>DiscordCoreAPI::DiscordCoreAPI</code> - this is the library target which can be linked to from other targets in cmake, and on Windows; <code><a class="el" href="namespacediscord__core__api.html" title="The main namespace for the forward-facing interfaces.">discord_core_api</a>::$&lt;TARGET_RUNTIME_DLLS:DiscordCoreAPI-Bot&gt;</code> - which is a list of dll files to be copied into your executable's final location after building. As well as <code>RELEASE_PDB_FILE_PATH</code>, <code>DEBUG_PDB_FILE_PATH</code>, <code>RELEASE_PDB_FILE_NAME</code>, and <code>DEBUG_PDB_FILE_NAME</code>, which are full file/directory paths/filenames to the library's PDB files.</li>
 <li><a href="https://github.com/RealTimeChris/Bot-Template-for-DiscordCoreAPI/blob/main/CMakeLists.txt">Here</a> is an example of building an executable from this library with this method.</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md40"></a>
 Build Instructions (Non-Vcpkg) - The Executable</h1>
 <hr  />
 <ul>
-<li>Download the <a href="https://github.com/RealTimeChris/Bot-Template-for-DiscordCoreAPI">bot template</a> or create your own with the same <a href="https://github.com/RealTimeChris/Bot-Template-For-DiscordCoreAPI/blob/main/CMakeLists.txt#L10">imports</a>, and set within it either the <code>discord_core_api::VCPKG_ROOT_DIR</code>, or the <code>discord_core_api::CMAKE_CONFIG_FILE_DIR</code>, <code>discord_core_api::Opus_DIR</code>, and <code>discord_core_api::unofficial-sodium_DIR</code> paths to wherever each of the respective dependency files are located and they are as follows: <br  />
+<li>Download the <a href="https://github.com/RealTimeChris/Bot-Template-for-DiscordCoreAPI">bot template</a> or create your own with the same <a href="https://github.com/RealTimeChris/Bot-Template-For-DiscordCoreAPI/blob/main/CMakeLists.txt#L10">imports</a>, and set within it either the <code>VCPKG_ROOT_DIR</code>, or the <code>CMAKE_CONFIG_FILE_DIR</code>, <code>Opus_DIR</code>, and <code>unofficial-sodium_DIR</code> paths to wherever each of the respective dependency files are located and they are as follows: <br  />
 <ul>
 <li>CMAKE_CONFIG_FILE_DIR # Set this one to the folder location of the DiscordCoreAPIConfig.cmake generated while running CMake &ndash;install. <br  />
 </li>
@@ -294,10 +294,10 @@ Build Instructions (Non-Vcpkg) - The Executable</h1>
 </li>
 </ul>
 </li>
-<li>Set up a main.cpp like <a href="https://github.com/RealTimeChris/Bot-Template-for-DiscordCoreAPI/blob/main/main.cpp">this one</a>, including the header <code>discord_core_api::discordcoreapi/Index.hpp</code>.</li>
-<li>Run in a terminal from within the same folder as the top-level CMakeLists.txt, <code>discord_core_api::cmake -S . --preset Linux_OR_Windows-Debug_OR_Release</code>.</li>
-<li>Then run <code>discord_core_api::cmake --build --preset Linux_OR_Windows-Debug_OR_Release</code>.</li>
-<li>Run within the same terminal and folder <code>discord_core_api::cmake --install ./Build/Debug_OR_Release</code>.</li>
+<li>Set up a main.cpp like <a href="https://github.com/RealTimeChris/Bot-Template-for-DiscordCoreAPI/blob/main/main.cpp">this one</a>, including the header <code><a class="el" href="_index_8hpp.html">discordcoreapi/Index.hpp</a></code>.</li>
+<li>Run in a terminal from within the same folder as the top-level CMakeLists.txt, <code>cmake -S . --preset Linux_OR_Windows-Debug_OR_Release</code>.</li>
+<li>Then run <code>cmake --build --preset Linux_OR_Windows-Debug_OR_Release</code>.</li>
+<li>Run within the same terminal and folder <code>cmake --install ./Build/Debug_OR_Release</code>.</li>
 <li>The default installation paths are: Windows = "ROOT_DRIVE:/Users/USERNAME/CMake/Bot-Template-For-DiscordCoreAPI", Linux = "/home/USERNAME/CMake/Bot-Template-For-DiscordCoreAPI" </li>
 </ul>
 </div></div><!-- PageDoc -->
