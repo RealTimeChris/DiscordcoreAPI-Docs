@@ -1,0 +1,11 @@
+<map id="discord_core_api::makeUnique" name="discord_core_api::makeUnique">
+<area shape="rect" id="Node000001" title="Helper function to create a unique_ptr for a non&#45;array object." alt="" coords="320,124,541,149"/>
+<area shape="rect" id="Node000002" href="$classdiscord__core__api_1_1discord__core__internal_1_1co__routine__thread__pool.html#a055fc379c65d936c4c0608ed37fd98ce" title="Constructor to create a coroutine thread pool. initializes the worker threads." alt="" coords="5,5,272,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="386,121,271,75,233,63,235,57,273,70,388,116"/>
+<area shape="rect" id="Node000003" href="$classdiscord__core__api_1_1discord__core__client.html#a4931e5d3c1cfac03f5b543f5fc553fc6" title="discord_core_client constructor." alt="" coords="22,85,255,125"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="306,126,256,120,256,115,307,120"/>
+<area shape="rect" id="Node000004" href="$classdiscord__core__api_1_1object__cache.html#acf85fd333b8f70ee5b416c492e927f9a" title="Add an object to the cache." alt="" coords="49,149,228,189"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="307,153,229,162,228,156,306,148"/>
+<area shape="rect" id="Node000005" href="$classdiscord__core__api_1_1object__cache.html#afceae6b1dab16f2d667963c61aecae46" title="Access an object in the cache using a key." alt="" coords="49,213,228,253"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="390,158,273,203,229,216,227,211,271,198,388,153"/>
+</map>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['foundation_20entities_0',['Foundation Entities',['../group__foundation__entities.html',1,'']]]
+  ['discord_20events_0',['Discord Events',['../group__discord__events.html',1,'']]],
+  ['discordcoreinternal_1',['DiscordCoreInternal',['../group__discord__core__internal.html',1,'']]]
 ];

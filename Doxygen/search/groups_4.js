@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['voice_20connection_0',['Voice Connection',['../group__voice__connection.html',1,'']]]
+  ['main_20endpoints_0',['Main Endpoints',['../group__main__endpoints.html',1,'']]]
 ];

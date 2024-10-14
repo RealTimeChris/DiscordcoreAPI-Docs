@@ -7,7 +7,7 @@ var searchData=
   ['channel_5fpins_5fupdate_5fevent_5fdata_4',['channel_pins_update_event_data',['../structdiscord__core__api_1_1channel__pins__update__event__data.html',1,'discord_core_api']]],
   ['channels_5',['channels',['../classdiscord__core__api_1_1channels.html',1,'discord_core_api']]],
   ['co_5froutine_6',['co_routine',['../classdiscord__core__api_1_1co__routine.html',1,'discord_core_api']]],
-  ['co_5froutine_3c_20return_5ftype_5fnew_2c_20timeout_20_3e_7',['co_routine&lt; return_type_new, timeOut &gt;',['../classdiscord__core__api_1_1co__routine_3_01return__type__new_00_01time_out_01_4.html',1,'discord_core_api']]],
+  ['co_5froutine_3c_20return_5ftype_5fnew_2c_20timeout_20_3e_7',['co_routine&lt; return_type_new, timeOut &gt;',['../classdiscord__core__api_1_1co__routine.html',1,'discord_core_api']]],
   ['co_5froutine_3c_20void_2c_20false_20_3e_8',['co_routine&lt; void, false &gt;',['../classdiscord__core__api_1_1co__routine.html',1,'discord_core_api']]],
   ['co_5froutine_5ferror_9',['co_routine_error',['../structdiscord__core__api_1_1co__routine__error.html',1,'discord_core_api']]],
   ['co_5froutine_5fthread_5fpool_10',['co_routine_thread_pool',['../classdiscord__core__api_1_1discord__core__internal_1_1co__routine__thread__pool.html',1,'discord_core_api::discord_core_internal']]],

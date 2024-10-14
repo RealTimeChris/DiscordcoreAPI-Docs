@@ -1,0 +1,5 @@
+<map id="discord_core_api::discord_core_internal::storeBits" name="discord_core_api::discord_core_internal::storeBits">
+<area shape="rect" id="Node000001" title="Stores the bits of a number into a character array." alt="" coords="5,5,192,45"/>
+<area shape="rect" id="Node000002" href="$group__discord__core__internal.html#gaf5c4fe982d38534212cd3455c8c5ae98" title="Reverses the byte order of a value if needed, based on the endianness." alt="" coords="240,5,477,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,23,226,23,226,28,192,28"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,77,120,102"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="168,77,307,102"/>
+<area shape="poly" id="edge26_Node000000_Node000001" title=" " alt="" coords="134,87,168,87,168,92,134,92"/>
+<area shape="rect" id="Node000002" href="$structdiscord__core__api_1_1dca__exception.html" title="An exception class derived from std::runtime_error for dca&#45;related exceptions." alt="" coords="355,69,517,109"/>
+<area shape="poly" id="edge27_Node000001_Node000002" title=" " alt="" coords="320,87,355,87,355,92,320,92"/>
+<area shape="rect" id="Node000003" href="$structdiscord__core__api_1_1co__routine__error.html" title="An error type for co_routines." alt="" coords="608,5,763,45"/>
+<area shape="poly" id="edge28_Node000002_Node000003" title=" " alt="" coords="527,63,607,43,608,48,528,68"/>
+<area shape="rect" id="Node000004" href="$structdiscord__core__api_1_1discord__core__internal_1_1etf__parse__error.html" title="Exception class for etf parsing errors." alt="" coords="575,69,796,109"/>
+<area shape="poly" id="edge29_Node000002_Node000004" title=" " alt="" coords="531,87,574,87,574,92,531,92"/>
+<area shape="rect" id="Node000005" href="$structdiscord__core__api_1_1discord__core__internal_1_1etf__serialize__error.html" title="Custom exception class for etf serialization errors." alt="" coords="565,133,805,173"/>
+<area shape="poly" id="edge30_Node000002_Node000005" title=" " alt="" coords="528,110,608,131,606,136,527,115"/>
+</map>

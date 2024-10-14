@@ -1,6 +1,6 @@
 var _unique_ptr_8hpp =
 [
-    [ "makeUnique", "_unique_ptr_8hpp.html#gaf019a744faaf1ed302166004d225f4dc", null ],
-    [ "makeUnique", "_unique_ptr_8hpp.html#ga86d4593228b2f261c94cf1b2e04b6930", null ],
-    [ "makeUnique", "_unique_ptr_8hpp.html#gab038df09fed76ff3623850cb710eaa26", null ]
+    [ "discord_core_api::makeUnique", "group__utilities.html#gaa1fa3e1fc3085921c14139955d1e1437", null ],
+    [ "discord_core_api::makeUnique", "group__utilities.html#gaaf645824a34e7e86df6502bbee0fb2af", null ],
+    [ "discord_core_api::makeUnique", "group__utilities.html#gad4580648c1879bc63a05a477ffdbb508", null ]
 ];

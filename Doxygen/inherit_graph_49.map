@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structdiscord__core__api_1_1connect__to__voice.html" title="crtp&#45;based struct for exposing the connectToVoice functionality of the guild&#45;related classes." alt="" coords="5,5,180,75"/>
+<area shape="rect" id="Node000000" href="$structdiscord__core__api_1_1connect__to__voice.html" title=" " alt="" coords="5,5,196,75"/>
+<area shape="rect" id="Node000001" href="$classdiscord__core__api_1_1guild__data.html" title="A discord guild. used to connect to/disconnect from voice." alt="" coords="244,27,451,53"/>
+<area shape="poly" id="edge7_Node000000_Node000001" title=" " alt="" coords="210,37,244,37,244,43,210,43"/>
 </map>

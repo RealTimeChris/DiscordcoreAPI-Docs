@@ -1,0 +1,14 @@
+<map id="discord_core_api::discord_core_internal::reverseByteOrder" name="discord_core_api::discord_core_internal::reverseByteOrder">
+<area shape="rect" id="Node000001" title="Reverses the byte order of a value if needed, based on the endianness." alt="" coords="737,91,975,131"/>
+<area shape="rect" id="Node000002" href="$classdiscord__core__api_1_1discord__core__internal_1_1etf__parser.html#aacb013cc72fd1e18600522e57eeabe5c" title="Read bits from the data buffer and convert to return_type." alt="" coords="501,5,689,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="775,90,686,63,687,58,777,85"/>
+<area shape="rect" id="Node000003" href="$classdiscord__core__api_1_1discord__core__internal_1_1matroska__demuxer.html#a4d3cd81b7ae45f4c8f48b0046f7f8ef5" title="Reverses the byte order of the current element being processed." alt="" coords="502,84,689,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="723,114,689,114,689,109,723,109"/>
+<area shape="rect" id="Node000006" href="$group__discord__core__internal.html#ga167109a01aa09b0fd24107a776f80441" title="Stores the bits of a number into a character array." alt="" coords="502,163,689,203"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="770,138,669,166,668,161,769,133"/>
+<area shape="rect" id="Node000004" href="$classdiscord__core__api_1_1discord__core__internal_1_1matroska__demuxer.html#a48798dd602e449ac0fb3a4842bebc548" title="Finds the next occurrence of the specified value in the data." alt="" coords="267,52,453,107"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="488,99,453,95,454,89,489,94"/>
+<area shape="rect" id="Node000005" href="$classdiscord__core__api_1_1discord__core__internal_1_1matroska__demuxer.html#af1384f635fcc1cf0d7a98ce108f545c4" title="Proceed with the demuxing process." alt="" coords="5,85,219,140"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="488,121,453,122,267,122,219,121,219,115,267,117,453,117,488,115"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="254,96,219,101,218,96,253,91"/>
+</map>

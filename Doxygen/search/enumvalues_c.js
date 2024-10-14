@@ -9,7 +9,7 @@ var searchData=
   ['manage_5froles_6',['Manage_Roles',['../group__foundation__entities.html#ggabc951de32bcb7bfbbaa932fe93f1dd4da9922d43aa0c42f2c283c3bf5ddcb624d',1,'discord_core_api']]],
   ['manage_5fthreads_7',['Manage_Threads',['../group__foundation__entities.html#ggabc951de32bcb7bfbbaa932fe93f1dd4dab808db4980d2a72a058ec7d90515159e',1,'discord_core_api']]],
   ['manage_5fwebhooks_8',['Manage_Webhooks',['../group__foundation__entities.html#ggabc951de32bcb7bfbbaa932fe93f1dd4da9043b52ebbe92890e3d06626a08a2cff',1,'discord_core_api']]],
-  ['medium_9',['Medium',['../group__foundation__entities.html#gga5e50bd8eccf318e91b5e0f681e738c89a87f8a6ab85c9ced3702b4ea641ad4bb5',1,'discord_core_api::Medium()'],['../group__foundation__entities.html#gga9c4551ae1aa197ffaf027976f21cdf34a87f8a6ab85c9ced3702b4ea641ad4bb5',1,'discord_core_api::Medium()']]],
+  ['medium_9',['Medium',['../group__foundation__entities.html#gga5e50bd8eccf318e91b5e0f681e738c89a87f8a6ab85c9ced3702b4ea641ad4bb5',1,'discord_core_api::Medium'],['../group__foundation__entities.html#gga9c4551ae1aa197ffaf027976f21cdf34a87f8a6ab85c9ced3702b4ea641ad4bb5',1,'discord_core_api::Medium']]],
   ['member_5fban_5fadd_10',['Member_Ban_Add',['../group__foundation__entities.html#gga5189f9d4d44bdfc0441c0ff1fa57db8ba941f7b4da3421a8f1a967f1fa608580b',1,'discord_core_api']]],
   ['member_5fban_5fremove_11',['Member_Ban_Remove',['../group__foundation__entities.html#gga5189f9d4d44bdfc0441c0ff1fa57db8babdb4af5023d154e78d27dcc73abac3a8',1,'discord_core_api']]],
   ['member_5fdisconnect_12',['Member_Disconnect',['../group__foundation__entities.html#gga5189f9d4d44bdfc0441c0ff1fa57db8bab0286fb6487bd4412727511dec9f74be',1,'discord_core_api']]],

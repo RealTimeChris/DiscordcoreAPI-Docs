@@ -24,7 +24,7 @@ var dir_9b16bdde4f6a21e020962bfdb0aa5092 =
     [ "StageInstanceEntities.hpp", "_stage_instance_entities_8hpp.html", "_stage_instance_entities_8hpp" ],
     [ "StickerEntities.hpp", "_sticker_entities_8hpp.html", null ],
     [ "ThreadEntities.hpp", "_thread_entities_8hpp.html", null ],
-    [ "ToEntity.hpp", "_to_entity_8hpp.html", null ],
+    [ "ToEntity.hpp", "_to_entity_8hpp.html", "_to_entity_8hpp" ],
     [ "UserEntities.hpp", "_user_entities_8hpp.html", null ],
     [ "Utilities.hpp", "_utilities_8hpp.html", "_utilities_8hpp" ],
     [ "VoiceConnection.hpp", "_voice_connection_8hpp.html", "_voice_connection_8hpp" ],
