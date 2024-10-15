@@ -140,7 +140,7 @@ $(function(){initNavTree('_input_events_8hpp_source.html',''); initResizable(tru
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">/// Aug 18, 2021</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">/// https://discordcoreapi.com</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">/// \file InputEvents.hpp</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment"></span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;<a class="code" href="_foundation_entities_8hpp.html">discordcoreapi/FoundationEntities.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;<a class="code" href="_interaction_entities_8hpp.html">discordcoreapi/InteractionEntities.hpp</a>&gt;</span></div>
@@ -154,18 +154,18 @@ $(function(){initNavTree('_input_events_8hpp_source.html',''); initResizable(tru
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">     */</span><span class="comment"></span></div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">    /// @brief For handling user_data input - messages or interactions.</span></div>
 <div class="foldopen" id="foldopen00043" data-start="{" data-end="};">
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classdiscord__core__api_1_1input__events.html">   43</a></span><span class="comment"></span>    <span class="keyword">class </span>DiscordCoreAPI_Dll <a class="code hl_class" href="classdiscord__core__api_1_1input__events.html">input_events</a> {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classdiscord__core__api_1_1input__events.html">   43</a></span>    <span class="keyword">class </span>DiscordCoreAPI_Dll <a class="code hl_class" href="classdiscord__core__api_1_1input__events.html">input_events</a> {</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>      <span class="keyword">public</span>:<span class="comment"></span></div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">        /// @brief Responds to one of a number of types of &quot;input_events&quot;.</span></div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">        /// @param dataPackage a respond_to_input_event_data structure.</span></div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">        /// @return an unique_ptr containing an input_event_data structure.</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment"></span>        <span class="keyword">static</span> co_routine&lt;input_event_data&gt; respondToInputEventAsync(respond_to_input_event_data dataPackage);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keyword">static</span> co_routine&lt;input_event_data&gt; respondToInputEventAsync(respond_to_input_event_data dataPackage);</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment"></span> </div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">        /// @brief Deletes a previously sent &quot;input-event-response&quot;.</span></div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">        /// @param dataPackage a unique_ptr containing an input_event_data structure.</span></div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">        /// @param timeDelayNew an int32_t representing the desired delay until the message is deleted, in milliseconds.</span></div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">        /// @return a co_routine containing void.</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment"></span>        <span class="keyword">static</span> co_routine&lt;void&gt; deleteInputEventResponseAsync(input_event_data dataPackage, uint32_t timeDelayNew = 0);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keyword">static</span> co_routine&lt;void&gt; deleteInputEventResponseAsync(input_event_data dataPackage, uint32_t timeDelayNew = 0);</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>      <span class="keyword">protected</span>:</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keyword">static</span> input_event_data respondToInputEvent(create_ephemeral_interaction_response_data dataPackage);</div>

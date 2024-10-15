@@ -140,7 +140,7 @@ $(function(){initNavTree('_command_controller_8hpp_source.html',''); initResizab
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">/// May 20, 2021</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">/// https://discordcoreapi.com</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">/// \file CommandController.hpp</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment"></span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;<a class="code" href="_foundation_entities_8hpp.html">discordcoreapi/FoundationEntities.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;<a class="code" href="_co_routine_8hpp.html">discordcoreapi/CoRoutine.hpp</a>&gt;</span></div>
@@ -149,16 +149,16 @@ $(function(){initNavTree('_command_controller_8hpp_source.html',''); initResizab
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment"></span> </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">    /// @brief A class for handling commands from user input.</span></div>
 <div class="foldopen" id="foldopen00038" data-start="{" data-end="};">
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classdiscord__core__api_1_1command__controller.html">   38</a></span><span class="comment"></span>    <span class="keyword">class </span>DiscordCoreAPI_Dll <a class="code hl_class" href="classdiscord__core__api_1_1command__controller.html">command_controller</a> {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classdiscord__core__api_1_1command__controller.html">   38</a></span>    <span class="keyword">class </span>DiscordCoreAPI_Dll <a class="code hl_class" href="classdiscord__core__api_1_1command__controller.html">command_controller</a> {</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>      <span class="keyword">public</span>:<span class="comment"></span></div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">        /// @brief Registers a function to be called.</span></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">        /// @param functionNames a vector of strings to be accepted as function names.</span></div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">        /// @param baseFunction a unique_ptr to the function to be called.</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment"></span>        <span class="keywordtype">void</span> registerFunction(<span class="keyword">const</span> jsonifier::vector&lt;jsonifier::string&gt;&amp; functionNames, unique_ptr&lt;base_function&gt; baseFunction);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordtype">void</span> registerFunction(<span class="keyword">const</span> jsonifier::vector&lt;jsonifier::string&gt;&amp; functionNames, unique_ptr&lt;base_function&gt; baseFunction);</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment"></span> </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">        /// @brief For returning the contained map of functions.</span></div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">        /// @return a map containing the function names as well as unique_ptrs to the functions.</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment"></span>        unordered_map&lt;jsonifier::vector&lt;jsonifier::string&gt;, unique_ptr&lt;base_function&gt;&gt;&amp; getFunctions();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        unordered_map&lt;jsonifier::vector&lt;jsonifier::string&gt;, unique_ptr&lt;base_function&gt;&gt;&amp; getFunctions();</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        co_routine&lt;void&gt; checkForAndRunCommand(command_data&amp;&amp; commandData);</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>

@@ -140,7 +140,7 @@ $(function(){initNavTree('_discord_core_client_8hpp_source.html',''); initResiza
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">/// May 12, 2021 Chris M.</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">/// https://discordcoreapi.com</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">/// \file DiscordCoreClient.hpp</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment"></span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;<a class="code" href="_application_command_entities_8hpp.html">discordcoreapi/ApplicationCommandEntities.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;<a class="code" href="_auto_moderation_entities_8hpp.html">discordcoreapi/AutoModerationEntities.hpp</a>&gt;</span></div>
@@ -255,7 +255,7 @@ $(function(){initNavTree('_discord_core_client_8hpp_source.html',''); initResiza
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="comment">     */</span><span class="comment"></span></div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="comment">    /// @brief discord_core_client - the main class for this library.</span></div>
 <div class="foldopen" id="foldopen00144" data-start="{" data-end="};">
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="classdiscord__core__api_1_1discord__core__client.html">  144</a></span><span class="comment"></span>    <span class="keyword">class </span>DiscordCoreAPI_Dll <a class="code hl_class" href="classdiscord__core__api_1_1discord__core__client.html">discord_core_client</a> {</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="classdiscord__core__api_1_1discord__core__client.html">  144</a></span>    <span class="keyword">class </span>DiscordCoreAPI_Dll <a class="code hl_class" href="classdiscord__core__api_1_1discord__core__client.html">discord_core_client</a> {</div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        <span class="keyword">friend</span> <span class="keyword">class </span>discord_core_internal::websocket_client;</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        <span class="keyword">friend</span> <span class="keyword">class </span>discord_core_internal::base_socket_agent;</div>
@@ -277,7 +277,7 @@ $(function(){initNavTree('_discord_core_client_8hpp_source.html',''); initResiza
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="comment"></span> </div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="comment">        /// @brief discord_core_client constructor.</span></div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="comment">        /// @param configData a discord_core_client_config structure to select various library options.</span></div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="comment"></span>        discord_core_client(<span class="keyword">const</span> discord_core_client_config&amp; configData);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        discord_core_client(<span class="keyword">const</span> discord_core_client_config&amp; configData);</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="comment"></span> </div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="comment">        /// @brief For registering a function with the command_controller.</span></div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="comment">        /// @param functionNames a vector containing the possible names for activating this command/function.</span></div>
@@ -285,31 +285,31 @@ $(function(){initNavTree('_discord_core_client_8hpp_source.html',''); initResiza
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="comment">        /// @param commandData a create_application_command_data structure describing the current function.</span></div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="comment">        /// @param alwaysRegister whether or not it gets registered every time the bot boots up, or only when it&#39;s missing from the bot&#39;s list of</span></div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span><span class="comment">        /// registered commands.</span></div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="comment"></span>        <span class="keywordtype">void</span> registerFunction(<span class="keyword">const</span> jsonifier::vector&lt;jsonifier::string&gt;&amp; functionNames, unique_ptr&lt;base_function&gt;&amp;&amp; baseFunction,</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        <span class="keywordtype">void</span> registerFunction(<span class="keyword">const</span> jsonifier::vector&lt;jsonifier::string&gt;&amp; functionNames, unique_ptr&lt;base_function&gt;&amp;&amp; baseFunction,</div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>            <span class="keyword">const</span> create_application_command_data&amp; commandData, <span class="keywordtype">bool</span> alwaysRegister = <span class="keyword">false</span>);</div>
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="comment"></span> </div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="comment">        /// @brief For collecting a reference to the command_controller.</span></div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="comment">        /// @return command_controller&amp; a reference to the command_controller.</span></div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span><span class="comment"></span>        command_controller&amp; getCommandController();</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        command_controller&amp; getCommandController();</div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="comment"></span> </div>
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span><span class="comment">        /// @brief For collecting a reference to the config_manager.</span></div>
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span><span class="comment">        /// @return config_manager&amp; a reference to the config_manager.</span></div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span><span class="comment"></span>        <span class="keyword">const</span> config_manager&amp; getConfigManager() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        <span class="keyword">const</span> config_manager&amp; getConfigManager() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span><span class="comment"></span> </div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="comment">        /// @brief For collecting a reference to the event_manager.</span></div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><span class="comment">        /// @return event_manager&amp; a reference to the event_manager.</span></div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="comment"></span>        event_manager&amp; getEventManager();</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        event_manager&amp; getEventManager();</div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="comment"></span> </div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="comment">        /// @brief For collecting, the total time in milliseconds that this bot has been up for.</span></div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span><span class="comment">        /// @return milliseconds a size, in milliseconds, since the bot has come online.</span></div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span><span class="comment"></span>        milliseconds getTotalUpTime();</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        milliseconds getTotalUpTime();</div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="comment"></span> </div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="comment">        /// @brief For collecting a copy of the current bot&#39;s user_data.</span></div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span><span class="comment">        /// @return bot_user an instance of bot_user.</span></div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span><span class="comment"></span>        <span class="keyword">static</span> bot_user getBotUser();</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        <span class="keyword">static</span> bot_user getBotUser();</div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="comment"></span> </div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span><span class="comment">        /// @brief Executes the library, and waits for completion.</span></div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="comment"></span>        <span class="keywordtype">void</span> runBot();</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        <span class="keywordtype">void</span> runBot();</div>
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        ~discord_core_client();</div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
